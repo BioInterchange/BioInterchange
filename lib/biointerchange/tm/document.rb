@@ -9,6 +9,11 @@ class Document
     @uri = uri
   end
 
+  # Returns the URI of the document.
+  def uri
+    @uri
+  end
+
 end
 
 end
