@@ -21,10 +21,25 @@ class Content
   # +offset+:: zero-based offset of the represented content within the document (absolute location within the document)
   # +length+:: length of the represented content, where a length of zero denotes a boundary between two characters
   # +type+:: classifaction of the content
-  def initialize(offset, length, type)
+  def initialize(offset, length, type = UNSPECIFIED)
     @offset = offset
     @length = length
     @type = type
+  end
+
+  # Returns the offset of the content as absolute position within the document.
+  def offset
+    @offset
+  end
+
+  # Returns the length of the content, which is measured in characters.
+  def length
+    @length
+  end
+
+  # Returns the type of the content, if known, or +BioInterchange::Content::UNSPECIFIED otherwise.
+  def type
+    @type
   end
 
 end
