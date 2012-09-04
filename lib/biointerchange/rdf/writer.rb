@@ -9,6 +9,7 @@ class RDFWriter
   #
   # +ostream+:: instance of an IO class or derivative that is used for RDF serialization
   def initialize(ostream)
+    raise ArgumentError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO)
     @ostream = ostream
   end
 
@@ -19,26 +20,22 @@ class RDFWriter
     if model.instance_of?(BioInterchange::Document) then
       serialize_document(model)
     else
-      raise 'The povided model cannot be serialized at the moment. ' +
-            'Supported classes are BioInterchange::Document (and that\'s it for now).'
+      raise ArgumentError, 'The povided model cannot be serialized at the moment. ' +
+                           'Supported classes are BioInterchange::Document (and that\'s it for now).'
     end
   end
 
 private
 
-  # Serializes RDF for a textual document representation
+  # Serializes RDF for a textual document representation using the Semanticsciene Integrated Ontology
+  # (http://code.google.com/p/semanticscience/wiki/SIO).
   #
   # +model+:: an instance of +BioInterchange::Document+
   def serialize_document(model)
     graph = RDF::Graph.new
     document = RDF::URI.new(model.uri)
     graph.insert(RDF::Statement.new(document, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000148')))
-    RDF::NTriples::Writer.buffer { |writer|
-      graph.each_statement { |statement|
-        writer << statement
-      }
-      puts "> #{writer}"
-    }
+    RDF::NTriples::Writer.dump(graph, @ostream)
   end
 
 end
