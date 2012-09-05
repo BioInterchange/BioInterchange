@@ -33,9 +33,19 @@ private
   # +model+:: an instance of +BioInterchange::Document+
   def serialize_document(model)
     graph = RDF::Graph.new
-    document = RDF::URI.new(model.uri)
-    graph.insert(RDF::Statement.new(document, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000148')))
+    document_uri = RDF::URI.new(model.uri)
+    graph.insert(RDF::Statement.new(document_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000148')))
+    model.contents.each { |content|
+      graph.insert(serialize_content(graph, content))
+    }
     RDF::NTriples::Writer.dump(graph, @ostream)
+  end
+
+  # 
+  #
+  #
+  def serialize_content(graph, document_uri, content)
+    graph.insert(RDF::Statement.new(document_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), RDF::URI.new(context.uri)))
   end
 
 end

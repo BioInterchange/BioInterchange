@@ -26,8 +26,8 @@ class Document
   end
 
   # Returns the document contents as an array.
-  def content
-    content.clone.freeze
+  def contents
+    @content.clone.freeze
   end
 
 end
