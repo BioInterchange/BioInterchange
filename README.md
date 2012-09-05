@@ -20,6 +20,13 @@ Usage
 
 TODO
 
+Unit Testing
+------------
+
+BioInterchange uses unit testing using [RSpec](http://rspec.info):
+
+    rspec -c -f d
+
 Contributors
 ------------
 

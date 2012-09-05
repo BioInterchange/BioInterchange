@@ -21,10 +21,18 @@ class Content
   # +offset+:: zero-based offset of the represented content within the document (absolute location within the document)
   # +length+:: length of the represented content, where a length of zero denotes a boundary between two characters
   # +type+:: classifaction of the content
-  def initialize(offset, length, type = UNSPECIFIED)
+  def initialize(offset, length, type = UNSPECIFIED, process = nil)
     @offset = offset
     @length = length
     @type = type
+    @process = process
+  end
+
+  # Sets the context of this content.
+  #
+  # +context+:: a +BioInterchange::Document+ or +BioInterchange::Content+ instance in which this content is enclosed in
+  def setContext(context)
+    @context = context
   end
 
   # Returns the offset of the content as absolute position within the document.
@@ -40,6 +48,14 @@ class Content
   # Returns the type of the content, if known, or +BioInterchange::Content::UNSPECIFIED otherwise.
   def type
     @type
+  end
+
+  # Returns a URI that identifies this content.
+  def uri
+    raise 'An URI can only be returned for content with a context (i.e., use setContext(context) first).'
+    process = '-'
+    process = "<#{@process.sub(/.*?:\/\//, '')}>" if @process
+    "biointerchange://#{@context.uri.sub(/.*?:\/\//, '')}/#{@offset},#{@length},#{@type},#{process}"
   end
 
 end
