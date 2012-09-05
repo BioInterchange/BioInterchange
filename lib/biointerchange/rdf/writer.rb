@@ -1,7 +1,7 @@
 require 'rdf'
 require 'rdf/ntriples'
 
-module BioInterchange
+module BioInterchange::IO
 
 class RDFWriter
 
@@ -17,11 +17,11 @@ class RDFWriter
   #
   # +model+:: a generic representation of input data
   def serialize(model)
-    if model.instance_of?(BioInterchange::Document) then
+    if model.instance_of?(BioInterchange::TextMining::Document) then
       serialize_document(model)
     else
       raise ArgumentError, 'The povided model cannot be serialized at the moment. ' +
-                           'Supported classes are BioInterchange::Document (and that\'s it for now).'
+                           'Supported classes are BioInterchange::TextMining::Document (and that\'s it for now).'
     end
   end
 
@@ -30,7 +30,7 @@ private
   # Serializes RDF for a textual document representation using the Semanticsciene Integrated Ontology
   # (http://code.google.com/p/semanticscience/wiki/SIO).
   #
-  # +model+:: an instance of +BioInterchange::Document+
+  # +model+:: an instance of +BioInterchange::TextMining::Document+
   def serialize_document(model)
     graph = RDF::Graph.new
     document_uri = RDF::URI.new(model.uri)

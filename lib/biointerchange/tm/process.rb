@@ -1,4 +1,4 @@
-module BioInterchange
+module BioInterchange::TextMining
 
 class Process
 

@@ -1,4 +1,4 @@
-module BioInterchange
+module BioInterchange::TextMining
 
 class Content
 
@@ -30,7 +30,7 @@ class Content
 
   # Sets the context of this content.
   #
-  # +context+:: a +BioInterchange::Document+ or +BioInterchange::Content+ instance in which this content is enclosed in
+  # +context+:: a +BioInterchange::TextMining::Document+ or +BioInterchange::TextMining::Content+ instance in which this content is enclosed in
   def setContext(context)
     @context = context
   end
@@ -45,7 +45,7 @@ class Content
     @length
   end
 
-  # Returns the type of the content, if known, or +BioInterchange::Content::UNSPECIFIED otherwise.
+  # Returns the type of the content, if known, or +BioInterchange::TextMining::Content::UNSPECIFIED otherwise.
   def type
     @type
   end

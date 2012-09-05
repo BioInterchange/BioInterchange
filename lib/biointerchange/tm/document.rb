@@ -1,4 +1,4 @@
-module BioInterchange
+module BioInterchange::TextMining
 
 class Document
 
@@ -19,9 +19,9 @@ class Document
 
   # Adds content to the document.
   #
-  # +content+:: content of type +BioInterchange::Content+ that should be added to the document
+  # +content+:: content of type +BioInterchange::TextMining::Content+ that should be added to the document
   def add(content)
-    raise ArgumentError, 'Content has to be of kind BioInterchange::Content' unless content.kind_of?(BioInterchange::Content)
+    raise ArgumentError, 'Content has to be of kind BioInterchange::TextMining::Content' unless content.kind_of?(BioInterchange::TextMining::Content)
     @content << content
   end
 
