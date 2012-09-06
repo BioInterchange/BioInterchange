@@ -50,11 +50,16 @@ class Content
     @type
   end
 
+  # Returns the process associated with this content, if previously provided, or nil otherwise.
+  def process
+    @process
+  end
+
   # Returns a URI that identifies this content.
   def uri
     raise 'An URI can only be returned for content with a context (i.e., use setContext(context) first).' unless @context
     process = '-'
-    process = "<#{@process.uri.sub(/.*?:\/\//, '')}>" if @process
+    process = "(#{@process.uri.sub(/.*?:\/\//, '')})" if @process
     "biointerchange://#{@context.uri.sub(/.*?:\/\//, '')}/#{@offset},#{@length},#{@type},#{process}"
   end
 

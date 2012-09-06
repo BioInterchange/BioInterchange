@@ -45,7 +45,16 @@ private
   #
   #
   def serialize_content(graph, document_uri, content)
-    graph.insert(RDF::Statement.new(document_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), RDF::URI.new(content.uri)))
+    content_uri = content.uri
+    graph.insert(RDF::Statement.new(document_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), RDF::URI.new(content_uri)))
+    serialize_process(graph, document_uri, content_uri, content.process) if content.process
+  end
+
+  #
+  #
+  #
+  def serialize_process(graph, document_uri, content_uri, process)
+    graph.insert(RDF::Statement.new(content_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), RDF::URI.new(process.uri)))
   end
 
 end
