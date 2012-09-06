@@ -1,8 +1,9 @@
 module BioInterchange
 
   # Text mining readers
-  require 'biointerchange/readers/json'
-  #require 'biointerchange/readers/xml'
+  require 'biointerchange/readers/reader.rb'
+  require 'biointerchange/readers/pubannos_json_reader.rb'
+  require 'biointerchange/readers/test_xml_reader.rb'
 
 	# Text mining converters
 	require 'biointerchange/tm/document.rb'
@@ -24,8 +25,8 @@ module BioInterchange
 	  ["--out", "-o", REQUIRED] #output file, will out to STDOUT if not supplied
 	)
 	
-	include BioInterchange::TextMining
 	include BioInterchange::IO
+	include BioInterchange::TextMining
 	
 	raise ArgumentError, 'Require --name and -name_id options to specify source of annotations (e.g., a manual annotators name, or software tool name) and their associated URI (e.g., email address, or webaddress).' unless opt['name'] and opt['name_id']
 
@@ -40,9 +41,9 @@ module BioInterchange
 	reader = nil
 	
 	if opt['file'].match(/\.json$/)
-	  reader = JsonReader.new("pubannos", opt['name'], opt['name_id'], opt['date'], Process::UNSPECIFIED, opt['version'])
+	  reader = PubannosJsonReader.new(opt['name'], opt['name_id'], opt['date'], Process::UNSPECIFIED, opt['version'])
 	elsif opt["file"].match(/\.xml$/)
-	  puts 'xml unimplemented'
+	  reader = TestXmlReader.new(opt['name'], opt['name_id'], opt['date'], Process::UNSPECIFIED, opt['version'])
 	else
 	  raise ArgumentError, 'Unable to guess file type, please use .json or .xml file extensions.'
 	end
