@@ -1,9 +1,9 @@
 require 'rdf'
 require 'rdf/ntriples'
 
-module BioInterchange::IO
+module BioInterchange::TextMining
 
-class RDFWriter
+class RDFWriter < BioInterchange::IO::Writer
 
   # Creates a new instance of a RDFWriter that will use the provided output stream to serialize RDF.
   #

@@ -1,6 +1,6 @@
 module BioInterchange::TextMining
 
-class Reader
+class Reader < BioInterchange::IO::Reader
 
   # Create a new instance of a JSON reader. Sets @process to a new +BioInterchange::TextMining::Process+ object.
   #

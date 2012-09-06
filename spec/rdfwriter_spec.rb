@@ -2,7 +2,7 @@
 require 'rspec'
 
 load 'lib/biointerchange/core.rb'
-load 'lib/biointerchange/rdf/writer.rb'
+load 'lib/biointerchange/rdf/rdf_ntriples.rb'
 load 'lib/biointerchange/tm/document.rb'
 load 'lib/biointerchange/tm/content.rb'
 load 'lib/biointerchange/tm/process.rb'
