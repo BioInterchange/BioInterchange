@@ -9,6 +9,9 @@ module BioInterchange
 	require 'biointerchange/tm/content.rb'
 	require 'biointerchange/tm/process.rb'
 	
+	# Text mining writers
+	require 'biointerchange/writers/writer.rb'
+	
 	require 'getopt/long'
 	include Getopt
 	
@@ -17,10 +20,13 @@ module BioInterchange
 	  ["--name_id", REQUIRED], #uri of resource/tool/person
 	  ["--date", REQUIRED], #date of processing/annotation
 	  ["--version", REQUIRED], #version number of resource
-	  ["--file", "-f", REQUIRED] #file to read (should prob
+	  ["--file", "-f", REQUIRED], #file to read (should prob
 	      #be changed later to not be a option
+	  ["--out", "-o", REQUIRED] #output file
 	)
 	
+	include BioInterchange::TextMining
+	include BioInterchange::IO
 	
 	raise ArgumentError, 'Require --name and -name_id options to specify source of annotations (e.g., a manual annotators name, or software tool name) and their associated URI (e.g., email address, or webaddress).' unless opt['name'] and opt['name_id']
 	
@@ -29,6 +35,8 @@ module BioInterchange
 	
 	opt['date'] = nil unless opt['date']
 	opt['version'] = nil unless opt['version']
+	
+	opt['out'] = nil unless opt['out']
 	
 	
 	
@@ -45,11 +53,13 @@ module BioInterchange
 	end
 	
 
-  reader.serialize(File.new(opt["file"],'r'))
+  model = reader.deserialize(File.new(opt["file"],'r'))
 
 
   #generate rdf from model (serialise)
-  	
+  writer = RDFWriter.new(File.new(opt["out"],'w'))
+  
+  writer.serialize(model)
 	
 	
 	puts "Finished processing"

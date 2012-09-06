@@ -1,4 +1,4 @@
-module BioInterchange
+module BioInterchange::TextMining
 
 require 'rubygems'
 require 'json'
@@ -16,7 +16,7 @@ class JsonReader
     @metadata['version'] = version
   end
   
-  def serialize(inputstream)
+  def deserialize(inputstream)
   
     raise ArgumentError, 'InputStream not of type IO, cannot read.' unless inputstream.kind_of?(IO)
   
@@ -55,8 +55,6 @@ private
     #so our document requires content of type document or abstract
     #should it hold the content string?
     
-    annotations = []
-    
     result['catanns'].each do |annot| 
       start_offset = annot['begin']
       end_offset = annot['end']
@@ -72,17 +70,16 @@ private
     
       #phrase = type for NE
       con = Content.new(start_offset, length, Content::PHRASE)
-      
-      annotations << con
+
+      doc.add(con)
       
       #set process.date = updated_time?
     
       #puts "'#{start_offset}' '#{end_offset}' '#{category}' '#{entity}' "
     
-      puts annotations
-    
     end
     
+    doc
   end
   
 
