@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+module BioInterchange::TextMining
 
 require 'rexml/document'
 
