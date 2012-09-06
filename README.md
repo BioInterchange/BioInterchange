@@ -32,8 +32,9 @@ Contributors
 
 In alphabetical order of the last name:
 
-* Joachim Baran
-* Geraint Duck
+* [Joachim Baran](http://joachimbaran.wordpress.com)
+* [Geraint Duck](http://www.cs.man.ac.uk/~duckg)
+* [Michel Dumontier](http://dumontierlab.com)
 
 License
 -------
