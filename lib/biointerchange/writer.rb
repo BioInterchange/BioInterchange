@@ -1,4 +1,4 @@
-module BioInterchange::IO
+module BioInterchange
 
 class Writer
 

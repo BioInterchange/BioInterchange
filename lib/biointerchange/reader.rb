@@ -1,4 +1,4 @@
-module BioInterchange::Readers
+module BioInterchange
 
 # A reader takes information from an input stream and creates an object model.
 #
