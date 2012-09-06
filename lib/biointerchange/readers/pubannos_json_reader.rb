@@ -32,8 +32,6 @@ private
     #doc_uri = "http://pubannotation.dbcls.jp/pmdocs/" + result['pmid'].to_s
     doc_uri = result['docurl']
     
-    print "doc_uri: ", doc_uri, "\n"
-    
     doc = Document.new(doc_uri)
     docContent = Content.new(0, text.length, Content::DOCUMENT, @process)
     docContent.setContext(doc)
