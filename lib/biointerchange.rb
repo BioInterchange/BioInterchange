@@ -20,31 +20,26 @@ module BioInterchange
 	  ["--name_id", REQUIRED], #uri of resource/tool/person
 	  ["--date", REQUIRED], #date of processing/annotation
 	  ["--version", REQUIRED], #version number of resource
-	  ["--file", "-f", REQUIRED], #file to read (should prob
-	      #be changed later to not be a option
-	  ["--out", "-o", REQUIRED] #output file
+	  ["--file", "-f", REQUIRED], #file to read, will read from STDIN if not supplied
+	  ["--out", "-o", REQUIRED] #output file, will out to STDOUT if not supplied
 	)
 	
 	include BioInterchange::TextMining
 	include BioInterchange::IO
 	
 	raise ArgumentError, 'Require --name and -name_id options to specify source of annotations (e.g., a manual annotators name, or software tool name) and their associated URI (e.g., email address, or webaddress).' unless opt['name'] and opt['name_id']
-	
-	raise ArgumentError, 'Require --file or -f switch to specify file to process into RDF.' unless opt['file']
 
 	
 	opt['date'] = nil unless opt['date']
 	opt['version'] = nil unless opt['version']
 	
-	opt['out'] = nil unless opt['out']
-	
+	raise ArgumentError, 'Require --file or -f switch to specify file to process into RDF.' unless opt['file']
 	
 	
 	#generate model from file (deserialise)
 	reader = nil
 	
 	if opt['file'].match(/\.json$/)
-	  puts 'json file processing'
 	  reader = JsonReader.new("pubannos", opt['name'], opt['name_id'], opt['date'], Process::UNSPECIFIED, opt['version'])
 	elsif opt["file"].match(/\.xml$/)
 	  puts 'xml unimplemented'
@@ -53,16 +48,24 @@ module BioInterchange
 	end
 	
 
-  model = reader.deserialize(File.new(opt["file"],'r'))
-
+  model = nil
+  if opt["file"]
+    model = reader.deserialize(File.new(opt["file"],'r'))
+  else
+    model = reader.deserialize(STDIN)
+  end
 
   #generate rdf from model (serialise)
-  writer = RDFWriter.new(File.new(opt["out"],'w'))
+  writer = nil
+  if opt["out"]
+    writer = RDFWriter.new(File.new(opt["out"],'w'))
+  else
+    writer = RDFWriter.new(STDOUT)
+  end
   
   writer.serialize(model)
 	
-	
-	puts "Finished processing"
+
 
 end
 
