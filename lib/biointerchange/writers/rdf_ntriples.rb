@@ -20,7 +20,7 @@ class RDFWriter < BioInterchange::Writer
     if model.instance_of?(BioInterchange::TextMining::Document) then
       serialize_document(model)
     else
-      raise ArgumentError, 'The povided model cannot be serialized at the moment. ' +
+      raise ArgumentError, 'The provided model cannot be serialized at the moment. ' +
                            'Supported classes are BioInterchange::TextMining::Document (and that\'s it for now).'
     end
   end
