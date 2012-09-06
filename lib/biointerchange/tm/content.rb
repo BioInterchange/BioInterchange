@@ -52,7 +52,7 @@ class Content
 
   # Returns a URI that identifies this content.
   def uri
-    raise 'An URI can only be returned for content with a context (i.e., use setContext(context) first).'
+    raise 'An URI can only be returned for content with a context (i.e., use setContext(context) first).' unless @context
     process = '-'
     process = "<#{@process.sub(/.*?:\/\//, '')}>" if @process
     "biointerchange://#{@context.uri.sub(/.*?:\/\//, '')}/#{@offset},#{@length},#{@type},#{process}"
