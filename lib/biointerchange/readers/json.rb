@@ -5,17 +5,27 @@ require 'json'
 
 class JsonReader
 
+  # Create a new instance of a JSON reader.
+  #
+  # +jsontype+:: Format of JSON file for parse (currently only support the json format from Pubannots annotation: pubannos)
+  # +name+:: Name of the process which generated this data
+  # +name_uri+:: URI of the resource that generated this data
+  # +date+:: Optional date of data creation
+  # +processtype+:: Type of process that created this content
+  # +version+:: Optional version number of resource that created this data (nil if manually curated, for example).
   def initialize(jsontype, name, name_uri, date = nil, processtype = Process::UNSPECIFIED, version = nil)
     @jsontype = jsontype
-    @name = name
-    @name_uri = name_uri
-    @date = date
-    @processtype = processtype
     
-    @metadata = {}
-    @metadata['version'] = version
+    metadata = {}
+    metadata[Process::VERSION] = version
+    
+    @process = Process.new(name, name_uri, date, processtype, metadata)
+    
   end
   
+  # Reads input stream and returns associated +BioInterchange::TextMining::Document+ model
+  #
+  # +inputstream+:: Input IO stream to deserialize 
   def deserialize(inputstream)
   
     raise ArgumentError, 'InputStream not of type IO, cannot read.' unless inputstream.kind_of?(IO)
@@ -34,10 +44,9 @@ class JsonReader
 
 private 
 
+  # Specific method for parsing of *Pubannotations* json format
+  # Might later see what I can abstract away into a outer class instead making a Pubannots parser a specific subclass of that instead
   def pubannos
-    
-    process = Process.new(@name, @name_uri, @date, @processtype, @metadata)
-    
     
     result = JSON.parse(@data)
     
@@ -50,7 +59,9 @@ private
     doc_uri = "http://pubannotation.dbcls.jp/pmdocs/" + result['pmid'].to_s
     
     doc = Document.new(doc_uri)
-    docContent = Content.new(0, text.length, Content::DOCUMENT)
+    docContent = Content.new(0, text.length, Content::DOCUMENT, @process)
+    docContent.setContext(doc)
+    doc.add(docContent)
     
     #so our document requires content of type document or abstract
     #should it hold the content string?
@@ -69,7 +80,7 @@ private
       entity = text.slice(start_offset..end_offset)
     
       #phrase = type for NE
-      con = Content.new(start_offset, length, Content::PHRASE)
+      con = Content.new(start_offset, length, Content::PHRASE, @process)
       con.setContext(doc)
       doc.add(con)
       
