@@ -4,7 +4,7 @@ module BioInterchange
   require 'biointerchange/reader.rb'
   require 'biointerchange/readers/text_mining_reader.rb'
   require 'biointerchange/readers/pubannos_json_reader.rb'
-  require 'biointerchange/readers/test_xml_reader.rb'
+  require 'biointerchange/readers/pdfx_xml_reader.rb'
 
 	# Text mining converters
 	require 'biointerchange/tm/document.rb'
@@ -44,7 +44,7 @@ module BioInterchange
 	if opt['file'].match(/\.json$/)
 	  reader = PubannosJsonReader.new(opt['name'], opt['name_id'], opt['date'], Process::UNSPECIFIED, opt['version'])
 	elsif opt["file"].match(/\.xml$/)
-	  reader = TestXmlReader.new(opt['name'], opt['name_id'], opt['date'], Process::UNSPECIFIED, opt['version'])
+	  reader = PdfxXmlReader.new(opt['name'], opt['name_id'], opt['date'], Process::UNSPECIFIED, opt['version'])
 	else
 	  raise ArgumentError, 'Unable to guess file type, please use .json or .xml file extensions.'
 	end
