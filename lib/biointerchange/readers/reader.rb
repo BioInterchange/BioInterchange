@@ -1,4 +1,4 @@
-module BioInterchange::IO
+module BioInterchange::TextMining
 
 class Reader
 
