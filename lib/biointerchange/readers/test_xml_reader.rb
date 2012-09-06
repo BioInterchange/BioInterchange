@@ -2,7 +2,7 @@ module BioInterchange::TextMining
 
 require 'rexml/document'
 
-class TestXmlReader < BioInterchange::IO::Reader
+class TestXmlReader < BioInterchange::TextMining::TMReader
   
   # Reads input stream and returns associated +BioInterchange::TextMining::Document+ model
   #

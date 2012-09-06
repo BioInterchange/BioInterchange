@@ -1,7 +1,8 @@
 module BioInterchange
 
   # Text mining readers
-  require 'biointerchange/readers/reader.rb'
+  require 'biointerchange/reader.rb'
+  require 'biointerchange/readers/text_mining_reader.rb'
   require 'biointerchange/readers/pubannos_json_reader.rb'
   require 'biointerchange/readers/test_xml_reader.rb'
 
@@ -11,7 +12,8 @@ module BioInterchange
 	require 'biointerchange/tm/process.rb'
 	
 	# Text mining writers
-	require 'biointerchange/writers/writer.rb'
+	require 'biointerchange/writer.rb'
+	require 'biointerchange/writers/rdf_ntriples.rb'
 	
 	require 'getopt/long'
 	include Getopt
@@ -25,7 +27,6 @@ module BioInterchange
 	  ["--out", "-o", REQUIRED] #output file, will out to STDOUT if not supplied
 	)
 	
-	include BioInterchange::IO
 	include BioInterchange::TextMining
 	
 	raise ArgumentError, 'Require --name and -name_id options to specify source of annotations (e.g., a manual annotators name, or software tool name) and their associated URI (e.g., email address, or webaddress).' unless opt['name'] and opt['name_id']
