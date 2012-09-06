@@ -47,7 +47,7 @@ private
     
     
     text = result['text']
-    doc_uri = nil
+    doc_uri = "http://pubannotation.dbcls.jp/pmdocs/" + result['pmid'].to_s
     
     doc = Document.new(doc_uri)
     docContent = Content.new(0, text.length, Content::DOCUMENT)
@@ -70,7 +70,7 @@ private
     
       #phrase = type for NE
       con = Content.new(start_offset, length, Content::PHRASE)
-
+      con.setContext(doc)
       doc.add(con)
       
       #set process.date = updated_time?
