@@ -27,6 +27,26 @@ class RDFWriter < BioInterchange::Writer
 
 private
 
+  # Generates an URI for a given process and its contents.
+  #
+  # +process+:: process instance
+  # +kind+:: kind of the URI that should be generated, for example, whether the URI should represent the name, date, etc.
+  def process_uri(process, kind)
+    base_uri = 'biointerchange://textmining/process'
+    case kind
+    when :process
+      RDF::URI.new("#{base_uri}/self/#{process.uri.sub(/^.*?:\/\//, '')}")
+    when :name
+      RDF::URI.new("#{base_uri}/name/#{process.uri.sub(/^.*?:\/\//, '')}")
+    when :uri
+      RDF::URI.new("#{base_uri}/uri/#{process.uri.sub(/^.*?:\/\//, '')}")
+    when :date
+      RDF::URI.new("#{base_uri}/date/#{process.uri.sub(/^.*?:\/\//, '')}")
+    else
+      raise "There is no implementation for serializing a process as #{kind}."
+    end
+  end
+
   # Serializes RDF for a textual document representation using the Semanticsciene Integrated Ontology
   # (http://code.google.com/p/semanticscience/wiki/SIO).
   #
@@ -54,18 +74,43 @@ private
   #
   #
   def serialize_process(graph, document_uri, content_uri, process)
-    process_uri = RDF::URI.new("biointerchange://textmining/process/#{process.uri.sub(/^.*?:\/\//, '')}")
+    process_uri = process_uri(process, :process)
     graph.insert(RDF::Statement.new(content_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), process_uri))
     # If this is an email address, then create a FOAF representation, otherwise, do something else:
     unless process_uri.to_s.match(/^[a-z]:\/\//i) then
-      graph.insert(RDF::Statement.new(process_uri, RDF.type, RDF::FOAF.to_uri))
+      graph.insert(RDF::Statement.new(process_uri, RDF.type, RDF::FOAF.Person))
       graph.insert(RDF::Statement.new(process_uri, RDF::FOAF.name, RDF::Literal.new(process.name)))
       graph.insert(RDF::Statement.new(process_uri, RDF::FOAF.name, RDF::URI.new(process.uri)))
     else
       graph.insert(RDF::Statement.new(process_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000006')))
-      graph.insert(RDF::Statement.new(process_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000223'), RDF::Lieteral.new(process.name)))
-      graph.insert(RDF::Statement.new(process_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000223'), RDF::URI.new(process.uri)))
+      graph.insert(RDF::Statement.new(process_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), serialize_process_name(graph, document_uri, content_uri, process_uri, process)))
+      graph.insert(RDF::Statement.new(process_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), serialize_process_uri(graph, document_uri, content_uri, process_uri, process)))
+      graph.insert(RDF::Statement.new(process_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), serialize_process_date(graph, document_uri, content_uri, process_uri, process)))
     end
+  end
+
+  #
+  #
+  #
+  def serialize_process_name(graph, document_uri, content_uri, process_uri, process)
+    kind_uri = process_uri(process, :name)
+    graph.insert(process_name_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000116'))
+  end
+
+  #
+  #
+  #
+  def serialize_process_uri(graph, document_uri, content_uri, process_uri, process)
+    kind_uri = process_uri(process, :uri)
+    graph.insert(process_name_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000097'))
+  end
+
+  #
+  #
+  #
+  def serialize_process_date(graph, document_uri, content_uri, process_uri, process)
+    kind_uri = process_uri(process, :date)
+    graph.insert(process_name_uri, RDF::DC.date, RDF::Literal.new(process.date))
   end
 
 end
