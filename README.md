@@ -33,6 +33,7 @@ Contributors
 In alphabetical order of the last name:
 
 * [Joachim Baran](http://joachimbaran.wordpress.com)
+* [Kevin B. Cohen](http://compbio.ucdenver.edu/Hunter_lab/Cohen/index.shtml)
 * [Geraint Duck](http://www.cs.man.ac.uk/~duckg)
 * [Michel Dumontier](http://dumontierlab.com)
 

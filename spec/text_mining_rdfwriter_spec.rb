@@ -49,8 +49,7 @@ describe BioInterchange::TextMining::RDFWriter do
       document.add(content)
       BioInterchange::TextMining::RDFWriter.new(ostream).serialize(document)
       ostream.close
-      # TODO Actual unit test.
-      puts istream.read
+      istream.read.lines.count.should be > 1
     end
   end
 end
