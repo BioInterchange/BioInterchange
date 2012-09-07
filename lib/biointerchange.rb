@@ -13,7 +13,7 @@ module BioInterchange
 	
 	# Text mining writers
 	require 'biointerchange/writer.rb'
-	require 'biointerchange/writers/rdf_ntriples.rb'
+	require 'biointerchange/writers/text_mining_rdf_ntriples.rb'
 	
 	require 'getopt/long'
 	include Getopt
