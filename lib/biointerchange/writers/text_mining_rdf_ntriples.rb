@@ -90,32 +90,32 @@ private
     graph.insert(RDF::Statement.new(document_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), content_uri))
     serialize_process(graph, document_uri, content_uri, content.process) if content.process
     
-    sio_id = 000078
+    sio_id = "000078"
     case content.type
     when Content::UNSPECIFIED
-      sio_id = 000078
+      sio_id = "000078"
     when Content::DOCUMENT
-      sio_id = 000148
+      sio_id = "000148"
     when Content::PAGE
-      sio_id = 000111
+      sio_id = "000111"
     when Content::TITLE
-      sio_id = 000185
+      sio_id = "000185"
     when Content::AUTHOR
-      sio_id = 000191
+      sio_id = "000191"
     when Content::ABSTRACT
-      sio_id = 000188
+      sio_id = "000188"
     when Content::SECTION
-      sio_id = 000111
+      sio_id = "000111"
     when Content::PARAGRAPH
-      sio_id = 000110
+      sio_id = "000110"
     when Content::SENTENCE
-      sio_id = 000113
+      sio_id = "000113"
     when Content::PHRASE
-      sio_id = 000483
+      sio_id = "000483"
     when Content::WORD
-      sio_id = 000114
+      sio_id = "000114"
     when Content::CHARACTER
-      sio_id = 000108
+      sio_id = "000108"
     end
     
     graph.insert(RDF::Statement.new(content_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_#{sio_id}')))
@@ -166,6 +166,9 @@ private
   #
   #
   def serialize_process_date(graph, document_uri, content_uri, process_uri, process)
+    if process.date 
+      puts "Date: #{process.date}"
+    end
     kind_uri = process_uri(process, :date)
     graph.insert(RDF::Statement.new(kind_uri, RDF::DC.date, RDF::Literal.new(Date.parse(process.date))))
   end
@@ -176,7 +179,7 @@ private
   def serialize_content_start(graph, document_uri, content_uri, process_uri, content)
     kind_uri = content_uri(content, :start)
     graph.insert(RDF::Statement.new(kind_uri, RDF::type, RDF::URI.new('http://semanticscience.org/resource/SIO_000943')))
-    graph.insert(RDF::Statment.new(kind_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000300'), RDF::Literal.new(content.offset)
+    graph.insert(RDF::Statment.new(kind_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000300'), RDF::Literal.new(content.offset)))
   end
   
   #
@@ -185,7 +188,7 @@ private
   def serialize_content_stop(graph, document_uri, content_uri, process_uri, content)
     kind_uri = content_uri(content, :stop)
     graph.insert(RDF::Statement.new(kind_uri, RDF::type, RDF::URI.new('http://semanticscience.org/resource/SIO_000953')))
-    graph.insert(RDF::Statment.new(kind_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000300'), RDF::Literal.new((content.offset+content.length).to_s)
+    graph.insert(RDF::Statment.new(kind_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000300'), RDF::Literal.new((content.offset+content.length).to_s)))
   end
 
 end
