@@ -45,8 +45,8 @@ private
   #
   #
   def serialize_content(graph, document_uri, content)
-    content_uri = content.uri
-    graph.insert(RDF::Statement.new(document_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), RDF::URI.new(content_uri)))
+    content_uri = RDF::URI.new(content.uri)
+    graph.insert(RDF::Statement.new(document_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), content_uri))
     serialize_process(graph, document_uri, content_uri, content.process) if content.process
   end
 
@@ -54,7 +54,18 @@ private
   #
   #
   def serialize_process(graph, document_uri, content_uri, process)
-    graph.insert(RDF::Statement.new(content_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), RDF::URI.new(process.uri)))
+    process_uri = RDF::URI.new("biointerchange://textmining/process/#{process.uri.sub(/^.*?:\/\//, '')}")
+    graph.insert(RDF::Statement.new(content_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), process_uri))
+    # If this is an email address, then create a FOAF representation, otherwise, do something else:
+    unless process_uri.to_s.match(/^[a-z]:\/\//i) then
+      graph.insert(RDF::Statement.new(process_uri, RDF.type, RDF::FOAF.to_uri))
+      graph.insert(RDF::Statement.new(process_uri, RDF::FOAF.name, RDF::Literal.new(process.name)))
+      graph.insert(RDF::Statement.new(process_uri, RDF::FOAF.name, RDF::URI.new(process.uri)))
+    else
+      graph.insert(RDF::Statement.new(process_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000006')))
+      graph.insert(RDF::Statement.new(process_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000223'), RDF::Lieteral.new(process.name)))
+      graph.insert(RDF::Statement.new(process_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000223'), RDF::URI.new(process.uri)))
+    end
   end
 
 end
