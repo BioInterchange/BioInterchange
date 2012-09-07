@@ -32,7 +32,16 @@ private
       docContent.setContext(doc)
       doc.add(docContent)
       
-      #xml.root.text
+      puts "xml.text:"
+      #xml.elements.each("//*") do |e|
+      #  puts e.text
+      #end
+      
+      
+      recurse_elements(xml.elements)
+      
+      
+      #can do xml.root.delete_all(xpath) if needed to drop random pdf containers from main text and from main offset calculations.
   
       start_offset = 0
       length = 0
@@ -59,6 +68,25 @@ private
     end
       
   end
+  
+  
+  def recurse_elements(elements)
+    elements.each do |e|
+      puts e.texts
+      recurse_elements(e.elements)
+    end
+  end
+  
+  
+  def recurse_doc(doc)
+    doc.elements.each do |element|
+			print "[", element.name.to_s, "]"
+			element.each_recursive do |childElement|
+				print "[", childElement.name.to_s, "]"
+				puts childElement.texts
+			end
+		end
+	end
 
 
 end
