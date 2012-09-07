@@ -46,6 +46,26 @@ private
       raise "There is no implementation for serializing a process as #{kind}."
     end
   end
+  
+  # Generates an URI for a given content and its contents.
+  #
+  # +content+:: content instance
+  # +kind+:: kind of the URI that should be generated, for example, whether the URI should represent the name, date, etc.
+  def content_uri(content, kind)
+    base_uri = 'biointerchange://textmining/content'
+    case kind
+    #when :content
+    #  RDF::URI.new("#{base_uri}/self/#{process.uri.sub(/^.*?:\/\//, '')}")
+    when :start
+      RDF::URI.new("#{base_uri}/start/#{process.uri.sub(/^.*?:\/\//, '')}")
+    when :end
+      RDF::URI.new("#{base_uri}/stop/#{process.uri.sub(/^.*?:\/\//, '')}")
+    #when :type
+    #  RDF::URI.new("#{base_uri}/type/#{process.uri.sub(/^.*?:\/\//, '')}")
+    else
+      raise "There is no implementation for serializing a process as #{kind}."
+    end
+  end
 
   # Serializes RDF for a textual document representation using the Semanticsciene Integrated Ontology
   # (http://code.google.com/p/semanticscience/wiki/SIO).
@@ -68,6 +88,54 @@ private
     content_uri = RDF::URI.new(content.uri)
     graph.insert(RDF::Statement.new(document_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), content_uri))
     serialize_process(graph, document_uri, content_uri, content.process) if content.process
+    
+    
+    sio_id = 000078
+    case content.type
+    when Content::UNSPECIFIED
+      sio_id = 000078
+    when Content::DOCUMENT
+      sio_id = 000148
+    when Content::PAGE
+      sio_id = 000111
+    when Content::TITLE
+      sio_id = 000185
+    when Content::AUTHOR
+      sio_id = 000191
+    when Content::ABSTRACT
+      sio_id = 000188
+    when Content::SECTION
+      sio_id = 000111
+    when Content::PARAGRAPH
+      sio_id = 000110
+    when Content::SENTENCE
+      sio_id = 000113
+    when Content::PHRASE
+      sio_id = 000483
+    when Content::WORD
+      sio_id = 000114
+    when Content::CHARACTER
+      sio_id = 000108
+    end
+    
+    graph.insert(RDF::Statement.new(content_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_#{sio_id}')))
+    
+    
+    #has-attribute = 000008
+    #has-value = 000300
+    #start position = 000943
+    #stop position = 000953
+    
+    #add doc, has-attribute, text start
+      #add text start, has value, VALUE
+    graph.insert(RDF::Statement.new(content_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000008'), serialize_process_name(graph, document_uri, content_uri, process_uri, process)))
+    #add doc, has-attribute, text end
+      #add text end, has value, VALUE
+    
+    #also need to define content type
+    
+
+  
   end
 
   #
