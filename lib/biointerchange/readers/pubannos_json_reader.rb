@@ -3,7 +3,7 @@ module BioInterchange::TextMining
 require 'rubygems'
 require 'json'
 
-class PubannosJsonReader < BioInterchange::IO::Reader
+class PubannosJsonReader < BioInterchange::TextMining::TMReader
 
   def deserialize(inputstream)
   
@@ -29,7 +29,8 @@ private
     
     
     text = result['text']
-    doc_uri = "http://pubannotation.dbcls.jp/pmdocs/" + result['pmid'].to_s
+    #doc_uri = "http://pubannotation.dbcls.jp/pmdocs/" + result['pmid'].to_s
+    doc_uri = result['docurl']
     
     doc = Document.new(doc_uri)
     docContent = Content.new(0, text.length, Content::DOCUMENT, @process)
