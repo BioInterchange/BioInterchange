@@ -77,7 +77,7 @@ private
     process_uri = process_uri(process, :process)
     graph.insert(RDF::Statement.new(content_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), process_uri))
     # If this is an email address, then create a FOAF representation, otherwise, do something else:
-    unless process_uri.to_s.match(/^[a-z]:\/\//i) then
+    if process.type == BioInterchange::TextMining::Process::MANUAL then
       graph.insert(RDF::Statement.new(process_uri, RDF.type, RDF::FOAF.Person))
       graph.insert(RDF::Statement.new(process_uri, RDF::FOAF.name, RDF::Literal.new(process.name)))
       graph.insert(RDF::Statement.new(process_uri, RDF::FOAF.name, RDF::URI.new(process.uri)))
@@ -94,7 +94,8 @@ private
   #
   def serialize_process_name(graph, document_uri, content_uri, process_uri, process)
     kind_uri = process_uri(process, :name)
-    graph.insert(process_name_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000116'))
+    graph.insert(RDF::Statement.new(kind_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000116')))
+    graph.insert(RDF::Statement.new(kind_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000300'), RDF::Literal.new(process.name)))
   end
 
   #
@@ -102,7 +103,8 @@ private
   #
   def serialize_process_uri(graph, document_uri, content_uri, process_uri, process)
     kind_uri = process_uri(process, :uri)
-    graph.insert(process_name_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000097'))
+    graph.insert(RDF::Statement.new(kind_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000097')))
+    graph.insert(RDF::Statement.new(kind_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000300'), RDF::URI.new(process.uri)))
   end
 
   #
@@ -110,7 +112,7 @@ private
   #
   def serialize_process_date(graph, document_uri, content_uri, process_uri, process)
     kind_uri = process_uri(process, :date)
-    graph.insert(process_name_uri, RDF::DC.date, RDF::Literal.new(process.date))
+    graph.insert(RDF::Statement.new(kind_uri, RDF::DC.date, RDF::Literal.new(Date.parse(process.date))))
   end
 
 end

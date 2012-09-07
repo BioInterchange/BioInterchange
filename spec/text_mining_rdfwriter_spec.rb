@@ -18,12 +18,12 @@ describe BioInterchange::TextMining::RDFWriter do
       istream.read.lines.count.should eq(1)
     end
 
-    it 'document with a single entity' do
+    it 'document with two entities' do
       istream, ostream = IO.pipe
       document = BioInterchange::TextMining::Document.new('http://example.org')
       content = BioInterchange::TextMining::Content.new(
-          12,
           3,
+          11,
           BioInterchange::TextMining::Content::PHRASE,
           BioInterchange::TextMining::Process.new(
             'Peter Smith',
@@ -33,9 +33,24 @@ describe BioInterchange::TextMining::RDFWriter do
         )
       content.setContext(document)
       document.add(content)
+      content = BioInterchange::TextMining::Content.new(
+          42,
+          9,
+          BioInterchange::TextMining::Content::PHRASE,
+          BioInterchange::TextMining::Process.new(
+            'GENIA',
+            'http://www.nactem.ac.uk/GENIA/tagger',
+            BioInterchange::TextMining::Process::SOFTWARE,
+            {},
+            '2012-09-28'
+          )
+        )
+      content.setContext(document)
+      document.add(content)
       BioInterchange::TextMining::RDFWriter.new(ostream).serialize(document)
       ostream.close
       # TODO Actual unit test.
+      puts istream.read
     end
   end
 end
