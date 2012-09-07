@@ -15,7 +15,7 @@ class TMReader < BioInterchange::Reader
     metadata = {}
     metadata[BioInterchange::TextMining::Process::VERSION] = version
     
-    @process = BioInterchange::TextMining::Process.new(name, name_uri, date, processtype, metadata)
+    @process = BioInterchange::TextMining::Process.new(name, name_uri, processtype, metadata, date)
     
   end
   
