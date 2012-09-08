@@ -7,6 +7,7 @@ if ARGV.length != 2 then
   puts ''
   puts 'Reads the given ontology in RDF/XML format and produces a Ruby wrapper'
   puts 'for convient URI access to it.'
+  exit 1
 end
 
 reader = RDF::RDFXML::Reader.open(ARGV[0])
