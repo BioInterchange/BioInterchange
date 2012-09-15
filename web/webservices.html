@@ -87,10 +87,11 @@
             <textarea id="metainput" style="width: 100%; min-height: 200px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;"></textarea>
             Paste data for RDFization below:
             <textarea id="maininput" style="width: 100%; min-height: 200px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;"></textarea>
-            Select the RDF serialization method:
+            Select the RDF serialization method:<br />
             <select id="outputformat" style="min-width: 50%;">
               <option value="rdf.bh12.sio">RDF using SIO and FOAF</option>
-            </select><br />
+            </select><br /><br />
+            RDF output:<br />
             <a class="btn btn-primary" onclick="generateRDF();">Generate RDF</a>
             <pre id="output" style="font-size: 75%; width: 100%; min-height: 50px;"><i>RDF output will be <b>concatenated</b> here...</i></pre>
             <a class="btn" onclick="$('#output').empty();">Clear RDF</a>
