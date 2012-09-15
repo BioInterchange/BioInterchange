@@ -16,6 +16,7 @@
       }
     </style>
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="bootstrap/js/jquery-1.8.1.min.js"></script>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -75,13 +76,25 @@
             </ol>
           </p>
           <h3>Interactive Web-Interface</h3>
-          <p>TODO</p>
-          <textarea style="width: 100%; height: 200px;"></textarea>
-          <p>
-            <a class="btn" href="">Create RDF</a>
-            <a class="btn" href="">Clear RDF</a>
+          <p>Select the input format of the data:<br />
+            <select id="inputformat" style="min-width: 50%;">
+              <option value="dbcls.catanns.json" selected="selected">DBCLS PubAnnotation's Category Annotations (catanns) JSON</option>
+            </select><br />
+            <a class="btn btn-info" onclick="pasteExample();">Paste Input-Specific Example</a>
           </p>
-          <p>(Output will be <b>concatenated</b> here...)</p>
+          <p>Input format specific parameters:<br />
+            <span class="muted">These parameters add meta-data to the data below. This meta-data says something about the data that is not represented in the data structure itself. For example, it could be a version number or date of when the data was created.</span><br />
+            <textarea id="metainput" style="width: 100%; min-height: 200px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;"></textarea>
+            Paste data for RDFization below:
+            <textarea id="maininput" style="width: 100%; min-height: 200px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;"></textarea>
+            Select the RDF serialization method:
+            <select id="outputformat" style="min-width: 50%;">
+              <option value="rdf.bh12.sio">RDF using SIO and FOAF</option>
+            </select><br />
+            <a class="btn btn-primary" onclick="generateRDF();">Generate RDF</a>
+            <pre id="output" style="font-size: 75%; width: 100%; min-height: 50px;"><i>RDF output will be <b>concatenated</b> here...</i></pre>
+            <a class="btn" onclick="$('#output').empty();">Clear RDF</a>
+          </p>
           <h3>RESTful Web-Service</h3>
           <p>TODO</p>
         </div>
@@ -98,7 +111,7 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="bootstrap/js/jquery-1.8.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="biointerchange.js"></script>
   </body>
 </html>

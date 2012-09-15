@@ -25,10 +25,17 @@ FCGI.each { |fcgi|
   fcgi.out.print("\r\n")
 
   begin
-    opt = JSON.parse(request)
-    reader = BioInterchange::TextMining::PubannosJsonReader.new(opt['name'], opt['name_id'], opt['date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['version'])
+    request = JSON.parse(request)
+    parameters = JSON.parse(URI.decode(request['parameters']))
+    data = URI.decode(request['data'])
+
+    process = BioInterchange::TextMining::Process::UNSPECIFIED
+    process = BioInterchange::TextMining::Process::MANUAL if parameters['name_id'].match(/[^@]+@[^@]+/)
+    process = BioInterchange::TextMining::Process::SOFTWARE if parameters['name_id'].match(/[a-zA-Z]+:\/\//)
+
+    reader = BioInterchange::TextMining::PubannosJsonReader.new(parameters['name'], parameters['name_id'], parameters['date'], process, parameters['version'])
     istream, ostream = IO.pipe
-    ostream.print(request)
+    ostream.print(data)
     ostream.close
     model = reader.deserialize(istream)
     istream, ostream = IO.pipe

@@ -1,5 +1,6 @@
 require 'rdf'
 require 'rdf/ntriples'
+require 'date'
 
 module BioInterchange::TextMining
 
@@ -140,7 +141,7 @@ private
       graph.insert(RDF::Statement.new(process_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000006')))
       graph.insert(RDF::Statement.new(process_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), serialize_process_name(graph, document_uri, content_uri, process_uri, process)))
       graph.insert(RDF::Statement.new(process_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), serialize_process_uri(graph, document_uri, content_uri, process_uri, process)))
-      graph.insert(RDF::Statement.new(process_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), serialize_process_date(graph, document_uri, content_uri, process_uri, process)))
+      graph.insert(RDF::Statement.new(process_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), serialize_process_date(graph, document_uri, content_uri, process_uri, process))) if process.date
     end
   end
 
