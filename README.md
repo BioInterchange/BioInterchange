@@ -48,8 +48,9 @@ Building a new version of the Ruby vocabulary class for SIO:
 
     sudo gem install rdf
     sudo gem install rdf-rdfxml
-    echo -e "module BioInterchange\n" > lib/SIO.rb
-    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO >> lib/SIO.rb
+    echo -e "module BioInterchange\n" > lib/biointerchange/sio.rb
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO >> lib/biointerchange/SIO.rb
+    echo -e "\nend" >> lib/biointerchange/sio.rb
 
 ### Unit Testing
 

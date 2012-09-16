@@ -8,6 +8,7 @@ require 'fcgi'
 
 # This will be obsolete once BioInterchange has been turned into a gem:
 load '../../lib/biointerchange/core.rb'
+load '../../lib/biointerchange/sio.rb'
 load '../../lib/biointerchange/reader.rb'
 load '../../lib/biointerchange/writer.rb'
 load '../../lib/biointerchange/readers/text_mining_reader.rb'

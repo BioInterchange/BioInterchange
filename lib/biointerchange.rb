@@ -1,5 +1,8 @@
 module BioInterchange
 
+  # Ontologies (besides the ones from the 'rdf' gem)
+  require 'biointerchange/sio.rb'
+
   # Text mining readers
   require 'biointerchange/reader.rb'
   require 'biointerchange/readers/text_mining_reader.rb'

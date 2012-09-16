@@ -2,6 +2,7 @@
 require 'rspec'
 
 load 'lib/biointerchange/core.rb'
+load 'lib/biointerchange/sio.rb'
 load 'lib/biointerchange/reader.rb'
 load 'lib/biointerchange/writer.rb'
 load 'lib/biointerchange/writers/text_mining_rdf_ntriples.rb'

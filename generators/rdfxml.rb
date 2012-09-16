@@ -38,7 +38,7 @@ model.keys.each { |key|
       generated_label = label.gsub(/[ '-.<>]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
       next if generated_label.empty?
       uri = key.to_s
-      puts "    def #{generated_label}"
+      puts "    def self.#{generated_label}"
       puts "      RDF::URI.new('#{uri}')"
       puts '    end'
       puts ''
@@ -49,19 +49,19 @@ model.keys.each { |key|
   end
 }
 
-puts '    def is_object_property?(uri)'
+puts '    def self.is_object_property?(uri)'
 object_properties.keys.each { |uri| puts "      return true if uri == RDF::URI.new('#{uri}')" }
 puts '      false'
 puts '    end'
 puts ''
 
-puts '    def is_datatype_property?(uri)'
+puts '    def self.is_datatype_property?(uri)'
 datatype_properties.keys.each { |uri| puts "      return true if uri == RDF::URI.new('#{uri}')" }
 puts '      false'
 puts '    end'
 puts ''
 
-puts '    def is_class?(uri)'
+puts '    def self.is_class?(uri)'
 classes.keys.each { |uri| puts "      return true if uri == RDF::URI.new('#{uri}')" }
 puts '      false'
 puts '    end'
@@ -69,5 +69,4 @@ puts ''
 
 puts 'end'
 puts ''
-puts 'end'
 
