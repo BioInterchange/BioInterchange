@@ -75,7 +75,7 @@ private
   def serialize_document(model)
     graph = RDF::Graph.new
     document_uri = RDF::URI.new(model.uri)
-    graph.insert(RDF::Statement.new(document_uri, RDF.type, RDF::URI.new('http://semanticscience.org/resource/SIO_000148')))
+    graph.insert(RDF::Statement.new(document_uri, RDF.type, BioInterchange::SIO.document))
     model.contents.each { |content|
       serialize_content(graph, document_uri, content)
     }
@@ -88,7 +88,7 @@ private
   #
   def serialize_content(graph, document_uri, content)
     content_uri = RDF::URI.new(content.uri)
-    graph.insert(RDF::Statement.new(document_uri, RDF::URI.new('http://semanticscience.org/resource/SIO_000068'), content_uri))
+    graph.insert(RDF::Statement.new(document_uri, BioInterchange::SIO.has_attribute, content_uri))
     serialize_process(graph, document_uri, content_uri, content.process) if content.process
     
     sio_url = BioInterchange::SIO.language_entity
