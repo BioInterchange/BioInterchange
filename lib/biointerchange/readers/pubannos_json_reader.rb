@@ -49,26 +49,27 @@ private
     #so our document requires content of type document or abstract
     #should it hold the content string?
     
-    result['catanns'].each do |annot| 
-      start_offset = annot['begin']
-      end_offset = annot['end']
-      length = end_offset - start_offset
-      created_time = annot['created_at']
-      updated_time = annot['updated_at']
-      category = annot['category']
-      #annset_id = annot['annset_id']
-      #doc_id = annot['doc_id']
-      #id = annot['id']
+    if result['catanns']
+      result['catanns'].each do |annot| 
+        start_offset = annot['begin']
+        end_offset = annot['end']
+        length = end_offset - start_offset
+        created_time = annot['created_at']
+        updated_time = annot['updated_at']
+        category = annot['category']
+        #annset_id = annot['annset_id']
+        #doc_id = annot['doc_id']
+        #id = annot['id']
+        
+        entity = text.slice(start_offset..end_offset)
       
-      entity = text.slice(start_offset..end_offset)
-    
-      #phrase = type for NE
-      con = Content.new(start_offset, length, Content::PHRASE, @process)
-      con.setContext(doc)
-      doc.add(con)
-      
-      #set process.date = updated_time?
-    
+        #phrase = type for NE
+        con = Content.new(start_offset, length, Content::PHRASE, @process)
+        con.setContext(doc)
+        doc.add(con)
+        
+        #set process.date = updated_time?
+      end
     end
     
     doc
