@@ -1,10 +1,16 @@
 module BioInterchange::TextMining
 
 require 'rexml/document'
+require 'rexml/streamlistener'
 
 class PdfxXmlReader < BioInterchange::TextMining::TMReader
   
   # Reads input stream and returns associated +BioInterchange::TextMining::Document+ model
+  #
+  # Presently I assume a single document per xml file,
+  # and that <section> tags cannot nest. I also assume
+  # that a Content::DOCUMENT type is everything between 
+  # the <article> tags. 
   #
   # +inputstream+:: Input IO stream to deserialize 
   def deserialize(inputstream)
@@ -19,74 +25,128 @@ class PdfxXmlReader < BioInterchange::TextMining::TMReader
 
 private
 
-  #may need to be part of a block if multiple <job> tags
   def pdfx
-  
-    xml = REXML::Document.new(@data)
-
-    xml.elements.each("/pdfx/meta/job") do |id|
-      doc_uri = "http://pdfx.cs.man.ac.uk/" + id.text
-  
-      doc = Document.new(doc_uri)
-      docContent = Content.new(0, 0, Content::DOCUMENT, @process)
-      docContent.setContext(doc)
-      doc.add(docContent)
-      
-      puts "xml.text:"
-      #xml.elements.each("//*") do |e|
-      #  puts e.text
-      #end
-      
-      
-      recurse_elements(xml.elements)
-      
-      
-      #can do xml.root.delete_all(xpath) if needed to drop random pdf containers from main text and from main offset calculations.
-  
-      start_offset = 0
-      length = 0
-  
-      xml.elements.each("//article_title") do |c|
-        con = Content.new(start_offset, length, Content::TITLE, @process)
-        con.setContext(doc)
-        doc.add(con)
-      end  
-      
-      xml.elements.each("//abstract") do |c|
-        con = Content.new(start_offset, length, Content::ABSTRACT, @process)
-        con.setContext(doc)
-        doc.add(con)
-      end  
-      
-      xml.elements.each("//body") do |c|
-        con = Content.new(start_offset, length, Content::SECTION, @process)
-        con.setContext(doc)
-        doc.add(con)
-      end  
+    list = MyListener.new
+    REXML::Document.parse_stream(@data, list)
+    return list.document
+  end
     
-    return doc
+
+	
+	
+	class MyListener
+	
+	  include REXML::StreamListener
+    
+    def initialize
+      @map = {}
     end
+    
+    #job tag => id
+    #body
+    #abstract
+    #article-title
+    
+    def tag_start(name, attr)
+      #puts "tag_start: #{name}"
+      if name =~ /^job$/
+        raise 'Document XML has multiple <job> tags, cannot parse multiple documents within a single file.' if @map['id_done']
+        @map['id'] = true
+      elsif name =~ /^article-title$/
+        raise 'Document XML has multiple <article-title> tags defined, cannot parse multiple documents within a single file.' if @map['title_done']
+        @map['title'] = true
+        @map['title_s'] = @map['art_l']
+        @map['title_l'] = 0
+      elsif name =~ /^abstract$/
+        raise 'Document XML has multiple <abstract> tags defined, cannot parse multiple documents within a single file.' if @map['abs_done']
+        @map['abs'] = true
+        @map['abs_s'] = @map['art_l']
+        @map['abs_l'] = 0
+      elsif name =~ /^body$/
+        raise 'Document XML has multiple <body> tags defined, cannot parse multiple documents within a single file.' if @map['body_done']
+        @map['body'] = true
+        @map['body_s'] = @map['art_l']
+        @map['body_l'] = 0
+      elsif name =~ /^article$/
+        raise 'Document XML has multiple <article> tags defined, cannot parse multiple documents within a single file.' if @map['art_done']
+        @map['art'] = true
+        @map['art_s'] = 0
+        @map['art_l'] = 0
+      elsif name =~ /^section$/
+        @map['sec'] = true
+        @map['sec_s'] = @map['art_l']
+        @map['sec_l'] = 0
+      end
+    end
+  
+  
+    def text(data)
       
-  end
-  
-  
-  def recurse_elements(elements)
-    elements.each do |e|
-      puts e.texts
-      recurse_elements(e.elements)
+      if @map['art']
+        @map['art_l'] += data.length
+      end
+      
+      if @map['id']
+        @doc = Document.new("http://pdfx.cs.man.ac.uk/" + data)
+      elsif @map['title']
+        @map['title_l'] += data.length
+      elsif @map['abs']
+        @map['abs_l'] += data.length
+      end
+      if @map['body']
+        @map['body_l'] += data.length
+      end
+      if @map['section']
+        #puts data
+      end
+      
     end
+    
+    #TODO add deal with <author> type tags
+    
+    def tag_end(name)
+      #puts "tag_end: #{name}"
+      if name =~ /^job$/
+        @map['id'] = false
+        @map['id_done'] = true
+      elsif name =~ /^article-title$/
+        @map['title'] = false
+        dc = Content.new(@map['title_s'], @map['title_l'], Content::TITLE, @process)
+        dc.setContext(@doc)
+        @doc.add(dc)
+        @map['title_done'] = true
+      elsif name =~ /^abstract$/
+        @map['abs'] = false
+        dc = Content.new(@map['abs_s'], @map['abs_l'], Content::ABSTRACT, @process)
+        dc.setContext(@doc)
+        @doc.add(dc)
+        @map['abs_done'] = true
+      elsif name =~ /^body$/
+        @map['body'] = false
+        dc = Content.new(@map['body_s'], @map['body_l'], Content::SECTION, @process)
+        dc.setContext(@doc)
+        @doc.add(dc)
+        @map['body_done'] = true
+      elsif name =~ /^article$/
+        @map['art'] = false
+        dc = Content.new(@map['art_s'], @map['art_l'], Content::DOCUMENT, @process)
+        dc.setContext(@doc)
+        @doc.add(dc)
+        @map['art_done'] = true
+      elsif name =~ /^section$/
+        @map['section'] = false
+        dc = Content.new(@map['sec_s'], @map['sec_l'], Content::SECTION, @process)
+        dc.setContext(@doc)
+        @doc.add(dc)
+      end
+    end
+    
+    def document
+      @doc
+    end
+    
   end
   
-  
-  def recurse_doc(doc)
-    doc.elements.each do |element|
-			print "[", element.name.to_s, "]"
-			element.each_recursive do |childElement|
-				print "[", childElement.name.to_s, "]"
-				puts childElement.texts
-			end
-		end
-	end
 
 
 end
