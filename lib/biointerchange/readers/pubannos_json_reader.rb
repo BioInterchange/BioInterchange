@@ -9,6 +9,8 @@ class PubannosJsonReader < BioInterchange::TextMining::TMReader
   
     super(inputstream)
     
+    @date = inputstream.read
+    
     pubannos
     
   end

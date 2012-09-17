@@ -24,8 +24,6 @@ class TMReader < BioInterchange::Reader
   # +inputstream+:: Input IO stream to deserialize 
   def deserialize(inputstream)
     raise ArgumentError, 'InputStream not of type IO, cannot read.' unless inputstream.kind_of?(IO)
-  
-    @data = inputstream.read
   end
   
   

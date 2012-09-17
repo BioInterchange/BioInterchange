@@ -15,9 +15,9 @@ class PdfxXmlReader < BioInterchange::TextMining::TMReader
   # +inputstream+:: Input IO stream to deserialize 
   def deserialize(inputstream)
   
-    #super(inputstream)
+    super(inputstream)
     
-    @data = inputstream
+    @input = inputstream
     
     pdfx
     
@@ -29,7 +29,7 @@ private
 
   def pdfx
     list = MyListener.new
-    REXML::Document.parse_stream(@data, list)
+    REXML::Document.parse_stream(@input, list)
     return list.document
   end
     
