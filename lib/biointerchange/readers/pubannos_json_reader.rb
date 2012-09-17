@@ -7,9 +7,16 @@ class PubannosJsonReader < BioInterchange::TextMining::TMReader
 
   def deserialize(inputstream)
   
-    super(inputstream)
+    #super(inputstream)
     
-    @date = inputstream.read
+    if inputstream.kind_of?(IO)
+      @data = inputstream.read
+    elsif inputstream.kind_of?(String)
+      @data = inputstream
+    else
+      #else raise exception
+      super(inputstream)
+    end
     
     pubannos
     
