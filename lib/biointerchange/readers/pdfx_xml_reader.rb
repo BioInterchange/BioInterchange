@@ -40,12 +40,12 @@ private
     
     def initialize
       @map = {}
+      
+      #sections can nest, so "stack" them
+      @map['sec_s'] = []
+      @map['sec_l'] = []
     end
     
-    #job tag => id
-    #body
-    #abstract
-    #article-title
     
     def tag_start(name, attr)
       #puts "tag_start: #{name}"
@@ -73,9 +73,9 @@ private
         @map['art_s'] = 0
         @map['art_l'] = 0
       elsif name =~ /^section$/
-        @map['sec'] = true
-        @map['sec_s'] = @map['art_l']
-        @map['sec_l'] = 0
+        raise 'Error with section stack, stacks not equal in size' unless  @map['sec_s'].size == @map['sec_l'].size
+        @map['sec_s'].push @map['art_l']
+        @map['sec_l'].push 0
       end
     end
   
@@ -96,8 +96,11 @@ private
       if @map['body']
         @map['body_l'] += data.length
       end
-      if @map['section']
-        #puts data
+      if @map['sec_l'].size != 0
+        #add length to *all* current sections
+        @map['sec_l'].size do |i|
+          @map['sec_l'][i+1] += data.length
+        end
       end
       
     end
@@ -134,8 +137,8 @@ private
         @doc.add(dc)
         @map['art_done'] = true
       elsif name =~ /^section$/
-        @map['section'] = false
-        dc = Content.new(@map['sec_s'], @map['sec_l'], Content::SECTION, @process)
+        raise 'Error with section stack, stacks not equal in size' unless  @map['sec_s'].size == @map['sec_l'].size
+        dc = Content.new(@map['sec_s'].pop, @map['sec_l'].pop, Content::SECTION, @process)
         dc.setContext(@doc)
         @doc.add(dc)
       end
