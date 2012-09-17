@@ -3,9 +3,10 @@ BioInterchange
 
 BioInterchange is a tool for generating interchangable RDF from non-RDF data sources.
 
-Supported input file formats:
+Supported input file formats (see examples directory):
 
-* TODO
+* [Pubannos JSON](http://pubannotation.dbcls.jp/)
+* [PDFx XML](http://pdfx.cs.man.ac.uk/)
 
 Supported RDF output formats:
 
