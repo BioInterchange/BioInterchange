@@ -15,7 +15,9 @@ class PdfxXmlReader < BioInterchange::TextMining::TMReader
   # +inputstream+:: Input IO stream to deserialize 
   def deserialize(inputstream)
   
-    super(inputstream)
+    #super(inputstream)
+    
+    @data = inputstream
     
     pdfx
     
@@ -98,8 +100,8 @@ private
       end
       if @map['sec_l'].size != 0
         #add length to *all* current sections
-        @map['sec_l'].size do |i|
-          @map['sec_l'][i+1] += data.length
+        @map['sec_l'].size.times do |i|
+          @map['sec_l'][i] += data.length
         end
       end
       
