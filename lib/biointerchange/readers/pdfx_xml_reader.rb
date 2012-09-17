@@ -15,7 +15,9 @@ class PdfxXmlReader < BioInterchange::TextMining::TMReader
   # +inputstream+:: Input IO stream to deserialize 
   def deserialize(inputstream)
   
-    super(inputstream)
+    #super(inputstream)
+    
+    raise ArgumentError, 'InputStream not of type IO, cannot read.' unless inputstream.kind_of?(IO) or inputstream.kind_of?(String)
     
     @input = inputstream
     
