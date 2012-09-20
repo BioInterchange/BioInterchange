@@ -79,15 +79,15 @@
           <p>Select the input format of the data:<br />
             <select id="inputformat" style="min-width: 50%;">
               <option value="dbcls.catanns.json" selected="selected">DBCLS PubAnnotation's Category Annotations (catanns) JSON</option>
-              <option value="uk.ac.man.pdfx" selected="selected">PDFx XML</option>
+              <option value="uk.ac.man.pdfx">PDFx XML</option>
             </select><br />
             <a class="btn btn-info" onclick="pasteExample();">Paste Input-Specific Example</a>
           </p>
           <p>Input format specific parameters:<br />
             <span class="muted">These parameters add meta-data to the data below. This meta-data says something about the data that is not represented in the data structure itself. For example, it could be a version number or date of when the data was created.</span><br />
-            <textarea id="metainput" style="width: 100%; min-height: 200px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;"></textarea>
+            <textarea id="metainput" style="font-size: 75%; width: 100%; min-height: 200px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;"></textarea>
             Paste data for RDFization below:
-            <textarea id="maininput" style="width: 100%; min-height: 200px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;"></textarea>
+            <textarea id="maininput" style="font-size: 75%; width: 100%; min-height: 200px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;"></textarea>
             Select the RDF serialization method:<br />
             <select id="outputformat" style="min-width: 50%;">
               <option value="rdf.bh12.sio">RDF using SIO and FOAF</option>

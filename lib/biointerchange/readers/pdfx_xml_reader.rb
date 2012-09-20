@@ -91,7 +91,7 @@ private
       end
       
       if @map['id']
-        @doc = Document.new("http://pdfx.cs.man.ac.uk/" + data)
+        @doc = BioInterchange::TextMining::Document.new("http://pdfx.cs.man.ac.uk/" + data)
       elsif @map['title']
         @map['title_l'] += data.length
       elsif @map['abs']
@@ -118,31 +118,31 @@ private
         @map['id_done'] = true
       elsif name =~ /^article-title$/
         @map['title'] = false
-        dc = Content.new(@map['title_s'], @map['title_l'], Content::TITLE, @process)
+        dc = BioInterchange::TextMining::Content.new(@map['title_s'], @map['title_l'], BioInterchange::TextMining::Content::TITLE, @process)
         dc.setContext(@doc)
         @doc.add(dc)
         @map['title_done'] = true
       elsif name =~ /^abstract$/
         @map['abs'] = false
-        dc = Content.new(@map['abs_s'], @map['abs_l'], Content::ABSTRACT, @process)
+        dc = BioInterchange::TextMining::Content.new(@map['abs_s'], @map['abs_l'], BioInterchange::TextMining::Content::ABSTRACT, @process)
         dc.setContext(@doc)
         @doc.add(dc)
         @map['abs_done'] = true
       elsif name =~ /^body$/
         @map['body'] = false
-        dc = Content.new(@map['body_s'], @map['body_l'], Content::SECTION, @process)
+        dc = BioInterchange::TextMining::Content.new(@map['body_s'], @map['body_l'], BioInterchange::TextMining::Content::SECTION, @process)
         dc.setContext(@doc)
         @doc.add(dc)
         @map['body_done'] = true
       elsif name =~ /^article$/
         @map['art'] = false
-        dc = Content.new(@map['art_s'], @map['art_l'], Content::DOCUMENT, @process)
+        dc = BioInterchange::TextMining::Content.new(@map['art_s'], @map['art_l'], BioInterchange::TextMining::Content::DOCUMENT, @process)
         dc.setContext(@doc)
         @doc.add(dc)
         @map['art_done'] = true
       elsif name =~ /^section$/
         raise 'Error with section stack, stacks not equal in size' unless  @map['sec_s'].size == @map['sec_l'].size
-        dc = Content.new(@map['sec_s'].pop, @map['sec_l'].pop, Content::SECTION, @process)
+        dc = BioInterchange::TextMining::Content.new(@map['sec_s'].pop, @map['sec_l'].pop, BioInterchange::TextMining::Content::SECTION, @process)
         dc.setContext(@doc)
         @doc.add(dc)
       end
