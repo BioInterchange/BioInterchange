@@ -2,9 +2,8 @@ module BioInterchange::TextMining
 
 class TMReader < BioInterchange::Reader
 
-  # Create a new instance of a JSON reader. Sets @process to a new +BioInterchange::TextMining::Process+ object.
+  # Create a new instance of a text-mining data reader. Sets @process to a new +BioInterchange::TextMining::Process+ object.
   #
-  # +jsontype+:: Format of JSON file for parse (currently only support the json format from Pubannots annotation: pubannos)
   # +name+:: Name of the process which generated this data
   # +name_uri+:: URI of the resource that generated this data
   # +date+:: Optional date of data creation
@@ -26,6 +25,16 @@ class TMReader < BioInterchange::Reader
     raise ArgumentError, 'InputStream not of type IO, cannot read.' unless inputstream.kind_of?(IO)
   end
   
+  # Automatically tries to determine a suitable process from the given name ID, which is assumed
+  # to be either an email address or web-site.
+  #
+  # +name_id+:: name ID that we want to represent by a suitable process
+  def self.determine_process(name_id)
+    process = BioInterchange::TextMining::Process::UNSPECIFIED
+    process = BioInterchange::TextMining::Process::MANUAL if name_id.match(/[^@]+@[^@]+/)
+    process = BioInterchange::TextMining::Process::SOFTWARE if name_id.match(/[a-zA-Z]+:\/\//)
+    process
+  end
   
 end
 

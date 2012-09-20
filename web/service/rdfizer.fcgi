@@ -19,6 +19,13 @@ load '../../lib/biointerchange/tm/content.rb'
 load '../../lib/biointerchange/tm/document.rb'
 load '../../lib/biointerchange/tm/process.rb'
 
+input_formats = {}
+input_formats['dbcls.catanns.json'] = [ BioInterchange::TextMining::PubannosJsonReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
+input_formats['uk.ac.man.pdfx'] = [ BioInterchange::TextMining::PdfxXmlReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
+
+output_formats = {}
+output_formats['rdf.bh12.sio'] = BioInterchange::TextMining::RDFWriter
+
 FCGI.each { |fcgi|
   request = fcgi.in.read
 
@@ -30,17 +37,19 @@ FCGI.each { |fcgi|
     parameters = JSON.parse(URI.decode(request['parameters']))
     data = URI.decode(request['data'])
 
-    process = BioInterchange::TextMining::Process::UNSPECIFIED
-    process = BioInterchange::TextMining::Process::MANUAL if parameters['name_id'].match(/[^@]+@[^@]+/)
-    process = BioInterchange::TextMining::Process::SOFTWARE if parameters['name_id'].match(/[a-zA-Z]+:\/\//)
+    raise ArgumentError, 'An input format must be given in the meta-data using the key "input".' unless parameters['input']
+    raise ArgumentError, "Unknown input format \"#{parameters['input']}\"." unless input_formats[parameters['input']]
+    raise ArgumentError, 'An output format must be given in the meta-data using the key "output".' unless parameters['output']
+    raise ArgumentError, "Unknown output format \"#{parameters['output']}\"." unless output_formats[parameters['output']]
 
-    reader = BioInterchange::TextMining::PubannosJsonReader.new(parameters['name'], parameters['name_id'], parameters['date'], process, parameters['version'])
+    reader_class, *args = input_formats[parameters['input']]
+    reader = reader_class.new(*BioInterchange::get_parameters(parameters, args))
     istream, ostream = IO.pipe
     ostream.print(data)
     ostream.close
     model = reader.deserialize(istream)
     istream, ostream = IO.pipe
-    BioInterchange::TextMining::RDFWriter.new(ostream).serialize(model)
+    output_formats[parameters['output']].new(ostream).serialize(model)
     ostream.close
     fcgi.out.print(istream.read)
   rescue => e
