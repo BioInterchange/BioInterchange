@@ -45,13 +45,16 @@ This section is only relevant if you are building newer versions of BioInterchan
 
 Note that the following set-up only works with Ruby 1.9.2p290 or newer.
 
-Building a new version of the Ruby vocabulary class for SIO:
+Building a new version of the Ruby vocabulary classes for SIO and SOFA (requires that the OBO files are saves as RDF/XML using [Protege](http://protege.stanford.edu)):
 
     sudo gem install rdf
     sudo gem install rdf-rdfxml
     echo -e "module BioInterchange\n" > lib/biointerchange/sio.rb
-    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO >> lib/biointerchange/SIO.rb
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO >> lib/biointerchange/sio.rb
     echo -e "\nend" >> lib/biointerchange/sio.rb
+    echo -e "module BioInterchange\n" > lib/biointerchange/sofa.rb
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sofa> SOFA >> lib/biointerchange/sofa.rb
+    echo -e "\nend" >> lib/biointerchange/sofa.rb
 
 ### Unit Testing
 
