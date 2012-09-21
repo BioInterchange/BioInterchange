@@ -10,6 +10,9 @@ if ARGV.length != 2 then
   exit 1
 end
 
+# Will later be used for extracting comments from SOFA.
+OBO_DEF = RDF::URI.new('http://purl.obolibrary.org/obo/def')
+
 reader = RDF::RDFXML::Reader.open(ARGV[0])
 
 model = {}
@@ -38,6 +41,13 @@ model.keys.each { |key|
       generated_label = label.gsub(/[ '-.<>]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
       next if generated_label.empty?
       uri = key.to_s
+
+      # Try to print out some comment for RDoc. The comment identification depends on the ontology used:
+      if entry[RDF::DC.description] then
+        puts "    # #{entry[RDF::DC.description]}\n"
+      elsif entry[OBO_DEF] then
+        puts "    # #{entry[OBO_DEF].to_s.sub(/^"(.*)" \[(.*)\]$/, '\1 (\2)')}\n"
+      end
       puts "    def self.#{generated_label}"
       puts "      RDF::URI.new('#{uri}')"
       puts '    end'
@@ -49,18 +59,27 @@ model.keys.each { |key|
   end
 }
 
+puts '    # Determines whether the given URI is an object property.'
+puts '    #'
+puts '    # +uri+:: URI that is tested for being an object property'
 puts '    def self.is_object_property?(uri)'
 object_properties.keys.each { |uri| puts "      return true if uri == RDF::URI.new('#{uri}')" }
 puts '      false'
 puts '    end'
 puts ''
 
+puts '    # Determines whether the given URI is a datatype property.'
+puts '    #'
+puts '    # +uri+:: URI that is tested for being a datatype property'
 puts '    def self.is_datatype_property?(uri)'
 datatype_properties.keys.each { |uri| puts "      return true if uri == RDF::URI.new('#{uri}')" }
 puts '      false'
 puts '    end'
 puts ''
 
+puts '    # Determines whether the given URI is a class.'
+puts '    #'
+puts '    # +uri+:: URI that is tested for being a class'
 puts '    def self.is_class?(uri)'
 classes.keys.each { |uri| puts "      return true if uri == RDF::URI.new('#{uri}')" }
 puts '      false'
