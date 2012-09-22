@@ -44,9 +44,9 @@ model.keys.each { |key|
 
       # Try to print out some comment for RDoc. The comment identification depends on the ontology used:
       if entry[RDF::DC.description] then
-        puts "    # #{entry[RDF::DC.description]}\n"
+        puts "    # #{entry[RDF::DC.description].to_s.gsub(/\n|\r\n/, "\n    # ")}\n"
       elsif entry[OBO_DEF] then
-        puts "    # #{entry[OBO_DEF].to_s.sub(/^"(.*)" \[(.*)\]$/, '\1 (\2)')}\n"
+        puts "    # #{entry[OBO_DEF].to_s.sub(/^"(.*)" \[(.*)\]$/, '\1 (\2)').gsub(/\n|\r\n/, "\n    # ")}\n"
       end
       puts "    def self.#{generated_label}"
       puts "      RDF::URI.new('#{uri}')"

@@ -16,7 +16,7 @@ class RDFWriter < BioInterchange::Writer
 
   # Serializes a model as RDF.
   #
-  # +model+:: a generic representation of input data
+  # +model+:: a generic representation of input data that is derived from BioInterchange::TextMining::Document
   def serialize(model)
     if model.instance_of?(BioInterchange::TextMining::Document) then
       serialize_document(model)
@@ -83,9 +83,11 @@ private
   end
 
 
-  # Serializes a Content object for a given document uri  
+  # Serializes a Content object for a given document URI.
   #
-  #
+  # +graph+:: RDF graph to which content is added
+  # +document_uri+:: the document URI to which the added content belongs to
+  # +content+:: an instance that describes the content
   def serialize_content(graph, document_uri, content)
     content_uri = RDF::URI.new(content.uri)
     graph.insert(RDF::Statement.new(document_uri, BioInterchange::SIO.has_attribute, content_uri))

@@ -1,23 +1,49 @@
 module BioInterchange
 
   # Ontologies (besides the ones from the 'rdf' gem)
+  require 'biointerchange/gff3.rb'
   require 'biointerchange/sio.rb'
+  require 'biointerchange/sofa.rb'
+
+  # Reader/writer interfaces
+  require 'biointerchange/reader.rb'
+  require 'biointerchange/writer.rb'
+
+  #
+  # TEXT MINING
+  #
 
   # Text mining readers
-  require 'biointerchange/reader.rb'
   require 'biointerchange/readers/text_mining_reader.rb'
   require 'biointerchange/readers/pubannos_json_reader.rb'
   require 'biointerchange/readers/pdfx_xml_reader.rb'
 
-	# Text mining converters
+	# Text mining model
 	require 'biointerchange/tm/document.rb'
 	require 'biointerchange/tm/content.rb'
 	require 'biointerchange/tm/process.rb'
 	
 	# Text mining writers
-	require 'biointerchange/writer.rb'
-	require 'biointerchange/writers/text_mining_rdf_ntriples.rb'
 	
+  #
+  # GENOMICS
+  #
+
+  # GFF3 reader
+  require 'biointerchange/readers/gff3_reader.rb'
+
+  # Feature base model
+  require 'biointerchange/gff3/feature_set.rb'
+  require 'biointerchange/gff3/feature.rb'
+
+  # GFF3 writer
+  require 'biointerchange/writers/gff3_rdf_ntriples.rb'
+  
+  #
+  # ACTUAL COMMAND LINE IMPLEMENTATION
+  #
+
+  # Option parsing 
 	require 'getopt/long'
 	include Getopt
 	

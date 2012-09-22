@@ -6,34 +6,25 @@ require 'json'
 class PubannosJsonReader < BioInterchange::TextMining::TMReader
 
   def deserialize(inputstream)
-  
-    #super(inputstream)
-    
-    if inputstream.kind_of?(IO)
-      @data = inputstream.read
-    elsif inputstream.kind_of?(String)
-      @data = inputstream
+    if inputstream.kind_of?(IO) then
+      pubannos(inputstream.read)
+    elsif inputstream.kind_of?(String) then
+      pubannos(inputstream)
     else
       #else raise exception
       super(inputstream)
     end
-    
-    pubannos
-    
   end
-  
-
-
 
 private 
 
   # Specific method for parsing of *Pubannotations* json format
-  def pubannos
+  def pubannos(data)
     
-    result = JSON.parse(@data)
+    result = JSON.parse(data)
     
     if result.has_key? 'Error'
-      raise "Error getting and parsing JSON file"
+      raise 'Error parsing the JSON input.'
     end
     
     
