@@ -58,6 +58,7 @@ module BioInterchange
 	begin
 	
     opt = Getopt::Long.getopts(
+      ["--help", "-h", BOOLEAN],
       ["--debug", "-d", BOOLEAN],  #set debug mode => print stack traces
       ["--name", REQUIRED], #name of resourcce/tool/person
       ["--name_id", REQUIRED], #uri of resource/tool/person
@@ -66,6 +67,28 @@ module BioInterchange
       ["--file", "-f", REQUIRED], #file to read, will read from STDIN if not supplied
       ["--out", "-o", REQUIRED] #output file, will out to STDOUT if not supplied
     )
+    
+    if opt['help']
+      puts "ruby #{$0}:"
+      puts "\t-d  --debug"  
+      puts "\t\tDebug mode: Use to print stacktraces"
+      puts "\t-h  --help"
+      puts "\t\tOutput this help message"
+      puts "\t-f  --file <file>"
+      puts "\t\tfile to read"
+      puts "\t-o  --out <file>" 
+      puts "\t\toutput file, will out to STDOUT if not supplied"
+      puts "\t-t  --date <date>"
+      puts "\t\tdate of processing/annotation"
+      puts "\t-v  --version <version>" 
+      puts "\t\tversion number of resource"
+      puts "\t--name <name>"
+      puts "\t\tname of resourcce/tool/person"
+      puts "\t--name_id <id>" 
+      puts "\t\turi of resource/tool/person"
+    
+      exit 0
+    end
     
     raise ArgumentError, 'Require --name and --name_id options to specify source of annotations (e.g., a manual annotators name, or software tool name) and their associated URI (e.g., email address, or webaddress).' unless opt['name'] and opt['name_id']
   
