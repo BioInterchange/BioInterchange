@@ -37,6 +37,7 @@ module BioInterchange
   require 'biointerchange/readers/gff3_reader.rb'
 
   # Feature base model
+  #commented following two lines out - not on repo yet.
   #require 'biointerchange/gff3/feature_set.rb'
   #require 'biointerchange/gff3/feature.rb'
 
