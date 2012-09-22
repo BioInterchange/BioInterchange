@@ -6,7 +6,7 @@ class Writer
   #
   # +ostream+:: instance of IO or derivative class
   def initialize(ostream)
-    raise ArgumentError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO)
+    raise BioInterchange::Exceptions::WriterError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO)
     @ostream = ostream
   end
 
@@ -14,7 +14,7 @@ class Writer
   #
   # +model+:: an object model instance
   def serialize(model)
-    raise 'You must implement this method, which takes an object model and serializes it into the previously provided output stream.'
+    raise BioInterchange::Exceptions::WriterError, 'You must implement this method, which takes an object model and serializes it into the previously provided output stream.'
   end
 
 end

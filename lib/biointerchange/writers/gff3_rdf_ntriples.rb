@@ -10,7 +10,7 @@ class RDFWriter
   #
   # +ostream+:: instance of an IO class or derivative that is used for RDF serialization
   def initialize(ostream)
-    raise ArgumentError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO)
+    raise BioInterchange::Exceptions::WriterError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO)
     @ostream = ostream
   end
 
@@ -21,7 +21,7 @@ class RDFWriter
     if model.instance_of?(BioInterchange::Genomics::FeatureSet) then
       serialize_model(model)
     else
-      raise ArgumentError, 'The provided model cannot be serialized. ' +
+      raise BioInterchange::Exceptions::WriterError, 'The provided model cannot be serialized. ' +
                            'This writer supports serialization for BioInterchange::Genomics::FeatureSet.'
     end
   end

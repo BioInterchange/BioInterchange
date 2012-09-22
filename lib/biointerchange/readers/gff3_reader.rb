@@ -22,7 +22,7 @@ class GFF3Reader
     elsif inputstream.kind_of?(String) then
       create_model(inputstream)
     else
-      raise ArgumentException, 'The provided input stream needs to be either of type IO or String.'
+      raise BioInterchange::Exceptions::ReaderError, 'The provided input stream needs to be either of type IO or String.'
     end
   end
 
