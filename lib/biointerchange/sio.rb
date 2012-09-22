@@ -2044,19 +2044,19 @@ class SIO
     end
 
     # A horizontal bar graph is a bar graph in which the rectangular bars 
-are horizontally oriented in space.
+    # are horizontally oriented in space.
     def self.horizontal_bar_graph
       RDF::URI.new('http://semanticscience.org/resource/SIO_000444')
     end
 
     # A vertical bar graph is a bar graph in which the rectangular bars are 
-vertically oriented in space.
+    # vertically oriented in space.
     def self.vertical_bar_graph
       RDF::URI.new('http://semanticscience.org/resource/SIO_000445')
     end
 
     # A stacked bar graph is a bar graph in which each rectangular bar is 
-partioned by the categorical value of each series of data.
+    # partioned by the categorical value of each series of data.
     def self.stacked_bar_graph
       RDF::URI.new('http://semanticscience.org/resource/SIO_000446')
     end
@@ -2076,7 +2076,7 @@ partioned by the categorical value of each series of data.
     end
 
     # An axis is a line segment that is part of a statistical graph in which the 
-position along the line corresponds to a numeric or categorical value.
+    # position along the line corresponds to a numeric or categorical value.
     def self.axis
       RDF::URI.new('http://semanticscience.org/resource/SIO_000450')
     end
@@ -2092,19 +2092,19 @@ position along the line corresponds to a numeric or categorical value.
     end
 
     # A y-axis is a Cartesian coordinate axis that is spatially oriented 
-perpendicular to the x-axis.
+    # perpendicular to the x-axis.
     def self.y_axis
       RDF::URI.new('http://semanticscience.org/resource/SIO_000453')
     end
 
     # A z-axis is a Cartesian coordinate axis that is spatially oriented 
-normal to the plane formed by the x- and y-axes.
+    # normal to the plane formed by the x- and y-axes.
     def self.z_axis
       RDF::URI.new('http://semanticscience.org/resource/SIO_000454')
     end
 
     # A category axis is an axis in which the position along the line is 
-partioned into categories.
+    # partioned into categories.
     def self.category_axis
       RDF::URI.new('http://semanticscience.org/resource/SIO_000455')
     end
@@ -2115,13 +2115,13 @@ partioned into categories.
     end
 
     # A secondary category axis is a category axis that defines a finer 
-granular part (or subset) of the value range of the primary category axis.
+    # granular part (or subset) of the value range of the primary category axis.
     def self.secondary_category_axis
       RDF::URI.new('http://semanticscience.org/resource/SIO_000457')
     end
 
     # A value axis is an axis in which the position along the line is 
-partioned into numeric values.
+    # partioned into numeric values.
     def self.value_axis
       RDF::URI.new('http://semanticscience.org/resource/SIO_000458')
     end
@@ -2196,7 +2196,7 @@ partioned into numeric values.
     end
 
     # A primary graph title is a primary title that describes a statistical 
-graph.
+    # graph.
     def self.primary_graph_title
       RDF::URI.new('http://semanticscience.org/resource/SIO_000473')
     end
@@ -2320,13 +2320,13 @@ graph.
     end
 
     # An endpoint is a terminal point that is the last of an ordered 
-pair of points.
+    # pair of points.
     def self.endpoint
       RDF::URI.new('http://semanticscience.org/resource/SIO_000508')
     end
 
     # A start point is a terminal point which is the first of an ordered 
-pair of points.
+    # pair of points.
     def self.startpoint
       RDF::URI.new('http://semanticscience.org/resource/SIO_000509')
     end
@@ -2352,10 +2352,10 @@ pair of points.
     end
 
     # A major tick mark is a tick mark that indicates the position of a 
-specific numeric value and is adjacent to its value label on the value 
-axis, or is one of a pair of tick marks that delineates the boundary of a 
-categorical value indicated by an adjacent category label on the 
-categorical axis.
+    # specific numeric value and is adjacent to its value label on the value 
+    # axis, or is one of a pair of tick marks that delineates the boundary of a 
+    # categorical value indicated by an adjacent category label on the 
+    # categorical axis.
     def self.major_tick_mark
       RDF::URI.new('http://semanticscience.org/resource/SIO_000514')
     end
@@ -2391,7 +2391,7 @@ categorical axis.
     end
 
     # A directed line segment is a line segment that is contained by an ordered pair 
-of endpoints (a start point and an endpoint).
+    # of endpoints (a start point and an endpoint).
     def self.directed_line_segment
       RDF::URI.new('http://semanticscience.org/resource/SIO_000521')
     end
@@ -5142,8 +5142,8 @@ of endpoints (a start point and an endpoint).
     end
 
     # An addition reaction is an organic reaction where two or more molecules combine to form a larger one. Addition reactions are limited to chemical compounds that have multiply-bonded atoms:
-    * Molecules with carbon-carbon double bonds or triple bonds
-    * Molecules with carbon - hetero double bonds like C=O or C=N
+    #     * Molecules with carbon-carbon double bonds or triple bonds
+    #     * Molecules with carbon - hetero double bonds like C=O or C=N
     def self.addition_reaction
       RDF::URI.new('http://semanticscience.org/resource/SIO_010518')
     end
