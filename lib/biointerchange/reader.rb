@@ -17,7 +17,7 @@ class Reader
   #
   # +istream+:: input IO stream to deserialize 
   def deserialize(istream)
-    raise BioInterchange::Exceptions::ReaderError, 'You must implement this method, which reads data from an input stream and returns an object model instance.'
+    raise BioInterchange::Exceptions::ImplementationReaderError, 'You must implement this method, which reads data from an input stream and returns an object model instance.'
   end
 
 end

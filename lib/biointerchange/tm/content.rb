@@ -57,7 +57,7 @@ class Content
 
   # Returns a URI that identifies this content.
   def uri
-    raise BioInterchange::Exceptions::ModelError, 'An URI can only be returned for content with a context (i.e., use setContext(context) first).' unless @context
+    raise BioInterchange::Exceptions::ImplementationModelError, 'An URI can only be returned for content with a context (i.e., use setContext(context) first).' unless @context
     process = '-'
     process = "(#{@process.uri.sub(/^.*?:\/\//, '')})" if @process
     "biointerchange://textmining/content/#{@context.uri.sub(/^.*?:\/\//, '')}/#{@offset},#{@length},#{@type},#{process}"
