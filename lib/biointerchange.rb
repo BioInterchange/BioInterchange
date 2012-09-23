@@ -1,63 +1,63 @@
 module BioInterchange
 
   # Custom Exceptions and Errors
-  require 'biointerchange/exceptions.rb'
+  require './biointerchange/exceptions.rb'
 
   # Ontologies (besides the ones from the 'rdf' gem)
-  require 'biointerchange/gff3.rb'
-  require 'biointerchange/sio.rb'
-  require 'biointerchange/sofa.rb'
+  require './biointerchange/gff3.rb'
+  require './biointerchange/sio.rb'
+  require './biointerchange/sofa.rb'
 
   # Reader/writer interfaces
-  require 'biointerchange/reader.rb'
-  require 'biointerchange/writer.rb'
+  require './biointerchange/reader.rb'
+  require './biointerchange/writer.rb'
 
   #
   # TEXT MINING
   #
 
   # Text mining readers
-  require 'biointerchange/readers/text_mining_reader.rb'
-  require 'biointerchange/readers/pubannos_json_reader.rb'
-  require 'biointerchange/readers/pdfx_xml_reader.rb'
+  require './biointerchange/readers/text_mining_reader.rb'
+  require './biointerchange/readers/pubannos_json_reader.rb'
+  require './biointerchange/readers/pdfx_xml_reader.rb'
 
-	# Text mining model
-	require 'biointerchange/tm/document.rb'
-	require 'biointerchange/tm/content.rb'
-	require 'biointerchange/tm/process.rb'
-	
-	# Text mining writers
-	require 'biointerchange/writers/text_mining_rdf_ntriples.rb'
-	
+  # Text mining model
+  require './biointerchange/tm/document.rb'
+  require './biointerchange/tm/content.rb'
+  require './biointerchange/tm/process.rb'
+  
+  # Text mining writers
+  require './biointerchange/writers/text_mining_rdf_ntriples.rb'
+  
   #
   # GENOMICS
   #
 
   # GFF3 reader
-  require 'biointerchange/readers/gff3_reader.rb'
+  require './biointerchange/readers/gff3_reader.rb'
 
   # Feature base model
   #commented following two lines out - not on repo yet.
-  #require 'biointerchange/gff3/feature_set.rb'
-  #require 'biointerchange/gff3/feature.rb'
+  #require './biointerchange/gff3/feature_set.rb'
+  #require './biointerchange/gff3/feature.rb'
 
   # GFF3 writer
-  require 'biointerchange/writers/gff3_rdf_ntriples.rb'
+  require './biointerchange/writers/gff3_rdf_ntriples.rb'
   
   #
   # ACTUAL COMMAND LINE IMPLEMENTATION
   #
 
   # Option parsing 
-	require 'getopt/long'
-	include Getopt
-	
-	include BioInterchange::TextMining
-	
-	include BioInterchange::Exceptions
-	
-	begin
-	
+  require 'getopt/long'
+  include Getopt
+    
+  include BioInterchange::TextMining
+    
+  include BioInterchange::Exceptions
+    
+  begin
+    
     opt = Getopt::Long.getopts(
       ["--help", "-h", BOOLEAN],
       ["--debug", "-d", BOOLEAN],  #set debug mode => print stack traces
@@ -128,47 +128,19 @@ module BioInterchange
     end
     
     writer.serialize(model)
-	
+    
   rescue ArgumentError => e
-    $stderr.puts "There is an issue with your command-line parameters:"
-    $stderr.print "\t"
     $stderr.puts e.message
-    
     $stderr.puts e.backtrace if opt['debug']
-    
     exit 1
-    
   rescue Getopt::Long::Error => e
-    $stderr.puts "There is an issue with your command-line parameters:"
-    $stderr.print "\t"
     $stderr.puts e.message
-    $stderr.puts "Run \"ruby #{$0} -h\" for list of options"
-    
-    #Comment next line out as opt hash not generated if this error thrown 
     #$stderr.puts e.backtrace if opt['debug']
-    
     exit 1
-  
-  rescue FormatError => e
-    $stderr.puts "There was an error during program execution:"
-    $stderr.print "\t"
+  rescue InputFormatError => e
     $stderr.puts e.message
-    
     $stderr.puts e.backtrace if opt['debug']
-    
     exit 2
-  
-  rescue BioInterchangeError => e
-    $stderr.puts "There was an error during program execution:"
-    $stderr.print "\t"
-    $stderr.puts e.message
-    
-    $stderr.puts e.backtrace if opt['debug']
-    
-    exit 3
-  
-  #rescue 
-  
   end
 
 end
