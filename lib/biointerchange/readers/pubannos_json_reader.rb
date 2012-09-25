@@ -24,7 +24,7 @@ private
     result = JSON.parse(data)
     
     if result.has_key? 'Error'
-      raise 'Error parsing the JSON input.'
+      raise BioInterchange::Exceptions::InputFormatError, 'Error parsing the JSON input file: #{result["Error"]}'
     end
     
     

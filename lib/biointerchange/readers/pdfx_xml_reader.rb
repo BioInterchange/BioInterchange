@@ -17,7 +17,7 @@ class PdfxXmlReader < BioInterchange::TextMining::TMReader
   
     #super(inputstream)
     
-    raise ArgumentError, 'InputStream not of type IO, cannot read.' unless inputstream.kind_of?(IO) or inputstream.kind_of?(String)
+    raise BioInterchange::Exceptions::ImplementationReaderError, 'InputStream not of type IO, cannot read.' unless inputstream.kind_of?(IO) or inputstream.kind_of?(String)
     
     @input = inputstream
     
@@ -54,30 +54,30 @@ private
     def tag_start(name, attr)
       #puts "tag_start: #{name}"
       if name =~ /^job$/
-        raise 'Document XML has multiple <job> tags, cannot parse multiple documents within a single file.' if @map['id_done']
+        raise BioInterchange::Exceptions::InputFormatError, 'Input document XML has multiple <job> tags, cannot parse multiple documents within a single file.' if @map['id_done']
         @map['id'] = true
       elsif name =~ /^article-title$/
-        raise 'Document XML has multiple <article-title> tags defined, cannot parse multiple documents within a single file.' if @map['title_done']
+        raise BioInterchange::Exceptions::InputFormatError, 'Input document XML has multiple <article-title> tags defined, cannot parse multiple documents within a single file.' if @map['title_done']
         @map['title'] = true
         @map['title_s'] = @map['art_l']
         @map['title_l'] = 0
       elsif name =~ /^abstract$/
-        raise 'Document XML has multiple <abstract> tags defined, cannot parse multiple documents within a single file.' if @map['abs_done']
+        raise BioInterchange::Exceptions::InputFormatError, 'Input document XML has multiple <abstract> tags defined, cannot parse multiple documents within a single file.' if @map['abs_done']
         @map['abs'] = true
         @map['abs_s'] = @map['art_l']
         @map['abs_l'] = 0
       elsif name =~ /^body$/
-        raise 'Document XML has multiple <body> tags defined, cannot parse multiple documents within a single file.' if @map['body_done']
+        raise BioInterchange::Exceptions::InputFormatError, 'Input document XML has multiple <body> tags defined, cannot parse multiple documents within a single file.' if @map['body_done']
         @map['body'] = true
         @map['body_s'] = @map['art_l']
         @map['body_l'] = 0
       elsif name =~ /^article$/
-        raise 'Document XML has multiple <article> tags defined, cannot parse multiple documents within a single file.' if @map['art_done']
+        raise BioInterchange::Exceptions::InputFormatError, 'Input document XML has multiple <article> tags defined, cannot parse multiple documents within a single file.' if @map['art_done']
         @map['art'] = true
         @map['art_s'] = 0
         @map['art_l'] = 0
       elsif name =~ /^section$/
-        raise 'Error with section stack, stacks not equal in size' unless  @map['sec_s'].size == @map['sec_l'].size
+        raise BioInterchange::Exceptions::InputFormatError, 'Error with section stack, stacks not equal in size: Possibly not a well formed XML input file. Check <section> tags all match up and do not overlap (nesting is fine).' unless  @map['sec_s'].size == @map['sec_l'].size
         @map['sec_s'].push @map['art_l']
         @map['sec_l'].push 0
       end

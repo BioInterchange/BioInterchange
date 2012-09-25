@@ -10,7 +10,7 @@ class RDFWriter < BioInterchange::Writer
   #
   # +ostream+:: instance of an IO class or derivative that is used for RDF serialization
   def initialize(ostream)
-    raise ArgumentError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO)
+    raise BioInterchange::Exceptions::ImplementationWriterError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO)
     @ostream = ostream
   end
 
@@ -21,7 +21,7 @@ class RDFWriter < BioInterchange::Writer
     if model.instance_of?(BioInterchange::TextMining::Document) then
       serialize_document(model)
     else
-      raise ArgumentError, 'The provided model cannot be serialized at the moment. ' +
+      raise BioInterchange::Exceptions::ImplementationWriterError, 'The provided model cannot be serialized at the moment. ' +
                            'Supported classes are BioInterchange::TextMining::Document (and that\'s it for now).'
     end
   end
@@ -44,7 +44,7 @@ private
     when :date
       RDF::URI.new("#{base_uri}/date/#{process.uri.sub(/^.*?:\/\//, '')}")
     else
-      raise "There is no implementation for serializing a process as #{kind}."
+      raise BioInterchange::Exceptions::ImplementationWriterError, "There is no implementation for serializing a process as #{kind}."
     end
   end
   
@@ -64,7 +64,7 @@ private
     #when :type
     #  RDF::URI.new("#{base_uri}/type/#{content.uri.sub(/^.*?:\/\//, '')}")
     else
-      raise "There is no implementation for serializing a content as #{kind}."
+      raise BioInterchange::Exceptions::ImplementationWriterError, "There is no implementation for serializing a content as #{kind}."
     end
   end
 
