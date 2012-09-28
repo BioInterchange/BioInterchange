@@ -58,7 +58,18 @@ private
     graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.start, RDF::Literal.new(feature.start_coordinate)))
     graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.end, RDF::Literal.new(feature.end_coordinate)))
     graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.score, RDF::Literal.new(feature.score))) if feature.score
-    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.strand, RDF::Literal.new(feature.strand)))
+    case feature.strand
+    when BioInterchange::Genomics::Feature::NOT_STRANDED
+      graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.strand, BioInterchange::GFF3.NotStranded))
+    when BioInterchange::Genomics::Feature::UNKNOWN
+      graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.strand, BioInterchange::GFF3.UnknownStrand))
+    when BioInterchange::Genomics::Feature::POSITIVE
+      graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.strand, BioInterchange::GFF3.Positive))
+    when BioInterchange::Genomics::Feature::NEGATIVE
+      graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.strand, BioInterchange::GFF3.Negative))
+    else
+      raise ArgumentException, 'Strand of feature is set to an unknown constant.'
+    end
     graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.phase, RDF::Literal.new(feature.phase))) if feature.phase
 
     serialize_attributes(graph, set_uri, feature_uri, feature.attributes) unless feature.attributes.keys.empty?
