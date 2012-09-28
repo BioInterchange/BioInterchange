@@ -1,6 +1,8 @@
 BioInterchange
 ==============
 
+[![Build Status](https://secure.travis-ci.org/joejimbo/bioruby-biointerchange.png)](http://travis-ci.org/joejimbo/bioruby-biointerchange)
+
 BioInterchange is a tool for generating interchangable RDF from non-RDF data sources.
 
 Supported input file formats (see examples directory):
@@ -28,7 +30,13 @@ Four interfaces to BioInterchange are available:
 
 ### Ruby gem
 
-TODO
+The Ruby gem is under active development, so the following may or may not work out of the box.
+
+    gem install biointerchange
+
+To use BioInterchange in your Ruby projects, include the following line in your code:
+
+    require 'biointerchange'
 
 ### RESTful Web-Service
 
@@ -75,8 +83,27 @@ In alphabetical order of the last name:
 * [Geraint Duck](http://www.cs.man.ac.uk/~duckg)
 * [Michel Dumontier](http://dumontierlab.com)
 
-License
--------
+Cite
+----
 
-See [LICENSE](https://raw.github.com/BioInterchange/BioInterchange/master/LICENSE) file.
+If you use this software, please cite
+
+* BioInterchange: An Open Source Framework for Transforming Heterogeneous Data Formats Into RDF (_in preparation_)
+
+and one of the following Biogem publications
+
+* [BioRuby: bioinformatics software for the Ruby programming language](http://dx.doi.org/10.1093/bioinformatics/btq475)
+* [Biogem: an effective tool-based approach for scaling up open source software development in bioinformatics](http://dx.doi.org/10.1093/bioinformatics/bts080)
+
+Biogems.info
+------------
+
+This Biogem is published at [#biointerchange](http://biogems.info/index.html) and hosted on its primary site [www.biointerchange.org](http://www.biointerchange.org).
+
+The BioRuby community is on IRC server: irc.freenode.org, channel: #bioruby.
+
+License/Copyright
+-----------------
+
+See [LICENSE](https://raw.github.com/BioInterchange/BioInterchange/master/LICENSE.txt) file.
 
