@@ -94,7 +94,7 @@ private
           attribute_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/#{tag}-#{index + 1}") unless list.size == 1
           graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.attributes, attribute_uri))
           graph.insert(RDF::Statement.new(attribute_uri, RDF.type, BioInterchange::GFF3.Attribute))
-          graph.insert(RDF::Statement.new(attribute_uri, BioInterchange::GFF3.tag, RDF::Literal.new(tag)))
+          graph.insert(RDF::Statement.new(attribute_uri, BioInterchange::GFF3.tag, RDF::Literal.new("#{tag}")))
           graph.insert(RDF::Statement.new(attribute_uri, RDF.value, RDF::Literal.new(value)))
         }
       end
