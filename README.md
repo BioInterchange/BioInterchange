@@ -67,11 +67,39 @@ Building a new version of the Ruby vocabulary classes for GFF3, SIO, SOFA (requi
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sofa> SOFA >> lib/biointerchange/sofa.rb
     echo -e "\nend" >> lib/biointerchange/sofa.rb
 
+### Gem Bundling
+
+    bundle install
+
 ### Unit Testing
 
-BioInterchange uses unit testing using [RSpec](http://rspec.info):
+BioInterchange uses unit testing using [RSpec](http://rspec.info), where the unit tests are located in the `spec` directory.
+
+Using bundler, a quick check can be carried out using:
+
+    bundle exec rake spec
+
+A more verbose is produced by calling `rspec` directly:
 
     rspec -c -f d
+
+### Generating RDocs
+
+    bundle exec rake rdoc
+
+### Troubleshooting
+
+#### GCC: No such file or directory
+
+On Mac OS X, you might see this error:
+
+    make: /usr/bin/gcc-4.2: No such file or directory
+    make: *** [generator.o] Error 1
+
+This can be solved by executing:
+
+    sudo ln -s /usr/bin/llvm-gcc-4.2 /usr/bin/gcc-4.2
+
 
 Contributors
 ------------
