@@ -6,19 +6,19 @@ load 'lib/biointerchange/exceptions.rb'
 
 describe BioInterchange::Exceptions do
   describe 'error and exception creation tests' do
-    it 'format error' do
+    it 'raising of InputFormatError' do
       expect { raise BioInterchange::Exceptions::InputFormatError }.to raise_error(BioInterchange::Exceptions::BioInterchangeError)
     end
     
-    it 'reader error' do
+    it 'raising of ImplementationReaderError' do
       expect { raise BioInterchange::Exceptions::ImplementationReaderError }.to raise_error(BioInterchange::Exceptions::ImplementationError)
     end
     
-    it 'model error' do
+    it 'raising of ImplementationModelError' do
       expect { raise BioInterchange::Exceptions::ImplementationModelError }.to raise_error(BioInterchange::Exceptions::ImplementationError)
     end
     
-    it 'writer error' do
+    it 'raising of ImplementationWriterError' do
       expect { raise BioInterchange::Exceptions::ImplementationWriterError }.to raise_error(BioInterchange::Exceptions::ImplementationError)
     end
     
