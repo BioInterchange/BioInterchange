@@ -16,13 +16,13 @@ class RDFWriter
 
   # Serialize a model as RDF.
   #
-  # +model+:: a generic representation of input data that is derived from BioInterchange::Genomics::FeatureSet
+  # +model+:: a generic representation of input data that is derived from BioInterchange::Genomics::GFF3FeatureSet
   def serialize(model)
-    if model.instance_of?(BioInterchange::Genomics::FeatureSet) then
+    if model.instance_of?(BioInterchange::Genomics::GFF3FeatureSet) then
       serialize_model(model)
     else
       raise BioInterchange::Exceptions::ImplementationWriterError, 'The provided model cannot be serialized. ' +
-                           'This writer supports serialization for BioInterchange::Genomics::FeatureSet.'
+                           'This writer supports serialization for BioInterchange::Genomics::GFF3FeatureSet.'
     end
   end
 
@@ -30,7 +30,7 @@ private
 
   # Serializes RDF for a feature set representation.
   #
-  # +model+:: an instance of +BioInterchange::Genomics::FeatureSet+
+  # +model+:: an instance of +BioInterchange::Genomics::GFF3FeatureSet+
   def serialize_model(model)
     graph = RDF::Graph.new
     set_uri = RDF::URI.new(model.uri)
@@ -41,11 +41,11 @@ private
     RDF::NTriples::Writer.dump(graph, @ostream)
   end
 
-  # Serializes a +Feature+ object for a given feature set URI.
+  # Serializes a +GFF3Feature+ object for a given feature set URI.
   #
   # +graph+:: RDF graph to which the feature is added
   # +set_uri+:: the feature set URI to which the feature belongs to
-  # +feature+:: a +Feature+ instance
+  # +feature+:: a +GFF3Feature+ instance
   def serialize_feature(graph, set_uri, feature)
     # TODO Make sure there is only one value in the 'ID' list.
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{feature.source},#{feature.type},#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}") unless feature.attributes.has_key?('ID')
@@ -59,13 +59,13 @@ private
     graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.end, RDF::Literal.new(feature.end_coordinate)))
     graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.score, RDF::Literal.new(feature.score))) if feature.score
     case feature.strand
-    when BioInterchange::Genomics::Feature::NOT_STRANDED
+    when BioInterchange::Genomics::GFF3Feature::NOT_STRANDED
       graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.strand, BioInterchange::GFF3.NotStranded))
-    when BioInterchange::Genomics::Feature::UNKNOWN
+    when BioInterchange::Genomics::GFF3Feature::UNKNOWN
       graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.strand, BioInterchange::GFF3.UnknownStrand))
-    when BioInterchange::Genomics::Feature::POSITIVE
+    when BioInterchange::Genomics::GFF3Feature::POSITIVE
       graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.strand, BioInterchange::GFF3.Positive))
-    when BioInterchange::Genomics::Feature::NEGATIVE
+    when BioInterchange::Genomics::GFF3Feature::NEGATIVE
       graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3.strand, BioInterchange::GFF3.Negative))
     else
       raise ArgumentException, 'Strand of feature is set to an unknown constant.'

@@ -3,11 +3,11 @@ require 'rspec'
 
 load 'lib/biointerchange/core.rb'
 load 'lib/biointerchange/reader.rb'
-load 'lib/biointerchange/readers/text_mining_reader.rb'
-load 'lib/biointerchange/readers/pubannos_json_reader.rb'
-load 'lib/biointerchange/tm/document.rb'
-load 'lib/biointerchange/tm/content.rb'
-load 'lib/biointerchange/tm/process.rb'
+load 'lib/biointerchange/textmining/text_mining_reader.rb'
+load 'lib/biointerchange/textmining/pubannos_json_reader.rb'
+load 'lib/biointerchange/textmining/document.rb'
+load 'lib/biointerchange/textmining/content.rb'
+load 'lib/biointerchange/textmining/process.rb'
 
 describe BioInterchange::TextMining::PubannosJsonReader do
   describe 'deserialization of pubannos json text-mining documents' do

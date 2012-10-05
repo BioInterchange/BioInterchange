@@ -153,7 +153,7 @@ private
   def serialize_process_name(graph, document_uri, content_uri, process_uri, process)
     kind_uri = process_uri(process, :name)
     graph.insert(RDF::Statement.new(kind_uri, RDF.type, BioInterchange::SIO.name))
-    graph.insert(RDF::Statement.new(kind_uri, BioInterchange::SIO.has_attribute, RDF::Literal.new(process.name)))
+    graph.insert(RDF::Statement.new(kind_uri, BioInterchange::SIO.has_attribute, RDF::Literal.new("#{process.name}")))
   end
 
   #

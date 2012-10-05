@@ -24,11 +24,36 @@ Usage
 Four interfaces to BioInterchange are available:
 
 1.  command-line tool-suite
-2.  Ruby API
+2.  Ruby API/Ruby gem
 3.  RESTful web-service
 4.  interactive web-site
 
-### Ruby gem
+### Command-Line Tool-Suite
+
+BioInterchange's command-line tool `biointerchange` can be installed as a command line tools as follows:
+
+    gem install biointerchange
+
+#### Usage
+
+Examples:
+
+    biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.json --name 'Peter Smith' --name_id 'peter.smith@example.com'
+    biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007-8-3-R40.xml --name 'Peter Smith' --name_id 'peter.smith@example.com'
+
+Input formats:
+
+*  `biointerchange.gff3`
+*  `dbcls.catanns.json`
+*  `uk.ac.man.pdfx`
+
+Output formats:
+
+*  `rdf.biointerchange.gff3`
+*  `rdf.bh12.sio`
+
+
+### Ruby API/Ruby gem
 
 The Ruby gem is under active development, so the following may or may not work out of the box.
 
@@ -67,9 +92,13 @@ Building a new version of the Ruby vocabulary classes for GFF3, SIO, SOFA (requi
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sofa> SOFA >> lib/biointerchange/sofa.rb
     echo -e "\nend" >> lib/biointerchange/sofa.rb
 
-### Gem Bundling
+### Gem Bundling/Installing
 
-    bundle install
+    sudo bundle exec rake install
+
+If you encounter problems with gem dependencies, then you can try to explictly use Ruby 1.9:
+
+    sudo bundle exec rake1.9 install
 
 ### Unit Testing
 

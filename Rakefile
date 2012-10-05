@@ -21,6 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{BioInterchange is a Ruby gem, command-line tool, web-service for turning heterogeneous data formats such as JSON, XML, GFF3, etc., into RDF."}
   gem.email = "joachim.baran@gmail.com"
   gem.authors = ["Joachim Baran", "Kevin B. Cohen", "Geraint Duck", "Michel Dumontier"]
+  gem.executable = 'biointerchange'
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new

@@ -5,10 +5,10 @@ load 'lib/biointerchange/core.rb'
 load 'lib/biointerchange/sio.rb'
 load 'lib/biointerchange/reader.rb'
 load 'lib/biointerchange/writer.rb'
-load 'lib/biointerchange/writers/text_mining_rdf_ntriples.rb'
-load 'lib/biointerchange/tm/document.rb'
-load 'lib/biointerchange/tm/content.rb'
-load 'lib/biointerchange/tm/process.rb'
+load 'lib/biointerchange/textmining/text_mining_rdf_ntriples.rb'
+load 'lib/biointerchange/textmining/document.rb'
+load 'lib/biointerchange/textmining/content.rb'
+load 'lib/biointerchange/textmining/process.rb'
 
 describe BioInterchange::TextMining::RDFWriter do
   describe 'serialization of text-mining documents' do

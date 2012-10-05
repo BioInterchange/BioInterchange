@@ -1,0 +1,6 @@
+#!/usr/bin/ruby
+
+require 'biointerchange'
+
+BioInterchange::cli
+

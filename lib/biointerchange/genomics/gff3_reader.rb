@@ -29,7 +29,7 @@ class GFF3Reader
 private
 
   def create_model(gff3)
-    feature_set = BioInterchange::Genomics::FeatureSet.new()
+    feature_set = BioInterchange::Genomics::GFF3FeatureSet.new()
     gff3.each_line { |line|
       next if line.start_with?('#')
 
@@ -54,13 +54,13 @@ private
 
       # Determine strandedness:
       if strand == '?' then
-        strand = BioInterchange::Genomics::Feature::UNKNOWN
+        strand = BioInterchange::Genomics::GFF3Feature::UNKNOWN
       elsif strand == '+' then
-        strand = BioInterchange::Genomics::Feature::POSITIVE
+        strand = BioInterchange::Genomics::GFF3Feature::POSITIVE
       elsif strand == '-' then
-        strand = BioInterchange::Genomics::Feature::NEGATIVE
+        strand = BioInterchange::Genomics::GFF3Feature::NEGATIVE
       else
-        strand = BioInterchange::Genomics::Feature::NOT_STRANDED
+        strand = BioInterchange::Genomics::GFF3Feature::NOT_STRANDED
       end
 
       # Set phase, if it lies in the permissable range of values:
@@ -74,7 +74,7 @@ private
       attributes.split(';').map { |assignment| match = assignment.match(/([^=]+)=(.+)/) ; { match[1].strip => match[2].split(',').map { |value| value.strip } } }.map { |hash| hash.each_pair { |tag,list| temp[tag] = list } }
       attributes = temp
 
-      feature_set.add(BioInterchange::Genomics::Feature.new(seqid, source, type, start_coordinate, end_coordinate, score, strand, phase, attributes))
+      feature_set.add(BioInterchange::Genomics::GFF3Feature.new(seqid, source, type, start_coordinate, end_coordinate, score, strand, phase, attributes))
     }
 
     feature_set

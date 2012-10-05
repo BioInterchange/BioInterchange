@@ -3,11 +3,11 @@ require 'rspec'
 
 load 'lib/biointerchange/core.rb'
 load 'lib/biointerchange/reader.rb'
-load 'lib/biointerchange/readers/text_mining_reader.rb'
-load 'lib/biointerchange/readers/pdfx_xml_reader.rb'
-load 'lib/biointerchange/tm/document.rb'
-load 'lib/biointerchange/tm/content.rb'
-load 'lib/biointerchange/tm/process.rb'
+load 'lib/biointerchange/textmining/text_mining_reader.rb'
+load 'lib/biointerchange/textmining/pdfx_xml_reader.rb'
+load 'lib/biointerchange/textmining/document.rb'
+load 'lib/biointerchange/textmining/content.rb'
+load 'lib/biointerchange/textmining/process.rb'
 
 describe BioInterchange::TextMining::PdfxXmlReader do
   describe 'deserialization of pdfx text-mining documents' do
