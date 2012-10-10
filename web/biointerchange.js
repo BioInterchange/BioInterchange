@@ -1,5 +1,5 @@
 function generateRDF() {
-  if ($('#inputformat').val() == 'dbcls.catanns.json' || $('#inputformat').val() == 'uk.ac.man.pdfx') {
+  if ($('#inputformat').val() == 'biointerchange.gff3' || $('#inputformat').val() == 'dbcls.catanns.json' || $('#inputformat').val() == 'uk.ac.man.pdfx') {
     request = '{ "parameters" : "' + escape($('#metainput').val()) + '", "data" : "' + escape($('#maininput').val()) + '" }'
     $.ajax({
       type: 'POST',
@@ -16,8 +16,56 @@ function generateRDF() {
   }
 }
 
+function selectDbclsCatannsJson() {
+  var outputFormats = $('#outputformat')[0];
+  for (var i = 0; i < outputFormats.length; i++)
+  if ($('#inputformat').val() == 'biointerchange.gff3') {
+    if (outputFormats[i].value == 'rdf.biointerchange.gff3') {
+      outputFormats[i].selected = true;
+      outputFormats[i].disabled = false;
+    } else {
+      outputFormats[i].selected = false;
+      outputFormats[i].disabled = true;
+    }
+  } else if ($('#inputformat').val() == 'dbcls.catanns.json') {
+    if (outputFormats[i].value == 'rdf.bh12.sio') {
+      outputFormats[i].selected = true;
+      outputFormats[i].disabled = false;
+    } else {
+      outputFormats[i].selected = false;
+      outputFormats[i].disabled = true;
+    }
+  } else if ($('#inputformat').val() == 'uk.ac.man.pdfx') {
+    if (outputFormats[i].value == 'rdf.bh12.sio') {
+      outputFormats[i].selected = true;
+      outputFormats[i].disabled = false;
+    } else {
+      outputFormats[i].selected = false;
+      outputFormats[i].disabled = true;
+    }
+  } else {
+    // Woopsie.
+  }
+}
+
 function pasteExample() {
-  if ($('#inputformat').val() == 'dbcls.catanns.json') {
+  if ($('#inputformat').val() == 'biointerchange.gff3') {
+    $('#metainput').val(
+      "{\n" +
+      "  \"input\" : \"biointerchange.gff3\",\n" +
+      "  \"output\" : \"rdf.biointerchange.gff3\",\n" +
+      "  \"name\" : \"Peter Smith\",\n" +
+      "  \"name_id\" : \"peter.smith@some.example.domain\",\n" +
+      "  \"date\" : \"2012-07-19\"\n" +
+      "}\n"
+    );
+    $('#maininput').val(
+      "ChrX.38\tbovine_complete_cds_gmap_perfect\tgene\t15870\t16254\t.\t+\t.\tID=BC109609_ChrX.38\n" +
+      "ChrX.38\tbovine_complete_cds_gmap_perfect\tRNA\t15870\t16254\t.\t+\t.\tID=bovine_complete_cds_gmap_perfect_BC109609_ChrX.38;Parent=BC109609_ChrX.38\n" +
+      "ChrX.38\tbovine_complete_cds_gmap_perfect\tCDS\t15870\t16254\t.\t+\t0\tParent=bovine_complete_cds_gmap_perfect_BC109609_ChrX.38\n" +
+      "ChrX.38\tbovine_complete_cds_gmap_perfect\texon\t15870\t16254\t.\t+\t0\tParent=bovine_complete_cds_gmap_perfect_BC109609_ChrX.38\n"
+    );
+  } else if ($('#inputformat').val() == 'dbcls.catanns.json') {
     $('#metainput').val(
       "{\n" +
       "  \"input\" : \"dbcls.catanns.json\",\n" +

@@ -48,7 +48,7 @@ private
   # +feature+:: a +GFF3Feature+ instance
   def serialize_feature(graph, set_uri, feature)
     # TODO Make sure there is only one value in the 'ID' list.
-    feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{feature.source},#{feature.type},#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}") unless feature.attributes.has_key?('ID')
+    feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{feature.source},#{feature.type.to_s.sub(/^[^:]+:\/\//, '')},#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}") unless feature.attributes.has_key?('ID')
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.attributes['ID'][0]}") if feature.attributes.has_key?('ID')
     graph.insert(RDF::Statement.new(set_uri, BioInterchange::GFF3.contains, feature_uri))
     graph.insert(RDF::Statement.new(feature_uri, RDF.type, BioInterchange::GFF3.Feature))

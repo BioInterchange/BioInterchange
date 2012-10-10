@@ -77,9 +77,16 @@
           </p>
           <h3>Interactive Web-Interface</h3>
           <p>Select the input format of the data:<br />
-            <select id="inputformat" style="min-width: 50%;">
-              <option value="dbcls.catanns.json" selected="selected">DBCLS PubAnnotation's Category Annotations (catanns) JSON</option>
+            <select id="inputformat" style="min-width: 50%;" onchange="selectDbclsCatannsJson();">
+              <option value="dbcls.catanns.json" selected>DBCLS PubAnnotation's Category Annotations (catanns) JSON</option>
+              <option value="biointerchange.gff3">GFF3</option>
               <option value="uk.ac.man.pdfx">PDFx XML</option>
+            </select><br />
+            Select the RDF serialization method (output format):<br />
+            <span class="muted">Not all output format are supported for a given input format. Invalid choices are disabled automatically here.</span><br />
+            <select id="outputformat" style="min-width: 50%;">
+              <option id="output.rdf.bh12.sio" value="rdf.bh12.sio" selected>RDF using SIO and FOAF ontologies</option>
+              <option id="output.rdf.biointerchange.gff3" value="rdf.biointerchange.gff3" disabled>RDF using GFF3 ontology</option>
             </select><br />
             <a class="btn btn-info" onclick="pasteExample();">Paste Input-Specific Example</a>
           </p>
@@ -88,10 +95,7 @@
             <textarea id="metainput" style="font-size: 75%; width: 100%; min-height: 200px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;"></textarea>
             Paste data for RDFization below:
             <textarea id="maininput" style="font-size: 75%; width: 100%; min-height: 200px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;"></textarea>
-            Select the RDF serialization method:<br />
-            <select id="outputformat" style="min-width: 50%;">
-              <option value="rdf.bh12.sio">RDF using SIO and FOAF</option>
-            </select><br /><br />
+            <br /><br />
             RDF output:<br />
             <a class="btn btn-primary" onclick="generateRDF();">Generate RDF</a>
             <pre id="output" style="font-size: 75%; width: 100%; min-height: 50px;"><i>RDF output will be <b>concatenated</b> here...</i></pre>

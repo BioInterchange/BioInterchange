@@ -151,7 +151,7 @@ module BioInterchange
       end
       
       writer.serialize(model)
-      
+
     rescue ArgumentError => e
       $stderr.puts e.message
       $stderr.puts e.backtrace if opt['debug']
