@@ -19,12 +19,18 @@ model = {}
 
 reader.each_statement { |statement|
   model[statement.subject] = {} unless model.has_key?(statement.subject)
-  model[statement.subject][statement.predicate] = statement.object
+  if statement.predicate == RDF.type then
+    type = statement.object
+    model[statement.subject][statement.predicate] = statement.object if type == RDF::OWL.ObjectProperty or type == RDF::OWL.DatatypeProperty or type == RDF::OWL.Class or type == RDF::OWL.NamedIndividual
+  else
+    model[statement.subject][statement.predicate] = statement.object
+  end
 }
 
 object_properties = {}
 datatype_properties = {}
 classes = {}
+named_individuals = {}
 
 puts "class #{ARGV[1]}"
 puts ''
@@ -36,26 +42,25 @@ model.keys.each { |key|
   # TODO Check whether label present
 
   if type then
-    if type == RDF::OWL.ObjectProperty or type == RDF::OWL.DatatypeProperty or type == RDF::OWL.Class then
-      label = entry[RDF::RDFS.label].to_s
-      generated_label = label.gsub(/[ '-.<>]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
-      next if generated_label.empty?
-      uri = key.to_s
+    label = entry[RDF::RDFS.label].to_s
+    generated_label = label.gsub(/[ '-.<>]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
+    next if generated_label.empty?
+    uri = key.to_s
 
-      # Try to print out some comment for RDoc. The comment identification depends on the ontology used:
-      if entry[RDF::DC.description] then
-        puts "    # #{entry[RDF::DC.description].to_s.gsub(/\n|\r\n/, "\n    # ")}\n"
-      elsif entry[OBO_DEF] then
-        puts "    # #{entry[OBO_DEF].to_s.sub(/^"(.*)" \[(.*)\]$/, '\1 (\2)').gsub(/\n|\r\n/, "\n    # ")}\n"
-      end
-      puts "    def self.#{generated_label}"
-      puts "      RDF::URI.new('#{uri}')"
-      puts '    end'
-      puts ''
-      object_properties[uri] = true if type == RDF::OWL.ObjectProperty
-      datatype_properties[uri] = true if type == RDF::OWL.DatatypeProperty
-      classes[uri] = true if type == RDF::OWL.Class
+    # Try to print out some comment for RDoc. The comment identification depends on the ontology used:
+    if entry[RDF::DC.description] then
+      puts "    # #{entry[RDF::DC.description].to_s.gsub(/\n|\r\n/, "\n    # ")}\n"
+    elsif entry[OBO_DEF] then
+      puts "    # #{entry[OBO_DEF].to_s.sub(/^"(.*)" \[(.*)\]$/, '\1 (\2)').gsub(/\n|\r\n/, "\n    # ")}\n"
     end
+    puts "    def self.#{generated_label}"
+    puts "      RDF::URI.new('#{uri}')"
+    puts '    end'
+    puts ''
+    object_properties[uri] = true if type == RDF::OWL.ObjectProperty
+    datatype_properties[uri] = true if type == RDF::OWL.DatatypeProperty
+    classes[uri] = true if type == RDF::OWL.Class
+    named_individuals[uri] = true if type == RDF::OWL.NamedIndividual
   end
 }
 
@@ -86,6 +91,14 @@ puts '      false'
 puts '    end'
 puts ''
 
-puts 'end'
+puts '    # Determines whether the given URI is a named individual.'
+puts '    #'
+puts '    # +uri+:: URI that is tested for being a named individual'
+puts '    def self.is_named_individual?(uri)'
+named_individuals.keys.each { |uri| puts "      return true if uri == RDF::URI.new('#{uri}')" }
+puts '      false'
+puts '    end'
 puts ''
+
+puts 'end'
 
