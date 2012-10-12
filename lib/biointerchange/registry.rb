@@ -11,11 +11,11 @@ class Registry
   end
 
   def self.readers
-    @@readers
+    @@readers.clone.freeze
   end
 
   def self.writers
-    @@writers
+    @@writers.clone.freeze
    end
 
 private
