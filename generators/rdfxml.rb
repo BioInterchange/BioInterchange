@@ -35,33 +35,90 @@ named_individuals = {}
 puts "class #{ARGV[1]}"
 puts ''
 
+parent_properties = {}
+uri_to_labels = {}
+combined_uris = {}
+generated_labels = {}
+comments = {}
 model.keys.each { |key|
   entry = model[key]
   type = entry[RDF.type]
 
   # TODO Check whether label present
 
-  if type then
-    label = entry[RDF::RDFS.label].to_s
-    generated_label = label.gsub(/[ '-.<>]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
-    next if generated_label.empty?
-    uri = key.to_s
+  next unless type
 
-    # Try to print out some comment for RDoc. The comment identification depends on the ontology used:
-    if entry[RDF::DC.description] then
-      puts "    # #{entry[RDF::DC.description].to_s.gsub(/\n|\r\n/, "\n    # ")}\n"
-    elsif entry[OBO_DEF] then
-      puts "    # #{entry[OBO_DEF].to_s.sub(/^"(.*)" \[(.*)\]$/, '\1 (\2)').gsub(/\n|\r\n/, "\n    # ")}\n"
+  label = entry[RDF::RDFS.label].to_s
+  generated_label = label.gsub(/[ '-.<>]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
+  next if generated_label.empty?
+  uri = key.to_s
+
+  uri_to_labels[uri] = label
+
+  parent_properties[uri] = entry[RDF::RDFS.subPropertyOf] if entry[RDF::RDFS.subPropertyOf]
+
+  set = comments[label]
+  set = [] unless set
+  comment = nil
+  # Try to gather some comment for RDoc. The comment identification depends on the ontology used:
+  if entry[RDF::DC.description] then
+    comment = [ uri, "    # #{entry[RDF::DC.description].to_s.gsub(/\n|\r\n/, "\n    # ")}\n" ]
+  elsif entry[OBO_DEF] then
+    comment = [ uri, "    # #{entry[OBO_DEF].to_s.sub(/^"(.*)" \[(.*)\]$/, '\1 (\2)').gsub(/\n|\r\n/, "\n    # ")}\n" ]
+  elsif entry[RDF::RDFS.comment] then
+    comment = [ uri, "    # #{entry[RDF::RDFS.comment].to_s.gsub(/\n|\r\n/, "\n    # ")}\n" ]
+  end
+  comments[label] = set | [ comment ] if comment
+
+  set = combined_uris[label]
+  set = [] unless set
+  combined_uris[label] = set | [ uri ]
+  generated_labels[label] = generated_label
+}
+
+model.keys.each { |key|
+  entry = model[key]
+  type = entry[RDF.type]
+
+  label = entry[RDF::RDFS.label].to_s
+
+  next unless type and combined_uris.has_key?(label)
+
+  generated_label = generated_labels[label]
+  uris = combined_uris[label]
+
+  if comments[label] then
+    if comments[label].length == 1 then
+      comment = "#{comments[label][0][1]}    # (#{comments[label][0][0]})\n"
+    else
+      comment = ''
+      introduction = true
+      comments[label].each { |linked_comment|
+        if introduction then
+          introduction = false
+          comment << "    # Either:\n"
+        else
+          comment << "    # Or:\n"
+        end
+        comment << "#{linked_comment[1].sub(/# /, '#   ')}    #   (#{linked_comment[0]})\n"
+      }
     end
-    puts "    def self.#{generated_label}"
-    puts "      RDF::URI.new('#{uri}')"
-    puts '    end'
-    puts ''
+    puts comment
+  end
+  puts "    def self.#{generated_label}"
+  if combined_uris[label].length == 1 then
+    puts "      RDF::URI.new('#{combined_uris[label][0]}')"
+  else
+    puts "      [ #{combined_uris[label].map { |uri| "RDF::URI.new('#{uri}')" }.join(', ')} ]"
+  end
+  puts '    end'
+  puts ''
+  combined_uris[label].each { |uri|
     object_properties[uri] = true if type == RDF::OWL.ObjectProperty
     datatype_properties[uri] = true if type == RDF::OWL.DatatypeProperty
     classes[uri] = true if type == RDF::OWL.Class
     named_individuals[uri] = true if type == RDF::OWL.NamedIndividual
-  end
+  }
 }
 
 puts '    # Determines whether the given URI is an object property.'
@@ -98,6 +155,31 @@ puts '    def self.is_named_individual?(uri)'
 named_individuals.keys.each { |uri| puts "      return true if uri == RDF::URI.new('#{uri}')" }
 puts '      false'
 puts '    end'
+puts ''
+
+puts '    # Returns only those URIs that fall under a designated parent URI.'
+puts '    #'
+puts '    # +uris+:: Set of URIs that are tested whether they have the given parent URI.'
+puts '    # +parent+:: Parent URI.'
+puts '    def self.with_parent(uris, parent)'
+puts '      uris.map { |uri|'
+puts '        if @@parent_properties[uri] == parent then'
+puts '          uri'
+puts '        elsif @@parent_properties.has_key?(uri) then'
+puts '          unless with_parent([ @@parent_properties[uri] ], parent).empty? then'
+puts '            uri'
+puts '          else'
+puts '            nil'
+puts '          end'
+puts '        else'
+puts '          nil'
+puts '        end'
+puts '      }.compact'
+puts '    end'
+puts ''
+
+puts '  private'
+puts "    @@parent_properties = {#{ parent_properties.keys.map { |uri| " RDF::URI.new('#{uri}') => RDF::URI.new('#{parent_properties[uri]}')" }.join(' ,') } }"
 puts ''
 
 puts 'end'
