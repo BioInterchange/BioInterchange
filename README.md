@@ -24,7 +24,7 @@ Usage
 Four interfaces to BioInterchange are available:
 
 1.  command-line tool-suite
-2.  Ruby API/Ruby gem
+2.  API (Ruby gem, Python egg)
 3.  RESTful web-service
 4.  interactive web-site
 
@@ -53,7 +53,9 @@ Output formats:
 *  `rdf.bh12.sio`
 
 
-### Ruby API/Ruby gem
+### API
+
+#### Ruby
 
 The Ruby gem is under active development, so the following may or may not work out of the box.
 
@@ -62,6 +64,35 @@ The Ruby gem is under active development, so the following may or may not work o
 To use BioInterchange in your Ruby projects, include the following line in your code:
 
     require 'biointerchange'
+
+#### Python
+
+Currently, there are only wrappers to the ontologies used by BioInterchange available.
+
+To install the BioInterchange egg, run:
+
+    sudo easy_install rdflib
+    sudo easy_install http://www.biointerchange.org/eggs/biointerchange-0.1.0-py2.7.egg
+
+Usage examples:
+
+    import biointerchange
+    from biointerchange import *
+    
+    # Get the URI of an ontology term by label:
+    GFF3O.seqid()
+    
+    # Ambiguous labels will return an array of URIs:
+    # "start" can refer to a sub-property of "feature_properties" or "target_properties"
+    GFF3O.start()
+    # "feature_properties" can be either a datatype or object property
+    GFF3O.feature_properties()
+    
+    # Use build-in method "is_datatype_property" to resolve ambiguity:
+    feature_properties = filter(lambda uri: GFF3O.is_datatype_property(uri), GFF3O.feature_properties())[0]
+    
+    # Use build-in method "with_parent" to pick properties based on their context:
+    GFF3O.with_parent(GFF3O.start(), feature_properties)
 
 ### RESTful Web-Service
 
@@ -82,8 +113,8 @@ Building a new version of the Ruby vocabulary classes for GFF3, SIO, SOFA (requi
 
     sudo gem install rdf
     sudo gem install rdf-rdfxml
-    echo -e "module BioInterchange\n" > lib/biointerchange/gff3.rb
-    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gff3> GFF3 >> lib/biointerchange/gff3.rb
+    echo -e "module BioInterchange\n" > lib/biointerchange/gff3o.rb
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gff3o> GFF3O >> lib/biointerchange/gff3o.rb
     echo -e "\nend" >> lib/biointerchange/gff3.rb
     echo -e "module BioInterchange\n" > lib/biointerchange/sio.rb
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO >> lib/biointerchange/sio.rb
@@ -91,6 +122,23 @@ Building a new version of the Ruby vocabulary classes for GFF3, SIO, SOFA (requi
     echo -e "module BioInterchange\n" > lib/biointerchange/sofa.rb
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sofa> SOFA >> lib/biointerchange/sofa.rb
     echo -e "\nend" >> lib/biointerchange/sofa.rb
+
+### Python Vocabulary classes
+
+The first steps can be skipped, if none of the ontologies used by BioInterchange have been updated. Otherwise the existing Python wrappers to the ontologies can be newly generated as follows:
+
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gff3o> GFF3O | ruby generators/pythonify.rb > supplemental/python/biointerchange/gff3o.py
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gvf1o> GVF1O | ruby generators/pythonify.rb > supplemental/python/biointerchange/gvf1o.py
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO | ruby generators/pythonify.rb > supplemental/python/biointerchange/sio.py
+
+Generate the BioInterchange egg:
+
+    cd supplemental/python
+    python setup.py bdist_egg
+
+#### Required Python Library
+
+*  (RDFLib)[https://github.com/RDFLib/rdflib]
 
 ### Gem Bundling/Installing
 
