@@ -53,7 +53,7 @@ Output formats:
 *  `rdf.bh12.sio`
 
 
-### API
+### Application Programming Interface
 
 #### Ruby
 
@@ -67,7 +67,8 @@ To use BioInterchange in your Ruby projects, include the following line in your 
 
 #### Python
 
-Currently, there are only wrappers to the ontologies used by BioInterchange available.
+Currently, there are only wrappers to the vocabularies of the ontologies that are used by
+BioInterchange available.
 
 To install the BioInterchange egg, run:
 
