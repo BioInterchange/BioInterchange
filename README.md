@@ -1,7 +1,7 @@
 BioInterchange
 ==============
 
-[![Build Status](https://secure.travis-ci.org/joejimbo/bioruby-biointerchange.png)](http://travis-ci.org/joejimbo/bioruby-biointerchange)
+[![Build Status](https://secure.travis-ci.org/BioInterchange/BioInterchange.png?branch=master)](https://travis-ci.org/BioInterchange/BioInterchange)
 
 BioInterchange is a tool for generating interchangable RDF from non-RDF data sources.
 
