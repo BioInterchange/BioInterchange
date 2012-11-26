@@ -95,6 +95,28 @@ Usage examples:
     # Use build-in method "with_parent" to pick properties based on their context:
     GFF3O.with_parent(GFF3O.start(), feature_properties)
 
+#### Java
+
+Only vocabulary wrapper classes are provided for the Java API. In order to make use of the RDF generation features in BioInterchange, either use the Ruby implementation or connect Java to BioInterchange's web-services.
+
+To use the BioInterchange artifact, set-up add the following to your Maven POM file:
+
+      <repositories>
+        <repository>
+          <id>biointerchange</id>
+          <name>BioInterchange</name>
+          <url>http://www.biointerchange.org/artifacts</url>
+        </repository>
+      </repositories>
+    
+      <dependencies>
+        <dependency>
+          <groupId>org.biointerchange</groupId>
+          <artifactId>vocabularies</artifactId>
+          <version>0.1.0</version>
+        </dependency>
+      </dependencies>
+
 ### RESTful Web-Service
 
 TODO
@@ -124,15 +146,15 @@ Building a new version of the Ruby vocabulary classes for GFF3, SIO, SOFA (requi
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sofa> SOFA >> lib/biointerchange/sofa.rb
     echo -e "\nend" >> lib/biointerchange/sofa.rb
 
-### Python Vocabulary classes
+### Python Vocabulary Classes
 
-The first steps can be skipped, if none of the ontologies used by BioInterchange have been updated. Otherwise the existing Python wrappers to the ontologies can be newly generated as follows:
+The source-code generation can be skipped, if none of the ontologies that are used by BioInterchange have been changed. Otherwise, the existing Python vocabulary class wrappers can be generated as follows:
 
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gff3o> GFF3O | ruby generators/pythonify.rb > supplemental/python/biointerchange/gff3o.py
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gvf1o> GVF1O | ruby generators/pythonify.rb > supplemental/python/biointerchange/gvf1o.py
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO | ruby generators/pythonify.rb > supplemental/python/biointerchange/sio.py
 
-Generate the BioInterchange egg:
+Generate the BioInterchange Python vocabulary egg:
 
     cd supplemental/python
     python setup.py bdist_egg
@@ -140,6 +162,19 @@ Generate the BioInterchange egg:
 #### Required Python Library
 
 *  (RDFLib)[https://github.com/RDFLib/rdflib]
+
+### Java Vocabulary Classes
+
+The source-code generation can be skipped, if none of the ontologies that are used by BioInterchange have been changed. Otherwise, the existing Java vocabulary class wrappers can be generated as follows:
+
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gff3o> GFF3O | ruby generators/javaify.rb > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/GFF3O.java
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gvf1o> GVF1O | ruby generators/javaify.rb > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/GVF1O.java
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO | ruby generators/javaify.rb > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/SIO.java
+
+Generate the BioInterchange Java vocabulary artifact:
+
+    cd supplemental/java/biointerchange
+    mvn package
 
 ### Gem Bundling/Installing
 

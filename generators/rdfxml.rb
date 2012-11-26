@@ -81,6 +81,8 @@ model.keys.each { |key|
   named_individuals[uri] = true if type == RDF::OWL.NamedIndividual
 }
 
+seen_labels = {}
+
 model.keys.each { |key|
   entry = model[key]
   type = entry[RDF.type]
@@ -90,6 +92,10 @@ model.keys.each { |key|
   next unless type and combined_uris.has_key?(label)
 
   generated_label = generated_labels[label]
+
+  next if seen_labels[generated_label]
+  seen_labels[generated_label] = true
+
   uris = combined_uris[label]
 
   if comments[label] then
@@ -109,6 +115,8 @@ model.keys.each { |key|
       }
     end
     puts comment
+  else
+    puts '  # Ambiguous label.' if combined_uris[label].length > 1
   end
   puts "  def self.#{generated_label}"
   if combined_uris[label].length == 1 then
@@ -173,6 +181,7 @@ puts '  def self.has_parent?(uri, parent)'
 puts '    if @@parent_properties.has_key?(uri) then'
 puts '      if @@parent_properties[uri] == parent then'
 puts '        return true'
+puts '      end'
 puts '      return has_parent?(@@parent_properties[uri], parent)'
 puts '    end'
 puts '    return false'
