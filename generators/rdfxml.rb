@@ -55,7 +55,12 @@ model.keys.each { |key|
 
   uri_to_labels[uri] = label
 
-  parent_properties[uri] = entry[RDF::RDFS.subPropertyOf] if entry[RDF::RDFS.subPropertyOf]
+  # Only deal with URI sub-classes/sub-properties, whilst ignoring restrictions, etc.
+  if entry[RDF::RDFS.subClassOf] then
+    parent_properties[uri] = entry[RDF::RDFS.subClassOf] unless entry[RDF::RDFS.subClassOf].kind_of?(RDF::Node)
+  elsif entry[RDF::RDFS.subPropertyOf] then
+    parent_properties[uri] = entry[RDF::RDFS.subPropertyOf] unless entry[RDF::RDFS.subPropertyOf].kind_of?(RDF::Node)
+  end
 
   set = comments[label]
   set = [] unless set

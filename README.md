@@ -132,6 +132,24 @@ This section is only relevant if you are building newer versions of BioInterchan
 
 Note that the following set-up only works with Ruby 1.9.2p290 or newer.
 
+### Prerequisites
+
+Software requirements:
+
+* Ruby 1.9.2p290 or newer
+* Bundler gem 1.1.5 or newer
+* Rake gem 0.8.7 or newer
+
+With Ruby installed, the following commands install the additional packages:
+
+    sudo gem install bundler
+    sudo gem install rake
+    bundle
+
+The last step, `bundle`, will install gem dependencies of BioInterchange automatically.
+
+### Building Vocabulary Classes
+
 Building a new version of the Ruby vocabulary classes for GFF3, SIO, SOFA (requires that the OBO files are saves as RDF/XML using [Protege](http://protege.stanford.edu)):
 
     sudo gem install rdf
@@ -146,7 +164,7 @@ Building a new version of the Ruby vocabulary classes for GFF3, SIO, SOFA (requi
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sofa> SOFA >> lib/biointerchange/sofa.rb
     echo -e "\nend" >> lib/biointerchange/sofa.rb
 
-### Python Vocabulary Classes
+#### Python Vocabulary Classes
 
 The source-code generation can be skipped, if none of the ontologies that are used by BioInterchange have been changed. Otherwise, the existing Python vocabulary class wrappers can be generated as follows:
 
@@ -159,11 +177,13 @@ Generate the BioInterchange Python vocabulary egg:
     cd supplemental/python
     python setup.py bdist_egg
 
-#### Required Python Library
+##### Required Python Library
+
+The vocabulary wrapper makes used of RDFLib, which does not install automatically with the egg.
 
 *  (RDFLib)[https://github.com/RDFLib/rdflib]
 
-### Java Vocabulary Classes
+#### Java Vocabulary Classes
 
 The source-code generation can be skipped, if none of the ontologies that are used by BioInterchange have been changed. Otherwise, the existing Java vocabulary class wrappers can be generated as follows:
 
@@ -175,6 +195,16 @@ Generate the BioInterchange Java vocabulary artifact:
 
     cd supplemental/java/biointerchange
     mvn package
+
+##### Required Java Packages
+
+The following Java packages will automatically install alongside BioInterchange's Maven artifact:
+
+* (Jena Core)[http://mvnrepository.com/artifact/org.apache.jena/jena-core]
+* (Apache Commons Collections)[http://mvnrepository.com/artifact/org.apache.directory.studio/org.apache.commons.collections]
+* (SLF4J)[http://mvnrepository.com/artifact/org.slf4j/slf4j-api]
+* (Xerces)[http://mvnrepository.com/artifact/xerces/xerces]
+* (JUnit)[http://mvnrepository.com/artifact/junit/junit]
 
 ### Gem Bundling/Installing
 
