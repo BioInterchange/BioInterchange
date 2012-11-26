@@ -1,4 +1,5 @@
 
+require 'rubygems'
 require 'rspec'
 
 load 'lib/biointerchange/core.rb'
