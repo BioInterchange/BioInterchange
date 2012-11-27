@@ -50,23 +50,26 @@ private
     # TODO Make sure there is only one value in the 'ID' list.
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{feature.source},#{feature.type.to_s.sub(/^[^:]+:\/\//, '')},#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}") unless feature.attributes.has_key?('ID')
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.attributes['ID'][0]}") if feature.attributes.has_key?('ID')
+    feature_properties = BioInterchange::GFF3O.feature_properties.select { |uri| BioInterchange::GFF3O.is_datatype_property?(uri) }[0]
     graph.insert(RDF::Statement.new(set_uri, BioInterchange::GFF3O.contains, feature_uri))
     graph.insert(RDF::Statement.new(feature_uri, RDF.type, BioInterchange::GFF3O.Feature))
     graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.seqid, RDF::Literal.new(feature.sequence_id)))
     graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.source, RDF::Literal.new(feature.source)))
     graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.type, RDF::Literal.new(feature.type)))
-    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.start, RDF::Literal.new(feature.start_coordinate)))
-    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.end, RDF::Literal.new(feature.end_coordinate)))
+    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.with_parent(BioInterchange::GFF3O.start, feature_properties)[0], RDF::Literal.new(feature.start_coordinate)))
+    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.with_parent(BioInterchange::GFF3O.end, feature_properties)[0], RDF::Literal.new(feature.end_coordinate)))
     graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.score, RDF::Literal.new(feature.score))) if feature.score
+    feature_properties = BioInterchange::GFF3O.feature_properties.select { |uri| BioInterchange::GFF3O.is_object_property?(uri) }[0]
+    strand_uri = BioInterchange::GFF3O.with_parent(BioInterchange::GFF3O.strand, feature_properties)[0]
     case feature.strand
     when BioInterchange::Genomics::GFF3Feature::NOT_STRANDED
-      graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.strand, BioInterchange::GFF3O.NotStranded))
+      graph.insert(RDF::Statement.new(feature_uri, strand_uri, BioInterchange::GFF3O.NotStranded))
     when BioInterchange::Genomics::GFF3Feature::UNKNOWN
-      graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.strand, BioInterchange::GFF3O.UnknownStrand))
+      graph.insert(RDF::Statement.new(feature_uri, strand_uri, BioInterchange::GFF3O.UnknownStrand))
     when BioInterchange::Genomics::GFF3Feature::POSITIVE
-      graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.strand, BioInterchange::GFF3O.Positive))
+      graph.insert(RDF::Statement.new(feature_uri, strand_uri, BioInterchange::GFF3O.Positive))
     when BioInterchange::Genomics::GFF3Feature::NEGATIVE
-      graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.strand, BioInterchange::GFF3O.Negative))
+      graph.insert(RDF::Statement.new(feature_uri, strand_uri, BioInterchange::GFF3O.Negative))
     else
       raise ArgumentException, 'Strand of feature is set to an unknown constant.'
     end
