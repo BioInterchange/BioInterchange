@@ -10,8 +10,15 @@ if ARGV.length != 2 then
   exit 1
 end
 
-# Will later be used for extracting comments from SOFA.
+# Will later be used for extracting comments from SOFA:
 OBO_DEF = RDF::URI.new('http://purl.obolibrary.org/obo/def')
+
+# For handling synonyms in SIO:
+SIO_SYN = RDF::URI.new('http://semanticscience.org/resource/synonym')
+
+def makeLabel(label)
+  label.gsub(/[ '-.<>]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
+end
 
 reader = RDF::RDFXML::Reader.open(ARGV[0])
 
@@ -36,7 +43,6 @@ puts "class #{ARGV[1]}"
 puts ''
 
 parent_properties = {}
-uri_to_labels = {}
 combined_uris = {}
 generated_labels = {}
 comments = {}
@@ -49,11 +55,8 @@ model.keys.each { |key|
   next unless type
 
   label = entry[RDF::RDFS.label].to_s
-  generated_label = label.gsub(/[ '-.<>]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
-  next if generated_label.empty?
+  next if makeLabel(label).empty?
   uri = key.to_s
-
-  uri_to_labels[uri] = label
 
   # Only deal with URI sub-classes/sub-properties, whilst ignoring restrictions, etc.
   if entry[RDF::RDFS.subClassOf] then
@@ -62,23 +65,27 @@ model.keys.each { |key|
     parent_properties[uri] = entry[RDF::RDFS.subPropertyOf] unless entry[RDF::RDFS.subPropertyOf].kind_of?(RDF::Node)
   end
 
-  set = comments[label]
-  set = [] unless set
-  comment = nil
-  # Try to gather some comment for RDoc. The comment identification depends on the ontology used:
-  if entry[RDF::DC.description] then
-    comment = [ uri, "  # #{entry[RDF::DC.description].to_s.gsub(/\n|\r\n/, "\n  # ")}\n" ]
-  elsif entry[OBO_DEF] then
-    comment = [ uri, "  # #{entry[OBO_DEF].to_s.sub(/^"(.*)" \[(.*)\]$/, '\1 (\2)').gsub(/\n|\r\n/, "\n  # ")}\n" ]
-  elsif entry[RDF::RDFS.comment] then
-    comment = [ uri, "  # #{entry[RDF::RDFS.comment].to_s.gsub(/\n|\r\n/, "\n  # ")}\n" ]
-  end
-  comments[label] = set | [ comment ] if comment
+  [ label, entry[SIO_SYN] ].compact.each { |label_or_synonym|
+    label_or_synonym = label_or_synonym.to_s
 
-  set = combined_uris[label]
-  set = [] unless set
-  combined_uris[label] = set | [ uri ]
-  generated_labels[label] = generated_label
+    set = comments[label_or_synonym]
+    set = [] unless set
+    comment = nil
+    # Try to gather some comment for RDoc. The comment identification depends on the ontology used:
+    if entry[RDF::DC.description] then
+      comment = [ uri, "  # #{entry[RDF::DC.description].to_s.gsub(/\n|\r\n/, "\n  # ")}\n" ]
+    elsif entry[OBO_DEF] then
+      comment = [ uri, "  # #{entry[OBO_DEF].to_s.sub(/^"(.*)" \[(.*)\]$/, '\1 (\2)').gsub(/\n|\r\n/, "\n  # ")}\n" ]
+    elsif entry[RDF::RDFS.comment] then
+      comment = [ uri, "  # #{entry[RDF::RDFS.comment].to_s.gsub(/\n|\r\n/, "\n  # ")}\n" ]
+    end
+    comments[label_or_synonym] = set | [ comment ] if comment
+
+    set = combined_uris[label_or_synonym]
+    set = [] unless set
+    combined_uris[label_or_synonym] = set | [ uri ]
+    generated_labels[label_or_synonym] = makeLabel(label_or_synonym)
+  }
 
   object_properties[uri] = true if type == RDF::OWL.ObjectProperty
   datatype_properties[uri] = true if type == RDF::OWL.DatatypeProperty
@@ -94,43 +101,47 @@ model.keys.each { |key|
 
   label = entry[RDF::RDFS.label].to_s
 
-  next unless type and combined_uris.has_key?(label)
+  [ label, entry[SIO_SYN] ].compact.each { |label_or_synonym|
+    label_or_synonym = label_or_synonym.to_s
 
-  generated_label = generated_labels[label]
+    next unless type and combined_uris.has_key?(label_or_synonym)
 
-  next if seen_labels[generated_label]
-  seen_labels[generated_label] = true
+    generated_label = generated_labels[label_or_synonym]
 
-  uris = combined_uris[label]
+    next if seen_labels[generated_label]
+    seen_labels[generated_label] = true
 
-  if comments[label] then
-    if comments[label].length == 1 then
-      comment = "#{comments[label][0][1]}  # (#{comments[label][0][0]})\n"
+    uris = combined_uris[label_or_synonym]
+
+    if comments[label_or_synonym] then
+      if comments[label_or_synonym].length == 1 then
+        comment = "#{comments[label_or_synonym][0][1]}  # (#{comments[label_or_synonym][0][0]})\n"
+      else
+        comment = ''
+        introduction = true
+        comments[label_or_synonym].each { |linked_comment|
+          if introduction then
+            introduction = false
+            comment << "  # Either:\n"
+          else
+            comment << "  # Or:\n"
+          end
+          comment << "#{linked_comment[1].sub(/# /, '#   ')}  #   (#{linked_comment[0]})\n"
+        }
+      end
+      puts comment
     else
-      comment = ''
-      introduction = true
-      comments[label].each { |linked_comment|
-        if introduction then
-          introduction = false
-          comment << "  # Either:\n"
-        else
-          comment << "  # Or:\n"
-        end
-        comment << "#{linked_comment[1].sub(/# /, '#   ')}  #   (#{linked_comment[0]})\n"
-      }
+      puts '  # Ambiguous label.' if combined_uris[label_or_synonym].length > 1
     end
-    puts comment
-  else
-    puts '  # Ambiguous label.' if combined_uris[label].length > 1
-  end
-  puts "  def self.#{generated_label}"
-  if combined_uris[label].length == 1 then
-    puts "    return RDF::URI.new('#{combined_uris[label][0]}')"
-  else
-    puts "    return [ #{combined_uris[label].map { |uri| "RDF::URI.new('#{uri}')" }.join(', ')} ]"
-  end
-  puts '  end'
-  puts ''
+    puts "  def self.#{generated_label}"
+    if combined_uris[label_or_synonym].length == 1 then
+      puts "    return RDF::URI.new('#{combined_uris[label_or_synonym][0]}')"
+    else
+      puts "    return [ #{combined_uris[label_or_synonym].map { |uri| "RDF::URI.new('#{uri}')" }.join(', ')} ]"
+    end
+    puts '  end'
+    puts ''
+  }
 }
 
 puts '  # Determines whether the given URI is an object property.'

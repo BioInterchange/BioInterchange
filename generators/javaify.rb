@@ -5,6 +5,10 @@ java_class = nil
 namespace = nil
 comment = nil
 
+if ARGV.length == 1 then
+  namespace = ARGV[0]
+end
+
 cls = ''
 
 puts 'package org.biointerchange.vocabulary;'
@@ -107,7 +111,7 @@ STDIN.each { |line|
   if transduction and transduction.strip.start_with?('__') then
     variable = transduction.scan(/__\w+/)[0]
     map = {}
-    map = Hash[*transduction.sub(/^.* \{/, '').sub(/\};/, '').split(',').map { |assignment| assignment.split('=>').map { |kv| kv.strip } }.flatten.map { |function| "#{namespace}#{function.scan(/'\w+'/)[0].gsub(/'/, '')}" } ] if transduction.match(/\{\s*\S+.*\}/)
+    map = Hash[*transduction.sub(/^.* \{/, '').sub(/\};/, '').split(',').map { |assignment| assignment.split('=>').map { |kv| kv.strip } }.flatten.map { |function| if function.match(/'\w+'/) then "#{namespace}#{function.scan(/'\w+'/)[0].gsub(/'/, '')}" else nil end }.compact ] if transduction.match(/\{\s*\S+.*\}/)
     transduction = "  private static Map<Resource, Resource> #{variable} = _init_#{variable}();\n\n"
     transduction << "  private static Map<Resource, Resource> _init_#{variable}() {\n"
     transduction << "    Map<Resource, Resource> map = new HashMap<Resource, Resource>();\n\n"
