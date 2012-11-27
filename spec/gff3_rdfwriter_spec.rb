@@ -3,7 +3,7 @@ require 'rubygems'
 require 'rspec'
 
 load 'lib/biointerchange/core.rb'
-load 'lib/biointerchange/gff3.rb'
+load 'lib/biointerchange/gff3o.rb'
 load 'lib/biointerchange/sofa.rb'
 load 'lib/biointerchange/reader.rb'
 load 'lib/biointerchange/writer.rb'

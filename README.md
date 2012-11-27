@@ -16,7 +16,10 @@ Supported RDF output formats:
 
 Ontologies used in the RDF output:
 
+* [Generic Feature Format Version 3 Ontology](http://www.biointerchange.org/ontologies.html) (GFF3O)
+* [Genome Variation Format Version 1 Ontology](http://www.biointerchange.org/ontologies.html) (GVF1O)
 * [Semanticscience Integrated Ontology](http://code.google.com/p/semanticscience/wiki/SIO) (SIO)
+* [Sequence Ontology Feature Annotation](http://www.sequenceontology.org/index.html) (SOFA)
 
 Usage
 -----
@@ -90,6 +93,7 @@ Usage examples:
     GFF3O.feature_properties()
     
     # Use build-in method "is_datatype_property" to resolve ambiguity:
+    # (Note: there is exactly one item in the result set, so the selection of the first item is acceptable.)
     feature_properties = filter(lambda uri: GFF3O.is_datatype_property(uri), GFF3O.feature_properties())[0]
     
     # Use build-in method "with_parent" to pick properties based on their context:
@@ -101,21 +105,82 @@ Only vocabulary wrapper classes are provided for the Java API. In order to make 
 
 To use the BioInterchange artifact, set-up add the following to your Maven POM file:
 
-      <repositories>
-        <repository>
-          <id>biointerchange</id>
-          <name>BioInterchange</name>
-          <url>http://www.biointerchange.org/artifacts</url>
-        </repository>
-      </repositories>
+    <repositories>
+      <repository>
+        <id>biointerchange</id>
+        <name>BioInterchange</name>
+        <url>http://www.biointerchange.org/artifacts</url>
+      </repository>
+    </repositories>
+     
+    <dependencies>
+      <dependency>
+        <groupId>org.biointerchange</groupId>
+        <artifactId>vocabularies</artifactId>
+        <version>0.1.0</version>
+      </dependency>
+    </dependencies>
+
+Usage examples:
+
+    package org.biointerchange;
     
-      <dependencies>
-        <dependency>
-          <groupId>org.biointerchange</groupId>
-          <artifactId>vocabularies</artifactId>
-          <version>0.1.0</version>
-        </dependency>
-      </dependencies>
+    import com.hp.hpl.jena.rdf.model.*;
+    import com.hp.hpl.jena.vocabulary.*;
+    import org.apache.commons.collections.CollectionUtils;
+    import org.apache.commons.collections.Predicate;
+    
+    import java.util.Set;
+    
+    import org.biointerchange.vocabulary.*;
+    
+    /**
+     * Demo on how to make use of BioInterchange's vocabulary classes.
+     *
+     * @author Joachim Baran
+     */
+    public class App 
+    {
+        public static void main(String[] args) {
+            Resource seqid = GFF3O.seqid();
+            System.out.println("'seqid' property:");
+            printResource(seqid);
+            
+            System.out.println("'start' properties:");
+            Set<Resource> start = GFF3O.start();
+            for (Resource startSynonym : start)
+                printResource(startSynonym);
+            
+            System.out.println("'feature_properties' properties:");
+            Set<Resource> featureProperties = GFF3O.feature_properties();
+            for (Resource featurePropertiesSynonym : featureProperties)
+                printResource(featurePropertiesSynonym);
+            
+            System.out.println("'feature_properties' properties, which are a datatype property:");
+            CollectionUtils.filter(featureProperties, new Predicate() {
+                public boolean evaluate(Object o) {
+                    return GFF3O.isDatatypeProperty((Resource)o);
+                }
+            });
+            for (Resource featurePropertiesSynonym : featureProperties)
+                printResource(featurePropertiesSynonym);
+            
+            System.out.println("'start' property with parent datatype property 'feature_properties':");
+            Set<Resource> startUnderDatatypeFeatureProperties = GFF3O.withParent(start, featureProperties.iterator().next());
+            for (Resource startSynonym : startUnderDatatypeFeatureProperties)
+                printResource(startSynonym);
+        }
+        
+        private static void printResource(Resource resource) {
+            System.out.println("    " + resource.toString());
+            System.out.println("        Namespace:                            " + resource.getNameSpace());
+            System.out.println("        Local name:                           " + resource.getLocalName());
+            System.out.println("        Jena Property (rather than Resource): " + (resource instanceof Property));
+            System.out.println("        Ontology class:                       " + GFF3O.isClass(resource));
+            System.out.println("        Ontology object property:             " + GFF3O.isObjectProperty(resource));
+            System.out.println("        Ontology datatype property:           " + GFF3O.isDatatypeProperty(resource));
+        }
+    }
 
 ### RESTful Web-Service
 
@@ -154,9 +219,12 @@ Building a new version of the Ruby vocabulary classes for GFF3, SIO, SOFA (requi
 
     sudo gem install rdf
     sudo gem install rdf-rdfxml
-    echo -e "module BioInterchange\n" > lib/biointerchange/gff3o.rb
+    echo -e "require 'rdf'\nmodule BioInterchange\n" > lib/biointerchange/gff3o.rb
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gff3o> GFF3O >> lib/biointerchange/gff3o.rb
-    echo -e "\nend" >> lib/biointerchange/gff3.rb
+    echo -e "\nend" >> lib/biointerchange/gff3o.rb
+    echo -e "module BioInterchange\n" > lib/biointerchange/gvf1o.rb
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gvf1o> GVF1O >> lib/biointerchange/gvf1o.rb
+    echo -e "\nend" >> lib/biointerchange/gvf1o.rb
     echo -e "module BioInterchange\n" > lib/biointerchange/sio.rb
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO >> lib/biointerchange/sio.rb
     echo -e "\nend" >> lib/biointerchange/sio.rb
@@ -171,6 +239,7 @@ The source-code generation can be skipped, if none of the ontologies that are us
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gff3o> GFF3O | ruby generators/pythonify.rb > supplemental/python/biointerchange/gff3o.py
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gvf1o> GVF1O | ruby generators/pythonify.rb > supplemental/python/biointerchange/gvf1o.py
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO | ruby generators/pythonify.rb > supplemental/python/biointerchange/sio.py
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sofa> SOFA | ruby generators/pythonify.rb > supplemental/python/biointerchange/sofa.py
 
 Generate the BioInterchange Python vocabulary egg:
 
@@ -190,6 +259,7 @@ The source-code generation can be skipped, if none of the ontologies that are us
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gff3o> GFF3O | ruby generators/javaify.rb > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/GFF3O.java
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gvf1o> GVF1O | ruby generators/javaify.rb > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/GVF1O.java
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO | ruby generators/javaify.rb > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/SIO.java
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sofa> SOFA | ruby generators/javaify.rb "http://purl.obolibrary.org/obo/" > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/SOFA.java
 
 Generate the BioInterchange Java vocabulary artifact:
 

@@ -4,7 +4,8 @@ module BioInterchange
   require 'biointerchange/exceptions'
 
   # Ontologies (besides the ones from the 'rdf' gem)
-  require 'biointerchange/gff3'
+  require 'biointerchange/gff3o'
+  require 'biointerchange/gvf1o'
   require 'biointerchange/sio'
   require 'biointerchange/sofa'
 

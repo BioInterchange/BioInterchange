@@ -578,6 +578,14 @@ public class SIO {
   }
 
   /**
+   * has annotation is a relation between an entity and some textual anntotation.
+   * (http://semanticscience.org/resource/SIO_000255)
+   */
+  public static Resource was_annotated_with() {
+    return _namespace_SIO("SIO_000255");
+  }
+
+  /**
    * is variant of: a relationship indicating that two entities are different (by some measure), but either achieve the same objectives in different ways or are permutations of one another (temporal, logical or otherwise)
    * (http://semanticscience.org/resource/SIO_000272)
    */
@@ -818,6 +826,14 @@ public class SIO {
   }
 
   /**
+   * has creator is a relation between an entity and that which created it.
+   * (http://semanticscience.org/resource/SIO_000364)
+   */
+  public static Resource was_created_by() {
+    return _namespace_SIO("SIO_000364");
+  }
+
+  /**
    * is created by is a relation between an entity and its creator.
    * (http://semanticscience.org/resource/SIO_000365)
    */
@@ -986,6 +1002,14 @@ public class SIO {
    * (http://semanticscience.org/resource/SIO_000631)
    */
   public static Resource references() {
+    return _namespace_SIO("SIO_000631");
+  }
+
+  /**
+   * references is a relation between one entity and the entity that it makes reference to by name, but is not described by it.
+   * (http://semanticscience.org/resource/SIO_000631)
+   */
+  public static Resource mentions() {
     return _namespace_SIO("SIO_000631");
   }
 
@@ -1718,10 +1742,26 @@ public class SIO {
   }
 
   /**
+   * A figure is a graphical entity which consists of a visual (n-dimentional) arrangement of information entities.
+   * (http://semanticscience.org/resource/SIO_000080)
+   */
+  public static Resource diagram() {
+    return _namespace_SIO("SIO_000080");
+  }
+
+  /**
    * An image is an affine projection of a visual entity to a two dimensional surface.
    * (http://semanticscience.org/resource/SIO_000081)
    */
   public static Resource image() {
+    return _namespace_SIO("SIO_000081");
+  }
+
+  /**
+   * An image is an affine projection of a visual entity to a two dimensional surface.
+   * (http://semanticscience.org/resource/SIO_000081)
+   */
+  public static Resource depiction() {
     return _namespace_SIO("SIO_000081");
   }
 
@@ -1734,11 +1774,31 @@ public class SIO {
   }
 
   /**
+   * A photograph is an image created by light falling on a light-sensitive surface.
+   * (http://semanticscience.org/resource/SIO_000082)
+   */
+  public static Resource photo() {
+    return _namespace_SIO("SIO_000082");
+  }
+
+  /**
    * A statistical graph is a figure that displays the relationship among numeric data and/or mathematical functions.
    * (http://semanticscience.org/resource/SIO_000083)
    */
   public static Resource statistical_graph() {
     return _namespace_SIO("SIO_000083");
+  }
+
+  /**
+   * Either:
+   *   A statistical graph is a figure that displays the relationship among numeric data and/or mathematical functions.
+   *   (http://semanticscience.org/resource/SIO_000083)
+   * Or:
+   *   A chart is a figure that displays the relationship among tabular numeric data, functions or some kinds of qualitative structures.
+   *   (http://semanticscience.org/resource/SIO_000904)
+   */
+  public static Set<Resource> chart() {
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_SIO("SIO_000083"), _namespace_SIO("SIO_000904") }));
   }
 
   /**
@@ -2790,6 +2850,14 @@ public class SIO {
   }
 
   /**
+   * A movie is a series of images that are displayed in rapid succession  to give the impression of movement.
+   * (http://semanticscience.org/resource/SIO_000297)
+   */
+  public static Resource moving_pictures() {
+    return _namespace_SIO("SIO_000297");
+  }
+
+  /**
    * An excerpt is a contiguous or discontiguous portion of a document.
    * (http://semanticscience.org/resource/SIO_000298)
    */
@@ -3299,6 +3367,10 @@ public class SIO {
     return _namespace_SIO("SIO_000395");
   }
 
+  public static Resource to_modulate() {
+    return _namespace_SIO("SIO_000395");
+  }
+
   public static Resource file() {
     return _namespace_SIO("SIO_000396");
   }
@@ -3451,6 +3523,14 @@ public class SIO {
     return _namespace_SIO("SIO_000423");
   }
 
+  /**
+   * A scatterplot is a statistical graph which uses Cartesian coordinates to display values for two variables for a set of data. The data is displayed as a collection of points, each having the value of one variable determining the position on the horizontal axis and the value of the other variable determining the position on the vertical axis.
+   * (http://semanticscience.org/resource/SIO_000423)
+   */
+  public static Resource scatter_graph() {
+    return _namespace_SIO("SIO_000423");
+  }
+
   public static Resource year() {
     return _namespace_SIO("SIO_000428");
   }
@@ -3516,6 +3596,14 @@ public class SIO {
    * (http://semanticscience.org/resource/SIO_000442)
    */
   public static Resource line_graph() {
+    return _namespace_SIO("SIO_000442");
+  }
+
+  /**
+   * A line graph is a statistical graph in which lines contains the evaluation of functions or individual points connected by line segments.
+   * (http://semanticscience.org/resource/SIO_000442)
+   */
+  public static Resource line_chart() {
     return _namespace_SIO("SIO_000442");
   }
 
@@ -3600,11 +3688,28 @@ public class SIO {
   }
 
   /**
+   * An x-axis is a Cartesian coordinate axis that is aligned with the horizon.
+   * (http://semanticscience.org/resource/SIO_000452)
+   */
+  public static Resource horizontal_axis() {
+    return _namespace_SIO("SIO_000452");
+  }
+
+  /**
    * A y-axis is a Cartesian coordinate axis that is spatially oriented
    * perpendicular to the x-axis.
    * (http://semanticscience.org/resource/SIO_000453)
    */
   public static Resource y_axis() {
+    return _namespace_SIO("SIO_000453");
+  }
+
+  /**
+   * A y-axis is a Cartesian coordinate axis that is spatially oriented
+   * perpendicular to the x-axis.
+   * (http://semanticscience.org/resource/SIO_000453)
+   */
+  public static Resource vertical_axis() {
     return _namespace_SIO("SIO_000453");
   }
 
@@ -3753,6 +3858,14 @@ public class SIO {
    * (http://semanticscience.org/resource/SIO_000471)
    */
   public static Resource secondary_title() {
+    return _namespace_SIO("SIO_000471");
+  }
+
+  /**
+   * A secondary title is a title of lesser importance that should be used after the first title in describing some entity.
+   * (http://semanticscience.org/resource/SIO_000471)
+   */
+  public static Resource subtitle_alternative_title() {
     return _namespace_SIO("SIO_000471");
   }
 
@@ -4220,6 +4333,14 @@ public class SIO {
     return _namespace_SIO("SIO_000545");
   }
 
+  /**
+   * A polyline is a connected sequence of line segments.
+   * (http://semanticscience.org/resource/SIO_000545)
+   */
+  public static Resource polygonal_chain_polygonal_curve_polygonal_path_piecewise_linear_curve() {
+    return _namespace_SIO("SIO_000545");
+  }
+
   public static Resource collection_of_points() {
     return _namespace_SIO("SIO_000546");
   }
@@ -4232,7 +4353,15 @@ public class SIO {
     return _namespace_SIO("SIO_000549");
   }
 
+  public static Resource to_activate() {
+    return _namespace_SIO("SIO_000549");
+  }
+
   public static Resource to_increase_the_activation_energy() {
+    return _namespace_SIO("SIO_000550");
+  }
+
+  public static Resource to_inhibit() {
     return _namespace_SIO("SIO_000550");
   }
 
@@ -4457,6 +4586,14 @@ public class SIO {
   }
 
   /**
+   * creation is a process in which an entity comes into existence.
+   * (http://semanticscience.org/resource/SIO_000588)
+   */
+  public static Resource production() {
+    return _namespace_SIO("SIO_000588");
+  }
+
+  /**
    * regulation is the imposition of a requirement or action of one party to another.
    * (http://semanticscience.org/resource/SIO_000589)
    */
@@ -4585,6 +4722,14 @@ public class SIO {
   }
 
   /**
+   * A ordinal position is a number that designates the position of an entity from the first entity in an ordered sequence of entities.
+   * (http://semanticscience.org/resource/SIO_000613)
+   */
+  public static Resource offset() {
+    return _namespace_SIO("SIO_000613");
+  }
+
+  /**
    * an attribute is a characteristic of some entity.
    * (http://semanticscience.org/resource/SIO_000614)
    */
@@ -4629,6 +4774,14 @@ public class SIO {
    * (http://semanticscience.org/resource/SIO_000620)
    */
   public static Resource collective() {
+    return _namespace_SIO("SIO_000620");
+  }
+
+  /**
+   * A collective is a group of entities that share or are motivated by at least one common issue or interest, or work together on a specific project(s) to achieve a common objective.
+   * (http://semanticscience.org/resource/SIO_000620)
+   */
+  public static Resource group() {
     return _namespace_SIO("SIO_000620");
   }
 
@@ -4728,7 +4881,15 @@ public class SIO {
     return _namespace_SIO("SIO_000653");
   }
 
+  public static Resource a_version_label_is_a_label_for_a_particular_form_or_variation_of_an_earlier_or_original_type() {
+    return _namespace_SIO("SIO_000653");
+  }
+
   public static Resource software_version_label() {
+    return _namespace_SIO("SIO_000654");
+  }
+
+  public static Resource a_software_version_label_is_a_version_label_for_a_piece_of_software() {
     return _namespace_SIO("SIO_000654");
   }
 
@@ -4973,10 +5134,26 @@ public class SIO {
   }
 
   /**
+   * to translocate is the capability to displace oneself from one location to another.
+   * (http://semanticscience.org/resource/SIO_000719)
+   */
+  public static Resource to_move() {
+    return _namespace_SIO("SIO_000719");
+  }
+
+  /**
    * to be translocated is the capability to be physically displaced from one location to another
    * (http://semanticscience.org/resource/SIO_000720)
    */
   public static Resource to_be_translocated() {
+    return _namespace_SIO("SIO_000720");
+  }
+
+  /**
+   * to be translocated is the capability to be physically displaced from one location to another
+   * (http://semanticscience.org/resource/SIO_000720)
+   */
+  public static Resource to_be_moved() {
     return _namespace_SIO("SIO_000720");
   }
 
@@ -5109,6 +5286,18 @@ public class SIO {
   }
 
   /**
+   * Either:
+   *   investigation is the process of carrying out a plan or procedure so as to discover facts or information about the object of study.
+   *   (http://semanticscience.org/resource/SIO_000747)
+   * Or:
+   *   An experiment is an investigation that has the goal of verifying, falsifying, or establishing the validity of a hypothesis.
+   *   (http://semanticscience.org/resource/SIO_000994)
+   */
+  public static Set<Resource> study() {
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_SIO("SIO_000747"), _namespace_SIO("SIO_000994") }));
+  }
+
+  /**
    * prediction is the process of formulating a proposition about a state of affairs which might be realized in the future.
    * (http://semanticscience.org/resource/SIO_000748)
    */
@@ -5157,6 +5346,14 @@ public class SIO {
    * (http://semanticscience.org/resource/SIO_000756)
    */
   public static Resource database_entry() {
+    return _namespace_SIO("SIO_000756");
+  }
+
+  /**
+   * A database entry is a single, implicitly structured data item in a table.
+   * (http://semanticscience.org/resource/SIO_000756)
+   */
+  public static Resource database_record() {
     return _namespace_SIO("SIO_000756");
   }
 
@@ -5213,6 +5410,14 @@ public class SIO {
    * (http://semanticscience.org/resource/SIO_000765)
    */
   public static Resource p_value() {
+    return _namespace_SIO("SIO_000765");
+  }
+
+  /**
+   * a p-value or probability value is the probability of obtaining a test statistic at least as extreme as the one that was actually observed, assuming that the null hypothesis is true
+   * (http://semanticscience.org/resource/SIO_000765)
+   */
+  public static Resource probability_value() {
     return _namespace_SIO("SIO_000765");
   }
 
@@ -5717,6 +5922,14 @@ public class SIO {
   }
 
   /**
+   * Gratitude, thankfulness, gratefulness, or appreciation is a feeling, emotion or attitude in acknowledgment of a benefit that one has received or will receive.
+   * (http://semanticscience.org/resource/SIO_000839)
+   */
+  public static Resource appreciation() {
+    return _namespace_SIO("SIO_000839");
+  }
+
+  /**
    * Happiness is an emotion characterized by positive or pleasant emotions ranging from contentment to intense joy.
    * (http://semanticscience.org/resource/SIO_000840)
    */
@@ -5797,6 +6010,10 @@ public class SIO {
   }
 
   public static Resource joy() {
+    return _namespace_SIO("SIO_000850");
+  }
+
+  public static Resource joy_is_an_emotion_of_intense_happiness() {
     return _namespace_SIO("SIO_000850");
   }
 
@@ -5893,6 +6110,10 @@ public class SIO {
   }
 
   public static Resource satisfaction() {
+    return _namespace_SIO("SIO_000864");
+  }
+
+  public static Resource satisfaction_is_an_emotion_of_fulfillment_of_one_s_wishes_expectations_or_needs_or_the_pleasure_derived_from_this() {
     return _namespace_SIO("SIO_000864");
   }
 
@@ -6149,14 +6370,6 @@ public class SIO {
   }
 
   /**
-   * A chart is a figure that displays the relationship among tabular numeric data, functions or some kinds of qualitative structures.
-   * (http://semanticscience.org/resource/SIO_000904)
-   */
-  public static Resource chart() {
-    return _namespace_SIO("SIO_000904");
-  }
-
-  /**
    * A map is a a visual representation of an area that depicts the relationship between elements of that space.
    * (http://semanticscience.org/resource/SIO_000906)
    */
@@ -6405,6 +6618,14 @@ public class SIO {
   }
 
   /**
+   * a tag cloud is a visualization of word frequencies.
+   * (http://semanticscience.org/resource/SIO_000938)
+   */
+  public static Resource word_cloud() {
+    return _namespace_SIO("SIO_000938");
+  }
+
+  /**
    * A phrase net diagram illustrates the relationship between different words used in a text.
    * (http://semanticscience.org/resource/SIO_000939)
    */
@@ -6517,6 +6738,14 @@ public class SIO {
    * (http://semanticscience.org/resource/SIO_000953)
    */
   public static Resource end_position() {
+    return _namespace_SIO("SIO_000953");
+  }
+
+  /**
+   * an end position is the distal position of an object relative to an origin in a linear system.
+   * (http://semanticscience.org/resource/SIO_000953)
+   */
+  public static Resource stop_position() {
     return _namespace_SIO("SIO_000953");
   }
 
@@ -7093,6 +7322,14 @@ public class SIO {
   }
 
   /**
+   * A study design is a protocol for the proper execution of a study which normally requires a carefullly crafted research question or hypothesis and at least one variable under observation and observed values for that variable.
+   * (http://semanticscience.org/resource/SIO_001041)
+   */
+  public static Resource study_protocol() {
+    return _namespace_SIO("SIO_001041");
+  }
+
+  /**
    * A recipe is a set of instructions that describe how to prepare or make something.
    * (http://semanticscience.org/resource/SIO_001042)
    */
@@ -7193,6 +7430,14 @@ public class SIO {
    * (http://semanticscience.org/resource/SIO_001056)
    */
   public static Resource character_position() {
+    return _namespace_SIO("SIO_001056");
+  }
+
+  /**
+   * the ordinal position of a character in a sequence of characters.
+   * (http://semanticscience.org/resource/SIO_001056)
+   */
+  public static Resource character_offset() {
     return _namespace_SIO("SIO_001056");
   }
 
@@ -7309,6 +7554,14 @@ public class SIO {
   }
 
   /**
+   * A control variable that is believed to alter the dependent or independent variables, but may not actually be the focus of the experiment. So that variable will be kept constant or monitored to try to minimise its effect on the experiment.
+   * (http://semanticscience.org/resource/SIO_001070)
+   */
+  public static Resource extraneous_variable() {
+    return _namespace_SIO("SIO_001070");
+  }
+
+  /**
    * text span start position is the position (offset) of the first character of a text span in relation the text it is from.
    * (http://semanticscience.org/resource/SIO_001071)
    */
@@ -7317,6 +7570,10 @@ public class SIO {
   }
 
   public static Resource text_span_end_position() {
+    return _namespace_SIO("SIO_001072");
+  }
+
+  public static Resource text_span_end_position_is_the_position_offset_of_the_last_character_of_a_text_span_in_relation_the_text_it_is_from() {
     return _namespace_SIO("SIO_001072");
   }
 
@@ -7484,6 +7741,10 @@ public class SIO {
     return _namespace_SIO("SIO_010015");
   }
 
+  public static Resource polypeptide_sequence() {
+    return _namespace_SIO("SIO_010015");
+  }
+
   public static Resource nucleic_acid_sequence() {
     return _namespace_SIO("SIO_010016");
   }
@@ -7492,7 +7753,15 @@ public class SIO {
     return _namespace_SIO("SIO_010017");
   }
 
+  public static Resource RNA_sequence() {
+    return _namespace_SIO("SIO_010017");
+  }
+
   public static Resource deoxyribonucleic_acid_sequence() {
+    return _namespace_SIO("SIO_010018");
+  }
+
+  public static Resource DNA_sequence() {
     return _namespace_SIO("SIO_010018");
   }
 
@@ -7993,10 +8262,26 @@ public class SIO {
   }
 
   /**
+   * Positve regulation is a biochemical regulation that increases the frequency, rate or extent of a downstream biochemical process.
+   * (http://semanticscience.org/resource/SIO_010295)
+   */
+  public static Resource Positive_biochemical_regulation() {
+    return _namespace_SIO("SIO_010295");
+  }
+
+  /**
    * Negative regulation is a biochemical regulation that decreases the frequency, rate or extent of a downstream biochemical process.
    * (http://semanticscience.org/resource/SIO_010296)
    */
   public static Resource negative_regulation() {
+    return _namespace_SIO("SIO_010296");
+  }
+
+  /**
+   * Negative regulation is a biochemical regulation that decreases the frequency, rate or extent of a downstream biochemical process.
+   * (http://semanticscience.org/resource/SIO_010296)
+   */
+  public static Resource Negative_biochemical_regulation() {
     return _namespace_SIO("SIO_010296");
   }
 

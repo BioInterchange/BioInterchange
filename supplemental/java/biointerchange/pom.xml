@@ -4,7 +4,7 @@
 
   <groupId>org.biointerchange</groupId>
   <artifactId>vocabularies</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <packaging>jar</packaging>
 
   <name>BioInterchange Vocabularies</name>
