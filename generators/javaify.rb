@@ -34,7 +34,9 @@ STDIN.each { |line|
     else
       namespace = line.scan(/http:\/\/[^'")]+/)[0].sub(/\/[^\/]+$/, '/') unless namespace
     end
-    line.gsub!(namespace, '') unless line.strip.start_with?('#')
+    if line.match("#{namespace}\w+") then
+      line.gsub!(namespace, '') unless line.strip.start_with?('#')
+    end
   end
 
   if line.start_with?('class') then
@@ -49,7 +51,7 @@ STDIN.each { |line|
     end
     transduction << "  public static #{line.sub('?', '').sub(/self\./, '').sub(/ *def\ /, '')}"
     method_name = transduction.sub(/^.*public static /m, '').sub(/(\(.*)?$/, '')
-    transduction.sub!("public static #{method_name}", "public static _#{method_name}_") if method_name.match(/^(true|false|class|public|private|static|return|if|while|do)$/)
+    transduction.sub!("public static #{method_name}", "public static _#{method_name}_") if method_name.match(/^(true|false|class|public|private|static|return|if|while|do|clone|equals|toString|hashCode)$/)
     variables = transduction.scan(/^\s*public static \w+\((.+)\)$/)
     variables = variables[0][0].split(',').map { |variable| variable.strip } if variables.length > 0
     if method_name == 'is_object_property' then
@@ -83,14 +85,14 @@ STDIN.each { |line|
   elsif line.strip.start_with?('end') then
     transduction = line.sub(/end/, '}')
   elsif line.strip.start_with?('if ') or line.strip.start_with?('elsif') then
-    transduction = "#{line.sub(/ then$/, '').sub('elsif', 'else if').gsub('@@', '__').gsub(/RDF::URI\.new\(([^)]+)\)/, "_namespace_#{java_class}(\\1)").gsub(/(\w)\?\(/, '\1(')}:".gsub(/\.has_key\(([^)]+)\)/, '.containsKey(\1)').gsub(/\[([^\]]+)\]/, '.get(\1)')
-    if transduction.match(/if ([^=]+|_namespace_[^=]+) ?== ?([^_].*|_namespace_.*):/)
-      transduction.sub!(/if ([^= ]+) ?== ?([^:]+)/, 'if \1.equals(\2)')
+    transduction = "#{line.sub(/ then$/, '').sub('elsif', 'else if').gsub('@@', '__').gsub(/RDF::URI\.new\(([^)]+)\)/, "_namespace_#{java_class}(\\1)").gsub(/(\w)\?\(/, '\1(')}".gsub(/\.has_key\(([^)]+)\)/, '.containsKey(\1)').gsub(/\[([^\]]+)\]/, '.get(\1)')
+    if transduction.match(/if ([^=]+|_namespace_[^=]+) ?== ?([^_].*|_namespace_.*)/)
+      transduction.sub!(/if ([^= ]+) ?== ?(\S+)\s+$/, 'if \1.equals(\2)')
       transduction.sub!(/_namespace_\w+\('(\w+)'\)/, "\"#{namespace}\\1\"")
     end
     transduction.sub!(/\.equals\(("[^"]+")\)/, '.equals(ResourceFactory.createResource(\1))')
     transduction.sub!(/if /, 'if (')
-    transduction.sub!(/:$/, ') {')
+    transduction.sub!(/$/, ') {')
   elsif line.strip.start_with?('return [') then
     transduction = line.sub(/return \[/, 'return new HashSet<Resource>(Arrays.asList(new Resource[] {').sub(/\]$/, '}));').gsub(/RDF::URI\.new\(([^)]+)\)/, "_namespace_#{java_class}(\\1)")
   elsif line.strip.start_with?('private') then
