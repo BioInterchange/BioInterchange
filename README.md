@@ -290,6 +290,7 @@ BioInterchange uses unit testing using [RSpec](http://rspec.info), where the uni
 
 Using bundler, a quick check can be carried out using:
 
+    bundle update
     bundle exec rake spec
 
 A more verbose is produced by calling `rspec` directly:
@@ -313,7 +314,6 @@ This can be solved by executing:
 
     sudo ln -s /usr/bin/llvm-gcc-4.2 /usr/bin/gcc-4.2
 
-
 Contributors
 ------------
 
@@ -323,6 +323,7 @@ In alphabetical order of the last name:
 * [Kevin B. Cohen](http://compbio.ucdenver.edu/Hunter_lab/Cohen/index.shtml)
 * [Geraint Duck](http://www.cs.man.ac.uk/~duckg)
 * [Michel Dumontier](http://dumontierlab.com)
+* [Jin-Dong Kim](http://www.bioontology.org/Jin-Dong_Kim)
 
 Cite
 ----
