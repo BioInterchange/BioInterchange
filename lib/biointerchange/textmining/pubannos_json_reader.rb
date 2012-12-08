@@ -27,7 +27,7 @@ private
       raise BioInterchange::Exceptions::InputFormatError, 'Error parsing the JSON input file: #{result["Error"]}'
     end
     
-    
+   
     text = result['text']
     #doc_uri = "http://pubannotation.dbcls.jp/pmdocs/" + result['pmid'].to_s
     doc_uri = result['docurl']
@@ -42,11 +42,11 @@ private
     
     if result['catanns']
       result['catanns'].each do |annot| 
-        start_offset = annot['begin']
-        end_offset = annot['end']
+        start_offset = annot['span']['begin']
+        end_offset = annot['span']['end']
         length = end_offset - start_offset
-        created_time = annot['created_at']
-        updated_time = annot['updated_at']
+        #created_time = annot['created_at']
+        #updated_time = annot['updated_at']
         category = annot['category']
         #annset_id = annot['annset_id']
         #doc_id = annot['doc_id']
@@ -61,6 +61,24 @@ private
         
         #set process.date = updated_time?
       end
+    end
+    
+    if result['insanns']
+      result['insanns'].each do |annot|
+
+      end
+    end
+    
+    if result['relanns']
+      result['relanns'].each do |annot|
+
+      end
+    end
+    
+    if result['modanns']
+      result['modanns'].each do |annot|
+
+      end 
     end
     
     doc

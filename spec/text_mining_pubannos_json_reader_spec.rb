@@ -32,14 +32,19 @@ describe BioInterchange::TextMining::PubannosJsonReader do
       
         model.should be_an_instance_of BioInterchange::TextMining::Document
       end 
+	  # it 'read advanced json from file' do
+        # model = @reader.deserialize(File.new('examples/pubannotation.2626671.json'))
+      
+        # model.should be_an_instance_of BioInterchange::TextMining::Document
+      # end 
     end
   
-    describe 'generated model check' do
+    describe 'basic generated model checks' do
   
       before :all do
         reader = BioInterchange::TextMining::PubannosJsonReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
         
-        @model = reader.deserialize('{ "name": "Peter Smith", "name_id": "<peter.smith@example.json>", "date": "2012-08-12", "version": "3", "docurl":"http://example.org/example_json", "text":"Some document text. With two annotations of type protein.\n", "catanns":[{"annset_id":1,"begin":0,"category":"Protein","doc_id":9,"end":10,"id":139},{"annset_id":1,"begin":20,"category":"Protein","doc_id":9,"end":42,"id":138}]}')
+        @model = reader.deserialize('{ "name": "Peter Smith", "name_id": "<peter.smith@example.json>", "date": "2012-12-08", "version": "3", "docurl":"http://example.org/example_json", "text":"Some document text. With two annotations of type protein.\n", 	"catanns":[{"id":"T1","span":{"begin":0,"end":10},"category":"NP"},{"id":"T2","span":{"begin":20,"end":42},"category":"NP"}]}')
         
         #puts "Document Model: #{@model.uri}"
         #  @model.contents.each do |c|
@@ -68,6 +73,30 @@ describe BioInterchange::TextMining::PubannosJsonReader do
         
         @model.contents[2].type.should eql BioInterchange::TextMining::Content::PHRASE and @model.contents[2].offset.should eql 20 and @model.contents[2].length.should eql 22
       end
+    
+    end
+	
+    describe 'advanced generated model checks' do
+  
+      before :all do
+        reader = BioInterchange::TextMining::PubannosJsonReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
+        
+        @model = reader.deserialize(File.new('examples/pubannotation.2626671.json'))
+      end
+      
+      it 'model is of type document' do
+        @model.should be_an_instance_of BioInterchange::TextMining::Document
+      end
+      
+      it 'document uri (job id read)' do
+        @model.uri.should eql "http://www.ncbi.nlm.nih.gov/pubmed/2626671"
+      end
+      
+      it 'document has content' do
+        @model.contents.size.should eql 39
+      end
+      
+ 
     
     end
 
