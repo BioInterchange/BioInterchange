@@ -63,6 +63,7 @@ class Content
     "biointerchange://textmining/content/#{@context.uri.sub(/^.*?:\/\//, '')}/#{@offset},#{@length},#{@type},#{process}"
   end
 
+
 end
 
 end

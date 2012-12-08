@@ -21,7 +21,9 @@ class Document
   #
   # +content+:: content of type +BioInterchange::TextMining::Content+ that should be added to the document
   def add(content)
-    raise BioInterchange::Exceptions::ImplementationModelError, 'Content has to be of kind BioInterchange::TextMining::Content' unless content.kind_of?(BioInterchange::TextMining::Content)
+    if ( (! content.kind_of?(BioInterchange::TextMining::Content)) && (! content.kind_of?(BioInterchange::TextMining::ContentConnection)) )
+      raise BioInterchange::Exceptions::ImplementationModelError, 'Content has to be of kind BioInterchange::TextMining::Content or kind BioInterchange::TextMining::ContentConnection' 
+    end
     @content << content
   end
 

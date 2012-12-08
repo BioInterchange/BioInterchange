@@ -12,6 +12,7 @@ load 'lib/biointerchange/textmining/text_mining_reader.rb'
 load 'lib/biointerchange/textmining/pubannos_json_reader.rb'
 load 'lib/biointerchange/textmining/document.rb'
 load 'lib/biointerchange/textmining/content.rb'
+load 'lib/biointerchange/textmining/content_connection.rb'
 load 'lib/biointerchange/textmining/process.rb'
 $VERBOSE = v
 
@@ -70,7 +71,6 @@ describe BioInterchange::TextMining::PubannosJsonReader do
       
       it 'document phrase' do
         @model.contents[1].type.should eql BioInterchange::TextMining::Content::PHRASE and @model.contents[1].offset.should eql 0 and @model.contents[1].length.should eql 10 and
-        
         @model.contents[2].type.should eql BioInterchange::TextMining::Content::PHRASE and @model.contents[2].offset.should eql 20 and @model.contents[2].length.should eql 22
       end
     
@@ -93,11 +93,28 @@ describe BioInterchange::TextMining::PubannosJsonReader do
       end
       
       it 'document has content' do
-        @model.contents.size.should eql 39
+        @model.contents.size.should eql 91
+      end
+
+      it 'document document' do 
+        @model.contents[0].type.should eql BioInterchange::TextMining::Content::DOCUMENT and @model.contents[0].offset.should eql 0 and @model.contents[0].length.should eql 2356
       end
       
- 
-    
+      it 'document content types and interconnections' do
+        doc = 1
+        sub = 39
+        eq = 62
+        th = 64
+        spec = 87
+        neg = 89
+        @model.contents[doc].type.should eql BioInterchange::TextMining::Content::PHRASE and @model.contents[doc].offset.should eql 9 and @model.contents[doc].length.should eql 10 and
+        @model.contents[sub].type.should eql BioInterchange::TextMining::ContentConnection::SUBCLASS and @model.contents[sub].content1.should eql nil and @model.contents[sub].content2.offset.should eql 9 and
+        @model.contents[eq].type.should eql BioInterchange::TextMining::ContentConnection::EQUIVALENCE and @model.contents[eq].content1.offset.should eql 396 and @model.contents[eq].content2.offset.should eql 386 and
+        @model.contents[th].type.should eql BioInterchange::TextMining::ContentConnection::THEME and @model.contents[th].content1.offset.should eql 32 and @model.contents[th].content2.content2.offset.should eql 9 and
+        @model.contents[spec].type.should eql BioInterchange::TextMining::ContentConnection::SPECULATION and @model.contents[spec].content1.content2.offset.should eql 9 and @model.contents[spec].content2.should eql nil and
+        @model.contents[neg].type.should eql BioInterchange::TextMining::ContentConnection::NEGATION and @model.contents[neg].content1.content2.offset.should eql 426 and @model.contents[neg].content2.should eql nil
+      end
+
     end
 
   end

@@ -25,6 +25,7 @@ module BioInterchange
   # Text mining model
   require 'biointerchange/textmining/document'
   require 'biointerchange/textmining/content'
+  require 'biointerchange/textmining/content_connection'
   require 'biointerchange/textmining/process'
   
   # Text mining writers
