@@ -28,7 +28,7 @@ describe BioInterchange::TextMining::PubannosJsonReader do
         model.should be_an_instance_of BioInterchange::TextMining::Document
       end
       it 'read json from file' do
-        model = @reader.deserialize(File.new('examples/pubannotation.json'))
+        model = @reader.deserialize(File.new('examples/pubannotation.10096561.json'))
       
         model.should be_an_instance_of BioInterchange::TextMining::Document
       end 
