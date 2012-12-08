@@ -42,17 +42,21 @@ private
 
     #hash to remember annotation in case they are needed for building upon based on ids later
     contents = {}
-    
+
     if result['catanns']
       result['catanns'].each do |annot| 
-        start_offset = annot['span']['begin']
-        end_offset = annot['span']['end']
+        start_offset = 0
+        end_offset = 0
+        if annot['span']
+          start_offset = annot['span']['begin']
+          end_offset = annot['span']['end']
+        elsif annot['begin'] and annot['end']
+          start_offset = annot['begin']
+          end_offset = annot['end']
+        end
         length = end_offset - start_offset
-        #created_time = annot['created_at']
-        #updated_time = annot['updated_at']
+
         category = annot['category']
-        #annset_id = annot['annset_id']
-        #doc_id = annot['doc_id']
         id = annot['id']
         
         entity = text.slice(start_offset..end_offset)

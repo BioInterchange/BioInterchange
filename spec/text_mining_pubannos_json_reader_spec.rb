@@ -33,11 +33,43 @@ describe BioInterchange::TextMining::PubannosJsonReader do
       
         model.should be_an_instance_of BioInterchange::TextMining::Document
       end 
-	  # it 'read advanced json from file' do
-        # model = @reader.deserialize(File.new('examples/pubannotation.2626671.json'))
+
+	  it 'read old json from file' do
+        model = @reader.deserialize(File.new('examples/pubannotation.10096561.json.old'))
       
-        # model.should be_an_instance_of BioInterchange::TextMining::Document
-      # end 
+        model.should be_an_instance_of BioInterchange::TextMining::Document
+      end 
+    end
+
+    describe 'old json generated model checks' do
+      before :all do
+        reader = BioInterchange::TextMining::PubannosJsonReader.new("TestOld", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
+        
+        @model = reader.deserialize('{ "name": "Peter Smith", "name_id": "<peter.smith@example.json>", "date": "2012-08-12", "version": "3", "docurl":"http://example.org/example_json", "text":"Some document text. With two annotations of type protein.\n", "catanns":[{"annset_id":1,"begin":0,"category":"Protein","doc_id":9,"end":10,"id":139},{"annset_id":1,"begin":20,"category":"Protein","doc_id":9,"end":42,"id":138}]}')
+
+      end
+      
+      it 'model is of type document' do
+        @model.should be_an_instance_of BioInterchange::TextMining::Document
+      end
+      
+      it 'document uri (job id read)' do
+        @model.uri.should eql "http://example.org/example_json"
+      end
+      
+      it 'document has content' do
+        @model.contents.size.should eql 3
+      end
+      
+      it 'document document' do
+        @model.contents[0].type.should eql BioInterchange::TextMining::Content::DOCUMENT and @model.contents[0].offset.should eql 0 and @model.contents[0].length.should eql 58
+      end
+      
+      it 'document phrase' do
+        @model.contents[1].type.should eql BioInterchange::TextMining::Content::PHRASE and @model.contents[1].offset.should eql 0 and @model.contents[1].length.should eql 10 and
+        
+        @model.contents[2].type.should eql BioInterchange::TextMining::Content::PHRASE and @model.contents[2].offset.should eql 20 and @model.contents[2].length.should eql 22
+      end
     end
   
     describe 'basic generated model checks' do
@@ -46,11 +78,6 @@ describe BioInterchange::TextMining::PubannosJsonReader do
         reader = BioInterchange::TextMining::PubannosJsonReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
         
         @model = reader.deserialize('{ "name": "Peter Smith", "name_id": "<peter.smith@example.json>", "date": "2012-12-08", "version": "3", "docurl":"http://example.org/example_json", "text":"Some document text. With two annotations of type protein.\n", 	"catanns":[{"id":"T1","span":{"begin":0,"end":10},"category":"NP"},{"id":"T2","span":{"begin":20,"end":42},"category":"NP"}]}')
-        
-        #puts "Document Model: #{@model.uri}"
-        #  @model.contents.each do |c|
-        #  puts "\tContent: #{c.type}, #{c.offset}, #{c.length}"
-        #end
       end
       
       it 'model is of type document' do
@@ -73,7 +100,6 @@ describe BioInterchange::TextMining::PubannosJsonReader do
         @model.contents[1].type.should eql BioInterchange::TextMining::Content::PHRASE and @model.contents[1].offset.should eql 0 and @model.contents[1].length.should eql 10 and
         @model.contents[2].type.should eql BioInterchange::TextMining::Content::PHRASE and @model.contents[2].offset.should eql 20 and @model.contents[2].length.should eql 22
       end
-    
     end
 	
     describe 'advanced generated model checks' do
@@ -114,7 +140,6 @@ describe BioInterchange::TextMining::PubannosJsonReader do
         @model.contents[spec].type.should eql BioInterchange::TextMining::ContentConnection::SPECULATION and @model.contents[spec].content1.content2.offset.should eql 9 and @model.contents[spec].content2.should eql nil and
         @model.contents[neg].type.should eql BioInterchange::TextMining::ContentConnection::NEGATION and @model.contents[neg].content1.content2.offset.should eql 426 and @model.contents[neg].content2.should eql nil
       end
-
     end
 
   end
