@@ -41,7 +41,7 @@ BioInterchange's command-line tool `biointerchange` can be installed as a comman
 
 Examples:
 
-    biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.json --name 'Peter Smith' --name_id 'peter.smith@example.com'
+    biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.10096561.json --name 'Peter Smith' --name_id 'peter.smith@example.com'
     biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007-8-3-R40.xml --name 'Peter Smith' --name_id 'peter.smith@example.com'
 
 Input formats:
