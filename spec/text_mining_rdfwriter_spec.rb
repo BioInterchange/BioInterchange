@@ -58,6 +58,17 @@ describe BioInterchange::TextMining::RDFWriter do
       ostream.close
       istream.read.lines.count.should be > 1
     end
+
+    it 'full advanced json document' do
+      ostream = StringIO.new
+      reader = BioInterchange::TextMining::PubannosJsonReader.new("Test", "http://test.com", "2012-12-09", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
+        
+      model = reader.deserialize(File.new('examples/pubannotation.2626671.json'))
+      
+      BioInterchange::TextMining::RDFWriter.new(ostream).serialize(model)
+      ostream.close_write
+      ostream.string.lines.count.should > 100
+    end
   end
 end
 
