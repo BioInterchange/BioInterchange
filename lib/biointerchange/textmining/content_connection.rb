@@ -60,8 +60,12 @@ class ContentConnection
   def uri
     raise BioInterchange::Exceptions::ImplementationModelError, 'An URI can only be returned for content with a context (i.e., use setContext(context) first).' unless @context
     process = '-'
+    c1 = '-'
+    c2 = '-'
     process = "(#{@process.uri.sub(/^.*?:\/\//, '')})" if @process
-    "biointerchange://textmining/content_connection/#{@context.uri.sub(/^.*?:\/\//, '')}/#{@content1.uri.sub(/^.*?:\/\//, '')},#{@content2.uri.sub(/^.*?:\/\//, '')},#{@type},#{process}"
+    c1 = "#{@content1.uri.sub(/^.*?:\/\//, '')}" if @content1
+    c2 = "#{@content2.uri.sub(/^.*?:\/\//, '')}" if @content2
+    "biointerchange://textmining/content_connection/#{@context.uri.sub(/^.*?:\/\//, '')}/#{c1},#{c2},#{@type},#{process}"
   end
 
 end

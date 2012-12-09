@@ -10,7 +10,7 @@ class RDFWriter < BioInterchange::Writer
   #
   # +ostream+:: instance of an IO class or derivative that is used for RDF serialization
   def initialize(ostream)
-    raise BioInterchange::Exceptions::ImplementationWriterError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO)
+    raise BioInterchange::Exceptions::ImplementationWriterError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO) || ostream.kind_of?(StringIO)
     @ostream = ostream
   end
 
@@ -68,6 +68,22 @@ private
     end
   end
 
+  # Generates an URI for a given contentconnection and its contents.
+  #
+  # +contentcon+:: content connection instance
+  # +kind+:: kind of the URI that should be generated, for example, whether the URI should represent the name, date, etc.
+  def content_connection_uri(contentcon, kind)
+    base_uri = 'biointerchange://textmining/content_connection'
+    case kind
+    when :start
+      RDF::URI.new("#{base_uri}/start/#{content.uri.sub(/^.*?:\/\//, '')}")
+    when :stop
+      RDF::URI.new("#{base_uri}/stop/#{content.uri.sub(/^.*?:\/\//, '')}")
+    else
+      raise BioInterchange::Exceptions::ImplementationWriterError, "There is no implementation for serializing a content as #{kind}."
+    end
+  end
+
   # Serializes RDF for a textual document representation using the Semanticsciene Integrated Ontology
   # (http://code.google.com/p/semanticscience/wiki/SIO).
   #
@@ -77,7 +93,13 @@ private
     document_uri = RDF::URI.new(model.uri)
     graph.insert(RDF::Statement.new(document_uri, RDF.type, BioInterchange::SIO.document))
     model.contents.each { |content|
-      serialize_content(graph, document_uri, content)
+      if content.kind_of?(BioInterchange::TextMining::Content)
+        serialize_content(graph, document_uri, content)
+      elsif content.kind_of?(BioInterchange::TextMining::ContentConnection)
+        serialize_contentconnection(graph, document_uri, content)
+      else
+        raise BioInterchange::Exceptions::ImplementationWriterError, "Can only serialize Content and ContentConnection from a Document."
+      end
     }
     RDF::NTriples::Writer.dump(graph, @ostream)
   end
@@ -125,6 +147,40 @@ private
     
     graph.insert(RDF::Statement.new(content_uri, BioInterchange::SIO.has_attribute, serialize_content_start(graph, document_uri, content_uri, content)))
     graph.insert(RDF::Statement.new(content_uri, BioInterchange::SIO.has_attribute, serialize_content_stop(graph, document_uri, content_uri, content)))
+  
+  end
+
+  # Serializes a ContentConnection object for a given document URI.
+  #
+  # +graph+:: RDF graph to which content is added
+  # +document_uri+:: the document URI to which the added content belongs to
+  # +content+:: an instance that describes the content
+  def serialize_contentconnection(graph, document_uri, content)
+    content_uri = RDF::URI.new(content.uri)
+    graph.insert(RDF::Statement.new(document_uri, BioInterchange::SIO.has_attribute, content_uri))
+    serialize_process(graph, document_uri, content_uri, content.process) if content.process
+    
+
+    #TODO these sio tags need confirming - there are here as a initial proof of concept
+    #next issue, some of these are relations and some are labels, need to separate out which
+    #I seem to recall that the only relationship types that should be used are "has_attribute" and "RDF::type", in which case these need adjusting for that.
+    #I presume this'd mean making a "has_attribute" link between the content1 and the contentconnection relationship in some way.
+    case content.type
+    when ContentConnection::UNSPECIFIED
+      graph.insert(RDF::Statement.new(content.content1_uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.language_entity))
+    when ContentConnection::EQUIVALENCE
+      graph.insert(RDF::Statement.new(content.content1_uri, BioInterchange::SIO.is_equal_to, content.content2_uri))
+    when ContentConnection::SUBCLASS
+      #TODO this class needs more information, the relationship os between a content, and 'something'... I've yet to work out what
+      graph.insert(RDF::Statement.new(content.content2_uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.in_relation_to))
+    when ContentConnection::THEME
+      #TODO there are other more specific options for this that need investigating as options. 
+      graph.insert(RDF::Statement.new(content.content1_uri, BioInterchange::SIO.has_target, content.content2_uri))
+    when ContentConnection::SPECULATION
+      graph.insert(RDF::Statement.new(content.content1_uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.speculation))
+    when ContentConnection::NEGATION
+      graph.insert(RDF::Statement.new(content.content1_uri, BioInterchange::SIO.denotes, BioInterchange::SIO.negative_regulation))
+    end
   
   end
 
