@@ -155,31 +155,31 @@ private
   # +graph+:: RDF graph to which content is added
   # +document_uri+:: the document URI to which the added content belongs to
   # +content+:: an instance that describes the content
-  def serialize_contentconnection(graph, document_uri, content)
-    content_uri = RDF::URI.new(content.uri)
-    graph.insert(RDF::Statement.new(document_uri, BioInterchange::SIO.has_attribute, content_uri))
-    serialize_process(graph, document_uri, content_uri, content.process) if content.process
+  def serialize_contentconnection(graph, document_uri, contentcon)
+    contentcon_uri = RDF::URI.new(contentcon.uri)
+    graph.insert(RDF::Statement.new(document_uri, BioInterchange::SIO.has_attribute, contentcon_uri))
+    serialize_process(graph, document_uri, contentcon_uri, contentcon.process) if contentcon.process
     
 
     #TODO these sio tags need confirming - there are here as a initial proof of concept
     #next issue, some of these are relations and some are labels, need to separate out which
     #I seem to recall that the only relationship types that should be used are "has_attribute" and "RDF::type", in which case these need adjusting for that.
     #I presume this'd mean making a "has_attribute" link between the content1 and the contentconnection relationship in some way.
-    case content.type
+    case contentcon.type
     when ContentConnection::UNSPECIFIED
-      graph.insert(RDF::Statement.new(content.content1_uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.language_entity))
+      graph.insert(RDF::Statement.new(contentcon.content1.uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.language_entity))
     when ContentConnection::EQUIVALENCE
-      graph.insert(RDF::Statement.new(content.content1_uri, BioInterchange::SIO.is_equal_to, content.content2_uri))
+      graph.insert(RDF::Statement.new(contentcon.content1.uri, BioInterchange::SIO.is_equal_to, contentcon.content2.uri))
     when ContentConnection::SUBCLASS
-      #TODO this class needs more information, the relationship os between a content, and 'something'... I've yet to work out what
-      graph.insert(RDF::Statement.new(content.content2_uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.in_relation_to))
+      #TODO this class needs more information, the relationship is between a contentcon.content, and 'something'... I've yet to work out what
+      graph.insert(RDF::Statement.new(contentcon.content2.uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.in_relation_to))
     when ContentConnection::THEME
       #TODO there are other more specific options for this that need investigating as options. 
-      graph.insert(RDF::Statement.new(content.content1_uri, BioInterchange::SIO.has_target, content.content2_uri))
+      graph.insert(RDF::Statement.new(contentcon.content1.uri, BioInterchange::SIO.has_target, contentcon.content2.uri))
     when ContentConnection::SPECULATION
-      graph.insert(RDF::Statement.new(content.content1_uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.speculation))
+      graph.insert(RDF::Statement.new(contentcon.content1.uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.speculation))
     when ContentConnection::NEGATION
-      graph.insert(RDF::Statement.new(content.content1_uri, BioInterchange::SIO.denotes, BioInterchange::SIO.negative_regulation))
+      graph.insert(RDF::Statement.new(contentcon.content1.uri, BioInterchange::SIO.denotes, BioInterchange::SIO.negative_regulation))
     end
   
   end
