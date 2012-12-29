@@ -1,0 +1,1701 @@
+##gff-version   3
+##sequence-region DDB0220052 1 75732
+##species http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=352472
+# generated: Wed Dec 26 03:46:23 2012
+DDB0220052	Sequencing Center	chromosome	1	75732	.	+	.	ID=DDB0220052;Name=BF
+DDB0220052	Sequencing Center	contig	101	2443	.	+	.	ID=DDB0220053;Parent=DDB0220052;Name=DDB0220053;description=Contig from Sequencing Center%3B ( BFNV1_0C0007 );Dbxref=Contig GI Number:90970340,Scaffold GI Number:93569022,Accession Number:AAFI02000251,Scaffold Accession Number:CH709172,SeqID for Genbank:DDB0220053.02,Genome V. 2.0 ID:BFNV1_0C0007
+DDB0220052	.	gene	803	1000	.	+	.	ID=DDB_G0294342;Name=DDB_G0294342_RTE;description=fused fragments of the DIRS1 retrotransposon%3B refer to Genbank M11339 for full-length element
+DDB0220052	Sequencing Center	mRNA	803	1000	.	+	.	ID=DDB0220062;Parent=DDB_G0294342;Name=DDB0220062;description=BFNV1_0C0007_07277: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60312.1,Inparanoid V. 5.1:DDB0220062,Protein Accession Number:EAL60312.1,Protein GI Number:60462058,UniProt:Q54AM5,Genome V. 2.0 ID:BFNV1_0C0007_07277
+DDB0220052	Sequencing Center	exon	803	1000	.	+	.	Parent=DDB0220062
+DDB0220052	Sequencing Center	CDS	803	1000	.	+	.	Parent=DDB0220062
+DDB0220052	.	gene	1048	2443	.	+	.	ID=DDB_G0294344;Name=DDB_G0294344_RTE;description=ORF2 protein fragment of DIRS1 retrotransposon%3B refer to Genbank M11339 for full-length element
+DDB0220052	Sequencing Center	mRNA	1048	2443	.	+	.	ID=DDB0220063;Parent=DDB_G0294344;Name=DDB0220063;description=BFNV1_0C0007_07278: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60313.1,Inparanoid V. 5.1:DDB0220063,Protein Accession Number:EAL60313.1,Protein GI Number:60462059,UniProt:Q54AM4,Genome V. 2.0 ID:BFNV1_0C0007_07278;qualifier=Partial%2C 3%27 missing
+DDB0220052	Sequencing Center	exon	1048	2443	.	+	.	Parent=DDB0220063
+DDB0220052	Sequencing Center	CDS	1048	2443	.	+	.	Parent=DDB0220063
+DDB0220052	Sequencing Center	contig	2544	7038	.	+	.	ID=DDB0220054;Parent=DDB0220052;Name=DDB0220054;description=Contig from Sequencing Center%3B ( BFNV1_0C0009 );Dbxref=Contig GI Number:90970339,Scaffold GI Number:93569021,Accession Number:AAFI02000252,Scaffold Accession Number:CH709173,SeqID for Genbank:DDB0220054.02,Genome V. 2.0 ID:BFNV1_0C0009
+DDB0220052	Sequencing Center	contig	7139	12317	.	+	.	ID=DDB0220055;Parent=DDB0220052;Name=DDB0220055;description=Contig from Sequencing Center%3B ( BFNV1_0C0011 );Dbxref=Contig GI Number:90970338,Scaffold GI Number:93569020,Accession Number:AAFI02000253,Scaffold Accession Number:CH709174,SeqID for Genbank:DDB0220055.02,Genome V. 2.0 ID:BFNV1_0C0011
+DDB0220052	.	gene	7210	9145	.	-	.	ID=DDB_G0294346;Name=DDB_G0294346_RTE;description=ORF1%2FORF3 protein fusion fragment of DIRS1 retrotransposon%3B refer to Genbank M11339 for full-length element
+DDB0220052	Sequencing Center	mRNA	7210	9145	.	-	.	ID=DDB0220064;Parent=DDB_G0294346;Name=DDB0220064;description=BFNV1_0C0011_07644: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60309.1,Inparanoid V. 5.1:DDB0220064,Protein Accession Number:EAL60309.1,Protein GI Number:60462053,UniProt:Q54AM3,Genome V. 2.0 ID:BFNV1_0C0011_07644;qualifier=Partial%2C 3%27 missing
+DDB0220052	Sequencing Center	exon	8275	9145	.	-	.	Parent=DDB0220064
+DDB0220052	Sequencing Center	CDS	8275	9145	.	-	.	Parent=DDB0220064
+DDB0220052	Sequencing Center	exon	7493	8158	.	-	.	Parent=DDB0220064
+DDB0220052	Sequencing Center	CDS	7493	8158	.	-	.	Parent=DDB0220064
+DDB0220052	Sequencing Center	exon	7210	7295	.	-	.	Parent=DDB0220064
+DDB0220052	Sequencing Center	CDS	7210	7295	.	-	.	Parent=DDB0220064
+DDB0220052	Sequencing Center	contig	12418	18114	.	+	.	ID=DDB0220057;Parent=DDB0220052;Name=DDB0220057;description=Contig from Sequencing Center%3B ( BFNV1_0C0014 );Dbxref=Contig GI Number:90970337,Scaffold GI Number:93569019,Accession Number:AAFI02000254,Scaffold Accession Number:CH709175,SeqID for Genbank:DDB0220057.02,Genome V. 2.0 ID:BFNV1_0C0014
+DDB0220052	.	gene	12418	13862	.	-	.	ID=DDB_G0294352;Name=DDB_G0294352_TE;description=ORF1 encoding a protein of unknown function of the putative DNA transposon DDT-B%3B refer to AF298202 for full-length consensus element
+DDB0220052	Sequencing Center	mRNA	12418	13862	.	-	.	ID=DDB0220072;Parent=DDB_G0294352;Name=DDB0220072;description=BFNV1_0C0014_07724: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60304.1,Inparanoid V. 5.1:DDB0220072,Protein Accession Number:EAL60304.1,Protein GI Number:60462047,UniProt:Q54AM0,Genome V. 2.0 ID:BFNV1_0C0014_07724;qualifier=Partial%2C 3%27 missing
+DDB0220052	Sequencing Center	exon	13837	13862	.	-	.	Parent=DDB0220072
+DDB0220052	Sequencing Center	CDS	13837	13862	.	-	.	Parent=DDB0220072
+DDB0220052	Sequencing Center	exon	13422	13471	.	-	.	Parent=DDB0220072
+DDB0220052	Sequencing Center	CDS	13422	13471	.	-	.	Parent=DDB0220072
+DDB0220052	Sequencing Center	exon	12418	13312	.	-	.	Parent=DDB0220072
+DDB0220052	Sequencing Center	CDS	12418	13312	.	-	.	Parent=DDB0220072
+DDB0220052	.	gene	16546	17754	.	-	.	ID=DDB_G0294358;Name=DDB_G0294358_RTE;description=ORF2 encoding reverse transcriptase (RT) and integrase (IN) proteins of long terminal repeat retrotransposon Skipper%3B refer to AF049230 for consensus element
+DDB0220052	Sequencing Center	mRNA	16546	17754	.	-	.	ID=DDB0220075;Parent=DDB_G0294358;Name=DDB0220075;description=BFNV1_0C0014_07727: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60307.1,Inparanoid V. 5.1:DDB0220075,Protein Accession Number:EAL60307.1,Protein GI Number:60462050,UniProt:Q54AL7,Genome V. 2.0 ID:BFNV1_0C0014_07727
+DDB0220052	Sequencing Center	exon	16546	17754	.	-	.	Parent=DDB0220075
+DDB0220052	Sequencing Center	CDS	16546	17754	.	-	.	Parent=DDB0220075
+DDB0220052	.	gene	17795	18114	.	-	.	ID=DDB_G0294360;Name=DDB_G0294360_RTE;description=ORF2 encoding reverse transcriptase (RT) and integrase (IN) proteins of long terminal repeat retrotransposon Skipper%3B refer to AF049230 for consensus element
+DDB0220052	Sequencing Center	mRNA	17795	18114	.	-	.	ID=DDB0220076;Parent=DDB_G0294360;Name=DDB0220076;description=BFNV1_0C0014_07728: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=3;Dbxref=Protein Accession Version:EAL60308.1,Inparanoid V. 5.1:DDB0220076,Protein Accession Number:EAL60308.1,Protein GI Number:60462051,UniProt:Q54AL6,Genome V. 2.0 ID:BFNV1_0C0014_07728;qualifier=Partial%2C 5%27 missing
+DDB0220052	Sequencing Center	exon	17795	18114	.	-	.	Parent=DDB0220076
+DDB0220052	Sequencing Center	CDS	17795	18114	.	-	.	Parent=DDB0220076
+DDB0220052	Sequencing Center	contig	18215	20700	.	+	.	ID=DDB0220058;Parent=DDB0220052;Name=DDB0220058;description=Contig from Sequencing Center%3B ( BFNV2_0C0001 );Dbxref=Contig GI Number:90970336,Scaffold GI Number:93569018,Accession Number:AAFI02000255,Scaffold Accession Number:CH709176,SeqID for Genbank:DDB0220058.02,Genome V. 2.0 ID:BFNV2_0C0001
+DDB0220052	Sequencing Center	contig	20801	22949	.	+	.	ID=DDB0220059;Parent=DDB0220052;Name=DDB0220059;description=Contig from Sequencing Center%3B ( BFNV2_0C0002 );Dbxref=Contig GI Number:90970335,Scaffold GI Number:93569017,Accession Number:AAFI02000256,Scaffold Accession Number:CH709177,SeqID for Genbank:DDB0220059.02,Genome V. 2.0 ID:BFNV2_0C0002
+DDB0220052	.	gene	21031	21765	.	+	.	ID=DDB_G0294362;Name=DDB_G0294362_ps;description=putative pseudogene%3B fragment%2C nearly identical to %3Ca href%3D%22%2Fgene%2FDDB_G0295683%22%3EDDB_G0295683%3C%2Fa%3E
+DDB0220052	Sequencing Center	mRNA	21055	21765	.	+	.	ID=DDB0220077;Parent=DDB_G0294362;Name=DDB0220077;description=BFNV2_0C0002_00001: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60302.1,Inparanoid V. 5.1:DDB0220077,Protein Accession Number:EAL60302.1,Protein GI Number:60462043,Genome V. 2.0 ID:BFNV2_0C0002_00001;qualifier=Partial%2C 5%27 missing
+DDB0220052	Sequencing Center	exon	21055	21765	.	+	.	Parent=DDB0220077
+DDB0220052	Sequencing Center	CDS	21055	21765	.	+	.	Parent=DDB0220077
+DDB0220052	dictyBase Curator	pseudogene	21031	21765	.	+	.	ID=DDB0347491;Parent=DDB_G0294362;Name=DDB0347491;description=dictyBase Generated Feature;qualifier=Incomplete support
+DDB0220052	dictyBase Curator	exon	21031	21765	.	+	.	Parent=DDB0347491
+DDB0220052	.	gene	22000	22740	.	+	.	ID=DDB_G0294364;Name=DDB_G0294364_ps;description=putative pseudogene%3B fragment%2C nearly identical to %3Ca href%3D%22%2Fgene%2FDDB_G0295683%22%3EDDB_G0295683%3C%2Fa%3E
+DDB0220052	Sequencing Center	mRNA	22000	22740	.	+	.	ID=DDB0220078;Parent=DDB_G0294364;Name=DDB0220078;description=BFNV2_0C0002_00002: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60303.1,Inparanoid V. 5.1:DDB0220078,Protein Accession Number:EAL60303.1,Protein GI Number:60462044,Genome V. 2.0 ID:BFNV2_0C0002_00002
+DDB0220052	Sequencing Center	exon	22000	22740	.	+	.	Parent=DDB0220078
+DDB0220052	Sequencing Center	CDS	22000	22740	.	+	.	Parent=DDB0220078
+DDB0220052	dictyBase Curator	pseudogene	22000	22740	.	+	.	ID=DDB0347492;Parent=DDB_G0294364;Name=DDB0347492;description=dictyBase Generated Feature;qualifier=Incomplete support
+DDB0220052	dictyBase Curator	exon	22000	22740	.	+	.	Parent=DDB0347492
+DDB0220052	Sequencing Center	contig	23050	25288	.	+	.	ID=DDB0220060;Parent=DDB0220052;Name=DDB0220060;description=Contig from Sequencing Center%3B ( BFNV2_0C0003 );Dbxref=Contig GI Number:90970334,Scaffold GI Number:93569016,Accession Number:AAFI02000257,Scaffold Accession Number:CH709178,SeqID for Genbank:DDB0220060.02,Genome V. 2.0 ID:BFNV2_0C0003
+DDB0220052	.	gene	24012	24347	.	+	.	ID=DDB_G0294366;Name=DDB_G0294366
+DDB0220052	Sequencing Center	mRNA	24012	24347	.	+	.	ID=DDB0220079;Parent=DDB_G0294366;Name=DDB0220079;description=BFNV2_0C0003_00001: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60300.1,Inparanoid V. 5.1:DDB0220079,Protein Accession Number:EAL60300.1,Protein GI Number:60462040,UniProt:Q54AL3,Genome V. 2.0 ID:BFNV2_0C0003_00001
+DDB0220052	Sequencing Center	exon	24012	24347	.	+	.	Parent=DDB0220079
+DDB0220052	Sequencing Center	CDS	24012	24347	.	+	.	Parent=DDB0220079
+DDB0220052	.	gene	24816	25288	.	+	.	ID=DDB_G0294368;Name=DDB_G0294368
+DDB0220052	Sequencing Center	mRNA	24816	25288	.	+	.	ID=DDB0220080;Parent=DDB_G0294368;Name=DDB0220080;description=BFNV2_0C0003_00002: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60301.1,Inparanoid V. 5.1:DDB0220080,Protein Accession Number:EAL60301.1,Protein GI Number:60462041,UniProt:Q54AL2,Genome V. 2.0 ID:BFNV2_0C0003_00002;qualifier=Partial%2C 3%27 missing
+DDB0220052	Sequencing Center	exon	24816	24944	.	+	.	Parent=DDB0220080
+DDB0220052	Sequencing Center	CDS	24816	24944	.	+	.	Parent=DDB0220080
+DDB0220052	Sequencing Center	exon	25015	25288	.	+	.	Parent=DDB0220080
+DDB0220052	Sequencing Center	CDS	25015	25288	.	+	.	Parent=DDB0220080
+DDB0220052	Sequencing Center	contig	25389	29043	.	+	.	ID=DDB0220061;Parent=DDB0220052;Name=DDB0220061;description=Contig from Sequencing Center%3B ( BFNV2_0C0004 );Dbxref=Contig GI Number:90970333,Scaffold GI Number:93569015,Accession Number:AAFI02000258,Scaffold Accession Number:CH709179,SeqID for Genbank:DDB0220061.02,Genome V. 2.0 ID:BFNV2_0C0004
+DDB0220052	.	gene	25629	26804	.	+	.	ID=DDB_G0294370;Name=DDB_G0294370_RTE;description=ORF2 encoding reverse transcriptase (RT) and RNaseH of long terminal repeat retrotransposon DGLT-B%3B refer to AF474004 for full-length consensus element
+DDB0220052	Sequencing Center	mRNA	25629	26804	.	+	.	ID=DDB0220081;Parent=DDB_G0294370;Name=DDB0220081;description=BFNV2_0C0004_00001: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60297.1,Inparanoid V. 5.1:DDB0220081,Protein Accession Number:EAL60297.1,Protein GI Number:60462036,UniProt:Q54AL1,Genome V. 2.0 ID:BFNV2_0C0004_00001;qualifier=Partial%2C 5%27 missing
+DDB0220052	Sequencing Center	exon	25629	26804	.	+	.	Parent=DDB0220081
+DDB0220052	Sequencing Center	CDS	25629	26804	.	+	.	Parent=DDB0220081
+DDB0220052	.	gene	26849	27667	.	+	.	ID=DDB_G0294372;Name=DDB_G0294372_RTE;description=ORF3 encoding the integrase protein of long terminal repeat retrotransposon DGLT-B%3B refer to AF474004 for full-length consensus element
+DDB0220052	Sequencing Center	mRNA	26849	27667	.	+	.	ID=DDB0220082;Parent=DDB_G0294372;Name=DDB0220082;description=BFNV2_0C0004_00002: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60298.1,Inparanoid V. 5.1:DDB0220082,Protein Accession Number:EAL60298.1,Protein GI Number:60462037,UniProt:Q54AL0,Genome V. 2.0 ID:BFNV2_0C0004_00002
+DDB0220052	Sequencing Center	exon	26849	27667	.	+	.	Parent=DDB0220082
+DDB0220052	Sequencing Center	CDS	26849	27667	.	+	.	Parent=DDB0220082
+DDB0220052	.	gene	28204	28777	.	+	.	ID=DDB_G0294374;Name=DDB_G0294374_RTE;description=ORF4 encoding a zinc finger-containing protein of unknown function of long terminal repeat retrotransposon DGLT-B%3B refer to AF474004 for full-length consensus element
+DDB0220052	Sequencing Center	mRNA	28204	28777	.	+	.	ID=DDB0220083;Parent=DDB_G0294374;Name=DDB0220083;description=BFNV2_0C0004_00003: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60299.1,Inparanoid V. 5.1:DDB0220083,Protein Accession Number:EAL60299.1,Protein GI Number:60462038,UniProt:Q54AK9,Genome V. 2.0 ID:BFNV2_0C0004_00003
+DDB0220052	Sequencing Center	exon	28204	28456	.	+	.	Parent=DDB0220083
+DDB0220052	Sequencing Center	CDS	28204	28456	.	+	.	Parent=DDB0220083
+DDB0220052	Sequencing Center	exon	28602	28777	.	+	.	Parent=DDB0220083
+DDB0220052	Sequencing Center	CDS	28602	28777	.	+	.	Parent=DDB0220083
+DDB0220052	Sequencing Center	contig	29144	33211	.	+	.	ID=DDB0229810;Parent=DDB0220052;Name=DDB0229810;Dbxref=Contig GI Number:90970332,Scaffold GI Number:93569014,Accession Number:AAFI02000259,Scaffold Accession Number:CH709180,SeqID for Genbank:DDB0229810.02,Genome V. 2.0 ID:BEF6V2_0C0001
+DDB0220052	.	gene	29549	30575	.	-	.	ID=DDB_G0294376;Name=fcpA;description=shares a short region of similarity with H. sapiens small CTD phosphatase 2
+DDB0220052	Sequencing Center	mRNA	29549	30575	.	-	.	ID=DDB0229811;Parent=DDB_G0294376;Name=DDB0229811;description=BEF6V2_0C0001_00001: Obtained from the Dictyostelium Genome Consortium at The Wellcome Trust Sanger Institute;translation_start=1;Dbxref=Genome V. 2.0 ID:BEF6V2_0C0001_00001
+DDB0220052	Sequencing Center	exon	29665	30575	.	-	.	Parent=DDB0229811
+DDB0220052	Sequencing Center	CDS	29665	30575	.	-	.	Parent=DDB0229811
+DDB0220052	Sequencing Center	exon	29549	29558	.	-	.	Parent=DDB0229811
+DDB0220052	Sequencing Center	CDS	29549	29558	.	-	.	Parent=DDB0229811
+DDB0220052	dictyBase Curator	mRNA	29549	30575	.	-	.	ID=DDB0229894;Parent=DDB_G0294376;Name=DDB0229894;description=dictyBase Generated Feature;translation_start=1;Note=Primary feature;Dbxref=Protein Accession Version:EAL60295.1,Inparanoid V. 5.1:DDB0229894,Protein Accession Number:EAL60295.1,Protein GI Number:60462033,UniProt:Q9XYL0,EC Number:3.1.3.16
+DDB0220052	dictyBase Curator	exon	29665	30575	.	-	.	Parent=DDB0229894
+DDB0220052	dictyBase Curator	CDS	29665	30575	.	-	.	Parent=DDB0229894
+DDB0220052	dictyBase Curator	exon	29549	29558	.	-	.	Parent=DDB0229894
+DDB0220052	dictyBase Curator	CDS	29549	29558	.	-	.	Parent=DDB0229894
+DDB0220052	.	EST_match	29192	29715	.	-	.	ID=DDB0022771;Target=DDB0022771 1 418;Gap=M368 I105 M50 
+DDB0220052	.	EST_match	29250	30006	.	-	.	ID=DDB0163757;Target=DDB0163757 1 720;Gap=M298 I120 M338 
+DDB0220052	.	EST_match	29341	29916	.	-	.	ID=DDB0163194;Target=DDB0163194 1 476;Gap=M214 I112 M249 
+DDB0220052	.	EST_match	29341	29829	.	-	.	ID=DDB0163193;Target=DDB0163193 1 389;Gap=M215 I111 M162 
+DDB0220052	.	EST_match	29357	29912	.	-	.	ID=DDB0161384;Target=DDB0161384 1 450;Gap=M201 I108 M246 
+DDB0220052	.	EST_match	29466	29805	.	-	.	ID=DDB0299948;Target=DDB0299948 1 398;Gap=M339 
+DDB0220052	.	EST_match	29479	30246	.	-	.	ID=DDB0161991;Target=DDB0161991 1 719;Gap=M81 I105 M581 
+DDB0220052	.	EST_match	29497	30026	.	-	.	ID=DDB0166539;Target=DDB0166539 1 424;Gap=M63 I105 M361 
+DDB0220052	.	EST_match	29498	30284	.	-	.	ID=DDB0162341;Target=DDB0162341 1 682;Gap=M60 I108 M618 
+DDB0220052	.	EST_match	29665	29941	.	-	.	ID=DDB0157729;Target=DDB0157729 1 356;Gap=M276 
+DDB0220052	.	EST_match	29674	30318	.	+	.	ID=DDB0127594;Target=DDB0127594 1 673;Gap=M644 
+DDB0220052	.	EST_match	29825	30248	.	+	.	ID=DDB0129554;Target=DDB0129554 1 424;Gap=M423 
+DDB0220052	.	EST_match	29870	30275	.	+	.	ID=DDB0131546;Target=DDB0131546 1 409;Gap=M405 
+DDB0220052	.	EST_match	30390	30618	.	-	.	ID=DDB0151263;Target=DDB0151263 1 236;Gap=M228 
+DDB0220052	.	EST_match	30565	30749	.	-	.	ID=DDB0148003;Target=DDB0148003 1 186;Gap=M184 
+DDB0220052	Sequencing Center	contig	33312	35836	.	+	.	ID=DDB0229814;Parent=DDB0220052;Name=DDB0229814;Dbxref=Contig GI Number:90970331,Scaffold GI Number:93569013,Accession Number:AAFI02000260,Scaffold Accession Number:CH709181,SeqID for Genbank:DDB0229814.02,Genome V. 2.0 ID:Contig2546
+DDB0220052	.	gene	33501	33572	.	+	.	ID=DDB_G0294667;Name=tRNA-Thr-AGU-1;description=transfers a threonine residue to a growing polypeptide chain during protein synthesis%0A
+DDB0220052	tRNAscan-SE analysis	tRNA	33501	33572	.	+	.	ID=DDB0234737;Parent=DDB_G0294667;Name=DDB0234737;Note=Primary feature
+DDB0220052	tRNAscan-SE analysis	exon	33501	33572	.	+	.	Parent=DDB0234737
+DDB0220052	.	gene	33977	34048	.	-	.	ID=DDB_G0294669;Name=tRNA-Thr-AGU-2;description=transfers a threonine residue to a growing polypeptide chain during protein synthesis%0A
+DDB0220052	tRNAscan-SE analysis	tRNA	33977	34048	.	-	.	ID=DDB0234738;Parent=DDB_G0294669;Name=DDB0234738;Note=Primary feature
+DDB0220052	tRNAscan-SE analysis	exon	33977	34048	.	-	.	Parent=DDB0234738
+DDB0220052	.	gene	34769	35604	.	+	.	ID=DDB_G0294380;Name=DDB_G0294380
+DDB0220052	Sequencing Center	mRNA	34769	35604	.	+	.	ID=DDB0229815;Parent=DDB_G0294380;Name=DDB0229815;description=Contig2546_00001: Obtained from the Dictyostelium Genome Consortium at The Wellcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60294.1,Inparanoid V. 5.1:DDB0229815,Protein Accession Number:EAL60294,Protein GI Number:60462031,Genome V. 2.0 ID:Contig2546_00001
+DDB0220052	Sequencing Center	exon	34769	34819	.	+	.	Parent=DDB0229815
+DDB0220052	Sequencing Center	CDS	34769	34819	.	+	.	Parent=DDB0229815
+DDB0220052	Sequencing Center	exon	34932	35001	.	+	.	Parent=DDB0229815
+DDB0220052	Sequencing Center	CDS	34932	35001	.	+	.	Parent=DDB0229815
+DDB0220052	Sequencing Center	exon	35099	35215	.	+	.	Parent=DDB0229815
+DDB0220052	Sequencing Center	CDS	35099	35215	.	+	.	Parent=DDB0229815
+DDB0220052	Sequencing Center	exon	35330	35604	.	+	.	Parent=DDB0229815
+DDB0220052	Sequencing Center	CDS	35330	35604	.	+	.	Parent=DDB0229815
+DDB0220052	dictyBase Curator	mRNA	34769	35604	.	+	.	ID=DDB0238760;Parent=DDB_G0294380;Name=DDB0238760;description=dictyBase Generated Feature;translation_start=1;Note=Primary feature;Dbxref=Protein Accession Version:EAL60294.1,Protein Accession Number:EAL60294.1,Protein GI Number:60462031,UniProt:Q54AK6,EC Number:6.3.2.19
+DDB0220052	dictyBase Curator	exon	34769	34819	.	+	.	Parent=DDB0238760
+DDB0220052	dictyBase Curator	CDS	34769	34819	.	+	.	Parent=DDB0238760
+DDB0220052	dictyBase Curator	exon	34932	35001	.	+	.	Parent=DDB0238760
+DDB0220052	dictyBase Curator	CDS	34932	35001	.	+	.	Parent=DDB0238760
+DDB0220052	dictyBase Curator	exon	35099	35215	.	+	.	Parent=DDB0238760
+DDB0220052	dictyBase Curator	CDS	35099	35215	.	+	.	Parent=DDB0238760
+DDB0220052	dictyBase Curator	exon	35330	35604	.	+	.	Parent=DDB0238760
+DDB0220052	dictyBase Curator	CDS	35330	35604	.	+	.	Parent=DDB0238760
+DDB0220052	.	EST_match	34661	35001	.	+	.	ID=DDB0150840;Target=DDB0150840 1 240;Gap=M158 I113 M69 
+DDB0220052	.	EST_match	34661	35533	.	+	.	ID=DDB0303558;Target=DDB0303558 1 552;Gap=M158 I113 M69 I98 M116 I115 M203 
+DDB0220052	.	EST_match	34680	35128	.	+	.	ID=DDB0150544;Target=DDB0150544 1 240;Gap=M139 I113 M69 I98 M29 
+DDB0220052	.	EST_match	34680	35616	.	+	.	ID=DDB0298581;Target=DDB0298581 1 631;Gap=M139 I113 M69 I98 M116 I115 M286 
+DDB0220052	.	EST_match	34739	35629	.	+	.	ID=DDB0165968;Target=DDB0165968 1 572;Gap=M80 I113 M69 I98 M116 I115 M299 
+DDB0220052	.	EST_match	34772	35199	.	+	.	ID=DDB0070765;Target=DDB0070765 1 219;Gap=M47 I114 M68 I98 M100 
+DDB0220052	.	EST_match	35435	35794	.	+	.	ID=DDB0157278;Target=DDB0157278 1 435;Gap=M359 
+DDB0220052	Sequencing Center	contig	35937	75732	.	+	.	ID=DDB0229826;Parent=DDB0220052;Name=DDB0229826;Dbxref=Contig GI Number:90970330,Scaffold GI Number:93569012,Accession Number:AAFI02000261,Scaffold Accession Number:CH709182,SeqID for Genbank:DDB0229826.02,Genome V. 2.0 ID:BF4V2_0C0001
+DDB0220052	.	gene	36063	36170	.	+	.	ID=DDB_G0294382;Name=DDB_G0294382
+DDB0220052	Sequencing Center	mRNA	36063	36170	.	+	.	ID=DDB0220067;Parent=DDB_G0294382;Name=DDB0220067;description=BFNV1_0C0012_07693: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60284.1,Inparanoid V. 5.1:DDB0220067,Protein Accession Number:EAL60284,Protein GI Number:60462020,Genome V. 2.0 ID:BFNV1_0C0012_07693
+DDB0220052	Sequencing Center	exon	36063	36170	.	+	.	Parent=DDB0220067
+DDB0220052	Sequencing Center	CDS	36063	36170	.	+	.	Parent=DDB0220067
+DDB0220052	dictyBase Curator	mRNA	36063	36170	.	+	.	ID=DDB0302623;Parent=DDB_G0294382;Name=DDB0302623;description=dictyBase Generated Feature;translation_start=1;Note=Primary feature;Dbxref=Protein Accession Number:EAL60284.1,Protein GI Number:60462020,UniProt:Q54AK5
+DDB0220052	dictyBase Curator	exon	36063	36170	.	+	.	Parent=DDB0302623
+DDB0220052	dictyBase Curator	CDS	36063	36170	.	+	.	Parent=DDB0302623
+DDB0220052	.	gene	36573	37899	.	+	.	ID=DDB_G0294384;Name=DDB_G0294384_TE;description=ORF1 encoding a protein of unknown function of the putative DNA transposon DDT-A%3B refer to AF298201 for full-length consensus element
+DDB0220052	Sequencing Center	mRNA	36573	37899	.	+	.	ID=DDB0220068;Parent=DDB_G0294384;Name=DDB0220068;description=BFNV1_0C0012_07694: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=2;Dbxref=Protein Accession Version:EAL60285.1,Inparanoid V. 5.1:DDB0220068,Protein Accession Number:EAL60285.1,Protein GI Number:60462021,UniProt:Q54AK4,Genome V. 2.0 ID:BFNV1_0C0012_07694;qualifier=Partial%2C 5%27 missing
+DDB0220052	Sequencing Center	exon	36573	37060	.	+	.	Parent=DDB0220068
+DDB0220052	Sequencing Center	CDS	36573	37060	.	+	.	Parent=DDB0220068
+DDB0220052	Sequencing Center	exon	37129	37420	.	+	.	Parent=DDB0220068
+DDB0220052	Sequencing Center	CDS	37129	37420	.	+	.	Parent=DDB0220068
+DDB0220052	Sequencing Center	exon	37653	37899	.	+	.	Parent=DDB0220068
+DDB0220052	Sequencing Center	CDS	37653	37899	.	+	.	Parent=DDB0220068
+DDB0220052	.	gene	39409	42518	.	+	.	ID=DDB_G0294388;Name=DDB_G0294388
+DDB0220052	Sequencing Center	mRNA	39409	42518	.	+	.	ID=DDB0220070;Parent=DDB_G0294388;Name=DDB0220070;description=BFNV1_0C0012_07696: Obtained from Geneid output run by Dictyostelium Genome Consortium at The Welcome Trust Sanger Institute;translation_start=1;Dbxref=Protein Accession Version:EAL60287.1,Inparanoid V. 5.1:DDB0220070,Protein Accession Number:EAL60287.1,Protein GI Number:60462023,Genome V. 2.0 ID:BFNV1_0C0012_07696
+DDB0220052	Sequencing Center	exon	39409	39434	.	+	.	Parent=DDB0220070
+DDB0220052	Sequencing Center	CDS	39409	39434	.	+	.	Parent=DDB0220070
+DDB0220052	Sequencing Center	exon	39530	42518	.	+	.	Parent=DDB0220070
+DDB0220052	Sequencing Center	CDS	39530	42518	.	+	.	Parent=DDB0220070
+DDB0220052	dictyBase Curator	mRNA	39409	42518	.	+	.	ID=DDB0347241;Parent=DDB_G0294388;Name=DDB0347241;translation_start=1;Note=Primary feature;Dbxref=UniProt:Q54AK2
+DDB0220052	dictyBase Curator	exon	39409	39434	.	+	.	Parent=DDB0347241
+DDB0220052	dictyBase Curator	CDS	39409	39434	.	+	.	Parent=DDB0347241
+DDB0220052	dictyBase Curator	exon	39530	42518	.	+	.	Parent=DDB0347241
+DDB0220052	dictyBase Curator	CDS	39530	42518	.	+	.	Parent=DDB0347241
+DDB0220052	Sequencing Center	gap	1	100	.	+	.	ID=DDB0232434;Parent=DDB0220052;Name=DDB0232434;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	174494	174593	.	+	.	ID=DDB0232435;Parent=DDB0220052;Name=DDB0232435;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	186470	186569	.	+	.	ID=DDB0232436;Parent=DDB0220052;Name=DDB0232436;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1792929	1793028	.	+	.	ID=DDB0232437;Parent=DDB0220052;Name=DDB0232437;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2402820	2402919	.	+	.	ID=DDB0232438;Parent=DDB0220052;Name=DDB0232438;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	4923497	4923596	.	+	.	ID=DDB0232439;Parent=DDB0220052;Name=DDB0232439;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1	100	.	+	.	ID=DDB0232445;Parent=DDB0220052;Name=DDB0232445;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	924284	924383	.	+	.	ID=DDB0232446;Parent=DDB0220052;Name=DDB0232446;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1256624	1256723	.	+	.	ID=DDB0232447;Parent=DDB0220052;Name=DDB0232447;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1383101	1383200	.	+	.	ID=DDB0232644;Parent=DDB0220052;Name=DDB0232644;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1384702	1384801	.	+	.	ID=DDB0232645;Parent=DDB0220052;Name=DDB0232645;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1590588	1590687	.	+	.	ID=DDB0232646;Parent=DDB0220052;Name=DDB0232646;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	1623807	1623906	.	+	.	ID=DDB0232647;Parent=DDB0220052;Name=DDB0232647;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1627737	1627836	.	+	.	ID=DDB0232648;Parent=DDB0220052;Name=DDB0232648;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1647549	1647648	.	+	.	ID=DDB0232649;Parent=DDB0220052;Name=DDB0232649;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1666224	1666323	.	+	.	ID=DDB0232650;Parent=DDB0220052;Name=DDB0232650;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1683843	1683942	.	+	.	ID=DDB0232651;Parent=DDB0220052;Name=DDB0232651;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1737638	1737737	.	+	.	ID=DDB0232652;Parent=DDB0220052;Name=DDB0232652;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1742914	1743013	.	+	.	ID=DDB0232653;Parent=DDB0220052;Name=DDB0232653;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1809903	1810002	.	+	.	ID=DDB0232654;Parent=DDB0220052;Name=DDB0232654;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1901191	1901290	.	+	.	ID=DDB0232655;Parent=DDB0220052;Name=DDB0232655;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1902703	1902802	.	+	.	ID=DDB0232656;Parent=DDB0220052;Name=DDB0232656;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1922406	1922505	.	+	.	ID=DDB0232657;Parent=DDB0220052;Name=DDB0232657;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1926960	1927059	.	+	.	ID=DDB0232658;Parent=DDB0220052;Name=DDB0232658;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1937610	1937709	.	+	.	ID=DDB0232659;Parent=DDB0220052;Name=DDB0232659;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2076934	2077033	.	+	.	ID=DDB0232660;Parent=DDB0220052;Name=DDB0232660;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2172502	2172601	.	+	.	ID=DDB0232661;Parent=DDB0220052;Name=DDB0232661;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2190415	2190514	.	+	.	ID=DDB0232662;Parent=DDB0220052;Name=DDB0232662;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2197486	2197585	.	+	.	ID=DDB0232663;Parent=DDB0220052;Name=DDB0232663;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2322082	2322181	.	+	.	ID=DDB0232664;Parent=DDB0220052;Name=DDB0232664;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2443040	2443139	.	+	.	ID=DDB0232665;Parent=DDB0220052;Name=DDB0232665;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2535720	2535819	.	+	.	ID=DDB0232666;Parent=DDB0220052;Name=DDB0232666;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2561279	2561378	.	+	.	ID=DDB0232667;Parent=DDB0220052;Name=DDB0232667;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2578278	2578377	.	+	.	ID=DDB0232668;Parent=DDB0220052;Name=DDB0232668;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2579447	2579546	.	+	.	ID=DDB0232669;Parent=DDB0220052;Name=DDB0232669;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2595780	2595879	.	+	.	ID=DDB0232670;Parent=DDB0220052;Name=DDB0232670;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2619712	2619811	.	+	.	ID=DDB0232671;Parent=DDB0220052;Name=DDB0232671;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2629483	2629582	.	+	.	ID=DDB0232672;Parent=DDB0220052;Name=DDB0232672;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2644145	2644244	.	+	.	ID=DDB0232673;Parent=DDB0220052;Name=DDB0232673;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2730067	2730166	.	+	.	ID=DDB0232674;Parent=DDB0220052;Name=DDB0232674;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2799899	2799998	.	+	.	ID=DDB0232675;Parent=DDB0220052;Name=DDB0232675;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2919127	2919226	.	+	.	ID=DDB0232676;Parent=DDB0220052;Name=DDB0232676;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2940979	2941078	.	+	.	ID=DDB0232677;Parent=DDB0220052;Name=DDB0232677;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2955804	2955903	.	+	.	ID=DDB0232678;Parent=DDB0220052;Name=DDB0232678;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2962177	2962276	.	+	.	ID=DDB0232679;Parent=DDB0220052;Name=DDB0232679;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2974234	2974333	.	+	.	ID=DDB0232680;Parent=DDB0220052;Name=DDB0232680;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3001431	3001530	.	+	.	ID=DDB0232681;Parent=DDB0220052;Name=DDB0232681;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3058930	3059029	.	+	.	ID=DDB0232682;Parent=DDB0220052;Name=DDB0232682;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3273850	3273949	.	+	.	ID=DDB0232683;Parent=DDB0220052;Name=DDB0232683;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3513848	3513947	.	+	.	ID=DDB0232684;Parent=DDB0220052;Name=DDB0232684;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3539675	3539774	.	+	.	ID=DDB0232685;Parent=DDB0220052;Name=DDB0232685;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3610672	3610771	.	+	.	ID=DDB0232686;Parent=DDB0220052;Name=DDB0232686;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3654897	3654996	.	+	.	ID=DDB0232687;Parent=DDB0220052;Name=DDB0232687;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3694756	3694855	.	+	.	ID=DDB0232688;Parent=DDB0220052;Name=DDB0232688;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3701849	3701948	.	+	.	ID=DDB0232689;Parent=DDB0220052;Name=DDB0232689;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3714854	3714953	.	+	.	ID=DDB0232690;Parent=DDB0220052;Name=DDB0232690;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3716194	3716293	.	+	.	ID=DDB0232691;Parent=DDB0220052;Name=DDB0232691;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3717247	3717346	.	+	.	ID=DDB0232692;Parent=DDB0220052;Name=DDB0232692;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3756811	3756910	.	+	.	ID=DDB0232693;Parent=DDB0220052;Name=DDB0232693;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3758080	3758179	.	+	.	ID=DDB0232694;Parent=DDB0220052;Name=DDB0232694;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3763599	3763698	.	+	.	ID=DDB0232695;Parent=DDB0220052;Name=DDB0232695;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3846954	3847053	.	+	.	ID=DDB0232696;Parent=DDB0220052;Name=DDB0232696;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	4006063	4006162	.	+	.	ID=DDB0232697;Parent=DDB0220052;Name=DDB0232697;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	4137043	4137142	.	+	.	ID=DDB0232698;Parent=DDB0220052;Name=DDB0232698;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	4414634	4414733	.	+	.	ID=DDB0232699;Parent=DDB0220052;Name=DDB0232699;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	4416820	4416919	.	+	.	ID=DDB0232700;Parent=DDB0220052;Name=DDB0232700;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	4434907	4435006	.	+	.	ID=DDB0232701;Parent=DDB0220052;Name=DDB0232701;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	4486667	4486766	.	+	.	ID=DDB0232702;Parent=DDB0220052;Name=DDB0232702;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	4491236	4491335	.	+	.	ID=DDB0232703;Parent=DDB0220052;Name=DDB0232703;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	4562919	4563018	.	+	.	ID=DDB0232704;Parent=DDB0220052;Name=DDB0232704;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	4590602	4590701	.	+	.	ID=DDB0232705;Parent=DDB0220052;Name=DDB0232705;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	4727155	4727254	.	+	.	ID=DDB0232706;Parent=DDB0220052;Name=DDB0232706;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	4798580	4798679	.	+	.	ID=DDB0232707;Parent=DDB0220052;Name=DDB0232707;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	4800478	4800577	.	+	.	ID=DDB0232708;Parent=DDB0220052;Name=DDB0232708;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	4946790	4946889	.	+	.	ID=DDB0232709;Parent=DDB0220052;Name=DDB0232709;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	1	100	.	+	.	ID=DDB0232787;Parent=DDB0220052;Name=DDB0232787;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	12142	12241	.	+	.	ID=DDB0232788;Parent=DDB0220052;Name=DDB0232788;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	611279	611378	.	+	.	ID=DDB0232789;Parent=DDB0220052;Name=DDB0232789;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	618332	618431	.	+	.	ID=DDB0232790;Parent=DDB0220052;Name=DDB0232790;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	627337	627436	.	+	.	ID=DDB0232791;Parent=DDB0220052;Name=DDB0232791;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	633315	633414	.	+	.	ID=DDB0232792;Parent=DDB0220052;Name=DDB0232792;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	666800	666899	.	+	.	ID=DDB0232793;Parent=DDB0220052;Name=DDB0232793;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	733634	733733	.	+	.	ID=DDB0232794;Parent=DDB0220052;Name=DDB0232794;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	735011	735110	.	+	.	ID=DDB0232795;Parent=DDB0220052;Name=DDB0232795;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	746165	746264	.	+	.	ID=DDB0232796;Parent=DDB0220052;Name=DDB0232796;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	841477	841576	.	+	.	ID=DDB0232797;Parent=DDB0220052;Name=DDB0232797;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	968759	968858	.	+	.	ID=DDB0232798;Parent=DDB0220052;Name=DDB0232798;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1299301	1299400	.	+	.	ID=DDB0232799;Parent=DDB0220052;Name=DDB0232799;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	1378289	1378388	.	+	.	ID=DDB0232800;Parent=DDB0220052;Name=DDB0232800;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	1530930	1531029	.	+	.	ID=DDB0232801;Parent=DDB0220052;Name=DDB0232801;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	1760144	1760243	.	+	.	ID=DDB0232802;Parent=DDB0220052;Name=DDB0232802;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	1768391	1768490	.	+	.	ID=DDB0232803;Parent=DDB0220052;Name=DDB0232803;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1769422	1769521	.	+	.	ID=DDB0232804;Parent=DDB0220052;Name=DDB0232804;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1777291	1777390	.	+	.	ID=DDB0232805;Parent=DDB0220052;Name=DDB0232805;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2002172	2002271	.	+	.	ID=DDB0232806;Parent=DDB0220052;Name=DDB0232806;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2008505	2008604	.	+	.	ID=DDB0232807;Parent=DDB0220052;Name=DDB0232807;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2093761	2093860	.	+	.	ID=DDB0232808;Parent=DDB0220052;Name=DDB0232808;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2302703	2302802	.	+	.	ID=DDB0232809;Parent=DDB0220052;Name=DDB0232809;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2320575	2320674	.	+	.	ID=DDB0232810;Parent=DDB0220052;Name=DDB0232810;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2594700	2594799	.	+	.	ID=DDB0232811;Parent=DDB0220052;Name=DDB0232811;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2731968	2732067	.	+	.	ID=DDB0232812;Parent=DDB0220052;Name=DDB0232812;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2767404	2767503	.	+	.	ID=DDB0232813;Parent=DDB0220052;Name=DDB0232813;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2773435	2773534	.	+	.	ID=DDB0232814;Parent=DDB0220052;Name=DDB0232814;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2790899	2790998	.	+	.	ID=DDB0232815;Parent=DDB0220052;Name=DDB0232815;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2827581	2827680	.	+	.	ID=DDB0232816;Parent=DDB0220052;Name=DDB0232816;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2839152	2839251	.	+	.	ID=DDB0232817;Parent=DDB0220052;Name=DDB0232817;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2842293	2842392	.	+	.	ID=DDB0232818;Parent=DDB0220052;Name=DDB0232818;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2858956	2859055	.	+	.	ID=DDB0232819;Parent=DDB0220052;Name=DDB0232819;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2871438	2871537	.	+	.	ID=DDB0232820;Parent=DDB0220052;Name=DDB0232820;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2874168	2874267	.	+	.	ID=DDB0232821;Parent=DDB0220052;Name=DDB0232821;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2904130	2904229	.	+	.	ID=DDB0232822;Parent=DDB0220052;Name=DDB0232822;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2926669	2926768	.	+	.	ID=DDB0232823;Parent=DDB0220052;Name=DDB0232823;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2933374	2933473	.	+	.	ID=DDB0232824;Parent=DDB0220052;Name=DDB0232824;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2946749	2946848	.	+	.	ID=DDB0232825;Parent=DDB0220052;Name=DDB0232825;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2948797	2948896	.	+	.	ID=DDB0232826;Parent=DDB0220052;Name=DDB0232826;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2955899	2955998	.	+	.	ID=DDB0232827;Parent=DDB0220052;Name=DDB0232827;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2960784	2960883	.	+	.	ID=DDB0232828;Parent=DDB0220052;Name=DDB0232828;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2986171	2986270	.	+	.	ID=DDB0232829;Parent=DDB0220052;Name=DDB0232829;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3258960	3259059	.	+	.	ID=DDB0232830;Parent=DDB0220052;Name=DDB0232830;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3317658	3317757	.	+	.	ID=DDB0232831;Parent=DDB0220052;Name=DDB0232831;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3364716	3364815	.	+	.	ID=DDB0232832;Parent=DDB0220052;Name=DDB0232832;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3368464	3368563	.	+	.	ID=DDB0232833;Parent=DDB0220052;Name=DDB0232833;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3384037	3384136	.	+	.	ID=DDB0232834;Parent=DDB0220052;Name=DDB0232834;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3431588	3431687	.	+	.	ID=DDB0232835;Parent=DDB0220052;Name=DDB0232835;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3587426	3587525	.	+	.	ID=DDB0232836;Parent=DDB0220052;Name=DDB0232836;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3602280	3602379	.	+	.	ID=DDB0232837;Parent=DDB0220052;Name=DDB0232837;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	1	100	.	+	.	ID=DDB0232888;Parent=DDB0220052;Name=DDB0232888;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	58466	58565	.	+	.	ID=DDB0232889;Parent=DDB0220052;Name=DDB0232889;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	69652	69751	.	+	.	ID=DDB0232890;Parent=DDB0220052;Name=DDB0232890;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	72346	72445	.	+	.	ID=DDB0232891;Parent=DDB0220052;Name=DDB0232891;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	74662	74761	.	+	.	ID=DDB0232892;Parent=DDB0220052;Name=DDB0232892;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	79719	79818	.	+	.	ID=DDB0232893;Parent=DDB0220052;Name=DDB0232893;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	83869	83968	.	+	.	ID=DDB0232894;Parent=DDB0220052;Name=DDB0232894;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	95987	96086	.	+	.	ID=DDB0232895;Parent=DDB0220052;Name=DDB0232895;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	98671	98770	.	+	.	ID=DDB0232896;Parent=DDB0220052;Name=DDB0232896;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	103273	103372	.	+	.	ID=DDB0232897;Parent=DDB0220052;Name=DDB0232897;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	109954	110053	.	+	.	ID=DDB0232898;Parent=DDB0220052;Name=DDB0232898;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	114001	114100	.	+	.	ID=DDB0232899;Parent=DDB0220052;Name=DDB0232899;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	123613	123712	.	+	.	ID=DDB0232900;Parent=DDB0220052;Name=DDB0232900;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	127472	127571	.	+	.	ID=DDB0232901;Parent=DDB0220052;Name=DDB0232901;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	135918	136017	.	+	.	ID=DDB0232902;Parent=DDB0220052;Name=DDB0232902;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	144947	145046	.	+	.	ID=DDB0232903;Parent=DDB0220052;Name=DDB0232903;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	147664	147763	.	+	.	ID=DDB0232904;Parent=DDB0220052;Name=DDB0232904;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	148876	148975	.	+	.	ID=DDB0232905;Parent=DDB0220052;Name=DDB0232905;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	152256	152355	.	+	.	ID=DDB0232906;Parent=DDB0220052;Name=DDB0232906;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	164159	164258	.	+	.	ID=DDB0232907;Parent=DDB0220052;Name=DDB0232907;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	154309	154408	.	+	.	ID=DDB0232908;Parent=DDB0220052;Name=DDB0232908;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	156717	156816	.	+	.	ID=DDB0232909;Parent=DDB0220052;Name=DDB0232909;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	1	100	.	+	.	ID=DDB0232910;Parent=DDB0220052;Name=DDB0232910;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	4006	4105	.	+	.	ID=DDB0232911;Parent=DDB0220052;Name=DDB0232911;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	9206	9305	.	+	.	ID=DDB0232912;Parent=DDB0220052;Name=DDB0232912;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	1	100	.	+	.	ID=DDB0232913;Parent=DDB0220052;Name=DDB0232913;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	2444	2543	.	+	.	ID=DDB0232914;Parent=DDB0220052;Name=DDB0232914;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	7039	7138	.	+	.	ID=DDB0232915;Parent=DDB0220052;Name=DDB0232915;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	12318	12417	.	+	.	ID=DDB0232916;Parent=DDB0220052;Name=DDB0232916;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	18115	18214	.	+	.	ID=DDB0232917;Parent=DDB0220052;Name=DDB0232917;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	20701	20800	.	+	.	ID=DDB0232918;Parent=DDB0220052;Name=DDB0232918;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	22950	23049	.	+	.	ID=DDB0232919;Parent=DDB0220052;Name=DDB0232919;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	25289	25388	.	+	.	ID=DDB0232920;Parent=DDB0220052;Name=DDB0232920;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	29044	29143	.	+	.	ID=DDB0232921;Parent=DDB0220052;Name=DDB0232921;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	33212	33311	.	+	.	ID=DDB0232922;Parent=DDB0220052;Name=DDB0232922;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	35837	35936	.	+	.	ID=DDB0232923;Parent=DDB0220052;Name=DDB0232923;description=Gap generated from gap finding genome version 2.5
+DDB0220052	Sequencing Center	gap	82335	82434	.	+	.	ID=DDB0237478;Parent=DDB0220052;Name=DDB0237478;description=Added as padding for addition of contig: DDB0237477;gap_type=sequence
+DDB0220052	Sequencing Center	gap	13570	13670	.	+	.	ID=DDB0304840;Parent=DDB0220052;Name=DDB0304840;description=Added as padding for addition of contig: DDB0302697;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2263032	2263131	.	+	.	ID=DDB0232448;Parent=DDB0220052;Name=DDB0232448;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2888075	2888174	.	+	.	ID=DDB0232449;Parent=DDB0220052;Name=DDB0232449;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3143612	3143711	.	+	.	ID=DDB0232450;Parent=DDB0220052;Name=DDB0232450;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3768655	3768754	.	+	.	ID=DDB0232451;Parent=DDB0220052;Name=DDB0232451;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	4924706	4924805	.	+	.	ID=DDB0232452;Parent=DDB0220052;Name=DDB0232452;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	6219939	6220038	.	+	.	ID=DDB0232453;Parent=DDB0220052;Name=DDB0232453;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	6768699	6768798	.	+	.	ID=DDB0232454;Parent=DDB0220052;Name=DDB0232454;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	7044285	7044384	.	+	.	ID=DDB0232455;Parent=DDB0220052;Name=DDB0232455;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	7073556	7073655	.	+	.	ID=DDB0232456;Parent=DDB0220052;Name=DDB0232456;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	7076120	7076219	.	+	.	ID=DDB0232457;Parent=DDB0220052;Name=DDB0232457;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	7151077	7151176	.	+	.	ID=DDB0232458;Parent=DDB0220052;Name=DDB0232458;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	7952030	7952129	.	+	.	ID=DDB0232459;Parent=DDB0220052;Name=DDB0232459;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	8312445	8312544	.	+	.	ID=DDB0232460;Parent=DDB0220052;Name=DDB0232460;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	8370654	8370753	.	+	.	ID=DDB0232461;Parent=DDB0220052;Name=DDB0232461;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	8484098	8484197	.	+	.	ID=DDB0232462;Parent=DDB0220052;Name=DDB0232462;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1	100	.	+	.	ID=DDB0232480;Parent=DDB0220052;Name=DDB0232480;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1104409	1104508	.	+	.	ID=DDB0232481;Parent=DDB0220052;Name=DDB0232481;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1421822	1421921	.	+	.	ID=DDB0232482;Parent=DDB0220052;Name=DDB0232482;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1445611	1445710	.	+	.	ID=DDB0232483;Parent=DDB0220052;Name=DDB0232483;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1581346	1581445	.	+	.	ID=DDB0232484;Parent=DDB0220052;Name=DDB0232484;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1705907	1706006	.	+	.	ID=DDB0232485;Parent=DDB0220052;Name=DDB0232485;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1714976	1715075	.	+	.	ID=DDB0232486;Parent=DDB0220052;Name=DDB0232486;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1736771	1736870	.	+	.	ID=DDB0232487;Parent=DDB0220052;Name=DDB0232487;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2019161	2019260	.	+	.	ID=DDB0232488;Parent=DDB0220052;Name=DDB0232488;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2312748	2312847	.	+	.	ID=DDB0232489;Parent=DDB0220052;Name=DDB0232489;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2551184	2551283	.	+	.	ID=DDB0232490;Parent=DDB0220052;Name=DDB0232490;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2645864	2645963	.	+	.	ID=DDB0232491;Parent=DDB0220052;Name=DDB0232491;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	2682767	2682866	.	+	.	ID=DDB0232492;Parent=DDB0220052;Name=DDB0232492;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3305798	3305897	.	+	.	ID=DDB0232493;Parent=DDB0220052;Name=DDB0232493;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3480836	3480935	.	+	.	ID=DDB0232494;Parent=DDB0220052;Name=DDB0232494;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3699640	3699739	.	+	.	ID=DDB0232495;Parent=DDB0220052;Name=DDB0232495;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3782956	3783055	.	+	.	ID=DDB0232496;Parent=DDB0220052;Name=DDB0232496;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3909226	3909325	.	+	.	ID=DDB0232497;Parent=DDB0220052;Name=DDB0232497;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	4417159	4417258	.	+	.	ID=DDB0232498;Parent=DDB0220052;Name=DDB0232498;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	4657191	4657290	.	+	.	ID=DDB0232499;Parent=DDB0220052;Name=DDB0232499;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	4990422	4990521	.	+	.	ID=DDB0232500;Parent=DDB0220052;Name=DDB0232500;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	5166442	5166541	.	+	.	ID=DDB0232501;Parent=DDB0220052;Name=DDB0232501;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	5365701	5365800	.	+	.	ID=DDB0232502;Parent=DDB0220052;Name=DDB0232502;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	5495584	5495683	.	+	.	ID=DDB0232503;Parent=DDB0220052;Name=DDB0232503;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	5602331	5602430	.	+	.	ID=DDB0232504;Parent=DDB0220052;Name=DDB0232504;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	6357200	6357299	.	+	.	ID=DDB0232505;Parent=DDB0220052;Name=DDB0232505;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1	100	.	+	.	ID=DDB0232531;Parent=DDB0220052;Name=DDB0232531;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	5676	5775	.	+	.	ID=DDB0232532;Parent=DDB0220052;Name=DDB0232532;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	201973	202072	.	+	.	ID=DDB0232533;Parent=DDB0220052;Name=DDB0232533;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	295036	295135	.	+	.	ID=DDB0232534;Parent=DDB0220052;Name=DDB0232534;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	423379	423478	.	+	.	ID=DDB0232535;Parent=DDB0220052;Name=DDB0232535;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	537868	537967	.	+	.	ID=DDB0232536;Parent=DDB0220052;Name=DDB0232536;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	546660	546759	.	+	.	ID=DDB0232537;Parent=DDB0220052;Name=DDB0232537;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	603965	604064	.	+	.	ID=DDB0232538;Parent=DDB0220052;Name=DDB0232538;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	866692	866791	.	+	.	ID=DDB0232539;Parent=DDB0220052;Name=DDB0232539;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1058500	1058599	.	+	.	ID=DDB0232540;Parent=DDB0220052;Name=DDB0232540;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1257479	1257578	.	+	.	ID=DDB0232541;Parent=DDB0220052;Name=DDB0232541;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1426152	1426251	.	+	.	ID=DDB0232542;Parent=DDB0220052;Name=DDB0232542;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1456604	1456703	.	+	.	ID=DDB0232543;Parent=DDB0220052;Name=DDB0232543;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1462939	1463038	.	+	.	ID=DDB0232544;Parent=DDB0220052;Name=DDB0232544;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1464373	1464472	.	+	.	ID=DDB0232545;Parent=DDB0220052;Name=DDB0232545;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	1465846	1465945	.	+	.	ID=DDB0232546;Parent=DDB0220052;Name=DDB0232546;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1664405	1664504	.	+	.	ID=DDB0232547;Parent=DDB0220052;Name=DDB0232547;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2001302	2001401	.	+	.	ID=DDB0232548;Parent=DDB0220052;Name=DDB0232548;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2007766	2007865	.	+	.	ID=DDB0232549;Parent=DDB0220052;Name=DDB0232549;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2178481	2178580	.	+	.	ID=DDB0232550;Parent=DDB0220052;Name=DDB0232550;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2195412	2195511	.	+	.	ID=DDB0232551;Parent=DDB0220052;Name=DDB0232551;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2200851	2200950	.	+	.	ID=DDB0232552;Parent=DDB0220052;Name=DDB0232552;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2221003	2221102	.	+	.	ID=DDB0232553;Parent=DDB0220052;Name=DDB0232553;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2391975	2392074	.	+	.	ID=DDB0232554;Parent=DDB0220052;Name=DDB0232554;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2532537	2532636	.	+	.	ID=DDB0232555;Parent=DDB0220052;Name=DDB0232555;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2562513	2562612	.	+	.	ID=DDB0232556;Parent=DDB0220052;Name=DDB0232556;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2847946	2848045	.	+	.	ID=DDB0232557;Parent=DDB0220052;Name=DDB0232557;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	2919193	2919292	.	+	.	ID=DDB0232558;Parent=DDB0220052;Name=DDB0232558;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2976388	2976487	.	+	.	ID=DDB0232559;Parent=DDB0220052;Name=DDB0232559;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3019560	3019659	.	+	.	ID=DDB0232560;Parent=DDB0220052;Name=DDB0232560;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3075849	3075948	.	+	.	ID=DDB0232561;Parent=DDB0220052;Name=DDB0232561;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3090637	3090736	.	+	.	ID=DDB0232562;Parent=DDB0220052;Name=DDB0232562;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3660709	3660808	.	+	.	ID=DDB0232563;Parent=DDB0220052;Name=DDB0232563;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3711254	3711353	.	+	.	ID=DDB0232564;Parent=DDB0220052;Name=DDB0232564;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3715435	3715534	.	+	.	ID=DDB0232565;Parent=DDB0220052;Name=DDB0232565;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	3917034	3917133	.	+	.	ID=DDB0232566;Parent=DDB0220052;Name=DDB0232566;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	3936630	3936729	.	+	.	ID=DDB0232567;Parent=DDB0220052;Name=DDB0232567;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	3944336	3944435	.	+	.	ID=DDB0232568;Parent=DDB0220052;Name=DDB0232568;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	4539635	4539734	.	+	.	ID=DDB0232569;Parent=DDB0220052;Name=DDB0232569;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	4566480	4566579	.	+	.	ID=DDB0232570;Parent=DDB0220052;Name=DDB0232570;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	4597723	4597822	.	+	.	ID=DDB0232571;Parent=DDB0220052;Name=DDB0232571;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	4639600	4639699	.	+	.	ID=DDB0232572;Parent=DDB0220052;Name=DDB0232572;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	4952301	4952400	.	+	.	ID=DDB0232573;Parent=DDB0220052;Name=DDB0232573;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	5000036	5000135	.	+	.	ID=DDB0232574;Parent=DDB0220052;Name=DDB0232574;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	5053210	5053309	.	+	.	ID=DDB0232575;Parent=DDB0220052;Name=DDB0232575;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	5166320	5166419	.	+	.	ID=DDB0232576;Parent=DDB0220052;Name=DDB0232576;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	5181760	5181859	.	+	.	ID=DDB0232577;Parent=DDB0220052;Name=DDB0232577;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	5186835	5186934	.	+	.	ID=DDB0232578;Parent=DDB0220052;Name=DDB0232578;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	5213075	5213174	.	+	.	ID=DDB0232579;Parent=DDB0220052;Name=DDB0232579;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	5346955	5347054	.	+	.	ID=DDB0232580;Parent=DDB0220052;Name=DDB0232580;description=Gap generated from gap finding genome version 2.5;gap_type=clone
+DDB0220052	Sequencing Center	gap	5351764	5351863	.	+	.	ID=DDB0232581;Parent=DDB0220052;Name=DDB0232581;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1	100	.	+	.	ID=DDB0232633;Parent=DDB0220052;Name=DDB0232633;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	94444	94543	.	+	.	ID=DDB0232634;Parent=DDB0220052;Name=DDB0232634;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	284012	284111	.	+	.	ID=DDB0232635;Parent=DDB0220052;Name=DDB0232635;description=Gap generated from gap finding genome version 2.5;gap_type=repeat
+DDB0220052	Sequencing Center	gap	327383	327482	.	+	.	ID=DDB0232636;Parent=DDB0220052;Name=DDB0232636;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	429537	429636	.	+	.	ID=DDB0232637;Parent=DDB0220052;Name=DDB0232637;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	560821	560920	.	+	.	ID=DDB0232638;Parent=DDB0220052;Name=DDB0232638;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	845392	845491	.	+	.	ID=DDB0232639;Parent=DDB0220052;Name=DDB0232639;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	885316	885415	.	+	.	ID=DDB0232640;Parent=DDB0220052;Name=DDB0232640;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	905280	905379	.	+	.	ID=DDB0232641;Parent=DDB0220052;Name=DDB0232641;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1040384	1040483	.	+	.	ID=DDB0232642;Parent=DDB0220052;Name=DDB0232642;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	1041185	1041284	.	+	.	ID=DDB0232643;Parent=DDB0220052;Name=DDB0232643;description=Gap generated from gap finding genome version 2.5;gap_type=fragment
+DDB0220052	Sequencing Center	gap	2817	2916	.	+	.	ID=DDB0237476;Parent=DDB0220052;Name=DDB0237476;description=Added as padding for addition of contig: DDB0237475;gap_type=sequence
+##FASTA
+>DDB0220052 [organism=Dictyostelium discoideum] [strain=AX4]
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNTTATAATAATAATTTAAAAA
+AAATTTTTAAAAAAAAAAATAGTCTACAAAAAAAAAAGAATTAATTAAAAAGTAAAAGTA
+TTTGAAATCAGAAATTTTTTTATTTAATTGTGAAAATTCTAAGTGTATTAATGACTTTAA
+CAAGGGTCATACAACATTTATAATTGACTAATTTGAAAAGCAGAACTTTATTTCCATTAT
+AATTTGTACCAAAAGCATACTTTAGAAGGGGCAACCTAAAATATAATTATTGTTTTTTAA
+ATTATATTAATCTCTTTATTTTATATTATTTTTTTTTTTTAAAAAAAAAATTATATTGAC
+TTACCAGTAATTATTTAAGTGAAATATCAATTTGATTGAAAAGAAGTGATTGTTGGTATA
+AAGGTAACCTAAAATTTAATTATTGTTTTCAAATTAGTCTATTTTATTTTATTATTATTT
+TTTATTTTATTTTTTTAATTTTTTTTTTTTTAAAAAATTATATTAACTTACCAGTAATTA
+TTTAATTGTAGTATCAATTTGTTTTAAAAGAACTGGCGGTTGGTTTTGATAGCATTGGTA
+TTATTGATGAAGTTGAAGAAATCTAAAATAATATTTTTTTGTTTATTTATATTAATCTTT
+TTATTTTTTTATTTTTTTTATTTTTTTTAATTTTTTTTTAATTTTAATTATCTTACCTTA
+CCAGTTTTGATTTAGTGGAGTAATGGGCGATCTAACAACTTCAATGGATCACCAAGTAAT
+GTTGCATCAGGTAGCAACAGTACCAAGTCTGTTTCCAAGTTACGACTATGTTCTTACAAC
+CGATGCCTCGGAATCAGGTGCAGGTGCCACACTCAAGAAAGGAAACAAGGTAATCAAAAC
+TTGGTCATTCCAATGGTCAACAACTCAATCAAATATGTAGTCAAATCGTCGAGAAATGCT
+CGCGCTGCTGATGGCCTATCAAGCGCTATGTCGGAAACTGAACAACTGCAAGCTGAAGAT
+TCAAACCGACAACACTACCACTCTCTCTTACATCAATCGCCAGGGTGGTCAAATACAAGA
+TCTCTCAGTTCTGTTCGAACAACTTTGGAAACAATGCCTCAAGAAGAAAGTGAACTTGAT
+TGGAGAGCATATTCCAGGATTCTTCAATGTAAAAGCCGACCACCTCAGCCGTCTTTCAGA
+GATGAATCACAAATCATCGTCCAGAGTAATCAAGAGTTACAACTGGCAACTGAAGAAGGA
+AGTGTTCAATCGCATCCAACTTCAATTCGGTCAAATACAGATGGATCTGTTCGCATCTCA
+CCTCAACCATCAAACGAACAACTACTCAACAATCAGAATGAATGCACTCCACCTCGATTG
+GAGTCAATGGAAGCAATGTCTGGCCTTTCCACCTCCCATTCTTTTGCCTTATATCCTGGA
+GAAGATGAACTCATCCAGTTCGAAGAAGGTTTCTATAATACTGATCTTCCCAATCTGGAG
+ATCAGCAACTTGGTATCCGATGATTCAAGCACAAGTTCCTCGTCGTCATCGTCACATGTT
+TGCTCAAGTACTGGGAACATTCCAAGAAGTATTGACCAAACAATCAGTAGAGTCGATACC
+AATCCAGATCCAACAACGTTGGAAACTGGGGATTATTCAACTTTCCAATCTCATGTAATG
+TCCTTCGCTCGTACAACAAATACAAAAACAGCTGAGCTGTTAATGAAGTCTTGGGAACCT
+TCAACTCTCAAAGTATATAGCTCCAGTTATACAAGATTCCGCAATTTCTGTACTTTGAAC
+TCTTTGAATCCAGCAAACATTACCTTAGTTGTTTTCATGGATTATCTTACACATCTGTTC
+AAACACAAACCTCCGTTAGCCTTCTCAACAATTAACGGTCATCGCTCTATGTTGAATCAG
+TTGTTACTCCTTAGGAATCAAACTGATATTGTTAATGATCCATTCATTACAAGAATTATG
+ACTGGTATTCACAAGTTGCGCCCTTCATCAGCAAATTATAAAGAGATATGGGATGCAAAT
+CAAGTATTAAAGCACTTATCTACTATCAAAGTCATCCCCAAGTACACATACACTGCGCTA
+TTAAACAAGACACTTGTACTCTGTAAAATGTTTGGTTTAGCAAGATCATCAGACTTAGTG
+AAGTGGTCGTTCAAAGGTCTCATTATTACTCCTGACTCAATCAAAGGTCCAGTTACCAAT
+GCTAAAGAACAAAGAAGTGGTGTTGTTTCAATCTTAAAATTAACATCGTTAGATGATACA
+AACTCTCAAGTATGCCCTGTTCGCCACCTTGCAACATACCTTAGAGCTTTTAAAGGAAGA
+AGAAAGCCCCATTCGGGTGACTCTGTCTTTATTAAGAAAAATCNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNGATTTTTTTTTTTTTTTTAATTTTTTTTTTTTTTAAA
+AAAAAATTTTATTAACTTACCAGCTATTATTTAATTGGGTATCATTTTATTTTAAAAGAA
+CTGGTGATTGGTTTTGAAAGCATTGATATTATTGATGAAGTTGAAGAAATCTAAAATAAT
+ACTTTTTTTGGTTTTTTTTTAGATTAAATTTGCTTTTAAGGGGGGTTTTTCTTCGCTGTG
+TATGGATTCTATATTTTTAGCAAATTTACCTATCGATGGGCACTTTTTGAGTTACAAATG
+AAGAGTCAATTTTTTATTTTGAAATTTATTCAGGTGTTAAATTATTAATTGAAAAAAAAA
+ATTTTTTAGAATATTTAGATTTCTCAAAAGACTATGAGCAGGGGATTTATAAAAATTATA
+AATCTGGAGAACAATTTAAAAAAATAAAAAATTCAATTTTATATAAATTTATTTTATTAA
+GAATATTTATTGACGGAATGAGTCATCAAGGTAGATCAGATTATACTATAATGGGGGATT
+TTGAAAATTATGTTGGCCCATTTTTTAAAATATGCCATGCCAACTTAAAAAATGGACTGG
+AAATAAAATTGTTTTATTTATTGTTCCAAAAGAATGGTTTTACAATATACATCAAACAAT
+TAAAAAATTATTTTCAGCGCAATTTAATAATAAATTAATAATTAAAGATAATAATGGATA
+TGATTATGAAATTATAACATATGGATTAACAATCACAGCGGCGAAAATCAACACTTTAAA
+GCACCTTTAAATCCAAGTACTCTTTTTAATATATATTAATAAGTATACTTAATAAGTAAT
+ACTTATTAAGTATACTTAATAAGTATACTTATTAAGTACACTTTATTAAGTATTACTTAA
+TAAGTATACTTATTAAGTATACTTTATAAGTATACTTTATAAGTACTACTTAATAAGTAC
+ACTTATTAATATATATTAATAATTAGTTATTATTCTTTTAAATGTTTTATATGGGAATCG
+AACCCGCGACCTCCCTTTTCAGAAGTTCCGCGGATGGAATATTTTAGATGGGAATCGAAC
+CTGTGACCTCCCTTTCCGGAAGTTCCGTTTAAAAAATGTTGCATATGGGAATCGAACCCG
+TGACCTCTTACATACTAAGCTACCATATGAGCTAAATAAGCTTTGATTATTTTTCAATAT
+AAATAGCTGAAATATTAATGTAAAAAAATTAAAAAAAATAATAAAAAAAATGAAACTATA
+AAACACAAATAAAATGATATGTTTTATTTTTTAATTTAATGTTGTATAAATCTTTGTAAA
+TACACTGAGAAATAATATTCAGAATATTTCTGAAACTATAAAACATAAATAAAATGATAT
+TATATAAAAAATAACATAATCTTTCTGAAAAATAATTTTTTTTTTTTTTTTATTTTTTTT
+ATTTTTATTTTTTTAGTAATTGTTGACTAAAACCTATAAATATTTTCATTTATGTAACTA
+CTGTATTCTAAACTTTACTACAATTATATATTTGATATGTGTTTATTATTAAATTACCAT
+TATAAATTGTAAAAAATTACTTTTTTAATTTTTTTTTTTTTTTTTACCTTTTTTTTTTAT
+CTTTAATTTTTTTTTTTCTTTTTTTTTACCTTTTTTTTTATCTTTTTTTTTTACTTTTTT
+TTTTTTTCCAAAATATTATTGATACATTTGTTGTTAAAATACATTGATATTATTAAAAAA
+ATTTAAATATTTTTATGTGTGATGAAAAAAAATCAAAAAAAAAAAAAAAAAAAAAAAATT
+TAGGAATTTTTTTTTAACACAAAAAAAAAATAAAAAATTTTGTAATTTTTTTTTTTTTTA
+ACGAAAAAAATAATATAATAAAATAACAATATAAATAATAATTTAGATAAATAATTGAAA
+TAAAATAAATAATATGAACACAAGAATAAAAATTTAAATAAAAACAAATATGCTTTATTC
+ACAGCAAAGAAAAATGCACCTTTAAAGCCAATTTAAAGCAAATACAATTTAAATTGGCTT
+TAAATTGGCTTTAAATTTGCTTTTTAAAAAGGTAATTTTAAAGATATTTTTAAGGTCATT
+TAAAATTACATTAAAAATGACCTTTTAAATTTATTATAAAGCGGTTTTTAAATAATGTTT
+TAATCACTTTATAATAAATTTAAAAAAGTTATTTTTAATGTAATTTAAAATTACTTATTA
+ATCCTTTTTTAAGCTTTTATTAATTATATTTTTTAAAATACATTTTAAATGCATTTTAAA
+TACATTTCAAATCAATTTTTACACTATTTATTTCAAATTTATTATAAAAAAAAAAAAAAA
+TAAGAAAATAAAAAAAAAAAAAAAAAAATTAAGAAAATTAAAAAAAAAAAAAAACTAAAA
+AGATAACCAAATTAATTTTAATTCTTTATTTATTTGTTCCAGTGGCAATTGAATTCTATT
+ATTATTATTTTTATTAATTAATAATAAATAAGTGTTTCAGTTGCCTTGGGTTTTATTTTA
+TGTTATTTTAAATTTTACTTCTCATTTCAAAAAGCGAAAAATATCAAAAAAAAAAAAAAA
+AAAAAAATTTAATTATTTGTTTTGCATATTTATATTATAAGTATAAACATACATATAAAA
+AAAGATTTTTTATTTTTTATTTTTTATAATTAATAAACAATTAACGAGTGCACAGGTATA
+TTATTGCATTAGTGTAGTTTTACAATAAATTGGGCAGATTTTATAGTTTTTTTTTTTTTT
+ATTTTAAAAAGAAAAAGGTATAGACAGGGTCATAGGTTCCCCGTCATTTTTTGAAAATGG
+GGTATATCCCTCTAAATATAAAATTTTAAGTACTAAATCATATATCTACTTGCTATAATG
+CTAAAATTTGAATAAAATGAAAAAAAAAAAAAAAAAAAAAACGTAAAAACTCGAGGAAAA
+AAAAAAAAAAAAATATTATTTTTAATTTCCAGCCAGCAAACAAAATGAATTTAAATAACA
+TATCATGCATTAATTGCAGAGAAAAATTAAAGAATTTTAAAAATATTATTATTCATTATA
+TTATGCATAAAAATATATGTCCATTTTGTCTTGCATATTACCGTTCTTATAAACAATTTT
+ATGATGTAAATGGACATTTCAACACCAAAAAATGTAAAAATGAACAAAATAAAATTATTA
+CAAATAATCAAAAAAGAGATATCTTTTATAAAAAATTAATGGATATTACTGGTGAAAAAA
+TAAAATATCCAACAAATGATCCAGATGACCCATGTAAACATTTATGTAACCAAAACCAAG
+ATGAAATTTTTTATCAAGAAAATAATGAAAATAATGAAAATAATCAAACAATTGATAATG
+TAGAAAATCATGATATAATTGGGTTGGTACATAGTGAAGATGAAAACAATGAAATTAGAA
+TAGATGAAAATGAAGCAAACATTAATAATGAAAATAATGAAAATAATGAAAATGAAAATG
+CTCAAAACGAACCAATAAATAATAATCTAAATAATAATTTAGATAATGAAAAATCAAAAA
+AAAAATTAAATGAGACTGAAATTGAATTTTTAATGTTGGGAATTGAAAACTCAATAAGTT
+TAAAGCTACTTGAAAAATTTAAAAGTTTTATTGACAAAAATAAAACCAATTTAAATCAAA
+TAAGATACACACCTCAATATATGGATAAATTATTTATGGAAGATTTTCAAATAAAAGGAG
+AAACATTTATAAATAAAAATTATGATCACTCAATTTTTTATTTTGAAATTAAAAAAGTAT
+TAGAAACTTTATTAAATAAAAAGCAATTTTTTGAAAGAATAGATTTTGATACAGATTTTG
+AAACTGGAATTTATACAAATTATAAAAGTGGTCAACAATTTAAAGATTTAAAAAATAAAA
+ATAAAAATAAAATTGTATTACTTAGAATATTCACTGATAGTATGCAGTGTCAAAACAAGA
+AAGATTATACTATAATGCTGGATATAGAAAATTATATTGGAAATGAATTTAAAAATAATA
+AATTATTATTATTTGTAGTACCAAATGATTGGTTACTTAATTTTCATCAAACAATTAGGG
+CATTGTTTTCATCTTTTTTGGTAATGGCTTTAATTTAATTATTGAAAATGAACAAATAGA
+TGTTATACCGTTTGGACTGACAATGGATATTCCAGAATTTAGAGCATCGTGTAAACTTAA
+TGGACATAATTCAAATGAATATGCATGTCACACATGTGACAAACCAAGAGATGGTTTATT
+TATTTGCCATTCAGGTACATTAACAAAACAAGAAGATATTACAAATTTTCACTCCACCAA
+ACCAAATTATGCTGAATTAAATGCTGATATAGAATTAAAAAAAATATGGGAAAAAAAAGC
+AAAAGATATTGGTATCAAAGGTGTGGGCAGAGGGTGGGTCGAACCTTTGTCCATTAATTA
+TTTAAAAACACAACCAGACATATTACATAATATTTTATTAGGTGTCGCACAAAGATGTTT
+ATATTACAATTTTGATAANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNTT
+GTCTCCTCAAAAAGCCCGAAGTAGTCGGTGGCTAACCACAGCCCAACTCACCTTTTGCTC
+AGGATTTACCCTAAAGGCTATTAACTTTATAACCTCATCTTTGAGTGCGATTAGCTTTCC
+TTTTAAACCAGCAAGCTTTCTTGGGGAGCAACAATCTAGTTTTAAAAGTTTCTTATTTCC
+TTGATGACACTTTTCTTCTTTTCTTTGGGAACAAGAAGCTTCATTGATTTTGAATCGATT
+TGTAATCCGAGAAATGTAATTGATTGAGTTGGTTCAAGAACAATCTTTTCTAGATTCAGC
+TTGAAACCTAGTTTGACAAGTAAGTCCATTGTCTTTTTGAGGTTGGATAAACATTCTTCT
+TTTGTTGAACCGACGATTAATAGATCGTCCAAGTAAGCGATTACGGACACGTTGATATCT
+CTCAACATTCGAAGTACATGTCTTAACAACATTGTAAAGATACGAGGAGCTGTCGATAAC
+CCGAACGGCATTGTTTTCCAACGGTAGTGCGAACCTTTCCACACGAAGCGGAATAAGTCT
+CTGTATTGCGGATCTACTAAAACGTGGAGGTAGGCTTTCTTGATATCGAGTTTTACCATG
+TAATAACCTTGTTTGACCATTGATGGTAGATTCTTGATTCCTTCCATCTTGAATGATTGG
+TTGTTGATGTAAGTGTTTAACCTTTTTAGATCGAGAACTGGACGATGTAGATTCGTTCCA
+GGTTTTGGAACCGTAAACACGTTGGAGTAAAAAACGCGCTTTGAATAACGGTTTGGAAGT
+ACTTGTTCGATAGCATCGTCTAATAACAAGTCTTGTACTTCCTTTGTGATGCAATCTGAT
+TTCGGACCCTCTGGAATTGAAATCGGAATTGGGTTTGGCATCGGCTTGAAATTTGGAAGT
+AAATGGATTTTTAATCCATTTACGACCTCTTGACAAAAGTTTGGAAGACCCAATTCTTTC
+CAAACTTGTTTGTGGTGGAACAGACGTCCACCTACTGGTAAGTTTACTTCTTGTTCTTCT
+GAAAACGGTTGTTGGTACCGTTGGCAGACTTGGTATTGTTGCTACCTGATGCAACATTAC
+TTGGTGACCCATTGAAGTTGTTAGATCGGCCATTACTCCCACTACTGGATTTACTATTAC
+TACTGTTTCCTGTAGTGTTATTACCACTTGAGTTAACTGATTTCTTGACATTGGACTTGG
+AATGATAATTCAATTTTAAAAATGATTGTTTAGCTTCGTTGTTCTTTCTGATTGACTTGG
+CTAGCTTTCTTACACGTTCAGTTTCAGTTTCATCAAACATCTTTGGTGTATCCTTGATCT
+TAATTGGTAAGAGTACTTCAGAACCATAGATTTCTTTAGCGATGTTGTTACGACGGACAC
+GACTAAGCGATGCTTGAGCATTAACGGCTAAGATGATTGCACTCTGAGTTAAGTAACTAA
+TAAGTTCTACATCGACATTAGAGCTATCAGATGATAACATACTTGATATGAGAAGCAAAG
+GTTTTAAGCTATCGTTGATTCGCTTTTCGACAATCAACAAGTCAGTATCATTGTTCTTGA
+CGTTGGATGATACAGTAATACCTTCAGGTGTACCGAATGGAGCGACATTCACTTGGAAGT
+TAGATGGAAAGTTGAATACTTTATTCAATTCGGATATCTCATCTTTCTTGAGGATACATT
+CTTCTTCGACGAGTAAACCTTGATTGTTAACCATATGTTTGTACTGACCAAGTAAGGTAT
+CGGATAATTGATAATCGGTTGGAACATCGACATTGTTACTTGATTCATCTTCACTTTGTT
+CATTCTCGGTGTCAGAGTTATCATGAGAAGGTTGGCTACGTGAATTAGATGAGAACATAG
+GTTCTTTCATGAATCTTGTAAAGGCTAAGGAAAGGTTGTTGATTTGATCCTCCATTGATT
+TCATTCTTAAATCAAAGGATTCAGAACTATTAAAGGCAGAGGTACTACTACTAGAGGCTT
+CATTATTATTAACAGTGGTAGACATATGTTGATATCTAAAATTATAATATGAGAAAAATA
+ATAATATTAAAAATTAATAAAGAGAAATAATTATTTGTATAAAATTTGTGTGTGTGTATC
+TTAAATATTTATAGGAGGAATTCCCAAATAAAATAAATCAAATTGTTTTAGTTTTTAGTG
+CCACTATTTATACGTTTTATTTTCTTAAAAATTTCGCAAAACTCAAAAAAATAAGTGTTT
+TCGACCCTTCACAACTTTGTGCATTGTGTCGGTTCGGAATTTTTATTTTTTTCGACCTTG
+CACAATTATCGCGTCATTGTACCGGTTCGAAATTTTTACTTTTCTTTCGAAAATTTTTTA
+TTCTTCGAATGTTCTAGAACATTCTAAAAAATTATCTTAAATATTTGGGAAATTCAAATA
+AATAAATGTTATTCATAATATATATATATATGATAATATAAATTCATAATCTGAAGCCAT
+TACAACCCATTATTGATGAACTTTCTAAGAAGCACTACAGTAAGTAGTTCTTTTTGACAA
+AGGTCTTCGATAATATGAAATACCAAGGGATTTTTCTAGGTTCGTTTAATTAAAGAGGAC
+CTATCATGCAAAACACCAACGCGGAAAAACTTCAACAAGAAGTATATCAGCATTCGAATA
+TTAATTCATGCGACCCACCAAACTTACTAAATAGACTCCGGCTTCCTTGAGTCGTTTAGC
+CAGCGTGATTGATTATATCCGTCAATACGAAGCAAAAACCGTTGCGTAACTATTTGGTCA
+GAGTGGGAAAACAGCTCTGACTTTATGCCAGCCTATGGAGTAAAGTCATGAAAATCATTG
+TACAAGCACATGGCACAAACGTATACCATCGGGAAGAACAAAAAGTCCATGATTATGTTA
+AAGACTTTATTCCGTTGGGTTTATCGCAGCTAAAAAAGAAAACTGATCTCATTGAATCCG
+CCGTTTGGTTATGTGAGGTCGTGGAGTGGGGTAGCGAATGGCAGTTCTACTTACAGGATG
+ATGTAGTTGTCTACAAGGCACCGTATAAAGGAGCCACAAAACCAGACATCCGTATTGTAG
+ATGACATGATACAGAGGCTCCAGTACTGTTCTACTGGACCTAATACCTACGCTTTAGATG
+TAGATGTACTAAGTTCAGGTAAAACTGCATTAATAGAAATGAATGATGCATTTGCTGTCA
+GCGCCGAGACATTCCCGCAGACATCTATACTGAATGGTTATTCTCTCGCTGGAATTCGTA
+AATGGCGTAATCCAGGAGTTTTCAGGTCTACATCATCAAGGTGTAGATGTGAATAAAACC
+CCCTGTAATAACTGAAAAAGGAAATACCATGTCCGATGTAATCGCACAACAAAACCAACA
+TGCTGTTCAGCAGTATCCAAATGAAATTCCATCAGGAATTACATTGTTCATCGAGTTTGT
+TCATAGCGCTCTGGGAAATCTGCAAGAGAAATCCTTGCTGCCGGACCTGGTACCCACTAC
+TCGCGGTGTAGTCGTTCGTCAGGAAAACCAAAACCCACTGAATACGTTGTCTGCGGTTGC
+CCCAACCGTCCTGAACATTTACGGTAACCAAAGGCCATCGCCCTGTGTGAATGCCGCACC
+GCATCTGCTCTATCTGGCCTAAGATCTGCTGTGTACCGGTCTGATCGATGCCGAGTGTTT
+AGCGCTGTATAGCCCGATTCAAACCAACAACACCATCCCAATACGTTCCCGTCATGCCAA
+ACCTGACTGGATTGTACTGCAGAGTCCAACTACGAAGAACTTATCAAAACTTATCAGGTA
+ACTCAGGACTCTCCGTTCCGTTAAAATAACTTTATTGCAAGGATTGAAAAAGCTTGATCT
+TAGTTTAGTTATGGCGTTAGTATTCATGGTTACTGGTTTCGCTACTGATATCACCCAGCG
+TGTAGGCTGTGGAATCGAACACTGGTAGTAACTATTTCTCTACAACAACTCAAGGCGAAG
+AAGTTGCGATCGAGTGTTTGAATAGTACAGTCGTTGCAAGTATCACTTATGCAGACGGGC
+GCACCCTCTAAAGGTGATCCTATTGGGGTCTACACGGAAAATGGTGTCTTTGTCTTATCT
+TGCAAATCGCAGTCCGTTGCAGTTCGTAAACAGTTCTGGGGATATTATCCAGTCTGCTAA
+AGGACAATTGCAATTTGCAAGTACCGTGGGTGAGTCCTGCGTGTATTCAGCAACCAGTCT
+AGGAAAGTTATTTAAAGACATTGGCTCTAACTGTAATTAACCATTAAGCCGCTCCTTAAT
+TGGGGCTGCTGTTTCACTTGAGGTTATTTTTTATGTTCTCACACATTGTGGCCATGCACC
+CTACCTTTATCAATTTCAGAAATCGAAGCGGTTATTGGTCAATATCGTGTTTGCGTACTG
+TATAACTTTGCCTCTGGTGACAAATATCTAAGACAATTTTTTAGAATGTTCTAGAACATT
+CAAAAAACACAGCGGCTTTATAAGTATACTTTATAAGTACTACTTAATAAGTACACTTAT
+TAATATATATTAATAATTAATTATTATTCTTTAAAATGTTTTATATGTGAATTGAACCCG
+CGACCTCCCTTTTCAGAAGTTCCGAGGTGGGGAATGTTTTATATGGGAATCGAACCTGCG
+ACCTCCCTTTCCGGAAGTTCCGTTTAGAGGAAAAAAGTTGCATATGGGAATCGAACCCGT
+GACCTCTTAAATTAAGCTATCTCTCTACCATATGAGCTAAATAAGCTTTTATTATTTTTC
+AATATTAATAGCTGAAATATTAATGTAAAAAATTTAAAAAAAATAATAAAAAAAATGAAA
+CTATAAAACATAAATAAAATGATATGTTTTATTTTTTAATTTAAAGTTGTATAAATGTTT
+GTGAATACACTGAGAAATAATATTCAGAATATTTCTGAAACTATAAAACATAAAAAAAAT
+GATATATTCAGAATAATATAAAGAATAACATAATCTTTCTAAAAAACTTATAATTNTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTCCCAAAATATAATGGATCCATTGGGGGTAAAAA
+ACCATGGATTTTTTAAAAAAAATTTAAATATTTTTTGGGGGGGCGAAAAAAATTCCAAAA
+AAAAAAAAAAAAAAAAAAATTTTGGGATTTTTTTTTAAACACAAAAAAAAAAAAAAAATT
+GGGAAATTTTTTTTTTTNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNTGC
+AAGTTAATGTCTGATAAAATATTATTTTTTAAATAAATATTTTCATTTTTTTTAATTATT
+TGCCCTACAATTAAATCATTATTGTCAACATCTTTTTCTTTTAGATTGTTAAAATTATCT
+AAAAATGTTGCCATTAATATTTTTGTTACTCTTTCAAATTTATGTTGATCTTGGTTGTTT
+GTATTGTTTGTCAAAAGGTCTTTAATTTTACTAAATTGTGCTTCAAATCTCTCTGCTGAT
+GTAAATTTTGGTGCACCCCAATTTTTTATATATAAAGGATAATGTAATAAAAGGTGAAAG
+TTGATTGGTTCATTTGGTATTATCATAAATATTTTTTTATTAAAATTTTTAACTAAATAA
+TTTATTTTATCCAAATCATCTTCGTCGAAAGAATCTTGATATAATAAAAAAGTAAGCTGA
+ACCATTTCTTCTAATAATAAGAAATCATCATTTGATACATTTGATTTAGTAAAAAATAAA
+ATATAATATAATATGCTTCTATTCTCTCTACCTTTTCTTGTTTTTACACCAAATAAAGAT
+TCTGATGGTGGTAAATGATCTGGAATGATTTTAGCTTCTTTTAATTTTTTTATAAAAATT
+GTAATTTGATCCTTATATTTTTTGAAAATATAATTTAAAACCCATTGTACAATACCCAAT
+AATATGTTGTGTAAAATATCAGGTTGTAAGTACAAATAATTTATTTTTAAATTTTCTACC
+CAAGATCTGTCATAATCTATAATGCCAATTTTTTTCATTTTATGTTCTGTTTCTAATTTT
+AAAATTTTATTTTGAGGATTTGAAAAATCTTGTTTATTTGGTTTTGAATTGTGAAAGTCA
+ATAATATCTTTTTGATTTCTATAATTTCCTTCTTTTAATAAATAATCGACACCTCTTTAT
+TTATCACATGTATGACATGAGAACTCATTGCAATTATAATGGTTAATCCTACAAGATGAT
+CTAAATTCTGGTATATCCATCACAGGGGCGAAAAAAAATACTTAAAAGCATCTTTAAAGT
+AGGAACGTAAATAGTACTATTATAAAGTATACTTATTAAGTATATTTATTAAGTATACTT
+ATTAAGTATATTTATTAAGTATACTTATTAAGTATAATTATTAAGTATAATTAATAAGTA
+TATTTAATAAGTATATTTATTAAGTATATTTATTAAGTATATTTATTAAGTATAATTAAT
+AAGTATAATTAATAAGAATATTTATTAAGTATATTTATTAAGTATAATTATTAAGTATAT
+TTATTAAGTATAATTATTAAGTTTATTTATTAAGTATAATTATAAAATATAATTATTAAT
+TAAAATTATTAAGTATAATTATTAAGCGTAATTATTAATTATAATTAATAAGGGTAATTT
+ATAAGGGTAATTATAAAGTTCACTTAATAAGAATACTTAAAAATAATAATTAAAAATAAC
+ATTTTATAATAATAATTTAAAATAAATTTTAAAAAAAAAAAAAAACTAAAAAAAAAAAAG
+AATTTATTAAAAAGTAAAAGTATTTGAAATCAGAAATTTTTTTATTTAATCTGTGAAAAT
+TCTAAGTGTATTAATGACTTTAACAAGGGTCATACAACATTTATAATTGACTAATTTGAA
+AAGCAGAACTTTATTTCCATTATAATTTGTACCAAAAGCATACTTTAGAAGGGGCAACCT
+AAAATATAATTATTTTTTTTAAAATTATATTAATCTCTTTATTTTATATTATTTTTTTTT
+TAAAAAAAAAAATTATATTGACTTACCAGTAATTATTTAAGTGAAGTATCAATTTGATTG
+AAGTGATTGTTGGTATAATAAGAAAGGTAACCTAAAATTTAATTATTGTTTTTCAAATTA
+GTCTATTTTATTTTATTATTATTTTTTTTTTTTTTTTTTTAATTTTATTTTTTTTAAAAA
+ATTATTTTAACTTACCAGTAATTATTTAATTGTGGTATCAATTTGTTTTAAAAAAACTGG
+GGGTTGGTTTTGATAGCATTGGTATTATTGATGAAGTTGAAAAAATCTAAAAAAATATTT
+TTTTGTTTTTTTTATTTATATTAATTTTTTTATTTTTTTTTTTATATTTTTTTTTAATTT
+TAATTATCTTACCTTACCAGTTTTGATTTAGTGCAGTTTCATTTTTATTTAAAATAAGCG
+AAGTTGGATAATATCAATTTAAATTGCCATTTCTTTTTGGTGTTCCAGATGATGCAATAT
+TATTTTTTATATTTAATTTTTAAATAATAATTTAAGTCTGAAAAATAATACCCGCAACGA
+AAAAAAAAAAAAAAATTAAAAAAAAAAAAAATTGAAAAAAAAAAAATGAAAATAAAAATC
+CACGTAAAAACGTAAAAGTTATGTAAATAATATAACGATTCTTTTAATATTATTTGCTTA
+TATAAAATAATAAAACAAAAAAAAAAAAAAGCAAAATATTTATAGGTTTAAAAAAAAATA
+AAAAAAAAAAAAAAAATATATTGCAAAAAAAAATAAAGCATGTTTTTTTTTAATTTAAAT
+TTTTTTTTTTTTTAAAAATAAAGCATGTTTGTTTTTATTTAAATTTTTTTTCTTGTGTTC
+ATATTATTTATTATATTTCAATTATTAAATATTTTATTATTTTATATATATTATATTTTT
+ATTTTCGTTAAAAAAAAAAAATTCCAAAATTTTTTATTTTTTTTGTGTTAAAAAAAAAAT
+TCCTAAATTTTTTTTTTTATTGTATTTTTTTTCATCACACATAGAATTATTTAAATTTTT
+TTAATAATATCAATGTATTTTAACAACAAATGTATCAATAATATTTTGGAAAAAAAAAAA
+AAAGGTAAAAAAAAAAGATAAAAAAAAAGGTAATAAAAAAGAAAAAAAAAAATTAAAGAT
+AAAAAAAAAAGGTAAAAAAAAAAAAAAAATTAAAAAAGTAATTTTTTACAATGTTATTTT
+TTATATAATTCTGAATATTATATCATTTTATTTATGTTTTATAGTTTCAGAAATATTCTG
+AATATTATTTCTCAGTGTATTTACAAATATTTATACAACATTAAATTAAAAAATAAAACA
+TATCATTTTATTTGTGTTTTATAGTTTCATTTTTTTTATTATTTTTTTTAATTTTTTTAC
+ATTAATATTTCAGCTATTAATTTTGAAAAATACTTATTAAGTATACTTAATAAGTATTAC
+TTATTAAGTATACTTATTAATATATATTAAAAAGAGTACTTGGATTTAAAGGTGCTTTAA
+AGTGTTGATTTTCGCCGCTGTGAAATGTGAAAATTGTAAAATTAAATTTTTTAATATCAA
+TGAAGAAAGAAACTGTTCAAAAATTGGTAATAATTATTTAAAACTAGATGTTGAATATTC
+AACCGATACGAGACAAAAACAATTTTTAAAGTACAAGAATGAAAAAGAAAAATATTATGA
+AACAAAAACAAATTCAACTTCAAGTTCGGATAAAAATGAAATTAATATTTGCATTTTTCT
+TTTATTTTTTTTTTTTTTAATTTTAATTTTTTAAATAAAAAAAAATAATTAAAAAAAAAA
+TAAAAAAAAAAAAAAATTATTAAAAAAAAAAAAAAAAAAAAAAAATTTATTAAAAAAAAA
+AATAAAAATTTATATTTTCAATATTAAAATAAAATGAATAAAATGAATAGAATTTTTATA
+ATATTTATTTTTATAGTTTTTATTAATAAATCTTATCAATTTGTTGATAAAAAATGTAAA
+AGTCACTCACACTAATCTTCAATCCATTGTCACATTTGTTCAATCTTTAAAGTAATGTTT
+TTTAATATGAAGGATAGAAAGAGTGAAAGACTAATATCATAAAAGTAAACATACATAAAA
+GAGATAATTAAAAGTAAGGGCGTTATGAAACTAAACCGAAAATCAGAATTTTTATTATTT
+TTTTTAAATTTTAATTTAATTTAATTTTTTTAATTTAATTTTTTATTTTTTGACTGAAAA
+AATAAAAAATTAAAAAATAAAAATAAAAATTAAATGAAATATTTTTACATGGAGATGCGC
+GAATTTGTTACGTTGTTGAGCTCATACTAACTTTAAATTAATTTAGTTTTGAGTCTCTAA
+CACCTTCCCCTTCCTTCTTTAGGCTAGCTATGTCTCAGAAGTGGACTATAAACTCTTGGG
+TGTAACTTTTCTTCCTGATCTAGTTGTTTTAATTTGTAAACTAAGATCAAGTTCATCATC
+ATCACTTGAAGTATTTTGATTTCTTGATTTTCTTTTCTTTGATTGGTTTCTTTGATTTGA
+GATGGAGTTTTGTTGTCTTGGAGTAATTGGTTGCAATGTTTGAGAACTTTGAACTTCTTG
+GGAGAGTGGAGGTGACACAATTGGCTCAACGGCTTCTGTAGTTGCATTCTCTCTTTCTCT
+TCTTGAGTTCAATTGTTTCTTCTGCACGTTATTCCAATACTCTCTGACTAACTCTTCACA
+GTCTGTATCGACTTCTTTGATCCATTCAGGTTCTGGGTAACCTTTGAACTTCACTAGGTA
+CATCTTTTTGACTTTATCGTGATTGAGAATACTTTCAACTTCGTAACTTGCTTCGTCCAT
+CTCCTCAGGTTCGGGCATCGATATCTCTTCTCTTAACCACTCACTGTCCTCGTATAGTTT
+TACGATTTGATCCTTGTTGAACACATTGTGTTTCTTTGGATAACCTATTAAATCGAGTGT
+TACATTATTACCATGAACGGCAGTGATTATGAATGGTCCACAATTCTTGGATTCAAGTTT
+GTGAGAGATTAGATCTTTTGAAATGTTAGTTTGGAAGAATTTTCTTTTAACCATAACCTT
+TTCTCCGACTACGAAGATAACATCACCACGACCTCGGTTGTAGTAGTTTTGAGCATTGAT
+TTGAGCATCTAGTATATTATCACGGACAATCTTTTTGATGTTGCTCATTGGTATACGAGT
+CTTTGTTAATGAATTGAAATGATTAACGGGAGTTGGTGGATTGAATCCATAAACGATTTG
+GAATGGTGACATCTTTGTAGACTTGCTCATTGATGAGTTCATTGCAAATTCAATAAGTGG
+AATGATATCAGAACAAATCTCCCCATACTCTGTTGAGGCTTTAGTTAATATTCTAATAAT
+TTCTCTATTCATTCTTTCAGTTTGACCATCAGCTTGTGCTCTGTGTGCCACAGTCATCTT
+GAGTTTAGAATCCATCGTCTTTGTCCATCTCTCCCATATTTCTGAAAGGAATCTTGGATC
+TCTATCGGAGACGATTGTTCTTGGATAACCATGGAGTCTGAACACATGATTCAACAATAA
+TTGAGCAGTATGTTGGGCATCTATTGTCTTATGACATGGAACTATATGAACCATTTTAGA
+TAATCTACAAACAATGACACAAACTTGATCGACTTCAACTGTAAATCCGTTTATTGCATA
+CATTGTTTTTGGTAGCGATAAGAAATCGATTGATATATCTCTCCAAGTGAAAACTACCAT
+TGTTTAGATTATTATTATCTGAATGGATTGGCATGTCTGTTGATGCTTTAACCTTTTCGA
+TATCTATTGGTATGGAGTTATCTTGTTCAATTGGAATAGCGACAATATTTTCACCTTCAA
+ACTCTTTCTTTAGATTATTGAATTCTTTGAGTGATTCATCAGAAAGAGTTTTCTTGTTTT
+TCCCTTTTGATTCTTTGGAAAGGTGATAGGTTTTTTCAGCGTAATTTTCAATGGNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNTTTTACATTTATTATCAGAGTTAAAT
+TATTCTATTTGTATTCTTTTCAATTTAATTTGTTTTTTTTCTTTTTTTTTATTATTTTAA
+TTTTTTTGTTTTTTTTTAATTGTCACCTCCGACAAGTACACAGCGAAGAAAAAACCACCT
+TTAAATTCGCTTTAAATTAAATTTAAATTTGCTTTAAAGTCCTGAATTAAAGCAATTTTA
+AAGGTAATTTTAAAGGTAATTTTTAAGGTTACTTTAAAATTACCTTTAAAATTACCTTTA
+AAATTACCTTTAAATTACCTTTTTAATCGCTTTAAAAGCGAGGTCCTGAGTTNGAAGCCG
+TTAATTAACGGATAACCCTTTTTAAATTTTTTTTTTTAATCCCCCTCAAAAATTACCAAA
+AGGGATTCGATCCCCCGACCCTCTATCAAAGGGTAGTCTCATCAACCATTACACCATTTG
+ATTGCTTTGATGAAAAATTTAAAAATGATAGAATATTTTATCCCCATTTTTTTGTTCTAA
+AATTAGATCTTTTTTATTAAAAACCTTAAATTTATGTTTAAAGGAAATTTAAATTCACTT
+TAAATCTACTTTAAATCTACTTTAAATCTACTTTAAATCCTATTTAAAATTAATTTAAAA
+TAAATTTTAAAGGTATTTTTAAATATCTTAAAAATTATCTTAAAAATTACCTTTAAAATC
+ACCTTTAAAATCACCTTTAAAATTGCTTAAAAATTTATTTTAAAGCAAATTTTAAAGGAA
+TTTTTAAATATCTTAAAAATTACCTTAAAAATGAATTTTTTAAACGCGGCTTTAAATTCA
+ATTTAAATCCAATTTAAATCAACTTTTCTTTAAATTTGCTTTAAAGGTGCATTTTTCTTT
+GCTGTGTAATTTTTATTTAGTATATTGTTGATTAATTTCTCTGCCACTTGGTTGGAACGA
+AAAATTCGAAATGGATTGGATTGGAACAAATTGAAACAAATTGAAACAAGTTTAATTTAA
+TGTTTAAAAAAAAAAAAAAAAAAAAATTTTTTTTTTTTCTTTTTTTCTTTTTTTTTTTTT
+TTTTTTTCCATTGGGACCTATCATTGGATAATTAAATTAAATATAATTAAATCAGCAAAT
+TTTAAAAAAGATCGAGTTATCCGGAATAAATTCAGTTTTTTCCAAAAAAGTTTTTTTTTG
+AAAAATTTTTCACTTTTCATATGTTTTTTTTTTTTTTTAATAAAACACATTATTTAAAAC
+AAAAATTTTAAATAATATTAAACAATATTTGTTAACAACTATCGTAGAATTAAATTTGGT
+TGTATTTATTGAGAAATAAAGAAAAATATAAAAAAAATGAACTTCGAAAAAAAAGGGACT
+TCAAAAAAAAAAAACTACATATGAATAATCAATCCTTTATTTGAGCCCCGGTATTTTTGA
+TTTTTTGTCAATCATACTATTTATTTTATTATTTATTTTAATTGTGAATAAATAAAAAAA
+TTAAAAAAAAAAAAAAATAATATGGCCAATAAGAATTTTTTCGCGAAAAGATTGATCTTT
+TCTGGGATAACTCGATCTTTTTCAAAATAACTTTTTTTTGTTCAGAATTCAATTATTCAC
+AGAAAGGTCCATTGTTGTTATATAGGATTATTTCAATAACAAATAAATTAATTGTAAATA
+AAAATAATTATTTGAACAAAAATCCAATGAAATTTCAGAATTTAAAAAAAAAAAAAAAAA
+AAAAAAAGTGTATATATATTTAATTTGTTTTTTATTTAAATAATTTAATAGTAAAAAATG
+ATAAAATCAAATTTTATTATTAATATTTTATTATTATTATTATTATTATTATAATCGGAT
+TTTTTGACAGTGGGAGAGTTTGGGACACTGGGGAAATCAAAAAAAATTATTCAGCCAGTA
+ATGGAATTCTGTACAATTATTTGCCTTATTGTATTATTCACCCTACTTTTTTAAGCCTAT
+AAAAATAAAAAAATTAAACCAAAATACATAATTATTAGAAAATTACCTGCCAATTCAGAG
+TAAATATTTACGGTCTAGTGTAATGAATAATGATTAAAAAAGAGATAAATTAAAGCAAAT
+ACAAACACGAATAAATTAAAAAAAAAATAAAAAAAAAAATAAATTCTTAGGTTTAAAAAA
+AAAAAAACTAAATTTGGTTTAAATTAATAAGATTTATTTATTTATTTTTTAAAAAAAAAA
+ACAATTTTTAGGTGTACCAAGATTTATTTTTAAAAAAAAAAATAAAAAAAAATTAAATTC
+CAAAAAAAAAAAAAAGGAAAAAAATAAAAAAATAAAAAAAAATAAAATTTTAGGGACCTG
+ATAAAATTTTATCTTTTACAAATATTTTAATCACGATAATAACATTAGACTTTTAAAAGG
+ATAAATACGTACGGATGCCCGAACGAACGTCAATAGTTAACAGGTGGTACAATGGCCAAA
+GGATCAACACACAGCGAAGAAAAAACCACCTTAAAGCAAATTTAAATTTAATTTAAAGCG
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNATCTTTTGATTTTTGTTCTT
+CCTGATTTTTGGTAATGTTTGTTTCCAATTCATAATCTTATGATAGGTTTCTCTAATTGA
+TTCTGAACAAAATGGTGGATAACCAACCAACATTTCAAACATAATAACACCAACACTCCA
+CCAATCACACTCTGCACTGTAACCATCTTTCATCAATACTTCTGGTGCAGTATAGTCTGG
+TGTTCCAATTGATCAACAAACATTACTGATCAATTGGAACACCAATTGGAAGAGGAGAGA
+AAACAAGAACAAAAGAAAAAGAAAGAATTGGATGATCAAGAATGGAAGAGAAAGGAACAA
+CAATATCAATCTGATCTTCAATTGGAAAAAGAGAAACAATCTGCATTAGAGTTGGAACGT
+GAACGTGAAATTCAATCAATTCTTGAATCAGAGAAACAACGTCAACAACAAGTTGAACTT
+GAAATTCAACAAGAAAAAGAAAGAACCAAACAATTACAACAACAATGGGAACAAGAGAAA
+TTGAAATTGGAAGAGGAAAGAAAAGGATTGGAAAATAAAAAATCATTGGAAATGGCTCAA
+AAGAAACAAGAACTATTAGAGTTAAATAAAAAGATTGAACAAGAACAACGTGATCTAGAA
+GAACGTATTCAAAAAGAACAAAAAGAAAAAGATCAAAGAGAAAAGCAAGATCAATTGGCT
+CAAATGGAATTAGAAAGAGAAAGAGAAAGAGAAAAAGAAGAAAAAAAGAGAAAACAACAA
+CAATTGGCTCAATTAGAAAAAGAAGAAAGAGAAAGAAATGAAAAACTTGAAAAAGATAGA
+CAATTACAATTAGAACAAGAAATTGAAAAAGAAAGAAAATTAAAACAACAACAAAAAGAA
+AAAGAACAAAAAGAACAAAAAGAAAAAAGAGAACAAAGAGAAAAAGAAGAACAAAAATCA
+AAAGAAATGTTTGTTGATCAATTGGAACACCAAATAAAAATGTAAAGAATAATAAATATA
+ATAATAATAATAATAATAATAATAATGGAAATAATAATACTACTTTAATAAATACTGAAA
+ATAATAATAATATAACTAAATTTGATGACGACTCAGAAAAAGAATCTGAAGAAGAACCAA
+AGCCAATTATCATAAAAGAAGAACCAAAAATAGTTTCAGTTAAAGTTGAATCCAAAAAGG
+TCGTCGTTAAAGAAGAAGAACAAAAATCAAAAGAAGATAATGTTTGTTGATCAATTGGAA
+CACCAATTGGAAGAGGAGAGAAAACAAGAACAAAAGAAAAAGAAAGAATTGGATGATCAA
+GAATGGAAGAGAAAGGAACAACAATATCAATCTGATCTTCAATTGGAAAAAGAGAAACAA
+TCTGCATTAGAGTTGGAACGTGAACGTGAAATTCAATCAATTCTTGAATCAGAGAAACAA
+CGTCAACAACAAGTTGAACTTGAAATTCAACAAGAAAAAGAAAGAACCAAACAATTACAA
+CAACAATGGGAACAAGAGAAATTGAAATTGGAAGAGGAAAGAAAAGAATTGGAAAATAAA
+AAATCATTGGAAATGGCTCAAAAGAAACAAGAACTATTAGAGTTAAATAAAAAGATTGAA
+CAAGAACAACGTGATCTAGAAGAACGTATTCAAAAAGAACAAAAAGAAAAAGATCAAAGA
+GAAAAACAAGATCAATTGGCTCAAATGGAATTAGAAAGAGAAAGAGAAAGAGAAAAAGAA
+GAAAAAAAGAGAAAACAACAACAATTGGCTCAATTAGAAAAAGAAGAAAGAGAAAGAAAT
+GAAAAACTTGAAAAAGATAGACAATTACAATTAGAACAAGAAATTGAAAAAGAAAGAAAA
+TTAAAACAACAACAAAAAGAAAAAGAACAAAAAGAACAAAAAGAAAAAAGAGAACAAAGA
+GAAAAAGAAGAACAAAAATCAAAAGAGAAAAACAAGATCAATTGGCTCAAATGGAATTAG
+AAAGAGAAAGAGAAAGAGAAAAAGAAGAAAAAAAGAGAAAACAACAACAATTGGCTCAAT
+TAGAAAAAGAAGAAAGAGAAAGAAATGAAAAACTTGAAAAAGATAGACAATTACAATTAG
+AACAAGAAATTGAAAAAGAAAGAAAATTAAAACAACAACAAAAAGAAAAAGAACAAAAAG
+AACAAAAAGAAAAAAGAGAACAAAGAGAANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNTTTGAATTTGTAACAAATCTCCGGTTTTTTTTTTTTTTTTTTTTTTTTTAA
+TCAAAAATTTTATTTTTAGAATAGCATCTATTTTTTTACAAAAAAATACTTGTATCTTGA
+GCTGTTTATGCAATTAAGAATTTGAGTGCACTATAGGAGAGTTTTCAAAGTAATTTGGTA
+TCTTCAAAAGAGAAGTGACTTGTTTTATACAAGACCATTTGGTAATTATATGTTTGAATG
+GAATGATGATTCCAATTAAATCCAAAAAAAAAAAAAAAAATAATAATGATATTCGTTTTT
+TTATATATTTAATATGATTTTGTGTATTTTTGGTGGTTTATTTATCTATACTAAATTCAT
+ATTAAAAATTAATAAATTCAAATTGTTATTTTAAGAAATTTTTTTTTTTTTTTTTTTTGT
+GTCTAATTTGAAAGATACTATCAATATTTTATTTTATTTAATTTTATTTTTTTTATTTTA
+TTTTTTTTAAACAAGTTTTTTAAATTAAAAAAAAATAAAGGGATAAAATTTAAAAAAAAT
+GGATATCGGTATAAATAGTTAGGGTGGATAAAGTTAATCAAAAAAGACACTTTTTATCCA
+AAAATGGATAAAGGTAAAACAATAATCAGAATCTTCAAAAAATAAATTATACAATTAAAT
+TTTATATATGAAAAATTAATTTGAATCTAAATTAATTAAAAAATTGTAACAAGATCTCAA
+AAATATCTTGTTAATACTAATATTTATTTAATTTTATGAAATGTTCTAAAAAGAACATTT
+AAAAATAACTATTAATATTGAATTAATAATTCAACCTCAGTAATAAATATATACAAATAA
+TAAAAACACGATAGGGCTACGGTCATTAATTAATTTTGCGTACATTTATTTCTTAAATAA
+TTAATCATTTACTTTAATAATAATAGAATAAATAAATAATCAAATTTTATTAAATAATTT
+ATTTTAAGAGAATGTCAACTAATAATAACGAAGATATTGATAATGATGAATTGCAACAAC
+AGGATAATGAGGAACAACAACAACAACCACAGGTATCAACATTCAATGAACAGCAACGTC
+AGATAAGGGAACAGCAGCAAGTAATAGATAAACAAAATCAACTTCTTCAACAACACATTC
+AATTAATAAATCAACAATCTCAACAACAATTAAATAATCATTCGACACCACCATCATCAC
+CCAACATTACAACACCAATAACTTCAGCAGCAATAACCAACACAATAAAGAAATCATTAG
+GAAAATTTAACACTGATGATACCGACCACCAGTTGTTACAAAAATAAAAAGTAAAATAAA
+AAATAAAATTTAAAAGTAATTTATTATTTACCTTCAATTTTTTTTGAGGTTTTTTTTTTT
+TTTCGCAACTGGCGCTTTTTTTTTAATTAAATTAAAAAAATAATATGAAAAATTTAAAAA
+TAAATAAAATTTTTTTTTTTTACTTTATGGTTCGATTACAATAAAAACAATTTGAAATGG
+AGACAAAAAAACCATCAAACATAAGGTTAATAAATAAACTTCAAATTTTTTTTGAAGCTG
+AAAAAAAAAAATAAAAATTTTATGGTGAAAAACTTTATTAAATATATTATTGAAACACCG
+CAATATAGTCATCTAAATATTAAAGAGGTACGATTAATATTTTAATTTTAATATTGTATT
+ATAAAAATTTTTTTAATTAAAATATAATTATAATGGTAATTTAGATACATGAGGTAGTAG
+GAACTACTAGACAAAATGTCTCTAAATATTACAATATGTTTCATGGTGGTGTTTTAGATA
+ATACAAGAGGATTATCAGACAACGATATTTTAGAGATGGATAAAATTTTGGGTGAAAACC
+ATAAAATTAACTCACCATTAACAAAAGAAGAAACTAAAACAGAGGTACATATTAATTTAA
+TTATAAAATTAAATATTAATCATTTAATGCTAATATAGTGAAAATTTTATTTAGTTAGCT
+AATATTATTAGAAAAAGAAACCCAAATTACACACATCCATGTGTTTCTGATACTTTATAT
+TACCAATATTTTAATCACGATAATAACATTAGACTTTTAAAAGGATCAATACGTACGGAT
+GCCCGAACGAACGTCAATAGTGAACAGGTGGTACAATGGCCAAAGGATCAACAGGATTTT
+CTAATTAAAAATAAGGTACCGTTGGAAAGGATATGGAATTTGGACGAAACAGCAATAAAA
+CTTGATGAAACTGCAGTTAAGGTAAAAGNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNTCTGTGTACAAGGTAGGCAAGAACACACAAATTTCACAGGTTTGTCATTCAA
+AGGTAAGACTTTATCAATTCCGTAGAGCGCCTTTCGGAATGAAGAACAGCCCTGCGCTAC
+TTTAACAGATGGATACAATCGATCATAAAAGAGTGCGAGGACTTCCGCGAGAGCATACGT
+AGGACGACATCATTATCTTCTCAAAGACGTGAGATGACCATATCACTCACGTGAACACTG
+TTCTACAGAAATTAAGAAAAGAGAGAGTTTACTTAGCCCTCAACAAAGCTGAACTGTTCA
+AAGATAGTGTCAAGTTTTTTGGTCATGTGATATCAAGAGATGGTTTCAAACCAGTTTTAG
+ATAAGGTGGAAGCAATTAACAACCTACCAATTCCCACTACTGTCACAGAAATAAGATCTT
+TTCTTGGAAGTTGTAACTACTTGAGGAGGCTCATTCCAAACTATTCCGAACTCACAGCCA
+GATTAGCAGCTCTCACAGGTATTAGAACAACGAGAATCACAATCACAGACGAGATAAAAG
+AAGACATCAAACGGTTAAAGCAAGCAATCACTTCAGCCCCGGTTATAGCTAAACCCGACT
+TCACCAAATCATTTGATGTTTACATCGATGCAAGTGACATAGGTACAGGTTGCGTTATCA
+TGCAAGATGATGGTAATGGTAACATTAGGCCGATTCTTTACGATAGTTGTCGATTCAACA
+AGTTCCTAAGAAATTACTCGACAACCGATAGAGAATTTCTAGCACTCATCAATGTATTGG
+ATAGACACGGTTACATGTTGAAAGATAAGAAGTTCAGGTTGTTTACAGATCACTTAAACT
+TGACATATTACGAGGAATTGAAAGAACCAACCAAGAGAATCATTAGGTATTTAGACAAAG
+CGAGTGAATATAAATTCGAGGTAATTCACGTCAGAGGAGAGGATAACAACATAGCAGATA
+TGTTGAGTAGAGATGGAACATTCGATAGCACATGGGAACCAGAATTCATTGATAAAATCA
+ACAAGGAATACGTTGAATTTGAAACGAAAGAATCTGAGTGGTTTGATACTTTCAAGTCAA
+GACAGGATGTCGTCAACGTAGATGGGTTATGGTATCTCATAGACGCCAAAACAGGATCCA
+AGAGATTACTACTGGTAGATAAAGAAACAATTAATCTAATATTAGAAGAAGCTCATTCAA
+CAATTTACTCTGGTCACTCAAGTAAGAATAAGATGGTTGATAAACTCAGATATAATTACT
+ACTTTCCAAAGTTTATCAATCAAATAAAACGATTCGCCGAATCGTGTACTGAGTGCCAGA
+AGAACAGAATCGAAAGAGCCAAGAGTGGTTTTCTTAATCCACTCCCGATACCATCTAGAC
+CATGGATTGACATATCAATGGATTTCCTTAATCTTCCAAAATAAAATTCAGGTAAAGACA
+GTGTGATGGTAATAGTAGATTATCAAAAATGTGTAAGATAATTCCTTGCACCAAAGAATT
+AAAGGCCGACGAAGCTGCTAAGTTGTTCTGGGACAACATAGTTTGTAACTTTGGTCTACC
+AGCAACCATAGTATCAGATAGGGATAAGCTAATCACCTCTGATTTATGGAACAACTTGAT
+GGAAATTTCCGGAGTAAAACTAAAGATGACAGCCCCACGTCGACCACAAGCCGATGGTCA
+AACCGAAAGGATGAATAGAAACATTGTTAATCTATTATCAAAGATGACCTCTAACAGATT
+AGATTGGGATATAGAGATTAAATCAATCGAATTCGCAATCAACAACACCGTCAATTCATC
+GACTGGTCATACTCCATTTTCAATACTACTTGGTTTCCATCCGAGAACACCATTGAACAT
+CAACCCAGATTACAACCTGCCATATCTCGAAGCAGCCGAATATTATAGACAAGCAGCTAG
+AGACAACATGTTGGAAGCACAAATAACAATGGCGTTACAATACAACAAGGATAGAGACGA
+TTTCAAATACGAGGTTGGTGATCTTGTTTTGGTAAAGAGAGAGAAGGTCAACATCGCGAT
+GATAAATGATAAGGATCAAAGTAAAGTCTTACCGAACTATTGCGGCCCATTTAAGATTGT
+CTCCAAGAAGAGTGAACTCAACTACTCAATAAGGATCCAGAACCATAAGGGTGGTCACAG
+AACTGTTCATGTCAGTGATATGAAACCGTTCATAGAAGATGATCGTAGAATATTCAAGAG
+TAGTGATTCAAATTATAAACCTTTGGAAGAAGAAATCGATAAGAAGTGGATAAAAGAAAT
+AGAATGATTGGCAGAGGTTCAAGAATAGAATACAGAGTTAGATACATAGGTAAAACTGAA
+GATCACGATATGTGGTTACCATTATTCGCACTTGAAAAATGTGGAAAATTCATCAAAGCA
+TACGAAGATTTAAAAATATCACCAGTAGCTCCACAACCCTTTACCACTCAATTACGAAAT
+TAGTTGGTTTGTAAAACTTACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAATTTCCATATATAGTATAATCGGTAAGTAGCAAATCAAATTAAAAACAAACAAAAA
+AAAAAAAAAAAAAAAATATATAAACAACAAAATATCTTCAAGTACAAATTTCAAATTATT
+ATCCATTCAAGACAAATTCATCCGAGCGTCGATCACCTACCAAATTGCAGCAAAATTGCG
+ACAAAATTACGACCAAATTGTGACTAAATCGTAAAAAAAAAAAAAAAAAAAAAATAAAAT
+AAAATAAAATAAAATAAAATTAAAATTATTTTATTTTCTTTCAATTGCGTGGCACAATCA
+ACTATGGCCGAAAATCTAAATCAAGAGTACAATCTACAAGCTCAATTCGACTACGACGAA
+AGTAGAAGAAGTTTATTCATCTTTCCAGAAGATATGGACAGAATAGATAATATCAACCGT
+GAACTCAACACACTTCAAATAGATTCAATAGAAATGTATGAGAGGGCCATTAAACTCGCA
+GTGACAGAACTCGATTATCTTGACCTCATTTACAGAAGAAATTTCAATGCAGCATGCGTG
+AAATGTTCATTATGTCGTAAATACACAGCCCACAAGTTGGTATGTAGTAAATGTGCAAGG
+GCAATCCAAAGAAGAAGAGATGCAGCAATCGATGAAAGGAAAATGGAACGTCAAAAATTC
+TTGATCCGAAAGGAATCAACGGAACGAAAAGCAAAAAAAAGCAGTCATCAGAAGTAAGGA
+GGCTACCGCAGGTAATAGAACTATGATATACCGTGGGTTGAATAATAATAATAATAATAA
+TAATAATAATAATAATAATAATAATAATAATAATAATAATAATAATAATAATAATAATAA
+TAATAATAATAATAATAATAATAATAATAATAATTAAGAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAATTAAAGATGTTTAAAAAAAAAAAGGAGGGGATATGTAAAGTTTTTTGAT
+ACTTTACAAAGTTCGGGTTGGGAAATCGAAATTAAAATTTAAAAAATTATTAAAATTAAA
+ATAAAACCTTTTTTCGTTTTCCAAAAAATTAAGTTTTTCACTTTGAATCCAAATACCAAT
+ATTAGTATTATTTATTAATTGGAATTCCTAAATATCTATTCAATTTACCCATCTTCATCA
+ATANNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTATTTAAATAAATATTTATTTATATTGA
+TATCATTCAAACAAATGAATGAATAATTATTACATTGGCTTTTAAAAATTTTTATTATTA
+ATATTATCATTATTATTATTTATTTTATTTTTGTTATTATCACTATACAATTGTTAATTA
+TTACTTTTTTTTTTTTGTTTAAGTATTTTTTATTTTTTTTATTTTTTTTTTTTTAATAAT
+ACATATTTATTGTATGTGTTGAATAAATATTTTTTATAAATATTTTTGATATTATTATTG
+TTATGTTTTTTTTTTTTTTGTTTTTATTTTTTTTTTCTTTTCCAGTTTTTTTTTTTGTTG
+ATATTAATATTATATCTATATAATATAATTAATTATTTCTATTTGAAAGAAAAAAAAAAT
+AATAAATATTAATAAATATTAAATATAAATTTTAATTTTTAAAAAAAATAAAAATAAAAA
+ATAAAAAAAAATTTTAAAACTTACCTTGATTCATCTAAAACTAATCTTACATCTTCAACT
+TTAATTAAATCATCTAATAAAGGTAATAAATCCAATAATTCTCTATCATCTTTATCATCG
+AACCAAGAATCAATCGGAATTGCATTTTCAGGATGGAAAAGATAAGAGGATGGTGAATTA
+TCTACAATGATCGTTGATTTTAGATCTCTACCTAATCTACTTAGATCTTTAACGTAGTTT
+CCTTTATGGTTATGACAAGACTCTCTAAACAATCTATAGTGTATCACTCTACCTGTATCT
+AAAAAGTCCAATACGGGGTCTGCATATTTAGCTAAAGAGGCGGTGAATACAACAATTTCA
+AACTTCTCTGCGATTGCTCTTAAAAAATCATCTACAAATGGTCTCTTTACCACATAAACC
+TGATGTATTGTACCTTCAATCTCTACGGGAACAATGAAATCTGGATTATGTACTGGTTTA
+AATGATGAATGTACTAATGTTTCATCTAAATCTAATACCAATGTTTTAAGTCCAACATGT
+CTTGGTATCATTGGTACCATTAGTGGTATTTCACCATTTTGTTGACTACTATCTTTATTT
+ATATATTGTTGTTGTTGTTGTTGTTGTTGTTGTTGTTGTTGATGTTGATTGTATTGTTGT
+TGTTGTTGTTGATTATATTGTTTTTGTTGTTGTAATTTATCATTATTACTTGCACCATTA
+TCGGTATTTATATTATTACCATTGTTTTGATCATTTGATGGAACGAAACAACAAAATAAT
+TTATTTATAATACTTCCTTTCTTTTTTCTATTTCCTTTAACAGATTTTTGTGGATAATTA
+TTTAAACTATTATGTGATGATGGTATTAAATTCGTACTGGAATGATTTAATGAATCATTT
+GGATTTGAAACTTGAGTTATTGGTGATGAATTCATTTATATAAAAAAAAAAAAAATTGAT
+TAAAGATTTTTTTTTTTTTTTTTTTCTTTCCAAAAGAAAATTTCTATATTTTTTTTTTTT
+TTGTTTTTTCTTTGTTTACTACTAAAATTTACTATTACAATTAATTATTTGTGAGGTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTACTATATTGATTTTTTTTTTTTAAAAAATAAAA
+AAAAAATAAATAATAAAAAAAATAAAAAAATAAAATTAAATGGTATTAATATAAAAATAA
+TATTAATTTTAAAATGATAAAGTGTTGTGTGGTTGAATTGAAAATTGAGTGGTTGGTGTG
+GTGGGGTTTGTGAGTGGGCAGTTATAATAAAAAAAAAAAAAAAAAAAAAAAAACTATTTT
+ATGTATACAAATAAAAGGTGATTGCGCTTTGTAAAAAAAAAAAAAAAACAAAAAGATAGT
+TGAATTGCAAATAGTAGTTAATTTATAAAAAATAAATGTATAAATTTTACAAAAAAAAAA
+ATAAAAAATAAAATAAAAAAAAAATAGAAAAGGATTATAAATTGGAAATAAAAATCAATC
+TTTATGATGCATAGGGAAAAAAAATAAAAAAATTTTGAAGTTGTTATCTAATAAATTTTT
+TTTTTTTTTTTTGTAATTTATTTGTATTTTCACGAAATAAGGTGGTTTAGGTGTTTTTTT
+TTTTTTTTTTTGGATGATTAAAATTTTTTTAAAATATTTACATAATGTTTTTATGGTCAA
+TAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATTAATTAA
+TGAATGAAAGAATGAATAAATAAATAAATAAAATTTTTTGAAAAAAAAAAAGAAAAAAAA
+AAAAGGATATGAAATTTTATTGATGAATGTGAAATAAATATTTTAATTAAATGAATAAAA
+AAAAATAAAATAAAAAAAAATTAAACTAAACTAATCACATTGGGTGTATTTTTTTTTTTT
+TCTTTTTTTTTTTTTTTTTTTTTTTTTGTGGGGGTAAAAATATTTAGTGTTTGGTTATGG
+CAGTTTTTTTTTTTATTTGTATGATGTGTGTGTGAATCCAAATTTACATGTGGATATCCA
+AAAAAAAAAAAAAAAAAAAATTTAACACACTCGTGCTTACAATTGTTTTATTTTTATTAT
+TATTATTATTATTATTATTATTATTATTATTATTTTTATTATTATTATTTATTTTATAAT
+ATAATTATCTTATTCTCACTTTTAAATATTTAATTTTTATTTTATTTCATTTTATTTTTT
+TATTTTTTTTTTATTATAAAAACTTTCAAATCACACAAGAAATGGGTACAAACACTAAAT
+ATGGATATTTTAATGAGTGGTTGTGAGTTTTTTTAAAAAAAAAAAAAAAAAAAAAATCAA
+TTTTTAGATCAAACACACCAACACCCCTTTGTAATATAAAATAAAATAAATTAAATAAAA
+AAAAATTATTGTTCAAATCACTATTAAGTTTATATAATTAGAGTTAAATCGTTATTGTTA
+TTTTTAAATTTTATTCTTTTTTATTTTTAAAAATAACAACTACTAATAATAATAATAATA
+ATAAAAATAATAATAATTATTATGATTTGATCGTATGATGTGTGAGTGTGTGTATGTGGG
+AAATTATGTGTATTTATTGTTTATGATAACTGATAATATGATGATGATACCATTAATCAT
+TTATTAATGGCGAAAGGGAAATTTAATAATTGATGATGGTAAAAATGGTTGAAAAAAAAA
+AAAAAAAAAAGTTTTATAAACAAAATAACAAAGAAAATAAAAATAATAATAATAATAATA
+ATAATAATAATAATAATAATAATAATAATAATAATAATAATAATAATAATAATAATAATA
+AAAATACAAAAAAATAAAATATATATACATTACATTCAATTGGAATGATAGTATTTTTGA
+ATATAATTATTAATTTTGTTTTCCAATATTGATGATTGAACTCATTGGAAGATTTCCAGT
+AAGCAAAAAAATAAAAAATAAAAAATAAAAAAAAAAAAACAAAACAATAAAAATATTAAT
+ATAAATAATAAATAATAAATATAAAAAAAAAAAAAGTTTGATTTAATTTTTTATAACAAC
+AATAAAAAAGAGATAAATAAATTAAAAATACAAAAAAAATTAAAAAATAATTAAAAAAAA
+AATAAAAAAAATTATTATTATTTAGCTGAATTCACCTAATGGATTTTTTTTTTTTTTTTT
+TTTTTGTTGTTATTGTTTATTGTTATGTTGTTATGTTTTTGTCTTGTAGAATATATTATC
+AGTTTATCCAGTCGAAAAATGGGTGTGGGTGACATGCATGTTATATTAAAAATTATCAAA
+AAAATAATATAAAAAAAAAAAAAAAAAATCTTTATTTTATTTTTAACACAAAAAACAAAC
+CCTAAATTTTTTTACAAAATTATGATAATGCAAACAAATCCTCTCACCTTTTGTTTTTTT
+TTTTAATTTTTTTTTTTTTTTTTTTTTTTCTTTTGTATTATTATAATTATTGAATGCTAT
+GATTTAAAAAAAAAAAAAAAAAAACCAAAAAACCAAACCAAACCAAACCAAAACAAACCA
+AACCAAACCAAACCAAACCAAACCAAACCAANNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNATTTTTCTTTAAAAAGTTAAAAATCTGGAAATTTTCTAATTAACTTGGT
+TCCCAGGTTTTTTTTTTTTTTTTTTTTTTTTTTTTAAGTCTTTTTTATATGAAAAATGAA
+ATAATCAAAAAAAGAGATTGTTGTTGTTGTTTGTATAAAGCAAAATTTGGGATGCTGTTG
+AAATAAAAATTTTCAAAAATGGCTCCTTAGCATAGTGGTATTGCGCTTCCCTAGTAAGGA
+AGAGGTCATGAGTTCGATCCTCATAGGAGCCTTTTACATTGAAAAACAAAATAGATCGAA
+GGTTCGATTCCCCATAAAAACCATATTAAATAAGAACCTATTACCCACCTTCTACCAAAA
+TAATTAACTTGGAAACTGCTTCCAAATCTTATCTCTTTGAACCAATTTTTTATTTAACTT
+TTAATACTGGGCTAACACACTTTTTTAAAAATTAAAAATCCATTTTTTAAAAAAAAAAAA
+AAAAAATTAAATTTTAAATTCACAAACAAAACTATTAATTGTTTATTTCCTTAAACGTAT
+AATCCGTAATTAATAAATAAAAAACTCTGCCTATTAGACATCATAATGCATAGGTTTCTT
+CCCAACATTGAGGGGCAGCGGTTAATCGTTTATGCTTAATAGTGTGTTTAATTATATTAA
+AAAAACATGTATTAAAAGGCTCCTATGAGGATCGAACTCATGACCTCTTCCTTACTAGGG
+AAGCGCAATACCACTATGCTAAGGAGCCATTTTTGATATTTTTTTTTATAACAGAATTCC
+AAGTTTAAAATAATTTCAATTCAAAAAAAAAACAAAAAAAGTTTAAAATAATTTCCAATT
+GCCTTATCCATTTCAAAAAAAAAAGTTTAAAATATTTTCGTCAAGAGATTTCTATTGCAA
+GATAATCTGACATATTGGGAATTTATAAATCTATAACATTATTATATGGAATGATTTGGA
+TATTTCAAAACTAATTATAACCCAAGAACAAGAAAAATATTCAATTTAAATAGCTGTTTT
+TCCTGAATTTATACAATACAATAATTTTTTTCCTGAATCTATTGAATTTATTTTATTTTA
+ATTTTGAAAATAAAATTTTGGATGAATATTGTTGGAGAAATTATTAGATTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTGGTATTTTTGAGAATTCTCA
+CAAGTGTCAGTTGGTCCAAAAAAAAAAAAAAAAAATACAATTTTTTTTATTTTTATTTTT
+TTTTTTTTTTTTTTTTTTTAATTTTTATTTTTTAAAGTTGTATTACATGAAATTTTAAGA
+ATAAACTTTATATGTTTTTTTTTTATTCTTAAAATTATATATTTAAATATATTTTTTATG
+TATTTTTGTTTTATTTAAATAACACAAATTTATAAATTGTAATTTATTTTATATTTTTTA
+TTTATATATTTTACACCACAAATACAAAATGTCCGAGCATAATAGTGATATAGTTCATCC
+ACCAACTAAAGATTGTATTGTAAGTAATATTTTTTTAAAAATCACTAAATATACTATTTT
+ATTTATTTTATTAACCAAAATTTTTTAATTTTTTAATTTTTTTTTTTTTTTTTTTTTTTT
+TGTGAACACAGACGAGATTAAAAAGAGAATTTCAAGAGATTAGTAAGAATCCAATTGAAA
+ATATTTTAGTCACACCATCTCGTACGTATTTCAACACATATAAATATTTATATATATATA
+TATATTATATACAAACTGTTTACTAATAATATATTTTTTATATATTATATATTTTTAGCA
+AGTAATATTTTAGAATGGCATTATGTTATTTTGGGTGCATCTAATACCCCCTACGAAGGC
+GGTGTTTATTATGGTCAATTAATATTTAAATATAACTATCCTCTTTCACCACCATGTAAG
+CTATCTCTTTTTTAAATTTTACTATTATAAAATTTATAATATATATATAAATTAATACTA
+ATTTGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCTATAGCAATTTTAATG
+ACAACACCAAGTGGTAGATTTGAAACTCAAAAGAGATTATGTTTATCAATTTCAGATTAT
+CATCCAGAAAGTTGGTCACCAAGTTGGAGTACATCTTCAATTTTACTTGGATTATTATCA
+TTTATGTCTGATAATGAAGTTACAGCAGGTAGTATAGTTACAACAAATGATGAAAAGAGA
+ATTTTAGCTACAAAATCAATGGATTTTAATAAGAAGAATAAAACTTTTTGTGAATTATTC
+CCTTATTTAGCGATGGATGAATAATAATAAAGTATAAAATGAAAAAAAATGAAAAAAAAT
+GAAAAAAAAATATGAAAAAAAAAAAAAGAATAATTAAATCCGAGAATCCTCTCCTTTTTT
+TTTTTTTAGCGATGGTGAATAGTAAGTTCAGTCTTTATTATTTCATCATGATTTGATTTA
+TCATCCTTTATATATATTTACATTAAAAAAAAAAGGGGTTCTTTAGAGTCGACAAGCAGG
+TTTTCAAGCCGAAGTGNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNTACA
+AATAATCAAAAAAGAGATAGCTTTTATAAAAAATTAATGAAAATAATCAAACAATTGATA
+ATGAAGAAAATCATGATACAATTGGGTTGGTACATAGTGAAGATGAAAACAATGAAATTA
+TAATGGATCAAAATGAAGCAAACATTTATAATGAAAATAATGAAAATAATGAAAATAATG
+AAAATGAAAATTGTCAAAATGAACCAATAAGAATTAAAATAATAATATAGATAATTAAAA
+ATCAAAAAAAAAATTAAATTAAACTCAAATTAAATTTTTAATTTTGGGAATTGAAAACTC
+AATAAGTTTAAAGCTACTTGAAAAATTTAAAAGTTTTATAGACAAAAATAAAACTAATTT
+AAATTAAATAAGATACACACCTCAATATATGGATAAATTATTTATGGAAGATTTTCAAAT
+AAAAGGAGAAACATTTATAAATAAATATTATGATCACTCAATTTTTTATTTTGAAATTAA
+AAAAGTATTAGAAACTTTATTAAATAAAAAGCAATTTTTTGAAAGAATAGATTTTGATAC
+AGATTTTGGAACTGGAATTTATACAAATTATAAAAGTGGTCAACAATTTAAAAATTTAAA
+AAAAAAAATAAAAATAAAATTGTTTTACTTAGAATATTCACTGATAGTATGCAACGTCAA
+AACATGAAAGATTATACTATAATGCTGGATATAGAAAATTATATTGGAAATGAATTTAAA
+AATAATAAATTATTATTATTTGTAGTACCAAATGATTGGTTACTTAATTTTGATCAAACA
+ATTAGGGCATTGTTTTCATCTTTTATTGGGAATGGCTTTAATTTAATTATTGAAAATGAA
+CAAATAGATGTTGTACCGTTTGGACTGACAATGGATATTCCAGAATTTAGAGCATCGTGT
+AAACTTAATGGACATAATTCAAATGAATATGCATGTCACACATGTGACAAACCAAGAGAT
+GGTTTATTTATTTGCAAATCAGGTGCATTAAGAAAACAAGAAGACATTACAAATTTTCAC
+TCCACCAAACCTAATTATGCTGAATTAAATGCTGATATAGAATTAAAAAAAGTATGGAAA
+AAAAAGCAAAAGATATTGGTATCGAAGGTGTGGACAGAGGGTGGGTCGAACCCTTGTCCA
+TTAATTATTTAAAAACACAACCAGACATATTACATAATATTTTATTAGGTGTCGCACAAA
+GATGTTTAAATTACATTTTTGATAAATATAAAAATAAAATTTCAAATTTTTTAAATAATT
+TTAAAAATGCAAAAATAATAGATAACAAACCAAAACCATCAATTTCACTATTTGCAAATA
+AAACAAAGAAAGGAAGAGAGAATAGATCAATATTATATTACCTTTTAATATCAATTAAAA
+ATCAAATATCAAATGATGATTGTTTTAAATTATATAGTGACTCTTTTGATGAAAATGATT
+TAAATTCACTTCAAGTATTAATTGAATCGTTTAATTCAAAGTAAATTTAATTACTGAAAC
+AGAAATAATGAATTTCCACTTGTTGTTACATTATCCAATCTATATAAAAAATTGGGGTTA
+CCAAAATACACTTCAGCTGAAACTTTTGAAGCACAATTATCAAGAATTAAAAACTATTTA
+AATAATAATACAAATAATTGAGATGAACAATATGAAAGGGTTACCAAATTAAACATGGTG
+AAATTTTTTAATTCAGTAGATAAATAAAAAAGTATTGAAAGTACAGCATTAATTATTGGT
+AACAAAATAAAAAATCCAGATAATTTAAATAACATAAAAATTAAATTAGATTCATTATTT
+CAAAATTATAAAAATATAACTTTTCACTCATCAATTAAAAATAATAAAGAAACATACAAT
+GTTGGTGATGCAGTTGAAGTTGCATCAGATAATGAACTTTCAGTTAGATGGTCAGGTATT
+ATCAATTCAATATCAATGATTGAAATGGTGATAACATAATAAAACATGCAATATTATTAA
+ATTATTTTTGACAAATATGTTTGGTGACCAATTTAACAAATACCATTTTCTTTCAAATGA
+ATTAAATTATATTACATATGATAATATTCTAATTAATGTTATACCAATTCAAATTGATGA
+TACCAATTACCTTATAATTTACAAATGCCACGATTAATTCTCGGTTTCAAAAAATAAAAA
+ATAAAAAAATTAAAAACTTTTTTACATAATTTTTACGTTGTTATGTAAAAATTTTTTTTT
+TTTCAATTTTTTTTAATTTTCGGGCAGACTGAAAAAGCGAAAATGATTTCAATACATATT
+TTCTTAAAATGAATTCATCTGCAAATTTTATAGCACCAAATGGTAATGTACCTGATTTTA
+ACCAATCACCAATCCAAATAAGAACAAACAATAATATTTCTATCGGAGATGAATCATTTA
+ATAATTTGTCAATAGGTAATGTATTAGGAACTGGAAATGCTCCAAACACAATGGAAATCC
+AGAGAATAATAATTAGAAGAGTTCAAATGCCAACTGTTCCACCAATTCAAGAAACAGTGC
+AAATAACCACAAACCCACGTGTAACATACTTTTATAATAATTATTAAGTATAATTATAAA
+ATATAATTATTAATTAAAATTATTAAGTATAATTATTAATTATAATTAATAAGGGTAATT
+ATTAAGGGTAATTATAAAGTTCACTTAATAAGAATACTTAAAAATAATAATTAAAAATAA
+CATTTTATAATAATAATTTAAAATAAATTTTAAAAAAAAAAAAAAAACTAAAAATAAAAA
+AGAATTAATTAAAAAGTAAAAGTATTTGAAATCAGAAATTTTTTTATTTAATATAATTGT
+GAAAATTCTAAGTGTATTAATGACTTTAACAAGGGTCATACAACATTTATAATTGACTAA
+TTTGAAAAGCAGAACTTTATTTCCATTATAATTTGTACCAAAAGCATACTTTTGAAGGGG
+CAACCTAAAATATAATTATTGTTTTTTAAATTATATTAATCTCTTTATTTTATATTAATT
+TTTTTTTTTAAAAAAAAATTATATTGACTTACCAGTAATTATTTAAGTGAAGTATCAATT
+TGATTGAAGTGATTGTTGGTATAATAAGAAAGGTAACCTAAAATTTAATTATTGTTTTTC
+AAATTAGTCTATTTTATTTTAATAATAATTTTTTTTTTTTTTTTTTAAATTTTTTTTTTT
+TAAAAAATTATTAATCTTTTTATTTTTTTTTTTTATTTTTTTTATTTTTTTTATTTTTTT
+TTAATTTTAATTATCTTACCCTACCAGTTTTGATTTAGTGCAGTTTCATTTTTATTTAAA
+ATAAGTGAAGTTGGATAATATCAATTTAAATTGCCATTTCTTTTTGGTGTTCCAGATGAT
+GCAATATTATTTTTTATATTTAATTTTTAAATAATAATTTAAGTCTGAAAAATAATAACC
+GAAACGAAAAAAAAAAATTGAAAAAAAAAAAAATTGAAAAAAAAAAAAATGAAAATAAAA
+ACCCACGTAAAAACGTAAAAGTTATGTAAATAATATAATGATTCTTTTAATATTATTTGC
+TTATAAAATAATAAAACAAAAAAAAAAAAAAAAAGCAAAATATTTATAGGTTTAATCATA
+TAAAATTATTATTAAAAAAATCAAAAGAATTTAATAATAATTCATTTAAATTAATTGATT
+ATGTTAAAGAAATTAATGGTGAAACATTTTTTGATGATAATAAATTAATTAAAGATGATG
+ATGATAATTTTAAATCATCATATAATTATACAAGTGTTAAATTAAATGATTATGATGATT
+TAAGAGAAACAAGTTTTTTAAATTCATTTCAACAAGAAGTATTTTATAATTTCATTTTTT
+ATCCAGCATTATTTCAAATTTATTCAAGTACAAATGATTTTAATAGACTATCTTCATTAC
+CAAAAGAATTTGGTTACTTTAAAGATTGTAGAAAATCGATTTATAATAATCAATTAATTA
+TGTCATCAGTATCATTATCAAATAATCAATTATTAAATTTATCAAATTTAATAAAATTAA
+ATATTTATAAATATAAAAATTTTGTATTTTCAAATAAGAATCATACAAAACTAAATGATG
+AAATAACATTATCTGGTCAATCATTTTTAAATATTAAATTTTTAATTAATGGATTTGGTG
+ATAAATTAAATATAACAAATAAAAATCCAATTGAAAGTTATTCAGTATTCTTTGAAAGGG
+ATTCATTATGTCAATTATTTAAATTATTATTTAAAAAATTAAATGTTAAAGAAGATTGTC
+AATCTGAAGGTAATATTTATCAAACAATTGGTATTAGATCAGAAGTTAAAAATTATAATT
+TAGATATAATGAAAGCTCAAGCATATTCAACAAAGAAAGGTCCATTAAAATTAAATAGTT
+CAGGTGGTGGTTCTGATAAATCATTTAAAGGTTCAACTGGTTCTGATCAATGTGGTCCAT
+CAAAAAGATTTTCATGTCAATCAATTGAAAAAGCTGCATTAGAATTTGGTTTCTCTGAAA
+GTTTTATTGATGCTAATATTAAAAGAAGTGGTGGTTCAATATCACTTGGTCAATCAATTG
+TAAAAATTCCAAAAGGATTTTTAAAGAGTTATTTAATTTTAATTCAATACTTTGAAACAT
+CATATAATCAAAGAACAAGTTCAAGAATTGAATTTCGTTGTGGTCATGATTTTTTTAATC
+AATTTTTAAATCAAGAAAATTACTTTTTATTACTTTTATTATCAAGAATTAATTTTATAC
+AATTTAAAAGTGAATCATTCTTTAAAATTCAATCAATGATGTTAAAATCTTATAGATTTA
+TTTTAATTGAATTATCAAAAACTTTAAATTTTATTGGTTTTAAATCAAATGAAGAGTTTA
+TAAAATTAAAAAGAAAATTATCAATTGATAAATCAACAATTAAAATTAATCAATTAGAAA
+GAAATAAAGTACTTAATTTTCATCCATTATTATTACCAATAAGATTATCAATTCAATTTA
+TTGTTCAATTATTTCAAGGTTTAATAAGTTCAATATTTTTTAACAAAGAAATTGTTAATC
+GTGATATTTTTAAATTTTTAAATTTAGATTTAAATTCAAAATTAAATGGATTTTTTAGTA
+TTTCATTTGAAAATTCAATTAAATTATTTAAACCAAGTAATAATCAATTTATTTCATTAA
+ATGAAGAAAAAATAGGTGATCTACCAATTTTATCATCAAATAATATTAAAGAAGATTATT
+TATTTAATGATAATTCAATTAATTTTAATATTTTAAATGGTAGAAGTAATCAAATTTACT
+TAATTATGTTTCCATTTTTAATTTTTGAAAATAATCAAGAGATAATTAAATCAATAACAA
+CTTTAAATTATAAAATTGATACTAATGAAAGATTTAATGATAGATTTAATAATTCAAATT
+GTAATTTATTAATAAGAATTTTAAATAACTTTAATATTAATCAAAATCATTATTTAAAAA
+GAAGAGAAGTAAAATTAACATACTCAAATATTGAAAGTGAAGAATTTAAATTATATTATA
+ATAGTTATGGTAGTTCAAAAGTTAATCAATTTATTTTAACTGATGAAATTTCAGAATGTA
+CAAGTAAAATTGAATTAATTAATTATTTAAAACCATTTTATCCAATTGTAATTTATGAAC
+CAATTAAACTATTAAAATATTCATCAAATAATTCAAAAACAATAACTAGCCGAAATACAT
+CATCAATATTTAAATTATTTCATTTAGATTTTATAACAATTAATAATGATATTTTTAAAT
+CAATTATTGATTTTGATTCAATTTCAATTATTAAAAAACATTTAGAAGATAACTTTGATA
+ATTTTTATTCAAATTTACTTTTATTTAAATCAATTAAATCTAGAAATGAAATTGATAAAT
+ATATGCTTCAAATTTTATATTCAATATTTGATTATTTAAAAGAAATTCATCCAATATACT
+TTATGGAAGAAGATAGTGACAGTAGAATTAAGAAAGTATCATTAGCTTTAAAATTATATA
+ATCATTTCTTGGTTACATTAATTAAAATGATTGAAGAAAGATTCAATGAAAATAGTACAA
+TTAACAATAATCAAAATACTAAAGAAAATATAAACTTATTAAAATATGAATTATTAATTT
+CAATTTCAACATTTTTAATTATAATGGATTATGATTATATTATTAGATATCAAATTAAAG
+AATATTTTAAATTAAAAGATGATTTCGATAAAGAAAATTATAATTATCATAGAATTGATG
+AAAGATTCTTTAATTATAATCTTGGTTTTTCAATGGTTTCAATTAAAAATTCAAAAGAAA
+AAAACTTTATTAATTCATTTAATCATTTTATATTTTCAAAGCAACCTTTCTTTTTAAAAG
+GTTACTCAAATATATTTATATTTTCAAATGAAATTATTAATAGAAGTAATGATAATAAAT
+TAGATTTAGAGAGATTTTATTCAATTTGTTTTAAAAAATTAAAAATTAATTGTGATATAA
+TGTTTATTTCTTCAAGTTCAAATAGTTTAGTATATTATAGAAAAGATAATAATTTAAATC
+CAGTTATTGTTGGTAAATTAACAACAAATTTTAAATAAATAAATAAATTTTTTTAGACTT
+TTAATTTTTTTTTTTTTTTTTTAATTTTTTTTTTTTTTTTTTTTTACAATATATAAACTT
+ATTTTTAGAAAGGAAAAATGTTTATTTAAATATGAATAACTTTAATTAAATTAAGAAATC
+AAAATTTTTTTAGGGGATCCCTTTTTTTACAGGAGGGGTACCCCTCTTTTTGTAGGAGGG
+CGCCTCACTTTTTGGAGGAGGGGTACCCCTCTTTTTTGAGAGAGTTATTTTTTTTGCTCC
+AAATGACTAGGATGATAGATTTATCCTAGTTGGCGCGCGAAATTTTAACCTATACCATTT
+TTAGTAATAAAAAATTATGATCTAAAAGTTTTACACAGTAATAGATTATCAATAAGGACA
+TTTTAATTAATTTTTTTTATCAGATTCATTTTTGGCAAAATTTTGATTTTTTTGAAAAAA
+TTTTTTCTAAGTTAAAAAATCCAAAAAAATCCAAGTTTTTAAAATATGCTTAGATTTTGA
+CCGCGTTTTCAATAAAACAGGTTACTAACATTTCTAAGGTATACTGGGCTTATCCGCTCA
+ATTTTTGGGGTCATTATAAAAAGTGACTTTTTTAAAAGTGACCTACACCCATATAAATTG
+AAAATTCTACACATAAAAAACTTGTTAAATCATAAATTTAAGGTTACTAGCGCTAACGCG
+CGTTATCTGGGGGGTCGTAGTAAAAAGTCAACGCAACAAAAAGTGACTCCAAGTTGTCAT
+AATACATATATATATAATTTAATAGTTAGCATAAAATTAGTTCTACACTTTTGCTAAGTT
+ACGCTCGTCAACAGAATTTAAATTAAAGGTCATGGTAAAAACTTTTTTTTTCCGAAAAAA
+ATTTACCATATTAATTTTTTTAAAAAAAAGTTTGATAAAAAAAAATTATTAAAATTTTAT
+TATTTTTTAATAATATATATGTCATTAGATGCGTATTGGAGTTGTCTATCCAACAAGGGT
+AATCCGCTTGATTATAAAAAATATTAGACCCCTTAAACAGTCGGATTAGTCAGTGACCAT
+CGGTTTTTTCCACCGAGAATCGAACCCGCGACCCTTCAATTTTTGCACGCTCATATCCAG
+TCAAGCTAGAGTCACAATTTTGTCAATTTTTTCATTTTCAAAAATTTCTCCAATATGTTT
+AGATACTGAAATGAAGAGATTGACTAAGCGGATAAACACTCAAAAATCGACGATTGAATG
+TAGTTTTTAAATATCATATTGAAATCACTTATAAAGGTAATTTTAAATTATAAAAATGGT
+CTCTACTAAAAAATGTTAAGTTTTAACTCGAGCTACATCAATATAACTTATCAATTATTG
+TTCAGCATGCTTTAAAACGCTTACTGGCGAATTTTAGTCGAGTTAGCTGCTCATTTCAAA
+AAGTTATTAAATTTTTAATTTTTCAATATTTTCAAAAATTTTGCTTTTTTTGGCAACTTT
+GTAAGGTTCTAAAAATGGGTGAAATTTATCGATGACTCTACCGTGAAGTAACTGTAAGTA
+GCTATTTGAGTCTAGTATACTTATCCGATAATTTGGTTATCTTAGAGGGTCATCATAAAA
+ATTTATTTAAATTATATGTTACAAGTCGAAAATTTTTTTTTTTTTTCAACGAGTATAGTA
+AAATTGAAAAATATCCAATACTACGAAATTGAGTGAAGATAGCCAAATACACAATATACC
+TGACAGTAAAATACATATTAAAATGATTTTTTCGATTTTTTTTAATTAAATCAAAGCTAT
+AAACGTATATTATAAAATATTTTTTTTCCCCTCAAAAATTTTTTTTTATTTGTATACATA
+TAACTGTAGTCATGACCCCCTGACCTAGGTAACCGACTAGTCCCTACATAAAAATGGTAA
+TAATTTTATTTAATGGGGTCATTTTGGTCTCTATTCAGGGGTGTCAATGGTATTTTACAA
+ATCCTACAGGTTAAGAGTTCACTCGACCGTGAGGTAATGGTAGATACTAGATAAAAAGTT
+ATTAAAACCTGGGGTCAATTGATTCCAACAGAAAAAGAAATAATCGATTTTTTTTAGGTA
+CAATTTTTTTTTAAGGACCGGTACCACTTTAGGCACCATTTTATTGGGTAAAATAAACCG
+ATTAACTCTTTTATTAGTGATATTATTATAGGCCAGCTCCTAAAGTTTTTATACCTATAA
+AAATTATCAGTTAATATGGTAAATAAATTATCTGTTACATATGAATTATCTGTTTGAATT
+ATCAAATTATCTGTTGAAAATCAAAATTTTAAAATGAACTATAAACTATGTAAAAGTTAT
+AAAAATAGACAGAACGGTAAATTTTAAGGTGTTTTAAAATTGTTTGGACGATATACGACC
+ATATCATCATACATAAACCCACTTCACAAAATTAAAAAAAATCAAAATTTTTTGTGATAA
+AATATCGGTTACTCAATCATATTCAACATAGAAAAAACATACAAACCCATTTAAATTATC
+AATGACTGGTAAAACAATTTTTTCCAGAATTTTTCTATGTCATTTTATATTATATCTGAT
+AGTTATACAAAATTTGACAAATTTTTAAAATGGTAGTAATTTAACAGTTACTTTATTATA
+GGATCATATATATGCATTATTTATAAGTTTTTACATATTTTGGTGATTAAGGAACGACAA
+GTAATAAATTTATGATAATTATTTGTTTTCAAAAATTACTATGAATTGTATATGTATGAT
+AAAAAATTGAAACATTTAAATATGAATATCTATCAAACTTATACCATTAGATAGCCCTAT
+TTCTCTAGTATTTTGTAGTTATGGTCTAGATTCACTCAATTTCTTAGTATTGGATATTTT
+TTCAAATTACATGATTCGAACTTCAATTTTACCATATTAATTTTTTGAAAATTTTTACCA
+TATAAATTCAAATTTTTTAAATAGTCATTTAAACAAAATCCGTCAAATAGAAATATAGGT
+TATCGATGATTTTGAGTTTACCTGGAACGTTTGGCAGACTTAGACGGACATGATAAAAAT
+TTGAGAATTTTAAAAAATTAATTAAAATTAAATAATAAAAAAATAGTTTTGGTACTTTAA
+CTTGGAGATGAGTCGTCCAACGAGTACAGATAGATTAAGAATTGAATTCTACACATACAG
+TTACCCATTGGTCGAGTCAACCGGTCATTTTGGTACCTATCGATATTGATAAAGTCAAAT
+TGGTACCCATTTTTTTCAATGTAAAAATTTTAGTTTTTTTTATATTTACCCATTATAATT
+TTATCATATACATTTTATTTTATTATCATTAGATAGATCTAATTCGGGGCTATTTTTTGA
+TATTTTGAAGCACTTTGAAATCTCTCATTTAAGTAATTTAAAAATTTTACAAAATAATAC
+TTCAAAATTTTTTTTTTCAATTTTTCGAAAATTAAGGCGGCGCGCAAAAAATTTTTTTTT
+TATAACAAAATGGTATTTAAGTGATAAAATGATTAAAATTGATAATTCAATGATCGTATT
+TGTAGTCAAATGAAAGATTAAGAAATTTCCTATATTAAAATAACAATAATATTAATTAAA
+TACAAAATTTTAATTAATATAAAATTATTAAAAGATAGTAGTGTCAAAATTTTTTTTTTT
+GTTAAACTAATAAATTTTCTAAAAAATTTTTCCATGCATTCAAATCCAAAATCCATAAGG
+TTATCGACTATTCTCTACAATTTGTATTTGTTAAAATTCTTTCAAAAATTTTTTTTAAAA
+ATTTCGAACAAAACTTTTTTTTTTTCAACGTAGCATAAAATTTATTTTTTCAAAGTCAAT
+CAAAGTCCAAATGTTATAAAACAAATTTTCTAAGGTATTCTAAGGTATAATTATTCAAAT
+AACGGTTCATTTAGAAATTTTGACTTTTTTTTTTTTTTTTAATCAAAGTTATATAGTAAT
+TGATAAGATAAATACAATTTTAAGTGATAAAACAACCACATAATGATAGATCATGAATTT
+TTAAATATTTTTATATTAATTAAAATAGTTAAATCATGTAATTTGATCAATATTGATATC
+TAAAAAGTTTTGAGTTCACTTTTAAAAATTTTTTATTTCAAAAAAAAAAATCAAAAAATT
+TTATTTTTAACCAACCCGAGTGTTCAATGTCTGAATAAAATTTTTTTGGCAATCTAATAA
+AGGAAACGCGCTCACTCTGGTGGCTCATGGTGTCTACATAATGAGAAATCTTTAATTTTG
+ATTTTAGGTTATGAAATTTTAATTTCACTCGACTAAACGTTCCAGGTATTTATTACGCCA
+TGAGTTACACCCGTTCCATAAAATTTAGAAATTTTTTAAGTCAGTGTAGTTTTTAATTTT
+TTTCGATATTAATTTGAGCTCCTACATATATAAAACAACCTCAAATCGATTTATCACCAT
+CGATTACCCTATAATATGTCAAAGTGGCATCACTATATACCTAAATCATATCATTTTGAG
+AGAAAAAAATCAAAAAATCTCTGACTTAGAAAAATTGAAAAAATTTCCCATACAATTTTT
+ATATGGGAATTTTCGAAATTTTTCTAAGTTAACTTGCGACTACCCGACCTCTGGAAATAA
+GTCTGATGACTATGATTACGTAAAATTAAGTAGACATATCGATAGAACTTTTAATTTTGG
+ATCGATTTGTGGTATTTTTATAACTATAGGGGGTCATTAATTATTATAAAAATGTGTCAC
+AAAATCGTTACCATGGTCACCACCAAAAATTTTTTATGATTTTAATTTTAATAAAATTCG
+TAAGCAAATTAAGATAGAAAATGAACTCTAGTATATTTTCTAAAAAAATTCCATTAAATT
+ATCACCTATTTTAACTAATATTCATATAAAAATATTTTTTTTGTTCGATTTTTTTTCAAT
+AATTTTTTAAAAAATTTTTTAAATCTCGACCGATTTTAATAAAAAAAAAATTTTCCGACT
+AAAAAATTGTGGAGAATCTATTTGGATTTCTAGAGTAGAGTCATCGTAAAACCTTATGTT
+GGAAATTGCGATTTTAAGAATCAAATTTTAGGATATGAAATATAGAGATCAGTTGTCCGA
+CGGTTCCTAGTAAGCTTTTCAGCATAGATGACGCCTAACTGAGGTCCATTTGAGTCAGTG
+GGGGGTCGCTATATTTCAACTTTTATATTTGACCCCCTAGAGGTCTGAAACAACGCCAGT
+TGGATAGGGAATGGTCGATTCACTAAAGACAGGCGAAAGCTGGCAGAGTCACCGACTTAA
+ATGATCACATTTTGAAGGGTTTTTTTTTTTTTTTTTTTAACTTAGAAAAATTTTCAAATT
+TTTTGCCATATAAATTTTATATGGGGAATTGTGAAAATTTTTCTAAGTTAGATTTTTACT
+AGTAATTCTTAAAAAAATTTTTATAACATTCTTATTAATTAATATAAATTAGATATATCG
+ACGTAACTTTTAATTTTGCATCGATCTATGGTAGTATCATATTTGTAATAGATAATTATA
+ATATTAGGTCATAGGTTTCTGGATCGATCCCATTGTCACCACTATAGATTTTTATAGTTA
+GCATTTTAACTAATCTAACCACCTCCAATATTCATAAATGTCTTTCAAGACGTTTCCATT
+CCCCGTTGGTAGAGTCATCGACTCATTTCATAGTCTAATGAGTAATTTTATAAAATTTTA
+TAAATTTATTAAATATAATAATTAACTTTTAAAAGTTAATTTTTATGATAGATGTTTATT
+TGTTCACACCGATTATATATTTGAAAATTATAACAATAAAAATTTTTTTTTTTTTTTTAA
+AAAAAATTAATTTTTTTTCATACTATAACCTTGACCAATATTTTTATTCGATAAAATAAC
+CGATTTAACTATTTTTAAAAAATTATAATTATAGAATAATTCTTATAGTTTCTAAATATT
+ATTAATATTTTAGTTAATATTAAAATTTTAATAGATAATAGTAACTTTTAAATTTTTTAA
+AATTTTTTTTTTTCATATAAATTTAATTATGATAAAAATTTTTTTTTAGAGATAACTACT
+TAACTAATAAAAACTATAATAATGGATATAAAACTAAATTTCATATTTCAAAAACTCTTT
+AGAATTGTTTTTTTCGGTCATTTTAAATTTTAAAAGTATAATATGATTTTAGTGATAAAA
+AAAAGAAAAAATTATTTTTTTAAAAATTATTAATTAATTTATCTGTTATTAATATTTATA
+ATTAATTACATATCTAATTATGTATAGTTTGGGTAGGTTATAAACCTTAAGAACAAATAA
+ATAAAATTTTTAGAGCTAATTTTTTTTTTTAACTTACACTATAAATTTCAATTCATATAA
+TAGATATTATAATGACCCTATATAGATTTTTTTGTACCATATATGAATAGAACACCTCTT
+AAAGTAGTTATAAATGGTTTATTTATTAGTTTTAATGGTTATTTCATACTTTTTTAAAAT
+TGAAAAAGTGTAAAAATTCAATTTTTTTTCAATTTTTTTTTCTTACCAAATTTAGAAGTC
+TTAGTTTTTTTGAAATCAAAAATTTAATATTAACTTATAAAATGACCCCTATAAGATAGA
+GAACTCAATTTTCTATAATTATAGGGTTATTTTAAGAGTTAATAAGCTTATTTCAATTTA
+TAGAAAAGTCTCATAAATTGTTAAAATTTTAATTTTTTTTTAATCCCTCTAAAAATCTAT
+TAAAATTTTAAGTTAACTCGACCATGAGGTAACAGTAGATTCTCCATTGAGTTTTCTATC
+TAAAAATGGTCTTATTTTTTAAATTGGAGGTCATTAGTTCATATAAAGTGGTCGATTAGT
+CAGCGGGTGTAAAATGAAATTTACGAGAATCGAACCCAGGACCTCGCATAAAATAATGCA
+ACCTTTTAACCAACTAAGCTAAGTCAACATTTTGGCCAACATTTTTTTTTCACTTTTTTC
+AGAAATTATAGTCAAAGGTTTTTAGATAGTTTTATAGATTGAAATGAGCTTATTAACTAT
+TTTTAAAAATAGATATAGATAGAAAAATTCATAGACTTTTTAATTGTATATCTAGAGTTG
+AGTCAATCAATTATCAATTAATTAAAAATGGTAAATTACTGTTACTGATTTTTACATTTG
+AAATTTATAATCTCGATATATTTCTTATTTCTTGATATATATTCACCAAAATTAAAATTT
+AGAGGTTTTAAAAAATTCTGTATTTTAAAAGTTTATTTTTTTTAACTTTTAAATTTTTTA
+AATTTTTTAAATTTTTTTTACAAAATTTATATATATAACACCTATTGATTATATAATTTT
+AATTTTAATTTATAATTCTGCACTCATTAGATAGTCAACTCAATTATCTATAATTATATA
+TACATATAAATAGTTAATATGCTCATTTCAATTTATAAAAATGTACTATAAGTTTAAAAA
+AATCAAAAAATTTTTTTTTCAATTATTCAAGATGAAAATGTATTAAAATCTTAAGTTCAC
+TCGACCGTGAGGTAATGGTAGATGCCAATTGGAGTAATATATTCAAAAATAGTTAAGTTA
+TTAAAAATGAAGGTCATTAGACCACATAAAGTGGTGGATTAGTCATCATATGTCAAAAGT
+TAAAATCGAGAATCGAACCCGTGACCCCTCTATAATGCAACCTTTTAACCAACTAAGCTA
+TTTCAACATTTTGGCCAAATTTTACTTTTTAATTTTTTTCAGAGGTATAGTCAAAGGTTT
+GTCGATAGTTTTATAGATTGAAATGAGCTTATTAACTATTTTTAAAAATAGATATAGATA
+GATAAATTTTTAAACTTTTTAATTGTATTTCTAAAGTTGAGTAAATCACTTATTAATTAC
+CTTAAAATTGTGAATTACTGTGATAAATTTCAAAAATTGGTGCACTTCAAACCGAGATAT
+CTCAATCAAAGTAGGTTAGTATTATAGAGAATCATTTAAAACCTCTAAATTTTAATTTTG
+GTAAATAGATCTCAAAAAATAAAAAATATTTTTAACTTTTAATTTTTTTTAACTTTTTTT
+TACCAAATTTATATATATGACTCCTATTGATATCATAATTTTAATTTTAATTAATAAATT
+TATACTCATTAGATAGTCAACTCAATTATCTATAATTGTATATACATTTGAATAGTTAAT
+ATGCTTATTTCAATTTATAAAAATATACCATAAGTTTAAAAAAAGTCAAAAAATTTTTTT
+TTTTTTACTCGAGATGAAAATGTATTAAAATCTTAAGTTCACTCGACCATGAGGTAACAG
+TGGATGCTCCAGGGAGTTATCTATTCAAAAATAGTATATTTATTAAAAATGGAGGTCATT
+AGACAATATAAAGTGGTAGATTAGTCAGCAGATGTCTAAAAATAAACCGAGAATCGAACC
+CTGGACCTATCACATAATAATGCAACCTTTTAACCAACTAAGCTAAGTCAACATTTTGGC
+CAAATTTCACATGGTCACTTTTTTTTTTCGGAGGGTATAGTCAAAGGTTTATCTATAGTT
+TTATAGATTGAAATGAGCTTATTAACTATTTTTAAATATATAAATAGATAGAAAAATTCA
+TAGAATTTTTAATTGTATATCTAAAGTTGAGTCAATAAATTATTAATTAACTTAAAATGG
+TGAATTACTATTATTGATTTCAAAAATTGGTAAGTTTTACACCCGAGATATCTCAATCAA
+AATAGGCTAGTATTATAGATAATCATTTAAAACCTCTAAATTTTAATTTTGGTAAATAGA
+TCTCAAAAAATAAAAAATATTTTTAACTTTTAATTTTTTTTTTTACTAAATTTATATATA
+TGACCCATATTGATATCATAATTTTAATTTTAATTAATAAATTTGCACTCATTAGATAGT
+CAACTCAATTATCTATAATTCTATATAATTATAAATAATAGATATGGTAATTTAAATTTA
+TAAAAATATATCATAAGTTTAAAAGAAGTCAAAAAAAATTTATTTTTTTACTCGAGATGA
+AAATATATTAAAATCTTAAGTTCACTCGACCATGAGGTAACAGTGGATGCTCCAGGGAGT
+TATCTATTCAAAAATAGTATATTTATTAAAAATGGAGGTCATTAGACAATATAAAGTGGT
+AGATTAGTCAGCAGATGTCTAAAAATAAACCGAGAATCGAACCCTGGACCTATTACATAA
+TAATGCAACCTTTTAACCGACTAAGCTAAGTCAACATTTTGGCCAAATTTCACATGGTAA
+CTTTTTTCGGAGGGTATAGTCAAAGGTTTGTTGATAGTTTTATAGATTGAAAAGAGCTTA
+TTAACTATTTTTAAAAATATTAATAGATATATAAATTCATAGACTTTTTAACTGTATATC
+TAAAGTTGAGTCAATAAATTATTAATTAACTTAAAATGGCGAATTACTGTGACAAATTTC
+AAAAATTGAAATATTTAATCTAGAGATATCTCAATAAAAGTAAGCTAGTATTATAGAGAA
+TCATTTAAAACCTCTAAATTTTAATTTTGGTAAATAGATATCAAAAAATAAAAAATATTT
+TTAACTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTAATATTTAATCACTTAATAAAT
+CAGTTGAATTACATAGTCTATTGTTAAAATCGATATCATTAGATAGAGAATTCTTTATAT
+TATTATAAAAACAATATATTTTTTTTTTTTTAATTTTTTTTAATTTTTGTTTATTAATTA
+TAAGTATCAACTAACCGATTTTTCATAGAATTGTCATATAATTTTTTTTTTTTATATAAT
+TTTTTTTAATTTTAAATTGAGTTAAAAATTAATAACCCTTTCATCCAATTATAGGTTATT
+GATAATTTTAAACACAAAAAAAAATATTTCAGACTCGTGCGCGCTAATTATAAAAATTTG
+ATTTTTGATTAAGATTTTAATTCTTAAAAATTTAAAATTAATTTTAGGAGCTTTAATGAG
+CTCTTAAAATTATAATTTATATACCAAACGATTTGTAAATTAAGTAGCAGTCGATTGAAG
+TATTATTTATTTGATTTTGATTTAATTTAAAAAATTTAAATTTAAAATATTTTTTTTGGG
+TATAAAATGACTTTTAAGTAACTTAAATGTGTTTCGATGACCTTGGAGAGTATTAGGAGT
+GTCGTAAATTATATCTATAGTATATTTTAAATATTATTTAAAAAATTTCAATGTCTAAAA
+TGCTAATTGAACAAATATTGACATTAAAATTTTTTATCACTTTTTTTATGGTAATATTGA
+TATTTATATAATAATTTTAATAAATTAAATTATCTAATTAAATTATAATTAATATATAGA
+AAAATTGGAAATTAACATAGGAATCTAATTATATACTTTTAATTATATTAAATGGTCATT
+ACATATTATAAACATTTACATTTATAAATTTATATGTAAATTTTTTTAAAAAAAATTTCA
+AATTTCAAATTTACAAAATCTATAAAAAATTTTTATGGTTACATAAAAAACATAAAAATC
+GATTATAAATAGATACTAGAGAAGTTAATCTACATTTTGAGATATTATAAATATTTTTTA
+AAATGTTTTTTGGGAACCTAAAATTTGTGTTGAAAATTTAGTGAACTTATTTTTTTTCAT
+TTTTTTTGGGGTGTCAACTTATAATATATTTTTATAATATTATTTAAGCATTTAAAATTA
+TAATTTATATGTCATATTGTAGATCAGCTTCTCTAGTTTATATTAACGCTTAATTTAATT
+AAAAATTACATAGTTATAATTTTTTATTAAATAAATAAATATTTTAATTTTTGAAAATTT
+TTGAAAATTTTTTGTTGACACCAACTTAAAATTTTTCTTAAAAAATTTATAATTAAGTTA
+TAAATTTATGGAAATTAATATAAATATACTCCTAACTCCATTTTACATCGTTCTAGTGTT
+GTTTAGAATTATTTAAAGGTCATTTTAACTCATAAAATTAATTTTATCATTTTTTGAAGA
+TAGAGATAAAAATTTTTTATTTGTATCTGTTTCAAATAGAAATTGACCCCTAAGAGTAAT
+TAAATTATTTGATACATAATATTATAAGTATAATAAATATTCAAATGGTTATTTCAGTGC
+CTATTCAGATAATTTACATTTTTTTTCAAATTTTTAAAATGAGCCGATAGAATTTTAAAA
+TTTAATGTAAAAGGTAGATAAATTACTGTTAAGACTAGTCATGGTAATTTAAAATTCAAA
+TATATATAAATAAGCGATTTTTTTGAGTTACAAAATTTTTTTAAGGGACGATGCAACTTA
+TAACACATTTTTATCTATTAAAAAAAATATTTAAAAATATAAAAATTATATATCCTGATA
+GACGTGAATTTAAAGTTTAATTTAATAAATAAGATTTAATTTTTTAAGGTCAGTAAATTT
+TTTTTTTTTGGAAATACTTGGATCGAAAAAAAAATTTTTGGAAAAAAAAAAAAGTTTTTA
+AAATGAACTTCCTGTGCGATGGGAGTAACTGGAATAGATAGATATTAATTTTTTAAAATT
+TTCTGATAGTTAATTATATTATTAAATATAAATTTTGATATATAAAAGTTATTTTTTTTA
+TTTTTTAAAAAATCACATAAAAAAAAATTATTTGTATATGTTCAACATGTAATAACACCC
+CTATGAGTAATAAAATTTAATTATGCACCTAATATTATTTTTTAAAAAATTTTAGGAGCT
+CATTTCATTGTCTATTCTAAGGTTGGTCATGATTTATGTAAATGGTTAAATTTGAGTTAT
+ATATATCCTAAAAAGCTACGGGTTTAGTAGATAATTGGTTTTTAAGTGGTAATTTAAATT
+TTCAACATCATAGACATACAAATAAAAAATTTATTTCAATAATAATTTTTTTTTTTTTTT
+TGGTCATTTTTAAAAAATTATAAAAAAAATTAAAAAAATTATTTATGTCATTTTTATAAG
+TACAAATAGATAGAAAACAGTTTAAAATATATATAAATATGTTTAGAATTAAATAAATAA
+ATTTTTTTATAATTTTTTGATATTGAATAAAAATTTTTAGTAAATTTTTTTTTTTTTTTT
+TTTTTTTTAACAATTTAATATAAGTCAATTTTAATATTATTAAAAATTATTATTAATCAA
+TAAAATGATATCTATAGTATAGCCAACTCAATTATCTATAGTTTTATATATTTAATAATT
+ATAAATAAGGTAATTTTAAATTATATAGTAATGGTTAAAGTTTTTTATTTTTGAAATTTT
+TTTTTGTATAATAAAAAAAGTTATTAAAAAATTAGTTTTAAATGGTCAATCATATATAAT
+AATATGCGTAATGGAGTAAGCTATCTAATGATACCAAATTTATTGTAATTAAGTAAAATT
+TTAATATATAAAATGGTGAAATAGTATGAAGGTCCACTTTTTTCATTTTTTTAGAAATTC
+CGGGGAATCGAACCCGCGACCCTTCAGTTATTTTTCAAAAACTAACTTTTTTTGGCTTGG
+CAAGCGCTTAACCAACTAAGCCAAAGCAACTTTTTAGCAAAAAAATTAAAATTCCATTTT
+TTTTGAAAAATAATAGAGTCAATTATTAGTTAATAGGTTTATTAATCGAAATTTAATGAT
+AAATAATTTTTAAAAAATCAATAATATAGAAAAATTACTTGGCTCTTAAAAAATCGTATT
+TATAATTAATTTAAAGGTTATTTTAAATTATAAAATTATAAATTACTAAGAAAGTTCAGA
+AAAAATCAAAATTTTTATCTAGAGATATTTCAATTTCATATATACAGAACTAATTGTAAT
+GATTTAAAACCTCTAAATTTTAATTTTTGTGCATATAAATTAAAAAATAAAAAATATTTT
+TAATTTTTTAATTTTTTTTAAGGTATCACTAAAATTTATTTTAGTATTTTATAAAATGAA
+ATTAACTAATTAAATTATAATTAATATATAGTTGAATTGAAAATTTATACAGAAAAATAT
+TGGTATATTATTTATTGATTAAAATTGTAATTTTAAATTTTAAAATATTAAATTATTGTT
+TTTTTTTTAATTTTTTTTAATTTTTTTTTTTTAAAAATAAGTGGAATAACTCAAAATTTA
+GAAAAAATTAAATTTTTTAAATTTAGTTTAATATTAAAAATTTATAATAAATAGTGTATA
+AAACAGTTATTTAAACATAAAAAACTAAATTTGGTTGCCTAGGATGCTAATCATAATTAT
+ATATGGGTCATTTTTTTTTTAATTTTTTCCATATAAAAATTTTCAAAAAAAAGTGTAAAA
+AATGGTCAATTTCACCAATTTCCAAGTTTTTTTTAGAAAATCAAAATTTTAAATTAAGGT
+TAAAATTAAAAATTTTATAATCCAATTATAGGTTATCGATAGTGGAGAATCCGAAAATAT
+AAGTTTTATCCTCTAAATAGGTCATTATAAATTTTTGAATTTTGATTAAGTAAAAATTTT
+TAAAAAATTTAAAATTGATTTTATCAACTTTAATGAGTCTATAAAAATATAATAAACATA
+CCAAACGATTTATAAATTCATAAGAGGTCGATTGATATATTATTTATTTGATTATGGGCT
+AATTTAAAAAATTAAAATTAAAATTTTTTTTTTTTAGTATAAAATGATTCTTAAGTAACT
+TAAATGTTATTTAATGAATTGATAAGGTGATATAGGTATTATATATTGTATCTTTGGTAT
+ATTTTAAATACTTTTAAAAAATTTTCAATGTGTAGAATGCTAATTTAACAAATATTGGTA
+TTAAAACTTTTATTGATATATTTTTATGGTAACGTTGAAATTATTATTATTATTTTAATG
+AATAAAATTAAATGATAAAATTAAAATTAATATATCAAACGATAGGTAATTGATAGAAGA
+ATCTAATGGTATAATTTTTATTACATTTAATGGTCATTAAATATTATAAACAATTACATT
+TATAAATTTTTTTTGAAAATTTTCAAAAAATTTTCAAATTTTTTTTCAAATTTCAAATTT
+ACAAAATCGACAAAAAATTTTTATAGTTACATAAAAAACATAAAAATTGATTATAAATGG
+ATATTAGAGAAGTAAATCTACATTTTGAGCTATTATAAATATTTTTTAAAATGTTATTTG
+GGAACCTAAAATTTATGTTAAATATTTAGTGAACTAATTTTTTTTAATTTTTTTTTGGGT
+GTCAACTTATAATATATTTTTATATTATTATTTAAGCATTTAAAATTATAAATTATATGT
+CAGATTGTAGATCAGCTTCTCTAGTTTATATTAACGCTTAATTTAATTAAAAATTACATA
+GTTATAATTTTTTATTAAATAAATAAATATTTCAATTTTTGAAAATTTTTGAAAATTTTT
+TGTTGACACCAACTTAAAATTTTTCTTAAAAAATTTATAATTAAGTTATAAATTTATGGA
+AATTAATATAAATATACTCCTAACTCCATTTTACATCGTTCTAGTGTTGTTTGGAATTAT
+TTAAAGGTCATTTTAACTCATAAAATTAATTTTATCATTTTTTGAAGATAGAGATAAAAA
+TTTTTTATTTGTATCTGTTTCAAATAGAAATTGACCCCTAAGAGTAATTAAATTATTTGA
+TACATAATATTATAAGTATAATAAATATTCAAATGGTTATTTCAGTGCCTATTCAGAGAA
+TTTACATTTTTTTTCAAATTTTTAAAATGAGCCGATAGAATTTTAAAATTTAATGTACAA
+GGTAGATAAATTACTGTTAAGACTAGTCATGGTAATTTAAAATTCAAATATATATAAATA
+AGCGATTTTTTTGAGTTACAAAATTTTTTTAAGGGACGATGCAACTTATAACACATTTTT
+ATCTATTAAAAAAAATATTTAAAAATATAAAAATTATATATCCTGATAGACATGAATTTA
+AAGTTTAATTTCATAAATAAGATTTAATTTTTTAAGGTCAGGAAAATTTTTTTTTTTGGA
+AATACTTGGATCGAAAAAAAATTTTTTGGAAAAAAAAAAAAAGTTTTTAAAATGAACTTC
+CTGTGCGATGGGAGTAACTGGAATAGATAGATATTAATTTTTTAAAATTTTCTGATAGTT
+AATTATATTATTAAATATAAATTTTGATATATAAAAGTTATTTTTTTTATTTTTTAAAAA
+ATCACATAAAAAAAAATTATTTGTATATGTTCAACATGTAATAACACACCTATAAGTAAT
+AAAATTTAATTATGCACCTAATAATATTTTTTAAAAAATTTTAGGGGCTCATTTAATTGT
+CTATTCTAAGGTTGGTCATGATTTATGAAAATGGTTAAATTTGAATTATATATATCCTAA
+AAGGCTATGTATTTAGTAGATAATTGGTTTTTTAGTAGTAATTTAAATTTTCAACATCAT
+AGACAGACAAATAAAAAATTTATTTCAATAATAAATTTTTTTTTTTTTTTGGTCATTTTT
+AAAAAATTATAAAAAAAATTAAAAAAATTATTTATGTAATTTTTATAAGTAAAAATGGAT
+AGAAAACAGTTTAAACTATATATAAATATGTTTAGAATTAAATAAATAAATTTTTTTATA
+ATTTTTTGACATTGAATATAAATTTTTAGTAAATTTTTTTTTTTTTTTTTTTTTTTTTAA
+CAATTTAATATAAGTCAATTTTAATGTTATTAAAAATTATTATTAATCAATAAAATGATA
+TAAATATTATAGACAACTCAATTATCTATAGTTTTTTATATTTAATAATTATAAATAGGG
+TGATTTTAAATTATAAAGTAATAGTTAAAGTTTTTTATTTTTTTATTTTTTTTTTGTATA
+ATAAAAAAAGTTATTAAAAAATTAGTTTTAAATGGCCAAAAATATATAATAGTATGCGTA
+ATGGAGTAAGCTATCTAATGATACCAAATTTATTGTAATTAAATAAAATTTTAATAAATA
+AAATGGTAAAATAGTCCGAAGGTCCACTTTTTTCATTTTTTTAGAAATTCCGGGGAATCG
+AACCCGCGACCCTTCAGTTATTTTTCAAAAACTAACTTTTTTTGGCTTGGCAAGCGCTTA
+ACCAACTAAGCCAAAGCAACTTTTTAGCAAAAAAAATTAAAATTCCATTTTTTTTGAAAA
+ATAATAGAGTCAATTATTAGTTAATAGGTTTATTAATCGAAATTTAATGATAAATAATTT
+TTAAAAAATAAATAATATAGAAAAATTACTTGGCTTTTAAAAAATCGTATTTATAATTAA
+TTTAAAGGTTATTTTAAATTATAAAATTATAAATTACTAAGAAAGTTCAGAAAAAATCAA
+AATTTTTATCTAAAGATATTTCAATTTCATATATACAGAACTAATTGTAATGATTTAAAA
+CCTCTAAATTTTAATTTTGGTGCATAGAAATTAAAAAATAAAAAATATTTTTAATTTTTA
+AATTTTTTTTAAGGTATCATTAAAATTTATTTTAGTATTTTATAAAATGAAATTAACTAA
+TTAAATTATAATTAATATATAATTGGATTGAAAATTTATACAGAAAAATATTGATATATT
+ATTTATTGACTAAAATTGTAATTTTAAATTTTAAAATATTAAATTATTGTTTTTTTTTTT
+AACTTTTTTAATTTTTTTTTTTGAAATGTTGCAAAGAAATTGAAAATTTTAAAAAATTAA
+ATTTTTAAAATTTAGTTTAATCTTAAAAATTTATAATACATAATGTATAAAACAGTGTTT
+TAAACATAAAAAACTAAATTTAGTTGTCTAGGATGCTAATCATAATTATATATGGGTCAT
+TTTTTTTTTAGTTTTTTCCATATAAAAATTTTCAAAAAAAAAGTGAAAAAAATGGTCAAT
+TTCACCAGTTTCCAAGAAAATCAAAATTTTAAATTAAGGTCAAAATTAATAAAATTCTCA
+TCCAAATATAGGTTATCGATAGTGGAGAATATGAAAATATAAGTTTTATCCTCTGAATAG
+GTCATTATAGAATTTTAAATTTTGATTGACGGTCGCTGGCCTAATACGAGCAAACGGCTG
+CCCACCGCCAGCTGACGGTTACTAGCCCACAACGAGCAAATGTTAGTCTTCAGCTAGCCA
+TCAGTCATTGGTCTATTGTGATCAAATGGCCGGCTGTCTGCCGCCGTCTGGCGGTCAGCG
+GCCTGGTACAAGCAAATGAACATCTACCGCCAGCCAGCCAGCCAGCCAGTCAGTCAGCCG
+CCACTAGCCTAATATAAGCAAACGGCTGTCTACCACCAGCAGCTGTCAGTGGTCCAGCGT
+GAGCAAATGCCCGTCTGCCGCCGTTTAGCGGTCGGTGATTCAGTGTGGGTAAACGGCCAC
+CAACCACCAGCTAGCGGTCATTGGCCTACTACGAGTAAAAGGCCTTCTGCTACCAGCTAG
+CGGTCGGTGGCCTACCATGGGCAAACGGCCGTCTGCCGCCAGCTGGCAGTTGGTGGGACA
+GGAGACAGGGGAAAACGGCCAAGTATCCATATAAAAAATTAATATGGGCAGATGGCCAGG
+TGCCATATAAAAAATTAGTATGGGCAGAGGGCCAGGTGCCATATAAAAAATTAGTATGGG
+TAGAGGGCCAGGTGCCATATAAAAAATTAATATGGGCAGAGGGCCAGGTACCATATAAAA
+AATTAATATGGGCAGAGGGCCAGGTGCCATATAAAAAATTAATATGGGCAGGCGGCCGGG
+TGTCCATATAAAAAATTAATATGGGATCATATTAAAAATTAATAAATTTAAAATTTTGAA
+TTATGCTCAAAATCAATAACTGACTAATACAATTATAGGTTATCAATGTTTTTAAGTTTA
+AATAAAAAAGTTTTAAAGTTGTAGGAAGTCGTTATAAAATTTTGATTTTTGATTAAGATT
+TCAATTTTTTAAAATTTCAAATTAATTTTAGGGATTGAAAAGAGCTCATAAATTTATTAA
+TTATATATAAAACGATGTCTAAATTCAGCAGGAGTATATTGATATATAATTTATTTATTT
+ATAGGCTATTTATAAAAATTAAAATTAAAATTATTCTTTTTTTAGGGTATAAAATGATTT
+TTAGGTAAGGTAAATGTGATCAAATAGTTTTTAAATATATAAAATTAACCTTTTAAATAA
+ATAATAGTATATTATAAGTAATTATAAAAAATAATGGATGTATAAAACTTAAATTGAACA
+AATATTGGTATCAAAACTTTTTCCGAAATTTTTTATAGGATTTCATTGAAAATTATTTAA
+GTACTTTAAGTTATAAAATGAGCTCATAAAATTATAAATAATATATAGATATATTCAAAA
+TCGATATATGAATCTAATGACATATTATTTATAAGTTTTAAAGATAATTTTAAATTATAA
+AATATTAAATTACTGGTAGCTCTCATATTAATTTTTTTTTTTTTTTTTTTTTTTTTTTTC
+TAAGTTAAAAAATTTTCCCAAATGAGCAATTTGACATTCCCAAATAAAAATTAAAAGTTT
+TTTATAATGTTACTATGGACAATATTAATGAAATTAAGTTATCTATCGATTTGTAATAGT
+AACTATAGGTTAATTAATCGATTTTAAAATTTTAATTTTTCAAAATTTTCAATTAAATTA
+ACAACTTTTTTAAGGTATAGTTACTCTTTAGAAAATATGTTACTATGTATACTATTAATA
+AAATTACATTATATAACTATTGTCAATAGTGAGTATCGAACTTAGAGCCCATTTTGAAAT
+TTTTTTTTTTTTTCCTAAATGAGCAATTTGACATTCCCAAATAAAAATTAAAAGATAAAA
+TATACATTACTATTGATAATATTAATAAAAAGGGTTTGCCTATCGATTGTCAATAGCAAG
+TATCGAATGTAGAGTCCATTTTGAAAATTTTTTTTTTTTTCCTAAATGAGCAATTTGACA
+TTCCCAAATAAAAATTAATCTATTTTTAATATGTTACTATGTATGATATTGATGAAATTA
+TGATACCTATCGATTGTCAATAGCAAGTATCGAGCTTAGAGCCCATTTTAAAAATTTAAT
+TTTTTTTTTTTCCAAAATTTTTCCAAGTCAAAAAATTTTTCCCAAATGAGCAATTTGACA
+TTCCCAAATAAAAATTAAAAGTTTTTTATAATGTTACTATGGATAATATTAATGAAATTA
+AGTTACCTACCGATTGTCAATAGCAAGTATTGAGTGTAGAACCCATTTTAAAAATTTGAA
+ATTTTTTTTTTTTTTGAATTTTTTCTTAGTTAAAAATTTTCCCAAATGAGCAATTTGAAA
+TTCCCAAATAAAAATTAAAAGTTTTTTATAATGTTACTATGTATAATATTAATGAAATTA
+AGTTATCTATCGATTTACAATAGTAACTATAGGTTAATTAATCGATTTTAAAATTTTAAT
+TTTTCAAAATTTTCAATTAAATTAACAACTTTTTTAAGGTATAGTTACTCTTTAGAAAAT
+ATGTTACTATGTATAATATTAATAAAATTACATTATATAACTATTGTCAATAGCAAGTAT
+CGAACTTAGAGCCCATTTTGAAATTTTTTTTTTTTTTCCTAAATGAGCAATTTGACATTC
+CCAAATAAAAATTAAAAGATAAAATATACATTGCTATTGATAATATTAATAAAAATGGGT
+TGTCTATCGATTATCAATAGCAAGTATCGAACGTAGAGTCAATTTTAAAATTTTAATTTT
+TTAAAATTTTCAATTAAGTTAACAACTTTTTTTAAGGTATATTTAATATTTAATAATATA
+TTAATATTGATTATATTAATAAAATTAAGTTATCTATCGATTGTCAATAGCAAGTATTGA
+GCCTAGAGTCCATTTTAAAAATTTAAATTTTTTTTTTTTTTTTTTCTCTAAGTTAAAAAT
+TTATATGGGATTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTAAAT
+TTTAAATTAGAGATTTAATTGTGCTCAAATTTATTTGAAATGATACCAACATATAGGTTA
+TCGTATATTTTGAATCTATTGGAGGTTGTTTGGTTTAATTCTGATGTCATCATCGATATT
+TTTAATCAAAAAAAATCCTTGGACTTTAGACACCCCTAAATTTTTTCAATGTCATCCAAA
+TTGAACCAAACTAAGGGGTAAATGATATTTGACAATTATTAAGTCTTTTTCAGTCAAAAA
+AAATAAAAATTTTTTTTTCAAAATTTTTTCAAAATTTTTTCAAAATTTTTTTTCTAAGTC
+ATTTTTGATGTTCGGATATCTTGATGGCCAAGTGGAAATTAAATGGTTACTATGAATAAA
+TTGTAGATAAGTATAAGTTATTACTATTATTCATAGCAACTATTAAATTTCCACTTAGTC
+AAAAAGATTTAACTAACTTTTCCTAAATGAGCAAAATCGATTTTGCGAAAGTATTTTATA
+AGGTAAAATAAGTCGGAATTCAACAAATAACTAATTAAATCATCATAAAATTTTAATTTC
+TACCTTTTGTCAATAGCAAGTATCGATATAGGGGCTCAAATAATTGACTTAGAAAATTTT
+GGGATTTTTGCCCAAAATGAGCAAAATCGATTCCCACTTTTTTGTACCCTTTGTAGGTCA
+AAATGTTATTTTTTTAAATAGGTTACTATTAGTAATATTCATTTCTGCTTTAATACTCCA
+TGTTGTACATAGCAAGTATCGAACTAGAACCTTATTATAAAAACTTTTTTTTCACCATAT
+AACGACCAAAGTGCGTTTCAGACGATGCGCGGCGACATCACCAAATACATATATATAGGA
+GGTAGTATTTTTAAAAATACCAAAATTTCTCTAAGTTAGAAATCACCATACTAAAAAAAC
+GAGATTTTCTAAGTCTTTACTATGTAAAAACTTAAAATTTCTAAGTCTTTTTATATGGTA
+TTTTTGACTTAGAAAAAAAAAAAAATACTACCTAGGAACACCCTATATGAGGCTAGTGGC
+AGCCTTAGTACCCCAATTGGATTTATATGGGGCTCATATAAATATTAATATGAGGAGCCA
+AGGAACGCCATTTGTATGGAAGCGCCAACGGCAGACGGCCAGTTTCCCATATTAAATTTA
+ATATGGGGAACTCATATTAATATGAGAGCAGAGGCCAGCGACATCCGAGTACCCCAATTG
+GATTTATATGGCGCTCATATAAATATTAATATGAGGAGCAAAGGTCAAGGAACGCCATTT
+GTATGAGACCGCCGCCGACGGCAGACGGCCAGGTGTCCATATTAAATTTAATATGGGCGG
+AGGCCAAGGAACGCCATTTGTATGACAATGCCAGCGGCCGCCGACGGCAGACGGCCAGGT
+GTCCATATTAAATTTTATATGGGCAGACGGCCATGTCCCCATATAAAAAATTAATATGGG
+CAGGCGGCCCGGTTCCCATATAAAAATTAATATGGGGATTCAGGAACGCCATTTGGAGAC
+AAGGTGAAAGCGTCTAGGAACGCCATTTGATAGTGTGTCTAAGGCAAGCCAGAGGCCTTA
+GGTATACTGCCGAAGGGCTATTTGTATGTGATGTGCCAAGCCATCAGAGCGCCAAGCGCC
+GCTAGACCCCATGCTATGGTGCTGCAAGGCGGATGACCGACCGCTAGCCAGCCAGCTGGC
+GACAGCCAAGGCACGCAATTAATATGGAGCGGCCAGCTGCTGGTGGCCATATCGGAGCGC
+AATTTGTATGGCGGCAGCAGCCAAGCTACCATAGTCCATGGGCTATGGCAGGCAGCATCG
+GCGGCTGACGGGCAAGGTCACACATACACATAGTCTAAGGCAGGCGCGCGCACGCTTGTC
+TCATATTGTTCGTCTTAGCGCACCACACAAAAAAGGCATAGCCAGCCCATGGACAACCCC
+ATTATATGAGGGTATTGGAGGCTGGTGGACTACTTTCTATGTCTATGTGGCGCTGGGACG
+TGGCCATACCATATCACGCACACACTCTGAGCTGTGGCGTGAGGCCACAAGCGCTTATCC
+CCATATTAATTTAGTATGGTATAATGATGCCCCTTGGTAGGGTGTCCCATACTAGGTTAA
+TGAGGAGATGAGCGCCCCCCCCTACCATATTGTTTTAGAGACCCAAGTACACGGTCCATT
+GCCCGCAGTGGTCTGGCCCCATACATTATCACCATAGGAGCGCCGTTAGGGGGTGCTAGT
+GTATGGATGATACCCAAACTCACTAATGCCGCGACACACAATCAAGCACCATCACCGGCC
+GACTAGCACACAGACTAGAGGCACTGGCAAGAAGGCTTTACCATAGCCTTGCCAGAGCTG
+AACGCAATTTGAGCCTCTCCAAAGATTGTTTATATGGAGTGCTCGACCGGTATCCCCCAA
+GTGTCAGGCCACTAGCAGCATGGATTAAGCCATAGCTCGACTTATCATATCACTTTGTCC
+GTCGAGCCGCTGGCCTCTACCATATGAGCTGTCGGCGATCTACTGCACCGCCTATAGCTA
+GTAATGTGGAGATAGGTAGGACAGTAAGGAGCTGCAAGGAGTATGGATATGCCAGCGGCT
+AGTGTGGGGTGCTGCCAGACGAAGTTGGCGGCGCCGTCCATTTTACTTGGCTTTTTTCTT
+TTTTGGTGATGTGTCGTGGGCTGGGTGCGGTGGCATGCTACCATATAGTGCGTCCGCATC
+AGACCCACGTCCTGACTGAAGTGGTGCCATGCTCCTTATTGAGAGACAAACCGCCGTCAT
+AGTGGCCGTGATGAGGAGTTATGACCATGGATGACCGCCAACGACCCGGTATTGAGGCTT
+AGAAGGGATTGCCAAGAGTTAGTAGTATGGGTGGTCCTTTGCCCATAGTATTTAACTTGG
+AAAAATTTTTGGACTTTTTAGTCCAAATTTCTCTAAGTTATTACTATGAGCATCTAACTT
+AGAAAAATTTGACCAAAAAATTGGTCAAGATTTTCTCTAAGTTAGATGGTCCCCATATGA
+AAAATTGGCAATTTTTCTAAGTTATCGCCTAAATCCAAAGAAGAGGGGGGTTTTTTCAAA
+ATTTTTTTGAGCAAAAAAATACTGAGTACCATACAAACTAGGTGTGACCATTAGCCATTG
+AGCTCGGTGACTACCCCAAATACATATACAAGAAGAGTGAGCAAGCAGATGCAAGTGAAA
+GAAGCCAGTAGGCGACTGACAGCATGCAAGCTGCAGCAGTGATACGCTAGTATCAGTGTG
+CTCATGTGGTCCTGCTGCCTAGCAGCGGTGCCGCCTCGTCTTCTGGACATTTTTTGGCAG
+ACAAACGGGTATCGGAATCAGTTGAGCCTAACCCCATGGATTAGCCCGTGGAAACTCTCA
+ACAGCGATTCACCCAATCATGTGCACTGCGACTGGCAACAGCAGTAGTGTACCGGAGCGA
+GTGGCCCATATAACGAGGTTCCTTCACTGGATCGGTAGTTGCTGGGTGGCGAGCTCCAAA
+CCGCCACAGCCATTTGCTTTATTGCGAGCAATGGCACGAGTCACCGGATGTAGCAAGCGC
+GTAAAAAACCTGTGCTACAAATTAATCGTGGAGCGTGCGCCGTCCTTTTCTAGGTATGCA
+TGCGCTCTCACACCCCAGGCGGCGACAGCAATGTCGGCTTTCTAGACGTGTCAAAGCGAC
+TAGGCCAATGCAATAGGTGACGGAGGAGCAATAAGGAGATCTGTTGGCAAAGTGCTGATT
+TACTTTGTGGAGCATGGTTAAAGGCCAGATTTAACTATCTGTCAGCTAACAATGTAACAT
+TTGATGAATCTTTTTAATTGGTAATAAAAGTGACGGGATCTAATCCTGTAATTTTGTGAC
+CTCTTCAAAGGGAAACATTAACCAAACAATCAAAACAAAAAATAAGTTTTGTAATTAATA
+TGTAATAGTGATTAATATCATGATACGTGTTATCTACATGCTTAACTGGTTGATCCTGCC
+AGTAGTCATATGCTTGTCTCAAAGATTAAGCCATGCATGTCTAAGTATAAATTCTTGTAC
+GATGAAACTGCAGACGGCTCATTACAACAGTGATAAACTAATAGACTTTCGGGTTTTACC
+TTTTGGATAACCGCAGTAAATCGGGGCTAATACATACAAGCGATGGGTGACTGGCAACGG
+AAGCTCAGCGATTATTAGCATTCTACCAATGCCTTCGGGTTTTGGGTGATACCGAATAAT
+ATTGCAGATCGAGGATTTATCTTCGACAAGTCTACTGTGTCACTGCCCTATCAACTTTCG
+ATGGTACGGTATTGGCCTACCATGGTTGTAACGGGTAACGGGGAATTAGGGTTCGATTCC
+GGAGAGGGAGCCTGAGAAATGGCTACCACTTCTACGGAAGGCAGCAGGCGCGCAAATTAC
+TCAATCCCAATACGGGGAAGTAGTGACAATAAATATCAATACCTATCCTTTTTGGAGGGC
+AATTGAAATGAACACAAATTAAAACTCTTAATTAACACAATTGGAGGGCAAGTCTGGTGC
+CAGCAGCCGCGGTAATTCCAGCTCCAATAGCATATACTAAAGTTGTTGCAGTTAAAAAGC
+TCGTAGTTGAAGTTTAAGGTTTACCGGGTTTATGTCATTTACCACTTCGTGGTTAAATCG
+ACACCGGTATCTCTTTCTTAATAGTTCAGCTTGTATTATCTTTGATAGTGCTTGTTTGGA
+CATTTCACTGTGAGAAAATTGTGGTGTTTAAAGCAGGCGTCTCGCTGATCTTTTGCAGCA
+TGGTATGATGAAACATGACATTTTACGCTATTGGTTTGCGTTTAAAGTGTAATGATTAAT
+AGGGATGGATGGGGGTGTTCATATTGGTGGGCGAGAGGTGAAATTCGTTGACCCTATCAA
+GATGAACTTCTGCGAAAGCATTCACCAAATACTTCCCCATTAATCAAGAACGAAAGTTTG
+GGGATCGAAGACGATCAGATACCGTCGTAGTCCAAACTATAAACTATGTCGACCAGGGAT
+CGGTTAAAATTTTTTCAAAATTTAATCGGCACCTTGTGAGAAATCATGAGTGTTTAGATT
+CCGGGGGGAGTATGGTCGCAAGTCTGAAACTTAAAGGAATTGACGGAAGGGCACACAATG
+GAGTGGAGCCTGCGGCTTAATTTGACTCAACTCGGGAAAACTTACCAAGCTAAGATATAG
+TAAGGATTGACAGACTAAAAGATCTTTCATGATTCTATAAGTGGTGGTGCATGGTCGTTC
+TTAGTTGGTGGAGCGATTTGTCTGGTCAATTCCGATAACGGACGAGACCTCGACCTGCTA
+ACTAGTAGTATTTATTAGTCGATATAGACGATAGCTTTTCTGGGGTTTGGAATGATTTCG
+GTCATCTCCTGCTTCAAGGAGTGTGTAGTCTGACTCGATAGGTACGAATTAAAACTTCTT
+AGAGGGACTACCTGCCTCAAGCAGGCGGAAGTCCGAGGCAATAACAGGTCTGTGATGCCC
+TTAGATACCTTGGGCCGCACGCGCGCTACAATGTAGGAAACAAAAAGGCTCCTGGTCCGG
+AAGGATTGGGTAATCATTTGAATTTCCTACGTAACTGGGCTTGATCTTTGTAATTATTGA
+TCATAAACGAGGAATTCCTTGTAAGCGTAAGTCATTACCTTATGCTGAATATGTCCCTGC
+CCTTTGTACACACCGCCCGTCGCTCCTACCGATCGAATGATACGGTAAAGTTAACGGATC
+GTTTTATCTGTGGCAACACTGATATAAATTAAAAGTTATTTAAATCTCATTGTTTAGAGG
+AAGGAGAAGTCGTAACAAGGTATCCGTAGGTGAACCTGCGGATGGATCATTTTTTATCTT
+AATATCATAAACTTTATGTTTTTTTGGATAATGGAACTGCTTGCGTATAAAGAAATTAGG
+CTTTTTAATTAAGGTTTAAGAGTAAGTTGGCTTGTCAGATTTATTGTCTCGATGCTATTA
+ATATGTTTTCTTAAGACAAATTGTTTATAGTATTTTGATAAAAAAAGTCAATTGGGTAAC
+ACCAATTGAATCCATCTAGCAATATGTTACACATGTTACGACATAAAATCCCGACTCAAA
+AATTTACATCACAGGCTTGCCAGTGATATTTTTCTAGTACGTCAAACAAAACATTTAAAA
+TATGTCTTTAGATTTTAAATCTTTAAGCATAAACGGTGAATACCTCGACTCCTAAATCGA
+TGAAGACCGTAGCAAACTGCGATAATTCACTTGAATTGCAGCCTACTGGGATAGTTGAAA
+TGTTGAACGCACATGATGACATCGGTCCTTTCGGATTAGGTGTTATACTTGGGTGAGAGT
+GGTCCTGATAGAATCCCTTTTGGGTGTGTCTATTGAACTTGATTAGATGGTGGTAAAAAG
+TGCGCGAGTGCATAGCAGCTTCGTCCTAATAAACTATGCGAGGACCGCCCGAAATGAGCC
+AAATGTTAATCAAGGGAGATAGATAACGCCTGATTGGACGTATGCCTAGGGTATCTTTCC
+GTCTGTTGCCCCGCAAGGGGGGGCTTACTGGGTGACTTAGGCTACTATGTTGTAATTCTC
+TCGATTTGTCACTGTCATTCGGCTAGCATTTAGAGGTTAACGTAATCAATATACATTGGT
+CACAAAAAACTTTTTAATGGTGGAAGGTAAATTTAATGTCACTAATAATCGGTCCGTCAA
+ATTGGTTAGTTAGAGGGCATTAAGCGTGCTGAAAGCTATTAGAAAGGATCAATTGTGTTG
+ATTCGACCTATCTCTAATATGTTAGTCGGGTATGTCCGGCAGTTTAGCGGCAGGGGGAAC
+GGTGTACGCGCTGGGTTTCTGGCCACCGTTGCAGTAGCAGGTAAGATCTGCGTAATACTA
+GTACTTGTCCGAAAGATTATTCTAATTCCGCCTCACCTTTGTAAGATTACCCGCTGAACT
+TAAGCATATCAGTAAGCGGAGGAAAAGAAACTAACTAGGATTCCGTCAGTAACGGCGAGT
+GAAGACGGAATAGCCCAAGGTTCAAACCTGGATCTCTTCGAGGTTAGGTGATGTGACCTA
+TGGACTGATGGAGCCCGCTGTTGTGACTGCTAATTCCGTTTGGAATTTCGAGTCGTAGAA
+GGTGATAACCCTGTTCGCAGTATCACAACAGTTGGACTTTGCCATTAGCTCCACGAGTAG
+GAATGTCTGAAATTGCATTCTGAATGGGTGATAAGATTCATCCAAGGCTAAATATATGTT
+AGGAGATCGATAGCATACAAGTACCGTGAGGGAAAGGTGAAAAGAACTTTGAAAAAAGGT
+TTAAAAGTATTTGACACCGTTTATGTGGAAGCGTTTACTTGGACCCCGATTAATGACGTC
+GGTTTAGCTCTAATTCTTAGGTGGCCAAAGTAGAGTGTTACGTGCTGATCAAAAGGTAAC
+GGACATTTGATTCATTGGTTATCGACGAGGAAGGTACTCTAAATCGGCCAGTTACTAACG
+GGTGAGATCTGATGTTTATAAAATGGGGGATGAGGCTTATCGGCTTGCTGGTGGCTCGCT
+CTCAATAATGGATATTGGGTTTCATCAAGAGTGCAAAATGGTGGCAATTCACTATTAGTG
+GTTATTAATTTTGTTTGCGTGGCTTGGCCTTGTCTACAGGTTATCTTCGGATGGCTTGTA
+GCTTTGTTGAACGCGTGGGCTTAATGTTGTGATTCTAGTAGCGTTACCATATCGTTAGAG
+TGGGTTCAATAAATGTCCCGTCTTGAAACACGGATCAAGGAGGCCGTTTTGTGTGCGAGT
+GTAAGAGTAATTAAAACTCTGACGCGTATTGAAAGAAAGAATACTCCAAAAGATCGTAAC
+TACGGTTACCTTCTGTAAGGAGTGCCCGAATCATGAGAACTCTGTTTCGAAAGGATTTGC
+GGTTGAGCACCTAGAATGGGACCCGAAAGGTTGTGAACTATGCCTGAGGAAGGCGAAGTC
+AGGGGAAACTCTGATGGAGGCTTGTCGCAATGCTGACGTGCAAATCGCTTGTCTAACTTG
+GGTATAGGGGCGAAAGACTAATCGAACAACCTAGTAGCTGGTTCCTTCCGAAGTTTCCCT
+CAGGATAGCTGGAGCAGTATTCTAGTTCCATCTTGTAAAGACAATGATTAGCAGTTTCGG
+GGGCGTAATGCTCTCAGCTGATTCTCAAACTCTGAACGGGTGGGTATCATTTTAATTCAC
+TTAATTGGATTTTAAAATTAAATTGCACATGTGCAATGAAAAATAGGAGCTCTTAGTGGG
+CCATTTTTGGTAAGCAGAACTGGCGATGTGGGTTGAACCAAATATTGGGATAAGACGTCT
+AACATTCACTAATAGATACCACAAAAGGTGTTAGTTCATTAAGACAGCAGGACGGTGGCC
+ATGGAAGTCGGTATCCGCTAAGGAGTGTGTAACAACTCACCTGCCAAATGGACTAGCCCT
+GAAAATGGATGACGCTAGCAGTGGATGGTCGATGCCCAATCGTTAAAAGAAGTGATAATA
+CTTTTAACGTGTAGGAAGGCGTGAAGGTAACGTAGAAGCTTGAATGTGAATTCGAGTGGA
+GTTGTCTTTAGTGCAGATCTTGATGGTAGTAGCAAATATTCAAAAGAATTTACTTTGAAG
+GCCGAAGTGGGGAAGGGTTCCATAACAATGGAATTCACTTATGGGTGAGTCGATCCTAAG
+GTTTGGGTTAACTCTCTCTAATAAGGTTACTAGGTCATTGGATCGAAAGTGAAGGTGGCT
+TTAACACTAGTGACTTTATAGGCCGAAAGGGAAGCGGGTTAAAATTCCTGCACCATCGAA
+TGGGATATTAGGGTAACCGATCGTAATCCGGGACATCAATTGGCGGTCGAGGAAGAGTTA
+TCTTTTCTTGTTAACATTGTCTTGGGGTCCTCCGAATCAGGTCAACTGGAGACGAGGATT
+CATCGCACAATGGAAGAGCACAGTCCTTTGGATTGGGTCTCGCATCCGCTAAATGGTCCT
+TGAAAACCGGATTATGGTATTTAATCCTATTTGGTGTTCGTACCAATAACCACATCAGGT
+CTCCAAGGTGAATAGCCTCTGGTCAAATGTATTAATGTAGATAAGGGAAGTCGGCAAAAC
+CGATCTGTAACTTCGGGATAAGGATTGGCTCTAAAGGCTGGTGGAGTGGACATATTGGAG
+TTTGCTATTTGTTTTTTACTTTTAGGATGGGCAACTGTTTTGAAGGTTTAAGATGGGTGG
+TAATTCTTTCCAATGTGAGGGCTTGCTCGTTCTGCTTTACGATTAACAGCTAATTTAGAA
+CTGTGACGATCACCGGGAATCCAACTGTTTAATTAAAACAAAGCATTGCGATAAGCTTAA
+AAGCTTTTGACGCAATGTGATTTCTGCCCAGTGCTCTGAATGTCAAAGTGAAGAGATTCA
+ACCTAGCACGGGTAAACGGCGGGAGTAACTATGACTCTCTTAAGGTAGCCAAATGCCTCG
+TCATCTAATTAGTGACGCGCATGAATGGATCAATGAGATTCCCACTGTCCCTAACTACTA
+TACAGCGAAACCACTGCAAGGGGAACGGGCCTTGCAAAAACAGCGGGGAAAGAAGACCCT
+GTTGAGCTTGACTCTAGTCTGATATTGCATAGTGACCTAAAAGGTGTAGAATAGGTGGGA
+GGGGCAACCCGACGGTGAAATACCACCCCTTTTGGCGTTACTTTGCTAACTTGGAATAAC
+AGTACCTCATAATTCATTTTATGATGGTTTTGGTGAATAAGCGGATCAACCACGGGTGAA
+ATCTGTGCAAATTGGGCAACTGATTTGTATAGCAAAGTAGTCCCTCTGGTCCCGTATTAT
+GTCGACCAAGAACAGTTTCAGGTGGGGAGTTTGGCTGGGGCGGCACATTTGTTAAAAGAT
+AACGCAAGTGTCCAAAGGCAGGCTCAGTGAGAACAGAAATCTCACGTAGAGTAAAAGGGC
+AAAAGCCTGCTTGATTCTGATTTTCAGTACTAATCGGAACTGGGAAACCAGGGCCTATCG
+ATCCTTTATGTGCTTAAATCTTAAGCCTAGAGGTGTCAGAAAAGTTACCACAGGGATAAC
+TGGCTTGTGGCAGCCAAGCGCTCATAGCGACGCTGCTTTTTGATCCTTCGATGTCGGCTC
+TTCTTATCATTGTGAAGCAGAATTCACAAAGTGTTGGATTGTTCACCCACTAACAAGGAA
+CGTGAGCTGGGTTTAGACCGTCGTGAGACAGGTTAGTTTTACCCTACTGTTGTCAATTGT
+TTGCGTAATAGTAGCATGATTTAGTACGAGAGGAACTGTCATGCCGGATCACTGGTCTGT
+AGGTTTATTTGACAAAATAGTGACCTGCCGCTACCATCCGTTGGATAATGGCTGAACGCC
+TCTAAGTCAGAATCCATTCTAGAAACGCAAACCAAATGCTTTAGAGTGTGAATGTTGTAG
+GTAACATTAGGTTGTTGGTGGGGGACCACTTTCAACTTTAAACCATATGATTAATCGCTG
+TTACACTGCAGTTTCCTTCCGGTTATTGTGGTGGGTGGCTAAATTCTAATTTATATCCTC
+GTTCCGCTCAACTCTTCGATTGTAGACGACTATCAAATGAACTAGGTGCTGTAAGCTTCC
+GAGTAGCGTTCAGTTACGAGGGGTTGAGGCTTTTCCATTAGTTCTTTCTTGTAAGAAAAA
+AGGGGCTTTTTTTAATACTAAGGGTAAGTATCCAAATTTTTTTTGGGTGCTTGCCCTTTT
+TTTTTGACCTTTGATTTTTCAAAAAAATCACCAAAGTCAATTAGTATGAGGCAAGTCGGC
+CATTTGTCCATAGTAAGCCGGTGGTGGCTGGCTGGCTGGCTGGCTGGCTGGCTGGCTGGT
+ATACTGGCCCCCTGTCTCCCACCCCCCGACAGACGACCATTTGCTCATACTGGGCCAATA
+GCTCGCATCAGACGGCCGTTTGCCCCATAGTAGACCGTCAGCTAGCAGAAGACGGCCGTT
+TGCTTATATTAGGCCGGTGGCTGGCGGCGACAGTCCGGTCCCCATATAAAAATTAATATG
+GGGCAGAAGGCTGTTTGCTTGTAGTGGGCCGCTAGCTGGCATCATACGGCCATTTGTCAA
+TAGTAGGTCGGCGGTGGCGGTCATCAGCTGATGACAGAGGACCTTTTGCTCATAGTGGGT
+CGGTAAGGGCTGGCTGACGGCAGATGGTCGTTTGTCCATAGTAGGTTGGTGGTCATGAGC
+TAGTGGCAGGGGGTCGTTTGTTCATAGGTATAGGCATAGGCCAATAGCAACTGACTGTCA
+GCATACGGTCGTTTGTCCATAGTGAGTCAGTGGTCATTAGCTGGCAGCATACGGCCTCTA
+GCTCATAGTAGGTCAGTGGTTGTCGGCTGGTGGTAGTATACGATCTTTTGCTCGTATTGG
+CCTGAGGTGTGTGGCAGGCAGGCAGAGAGTGTATTGTTTTTTTAATGCGATAATTAAATT
+ATAATGGCCCAAGACCCTCAATTCCAGTCTTGGGCCTTTTTTTTTCAAAATTTTTTTTTT
+TTTCAATGCACAAGTAGGTTTTAAAATTGAAATGAGCCCATATTAGGTTGTTATTGCCCT
+CATTAAATCCATAATTGAATTCTATATCGTTTATGGGTTTTTGGTATTTTAAAAATAAAA
+TTTTGGCATCAAAGTATAATGGTTTTTAGTTTTGTTGATTTTTTTTTTTTTAAAAAAAAA
+AAAAATTTAAAATTAATCTTAGATGGTAAAATGCTCATAAAATTATAAATTATATATGAA
+AATATGTATAAATTAATTATAAATATGAAAATTATTAAAACTCTCTATCGGTTGTCGAGG
+AATTTCTTTGGAACTTGTTGAAACGACAACTTTCGTAAAGAATCGGCCTAATGTTACCAT
+TACCATCATCTTGCATGATAACGCAACATGAACCTATGTCACTTGCATCGATATAAACAT
+CAAATGATTTCGTGAAGTCGGATTTAGCTAGAACCGGGCTGGAGTGATTGCTTGCTTTAA
+CCGTTTGATGTCTTCTTATTTCTCGTCTGTGATTGTGATTCTTGTTGTTCTAGTACCTGT
+GAGAGCTGTTAATCTGGCTGTGAGTTCGGAATAGTTTGAAATGAACCTCCTCAAGTAGTT
+ACAACTTCCAAGAAAAGATCTTATTTCTGTGACAGTAGTGGGAATTGGTAGGTTGTTAAT
+TGCTTCCACCTTATCTAAAACTGGTTTGAAACCATCTTGATATCACATGACCATAAAAAT
+TGACAGTATCCTTGAACAGTTCAGCTTTTTTGAGGGCTATGAAAACTCTCTCTTTTCTTA
+ATTTCTGTAGAACCGTGTTCACGTGAGTAACGTCTTTGAGAAGATAATGATGTCGTCTAC
+GTATGCTCTCGCGAAGTCCTTGAACTCTTCAATGATCGATTGTATCCATTTGTTAAAGTA
+GGCAGGGCTGTTCTTCATACCGAAAGGTGCTCTATGGAATTGATAAAGTTTACCTTTGAA
+TGAGAAGGCTGTGAAATTTATGTGTTCTTCTTTAACTTGTAACAGATGGAAACCTGACTT
+AGCATCAACAAACTCTTTTATGAAAATTTCATTTGATAATTTTCATAATTAATGTGGCTG
+AGAAAAAGAGAAAGTAAAGCAGGGGAAAACTGTATTTCATAGAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAATTAATTAATTATTTTGTAAATTTTGATTATATTAATTTATA
+CACACAATTCCATTACCAAAAAATACTTGGCTATCGGAAATATAAACTCTAAGATTGTGG
+TTTTTTTCACCTTTGGATTAAATATTTTGACTGGTACAATCTTCGTTACTACCACCAGCT
+TGTTTAATTATTCCAGTATTAAAGTAATTTGAATAGGTTTCAAACCTATTTCACAGCGAA
+GAAAAATCCACCTTTAAAGCAAATTTAAATTTAATTTAAAGCGAATTTAAAGTCCTGAAT
+TAAAGCAATTTCTAAGGTAATTTTAAAGGTAATTTTTAAGGTTTCTTTAAAGTTACCTTA
+AAAACTACCTTTAAAATTACCTTAAAAATTAGCTTTTCAATCGCTTTAAAAGCGAGGTCC
+TGAGTCGAAGCCGTTATTTAACGGATAAATTTTTTTAATTTTTTTTTGAATTTTTTGAAA
+AATTACCAAAAGGGATTCGATCCCCCCGACCCTCTATCAAAGGGTAGTCTCATCAACCAT
+TACACCATTTGATTGCTTTGATGAAAATTTAAAAATGATAGAATATTTTATCCCATTTTT
+TTGATCTATAATTAGATGTTTTTTATTAAAAACCTTAATTTAAAGCAAATTTTAAAGGAA
+TTTTTTAATATCTTAAAAATGAATTTTTTAAACGCGGGTTTAAATTCAATTTAAATCAAA
+TTTAAATCAAATTTTGTTGAAGGGAATTTTCCATAAAATTTCACTACAGTAGCGTAGTGA
+ATTTTATATTTA

@@ -26,7 +26,9 @@ class RDFWriter
     end
   end
 
-private
+protected
+
+  @@RATIONAL = RDF::URI.new('http://www.w3.org/2002/07/owl#rational')
 
   # Serializes RDF for a feature set representation.
   #
@@ -35,10 +37,27 @@ private
     graph = RDF::Graph.new
     set_uri = RDF::URI.new(model.uri)
     graph.insert(RDF::Statement.new(set_uri, RDF.type, BioInterchange::GFF3O.Set))
+    model.pragmas.each { |pragma_name|
+      serialize_pragma(graph, set_uri, model.pragma(pragma_name))
+    }
     model.contents.each { |feature|
       serialize_feature(graph, set_uri, feature)
     }
     RDF::NTriples::Writer.dump(graph, @ostream)
+  end
+
+  # Serializes pragmas for a given feature set URI.
+  # +graph+:: RDF graph to which the pragmas are added
+  # +set_uri+:: the feature set URI to which the pragmas belong to
+  # +pragma+:: an object representing a pragma statement
+  def serialize_pragma(graph, set_uri, pragma)
+    if pragma.kind_of?(Hash) then
+      if pragma.has_key?('gff-version') then
+        graph.insert(RDF::Statement.new(set_uri, BioInterchange::GFF3O.version, RDF::Literal.new(pragma['gff-version'], :datatype => @@RATIONAL )))
+      end
+    else
+      # TODO
+    end
   end
 
   # Serializes a +GFF3Feature+ object for a given feature set URI.

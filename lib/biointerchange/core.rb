@@ -1,3 +1,8 @@
+# BioInterchange converts non-RDF data formats into RDF.
+#
+# Convert TSV, XML, GFF3, GVF and other files into RDF triples using
+# BioInterchange's command-line tool, its web-services or make use
+# of it as a gem in your own Ruby implementation.
 module BioInterchange
 
   # Custom Exceptions and Errors
@@ -39,6 +44,7 @@ module BioInterchange
   require 'biointerchange/genomics/gff3_reader'
 
   # Feature base model
+  require 'biointerchange/genomics/gff3_pragmas'
   require 'biointerchange/genomics/gff3_feature_set'
   require 'biointerchange/genomics/gff3_feature'
 
