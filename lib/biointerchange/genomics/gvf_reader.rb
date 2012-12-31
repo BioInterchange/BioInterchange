@@ -25,7 +25,7 @@ protected
 
     # Interpret pragmas, and if not known, delegate to GFF3Reader:
     if name == 'gvf-version' then
-      feature_set.set_pragma(name, value.to_i)
+      feature_set.set_pragma(name, { name => value.to_f })
     else
       super(feature_set, line)
     end

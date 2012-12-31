@@ -102,7 +102,7 @@ protected
     
     # Interpret pragmas depending on their definition:
     if name == 'gff-version' then
-      feature_set.set_pragma(name, { name => value.to_i })
+      feature_set.set_pragma(name, { name => value.to_f })
     elsif name == 'sequence-region' then
       regions = feature_set.pragma(name)
       regions = {} unless regions

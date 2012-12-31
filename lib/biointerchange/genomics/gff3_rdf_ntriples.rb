@@ -70,6 +70,8 @@ protected
         graph.insert(RDF::Statement.new(set_uri, @base.version, RDF::Literal.new(pragma['gff-version'], :datatype => @@RATIONAL )))
       elsif pragma.has_key?('gff-version') and @base == BioInterchange::GVF1O then
         graph.insert(RDF::Statement.new(set_uri, @base.gff_version, RDF::Literal.new(pragma['gff-version'], :datatype => @@RATIONAL )))
+      elsif pragma.has_key?('gvf-version') and @base == BioInterchange::GVF1O then
+        graph.insert(RDF::Statement.new(set_uri, @base.gvf_version, RDF::Literal.new(pragma['gvf-version'], :datatype => @@RATIONAL )))
       end
     else
       # TODO
