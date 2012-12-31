@@ -21,6 +21,10 @@ Ontologies used in the RDF output:
 * [Semanticscience Integrated Ontology](http://code.google.com/p/semanticscience/wiki/SIO) (SIO)
 * [Sequence Ontology Feature Annotation](http://www.sequenceontology.org/index.html) (SOFA)
 
+#### Contributing
+
+If you like to contribute, you are more than welcome. For implementation ideas, please have a look [here](https://github.com/BioInterchange/BioInterchange/issues).
+
 Usage
 -----
 
