@@ -14,6 +14,10 @@ class GVFReader < GFF3Reader
 
 protected
 
+  def create_feature_set
+    BioInterchange::Genomics::GVFFeatureSet.new()
+  end
+
   def add_pragma(feature_set, line)
     line.chomp!
     name, value = line[2..-1].split(/\s/, 2)
@@ -23,9 +27,11 @@ protected
     if name == 'gvf-version' then
       feature_set.set_pragma(name, value.to_i)
     else
-      self.add_pragma(feature_set, line)
+      super(feature_set, line)
     end
   end
+
+end
 
 end
 

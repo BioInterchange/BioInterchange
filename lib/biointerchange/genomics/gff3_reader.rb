@@ -28,8 +28,12 @@ class GFF3Reader
 
 protected
 
+  def create_feature_set
+    BioInterchange::Genomics::GFF3FeatureSet.new()
+  end
+
   def create_model(gff3)
-    feature_set = BioInterchange::Genomics::GFF3FeatureSet.new()
+    feature_set = create_feature_set
     gff3.each_line { |line|
       next if line.start_with?('#') and not line.start_with?('##')
 

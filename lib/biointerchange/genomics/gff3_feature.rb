@@ -1,5 +1,6 @@
 module BioInterchange::Genomics
 
+# Represents a single genomic feature of a GFF3 file.
 class GFF3Feature
 
   # Constants determining the strand of the feature.

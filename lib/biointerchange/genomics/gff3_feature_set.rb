@@ -2,6 +2,7 @@ require 'digest/sha1'
 
 module BioInterchange::Genomics
 
+# A GFF3 feature set, which encapsules information of a single GFF3 file.
 class GFF3FeatureSet
 
   # Create a new instance of a Generic Feature Format Version 3 (GFF3) feature set. A feature

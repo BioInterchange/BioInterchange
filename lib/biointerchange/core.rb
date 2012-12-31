@@ -40,7 +40,9 @@ module BioInterchange
   # GENOMICS
   #
 
-  # GFF3 reader
+  ### GFF3 ###
+
+  # Reader
   require 'biointerchange/genomics/gff3_reader'
 
   # Feature base model
@@ -48,9 +50,22 @@ module BioInterchange
   require 'biointerchange/genomics/gff3_feature_set'
   require 'biointerchange/genomics/gff3_feature'
 
-  # GFF3 writer
+  # Writer
   require 'biointerchange/genomics/gff3_rdf_ntriples'
   
+  ### GVF ###
+
+  # Reader
+  require 'biointerchange/genomics/gvf_reader'
+
+  # Feature base model
+  require 'biointerchange/genomics/gvf_pragmas'
+  require 'biointerchange/genomics/gvf_feature_set'
+  require 'biointerchange/genomics/gvf_feature'
+
+  # Writer
+  # ...same GFF3 writer
+
   #
   # ACTUAL COMMAND LINE IMPLEMENTATION
   #
@@ -78,13 +93,17 @@ module BioInterchange
         puts ''
         puts 'Supported input formats (--input <format>/-i <format>):'
         puts '  biointerchange.gff3                : GFF3'
+        puts '  biointerchange.gvf                 : GVF'
         puts '  dbcls.catanns.json                 : PubAnnotation JSON'
         puts '  uk.ac.man.pdfx                     : PDFx XML'
         puts ''
         puts 'Supported output formats (--rdf <format>/-r <format>)'
-        puts '  rdf.biointerchange.gff3            : RDF N-Triples for input'
+        puts '  rdf.biointerchange.gff3            : RDF N-Triples for the following input'
         puts '    biointerchange.gff3'
-        puts '  rdf.bh12.sio                       : RDF N-Triples for inputs'
+        puts '  rdf.biointerchange.gvf             : RDF N-Triples for the following input'
+        puts '    biointerchange.gff3'
+        puts '    biointerchange.gvf'
+        puts '  rdf.bh12.sio                       : RDF N-Triples for the following inputs'
         puts '    dbcls.catanns.json'
         puts '    uk.ac.man.pdfx'
         puts ''
@@ -102,12 +121,12 @@ module BioInterchange
         puts '    --name_id <id>                   : URI of resource/tool/person (required)'
         puts ''
         puts 'Input-/RDF-format specific options:'
-        puts '  Input: biointerchange.gff3'
-        puts '  Output: rdf.biointerchange.gff3'
+        puts '  Input: biointerchange.gff3 or biointerchange.gvf'
+        puts '  Output: rdf.biointerchange.gff3 or rdf.biointerchange.gvf'
         puts '  Options:'
-        puts '    -t <date>/--date <date>          : date when the GFF3 file was created (optional)'
-        puts '    --name <name>                    : name of the GFF3 file creator (optional)'
-        puts '    --name_id <id>                   : email address of the GFF3 file creator (optional)'
+        puts '    -t <date>/--date <date>          : date when the GFF3/GVF file was created (optional)'
+        puts '    --name <name>                    : name of the GFF3/GVF file creator (optional)'
+        puts '    --name_id <id>                   : email address of the GFF3/GVF file creator (optional)'
         puts ''
         puts 'Other options:'
         puts '  -d / --debug                       : turn on debugging output (for stacktraces)'
@@ -116,6 +135,7 @@ module BioInterchange
         exit 1
       end
       
+      # Check if the input/rdf options are supported:
       if opt['input'] == 'dbcls.catanns.json' or opt['input'] == 'uk.ac.man.pdfx' then
         if opt['rdf'] == 'rdf.bh12.sio' then
           raise ArgumentError, 'Require --name and --name_id options to specify source of annotations (e.g., a manual annotators name, or software tool name) and their associated URI (e.g., email address, or webaddress).' unless opt['name'] and opt['name_id']
@@ -128,22 +148,30 @@ module BioInterchange
         else
           unsupported_combination
         end
+      elsif opt['input'] == 'biointerchange.gvf' then
+        if opt['rdf'] == 'rdf.biointerchange.gff3' or opt['rdf'] == 'rdf.biointerchange.gvf' then
+          # Okay. No further arguments required.
+        else
+          unsupported_combination
+        end
       else
         unsupported_combination
       end
-
       
       opt['date'] = nil unless opt['date']
       opt['version'] = nil unless opt['version']
       
-      # generate model from file (deserialise)
+      # Generate model from file (deserialization).
+      # Note: if-clauses are lexicographically ordered. 
       reader = nil
-      if opt['input'] == 'dbcls.catanns.json' then
+      if opt['input'] == 'biointerchange.gff3' then
+        reader = BioInterchange::Genomics::GFF3Reader.new(opt['name'], opt['name_id'], opt['date'])
+      elsif opt['input'] == 'biointerchange.gvf' then
+        reader = BioInterchange::Genomics::GVFReader.new(opt['name'], opt['name_id'], opt['date'])
+      elsif opt['input'] == 'dbcls.catanns.json' then
         reader = BioInterchange::TextMining::PubannosJsonReader.new(opt['name'], opt['name_id'], opt['date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['version'])
       elsif opt['input'] == 'uk.ac.man.pdfx' then
         reader = BioInterchange::TextMining::PdfxXmlReader.new(opt['name'], opt['name_id'], opt['date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['version'])
-      elsif opt['input'] == 'biointerchange.gff3' then
-        reader = BioInterchange::Genomics::GFF3Reader.new(opt['name'], opt['name_id'], opt['date'])
       end
     
       model = nil
@@ -153,13 +181,14 @@ module BioInterchange
         model = reader.deserialize(STDIN)
       end
     
-      # generate rdf from model (serialise)
+      # Generate rdf from model (serialization).
+      # Note: if-clauses are lexicographically ordered. 
       writer = nil
       if opt['rdf'] == 'rdf.bh12.sio' then
         writer = BioInterchange::TextMining::RDFWriter.new(File.new(opt['out'], 'w')) if opt['out']
         writer = BioInterchange::TextMining::RDFWriter.new(STDOUT) unless opt['out']
       end
-      if opt['rdf'] == 'rdf.biointerchange.gff3' then
+      if opt['rdf'] == 'rdf.biointerchange.gff3' or opt['rdf'] == 'rdf.biointerchange.gvf' then
         writer = BioInterchange::Genomics::RDFWriter.new(File.new(opt['out'], 'w')) if opt['out']
         writer = BioInterchange::Genomics::RDFWriter.new(STDOUT) unless opt['out']
       end

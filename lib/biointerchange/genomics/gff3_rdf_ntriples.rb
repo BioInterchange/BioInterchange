@@ -4,6 +4,15 @@ require 'date'
 
 module BioInterchange::Genomics
 
+# Serializes GFF3 and GVF models.
+#
+# Inputs:
+# - biointerchange.gff3
+# - biointerchange.gvf
+#
+# Outputs:
+# - rdf.biointerchange.gff3
+# - rdf.biointerchange.gvf
 class RDFWriter
 
   # Creates a new instance of a RDFWriter that will use the provided output stream to serialize RDF.
@@ -19,10 +28,15 @@ class RDFWriter
   # +model+:: a generic representation of input data that is derived from BioInterchange::Genomics::GFF3FeatureSet
   def serialize(model)
     if model.instance_of?(BioInterchange::Genomics::GFF3FeatureSet) then
+      @base = BioInterchange::GFF3O
+      serialize_model(model)
+    elsif model.instance_of?(BioInterchange::Genomics::GVFFeatureSet) then
+      @base = BioInterchange::GVF1O
       serialize_model(model)
     else
       raise BioInterchange::Exceptions::ImplementationWriterError, 'The provided model cannot be serialized. ' +
-                           'This writer supports serialization for BioInterchange::Genomics::GFF3FeatureSet.'
+                           'This writer supports serialization for BioInterchange::Genomics::GFF3FeatureSet and '
+                           'BioInterchange::Genomics::GVFFeatureSet.'
     end
   end
 
@@ -36,7 +50,7 @@ protected
   def serialize_model(model)
     graph = RDF::Graph.new
     set_uri = RDF::URI.new(model.uri)
-    graph.insert(RDF::Statement.new(set_uri, RDF.type, BioInterchange::GFF3O.Set))
+    graph.insert(RDF::Statement.new(set_uri, RDF.type, @base.Set))
     model.pragmas.each { |pragma_name|
       serialize_pragma(graph, set_uri, model.pragma(pragma_name))
     }
@@ -52,8 +66,10 @@ protected
   # +pragma+:: an object representing a pragma statement
   def serialize_pragma(graph, set_uri, pragma)
     if pragma.kind_of?(Hash) then
-      if pragma.has_key?('gff-version') then
-        graph.insert(RDF::Statement.new(set_uri, BioInterchange::GFF3O.version, RDF::Literal.new(pragma['gff-version'], :datatype => @@RATIONAL )))
+      if pragma.has_key?('gff-version') and @base == BioInterchange::GFF3O then
+        graph.insert(RDF::Statement.new(set_uri, @base.version, RDF::Literal.new(pragma['gff-version'], :datatype => @@RATIONAL )))
+      elsif pragma.has_key?('gff-version') and @base == BioInterchange::GVF1O then
+        graph.insert(RDF::Statement.new(set_uri, @base.gff_version, RDF::Literal.new(pragma['gff-version'], :datatype => @@RATIONAL )))
       end
     else
       # TODO
@@ -69,30 +85,30 @@ protected
     # TODO Make sure there is only one value in the 'ID' list.
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{feature.source},#{feature.type.to_s.sub(/^[^:]+:\/\//, '')},#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}") unless feature.attributes.has_key?('ID')
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.attributes['ID'][0]}") if feature.attributes.has_key?('ID')
-    feature_properties = BioInterchange::GFF3O.feature_properties.select { |uri| BioInterchange::GFF3O.is_datatype_property?(uri) }[0]
-    graph.insert(RDF::Statement.new(set_uri, BioInterchange::GFF3O.contains, feature_uri))
-    graph.insert(RDF::Statement.new(feature_uri, RDF.type, BioInterchange::GFF3O.Feature))
-    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.seqid, RDF::Literal.new(feature.sequence_id)))
-    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.source, RDF::Literal.new(feature.source)))
-    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.type, RDF::Literal.new(feature.type)))
-    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.with_parent(BioInterchange::GFF3O.start, feature_properties)[0], RDF::Literal.new(feature.start_coordinate)))
-    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.with_parent(BioInterchange::GFF3O.end, feature_properties)[0], RDF::Literal.new(feature.end_coordinate)))
-    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.score, RDF::Literal.new(feature.score))) if feature.score
-    feature_properties = BioInterchange::GFF3O.feature_properties.select { |uri| BioInterchange::GFF3O.is_object_property?(uri) }[0]
-    strand_uri = BioInterchange::GFF3O.with_parent(BioInterchange::GFF3O.strand, feature_properties)[0]
+    feature_properties = @base.feature_properties.select { |uri| @base.is_datatype_property?(uri) }[0]
+    graph.insert(RDF::Statement.new(set_uri, @base.contains, feature_uri))
+    graph.insert(RDF::Statement.new(feature_uri, RDF.type, @base.Feature))
+    graph.insert(RDF::Statement.new(feature_uri, @base.seqid, RDF::Literal.new(feature.sequence_id)))
+    graph.insert(RDF::Statement.new(feature_uri, @base.source, RDF::Literal.new(feature.source)))
+    graph.insert(RDF::Statement.new(feature_uri, @base.type, RDF::Literal.new(feature.type)))
+    graph.insert(RDF::Statement.new(feature_uri, @base.with_parent(@base.start, feature_properties)[0], RDF::Literal.new(feature.start_coordinate)))
+    graph.insert(RDF::Statement.new(feature_uri, @base.with_parent(@base.end, feature_properties)[0], RDF::Literal.new(feature.end_coordinate)))
+    graph.insert(RDF::Statement.new(feature_uri, @base.score, RDF::Literal.new(feature.score))) if feature.score
+    feature_properties = @base.feature_properties.select { |uri| @base.is_object_property?(uri) }[0]
+    strand_uri = @base.with_parent(@base.strand, feature_properties)[0]
     case feature.strand
     when BioInterchange::Genomics::GFF3Feature::NOT_STRANDED
-      graph.insert(RDF::Statement.new(feature_uri, strand_uri, BioInterchange::GFF3O.NotStranded))
+      graph.insert(RDF::Statement.new(feature_uri, strand_uri, @base.NotStranded))
     when BioInterchange::Genomics::GFF3Feature::UNKNOWN
-      graph.insert(RDF::Statement.new(feature_uri, strand_uri, BioInterchange::GFF3O.UnknownStrand))
+      graph.insert(RDF::Statement.new(feature_uri, strand_uri, @base.UnknownStrand))
     when BioInterchange::Genomics::GFF3Feature::POSITIVE
-      graph.insert(RDF::Statement.new(feature_uri, strand_uri, BioInterchange::GFF3O.Positive))
+      graph.insert(RDF::Statement.new(feature_uri, strand_uri, @base.Positive))
     when BioInterchange::Genomics::GFF3Feature::NEGATIVE
-      graph.insert(RDF::Statement.new(feature_uri, strand_uri, BioInterchange::GFF3O.Negative))
+      graph.insert(RDF::Statement.new(feature_uri, strand_uri, @base.Negative))
     else
       raise ArgumentException, 'Strand of feature is set to an unknown constant.'
     end
-    graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.phase, RDF::Literal.new(feature.phase))) if feature.phase
+    graph.insert(RDF::Statement.new(feature_uri, @base.phase, RDF::Literal.new(feature.phase))) if feature.phase
 
     serialize_attributes(graph, set_uri, feature_uri, feature.attributes) unless feature.attributes.keys.empty?
   end
@@ -107,16 +123,16 @@ protected
     attributes.each_pair { |tag, list|
       if tag == 'Parent' then
         list.each { |parent_id|
-          graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.parent, RDF::URI.new("#{set_uri.to_s}/feature/#{parent_id}")))
+          graph.insert(RDF::Statement.new(feature_uri, @base.parent, RDF::URI.new("#{set_uri.to_s}/feature/#{parent_id}")))
         }
       else
         list.each_index { |index|
           value = list[index]
           attribute_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/#{tag}") if list.size == 1
           attribute_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/#{tag}-#{index + 1}") unless list.size == 1
-          graph.insert(RDF::Statement.new(feature_uri, BioInterchange::GFF3O.attributes, attribute_uri))
-          graph.insert(RDF::Statement.new(attribute_uri, RDF.type, BioInterchange::GFF3O.Attribute))
-          graph.insert(RDF::Statement.new(attribute_uri, BioInterchange::GFF3O.tag, RDF::Literal.new("#{tag}")))
+          graph.insert(RDF::Statement.new(feature_uri, @base.attributes, attribute_uri))
+          graph.insert(RDF::Statement.new(attribute_uri, RDF.type, @base.Attribute))
+          graph.insert(RDF::Statement.new(attribute_uri, @base.tag, RDF::Literal.new("#{tag}")))
           graph.insert(RDF::Statement.new(attribute_uri, RDF.value, RDF::Literal.new(value)))
         }
       end
