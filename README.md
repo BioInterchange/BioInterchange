@@ -51,13 +51,24 @@ Examples:
 Input formats:
 
 *  `biointerchange.gff3`
+*  `biointerchange.gvf`
 *  `dbcls.catanns.json`
 *  `uk.ac.man.pdfx`
 
 Output formats:
 
 *  `rdf.biointerchange.gff3`
+*  `rdf.biointerchange.gvf`
 *  `rdf.bh12.sio`
+
+#### Data Consistency Verification
+
+Data consistency is verifyable for the output formats `rdf.biointerchange.gff3` and `rdf.biointerchange.gvf` using the [BioInterchange ontologies](http://www.biointerchange.org/ontologies.html) GFF3O and GVF1O. The following is an example of how [Jena](http://jena.apache.org)'s command line tools and the [HermiT reasoner](http://hermit-reasoner.com) can be used for conistency verification:
+
+    rdfcat <path-to-gff3o/gvf1o> <yourdata.n3> > merged.xml
+    java -d64 -Xmx4G -jar HermiT.jar -k -v merged.xml
+
+Another approach is to load the data and its related GFF3O/GVF1O ontology into [Protege](http://protege.stanford.edu), merge them, and then use the "Explain inconsistent ontology" menu item to inspect possible data inconsistencies.
 
 #### Example Data Provenance
 
