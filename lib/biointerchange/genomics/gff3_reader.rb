@@ -63,7 +63,7 @@ protected
 
     # String to numeric value conversions:
     start_coordinate = start_coordinate.to_i
-    stop_coordinate = stop_coordinate.to_i
+    end_coordinate = end_coordinate.to_i
     if score == '.' then
       score = nil
     else

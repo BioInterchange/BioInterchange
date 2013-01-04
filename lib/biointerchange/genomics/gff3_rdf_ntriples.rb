@@ -42,8 +42,6 @@ class RDFWriter
 
 protected
 
-  @@RATIONAL = RDF::URI.new('http://www.w3.org/2002/07/owl#rational')
-
   # Serializes RDF for a feature set representation.
   #
   # +model+:: an instance of +BioInterchange::Genomics::GFF3FeatureSet+
@@ -58,6 +56,8 @@ protected
       serialize_feature(graph, set_uri, feature)
     }
     RDF::NTriples::Writer.dump(graph, @ostream)
+    # TODO Figure out why the following is very slow. Use with 'rdf-raptor'.
+    # RDF::RDFXML::Writer.dump(graph, @ostream)
   end
 
   # Serializes pragmas for a given feature set URI.
@@ -67,11 +67,11 @@ protected
   def serialize_pragma(graph, set_uri, pragma)
     if pragma.kind_of?(Hash) then
       if pragma.has_key?('gff-version') and @base == BioInterchange::GFF3O then
-        graph.insert(RDF::Statement.new(set_uri, @base.version, RDF::Literal.new(pragma['gff-version'], :datatype => @@RATIONAL )))
+        graph.insert(RDF::Statement.new(set_uri, @base.version, RDF::Literal.new(pragma['gff-version'], :datatype => RDF::XSD.float )))
       elsif pragma.has_key?('gff-version') and @base == BioInterchange::GVF1O then
-        graph.insert(RDF::Statement.new(set_uri, @base.gff_version, RDF::Literal.new(pragma['gff-version'], :datatype => @@RATIONAL )))
+        graph.insert(RDF::Statement.new(set_uri, @base.gff_version, RDF::Literal.new(pragma['gff-version'], :datatype => RDF::XSD.float )))
       elsif pragma.has_key?('gvf-version') and @base == BioInterchange::GVF1O then
-        graph.insert(RDF::Statement.new(set_uri, @base.gvf_version, RDF::Literal.new(pragma['gvf-version'], :datatype => @@RATIONAL )))
+        graph.insert(RDF::Statement.new(set_uri, @base.gvf_version, RDF::Literal.new(pragma['gvf-version'], :datatype => RDF::XSD.float )))
       end
     else
       # TODO
@@ -90,7 +90,7 @@ protected
     feature_properties = @base.feature_properties.select { |uri| @base.is_datatype_property?(uri) }[0]
     graph.insert(RDF::Statement.new(set_uri, @base.contains, feature_uri))
     graph.insert(RDF::Statement.new(feature_uri, RDF.type, @base.Feature))
-    graph.insert(RDF::Statement.new(feature_uri, @base.seqid, RDF::Literal.new(feature.sequence_id)))
+    graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.seqid ].flatten, feature_properties)[0], RDF::Literal.new(feature.sequence_id)))
     graph.insert(RDF::Statement.new(feature_uri, @base.source, RDF::Literal.new(feature.source)))
     graph.insert(RDF::Statement.new(feature_uri, @base.type, RDF::Literal.new(feature.type)))
     graph.insert(RDF::Statement.new(feature_uri, @base.with_parent(@base.start, feature_properties)[0], RDF::Literal.new(feature.start_coordinate)))
