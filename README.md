@@ -61,6 +61,25 @@ Output formats:
 *  `rdf.biointerchange.gvf`
 *  `rdf.bh12.sio`
 
+#### Using a Triple Store
+
+RDF data produced by BioInterchange can be directly loaded into a triple store. The following gives an example about loading and querying RDF data using [Sesame](http://www.openrdf.org); the commands are entered via Sesame's `bin/console.sh`:
+
+    > create memory.
+    Please specify values for the following variables:
+    Repository ID [memory]: testrepo
+    Repository title [Memory store]: Test Repository
+    Persist (true|false) [true]: false
+    Sync delay [0]: 
+    Repository created
+    > open testrepo.
+    testrepo> load <path-to-your-rdf-data> .
+    testrepo> sparql select * where { ?s ?p ?o } .
+
+To list all `seqid` entries from a GFF3/GVF-file conversion in the store, the following SPARQL query can be used:
+
+    testrepo> sparql select * where { ?s <http://www.biointerchange.org/gvf1o#GVF1_0004> ?o } .
+
 #### Data Consistency Verification
 
 Data consistency is verifyable for the output formats `rdf.biointerchange.gff3` and `rdf.biointerchange.gvf` using the [BioInterchange ontologies](http://www.biointerchange.org/ontologies.html) GFF3O and GVF1O. The following is an example of how [Jena](http://jena.apache.org)'s command line tools and the [HermiT reasoner](http://hermit-reasoner.com) can be used for conistency verification:
