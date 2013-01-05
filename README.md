@@ -3,7 +3,7 @@ BioInterchange
 
 [![Build Status](https://secure.travis-ci.org/BioInterchange/BioInterchange.png?branch=master)](https://travis-ci.org/BioInterchange/BioInterchange)
 
-BioInterchange is a tool for generating interchangable RDF from non-RDF data sources.
+BioInterchange is a tool for generating interchangable RDF data from non-RDF data sources.
 
 Supported input file formats (see examples directory):
 
