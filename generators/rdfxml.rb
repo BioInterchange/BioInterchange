@@ -17,7 +17,7 @@ OBO_DEF = RDF::URI.new('http://purl.obolibrary.org/obo/def')
 SIO_SYN = RDF::URI.new('http://semanticscience.org/resource/synonym')
 
 def makeLabel(label)
-  label.gsub(/[ '-.<>]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
+  label.gsub(/[ '-.<>\/]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
 end
 
 reader = RDF::RDFXML::Reader.open(ARGV[0])
