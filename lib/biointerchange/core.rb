@@ -5,6 +5,17 @@
 # of it as a gem in your own Ruby implementation.
 module BioInterchange
 
+  ### Global behaviour settings, which can be altered programmatically or via the CLI:
+
+  # If true, then RDF::Graph's "insert" function will be overwritten so that it
+  # immediately outputs N-Triples. This reduces memory requirements (since no RDF
+  # graph is kept in memory) and performance (since no looping through an RDF graph
+  # is necessary).
+  @@skip_rdf_graph = true
+  def self.skip_rdf_graph
+    @@skip_rdf_graph
+  end
+
   # Custom Exceptions and Errors
   require 'biointerchange/exceptions'
 
@@ -78,6 +89,7 @@ module BioInterchange
       opt = Getopt::Long.getopts(
         ["--help", "-h", Getopt::BOOLEAN],
         ["--debug", "-d", Getopt::BOOLEAN],  # set debug mode => print stack traces
+        ["--no_rdf_graph_optimization", "-ng", Getopt::BOOLEAN], # set self.skip_rdf_graph to false
         ["--input", "-i", Getopt::REQUIRED], # input file format
         ["--rdf", "-r", Getopt::REQUIRED], # output file format
         ["--name", Getopt::OPTIONAL], # name of resourcce/tool/person
@@ -135,6 +147,10 @@ module BioInterchange
         exit 1
       end
       
+      # Turn off optimization, if requested. This will generate an RDF graph in memory and
+      # at least double memory requirements and runtime.
+      @@skip_rdf_graph = false if opt['no_rdf_graph_optimization']
+
       # Check if the input/rdf options are supported:
       if opt['input'] == 'dbcls.catanns.json' or opt['input'] == 'uk.ac.man.pdfx' then
         if opt['rdf'] == 'rdf.bh12.sio' then
@@ -233,6 +249,39 @@ private
   def self.unsupported_combination
     raise ArgumentError, 'This input/output format combination is not supported.'
   end
+
+end
+
+# Overwrite RDF::Graph implementation, in case we do not want to keep
+# the complete graph in memory. If the implementing writer does not
+# set an output stream via +fast_ostream+, then fall back to the original
+# implementation.
+module RDF
+
+class Graph
+  # DO NOT keep old insert implementation due to infinite recursion caused by module loading dependencies!
+  # alias_method :graph_building_insert, :insert
+
+  # Set an output stream for writing in +insert+.
+  #
+  # +ostream+:: Output stream that is populated by +insert+, if optimization can be carried out.
+  def fast_ostream(ostream)
+    @ostream = ostream
+  end
+
+  # Alternative implementation to +insert+, which can immediately output N-Triples instead
+  # of building an in-memory graph first.
+  #
+  # +statement+:: RDF statement that should be serialized.
+  def insert(statement)
+    if BioInterchange::skip_rdf_graph and @ostream then
+      @ostream.puts(statement.to_ntriples)
+    else
+      insert_statement(statement)
+    end
+  end
+
+end
 
 end
 

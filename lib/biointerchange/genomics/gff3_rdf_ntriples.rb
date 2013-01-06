@@ -47,6 +47,7 @@ protected
   # +model+:: an instance of +BioInterchange::Genomics::GFF3FeatureSet+
   def serialize_model(model)
     graph = RDF::Graph.new
+    graph.fast_ostream(@ostream) if BioInterchange::skip_rdf_graph
     set_uri = RDF::URI.new(model.uri)
     graph.insert(RDF::Statement.new(set_uri, RDF.type, @base.Set))
     model.pragmas.each { |pragma_name|
