@@ -11,10 +11,17 @@ class GVF1O:
 
     @classmethod
     def strand(cls):
-        """Strand of the feature.
-        (cls, GVF1_0010)
+        """Either:
+            Strand of the feature.
+            (cls, GVF1_0010)
+        Or:
+            Strand of the breakpoint.
+            (GVF1_0083)
+        Or:
+            Strand of a target -- if applicable.
+            (GVF1_0091)
         """
-        return _namespace_GVF1O('GVF1_0010')
+        return [ _namespace_GVF1O('GVF1_0010'), _namespace_GVF1O('GVF1_0083'), _namespace_GVF1O('GVF1_0091') ]
 
     @classmethod
     def attributes(cls):
@@ -45,8 +52,11 @@ class GVF1O:
         Or:
             FALDO "Region" instance replacement for a breakpoint's start, stop, strand properties.
             (GVF1_0079)
+        Or:
+            FALDO "Region" instance replacement for a target's start, stop, strand  properties.
+            (GVF1_0090)
         """
-        return [ _namespace_GVF1O('GVF1_0021'), _namespace_GVF1O('GVF1_0079') ]
+        return [ _namespace_GVF1O('GVF1_0021'), _namespace_GVF1O('GVF1_0079'), _namespace_GVF1O('GVF1_0090') ]
 
     @classmethod
     def species(cls):
@@ -68,6 +78,13 @@ class GVF1O:
         (cls, GVF1_0036)
         """
         return _namespace_GVF1O('GVF1_0036')
+
+    @classmethod
+    def zygosity(cls):
+        """Zygosity of a variant.
+        (cls, GVF1_0038)
+        """
+        return _namespace_GVF1O('GVF1_0038')
 
     @classmethod
     def effect(cls):
@@ -195,15 +212,22 @@ class GVF1O:
         return _namespace_GVF1O('GVF1_0078')
 
     @classmethod
-    def region(cls):
-        """Either:
-            FALDO "Region" instance replacement for a feature's start, stop, strand properties.
-            (cls, GVF1_0021)
-        Or:
-            FALDO "Region" instance replacement for a breakpoint's start, stop, strand properties.
-            (GVF1_0079)
+    def breakpoint(cls):
+        """Potential source or destination of zero-length sequence alterations.
+        (cls, GVF1_0080)
         """
-        return [ _namespace_GVF1O('GVF1_0021'), _namespace_GVF1O('GVF1_0079') ]
+        return _namespace_GVF1O('GVF1_0080')
+
+    @classmethod
+    def target_properties(cls):
+        """Either:
+            Properties that are directly associated with Target class instances.
+            (cls, GVF1_0089)
+        Or:
+            Properties that are directly associated with Target class instances.
+            (GVF1_0092)
+        """
+        return [ _namespace_GVF1O('GVF1_0089'), _namespace_GVF1O('GVF1_0092') ]
 
     @classmethod
     def seqid(cls):
@@ -241,8 +265,11 @@ class GVF1O:
         Or:
             Start coordinate of the feature on the seqid landmark.
             (GVF1_0073)
+        Or:
+            Start coordinate of the target.
+            (GVF1_0094)
         """
-        return [ _namespace_GVF1O('GVF1_0007'), _namespace_GVF1O('GVF1_0048'), _namespace_GVF1O('GVF1_0073') ]
+        return [ _namespace_GVF1O('GVF1_0007'), _namespace_GVF1O('GVF1_0048'), _namespace_GVF1O('GVF1_0073'), _namespace_GVF1O('GVF1_0094') ]
 
     @classmethod
     def end(cls):
@@ -255,8 +282,11 @@ class GVF1O:
         Or:
             End coordinate of the feature on the seqid landmark.
             (GVF1_0074)
+        Or:
+            End coordinate of the target.
+            (GVF1_0095)
         """
-        return [ _namespace_GVF1O('GVF1_0008'), _namespace_GVF1O('GVF1_0049'), _namespace_GVF1O('GVF1_0074') ]
+        return [ _namespace_GVF1O('GVF1_0008'), _namespace_GVF1O('GVF1_0049'), _namespace_GVF1O('GVF1_0074'), _namespace_GVF1O('GVF1_0095') ]
 
     @classmethod
     def score(cls):
@@ -273,7 +303,7 @@ class GVF1O:
         return _namespace_GVF1O('GVF1_0013')
 
     @classmethod
-    def version(cls):
+    def gvf_version(cls):
         """Version of the GVF specification that defines the feature set contents.
         (cls, GVF1_0022)
         """
@@ -343,46 +373,11 @@ class GVF1O:
         return _namespace_GVF1O('GVF1_0037')
 
     @classmethod
-    def zygosity(cls):
-        """Zygosity of a feature locus.
-        (cls, GVF1_0038)
-        """
-        return _namespace_GVF1O('GVF1_0038')
-
-    @classmethod
     def variant_freq(cls):
         """Frequency of a variant in a population.
         (cls, GVF1_0039)
         """
         return _namespace_GVF1O('GVF1_0039')
-
-    @classmethod
-    def start(cls):
-        """Either:
-            Start coordinate of the feature on the seqid landmark.
-            (cls, GVF1_0007)
-        Or:
-            A coordinate that defines the start of an ambiguous coordinate range.
-            (GVF1_0048)
-        Or:
-            Start coordinate of the feature on the seqid landmark.
-            (GVF1_0073)
-        """
-        return [ _namespace_GVF1O('GVF1_0007'), _namespace_GVF1O('GVF1_0048'), _namespace_GVF1O('GVF1_0073') ]
-
-    @classmethod
-    def end(cls):
-        """Either:
-            End coordinate of the feature on the seqid landmark.
-            (cls, GVF1_0008)
-        Or:
-            A coordinate that defines the end of an ambiguous coordinate range.
-            (GVF1_0049)
-        Or:
-            End coordinate of the feature on the seqid landmark.
-            (GVF1_0074)
-        """
-        return [ _namespace_GVF1O('GVF1_0008'), _namespace_GVF1O('GVF1_0049'), _namespace_GVF1O('GVF1_0074') ]
 
     @classmethod
     def phased(cls):
@@ -420,28 +415,6 @@ class GVF1O:
         return _namespace_GVF1O('GVF1_0057')
 
     @classmethod
-    def feature_properties(cls):
-        """Either:
-            Properties that are directly associated with Feature class instances.
-            (cls, GVF1_0066)
-        Or:
-            Properties that are directly associated with Feature class instances.
-            (GVF1_0059)
-        """
-        return [ _namespace_GVF1O('GVF1_0066'), _namespace_GVF1O('GVF1_0059') ]
-
-    @classmethod
-    def variant_properties(cls):
-        """Either:
-            Properties that are directly associated with Variant class instances.
-            (cls, GVF1_0069)
-        Or:
-            Properties that are directly associated with Variant class instances.
-            (GVF1_0060)
-        """
-        return [ _namespace_GVF1O('GVF1_0069'), _namespace_GVF1O('GVF1_0060') ]
-
-    @classmethod
     def range_properties(cls):
         """Properties that are directly associated with Range class instances.
         (cls, GVF1_0061)
@@ -456,83 +429,11 @@ class GVF1O:
         return _namespace_GVF1O('GVF1_0062')
 
     @classmethod
-    def set_properties(cls):
-        """Either:
-            Properties that are directly associated with Set class instances.
-            (cls, GVF1_0068)
-        Or:
-            Properties that are directly associated with Set class instances.
-            (GVF1_0063)
-        """
-        return [ _namespace_GVF1O('GVF1_0068'), _namespace_GVF1O('GVF1_0063') ]
-
-    @classmethod
     def attribute_properties(cls):
         """Properties that are directly associated with Attribute class instances.
         (cls, GVF1_0064)
         """
         return _namespace_GVF1O('GVF1_0064')
-
-    @classmethod
-    def sequencedindividual_properties(cls):
-        """Either:
-            Properties that are directly associated with SequencedIndividual class instances.
-            (cls, GVF1_0067)
-        Or:
-            Properties that are directly associated with SequencedIndividual class instances.
-            (GVF1_0065)
-        """
-        return [ _namespace_GVF1O('GVF1_0067'), _namespace_GVF1O('GVF1_0065') ]
-
-    @classmethod
-    def breakpoint_properties(cls):
-        """Either:
-            Properties that are directly associated with Breakpoint class instances.
-            (cls, GVF1_0075)
-        Or:
-            Properties that are directly associated with Breakpoint class instances.
-            (GVF1_0071)
-        """
-        return [ _namespace_GVF1O('GVF1_0075'), _namespace_GVF1O('GVF1_0071') ]
-
-    @classmethod
-    def seqid(cls):
-        """Either:
-            ID of the landmark that establishes the coordinate system for a feature.
-            (cls, GVF1_0004)
-        Or:
-            ID of the landmark that establishes the coordinate system for a breakpoint.
-            (GVF1_0072)
-        """
-        return [ _namespace_GVF1O('GVF1_0004'), _namespace_GVF1O('GVF1_0072') ]
-
-    @classmethod
-    def start(cls):
-        """Either:
-            Start coordinate of the feature on the seqid landmark.
-            (cls, GVF1_0007)
-        Or:
-            A coordinate that defines the start of an ambiguous coordinate range.
-            (GVF1_0048)
-        Or:
-            Start coordinate of the feature on the seqid landmark.
-            (GVF1_0073)
-        """
-        return [ _namespace_GVF1O('GVF1_0007'), _namespace_GVF1O('GVF1_0048'), _namespace_GVF1O('GVF1_0073') ]
-
-    @classmethod
-    def end(cls):
-        """Either:
-            End coordinate of the feature on the seqid landmark.
-            (cls, GVF1_0008)
-        Or:
-            A coordinate that defines the end of an ambiguous coordinate range.
-            (GVF1_0049)
-        Or:
-            End coordinate of the feature on the seqid landmark.
-            (GVF1_0074)
-        """
-        return [ _namespace_GVF1O('GVF1_0008'), _namespace_GVF1O('GVF1_0049'), _namespace_GVF1O('GVF1_0074') ]
 
     @classmethod
     def a_context(cls):
@@ -542,11 +443,25 @@ class GVF1O:
         return _namespace_GVF1O('GVF1_0076')
 
     @classmethod
-    def a_context(cls):
-        """Sequence context (cls, positive strand) of a feature on the 3' end.
-        (GVF1_0077)
+    def gff_version(cls):
+        """Version of the GFF specification that defines the feature set contents apart from GVF related definitions.
+        (cls, GVF1_0081)
         """
-        return _namespace_GVF1O('GVF1_0077')
+        return _namespace_GVF1O('GVF1_0081')
+
+    @classmethod
+    def file_date(cls):
+        """Creation date of the GVF file that this set stems from.
+        (cls, GVF1_0082)
+        """
+        return _namespace_GVF1O('GVF1_0082')
+
+    @classmethod
+    def target_id(cls):
+        """ID or accession of the target alignment.
+        (cls, GVF1_0093)
+        """
+        return _namespace_GVF1O('GVF1_0093')
 
     @classmethod
     def Set(cls):
@@ -623,6 +538,20 @@ class GVF1O:
         return _namespace_GVF1O('GVF1_0058')
 
     @classmethod
+    def Zygosity(cls):
+        """Denotes the zygosity of alleles.
+        (cls, GVF1_0084)
+        """
+        return _namespace_GVF1O('GVF1_0084')
+
+    @classmethod
+    def Target(cls):
+        """Indicates a feature's "target" of a nucleotide-to-nucleotide or protein-to-nucleotide alignment.
+        (cls, GVF1_0088)
+        """
+        return _namespace_GVF1O('GVF1_0088')
+
+    @classmethod
     def Positive(cls):
         """Location on the positive (cls, forward) strand.
         (GVF1_0017)
@@ -651,6 +580,27 @@ class GVF1O:
         return _namespace_GVF1O('GVF1_0020')
 
     @classmethod
+    def Heterozygous(cls):
+        """Denotes heterozygous alleles.
+        (cls, GVF1_0085)
+        """
+        return _namespace_GVF1O('GVF1_0085')
+
+    @classmethod
+    def Homozygous(cls):
+        """Denotes homozygous alleles.
+        (cls, GVF1_0086)
+        """
+        return _namespace_GVF1O('GVF1_0086')
+
+    @classmethod
+    def Hemizygous(cls):
+        """Denotes hemizygous alleles.
+        (cls, GVF1_0087)
+        """
+        return _namespace_GVF1O('GVF1_0087')
+
+    @classmethod
     def is_object_property(cls, uri):
         """Determines whether the given URI is an object property.
         
@@ -671,6 +621,8 @@ class GVF1O:
         if uri == _namespace_GVF1O('GVF1_0034'):
             return True
         if uri == _namespace_GVF1O('GVF1_0036'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0038'):
             return True
         if uri == _namespace_GVF1O('GVF1_0041'):
             return True
@@ -703,6 +655,16 @@ class GVF1O:
         if uri == _namespace_GVF1O('GVF1_0078'):
             return True
         if uri == _namespace_GVF1O('GVF1_0079'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0080'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0083'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0089'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0090'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0091'):
             return True
         return False
 
@@ -746,8 +708,6 @@ class GVF1O:
             return True
         if uri == _namespace_GVF1O('GVF1_0037'):
             return True
-        if uri == _namespace_GVF1O('GVF1_0038'):
-            return True
         if uri == _namespace_GVF1O('GVF1_0039'):
             return True
         if uri == _namespace_GVF1O('GVF1_0048'):
@@ -790,6 +750,18 @@ class GVF1O:
             return True
         if uri == _namespace_GVF1O('GVF1_0077'):
             return True
+        if uri == _namespace_GVF1O('GVF1_0081'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0082'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0092'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0093'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0094'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0095'):
+            return True
         return False
 
     @classmethod
@@ -820,6 +792,10 @@ class GVF1O:
             return True
         if uri == _namespace_GVF1O('GVF1_0058'):
             return True
+        if uri == _namespace_GVF1O('GVF1_0084'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0088'):
+            return True
         return False
 
     @classmethod
@@ -835,6 +811,12 @@ class GVF1O:
         if uri == _namespace_GVF1O('GVF1_0019'):
             return True
         if uri == _namespace_GVF1O('GVF1_0020'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0085'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0086'):
+            return True
+        if uri == _namespace_GVF1O('GVF1_0087'):
             return True
         return False
 
@@ -860,5 +842,5 @@ class GVF1O:
             return cls.has_parent(cls.__parent_properties[uri], parent)
         return False
 
-    __parent_properties = { _namespace_GVF1O('GVF1_0010') : _namespace_GVF1O('GVF1_0075') , _namespace_GVF1O('GVF1_0012') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0014') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0015') : _namespace_GVF1O('GVF1_0068') , _namespace_GVF1O('GVF1_0021') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0023') : _namespace_GVF1O('GVF1_0068') , _namespace_GVF1O('GVF1_0034') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0036') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0041') : _namespace_GVF1O('GVF1_0069') , _namespace_GVF1O('GVF1_0042') : _namespace_GVF1O('GVF1_0070') , _namespace_GVF1O('GVF1_0043') : _namespace_GVF1O('GVF1_0070') , _namespace_GVF1O('GVF1_0044') : _namespace_GVF1O('GVF1_0070') , _namespace_GVF1O('GVF1_0046') : _namespace_GVF1O('GVF1_0070') , _namespace_GVF1O('GVF1_0047') : _namespace_GVF1O('GVF1_0070') , _namespace_GVF1O('GVF1_0051') : _namespace_GVF1O('GVF1_0067') , _namespace_GVF1O('GVF1_0053') : _namespace_GVF1O('GVF1_0069') , _namespace_GVF1O('GVF1_0078') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0079') : _namespace_GVF1O('GVF1_0075') , _namespace_GVF1O('GVF1_0004') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0005') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0006') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0007') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0008') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0009') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0013') : _namespace_GVF1O('GVF1_0064') , _namespace_GVF1O('GVF1_0022') : _namespace_GVF1O('GVF1_0063') , _namespace_GVF1O('GVF1_0024') : _namespace_GVF1O('GVF1_0063') , _namespace_GVF1O('GVF1_0025') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0026') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0027') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0029') : _namespace_GVF1O('GVF1_0062') , _namespace_GVF1O('GVF1_0030') : _namespace_GVF1O('GVF1_0062') , _namespace_GVF1O('GVF1_0031') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0032') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0037') : _namespace_GVF1O('GVF1_0065') , _namespace_GVF1O('GVF1_0038') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0039') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0048') : _namespace_GVF1O('GVF1_0061') , _namespace_GVF1O('GVF1_0049') : _namespace_GVF1O('GVF1_0061') , _namespace_GVF1O('GVF1_0050') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0054') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0055') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0056') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0057') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0072') : _namespace_GVF1O('GVF1_0071') , _namespace_GVF1O('GVF1_0073') : _namespace_GVF1O('GVF1_0071') , _namespace_GVF1O('GVF1_0074') : _namespace_GVF1O('GVF1_0071') , _namespace_GVF1O('GVF1_0076') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0077') : _namespace_GVF1O('GVF1_0059') }
+    __parent_properties = { _namespace_GVF1O('GVF1_0010') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0012') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0014') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0015') : _namespace_GVF1O('GVF1_0068') , _namespace_GVF1O('GVF1_0021') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0023') : _namespace_GVF1O('GVF1_0068') , _namespace_GVF1O('GVF1_0034') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0036') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0038') : _namespace_GVF1O('GVF1_0069') , _namespace_GVF1O('GVF1_0041') : _namespace_GVF1O('GVF1_0069') , _namespace_GVF1O('GVF1_0042') : _namespace_GVF1O('GVF1_0070') , _namespace_GVF1O('GVF1_0043') : _namespace_GVF1O('GVF1_0070') , _namespace_GVF1O('GVF1_0044') : _namespace_GVF1O('GVF1_0070') , _namespace_GVF1O('GVF1_0046') : _namespace_GVF1O('GVF1_0070') , _namespace_GVF1O('GVF1_0047') : _namespace_GVF1O('GVF1_0070') , _namespace_GVF1O('GVF1_0051') : _namespace_GVF1O('GVF1_0067') , _namespace_GVF1O('GVF1_0053') : _namespace_GVF1O('GVF1_0069') , _namespace_GVF1O('GVF1_0078') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0079') : _namespace_GVF1O('GVF1_0075') , _namespace_GVF1O('GVF1_0080') : _namespace_GVF1O('GVF1_0066') , _namespace_GVF1O('GVF1_0083') : _namespace_GVF1O('GVF1_0075') , _namespace_GVF1O('GVF1_0090') : _namespace_GVF1O('GVF1_0089') , _namespace_GVF1O('GVF1_0091') : _namespace_GVF1O('GVF1_0089') , _namespace_GVF1O('GVF1_0004') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0005') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0006') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0007') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0008') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0009') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0013') : _namespace_GVF1O('GVF1_0064') , _namespace_GVF1O('GVF1_0022') : _namespace_GVF1O('GVF1_0063') , _namespace_GVF1O('GVF1_0024') : _namespace_GVF1O('GVF1_0063') , _namespace_GVF1O('GVF1_0025') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0026') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0027') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0029') : _namespace_GVF1O('GVF1_0062') , _namespace_GVF1O('GVF1_0030') : _namespace_GVF1O('GVF1_0062') , _namespace_GVF1O('GVF1_0031') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0032') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0037') : _namespace_GVF1O('GVF1_0065') , _namespace_GVF1O('GVF1_0039') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0048') : _namespace_GVF1O('GVF1_0061') , _namespace_GVF1O('GVF1_0049') : _namespace_GVF1O('GVF1_0061') , _namespace_GVF1O('GVF1_0050') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0054') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0055') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0056') : _namespace_GVF1O('GVF1_0060') , _namespace_GVF1O('GVF1_0057') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0072') : _namespace_GVF1O('GVF1_0071') , _namespace_GVF1O('GVF1_0073') : _namespace_GVF1O('GVF1_0071') , _namespace_GVF1O('GVF1_0074') : _namespace_GVF1O('GVF1_0071') , _namespace_GVF1O('GVF1_0076') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0077') : _namespace_GVF1O('GVF1_0059') , _namespace_GVF1O('GVF1_0081') : _namespace_GVF1O('GVF1_0063') , _namespace_GVF1O('GVF1_0082') : _namespace_GVF1O('GVF1_0063') , _namespace_GVF1O('GVF1_0093') : _namespace_GVF1O('GVF1_0092') , _namespace_GVF1O('GVF1_0094') : _namespace_GVF1O('GVF1_0092') , _namespace_GVF1O('GVF1_0095') : _namespace_GVF1O('GVF1_0092') , _namespace_GVF1O('GVF1_0088') : _namespace_GVF1O('http://www.w3.org/2002/07/owl#Thing') }
 

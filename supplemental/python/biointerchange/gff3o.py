@@ -114,33 +114,11 @@ class GFF3O:
         return [ _namespace_GFF3O('GFF3_0044'), _namespace_GFF3O('GFF3_0040') ]
 
     @classmethod
-    def strand(cls):
-        """Either:
-            Strand of the feature.
-            (cls, GFF3_0010)
-        Or:
-            Strand of a target -- if applicable.
-            (GFF3_0045)
-        """
-        return [ _namespace_GFF3O('GFF3_0010'), _namespace_GFF3O('GFF3_0045') ]
-
-    @classmethod
     def derives_from(cls):
         """Describes a temporal relationship between two features, where the object denotes the subjects origin.
         (cls, GFF3_0047)
         """
         return _namespace_GFF3O('GFF3_0047')
-
-    @classmethod
-    def region(cls):
-        """Either:
-            FALDO "Region" instance replacement for a feature's start, stop, strand properties.
-            (cls, GFF3_0021)
-        Or:
-            FALDO "Region" instance replacement for a target's start, stop, strand  properties.
-            (GFF3_0050)
-        """
-        return [ _namespace_GFF3O('GFF3_0021'), _namespace_GFF3O('GFF3_0050') ]
 
     @classmethod
     def seqid(cls):
@@ -221,28 +199,6 @@ class GFF3O:
         return _namespace_GFF3O('GFF3_0024')
 
     @classmethod
-    def set_properties(cls):
-        """Either:
-            Properties that are directly associated with Set class instances.
-            (cls, GFF3_0025)
-        Or:
-            Properties that are directly associated with Set class instances.
-            (GFF3_0027)
-        """
-        return [ _namespace_GFF3O('GFF3_0025'), _namespace_GFF3O('GFF3_0027') ]
-
-    @classmethod
-    def feature_properties(cls):
-        """Either:
-            Properties that are directly associated with Feature class instances.
-            (cls, GFF3_0026)
-        Or:
-            Properties that are directly associated with Feature class instances.
-            (GFF3_0028)
-        """
-        return [ _namespace_GFF3O('GFF3_0026'), _namespace_GFF3O('GFF3_0028') ]
-
-    @classmethod
     def attribute_properties(cls):
         """Properties that are directly associated with Attribute class instances.
         (cls, GFF3_0029)
@@ -275,17 +231,6 @@ class GFF3O:
         return _namespace_GFF3O('GFF3_0033')
 
     @classmethod
-    def name(cls):
-        """Either:
-            Name of an external database. For example, "dbSNP" or "OMIM".
-            (cls, GFF3_0032)
-        Or:
-            Name of a feature, which can be used for display purposes. The name is not a unique property among features.
-            (GFF3_0036)
-        """
-        return [ _namespace_GFF3O('GFF3_0032'), _namespace_GFF3O('GFF3_0036') ]
-
-    @classmethod
     def alias(cls):
         """An alternative name for a feature. This can be another descriptive name of a feature, such as a locus name or accession number.
         (cls, GFF3_0037)
@@ -293,44 +238,11 @@ class GFF3O:
         return _namespace_GFF3O('GFF3_0037')
 
     @classmethod
-    def target_properties(cls):
-        """Either:
-            Properties that are directly associated with Target class instances.
-            (cls, GFF3_0044)
-        Or:
-            Properties that are directly associated with Target class instances.
-            (GFF3_0040)
-        """
-        return [ _namespace_GFF3O('GFF3_0044'), _namespace_GFF3O('GFF3_0040') ]
-
-    @classmethod
     def target_id(cls):
         """ID or accession of the target alignment.
         (cls, GFF3_0041)
         """
         return _namespace_GFF3O('GFF3_0041')
-
-    @classmethod
-    def start(cls):
-        """Either:
-            Start coordinate of the feature on the seqid landmark.
-            (cls, GFF3_0007)
-        Or:
-            Start coordinate of the target.
-            (GFF3_0042)
-        """
-        return [ _namespace_GFF3O('GFF3_0007'), _namespace_GFF3O('GFF3_0042') ]
-
-    @classmethod
-    def end(cls):
-        """Either:
-            End coordinate of the feature on the seqid landmark.
-            (cls, GFF3_0008)
-        Or:
-            End coordinate of the target.
-            (GFF3_0043)
-        """
-        return [ _namespace_GFF3O('GFF3_0008'), _namespace_GFF3O('GFF3_0043') ]
 
     @classmethod
     def gap(cls):
@@ -577,5 +489,5 @@ class GFF3O:
             return cls.has_parent(cls.__parent_properties[uri], parent)
         return False
 
-    __parent_properties = { _namespace_GFF3O('GFF3_0010') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0012') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0014') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0015') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0021') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0023') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0034') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0035') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0039') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0045') : _namespace_GFF3O('GFF3_0044') , _namespace_GFF3O('GFF3_0047') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0050') : _namespace_GFF3O('GFF3_0044') , _namespace_GFF3O('GFF3_0004') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0005') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0006') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0007') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0008') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0009') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0011') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0013') : _namespace_GFF3O('GFF3_0029') , _namespace_GFF3O('GFF3_0022') : _namespace_GFF3O('GFF3_0027') , _namespace_GFF3O('GFF3_0024') : _namespace_GFF3O('GFF3_0027') , _namespace_GFF3O('GFF3_0032') : _namespace_GFF3O('GFF3_0031') , _namespace_GFF3O('GFF3_0033') : _namespace_GFF3O('GFF3_0031') , _namespace_GFF3O('GFF3_0036') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0037') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0041') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0042') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0043') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0046') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0048') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0049') : _namespace_GFF3O('GFF3_0028') }
+    __parent_properties = { _namespace_GFF3O('GFF3_0010') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0012') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0014') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0015') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0021') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0023') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0034') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0035') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0039') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0045') : _namespace_GFF3O('GFF3_0044') , _namespace_GFF3O('GFF3_0047') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0050') : _namespace_GFF3O('GFF3_0044') , _namespace_GFF3O('GFF3_0004') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0005') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0006') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0007') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0008') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0009') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0011') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0013') : _namespace_GFF3O('GFF3_0029') , _namespace_GFF3O('GFF3_0022') : _namespace_GFF3O('GFF3_0027') , _namespace_GFF3O('GFF3_0024') : _namespace_GFF3O('GFF3_0027') , _namespace_GFF3O('GFF3_0032') : _namespace_GFF3O('GFF3_0031') , _namespace_GFF3O('GFF3_0033') : _namespace_GFF3O('GFF3_0031') , _namespace_GFF3O('GFF3_0036') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0037') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0041') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0042') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0043') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0046') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0048') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0049') : _namespace_GFF3O('GFF3_0028') }
 

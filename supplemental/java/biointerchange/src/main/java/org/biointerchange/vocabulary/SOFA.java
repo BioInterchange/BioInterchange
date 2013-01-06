@@ -2947,10 +2947,10 @@ public class SOFA {
   }
 
   private static Resource _namespace_SOFA(String accession) {
-    if (isClass(ResourceFactory.createResource("http://purl.obolibrary.org/obo/" + accession))) {
-      return ResourceFactory.createResource("http://purl.obolibrary.org/obo/" + accession);
+    if (isClass(ResourceFactory.createResource("http://purl.obolibrary.org/obo/http_//purl.org/obo/" + accession))) {
+      return ResourceFactory.createResource("http://purl.obolibrary.org/obo/http_//purl.org/obo/" + accession);
     } else {
-      return ResourceFactory.createProperty("http://purl.obolibrary.org/obo/" + accession);
+      return ResourceFactory.createProperty("http://purl.obolibrary.org/obo/http_//purl.org/obo/" + accession);
     }
   }
 

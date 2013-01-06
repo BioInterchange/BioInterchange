@@ -22,7 +22,7 @@ public class GFF3O {
    *   (http://www.biointerchange.org/gff3o#GFF3_0045)
    */
   public static Set<Resource> strand() {
-    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("GFF3_0010"), _namespace_GFF3O("GFF3_0045") }));
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0010"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0045") }));
   }
 
   /**
@@ -30,7 +30,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0012)
    */
   public static Resource attributes() {
-    return _namespace_GFF3O("GFF3_0012");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0012");
   }
 
   /**
@@ -38,7 +38,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0014)
    */
   public static Resource parent() {
-    return _namespace_GFF3O("GFF3_0014");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0014");
   }
 
   /**
@@ -46,7 +46,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0015)
    */
   public static Resource contains() {
-    return _namespace_GFF3O("GFF3_0015");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0015");
   }
 
   /**
@@ -58,7 +58,7 @@ public class GFF3O {
    *   (http://www.biointerchange.org/gff3o#GFF3_0050)
    */
   public static Set<Resource> region() {
-    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("GFF3_0021"), _namespace_GFF3O("GFF3_0050") }));
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0021"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0050") }));
   }
 
   /**
@@ -66,7 +66,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0023)
    */
   public static Resource species() {
-    return _namespace_GFF3O("GFF3_0023");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0023");
   }
 
   /**
@@ -78,7 +78,7 @@ public class GFF3O {
    *   (http://www.biointerchange.org/gff3o#GFF3_0027)
    */
   public static Set<Resource> set_properties() {
-    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("GFF3_0025"), _namespace_GFF3O("GFF3_0027") }));
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0025"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0027") }));
   }
 
   /**
@@ -90,7 +90,7 @@ public class GFF3O {
    *   (http://www.biointerchange.org/gff3o#GFF3_0028)
    */
   public static Set<Resource> feature_properties() {
-    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("GFF3_0026"), _namespace_GFF3O("GFF3_0028") }));
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0026"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0028") }));
   }
 
   /**
@@ -98,7 +98,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0034)
    */
   public static Resource dbxref() {
-    return _namespace_GFF3O("GFF3_0034");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0034");
   }
 
   /**
@@ -106,7 +106,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0035)
    */
   public static Resource ontology_term() {
-    return _namespace_GFF3O("GFF3_0035");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0035");
   }
 
   /**
@@ -114,7 +114,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0039)
    */
   public static Resource target() {
-    return _namespace_GFF3O("GFF3_0039");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0039");
   }
 
   /**
@@ -126,7 +126,7 @@ public class GFF3O {
    *   (http://www.biointerchange.org/gff3o#GFF3_0040)
    */
   public static Set<Resource> target_properties() {
-    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("GFF3_0044"), _namespace_GFF3O("GFF3_0040") }));
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0044"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0040") }));
   }
 
   /**
@@ -134,7 +134,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0047)
    */
   public static Resource derives_from() {
-    return _namespace_GFF3O("GFF3_0047");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0047");
   }
 
   /**
@@ -142,7 +142,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0004)
    */
   public static Resource seqid() {
-    return _namespace_GFF3O("GFF3_0004");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0004");
   }
 
   /**
@@ -150,7 +150,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0005)
    */
   public static Resource source() {
-    return _namespace_GFF3O("GFF3_0005");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0005");
   }
 
   /**
@@ -158,7 +158,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0006)
    */
   public static Resource type() {
-    return _namespace_GFF3O("GFF3_0006");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0006");
   }
 
   /**
@@ -170,7 +170,7 @@ public class GFF3O {
    *   (http://www.biointerchange.org/gff3o#GFF3_0042)
    */
   public static Set<Resource> start() {
-    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("GFF3_0007"), _namespace_GFF3O("GFF3_0042") }));
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0007"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0042") }));
   }
 
   /**
@@ -182,7 +182,7 @@ public class GFF3O {
    *   (http://www.biointerchange.org/gff3o#GFF3_0043)
    */
   public static Set<Resource> end() {
-    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("GFF3_0008"), _namespace_GFF3O("GFF3_0043") }));
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0008"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0043") }));
   }
 
   /**
@@ -190,7 +190,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0009)
    */
   public static Resource score() {
-    return _namespace_GFF3O("GFF3_0009");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0009");
   }
 
   /**
@@ -198,7 +198,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0011)
    */
   public static Resource phase() {
-    return _namespace_GFF3O("GFF3_0011");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0011");
   }
 
   /**
@@ -206,7 +206,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0013)
    */
   public static Resource tag() {
-    return _namespace_GFF3O("GFF3_0013");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0013");
   }
 
   /**
@@ -214,7 +214,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0022)
    */
   public static Resource version() {
-    return _namespace_GFF3O("GFF3_0022");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0022");
   }
 
   /**
@@ -222,7 +222,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0024)
    */
   public static Resource build() {
-    return _namespace_GFF3O("GFF3_0024");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0024");
   }
 
   /**
@@ -230,7 +230,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0029)
    */
   public static Resource attribute_properties() {
-    return _namespace_GFF3O("GFF3_0029");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0029");
   }
 
   /**
@@ -238,7 +238,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0031)
    */
   public static Resource dbxref_properties() {
-    return _namespace_GFF3O("GFF3_0031");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0031");
   }
 
   /**
@@ -250,7 +250,7 @@ public class GFF3O {
    *   (http://www.biointerchange.org/gff3o#GFF3_0036)
    */
   public static Set<Resource> name() {
-    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("GFF3_0032"), _namespace_GFF3O("GFF3_0036") }));
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0032"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0036") }));
   }
 
   /**
@@ -258,7 +258,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0033)
    */
   public static Resource xref() {
-    return _namespace_GFF3O("GFF3_0033");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0033");
   }
 
   /**
@@ -266,7 +266,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0037)
    */
   public static Resource alias() {
-    return _namespace_GFF3O("GFF3_0037");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0037");
   }
 
   /**
@@ -274,7 +274,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0041)
    */
   public static Resource target_id() {
-    return _namespace_GFF3O("GFF3_0041");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0041");
   }
 
   /**
@@ -282,7 +282,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0046)
    */
   public static Resource gap() {
-    return _namespace_GFF3O("GFF3_0046");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0046");
   }
 
   /**
@@ -290,7 +290,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0048)
    */
   public static Resource note() {
-    return _namespace_GFF3O("GFF3_0048");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0048");
   }
 
   /**
@@ -298,7 +298,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0049)
    */
   public static Resource is_circular() {
-    return _namespace_GFF3O("GFF3_0049");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0049");
   }
 
   /**
@@ -306,7 +306,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0001)
    */
   public static Resource Set() {
-    return _namespace_GFF3O("GFF3_0001");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0001");
   }
 
   /**
@@ -314,7 +314,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0002)
    */
   public static Resource Feature() {
-    return _namespace_GFF3O("GFF3_0002");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0002");
   }
 
   /**
@@ -322,7 +322,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0003)
    */
   public static Resource Attribute() {
-    return _namespace_GFF3O("GFF3_0003");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0003");
   }
 
   /**
@@ -330,7 +330,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0016)
    */
   public static Resource Strand() {
-    return _namespace_GFF3O("GFF3_0016");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0016");
   }
 
   /**
@@ -338,7 +338,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0030)
    */
   public static Resource DBXRef() {
-    return _namespace_GFF3O("GFF3_0030");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0030");
   }
 
   /**
@@ -346,7 +346,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0038)
    */
   public static Resource Target() {
-    return _namespace_GFF3O("GFF3_0038");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0038");
   }
 
   /**
@@ -354,7 +354,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0017)
    */
   public static Resource Positive() {
-    return _namespace_GFF3O("GFF3_0017");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0017");
   }
 
   /**
@@ -362,7 +362,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0018)
    */
   public static Resource Negative() {
-    return _namespace_GFF3O("GFF3_0018");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0018");
   }
 
   /**
@@ -370,7 +370,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0019)
    */
   public static Resource UnknownStrand() {
-    return _namespace_GFF3O("GFF3_0019");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0019");
   }
 
   /**
@@ -378,7 +378,7 @@ public class GFF3O {
    * (http://www.biointerchange.org/gff3o#GFF3_0020)
    */
   public static Resource NotStranded() {
-    return _namespace_GFF3O("GFF3_0020");
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0020");
   }
 
   /**
@@ -387,49 +387,49 @@ public class GFF3O {
    * @param uri URI that is tested for being an object property
    */
   public static boolean isObjectProperty(Resource uri) {
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0010"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0010")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0012"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0012")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0014"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0014")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0015"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0015")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0021"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0021")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0023"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0023")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0025"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0025")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0026"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0026")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0034"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0034")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0035"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0035")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0039"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0039")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0044"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0044")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0045"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0045")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0047"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0047")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0050"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0050")) {
       return true;
     }
     return false;
@@ -441,79 +441,79 @@ public class GFF3O {
    * @param uri URI that is tested for being a datatype property
    */
   public static boolean isDatatypeProperty(Resource uri) {
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0004"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0004")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0005"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0005")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0006"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0006")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0007"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0007")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0008"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0008")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0009"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0009")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0011"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0011")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0013"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0013")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0022"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0022")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0024"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0024")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0027"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0027")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0028")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0029"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0029")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0031"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0031")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0032"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0032")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0033"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0033")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0036"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0036")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0037"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0037")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0040"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0040")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0041"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0041")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0042"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0042")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0043"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0043")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0046"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0046")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0048"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0048")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0049"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0049")) {
       return true;
     }
     return false;
@@ -525,22 +525,22 @@ public class GFF3O {
    * @param uri URI that is tested for being a class
    */
   public static boolean isClass(Resource uri) {
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0001"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0001")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0002"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0002")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0003"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0003")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0016"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0016")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0030"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0030")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0038"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0038")) {
       return true;
     }
     return false;
@@ -552,16 +552,16 @@ public class GFF3O {
    * @param uri URI that is tested for being a named individual
    */
   public static boolean isNamedIndividual(Resource uri) {
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0017"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0017")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0018"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0018")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0019"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0019")) {
       return true;
     }
-    if (uri.equals(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0020"))) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0020")) {
       return true;
     }
     return false;
@@ -585,7 +585,7 @@ public class GFF3O {
    */
   public static boolean hasParent(Resource uri, Resource parent) {
     if (__parent_properties.containsKey(uri)) {
-      if (__parent_properties.get(uri).equals(parent)) {
+      if (__parent_properties.get(uri) == parent) {
         return true;
       }
       return hasParent((Resource)__parent_properties.get(uri), parent);
@@ -607,38 +607,6 @@ public class GFF3O {
   private static Map<Resource, Resource> _init___parent_properties() {
     Map<Resource, Resource> map = new HashMap<Resource, Resource>();
 
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0046"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0024"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0027"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0013"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0029"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0035"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0026"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0036"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0047"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0026"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0014"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0026"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0048"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0037"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0004"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0015"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0025"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0049"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0005"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0006"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0050"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0044"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0039"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0026"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0007"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0041"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0040"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0008"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0042"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0040"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0009"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0043"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0040"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0032"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0031"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0021"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0025"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0010"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0026"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0033"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0031"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0022"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0027"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0011"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0028"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0045"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0044"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0034"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0026"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0023"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0025"));
-    map.put(ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0012"), ResourceFactory.createResource("http://www.biointerchange.org/gff3o#GFF3_0026"));
 
     return map;
   }
