@@ -346,6 +346,15 @@ A more verbose is produced by calling `rspec` directly:
 
     bundle exec rake rdoc
 
+### Deploying on Rubygems
+
+_Note:_ Only BioInterchange package maintainers can deploy the 'biointerchange' gem on Rubygems.
+
+    bundle exec rake version:bump:(major | minor | patch)
+    bundle exec rake gemspec
+    bundle exec gem build biointerchange.gemspec
+    bundle exec gem push biointerchange-VERSION.gem
+
 ### Troubleshooting
 
 #### GCC: No such file or directory
