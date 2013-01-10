@@ -38,11 +38,11 @@ class GFF3FeatureSet
     @pragmas.keys
   end
 
-  # Returns an URI for this particular feature set, which is a SHA1 hash over the content's concatenated properties.
+  # Returns an URI for this particular feature set, which is a SHA1 hash over the pragma's concatenated properties.
   def uri
     clob = ''
-    contents.each { |feature|
-      clob << "#{feature.sequence_id}\t#{feature.source}\t#{feature.type}\t#{feature.start_coordinate}\t#{feature.end_coordinate}\t#{feature.score}\t#{feature.strand}\t#{feature.phase}\t#{feature.attributes.keys.map { |tag| "#{tag}=#{feature.attributes[tag]}" }.join(';')}\n"
+    pragmas.each { |pragma_name|
+      clob << "#{pragma_name}\t#{pragma(pragma_name).to_s}\n"
     }
     "biointerchange://gff3/featureset/self/#{Digest::SHA1.hexdigest(clob)}"
   end
