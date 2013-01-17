@@ -89,7 +89,8 @@ module BioInterchange
       opt = Getopt::Long.getopts(
         ["--help", "-h", Getopt::BOOLEAN],
         ["--debug", "-d", Getopt::BOOLEAN],  # set debug mode => print stack traces
-        ["--no_rdf_graph_optimization", "-ng", Getopt::BOOLEAN], # set self.skip_rdf_graph to false
+        ["--no_rdf_graph_optimization", "-n", Getopt::BOOLEAN], # set self.skip_rdf_graph to false
+        ["--batchsize", "-b", Getopt::OPTIONAL], # batchsize for readers/writers that support +postpone?+
         ["--input", "-i", Getopt::REQUIRED], # input file format
         ["--rdf", "-r", Getopt::REQUIRED], # output file format
         ["--name", Getopt::OPTIONAL], # name of resourcce/tool/person
@@ -177,24 +178,27 @@ module BioInterchange
       opt['date'] = nil unless opt['date']
       opt['version'] = nil unless opt['version']
       
+      wrong_type('batchsize', 'a positive integer') if opt['batchsize'] and not opt['batchsize'].match(/^[1-9][0-9]*$/)
+
+      opt['batchsize'] = opt['batchsize'].to_i if opt['batchsize']
+
       # Generate model from file (deserialization).
       # Note: if-clauses are lexicographically ordered. 
       reader = nil
       if opt['input'] == 'biointerchange.gff3' then
-        reader = BioInterchange::Genomics::GFF3Reader.new(opt['name'], opt['name_id'], opt['date'])
+        reader = BioInterchange::Genomics::GFF3Reader.new(opt['name'], opt['name_id'], opt['date'], opt['batchsize'])
       elsif opt['input'] == 'biointerchange.gvf' then
-        reader = BioInterchange::Genomics::GVFReader.new(opt['name'], opt['name_id'], opt['date'])
+        reader = BioInterchange::Genomics::GVFReader.new(opt['name'], opt['name_id'], opt['date'], opt['batchsize'])
       elsif opt['input'] == 'dbcls.catanns.json' then
         reader = BioInterchange::TextMining::PubannosJsonReader.new(opt['name'], opt['name_id'], opt['date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['version'])
       elsif opt['input'] == 'uk.ac.man.pdfx' then
         reader = BioInterchange::TextMining::PdfxXmlReader.new(opt['name'], opt['name_id'], opt['date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['version'])
       end
     
-      model = nil
       if opt["file"]
-        model = reader.deserialize(File.new(opt["file"],'r'))
+        input_source = File.new(opt["file"],'r')
       else
-        model = reader.deserialize(STDIN)
+        input_source = STDIN
       end
     
       # Generate rdf from model (serialization).
@@ -209,7 +213,10 @@ module BioInterchange
         writer = BioInterchange::Genomics::RDFWriter.new(STDOUT) unless opt['out']
       end
       
-      writer.serialize(model)
+      begin
+        model = reader.deserialize(input_source)
+        writer.serialize(model)
+      end while reader.postponed?
 
     rescue ArgumentError => e
       $stderr.puts e.message
@@ -248,6 +255,10 @@ private
 
   def self.unsupported_combination
     raise ArgumentError, 'This input/output format combination is not supported.'
+  end
+
+  def self.wrong_type(parameter, expected_type)
+    raise ArgumentError, "The parameter '#{parameter}' needs to be #{expected_type}."
   end
 
 end

@@ -7,7 +7,7 @@ class GVFReader < GFF3Reader
   # +name+:: Optional name of the person who generated the GVF file.
   # +name_uri+:: Optional e-mail address of the person who generated the GVF file.
   # +date+:: Optional date of when the GVF file was produced.
-  def initialize(name = nil, name_uri = nil, date = nil)
+  def initialize(name = nil, name_uri = nil, date = nil, batch_size = nil)
     # Remember: calling super without brackets passes all arguments of initialize!
     super
   end

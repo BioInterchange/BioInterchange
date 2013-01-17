@@ -1,29 +1,44 @@
+require 'stringio'
+
 module BioInterchange::Genomics
 
 class GFF3Reader
 
   # Creates a new instance of a Generic Feature Format Version 3 (GFF3) reader.
   #
+  # The reader supports batch processing.
+  #
   # +name+:: Optional name of the person who generated the GFF3 file.
   # +name_uri+:: Optional e-mail address of the person who generated the GFF3 file.
   # +date+:: Optional date of when the GFF3 file was produced.
-  def initialize(name = nil, name_uri = nil, date = nil)
+  # +batch_size+:: Optional integer that determines that number of features that
+  # should be processed in one go.
+  def initialize(name = nil, name_uri = nil, date = nil, batch_size = nil)
     @name = name
     @name_uri = name_uri
     @date = date
+    @batch_size = batch_size
   end 
 
   # Reads a GFF3 file from the input stream and returns an associated model.
   #
+  # If this method is called when +postponed?+ returns true, then the reading will
+  # continue from where it has been interrupted beforehand.
+  #
   # +inputstream+:: an instance of class IO or String that holds the contents of a GFF3 file
   def deserialize(inputstream)
     if inputstream.kind_of?(IO)
-      create_model(inputstream.read)
-    elsif inputstream.kind_of?(String) then
       create_model(inputstream)
+    elsif inputstream.kind_of?(String) then
+      create_model(StringIO.new(inputstream))
     else
       raise BioInterchange::Exceptions::ImplementationReaderError, 'The provided input stream needs to be either of type IO or String.'
     end
+  end
+
+  # Returns true if the reading of the input was postponed due to a full batch.
+  def postponed?
+    @postponed
   end
 
 protected
@@ -33,21 +48,41 @@ protected
   end
 
   def create_model(gff3)
-    feature_set = create_feature_set
-    gff3.each_line { |line|
+    if @postponed then
+      @postponed = false
+      @feature_set.prune
+    else
+      @feature_set = create_feature_set
+    end
+    feature_no = 0
+
+    # Note: there is a `while true` statement at the end of this block!
+    begin
+      line = gff3.readline
+      line.chomp!
+
       next if line.start_with?('#') and not line.start_with?('##')
 
       # Ignore sequences for now.
       break if line.start_with?('##FASTA')
 
       unless line.start_with?('##') then
-        add_feature(feature_set, line)
-      else
-        add_pragma(feature_set, line)
-      end
-    }
+        add_feature(@feature_set, line)
+        feature_no += 1
 
-    feature_set
+        if @batch_size and feature_no >= @batch_size then
+          @postponed = true
+          break
+        end
+      else
+        add_pragma(@feature_set, line)
+      end
+    rescue EOFError
+      # Expected. Do nothing, since just the end of the file/input has been reached.
+      break
+    end while true
+
+    @feature_set
   end
 
   def add_feature(feature_set, line)

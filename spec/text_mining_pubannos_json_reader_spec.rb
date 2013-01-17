@@ -23,6 +23,9 @@ describe BioInterchange::TextMining::PubannosJsonReader do
       before :all do 
         @reader = BioInterchange::TextMining::PubannosJsonReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
       end
+      it 'reader is not postponed upon instantiation' do
+        @reader.postponed?.should eql false
+      end
       it 'read json from string' do
         model = @reader.deserialize('{"docurl":"http://example.org/test","text":""}')
       
@@ -48,7 +51,7 @@ describe BioInterchange::TextMining::PubannosJsonReader do
         @model = reader.deserialize('{ "name": "Peter Smith", "name_id": "<peter.smith@example.json>", "date": "2012-08-12", "version": "3", "docurl":"http://example.org/example_json", "text":"Some document text. With two annotations of type protein.\n", "catanns":[{"annset_id":1,"begin":0,"category":"Protein","doc_id":9,"end":10,"id":139},{"annset_id":1,"begin":20,"category":"Protein","doc_id":9,"end":42,"id":138}]}')
 
       end
-      
+
       it 'model is of type document' do
         @model.should be_an_instance_of BioInterchange::TextMining::Document
       end

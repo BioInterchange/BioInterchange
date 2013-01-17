@@ -24,7 +24,16 @@ class TMReader < BioInterchange::Reader
   def deserialize(inputstream)
     raise BioInterchange::Exceptions::ImplementationReaderError, 'InputStream not of type IO, cannot read.' unless inputstream.kind_of?(IO)
   end
+
+  # Returns true if the reading of the input was postponed due to a full batch.
+  # The current implementation does not support batch processing though, which
+  # means that this method always returns false.
+  def postponed?
+    false
+  end
   
+protected
+
   # Automatically tries to determine a suitable process from the given name ID, which is assumed
   # to be either an email address or web-site.
   #

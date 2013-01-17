@@ -62,6 +62,14 @@ class GFF3FeatureSet
      # TODO Should throw exception if name is not a string.
      @pragmas[name] = value
    end
+
+   # Removes all features from the set, but keeps the pragmas. This enables
+   # batched processing, since the URI for the set is only determined by the
+   # pragma statement contents.
+   def prune
+     @set.clear
+   end
+
 end
 
 end

@@ -22,6 +22,9 @@ describe BioInterchange::TextMining::PdfxXmlReader do
       before :all do 
         @reader = BioInterchange::TextMining::PdfxXmlReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
       end
+      it 'reader is not postponed upon instantiation' do
+        @reader.postponed?.should eql false
+      end
       it 'read pdfx from string' do
         model = @reader.deserialize("<pdfx><job>text</job></pdfx>")
       
