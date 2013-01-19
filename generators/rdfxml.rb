@@ -16,7 +16,9 @@ OBO_DEF = RDF::URI.new('http://purl.obolibrary.org/obo/def')
 # For handling synonyms in SIO:
 SIO_SYN = RDF::URI.new('http://semanticscience.org/resource/synonym')
 
-def makeLabel(label)
+# This label conversion also appears in:
+#   +lib/biointerchange/core.rb+
+def make_safe_label(label)
   label.gsub(/[ '-.<>\/]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
 end
 
@@ -55,7 +57,7 @@ model.keys.each { |key|
   next unless type
 
   label = entry[RDF::RDFS.label].to_s
-  next if makeLabel(label).empty?
+  next if make_safe_label(label).empty?
   uri = key.to_s
 
   # Only deal with URI sub-classes/sub-properties, whilst ignoring restrictions, etc.
@@ -84,7 +86,7 @@ model.keys.each { |key|
     set = combined_uris[label_or_synonym]
     set = [] unless set
     combined_uris[label_or_synonym] = set | [ uri ]
-    generated_labels[label_or_synonym] = makeLabel(label_or_synonym)
+    generated_labels[label_or_synonym] = make_safe_label(label_or_synonym)
   }
 
   object_properties[uri] = true if type == RDF::OWL.ObjectProperty
