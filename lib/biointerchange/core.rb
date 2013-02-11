@@ -21,6 +21,7 @@ module BioInterchange
 
   # Ontologies (besides the ones from the 'rdf' gem)
   require 'biointerchange/gff3o'
+  require 'biointerchange/goxref'
   require 'biointerchange/gvf1o'
   require 'biointerchange/sio'
   require 'biointerchange/sofa'
@@ -93,12 +94,13 @@ module BioInterchange
         ["--batchsize", "-b", Getopt::OPTIONAL], # batchsize for readers/writers that support +postpone?+
         ["--input", "-i", Getopt::REQUIRED], # input file format
         ["--rdf", "-r", Getopt::REQUIRED], # output file format
-        ["--name", Getopt::OPTIONAL], # name of resourcce/tool/person
-        ["--name_id", Getopt::OPTIONAL], # uri of resource/tool/person
-        ["--date", "-t", Getopt::OPTIONAL], # date of processing/annotation
-        ["--version", "-v", Getopt::OPTIONAL], # version number of resource
+        ["--annotate_name", Getopt::OPTIONAL], # name of resourcce/tool/person
+        ["--annotate_name_id", Getopt::OPTIONAL], # uri of resource/tool/person
+        ["--annotate_date", Getopt::OPTIONAL], # date of processing/annotation
+        ["--annotate_version", Getopt::OPTIONAL], # version number of resource
         ["--file", "-f", Getopt::OPTIONAL], # file to read, will read from STDIN if not supplied
-        ["--out", "-o", Getopt::OPTIONAL] # output file, will out to STDOUT if not supplied
+        ["--out", "-o", Getopt::OPTIONAL], # output file, will out to STDOUT if not supplied
+        ["--version", "-v", Getopt::OPTIONAL] # output the version number of the gem and exit
       )
       
       if opt['help'] or not opt['input'] or not opt['rdf'] then
@@ -128,10 +130,10 @@ module BioInterchange
         puts '  Input: dbcls.catanns.json, uk.ac.man.pdfx'
         puts '  Output: rdf.bh12.sio'
         puts '  Options:'
-        puts '    -t <date>/--date <date>          : date of processing/annotation (optional)'
-        puts '    -v <version>/--version <version> : version number of resource (optional)'
-        puts '    --name <name>                    : name of resource/tool/person (required)'
-        puts '    --name_id <id>                   : URI of resource/tool/person (required)'
+        puts '    --annotate_date <date>           : date of processing/annotation (optional)'
+        puts '    --annotate_version <version>     : version number of resource (optional)'
+        puts '    --annotate_name <name>           : name of resource/tool/person (required)'
+        puts '    --annotate_name_id <id>          : URI of resource/tool/person (required)'
         puts ''
         puts 'Input-/RDF-format specific options:'
         puts '  Input: biointerchange.gff3 or biointerchange.gvf'
@@ -142,12 +144,19 @@ module BioInterchange
         puts '    --name_id <id>                   : email address of the GFF3/GVF file creator (optional)'
         puts ''
         puts 'Other options:'
+        puts '  -v / --version                     : print the Gem\'s version number and exit'
         puts '  -d / --debug                       : turn on debugging output (for stacktraces)'
         puts '  -h  --help                         : this message'
       
         exit 1
       end
       
+      # Print version number and exit:
+      if opt['version'] then
+        puts 'BioInterchange 0.1.4'
+        exit
+      end
+
       # Turn off optimization, if requested. This will generate an RDF graph in memory and
       # at least double memory requirements and runtime.
       @@skip_rdf_graph = false if opt['no_rdf_graph_optimization']
@@ -175,9 +184,6 @@ module BioInterchange
         unsupported_combination
       end
       
-      opt['date'] = nil unless opt['date']
-      opt['version'] = nil unless opt['version']
-      
       wrong_type('batchsize', 'a positive integer') if opt['batchsize'] and not opt['batchsize'].match(/^[1-9][0-9]*$/)
 
       opt['batchsize'] = opt['batchsize'].to_i if opt['batchsize']
@@ -186,13 +192,13 @@ module BioInterchange
       # Note: if-clauses are lexicographically ordered. 
       reader = nil
       if opt['input'] == 'biointerchange.gff3' then
-        reader = BioInterchange::Genomics::GFF3Reader.new(opt['name'], opt['name_id'], opt['date'], opt['batchsize'])
+        reader = BioInterchange::Genomics::GFF3Reader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], opt['batchsize'])
       elsif opt['input'] == 'biointerchange.gvf' then
-        reader = BioInterchange::Genomics::GVFReader.new(opt['name'], opt['name_id'], opt['date'], opt['batchsize'])
+        reader = BioInterchange::Genomics::GVFReader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], opt['batchsize'])
       elsif opt['input'] == 'dbcls.catanns.json' then
-        reader = BioInterchange::TextMining::PubannosJsonReader.new(opt['name'], opt['name_id'], opt['date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['version'])
+        reader = BioInterchange::TextMining::PubannosJsonReader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['version'])
       elsif opt['input'] == 'uk.ac.man.pdfx' then
-        reader = BioInterchange::TextMining::PdfxXmlReader.new(opt['name'], opt['name_id'], opt['date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['version'])
+        reader = BioInterchange::TextMining::PdfxXmlReader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['annotate_version'])
       end
     
       if opt["file"]
@@ -249,6 +255,13 @@ module BioInterchange
         map[parameter]
       end
     }
+  end
+
+  # Returns a "safe" version of a label that can be used as a Ruby method name.
+  #
+  # +label+:: string that should be converted into a "safe" string that can be used as a Ruby method name
+  def self.make_safe_label(label)
+    label.gsub(/[ '-.<>\/]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
   end
 
 private

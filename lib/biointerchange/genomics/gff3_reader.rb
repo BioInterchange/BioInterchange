@@ -89,11 +89,15 @@ protected
     line.chomp!
     seqid, source, type, start_coordinate, end_coordinate, score, strand, phase, attributes = line.split("\t")
 
-    # The type might be a SO/SOFA term, SO/SOFA accession, or other term (it stays a string then):
-    if type.match(/SO:\d+/) then
-      type = RDF::URI.new("http://purl.obolibrary.org/obo/#{type.sub(':', '_')}")
-    elsif BioInterchange::SOFA.methods.include?(type.gsub(' ', '_').to_sym)
-      type = BioInterchange::SOFA.send(type.gsub(' ', '_'))
+    # The type might be a SO/SOFA term or SO/SOFA accession:
+    begin
+      if type.match(/^SO:\d{7}$/) then
+        type = RDF::URI.new("http://www.sequenceontology.org/miso/current_release/term/#{feature.type}")
+      else
+        type = BioInterchange::SOFA.send(BioInterchange.make_safe_label(type))
+      end
+    rescue NoMethodError
+      raise BioInterchange::Exceptions::InputFormatError, 'Type of feature is set to an unknown SOFA term.'
     end
 
     # String to numeric value conversions:
@@ -138,17 +142,20 @@ protected
     # Interpret pragmas depending on their definition:
     if name == 'gff-version' then
       feature_set.set_pragma(name, { name => value.to_f })
+    elsif name == 'species' then
+      feature_set.set_pragma(name, { name => value })
     elsif name == 'sequence-region' then
       regions = feature_set.pragma(name)
       regions = {} unless regions
       seqid, start_coordinate, end_coordinate = value.split(/\s+/, 3)
-      regions[seqid] = BioInterchange::Genomics::GFF3NamedRegion.new(seqid, start_coordinate.to_i, end_coordinate.to_i)
+      regions[seqid] = BioInterchange::Genomics::GFF3Landmark.new(seqid, start_coordinate.to_i, end_coordinate.to_i)
       feature_set.set_pragma(name, regions)
     else
       # Unhandled pragma. Just save the value in its string form.
       feature_set.set_pragma(name, value)
     end
   end
+
 end
 
 end

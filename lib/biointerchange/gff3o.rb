@@ -3,6 +3,18 @@ module BioInterchange
 
 class GFF3O
 
+  # Establishes the landmark (e.g. a chromosome) on which a feature is located.
+  # (http://www.biointerchange.org/gff3o#GFF3_0004)
+  def self.seqid
+    return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0004')
+  end
+
+  # Type of the feature, which is either an entry the "lite" version of the Sequence Ontology (SOFA) or a child entry of sequence_feature (SO:0000110) of the full Sequence Ontology (SO).
+  # (http://www.biointerchange.org/gff3o#GFF3_0006)
+  def self.type
+    return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0006')
+  end
+
   # Either:
   #   Strand of the feature.
   #   (http://www.biointerchange.org/gff3o#GFF3_0010)
@@ -101,22 +113,10 @@ class GFF3O
     return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0047')
   end
 
-  # ID of the landmark that establishes the coordinate system for the current feature.
-  # (http://www.biointerchange.org/gff3o#GFF3_0004)
-  def self.seqid
-    return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0004')
-  end
-
   # A free text qualifier that describes the algorithm or operating procedure that generated this feature.  For example, the name of the software that generated this feature or a database name.
   # (http://www.biointerchange.org/gff3o#GFF3_0005)
   def self.source
     return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0005')
-  end
-
-  # Type of the feature, which is either a term from the "lite" version of the Sequence Ontology (SOFA), a term from the full Sequence Ontology (SO) that is a child of sequence_feature (SO:0000110), or a SOFA or SO accession number.
-  # (http://www.biointerchange.org/gff3o#GFF3_0006)
-  def self.type
-    return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0006')
   end
 
   # Either:
@@ -125,8 +125,11 @@ class GFF3O
   # Or:
   #   Start coordinate of the target.
   #   (http://www.biointerchange.org/gff3o#GFF3_0042)
+  # Or:
+  #   Genomic start coordinate of the landmark.
+  #   (http://www.biointerchange.org/gff3o#GFF3_0054)
   def self.start
-    return [ RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0007'), RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0042') ]
+    return [ RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0007'), RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0042'), RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0054') ]
   end
 
   # Either:
@@ -135,8 +138,11 @@ class GFF3O
   # Or:
   #   End coordinate of the target.
   #   (http://www.biointerchange.org/gff3o#GFF3_0043)
+  # Or:
+  #   Genomic end coordinate of the landmark.
+  #   (http://www.biointerchange.org/gff3o#GFF3_0055)
   def self.end
-    return [ RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0008'), RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0043') ]
+    return [ RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0008'), RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0043'), RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0055') ]
   end
 
   # Score of the feature. For example, an E-value for sequence similarity features or a P-value for ab initio gene prediction features.
@@ -227,6 +233,18 @@ class GFF3O
     return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0049')
   end
 
+  # Properties that are directly associated with Landmark class instances.
+  # (http://www.biointerchange.org/gff3o#GFF3_0052)
+  def self.landmark_properties
+    return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0052')
+  end
+
+  # ID that uniquely establishes the Landmark's identity within a Set.
+  # (http://www.biointerchange.org/gff3o#GFF3_0053)
+  def self.id
+    return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0053')
+  end
+
   # Set of genomic sequence features, whose identifiers are unique within the set.
   # (http://www.biointerchange.org/gff3o#GFF3_0001)
   def self.Set
@@ -251,16 +269,16 @@ class GFF3O
     return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0016')
   end
 
-  # A class describing relationships between features and external databases.
-  # (http://www.biointerchange.org/gff3o#GFF3_0030)
-  def self.DBXRef
-    return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0030')
-  end
-
   # Indicates a feature's "target" of a nucleotide-to-nucleotide or protein-to-nucleotide alignment.
   # (http://www.biointerchange.org/gff3o#GFF3_0038)
   def self.Target
     return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0038')
+  end
+
+  # A landmark that establishes the coordinate system for features.
+  # (http://www.biointerchange.org/gff3o#GFF3_0051)
+  def self.Landmark
+    return RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0051')
   end
 
   # Location on the positive (forward) strand.
@@ -291,6 +309,12 @@ class GFF3O
   #
   # +uri+:: URI that is tested for being an object property
   def self.is_object_property?(uri)
+    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0004') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0006') then
+      return true
+    end
     if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0010') then
       return true
     end
@@ -343,13 +367,7 @@ class GFF3O
   #
   # +uri+:: URI that is tested for being a datatype property
   def self.is_datatype_property?(uri)
-    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0004') then
-      return true
-    end
     if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0005') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0006') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0007') then
@@ -418,6 +436,18 @@ class GFF3O
     if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0049') then
       return true
     end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0052') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0053') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0054') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0055') then
+      return true
+    end
     return false
   end
 
@@ -437,10 +467,10 @@ class GFF3O
     if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0016') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0030') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0038') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0038') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0051') then
       return true
     end
     return false
@@ -488,7 +518,7 @@ class GFF3O
   end
 
 private
-  @@parent_properties = { RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0010') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0012') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0014') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0015') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0025') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0021') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0023') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0025') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0034') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0035') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0039') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0045') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0044') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0047') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0050') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0044') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0004') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0005') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0006') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0007') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0008') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0009') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0011') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0013') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0029') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0022') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0027') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0024') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0027') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0032') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0031') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0033') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0031') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0036') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0037') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0041') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0040') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0042') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0040') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0043') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0040') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0046') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0048') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0049') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') }
+  @@parent_properties = { RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0004') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0006') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0010') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0012') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0014') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0015') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0025') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0021') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0023') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0025') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0034') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0035') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0039') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0045') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0044') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0047') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0026') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0050') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0044') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0005') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0007') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0008') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0009') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0011') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0013') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0029') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0022') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0027') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0024') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0027') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0032') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0031') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0033') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0031') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0036') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0037') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0041') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0040') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0042') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0040') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0043') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0040') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0046') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0048') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0049') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0028') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0053') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0052') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0054') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0052') , RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0055') => RDF::URI.new('http://www.biointerchange.org/gff3o#GFF3_0052') }
 
 end
 
