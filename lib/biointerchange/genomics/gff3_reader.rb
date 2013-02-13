@@ -127,9 +127,7 @@ protected
       phase = nil
     end
 
-    temp = {}
-    attributes.split(';').map { |assignment| match = assignment.match(/([^=]+)=(.+)/) ; { match[1].strip => match[2].split(',').map { |value| value.strip } } }.map { |hash| hash.each_pair { |tag,list| temp[tag] = list } }
-    attributes = temp
+    attributes = split_attributes(attributes)
 
     feature_set.add(BioInterchange::Genomics::GFF3Feature.new(seqid, source, type, start_coordinate, end_coordinate, score, strand, phase, attributes))
   end
@@ -139,21 +137,39 @@ protected
     name, value = line[2..-1].split(/\s/, 2)
     value.strip!
     
-    # Interpret pragmas depending on their definition:
-    if name == 'gff-version' then
+    # Interpret pragmas depending on their definition (sorted alphabetically):
+    if name == 'feature-ontology' then
+      ontologies = feature_set.pragma(name)
+      ontologies = { name => [] } unless ontologies
+      ontologies[name] << value
+      feature_set.set_pragma(name, ontologies)
+    elsif name == 'genome-build' then
+      builds = feature_set.pragma(name)
+      builds = { name => {} } unless builds
+      source, build_name = value.split(/\s+/, 2)
+      build_name.sub!(/\s.*$/, '') # Remove possible comments
+      builds[name][source] = build_name
+      feature_set.set_pragma(name, builds)
+    elsif name == 'gff-version' then
       feature_set.set_pragma(name, { name => value.to_f })
-    elsif name == 'species' then
-      feature_set.set_pragma(name, { name => value })
     elsif name == 'sequence-region' then
       regions = feature_set.pragma(name)
       regions = {} unless regions
       seqid, start_coordinate, end_coordinate = value.split(/\s+/, 3)
       regions[seqid] = BioInterchange::Genomics::GFF3Landmark.new(seqid, start_coordinate.to_i, end_coordinate.to_i)
       feature_set.set_pragma(name, regions)
+    elsif name == 'species' then
+      feature_set.set_pragma(name, { name => value })
     else
       # Unhandled pragma. Just save the value in its string form.
       feature_set.set_pragma(name, value)
     end
+  end
+
+  def split_attributes(attribute_string)
+    attributes = {}
+    attribute_string.split(';').map { |assignment| match = assignment.match(/([^=]+)=(.+)/) ; { match[1].strip => match[2].split(',').map { |value| value.strip } } }.map { |hash| hash.each_pair { |tag,list| attributes[tag] = list } }
+    attributes
   end
 
 end

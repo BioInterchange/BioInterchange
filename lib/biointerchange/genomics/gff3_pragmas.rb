@@ -1,7 +1,7 @@
 
 module BioInterchange::Genomics
 
-# Represents a named region, which is defined by the pragma statement 'sequence-region'.
+# Represents a named region, a.k.a. landmark, which is defined by the pragma statement 'sequence-region'.
 class GFF3Landmark
 
   # Create a new instance of a named region.

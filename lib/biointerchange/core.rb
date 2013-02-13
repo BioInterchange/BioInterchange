@@ -139,6 +139,7 @@ module BioInterchange
         puts '  Input: biointerchange.gff3 or biointerchange.gvf'
         puts '  Output: rdf.biointerchange.gff3 or rdf.biointerchange.gvf'
         puts '  Options:'
+        puts '    -b <size>/--batchsize <size>     : process features in batches of the given size (optional)'
         puts '    -t <date>/--date <date>          : date when the GFF3/GVF file was created (optional)'
         puts '    --name <name>                    : name of the GFF3/GVF file creator (optional)'
         puts '    --name_id <id>                   : email address of the GFF3/GVF file creator (optional)'

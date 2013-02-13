@@ -69,12 +69,15 @@ protected
   end
 
   # Serializes pragmas for a given feature set URI.
+  #
   # +graph+:: RDF graph to which the pragmas are added
   # +set_uri+:: the feature set URI to which the pragmas belong to
   # +pragma+:: an object representing a pragma statement
   def serialize_pragma(graph, set_uri, pragma)
     if pragma.kind_of?(Hash) then
-      if pragma.has_key?('gff-version') and @base == BioInterchange::GFF3O then
+      if (pragma.has_key?('attribute-method') or pragma.has_key?('data-source') or pragma.has_key?('score-method') or pragma.has_key?('source-method') or pragma.has_key?('technology-platform')) and @base == BioInterchange::GVF1O then
+        serialize_structured_attribute(graph, set_uri, pragma)
+      elsif pragma.has_key?('gff-version') and @base == BioInterchange::GFF3O then
         graph.insert(RDF::Statement.new(set_uri, @base.version, RDF::Literal.new(pragma['gff-version'], :datatype => RDF::XSD.float )))
       elsif pragma.has_key?('gff-version') and @base == BioInterchange::GVF1O then
         graph.insert(RDF::Statement.new(set_uri, @base.gff_version, RDF::Literal.new(pragma['gff-version'], :datatype => RDF::XSD.float )))
@@ -132,7 +135,9 @@ protected
 
   # Serializes a genomic feature landmark ("seqid").
   #
-  #
+  # +graph+:: RDF graph to which the landmark is added
+  # +set_uri+:: the feature set URI to which the landmark belongs to
+  # +landmark+:: encapsuled landmark data
   def serialize_landmark(graph, set_uri, landmark)
     return if @landmarks.has_key?(landmark.seqid)
     landmark_uri = RDF::URI.new("#{set_uri.to_s}/landmark/#{landmark.seqid}")
@@ -175,19 +180,107 @@ protected
           graph.insert(RDF::Statement.new(feature_uri, @base.reference_seq, RDF::Literal.new(value)))
         }
       else
+        attribute_properties = @base.attribute_properties
+        attribute_properties = attribute_properties.select { |uri| @base.is_datatype_property?(uri) }[0] if attribute_properties.kind_of?(Array)
+        feature_properties = @base.feature_properties.select { |uri| @base.is_object_property?(uri) }[0]
         list.each_index { |index|
           value = list[index]
           attribute_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/#{tag}") if list.size == 1
           attribute_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/#{tag}-#{index + 1}") unless list.size == 1
-          graph.insert(RDF::Statement.new(feature_uri, @base.attributes, attribute_uri))
+          graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.attributes ].flatten, feature_properties)[0], attribute_uri))
           graph.insert(RDF::Statement.new(attribute_uri, RDF.type, @base.Attribute))
-          graph.insert(RDF::Statement.new(attribute_uri, @base.tag, RDF::Literal.new("#{tag}")))
+          graph.insert(RDF::Statement.new(attribute_uri, @base.with_parent([ @base.tag ].flatten, attribute_properties)[0], RDF::Literal.new("#{tag}")))
           graph.insert(RDF::Statement.new(attribute_uri, RDF.value, RDF::Literal.new(value)))
         }
       end
     }
   end
 
+  # Serializes a structured attribute (given as a pragma statement), which later
+  # can be referred to from feature instances.
+  #
+  # +graph+:: RDF graph to which the structured attribute is added
+  # +set_uri+:: the feature set URI to which the structured attribute belongs to
+  # +pragma+:: a map that encapsulates the structured attribute data
+  def serialize_structured_attribute(graph, set_uri, pragma)
+    attribute_uri = RDF::URI.new("#{set_uri.to_s}/structured_attribute/#{pragma.object_id}")
+    attributes = nil
+    class_type = nil
+    if pragma.has_key?('attribute-method') then
+      attributes = pragma['attribute-method'][0]
+      class_type = @base.Method
+    elsif pragma.has_key?('data-source') then
+      attributes = pragma['data-source'][0]
+      class_type = @base.DataSource
+    elsif pragma.has_key?('score-method') then
+      attributes = pragma['score-method'][0]
+      class_type = @base.Method
+    elsif pragma.has_key?('source-method') then
+      attributes = pragma['source-method'][0]
+      class_type = @base.Method
+    elsif pragma.has_key?('technology-platform') then
+      attributes = pragma['technology-platform'][0]
+      class_type = @base.TechnologyPlatform
+    else
+      # TODO Error.
+    end
+    graph.insert(RDF::Statement.new(attribute_uri, RDF.type, class_type))
+    if class_type == @base.DataSource and attributes.has_key?('Data_type') then
+      data_type_individual = nil
+      attributes['Data_type'] = attributes['Data_type'][0] # TODO Make sure array is of length 1.
+      if attributes['Data_type'] == 'Array_CGH' then
+        data_type_individual = @base.ArrayComparativeGenomicHybridization
+      elsif attributes['Data_type'] == 'DNA_microarray' then
+        data_type_individual = @base.DNAMicroarray
+      elsif attributes['Data_type'] == 'DNA_sequence' then
+        data_type_individual = @base.DNASequence
+      elsif attributes['Data_type'] == 'RNA_sequence' then
+        data_type_individual = @base.RNASequence
+      else
+        # TODO Error.
+      end
+      graph.insert(RDF::Statement.new(attribute_uri, @base.data_type, data_type_individual))
+    elsif class_type == @base.TechnologyPlatform then
+      if attributes.has_key?('Average_coverage') then
+        graph.insert(RDF::Statement.new(attribute_uri, @base.average_coverage, RDF::Literal.new(attributes['Average_coverage'][0].to_i)))
+      end
+      if attributes.has_key?('Platform_class') then
+        graph.insert(RDF::Statement.new(attribute_uri, @base.platform_class, RDF::Literal.new(attributes['Platform_class'][0])))
+      end
+      if attributes.has_key?('Platform_name') then
+        graph.insert(RDF::Statement.new(attribute_uri, @base.platform_name, RDF::Literal.new(attributes['Platform_name'][0])))
+      end
+      if attributes.has_key?('Read_length') then
+        graph.insert(RDF::Statement.new(attribute_uri, @base.read_length, RDF::Literal.new(attributes['Read_length'][0].to_i)))
+      end
+      if attributes.has_key?('Read_pair_span') then
+        graph.insert(RDF::Statement.new(attribute_uri, @base.read_pair_span, RDF::Literal.new(attributes['Read_pair_span'][0].to_i)))
+      end
+      if attributes.has_key?('Read_type') then
+        read_type_individual = nil
+        attributes['Read_type'] = attributes['Read_type'][0] # TODO Make sure array is of length 1.
+        if attributes['Read_type'] == 'fragment' then
+          read_type_individual = @base.Fragment
+        elsif attributes['Read_type'] == 'pair' then
+          read_type_individual = @base.Pair
+        else
+          # TODO Error.
+        end
+        graph.insert(RDF::Statement.new(attribute_uri, @base.read_type, read_type_individual))
+      end
+    end
+    structuredpragma_properties = @base.structuredpragma_properties.select { |uri| @base.is_object_property?(uri) }[0]
+    attributes.keys.each { |tag|
+      if tag.match(/^[a-z]/) then
+        attributes[tag] = attributes[tag].join(',') # Restore original list -- if there was one.
+        custom_attribute_uri = RDF::URI.new("#{attribute_uri.to_s}/attribute/#{tag}")
+        graph.insert(RDF::Statement.new(custom_attribute_uri, RDF.type, @base.StructuredAttribute))
+        graph.insert(RDF::Statement.new(custom_attribute_uri, @base.with_parent([ @base.tag ].flatten, @base.structuredattribute_properties)[0], tag))
+        graph.insert(RDF::Statement.new(custom_attribute_uri, RDF.value, RDF::Literal.new(attributes[tag])))
+        graph.insert(RDF::Statement.new(attribute_uri, @base.with_parent([ @base.attributes ].flatten, structuredpragma_properties)[0], custom_attribute_uri))
+      end
+    }
+  end
 end
 
 end

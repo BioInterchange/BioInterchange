@@ -23,8 +23,14 @@ protected
     name, value = line[2..-1].split(/\s/, 2)
     value.strip!
 
-    # Interpret pragmas, and if not known, delegate to GFF3Reader:
-    if name == 'gvf-version' then
+    # Interpret pragmas, and if not known, delegate to GFF3Reader (in alphabetical order):
+    if name == 'attribute-method' or name == 'data-source' or name == 'score-method' or name == 'source-method' or name == 'technology-platform' then
+      attributes = split_attributes(value)
+      structured_attributes = feature_set.pragma(name)
+      structured_attributes = { name => [] } unless structured_attributes
+      structured_attributes[name] << attributes
+      feature_set.set_pragma(name, structured_attributes)
+    elsif name == 'gvf-version' then
       feature_set.set_pragma(name, { name => value.to_f })
     else
       super(feature_set, line)
