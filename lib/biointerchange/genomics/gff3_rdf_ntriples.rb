@@ -51,6 +51,9 @@ protected
     # being serialized.
     @landmarks = {}
 
+    # Record written variants in order to avoid writing out RDF.type multiple times.
+    @variants = {}
+
     graph = RDF::Graph.new
     graph.fast_ostream(@ostream) if BioInterchange::skip_rdf_graph
     set_uri = RDF::URI.new(model.uri)
@@ -155,18 +158,19 @@ protected
   # +attribtues+:: a map of tag/value pairs
   def serialize_attributes(graph, set_uri, feature_uri, attributes)
     attributes.each_pair { |tag, list|
-      if tag == 'Parent' then
-        list.each { |parent_id|
-          graph.insert(RDF::Statement.new(feature_uri, @base.parent, RDF::URI.new("#{set_uri.to_s}/feature/#{parent_id}")))
+      # Check for defined tags (in alphabetical order), if not matched, serialize as generic Attribute:
+      if tag == 'Alias' then
+        list.each { |value|
+          graph.insert(RDF::Statement.new(feature_uri, @base.alias, RDF::Literal.new(value)))
         }
       elsif tag == 'Dbxref' then
         feature_properties = @base.feature_properties.select { |uri| @base.is_object_property?(uri) }[0]
         list.each { |value|
           begin
             if value.match(/^dbSNP(_\d+)?:rs\d+$/) then
-              graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.dbxref ].flatten, feature_properties)[0], RDF::URI.new("http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=#{value.split(/:/)[1].sub(/^.*:rs/, '')}")))
+              graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.dbxref ].flatten, feature_properties)[0], RDF::URI.new("http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=#{value.split(/:/)[1].sub(/^rs/, '')}")))
             elsif value.match(/^COSMIC(_\d+)?:COSM\d+$/) then
-              graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.dbxref ].flatten, feature_properties)[0], RDF::URI.new("http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=#{value.split(/:/)[1].sub(/^.*:COSM/, '')}")))
+              graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.dbxref ].flatten, feature_properties)[0], RDF::URI.new("http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=#{value.split(/:/)[1].sub(/^COSM/, '')}")))
             else
               abbreviation, id = value.split(':', 2)
               graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.dbxref ].flatten, feature_properties)[0], RDF::URI.new(BioInterchange::GOXRef.send(BioInterchange.make_safe_label(abbreviation)).to_s + id)))
@@ -175,11 +179,57 @@ protected
             raise BioInterchange::Exceptions::InputFormatError, 'Attribute Dbxref link-out is not resolvable, i.e. the name cannot be turned into an URL.'
           end
         }
+      elsif tag == 'Derives_from' and @base == BioInterchange::GFF3O then
+        list.each { |value|
+          graph.insert(RDF::Statement.new(feature_uri, @base.derives_from, RDF::URI.new("#{set_uri.to_s}/feature/#{value}")))
+        }
+      elsif tag == 'Gap' and @base == BioInterchange::GFF3O then
+        graph.insert(RDF::Statement.new(feature_uri, @base.gap, RDF::Literal.new(list.join(','))))
+      elsif tag == 'ID' then
+        # Do nothing. The feature ID is the URI of the feature. It is not relevant as information anymore.
+      elsif tag == 'Is_circular' and @base == BioInterchange::GFF3O then
+        value = list.join(',')
+        graph.insert(RDF::Statement.new(feature_uri, @base.is_circular, true)) if value == 'true'
+        graph.insert(RDF::Statement.new(feature_uri, @base.is_circular, false)) if value == 'false'
+        # TODO Report invalid value.
+      elsif tag == 'Name' and @base == BioInterchange::GFF3O then
+        graph.insert(RDF::Statement.new(feature_uri, @base.name, RDF::Literal.new(list.join(','))))
+      elsif tag == 'Note' and @base == BioInterchange::GFF3O then
+        list.each { |value|
+          graph.insert(RDF::Statement.new(feature_uri, @base.note, RDF::Literal.new(value)))
+        }
+      elsif tag == 'Ontology_term' and @base == BioInterchange::GFF3O then
+        list.each { |value|
+          # TODO Sanitize values that are either not in GO xrf_abbs or need conversion to match
+          #      match their associated Ruby method.
+          namespace, accession = value.split(/:/, 2)
+          graph.insert(RDF::Statement.new(feature_uri, @base.ontology_term, RDF::URI.new("#{BioInterchange::GOXRef.send(namespace).to_s}#{accession}")))
+        }
+      elsif tag == 'Parent' then
+        list.each { |parent_id|
+          graph.insert(RDF::Statement.new(feature_uri, @base.parent, RDF::URI.new("#{set_uri.to_s}/feature/#{parent_id}")))
+        }
       elsif tag == 'Reference_seq' then
         list.each { |value|
           graph.insert(RDF::Statement.new(feature_uri, @base.reference_seq, RDF::Literal.new(value)))
         }
+      elsif tag == 'Target' then
+        target_id, start_coordinate, end_coordinate, strand = list.join(',').split(/\s+/, 4)
+        target_datatype_properties = @base.target_properties.select { |uri| @base.is_datatype_property?(uri) }[0]
+        target_object_properties = @base.target_properties.select { |uri| @base.is_object_property?(uri) }[0]
+        target_uri = RDF::URI.new("#{feature_uri.to_s}/target/#{target_id}")
+        graph.insert(RDF::Statement.new(target_uri, RDF.type, @base.Target))
+        graph.insert(RDF::Statement.new(target_uri, @base.target_id, RDF::Literal.new(target_id)))
+        graph.insert(RDF::Statement.new(target_uri, @base.with_parent([ @base.start ].flatten, target_datatype_properties)[0], RDF::Literal.new(start_coordinate.to_i)))
+        graph.insert(RDF::Statement.new(target_uri, @base.with_parent([ @base.end ].flatten, target_datatype_properties)[0], RDF::Literal.new(end_coordinate.to_i)))
+        graph.insert(RDF::Statement.new(target_uri, @base.with_parent([ @base.end ].flatten, target_object_properties)[0], @base.Positive)) if strand and strand == '+'
+        graph.insert(RDF::Statement.new(target_uri, @base.with_parent([ @base.end ].flatten, target_object_properties)[0], @base.Negative)) if strand and strand == '-'
+        graph.insert(RDF::Statement.new(feature_uri, @base.target, target_uri))
+      elsif tag == 'Variant_seq' and @base == BioInterchange::GVF1O then
+        serialize_variant_seqs(graph, set_uri, feature_uri, list)
       else
+        # TODO Report unknown upper case letters here? That would be a spec. validation...
+        #      Well, or it would show that this implementation is incomplete. Could be either.
         attribute_properties = @base.attribute_properties
         attribute_properties = attribute_properties.select { |uri| @base.is_datatype_property?(uri) }[0] if attribute_properties.kind_of?(Array)
         feature_properties = @base.feature_properties.select { |uri| @base.is_object_property?(uri) }[0]
@@ -272,13 +322,28 @@ protected
     structuredpragma_properties = @base.structuredpragma_properties.select { |uri| @base.is_object_property?(uri) }[0]
     attributes.keys.each { |tag|
       if tag.match(/^[a-z]/) then
-        attributes[tag] = attributes[tag].join(',') # Restore original list -- if there was one.
         custom_attribute_uri = RDF::URI.new("#{attribute_uri.to_s}/attribute/#{tag}")
         graph.insert(RDF::Statement.new(custom_attribute_uri, RDF.type, @base.StructuredAttribute))
         graph.insert(RDF::Statement.new(custom_attribute_uri, @base.with_parent([ @base.tag ].flatten, @base.structuredattribute_properties)[0], tag))
         graph.insert(RDF::Statement.new(custom_attribute_uri, RDF.value, RDF::Literal.new(attributes[tag])))
         graph.insert(RDF::Statement.new(attribute_uri, @base.with_parent([ @base.attributes ].flatten, structuredpragma_properties)[0], custom_attribute_uri))
       end
+    }
+  end
+
+  # Serializes a list of variant sequences.
+  #
+  # +graph+:: RDF graph to which the structured attribute is added
+  # +set_uri+:: the feature set URI to which the feature belongs to
+  # +feature_uri+:: the feature URI to the feature that is annotated with variant data
+  # +list+:: list of variant values
+  def serialize_variant_seqs(graph, set_uri, feature_uri, list)
+    list.each_index { |index|
+      value = list[index]
+      variant_uri = RDF::URI.new("#{feature_uri.to_s}/variant/#{index}")
+      graph.insert(RDF::Statement.new(variant_uri, RDF.type, @base.Variant)) unless @variants.has_key?(variant_uri.to_s)
+      @variants[variant_uri.to_s] = true
+      graph.insert(RDF::Statement.new(variant_uri, @base.variant_seq, RDF::Literal.new(value)))
     }
   end
 end
