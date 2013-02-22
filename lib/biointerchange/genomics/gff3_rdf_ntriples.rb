@@ -325,7 +325,7 @@ protected
         custom_attribute_uri = RDF::URI.new("#{attribute_uri.to_s}/attribute/#{tag}")
         graph.insert(RDF::Statement.new(custom_attribute_uri, RDF.type, @base.StructuredAttribute))
         graph.insert(RDF::Statement.new(custom_attribute_uri, @base.with_parent([ @base.tag ].flatten, @base.structuredattribute_properties)[0], tag))
-        graph.insert(RDF::Statement.new(custom_attribute_uri, RDF.value, RDF::Literal.new(attributes[tag])))
+        graph.insert(RDF::Statement.new(custom_attribute_uri, RDF.value, RDF::Literal.new(attributes[tag].join(','))))
         graph.insert(RDF::Statement.new(attribute_uri, @base.with_parent([ @base.attributes ].flatten, structuredpragma_properties)[0], custom_attribute_uri))
       end
     }
