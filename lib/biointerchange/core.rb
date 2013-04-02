@@ -89,21 +89,21 @@ module BioInterchange
     begin
       opt = Getopt::Long.getopts(
         ["--help", "-h", Getopt::BOOLEAN],
-        ["--debug", "-d", Getopt::BOOLEAN],  # set debug mode => print stack traces
+        ["--debug", "-d", Getopt::BOOLEAN],                     # set debug mode => print stack traces
         ["--no_rdf_graph_optimization", "-n", Getopt::BOOLEAN], # set self.skip_rdf_graph to false
-        ["--batchsize", "-b", Getopt::OPTIONAL], # batchsize for readers/writers that support +postpone?+
-        ["--input", "-i", Getopt::REQUIRED], # input file format
-        ["--rdf", "-r", Getopt::REQUIRED], # output file format
-        ["--annotate_name", Getopt::OPTIONAL], # name of resourcce/tool/person
-        ["--annotate_name_id", Getopt::OPTIONAL], # uri of resource/tool/person
-        ["--annotate_date", Getopt::OPTIONAL], # date of processing/annotation
-        ["--annotate_version", Getopt::OPTIONAL], # version number of resource
-        ["--file", "-f", Getopt::OPTIONAL], # file to read, will read from STDIN if not supplied
-        ["--out", "-o", Getopt::OPTIONAL], # output file, will out to STDOUT if not supplied
-        ["--version", "-v", Getopt::OPTIONAL] # output the version number of the gem and exit
+        ["--batchsize", "-b", Getopt::OPTIONAL],                # batchsize for readers/writers that support +postpone?+
+        ["--input", "-i", Getopt::REQUIRED],                    # input file format
+        ["--rdf", "-r", Getopt::REQUIRED],                      # output file format
+        ["--annotate_name", Getopt::OPTIONAL],                  # name of resourcce/tool/person
+        ["--annotate_name_id", Getopt::OPTIONAL],               # uri of resource/tool/person
+        ["--annotate_date", Getopt::OPTIONAL],                  # date of processing/annotation
+        ["--annotate_version", Getopt::OPTIONAL],               # version number of resource
+        ["--file", "-f", Getopt::OPTIONAL],                     # file to read, will read from STDIN if not supplied
+        ["--out", "-o", Getopt::OPTIONAL],                      # output file, will out to STDOUT if not supplied
+        ["--version", "-v", Getopt::BOOLEAN]                    # output the version number of the gem and exit
       )
       
-      if opt['help'] or not opt['input'] or not opt['rdf'] then
+      if opt['help'] or not (opt['input'] and opt['rdf'] or opt['version']) then
         puts "Usage: ruby #{$0} -i <format> -r <format> [options]"
         puts ''
         puts 'Supported input formats (--input <format>/-i <format>):'
@@ -154,7 +154,7 @@ module BioInterchange
       
       # Print version number and exit:
       if opt['version'] then
-        puts 'BioInterchange 0.1.4'
+        puts "BioInterchange #{Gem.loaded_specs["biointerchange"].version}"
         exit
       end
 
