@@ -97,7 +97,7 @@ protected
         type = BioInterchange::SOFA.send(BioInterchange.make_safe_label(type))
       end
     rescue NoMethodError
-      raise BioInterchange::Exceptions::InputFormatError, 'Type of feature is set to an unknown SOFA term.'
+      raise BioInterchange::Exceptions::InputFormatError, "Type of feature is set to an unknown SOFA term: \"#{type}\""
     end
 
     # String to numeric value conversions:
@@ -166,6 +166,10 @@ protected
     end
   end
 
+  # Takes a GFF3/GVF attribute string (column 9) and decompose it into key/value pairs, where
+  # values are representing a list for the (possibly) comma separated GFF3/GVF attribute values.
+  #
+  # +attribute_string+:: key/value string (column 9) as seen in a GFF3/GVF file
   def split_attributes(attribute_string)
     attributes = {}
     attribute_string.split(';').map { |assignment| match = assignment.match(/([^=]+)=(.+)/) ; { match[1].strip => match[2].split(',').map { |value| value.strip } } }.map { |hash| hash.each_pair { |tag,list| attributes[tag] = list } }

@@ -12,12 +12,6 @@ class GVF1O
     return [ RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0004'), RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0072') ]
   end
 
-  # Type of the feature, which is either an entry the "lite" version of the Sequence Ontology (SOFA) or a child entry of sequence_feature (SO:0000110) of the full Sequence Ontology (SO).
-  # (http://www.biointerchange.org/gvf1o#GVF1_0006)
-  def self.type
-    return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0006')
-  end
-
   # Either:
   #   Strand of the feature.
   #   (http://www.biointerchange.org/gvf1o#GVF1_0010)
@@ -108,12 +102,6 @@ class GVF1O
     return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0043')
   end
 
-  # Features that are affected by this sequence alteration effect.
-  # (http://www.biointerchange.org/gvf1o#GVF1_0044)
-  def self.feature
-    return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0044')
-  end
-
   # A coordinate range for ambiguous start coordinates.
   # (http://www.biointerchange.org/gvf1o#GVF1_0046)
   def self.start_range
@@ -178,10 +166,14 @@ class GVF1O
     return [ RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0069'), RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') ]
   end
 
-  # Properties that are directly associated with Effect class instances.
-  # (http://www.biointerchange.org/gvf1o#GVF1_0070)
+  # Either:
+  #   Properties that are directly associated with Effect class instances.
+  #   (http://www.biointerchange.org/gvf1o#GVF1_0070)
+  # Or:
+  #   Properties that are directly associated with Effect class instances.
+  #   (http://www.biointerchange.org/gvf1o#GVF1_0158)
   def self.effect_properties
-    return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070')
+    return [ RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070'), RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0158') ]
   end
 
   # Either:
@@ -218,12 +210,6 @@ class GVF1O
   #   (http://www.biointerchange.org/gvf1o#GVF1_0092)
   def self.target_properties
     return [ RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0089'), RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0092') ]
-  end
-
-  # A cross-reference to an ontology term that is associated with a feature.
-  # (http://www.biointerchange.org/gvf1o#GVF1_0096)
-  def self.ontology_term
-    return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0096')
   end
 
   # Either:
@@ -341,10 +327,22 @@ class GVF1O
     return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0150')
   end
 
+  # Identifies the target that the features aligns to.
+  # (http://www.biointerchange.org/gvf1o#GVF1_0155)
+  def self.target
+    return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0155')
+  end
+
   # A free text qualifier that describes the algorithm or operating procedure that generated this feature.  For example, the name of the software that generated this feature or a database name.
   # (http://www.biointerchange.org/gvf1o#GVF1_0005)
   def self.source
     return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0005')
+  end
+
+  # Type of the feature, which is either an entry the "lite" version of the Sequence Ontology (SOFA) or a child entry of sequence_feature (SO:0000110) of the full Sequence Ontology (SO).
+  # (http://www.biointerchange.org/gvf1o#GVF1_0006)
+  def self.type
+    return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0006')
   end
 
   # Either:
@@ -459,6 +457,12 @@ class GVF1O
     return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0039')
   end
 
+  # Features that are affected by this sequence alteration effect. This can be an external feature identifier, such as an Ensembl gene/transcript identifier.
+  # (http://www.biointerchange.org/gvf1o#GVF1_0044)
+  def self.feature
+    return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0044')
+  end
+
   # Either:
   #   Unclear from GVF specification.
   #   (http://www.biointerchange.org/gvf1o#GVF1_0050)
@@ -523,6 +527,12 @@ class GVF1O
     return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0093')
   end
 
+  # A cross-reference to an ontology term that is associated with a feature.
+  # (http://www.biointerchange.org/gvf1o#GVF1_0096)
+  def self.ontology_term
+    return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0096')
+  end
+
   # An arbitrary comment. Free text.
   # (http://www.biointerchange.org/gvf1o#GVF1_0105)
   def self.comment
@@ -575,6 +585,16 @@ class GVF1O
   # (http://www.biointerchange.org/gvf1o#GVF1_0153)
   def self.structuredattribute_properties
     return RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0153')
+  end
+
+  # Either:
+  #   Sequence associated with this feature, if it has been specified using a FASTA string.
+  #   (http://www.biointerchange.org/gvf1o#GVF1_0156)
+  # Or:
+  #   Sequence associated with this feature, if it has been specified using a FASTA string.
+  #   (http://www.biointerchange.org/gvf1o#GVF1_0157)
+  def self.sequence
+    return [ RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0156'), RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0157') ]
   end
 
   # Set of genomic sequence features, whose identifiers are unique within the set.
@@ -824,9 +844,6 @@ class GVF1O
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0004') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0006') then
-      return true
-    end
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0010') then
       return true
     end
@@ -861,9 +878,6 @@ class GVF1O
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0043') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0044') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0046') then
@@ -918,9 +932,6 @@ class GVF1O
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0091') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0096') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0102') then
@@ -986,6 +997,9 @@ class GVF1O
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0152') then
       return true
     end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0155') then
+      return true
+    end
     return false
   end
 
@@ -994,6 +1008,9 @@ class GVF1O
   # +uri+:: URI that is tested for being a datatype property
   def self.is_datatype_property?(uri)
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0005') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0006') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0007') then
@@ -1033,6 +1050,9 @@ class GVF1O
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0039') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0044') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0048') then
@@ -1107,6 +1127,9 @@ class GVF1O
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0095') then
       return true
     end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0096') then
+      return true
+    end
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0101') then
       return true
     end
@@ -1153,6 +1176,15 @@ class GVF1O
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0154') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0156') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0157') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0158') then
       return true
     end
     return false
@@ -1315,7 +1347,7 @@ class GVF1O
   end
 
 private
-  @@parent_properties = { RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0004') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0006') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0010') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0012') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0014') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0015') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0021') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0023') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0034') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0036') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0038') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0069') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0041') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0069') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0042') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0043') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0044') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0046') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0047') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0051') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0067') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0053') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0069') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0072') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0075') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0078') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0079') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0075') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0080') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0083') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0075') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0090') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0089') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0091') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0089') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0096') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0102') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0112') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0103') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0112') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0104') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0112') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0119') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0102') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0120') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0103') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0121') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0122') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0123') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0124') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0125') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0126') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0127') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0075') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0129') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0128') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0130') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0089') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0131') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0069') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0147') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0148') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0150') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0152') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0112') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0005') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0007') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0008') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0009') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0013') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0064') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0022') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0063') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0024') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0063') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0025') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0026') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0027') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0031') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0032') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0037') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0065') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0039') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0048') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0061') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0049') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0061') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0050') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0054') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0055') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0056') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0057') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0073') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0071') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0074') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0071') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0076') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0077') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0081') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0063') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0082') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0063') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0093') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0092') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0094') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0092') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0095') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0092') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0101') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0105') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0113') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0106') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0113') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0108') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0132') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0133') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0134') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0137') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0136') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0138') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0136') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0139') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0136') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0149') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0063') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0154') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0153') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0088') => RDF::URI.new('http://www.w3.org/2002/07/owl#Thing') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0151') => RDF::URI.new('http://www.w3.org/2002/07/owl#Thing') }
+  @@parent_properties = { RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0004') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0010') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0012') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0014') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0015') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0021') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0023') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0034') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0036') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0038') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0069') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0041') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0069') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0042') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0043') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0046') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0047') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0051') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0067') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0053') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0069') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0072') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0075') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0078') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0079') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0075') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0080') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0083') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0075') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0090') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0089') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0091') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0089') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0102') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0112') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0103') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0112') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0104') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0112') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0119') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0102') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0120') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0103') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0121') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0122') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0123') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0124') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0125') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0126') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0070') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0127') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0075') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0129') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0128') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0130') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0089') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0131') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0069') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0147') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0148') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0150') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0068') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0152') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0112') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0155') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0066') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0005') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0006') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0007') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0008') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0009') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0013') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0064') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0022') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0063') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0024') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0063') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0025') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0026') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0027') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0031') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0032') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0037') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0065') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0039') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0044') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0158') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0048') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0061') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0049') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0061') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0050') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0054') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0055') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0056') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0060') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0057') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0073') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0071') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0074') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0071') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0076') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0077') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0081') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0063') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0082') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0063') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0093') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0092') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0094') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0092') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0095') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0092') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0096') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0101') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0105') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0113') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0106') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0113') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0108') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0132') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0133') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0134') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0107') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0137') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0136') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0138') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0136') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0139') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0136') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0149') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0063') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0154') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0153') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0156') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0059') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0157') => RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0136') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0088') => RDF::URI.new('http://www.w3.org/2002/07/owl#Thing') , RDF::URI.new('http://www.biointerchange.org/gvf1o#GVF1_0151') => RDF::URI.new('http://www.w3.org/2002/07/owl#Thing') }
 
 end
 

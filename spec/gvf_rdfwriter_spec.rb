@@ -73,7 +73,7 @@ describe BioInterchange::Genomics::RDFWriter do
         object.sub!(/\s+\.$/, '')
         feature_no += 1 if predicate == "<#{RDF.type}>" and object == "<#{BioInterchange::GVF1O.Feature}>"
       }
-      lines.count.should be == 36
+      lines.count.should be == 37
       feature_no.should be == 3
     end
   end

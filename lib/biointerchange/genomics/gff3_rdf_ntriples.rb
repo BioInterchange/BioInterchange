@@ -145,6 +145,7 @@ protected
     return if @landmarks.has_key?(landmark.seqid)
     landmark_uri = RDF::URI.new("#{set_uri.to_s}/landmark/#{landmark.seqid}")
     @landmarks[landmark.seqid] = landmark_uri
+    graph.insert(RDF::Statement.new(landmark_uri, RDF.type, @base.Landmark))
     graph.insert(RDF::Statement.new(landmark_uri, @base.with_parent([ @base.id ].flatten, @base.landmark_properties)[0], RDF::Literal.new(landmark.seqid)))
     graph.insert(RDF::Statement.new(landmark_uri, @base.with_parent([ @base.start ].flatten, @base.landmark_properties)[0], RDF::Literal.new(landmark.start_coordinate))) if landmark.start_coordinate
     graph.insert(RDF::Statement.new(landmark_uri, @base.with_parent([ @base.end ].flatten, @base.landmark_properties)[0], RDF::Literal.new(landmark.end_coordinate))) if landmark.end_coordinate
@@ -164,16 +165,29 @@ protected
           graph.insert(RDF::Statement.new(feature_uri, @base.alias, RDF::Literal.new(value)))
         }
       elsif tag == 'Dbxref' then
-        feature_properties = @base.feature_properties.select { |uri| @base.is_object_property?(uri) }[0]
+        feature_properties = nil
+        if @base == BioInterchange::GFF3O then
+          feature_properties = @base.feature_properties.select { |uri| @base.is_datatype_property?(uri) }[0]
+        else
+          feature_properties = @base.feature_properties.select { |uri| @base.is_object_property?(uri) }[0]
+        end
         list.each { |value|
           begin
+            linkout = nil
+            # First: determine the Dbxref linkout URI as string
             if value.match(/^dbSNP(_\d+)?:rs\d+$/) then
-              graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.dbxref ].flatten, feature_properties)[0], RDF::URI.new("http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=#{value.split(/:/)[1].sub(/^rs/, '')}")))
+              linkout = "http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=#{value.split(/:/)[1].sub(/^rs/, '')}"
             elsif value.match(/^COSMIC(_\d+)?:COSM\d+$/) then
-              graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.dbxref ].flatten, feature_properties)[0], RDF::URI.new("http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=#{value.split(/:/)[1].sub(/^COSM/, '')}")))
+              linkout = "http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=#{value.split(/:/)[1].sub(/^COSM/, '')}"
             else
               abbreviation, id = value.split(':', 2)
-              graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.dbxref ].flatten, feature_properties)[0], RDF::URI.new(BioInterchange::GOXRef.send(BioInterchange.make_safe_label(abbreviation)).to_s + id)))
+              linkout = BioInterchange::GOXRef.send(BioInterchange.make_safe_label(abbreviation)).to_s + id
+            end
+            # Second, and finally: add a triple to the graph in the right representative format depending on the ontology used
+            if @base == BioInterchange::GFF3O then
+              graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.dbxref ].flatten, feature_properties)[0], RDF::Literal.new(linkout, :datatype => RDF::XSD.anyURI )))
+            else
+              graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.dbxref ].flatten, feature_properties)[0], RDF::URI.new(linkout))) if @base == BioInterchange::GVF1O
             end
           rescue NoMethodError
             raise BioInterchange::Exceptions::InputFormatError, 'Attribute Dbxref link-out is not resolvable, i.e. the name cannot be turned into an URL.'
@@ -198,12 +212,12 @@ protected
         list.each { |value|
           graph.insert(RDF::Statement.new(feature_uri, @base.note, RDF::Literal.new(value)))
         }
-      elsif tag == 'Ontology_term' and @base == BioInterchange::GFF3O then
+      elsif tag == 'Ontology_term' then
         list.each { |value|
           # TODO Sanitize values that are either not in GO xrf_abbs or need conversion to match
           #      match their associated Ruby method.
           namespace, accession = value.split(/:/, 2)
-          graph.insert(RDF::Statement.new(feature_uri, @base.ontology_term, RDF::URI.new("#{BioInterchange::GOXRef.send(namespace).to_s}#{accession}")))
+          graph.insert(RDF::Statement.new(feature_uri, @base.ontology_term, RDF::Literal.new("#{BioInterchange::GOXRef.send(namespace).to_s}#{accession}", :datatype => RDF::XSD.anyURI )))
         }
       elsif tag == 'Parent' then
         list.each { |parent_id|
@@ -225,6 +239,8 @@ protected
         graph.insert(RDF::Statement.new(target_uri, @base.with_parent([ @base.end ].flatten, target_object_properties)[0], @base.Positive)) if strand and strand == '+'
         graph.insert(RDF::Statement.new(target_uri, @base.with_parent([ @base.end ].flatten, target_object_properties)[0], @base.Negative)) if strand and strand == '-'
         graph.insert(RDF::Statement.new(feature_uri, @base.target, target_uri))
+      elsif tag == 'Variant_effect' and @base == BioInterchange::GVF1O then
+        serialize_variant_effects(graph, set_uri, feature_uri, list)
       elsif tag == 'Variant_seq' and @base == BioInterchange::GVF1O then
         serialize_variant_seqs(graph, set_uri, feature_uri, list)
       else
@@ -331,6 +347,28 @@ protected
     }
   end
 
+  # Serializes a list of variant effects.
+  #
+  # +graph+:: RDF graph to which the structured attribute is added
+  # +set_uri+:: the feature set URI to which the feature belongs to
+  # +feature_uri+:: the feature URI to the feature that is annotated with variant data
+  # +list+:: list of variant values
+  def serialize_variant_effects(graph, set_uri, feature_uri, list)
+    list.each_index { |index|
+      effect = list[index]
+      sequence_variant, variant_index, feature_type, feature_ids = effect.split(' ', 4)
+      feature_ids = feature_ids.split(' ')
+      effect_uri = RDF::URI.new("#{feature_uri.to_s}/variant/#{variant_index}/effect/#{index}")
+      serialize_variant_triple(graph, feature_uri, RDF::URI.new("#{feature_uri.to_s}/variant/#{variant_index}"), @base.effect, effect_uri)
+      graph.insert(RDF::Statement.new(effect_uri, RDF.type, @base.Effect))
+      graph.insert(RDF::Statement.new(effect_uri, @base.sequence_variant, BioInterchange::SO.send(BioInterchange.make_safe_label(sequence_variant))))
+      graph.insert(RDF::Statement.new(effect_uri, @base.feature_type, BioInterchange::SO.send(BioInterchange.make_safe_label(feature_type))))
+      feature_ids.each { |feature_id|
+        graph.insert(RDF::Statement.new(effect_uri, @base.feature, RDF::Literal.new(feature_id)))
+      }
+    }
+  end
+
   # Serializes a list of variant sequences.
   #
   # +graph+:: RDF graph to which the structured attribute is added
@@ -341,10 +379,24 @@ protected
     list.each_index { |index|
       value = list[index]
       variant_uri = RDF::URI.new("#{feature_uri.to_s}/variant/#{index}")
-      graph.insert(RDF::Statement.new(variant_uri, RDF.type, @base.Variant)) unless @variants.has_key?(variant_uri.to_s)
-      @variants[variant_uri.to_s] = true
-      graph.insert(RDF::Statement.new(variant_uri, @base.variant_seq, RDF::Literal.new(value)))
+      serialize_variant_triple(graph, feature_uri, variant_uri, @base.variant_seq, RDF::Literal.new(value))
     }
+  end
+
+  # Adds a variant to the graph; tracks the variant's URI that RDF.type is only written out once.
+  #
+  # +graph+:: RDF graph to which the variant is added
+  # +feature_uri+:: the feature URI to the feature that is annotated with variant data
+  # +variant_uri+:: URI that identifies the feature in question ("subject", if you like)
+  # +predicate+:: predicate that describes the data being serialized
+  # +object+:: data to be serialized
+  def serialize_variant_triple(graph, feature_uri, variant_uri, predicate, object)
+    unless @variants.has_key?(variant_uri.to_s) then
+      graph.insert(RDF::Statement.new(feature_uri, @base.variant, variant_uri))
+      graph.insert(RDF::Statement.new(variant_uri, RDF.type, @base.Variant))
+    end
+    @variants[variant_uri.to_s] = true
+    graph.insert(RDF::Statement.new(variant_uri, predicate, object))
   end
 end
 

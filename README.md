@@ -163,7 +163,12 @@ To use the BioInterchange artifact, set-up add the following to your Maven POM f
       </dependency>
     </dependencies>
 
-Usage examples:
+Current vocabularies:
+
+*  Generic Feature Format Version 3 Ontology (GFF3O)
+*  Genome Variation Format Version 1 Ontology (GVF1O)
+
+Usage examples of accessing GFF3O's vocabulary:
 
     package org.biointerchange;
     
@@ -270,6 +275,9 @@ Building a new version of the Ruby vocabulary classes for GFF3, SIO, SOFA (requi
     echo -e "module BioInterchange\n" > lib/biointerchange/sio.rb
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO >> lib/biointerchange/sio.rb
     echo -e "\nend" >> lib/biointerchange/sio.rb
+    echo -e "module BioInterchange\n" > lib/biointerchange/so.rb
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-so> SO >> lib/biointerchange/so.rb
+    echo -e "\nend" >> lib/biointerchange/so.rb
     echo -e "module BioInterchange\n" > lib/biointerchange/sofa.rb
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sofa> SOFA >> lib/biointerchange/sofa.rb
     echo -e "\nend" >> lib/biointerchange/sofa.rb
@@ -287,6 +295,7 @@ The source-code generation can be skipped, if none of the ontologies that are us
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gff3o> GFF3O | ruby generators/pythonify.rb > supplemental/python/biointerchange/gff3o.py
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gvf1o> GVF1O | ruby generators/pythonify.rb > supplemental/python/biointerchange/gvf1o.py
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO | ruby generators/pythonify.rb > supplemental/python/biointerchange/sio.py
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-so> SO | ruby generators/pythonify.rb > supplemental/python/biointerchange/so.py
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sofa> SOFA | ruby generators/pythonify.rb > supplemental/python/biointerchange/sofa.py
     curl ftp://ftp.geneontology.org/pub/go/doc/GO.xrf_abbs | ruby generators/GOxrefify.rb | ruby generators/pythonify.rb > supplemental/python/biointerchange/goxref.py
 
@@ -308,6 +317,7 @@ The source-code generation can be skipped, if none of the ontologies that are us
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gff3o> GFF3O | ruby generators/javaify.rb > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/GFF3O.java
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gvf1o> GVF1O | ruby generators/javaify.rb > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/GVF1O.java
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO | ruby generators/javaify.rb > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/SIO.java
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-so> SO | ruby generators/javaify.rb "http://purl.obolibrary.org/obo/" > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/SO.java
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sofa> SOFA | ruby generators/javaify.rb "http://purl.obolibrary.org/obo/" > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/SOFA.java
     curl ftp://ftp.geneontology.org/pub/go/doc/GO.xrf_abbs | ruby generators/GOxrefify.rb | ruby generators/javaify.rb > supplemental/java/biointerchange/src/main/java/org/biointerchange/vocabulary/GOXRef.java
 

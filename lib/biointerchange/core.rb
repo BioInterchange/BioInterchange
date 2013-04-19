@@ -24,6 +24,7 @@ module BioInterchange
   require 'biointerchange/goxref'
   require 'biointerchange/gvf1o'
   require 'biointerchange/sio'
+  require 'biointerchange/so'
   require 'biointerchange/sofa'
 
   # Reader/writer interfaces
