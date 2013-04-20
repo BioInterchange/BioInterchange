@@ -14,6 +14,14 @@ import org.apache.commons.collections.Predicate;
 public class GFF3O {
 
   /**
+   * Establishes the landmark (e.g. a chromosome) on which a feature is located.
+   * (http://www.biointerchange.org/gff3o#GFF3_0004)
+   */
+  public static Resource seqid() {
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0004");
+  }
+
+  /**
    * Either:
    *   Strand of the feature.
    *   (http://www.biointerchange.org/gff3o#GFF3_0010)
@@ -94,22 +102,6 @@ public class GFF3O {
   }
 
   /**
-   * A database cross-reference to associate a sequence alteration to its  representation in another database.
-   * (http://www.biointerchange.org/gff3o#GFF3_0034)
-   */
-  public static Resource dbxref() {
-    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0034");
-  }
-
-  /**
-   * A cross-reference to an ontology term that is associated with a feature.
-   * (http://www.biointerchange.org/gff3o#GFF3_0035)
-   */
-  public static Resource ontology_term() {
-    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0035");
-  }
-
-  /**
    * Identifies the target that the features aligns to.
    * (http://www.biointerchange.org/gff3o#GFF3_0039)
    */
@@ -138,11 +130,11 @@ public class GFF3O {
   }
 
   /**
-   * ID of the landmark that establishes the coordinate system for the current feature.
-   * (http://www.biointerchange.org/gff3o#GFF3_0004)
+   * Explicit link-out to one or more ontologies that have been used for describing features. This is a meta comment about the URIs that link out to SO/SOFA or other ontologies.
+   * (http://www.biointerchange.org/gff3o#GFF3_0056)
    */
-  public static Resource seqid() {
-    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0004");
+  public static Resource feature_ontology() {
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0056");
   }
 
   /**
@@ -154,7 +146,7 @@ public class GFF3O {
   }
 
   /**
-   * Type of the feature, which is either a term from the "lite" version of the Sequence Ontology (SOFA), a term from the full Sequence Ontology (SO) that is a child of sequence_feature (SO:0000110), or a SOFA or SO accession number.
+   * Type of the feature, which is either an entry the "lite" version of the Sequence Ontology (SOFA) or a child entry of sequence_feature (SO:0000110) of the full Sequence Ontology (SO).
    * (http://www.biointerchange.org/gff3o#GFF3_0006)
    */
   public static Resource type() {
@@ -168,9 +160,12 @@ public class GFF3O {
    * Or:
    *   Start coordinate of the target.
    *   (http://www.biointerchange.org/gff3o#GFF3_0042)
+   * Or:
+   *   Genomic start coordinate of the landmark.
+   *   (http://www.biointerchange.org/gff3o#GFF3_0054)
    */
   public static Set<Resource> start() {
-    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0007"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0042") }));
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0007"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0042"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0054") }));
   }
 
   /**
@@ -180,9 +175,12 @@ public class GFF3O {
    * Or:
    *   End coordinate of the target.
    *   (http://www.biointerchange.org/gff3o#GFF3_0043)
+   * Or:
+   *   Genomic end coordinate of the landmark.
+   *   (http://www.biointerchange.org/gff3o#GFF3_0055)
    */
   public static Set<Resource> end() {
-    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0008"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0043") }));
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0008"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0043"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0055") }));
   }
 
   /**
@@ -234,31 +232,27 @@ public class GFF3O {
   }
 
   /**
-   * Properties that are directly associated with DBXRef class instances.
-   * (http://www.biointerchange.org/gff3o#GFF3_0031)
+   * A database cross-reference to associate a sequence alteration to its representation in another database.
+   * (http://www.biointerchange.org/gff3o#GFF3_0034)
    */
-  public static Resource dbxref_properties() {
-    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0031");
+  public static Resource dbxref() {
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0034");
   }
 
   /**
-   * Either:
-   *   Name of an external database. For example, "dbSNP" or "OMIM".
-   *   (http://www.biointerchange.org/gff3o#GFF3_0032)
-   * Or:
-   *   Name of a feature, which can be used for display purposes. The name is not a unique property among features.
-   *   (http://www.biointerchange.org/gff3o#GFF3_0036)
+   * A cross-reference to an ontology term that is associated with a feature.
+   * (http://www.biointerchange.org/gff3o#GFF3_0035)
    */
-  public static Set<Resource> name() {
-    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0032"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0036") }));
+  public static Resource ontology_term() {
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0035");
   }
 
   /**
-   * External database identifier. For example, for dbSNP, this identifier could be "rs3131969".
-   * (http://www.biointerchange.org/gff3o#GFF3_0033)
+   * Name of a feature, which can be used for display purposes. The name is not a unique property among features.
+   * (http://www.biointerchange.org/gff3o#GFF3_0036)
    */
-  public static Resource xref() {
-    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0033");
+  public static Resource name() {
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0036");
   }
 
   /**
@@ -302,6 +296,34 @@ public class GFF3O {
   }
 
   /**
+   * Properties that are directly associated with Landmark class instances.
+   * (http://www.biointerchange.org/gff3o#GFF3_0052)
+   */
+  public static Resource landmark_properties() {
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0052");
+  }
+
+  /**
+   * ID that uniquely establishes the Landmark"s identity within a Set.
+   * (http://www.biointerchange.org/gff3o#GFF3_0053)
+   */
+  public static Resource id() {
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0053");
+  }
+
+  /**
+   * Either:
+   *   Sequence associated with this feature, if it has been specified using a FASTA string.
+   *   (http://www.biointerchange.org/gff3o#GFF3_0057)
+   * Or:
+   *   Sequence associated with this feature, if it has been specified using a FASTA string.
+   *   (http://www.biointerchange.org/gff3o#GFF3_0058)
+   */
+  public static Set<Resource> sequence() {
+    return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0057"), _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0058") }));
+  }
+
+  /**
    * Set of genomic sequence features, whose identifiers are unique within the set.
    * (http://www.biointerchange.org/gff3o#GFF3_0001)
    */
@@ -334,19 +356,19 @@ public class GFF3O {
   }
 
   /**
-   * A class describing relationships between features and external databases.
-   * (http://www.biointerchange.org/gff3o#GFF3_0030)
-   */
-  public static Resource DBXRef() {
-    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0030");
-  }
-
-  /**
    * Indicates a feature"s "target" of a nucleotide-to-nucleotide or protein-to-nucleotide alignment.
    * (http://www.biointerchange.org/gff3o#GFF3_0038)
    */
   public static Resource Target() {
     return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0038");
+  }
+
+  /**
+   * A landmark that establishes the coordinate system for features.
+   * (http://www.biointerchange.org/gff3o#GFF3_0051)
+   */
+  public static Resource Landmark() {
+    return _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0051");
   }
 
   /**
@@ -387,6 +409,9 @@ public class GFF3O {
    * @param uri URI that is tested for being an object property
    */
   public static boolean isObjectProperty(Resource uri) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0004")) {
+      return true;
+    }
     if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0010")) {
       return true;
     }
@@ -411,12 +436,6 @@ public class GFF3O {
     if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0026")) {
       return true;
     }
-    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0034")) {
-      return true;
-    }
-    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0035")) {
-      return true;
-    }
     if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0039")) {
       return true;
     }
@@ -432,6 +451,9 @@ public class GFF3O {
     if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0050")) {
       return true;
     }
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0056")) {
+      return true;
+    }
     return false;
   }
 
@@ -441,9 +463,6 @@ public class GFF3O {
    * @param uri URI that is tested for being a datatype property
    */
   public static boolean isDatatypeProperty(Resource uri) {
-    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0004")) {
-      return true;
-    }
     if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0005")) {
       return true;
     }
@@ -480,13 +499,10 @@ public class GFF3O {
     if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0029")) {
       return true;
     }
-    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0031")) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0034")) {
       return true;
     }
-    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0032")) {
-      return true;
-    }
-    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0033")) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0035")) {
       return true;
     }
     if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0036")) {
@@ -516,6 +532,24 @@ public class GFF3O {
     if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0049")) {
       return true;
     }
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0052")) {
+      return true;
+    }
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0053")) {
+      return true;
+    }
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0054")) {
+      return true;
+    }
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0055")) {
+      return true;
+    }
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0057")) {
+      return true;
+    }
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0058")) {
+      return true;
+    }
     return false;
   }
 
@@ -537,10 +571,10 @@ public class GFF3O {
     if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0016")) {
       return true;
     }
-    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0030")) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0038")) {
       return true;
     }
-    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0038")) {
+    if (uri == _namespace_GFF3O("http://www.biointerchange.org/gff3o#GFF3_0051")) {
       return true;
     }
     return false;
