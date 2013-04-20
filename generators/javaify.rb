@@ -51,7 +51,7 @@ STDIN.each { |line|
     end
     transduction << "  public static #{line.sub('?', '').sub(/self\./, '').sub(/ *def\ /, '')}"
     method_name = transduction.sub(/^.*public static /m, '').sub(/(\(.*)?$/, '')
-    transduction.sub!("public static #{method_name}", "public static _#{method_name}_") if method_name.match(/^(true|false|class|public|private|static|return|if|while|do|clone|equals|toString|hashCode)$/)
+    transduction.sub!("public static #{method_name}", "public static _#{method_name}_") if method_name.match(/^(true|false|class|public|private|static|return|if|while|do|clone|equals|toString|hashCode|byte|char|short|int|long|float|double|boolean)$/)
     variables = transduction.scan(/^\s*public static \w+\((.+)\)$/)
     variables = variables[0][0].split(',').map { |variable| variable.strip } if variables.length > 0
     if method_name == 'is_object_property' then

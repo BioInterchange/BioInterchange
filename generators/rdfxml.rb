@@ -80,8 +80,10 @@ model.keys.each { |key|
       comment = [ uri, "  # #{entry[OBO_DEF].to_s.sub(/^"(.*)" \[(.*)\]$/, '\1 (\2)').gsub(/\n|\r\n/, "\n  # ")}\n" ]
     elsif entry[RDF::RDFS.comment] then
       comment = [ uri, "  # #{entry[RDF::RDFS.comment].to_s.gsub(/\n|\r\n/, "\n  # ")}\n" ]
+    else
+      comment = [ uri, "  # -- No comment or description provided. --\n" ]
     end
-    comments[label_or_synonym] = set | [ comment ] if comment
+    comments[label_or_synonym] = set | [ comment ]
 
     set = combined_uris[label_or_synonym]
     set = [] unless set
