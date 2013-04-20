@@ -2,102 +2,152 @@ module BioInterchange
 
 class SO
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_adjacent_to)
   def self.adjacent_to
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_adjacent_to')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_complete_evidence_for_feature)
   def self.complete_evidence_for_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_complete_evidence_for_feature')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_contained_by)
   def self.contained_by
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_contained_by')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_contains)
   def self.contains
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_contains')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_derives_from)
   def self.derives_from
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_derives_from')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_evidence_for_feature)
   def self.evidence_for_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_evidence_for_feature')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_guided_by)
   def self.guided_by
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_guided_by')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_has_integral_part)
   def self.has_integral_part
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_has_integral_part')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_has_origin)
   def self.has_origin
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_has_origin')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_has_part)
   def self.has_part
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_has_part')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_has_quality)
   def self.has_quality
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_has_quality')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_homologous_to)
   def self.homologous_to
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_homologous_to')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_integral_part_of)
   def self.integral_part_of
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_integral_part_of')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_member_of)
   def self.member_of
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_member_of')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_non_functional_homolog_of)
   def self.non_functional_homolog_of
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_non_functional_homolog_of')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_orthologous_to)
   def self.orthologous_to
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_orthologous_to')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_overlaps)
   def self.overlaps
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_overlaps')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_paralogous_to)
   def self.paralogous_to
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_paralogous_to')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_part_of)
   def self.part_of
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_part_of')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_partial_evidence_for_feature)
   def self.partial_evidence_for_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_partial_evidence_for_feature')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_similar_to)
   def self.similar_to
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_similar_to')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_transcribed_from)
   def self.transcribed_from
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_transcribed_from')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_transcribed_to)
   def self.transcribed_to
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_transcribed_to')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SEQUENCE_variant_of)
   def self.variant_of
     return RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_variant_of')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000000)
   def self.Sequence_Ontology
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000000')
   end
@@ -120,6 +170,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000003')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000004)
   def self.interior_coding_exon
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000004')
   end
@@ -142,18 +194,26 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000007')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000008)
   def self.gene_sensu_your_favorite_organism
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000008')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000009)
   def self.gene_class
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000009')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000010)
   def self.protein_coding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000010')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000011)
   def self.non_protein_coding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000011')
   end
@@ -236,14 +296,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000025')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000026)
   def self.RNA_junction_loop
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000026')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000027)
   def self.RNA_hook_turn
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000027')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000028)
   def self.base_pair
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000028')
   end
@@ -386,8 +452,12 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000051')
   end
 
-  # A multi-chromosome deficiency aberration generated by reassortment of other aberration components. (FB:gm)
-  # (http://purl.obolibrary.org/obo/SO_0000802)
+  # Either:
+  #   -- No comment or description provided. --
+  #   (http://purl.obolibrary.org/obo/SO_0000052)
+  # Or:
+  #   A multi-chromosome deficiency aberration generated by reassortment of other aberration components. (FB:gm)
+  #   (http://purl.obolibrary.org/obo/SO_0000802)
   def self.assortment_derived_deficiency
     return [ RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000052'), RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000802') ]
   end
@@ -422,8 +492,12 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000057')
   end
 
-  # A multi-chromosome aberration generated by reassortment of other aberration components; presumed to have a deficiency or a duplication. (FB:gm)
-  # (http://purl.obolibrary.org/obo/SO_0000803)
+  # Either:
+  #   -- No comment or description provided. --
+  #   (http://purl.obolibrary.org/obo/SO_0000058)
+  # Or:
+  #   A multi-chromosome aberration generated by reassortment of other aberration components; presumed to have a deficiency or a duplication. (FB:gm)
+  #   (http://purl.obolibrary.org/obo/SO_0000803)
   def self.assortment_derived_aneuploid
     return [ RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000058'), RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000803') ]
   end
@@ -434,6 +508,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000059')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000060)
   def self.compound_chromosome_arm
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000060')
   end
@@ -456,6 +532,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000063')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000064)
   def self.gene_by_transcript_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000064')
   end
@@ -466,10 +544,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000065')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000066)
   def self.gene_by_polyadenylation_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000066')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000067)
   def self.gene_to_gene_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000067')
   end
@@ -498,6 +580,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000071')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000072)
   def self.end_overlapping_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000072')
   end
@@ -544,30 +628,44 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000079')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000080)
   def self.operon_member
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000080')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000081)
   def self.gene_array_member
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000081')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000082)
   def self.processed_transcript_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000082')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000083)
   def self.macronuclear_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000083')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000084)
   def self.micronuclear_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000084')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000085)
   def self.gene_by_genome_location
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000085')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000086)
   def self.gene_by_organelle_of_genome
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000086')
   end
@@ -686,10 +784,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000105')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000106)
   def self.non_capped_primary_transcript
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000106')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000107)
   def self.sequencing_primer
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000107')
   end
@@ -736,6 +838,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000114')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000115)
   def self.transcript_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000115')
   end
@@ -746,6 +850,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000116')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000117)
   def self.transcript_with_readthrough_stop_codon
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000117')
   end
@@ -906,6 +1012,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000143')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000144)
   def self.primary_transcript_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000144')
   end
@@ -1114,8 +1222,12 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000178')
   end
 
-  # The start of the clone insert. (SO:ke)
-  # (http://purl.obolibrary.org/obo/SO_0000179)
+  # Either:
+  #   The start of the clone insert. (SO:ke)
+  #   (http://purl.obolibrary.org/obo/SO_0000179)
+  # Or:
+  #   -- No comment or description provided. --
+  #   (http://purl.obolibrary.org/obo/SO_0000767)
   def self.clone_insert_start
     return [ RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000179'), RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000767') ]
   end
@@ -1180,14 +1292,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000189')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000190)
   def self.five_prime_intron
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000190')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000191)
   def self.interior_intron
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000191')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000192)
   def self.three_prime_intron
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000192')
   end
@@ -1276,6 +1394,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000206')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000207)
   def self.simple_sequence_length_variation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000207')
   end
@@ -1454,6 +1574,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000236')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000237)
   def self.transcript_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000237')
   end
@@ -1470,6 +1592,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000239')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000240)
   def self.chromosome_variation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000240')
   end
@@ -1492,10 +1616,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000243')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000244)
   def self.four_cutter_restriction_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000244')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000245)
   def self.mRNA_by_polyadenylation_status
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000245')
   end
@@ -1506,14 +1634,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000246')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000247)
   def self.mRNA_not_polyadenylated
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000247')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000248)
   def self.sequence_length_variation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000248')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000249)
   def self.six_cutter_restriction_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000249')
   end
@@ -1524,6 +1658,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000250')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000251)
   def self.eight_cutter_restriction_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000251')
   end
@@ -1756,14 +1892,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000289')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000290)
   def self.dinucleotide_repeat_microsatellite_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000290')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000291)
   def self.trinucleotide_repeat_microsatellite_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000291')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000292)
   def self.repetitive_element
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000292')
   end
@@ -1798,18 +1940,26 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000297')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000298)
   def self.recombination_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000298')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000299)
   def self.specific_recombination_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000299')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000300)
   def self.recombination_feature_of_rearranged_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000300')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000301)
   def self.vertebrate_immune_system_gene_recombination_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000301')
   end
@@ -1850,14 +2000,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000307')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000308)
   def self.sequence_feature_locating_method
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000308')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000309)
   def self.computed_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000309')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000310)
   def self.predicted_ab_initio_computation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000310')
   end
@@ -1928,6 +2084,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000321')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000322)
   def self.nuclease_hypersensitive_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000322')
   end
@@ -1962,6 +2120,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000327')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000328)
   def self.microarray_oligo
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000328')
   end
@@ -2044,6 +2204,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000341')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000342)
   def self.site_specific_recombination_target_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000342')
   end
@@ -2066,6 +2228,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000345')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000346)
   def self.loxP_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000346')
   end
@@ -2196,6 +2360,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000368')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000369)
   def self.integrase_coding_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000369')
   end
@@ -2266,10 +2432,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000380')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000381)
   def self.group_IIA_intron
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000381')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000382)
   def self.group_IIB_intron
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000382')
   end
@@ -2382,10 +2552,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000400')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000401)
   def self.gene_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000401')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000402)
   def self.enhancer_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000402')
   end
@@ -2492,54 +2666,80 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000419')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000420)
   def self.five_prime_terminal_inverted_repeat
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000420')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000421)
   def self.three_prime_terminal_inverted_repeat
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000421')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000422)
   def self.U5_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000422')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000423)
   def self.R_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000423')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000424)
   def self.U3_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000424')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000425)
   def self.five_prime_LTR
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000425')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000426)
   def self.three_prime_LTR
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000426')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000427)
   def self.R_five_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000427')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000428)
   def self.U5_five_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000428')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000429)
   def self.U3_five_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000429')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000430)
   def self.R_three_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000430')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000431)
   def self.U3_three_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000431')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000432)
   def self.U5_three_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000432')
   end
@@ -2568,16 +2768,24 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000436')
   end
 
-  # A multi-chromosome duplication aberration generated by reassortment of other aberration components. (FB:gm)
-  # (http://purl.obolibrary.org/obo/SO_0000800)
+  # Either:
+  #   -- No comment or description provided. --
+  #   (http://purl.obolibrary.org/obo/SO_0000437)
+  # Or:
+  #   A multi-chromosome duplication aberration generated by reassortment of other aberration components. (FB:gm)
+  #   (http://purl.obolibrary.org/obo/SO_0000800)
   def self.assortment_derived_duplication
     return [ RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000437'), RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000800') ]
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000438)
   def self.gene_not_polyadenylated
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000438')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000439)
   def self.inverted_ring_chromosome
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000439')
   end
@@ -2654,6 +2862,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000451')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000452)
   def self.transgene_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000452')
   end
@@ -2700,6 +2910,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000459')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000460)
   def self.vertebrate_immunoglobulin_T_cell_receptor_segment
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000460')
   end
@@ -2830,6 +3042,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000481')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000482)
   def self.vertebrate_immunoglobulin_T_cell_receptor_gene_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000482')
   end
@@ -2888,6 +3102,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000491')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000492)
   def self.D_gene_recombination_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000492')
   end
@@ -2952,6 +3168,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000502')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000503)
   def self.alternately_spliced_gene_encodeing_one_transcript
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000503')
   end
@@ -3190,6 +3408,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000542')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000543)
   def self.alternately_spliced_gene_encoding_greater_than_one_transcript
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000543')
   end
@@ -3206,6 +3426,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000545')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000546)
   def self.designed_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000546')
   end
@@ -3252,8 +3474,12 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000553')
   end
 
-  # A multi-chromosome aberration generated by reassortment of other aberration components; presumed to have a deficiency and a duplication. (FB:gm)
-  # (http://purl.obolibrary.org/obo/SO_0000801)
+  # Either:
+  #   -- No comment or description provided. --
+  #   (http://purl.obolibrary.org/obo/SO_0000554)
+  # Or:
+  #   A multi-chromosome aberration generated by reassortment of other aberration components; presumed to have a deficiency and a duplication. (FB:gm)
+  #   (http://purl.obolibrary.org/obo/SO_0000801)
   def self.assortment_derived_deficiency_plus_duplication
     return [ RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000554'), RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000801') ]
   end
@@ -3300,10 +3526,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000561')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000562)
   def self.nonamer_of_recombination_feature_of_vertebrate_immune_system_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000562')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000563)
   def self.vertebrate_immune_system_gene_recombination_spacer
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000563')
   end
@@ -3332,6 +3562,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000567')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000568)
   def self.bidirectional_promoter
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000568')
   end
@@ -3348,6 +3580,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000570')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000571)
   def self.miRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000571')
   end
@@ -3358,6 +3592,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000572')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000573)
   def self.rRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000573')
   end
@@ -3368,6 +3604,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000574')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000575)
   def self.scRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000575')
   end
@@ -3384,6 +3622,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000577')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000578)
   def self.snoRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000578')
   end
@@ -3424,6 +3664,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000584')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000585)
   def self.C_D_box_snoRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000585')
   end
@@ -3500,18 +3742,26 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000597')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000598)
   def self.edited_by_C_insertion_and_dinucleotide_insertion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000598')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000599)
   def self.edited_by_C_to_U_substitution
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000599')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000600)
   def self.edited_by_A_to_I_substitution
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000600')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000601)
   def self.edited_by_G_addition
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000601')
   end
@@ -3552,6 +3802,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000607')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000608)
   def self.H_ACA_box_snoRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000608')
   end
@@ -3604,10 +3856,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000616')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000617)
   def self.RNApol_III_promoter_type_1
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000617')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000618)
   def self.RNApol_III_promoter_type_2
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000618')
   end
@@ -3624,6 +3880,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000620')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000621)
   def self.RNApol_III_promoter_type_3
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000621')
   end
@@ -3634,6 +3892,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000622')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000623)
   def self.snRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000623')
   end
@@ -3650,6 +3910,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000625')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000626)
   def self.chromosomal_regulatory_element
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000626')
   end
@@ -3660,10 +3922,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000627')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000628)
   def self.chromosomal_structural_element
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000628')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000629)
   def self.five_prime_open_reading_frame
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000629')
   end
@@ -3704,6 +3970,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000635')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000636)
   def self.spliced_leader_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000636')
   end
@@ -3732,10 +4000,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000640')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000641)
   def self.tetranucleotide_repeat_microsatellite_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000641')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000642)
   def self.SRP_RNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000642')
   end
@@ -3818,6 +4090,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000655')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000656)
   def self.stRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000656')
   end
@@ -3834,14 +4108,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000658')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000659)
   def self.tmRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000659')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000660)
   def self.DNA_invertase_target_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000660')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000661)
   def self.intron_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000661')
   end
@@ -3852,10 +4132,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000662')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000663)
   def self.tRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000663')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000664)
   def self.introgressed_chromosome_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000664')
   end
@@ -3884,6 +4168,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000668')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000669)
   def self.sequence_rearrangement_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000669')
   end
@@ -3960,6 +4246,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000681')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000682)
   def self.splicing_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000682')
   end
@@ -3976,6 +4264,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000684')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000685)
   def self.DNAseI_hypersensitive_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000685')
   end
@@ -4274,26 +4564,38 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000734')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000735)
   def self.sequence_location
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000735')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000736)
   def self.organelle_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000736')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000737)
   def self.mitochondrial_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000737')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000738)
   def self.nuclear_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000738')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000739)
   def self.nucleomorphic_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000739')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000740)
   def self.plastid_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000740')
   end
@@ -4310,30 +4612,44 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000742')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000743)
   def self.apicoplast_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000743')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000744)
   def self.chromoplast_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000744')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000745)
   def self.chloroplast_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000745')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000746)
   def self.cyanelle_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000746')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000747)
   def self.leucoplast_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000747')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000748)
   def self.proplastid_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000748')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000749)
   def self.plasmid_location
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000749')
   end
@@ -4344,10 +4660,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000750')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000751)
   def self.proviral_location
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000751')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000752)
   def self.gene_group_regulatory_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000752')
   end
@@ -4364,6 +4684,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000754')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000755)
   def self.plasmid_vector
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000755')
   end
@@ -4374,38 +4696,56 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000756')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000757)
   def self.single_stranded_cDNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000757')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000758)
   def self.double_stranded_cDNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000758')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000759)
   def self.plasmid_clone
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000759')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000760)
   def self.YAC_clone
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000760')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000761)
   def self.phagemid_clone
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000761')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000762)
   def self.PAC_clone
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000762')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000763)
   def self.fosmid_clone
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000763')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000764)
   def self.BAC_clone
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000764')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000765)
   def self.cosmid_clone
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000765')
   end
@@ -4488,6 +4828,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000779')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000780)
   def self.transposable_element_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000780')
   end
@@ -4516,18 +4858,26 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000784')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000785)
   def self.cloned_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000785')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000786)
   def self.reagent_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000786')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000787)
   def self.clone_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000787')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000788)
   def self.cloned
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000788')
   end
@@ -4544,14 +4894,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000790')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000791)
   def self.cloned_genomic
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000791')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000792)
   def self.cloned_cDNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000792')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000793)
   def self.engineered_DNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000793')
   end
@@ -4604,6 +4960,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000805')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000806)
   def self.fusion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000806')
   end
@@ -4806,6 +5164,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000841')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000842)
   def self.gene_component_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000842')
   end
@@ -4840,14 +5200,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000847')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000848)
   def self.LTR_component
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000848')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000849)
   def self.three_prime_LTR_component
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000849')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000850)
   def self.five_prime_LTR_component
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000850')
   end
@@ -4882,6 +5248,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000855')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000856)
   def self.conserved
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000856')
   end
@@ -5162,6 +5530,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000902')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000903)
   def self.endogenous_retroviral_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000903')
   end
@@ -5202,6 +5572,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000909')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000910)
   def self.orphan
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000910')
   end
@@ -5236,6 +5608,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000915')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000916)
   def self.edit_operation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000916')
   end
@@ -5330,6 +5704,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000931')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000932)
   def self.pre_edited_mRNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000932')
   end
@@ -5352,22 +5728,32 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000935')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000936)
   def self.vertebrate_immunoglobulin_T_cell_receptor_rearranged_segment
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000936')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000937)
   def self.vertebrate_immune_system_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000937')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000938)
   def self.vertebrate_immunoglobulin_T_cell_receptor_rearranged_gene_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000938')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000939)
   def self.vertebrate_immune_system_gene_recombination_signal_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000939')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000940)
   def self.recombinationally_rearranged
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000940')
   end
@@ -5432,6 +5818,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000950')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000951)
   def self.eukaryotic_terminator
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000951')
   end
@@ -5532,22 +5920,32 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000967')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000968)
   def self.sequence_replication_mode
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000968')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000969)
   def self.rolling_circle
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000969')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000970)
   def self.theta_replication
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000970')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000971)
   def self.DNA_replication_mode
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000971')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000972)
   def self.RNA_replication_mode
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000972')
   end
@@ -5558,6 +5956,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000973')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000975)
   def self.minicircle_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000975')
   end
@@ -5568,6 +5968,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000976')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000977)
   def self.anchor_binding_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000977')
   end
@@ -5590,26 +5992,38 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000980')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000981)
   def self.rho_dependent_bacterial_terminator
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000981')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000982)
   def self.rho_independent_bacterial_terminator
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000982')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000983)
   def self.strand_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000983')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000984)
   def self.single
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000984')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000985)
   def self.double
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000985')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000986)
   def self.topology_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000986')
   end
@@ -5638,30 +6052,44 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000990')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000991)
   def self.genomic_DNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000991')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000992)
   def self.BAC_cloned_genomic_insert
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000992')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000993)
   def self.consensus
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000993')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000994)
   def self.consensus_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000994')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000995)
   def self.consensus_mRNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000995')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000996)
   def self.predicted_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000996')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000997)
   def self.gene_fragment
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000997')
   end
@@ -5702,10 +6130,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001003')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001004)
   def self.low_complexity
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001004')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001005)
   def self.low_complexity_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001005')
   end
@@ -5758,6 +6190,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001013')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001014)
   def self.intron_domain
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001014')
   end
@@ -5792,10 +6226,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001019')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001020)
   def self.sequence_variant_affecting_copy_number
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001020')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001021)
   def self.chromosome_breakpoint
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001021')
   end
@@ -5842,6 +6280,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001028')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001029)
   def self.direction_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001029')
   end
@@ -5858,10 +6298,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001031')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001032)
   def self.mitochondrial_DNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001032')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001033)
   def self.chloroplast_DNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001033')
   end
@@ -5968,18 +6412,28 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001050')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001051)
   def self.nested_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001051')
   end
 
-  # A repeat that is disrupted by the insertion of another element. (SO:ke)
-  # (http://purl.obolibrary.org/obo/SO_0001649)
+  # Either:
+  #   -- No comment or description provided. --
+  #   (http://purl.obolibrary.org/obo/SO_0001052)
+  # Or:
+  #   A repeat that is disrupted by the insertion of another element. (SO:ke)
+  #   (http://purl.obolibrary.org/obo/SO_0001649)
   def self.nested_repeat
     return [ RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001052'), RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001649') ]
   end
 
-  # A transposon that is disrupted by the insertion of another element. (SO:ke)
-  # (http://purl.obolibrary.org/obo/SO_0001648)
+  # Either:
+  #   -- No comment or description provided. --
+  #   (http://purl.obolibrary.org/obo/SO_0001053)
+  # Or:
+  #   A transposon that is disrupted by the insertion of another element. (SO:ke)
+  #   (http://purl.obolibrary.org/obo/SO_0001648)
   def self.nested_transposon
     return [ RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001053'), RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001648') ]
   end
@@ -6002,6 +6456,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001056')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001057)
   def self.enhanceosome
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001057')
   end
@@ -6558,10 +7014,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001151')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001152)
   def self.beta_turn_type_six_a_one
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001152')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001153)
   def self.beta_turn_type_six_a_two
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001153')
   end
@@ -6944,6 +7404,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001216')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001217)
   def self.protein_coding_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001217')
   end
@@ -6954,6 +7416,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001218')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001219)
   def self.retrogene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001219')
   end
@@ -7066,10 +7530,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001237')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001238)
   def self.major_TSS
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001238')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001239)
   def self.minor_TSS
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001239')
   end
@@ -7080,6 +7548,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001240')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001241)
   def self.encodes_alternate_transcription_start_sites
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001241')
   end
@@ -7204,42 +7674,62 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001262')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001263)
   def self.ncRNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001263')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001264)
   def self.gRNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001264')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001265)
   def self.miRNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001265')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001266)
   def self.scRNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001266')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001267)
   def self.snoRNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001267')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001268)
   def self.snRNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001268')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001269)
   def self.SRP_RNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001269')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001270)
   def self.stRNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001270')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001271)
   def self.tmRNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001271')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001272)
   def self.tRNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001272')
   end
@@ -7262,10 +7752,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001275')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001276)
   def self.modified_guanosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001276')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001277)
   def self.modified_uridine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001277')
   end
@@ -7906,6 +8400,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001383')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001384)
   def self.CDS_fragment
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001384')
   end
@@ -7946,6 +8442,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001390')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001391)
   def self.modified_L_glutamic_acid
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001391')
   end
@@ -8184,6 +8682,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001431')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001432)
   def self.sequence_variant_affecting_polyadenylation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001432')
   end
@@ -8200,90 +8700,134 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001434')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001435)
   def self.alanine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001435')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001436)
   def self.valine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001436')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001437)
   def self.leucine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001437')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001438)
   def self.isoleucine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001438')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001439)
   def self.proline
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001439')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001440)
   def self.tryptophan
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001440')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001441)
   def self.phenylalanine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001441')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001442)
   def self.methionine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001442')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001443)
   def self.glycine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001443')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001444)
   def self.serine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001444')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001445)
   def self.threonine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001445')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001446)
   def self.tyrosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001446')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001447)
   def self.cysteine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001447')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001448)
   def self.glutamine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001448')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001449)
   def self.asparagine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001449')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001450)
   def self.lysine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001450')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001451)
   def self.arginine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001451')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001452)
   def self.histidine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001452')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001453)
   def self.aspartic_acid
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001453')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001454)
   def self.glutamic_acid
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001454')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001455)
   def self.selenocysteine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001455')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001456)
   def self.pyrrolysine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001456')
   end
@@ -8438,6 +8982,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001481')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001482)
   def self.shadow_enhancer
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001482')
   end
@@ -8592,18 +9138,26 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001507')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001508)
   def self.alteration_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001508')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001509)
   def self.chromosomal_variation_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001509')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001510)
   def self.intrachromosomal
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001510')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001511)
   def self.interchromosomal
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001511')
   end
@@ -8614,6 +9168,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001512')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001513)
   def self.tandem
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001513')
   end
@@ -8636,34 +9192,50 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001516')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001517)
   def self.inversion_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001517')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001518)
   def self.pericentric
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001518')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001519)
   def self.paracentric
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001519')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001520)
   def self.translocaton_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001520')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001521)
   def self.reciprocal
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001521')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001522)
   def self.insertional
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001522')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001523)
   def self.duplication_attribute
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001523')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001524)
   def self.chromosomally_aberrant_genome
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001524')
   end
@@ -8992,6 +9564,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001578')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001579)
   def self.transcript_sequence_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001579')
   end
@@ -9056,6 +9630,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001592')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001593)
   def self.minus_2_frameshift_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001593')
   end
@@ -9066,6 +9642,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001594')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001595)
   def self.plus_2_frameshift_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001595')
   end
@@ -9106,6 +9684,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001601')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001602)
   def self.complex_change_of_translational_product_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001602')
   end
@@ -9404,10 +9984,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001658')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001659)
   def self.promoter_element
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001659')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001660)
   def self.core_promoter_element
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001660')
   end
@@ -9454,6 +10038,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001667')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001668)
   def self.proximal_promoter_element
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001668')
   end
@@ -9464,14 +10050,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001669')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001670)
   def self.distal_promoter_element
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001670')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001671)
   def self.bacterial_RNApol_promoter_sigma_70
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001671')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001672)
   def self.bacterial_RNApol_promoter_sigma54
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001672')
   end
@@ -9578,14 +10170,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001689')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001690)
   def self.three_prime_restriction_enzyme_junction
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001690')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001691)
   def self.blunt_end_restriction_enzyme_cleavage_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001691')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001692)
   def self.sticky_end_restriction_enzyme_cleavage_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001692')
   end
@@ -10022,18 +10620,26 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001764')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001765)
   def self.rare_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001765')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001766)
   def self.polymorphic_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001766')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001767)
   def self.common_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001767')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001768)
   def self.fixed_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001768')
   end
@@ -10044,50 +10650,74 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001769')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001770)
   def self.benign_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001770')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001771)
   def self.disease_associated_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001771')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001772)
   def self.disease_causing_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001772')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001773)
   def self.lethal_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001773')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001774)
   def self.quantitative_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001774')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001775)
   def self.maternal_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001775')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001776)
   def self.paternal_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001776')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001777)
   def self.somatic_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001777')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001778)
   def self.germline_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001778')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001779)
   def self.pedigree_specific_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001779')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001780)
   def self.population_specific_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001780')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001781)
   def self.de_novo_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001781')
   end
@@ -10104,6 +10734,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001784')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001785)
   def self.structural_alteration
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001785')
   end
@@ -10276,14 +10908,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001813')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001814)
   def self.coding_variant_quality
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001814')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001815)
   def self.synonymous
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001815')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0001816)
   def self.non_synonymous
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001816')
   end
@@ -11002,14 +11640,20 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0005845')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0005847)
   def self.cassette_array_member
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0005847')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0005848)
   def self.gene_cassette_member
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0005848')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0005849)
   def self.gene_subarray_member
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0005849')
   end
@@ -11236,6 +11880,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000012')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000013)
   def self.T_to_C_transition
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000013')
   end
@@ -11276,6 +11922,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000019')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000020)
   def self.C_to_G_transversion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000020')
   end
@@ -11592,10 +12240,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000078')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000079)
   def self.sequence_variation_affecting_transcript_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000079')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000080)
   def self.sequence_variant_increasing_rate_of_transcription
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000080')
   end
@@ -11666,10 +12318,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000093')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000094)
   def self.sequence_variant_causing_conservative_amino_acid_substitution
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000094')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000095)
   def self.sequence_variant_causing_nonconservative_amino_acid_substitution
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000095')
   end
@@ -11710,34 +12366,50 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000101')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000102)
   def self.sequence_variant_affecting_level_of_translational_product
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000102')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000103)
   def self.sequence_variant_decreasing_level_of_translation_product
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000103')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000104)
   def self.sequence_variant_increasing_level_of_translation_product
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000104')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000105)
   def self.sequence_variant_affecting_polypeptide_amino_acid_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000105')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000106)
   def self.mutation_causing_inframe_polypeptide_N_terminal_elongation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000106')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000107)
   def self.mutation_causing_out_of_frame_polypeptide_N_terminal_elongation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000107')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000108)
   def self.mutaton_causing_inframe_polypeptide_C_terminal_elongation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000108')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000109)
   def self.mutation_causing_out_of_frame_polypeptide_C_terminal_elongation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000109')
   end
@@ -11754,50 +12426,74 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000111')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000112)
   def self.sequence_variant_causing_no_3D_structural_change
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000112')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000115)
   def self.sequence_variant_causing_complex_3D_structural_change
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000115')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000116)
   def self.sequence_variant_causing_conformational_change
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000116')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000117)
   def self.sequence_variant_affecting_polypeptide_function
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000117')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000118)
   def self.sequence_variant_causing_loss_of_function_of_polypeptide
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000118')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000119)
   def self.sequence_variant_causing_inactive_ligand_binding_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000119')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000120)
   def self.sequence_variant_causing_inactive_catalytic_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000120')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000121)
   def self.sequence_variant_causing_polypeptide_localization_change
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000121')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000122)
   def self.sequence_variant_causing_polypeptide_post_translational_processing_change
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000122')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000123)
   def self.polypeptide_post_translational_processing_affected
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000123')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000124)
   def self.sequence_variant_causing_partial_loss_of_function_of_polypeptide
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000124')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000125)
   def self.sequence_variant_causing_gain_of_function_of_polypeptide
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000125')
   end
@@ -11808,6 +12504,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000126')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000127)
   def self.sequence_variant_causing_compensatory_transcript_secondary_structure_mutation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000127')
   end
@@ -11818,6 +12516,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000132')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000134)
   def self.sequence_variant_causing_polypeptide_fusion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000134')
   end
@@ -11972,6 +12672,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000162')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000170)
   def self.uncharacterised_chromosomal_mutation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000170')
   end
@@ -11988,6 +12690,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000173')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000175)
   def self.partially_characterised_chromosomal_mutation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000175')
   end
@@ -12010,6 +12714,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000182')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000183)
   def self.chromosome_structure_variation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000183')
   end
@@ -12026,10 +12732,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000185')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1000186)
   def self.sequence_variant_causing_cryptic_splice_donor_activation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000186')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1001186)
   def self.sequence_variant_causing_cryptic_splice_acceptor_activation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001186')
   end
@@ -12076,6 +12786,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001193')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1001194)
   def self.alternatively_spliced_gene_encoding_greater_than_1_polypeptide_coding_regions_overlapping
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001194')
   end
@@ -12098,10 +12810,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001197')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1001217)
   def self.member_of_regulon
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001217')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1001244)
   def self.alternatively_spliced_transcript_encoding_greater_than_1_polypeptide_different_start_codon_different_stop_codon_coding_regions_non_overlapping
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001244')
   end
@@ -12136,6 +12852,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001254')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1001255)
   def self.status_of_coding_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001255')
   end
@@ -12182,10 +12900,14 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001265')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1001266)
   def self.stop_codon_redefinition_as_selenocysteine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001266')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1001267)
   def self.stop_codon_readthrough
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001267')
   end
@@ -12202,6 +12924,8 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001269')
   end
 
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_1001270)
   def self.stop_codon_redefinition_as_pyrrolysine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001270')
   end
