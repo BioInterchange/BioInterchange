@@ -10,6 +10,13 @@ def _namespace_GFF3O(accession):
 class GFF3O:
 
     @classmethod
+    def seqid(cls):
+        """Establishes the landmark (cls, e.g. a chromosome) on which a feature is located.
+        (GFF3_0004)
+        """
+        return _namespace_GFF3O('GFF3_0004')
+
+    @classmethod
     def strand(cls):
         """Either:
             Strand of the feature.
@@ -82,20 +89,6 @@ class GFF3O:
         return [ _namespace_GFF3O('GFF3_0026'), _namespace_GFF3O('GFF3_0028') ]
 
     @classmethod
-    def dbxref(cls):
-        """A database cross-reference to associate a sequence alteration to its  representation in another database.
-        (cls, GFF3_0034)
-        """
-        return _namespace_GFF3O('GFF3_0034')
-
-    @classmethod
-    def ontology_term(cls):
-        """A cross-reference to an ontology term that is associated with a feature.
-        (cls, GFF3_0035)
-        """
-        return _namespace_GFF3O('GFF3_0035')
-
-    @classmethod
     def target(cls):
         """Identifies the target that the features aligns to.
         (cls, GFF3_0039)
@@ -121,11 +114,11 @@ class GFF3O:
         return _namespace_GFF3O('GFF3_0047')
 
     @classmethod
-    def seqid(cls):
-        """ID of the landmark that establishes the coordinate system for the current feature.
-        (cls, GFF3_0004)
+    def feature_ontology(cls):
+        """Explicit link-out to one or more ontologies that have been used for describing features. This is a meta comment about the URIs that link out to SO/SOFA or other ontologies.
+        (cls, GFF3_0056)
         """
-        return _namespace_GFF3O('GFF3_0004')
+        return _namespace_GFF3O('GFF3_0056')
 
     @classmethod
     def source(cls):
@@ -136,7 +129,7 @@ class GFF3O:
 
     @classmethod
     def type(cls):
-        """Type of the feature, which is either a term from the "lite" version of the Sequence Ontology (cls, SOFA), a term from the full Sequence Ontology (SO) that is a child of sequence_feature (SO:0000110), or a SOFA or SO accession number.
+        """Type of the feature, which is either an entry the "lite" version of the Sequence Ontology (cls, SOFA) or a child entry of sequence_feature (SO:0000110) of the full Sequence Ontology (SO).
         (GFF3_0006)
         """
         return _namespace_GFF3O('GFF3_0006')
@@ -149,8 +142,11 @@ class GFF3O:
         Or:
             Start coordinate of the target.
             (GFF3_0042)
+        Or:
+            Genomic start coordinate of the landmark.
+            (GFF3_0054)
         """
-        return [ _namespace_GFF3O('GFF3_0007'), _namespace_GFF3O('GFF3_0042') ]
+        return [ _namespace_GFF3O('GFF3_0007'), _namespace_GFF3O('GFF3_0042'), _namespace_GFF3O('GFF3_0054') ]
 
     @classmethod
     def end(cls):
@@ -160,8 +156,11 @@ class GFF3O:
         Or:
             End coordinate of the target.
             (GFF3_0043)
+        Or:
+            Genomic end coordinate of the landmark.
+            (GFF3_0055)
         """
-        return [ _namespace_GFF3O('GFF3_0008'), _namespace_GFF3O('GFF3_0043') ]
+        return [ _namespace_GFF3O('GFF3_0008'), _namespace_GFF3O('GFF3_0043'), _namespace_GFF3O('GFF3_0055') ]
 
     @classmethod
     def score(cls):
@@ -206,29 +205,25 @@ class GFF3O:
         return _namespace_GFF3O('GFF3_0029')
 
     @classmethod
-    def dbxref_properties(cls):
-        """Properties that are directly associated with DBXRef class instances.
-        (cls, GFF3_0031)
+    def dbxref(cls):
+        """A database cross-reference to associate a sequence alteration to its representation in another database.
+        (cls, GFF3_0034)
         """
-        return _namespace_GFF3O('GFF3_0031')
+        return _namespace_GFF3O('GFF3_0034')
+
+    @classmethod
+    def ontology_term(cls):
+        """A cross-reference to an ontology term that is associated with a feature.
+        (cls, GFF3_0035)
+        """
+        return _namespace_GFF3O('GFF3_0035')
 
     @classmethod
     def name(cls):
-        """Either:
-            Name of an external database. For example, "dbSNP" or "OMIM".
-            (cls, GFF3_0032)
-        Or:
-            Name of a feature, which can be used for display purposes. The name is not a unique property among features.
-            (GFF3_0036)
+        """Name of a feature, which can be used for display purposes. The name is not a unique property among features.
+        (cls, GFF3_0036)
         """
-        return [ _namespace_GFF3O('GFF3_0032'), _namespace_GFF3O('GFF3_0036') ]
-
-    @classmethod
-    def xref(cls):
-        """External database identifier. For example, for dbSNP, this identifier could be "rs3131969".
-        (cls, GFF3_0033)
-        """
-        return _namespace_GFF3O('GFF3_0033')
+        return _namespace_GFF3O('GFF3_0036')
 
     @classmethod
     def alias(cls):
@@ -266,6 +261,31 @@ class GFF3O:
         return _namespace_GFF3O('GFF3_0049')
 
     @classmethod
+    def landmark_properties(cls):
+        """Properties that are directly associated with Landmark class instances.
+        (cls, GFF3_0052)
+        """
+        return _namespace_GFF3O('GFF3_0052')
+
+    @classmethod
+    def id(cls):
+        """ID that uniquely establishes the Landmark's identity within a Set.
+        (cls, GFF3_0053)
+        """
+        return _namespace_GFF3O('GFF3_0053')
+
+    @classmethod
+    def sequence(cls):
+        """Either:
+            Sequence associated with this feature, if it has been specified using a FASTA string.
+            (cls, GFF3_0057)
+        Or:
+            Sequence associated with this feature, if it has been specified using a FASTA string.
+            (GFF3_0058)
+        """
+        return [ _namespace_GFF3O('GFF3_0057'), _namespace_GFF3O('GFF3_0058') ]
+
+    @classmethod
     def Set(cls):
         """Set of genomic sequence features, whose identifiers are unique within the set.
         (cls, GFF3_0001)
@@ -294,18 +314,18 @@ class GFF3O:
         return _namespace_GFF3O('GFF3_0016')
 
     @classmethod
-    def DBXRef(cls):
-        """A class describing relationships between features and external databases.
-        (cls, GFF3_0030)
-        """
-        return _namespace_GFF3O('GFF3_0030')
-
-    @classmethod
     def Target(cls):
         """Indicates a feature's "target" of a nucleotide-to-nucleotide or protein-to-nucleotide alignment.
         (cls, GFF3_0038)
         """
         return _namespace_GFF3O('GFF3_0038')
+
+    @classmethod
+    def Landmark(cls):
+        """A landmark that establishes the coordinate system for features.
+        (cls, GFF3_0051)
+        """
+        return _namespace_GFF3O('GFF3_0051')
 
     @classmethod
     def Positive(cls):
@@ -341,6 +361,8 @@ class GFF3O:
         
         uri -- URI that is tested for being an object property
         """
+        if uri == _namespace_GFF3O('GFF3_0004'):
+            return True
         if uri == _namespace_GFF3O('GFF3_0010'):
             return True
         if uri == _namespace_GFF3O('GFF3_0012'):
@@ -357,10 +379,6 @@ class GFF3O:
             return True
         if uri == _namespace_GFF3O('GFF3_0026'):
             return True
-        if uri == _namespace_GFF3O('GFF3_0034'):
-            return True
-        if uri == _namespace_GFF3O('GFF3_0035'):
-            return True
         if uri == _namespace_GFF3O('GFF3_0039'):
             return True
         if uri == _namespace_GFF3O('GFF3_0044'):
@@ -371,6 +389,8 @@ class GFF3O:
             return True
         if uri == _namespace_GFF3O('GFF3_0050'):
             return True
+        if uri == _namespace_GFF3O('GFF3_0056'):
+            return True
         return False
 
     @classmethod
@@ -379,8 +399,6 @@ class GFF3O:
         
         uri -- URI that is tested for being a datatype property
         """
-        if uri == _namespace_GFF3O('GFF3_0004'):
-            return True
         if uri == _namespace_GFF3O('GFF3_0005'):
             return True
         if uri == _namespace_GFF3O('GFF3_0006'):
@@ -405,11 +423,9 @@ class GFF3O:
             return True
         if uri == _namespace_GFF3O('GFF3_0029'):
             return True
-        if uri == _namespace_GFF3O('GFF3_0031'):
+        if uri == _namespace_GFF3O('GFF3_0034'):
             return True
-        if uri == _namespace_GFF3O('GFF3_0032'):
-            return True
-        if uri == _namespace_GFF3O('GFF3_0033'):
+        if uri == _namespace_GFF3O('GFF3_0035'):
             return True
         if uri == _namespace_GFF3O('GFF3_0036'):
             return True
@@ -429,6 +445,18 @@ class GFF3O:
             return True
         if uri == _namespace_GFF3O('GFF3_0049'):
             return True
+        if uri == _namespace_GFF3O('GFF3_0052'):
+            return True
+        if uri == _namespace_GFF3O('GFF3_0053'):
+            return True
+        if uri == _namespace_GFF3O('GFF3_0054'):
+            return True
+        if uri == _namespace_GFF3O('GFF3_0055'):
+            return True
+        if uri == _namespace_GFF3O('GFF3_0057'):
+            return True
+        if uri == _namespace_GFF3O('GFF3_0058'):
+            return True
         return False
 
     @classmethod
@@ -445,9 +473,9 @@ class GFF3O:
             return True
         if uri == _namespace_GFF3O('GFF3_0016'):
             return True
-        if uri == _namespace_GFF3O('GFF3_0030'):
-            return True
         if uri == _namespace_GFF3O('GFF3_0038'):
+            return True
+        if uri == _namespace_GFF3O('GFF3_0051'):
             return True
         return False
 
@@ -489,5 +517,5 @@ class GFF3O:
             return cls.has_parent(cls.__parent_properties[uri], parent)
         return False
 
-    __parent_properties = { _namespace_GFF3O('GFF3_0010') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0012') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0014') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0015') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0021') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0023') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0034') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0035') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0039') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0045') : _namespace_GFF3O('GFF3_0044') , _namespace_GFF3O('GFF3_0047') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0050') : _namespace_GFF3O('GFF3_0044') , _namespace_GFF3O('GFF3_0004') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0005') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0006') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0007') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0008') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0009') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0011') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0013') : _namespace_GFF3O('GFF3_0029') , _namespace_GFF3O('GFF3_0022') : _namespace_GFF3O('GFF3_0027') , _namespace_GFF3O('GFF3_0024') : _namespace_GFF3O('GFF3_0027') , _namespace_GFF3O('GFF3_0032') : _namespace_GFF3O('GFF3_0031') , _namespace_GFF3O('GFF3_0033') : _namespace_GFF3O('GFF3_0031') , _namespace_GFF3O('GFF3_0036') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0037') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0041') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0042') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0043') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0046') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0048') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0049') : _namespace_GFF3O('GFF3_0028') }
+    __parent_properties = { _namespace_GFF3O('GFF3_0004') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0010') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0012') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0014') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0015') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0021') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0023') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0039') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0045') : _namespace_GFF3O('GFF3_0044') , _namespace_GFF3O('GFF3_0047') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0050') : _namespace_GFF3O('GFF3_0044') , _namespace_GFF3O('GFF3_0056') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0005') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0006') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0007') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0008') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0009') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0011') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0013') : _namespace_GFF3O('GFF3_0029') , _namespace_GFF3O('GFF3_0022') : _namespace_GFF3O('GFF3_0027') , _namespace_GFF3O('GFF3_0024') : _namespace_GFF3O('GFF3_0027') , _namespace_GFF3O('GFF3_0034') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0035') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0036') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0037') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0041') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0042') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0043') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0046') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0048') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0049') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0053') : _namespace_GFF3O('GFF3_0052') , _namespace_GFF3O('GFF3_0054') : _namespace_GFF3O('GFF3_0052') , _namespace_GFF3O('GFF3_0055') : _namespace_GFF3O('GFF3_0052') , _namespace_GFF3O('GFF3_0057') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0058') : _namespace_GFF3O('GFF3_0052') }
 
