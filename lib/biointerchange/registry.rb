@@ -16,7 +16,7 @@ class Registry
 
   def self.writers
     @@writers.clone.freeze
-   end
+  end
 
 private
 
