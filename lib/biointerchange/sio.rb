@@ -8,13 +8,13 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000001')
   end
 
-  # has attribute is a relation between an entity and some attribute or property.
+  # has attribute is a relation that associates a entity with an attribute where an attribute is an intrinsic characteristic such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier) either directly or indirectly through generalization of entities of the same type.
   # (http://semanticscience.org/resource/SIO_000008)
   def self.has_attribute
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000008')
   end
 
-  # is attribute of is a relation between an attribute and the entity that it is ascribed to
+  # is attribute of is a relation that associates an attribute with an entity where an attribute is an intrinsic characteristic such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier) either directly or indirectly through generalization of entities of the same type.
   # (http://semanticscience.org/resource/SIO_000011)
   def self.is_attribute_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000011')
@@ -32,6 +32,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000028')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000029)
   def self.is_time_boundary_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000029')
   end
@@ -54,6 +56,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000059')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000060)
   def self.is_denoted_by
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000060')
   end
@@ -172,10 +176,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000207')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000208)
   def self.is_supporting_evidence_for
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000208')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000209)
   def self.is_disputing_evidence_for
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000209')
   end
@@ -390,6 +398,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000248')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000249)
   def self.is_preceded_by
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000249')
   end
@@ -478,6 +488,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000286')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000288)
   def self.is_covalently_connected_to_transitive
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000288')
   end
@@ -566,6 +578,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000334')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000335)
   def self.is_weakly_interacting_with
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000335')
   end
@@ -600,6 +614,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000355')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000356)
   def self.is_realized_in
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000356')
   end
@@ -610,6 +626,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000362')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000363)
   def self.is_satisfied_by
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000363')
   end
@@ -638,6 +656,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000369')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000420)
   def self.has_expression
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000420')
   end
@@ -666,6 +686,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000425')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000426)
   def self.is_manifestation_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000426')
   end
@@ -676,6 +698,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000427')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000477)
   def self.is_broader_than
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000477')
   end
@@ -686,26 +710,38 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000482')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000484)
   def self.is_exact_match_to
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000484')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000490)
   def self.is_close_match_to
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000490')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000491)
   def self.is_broad_match_to
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000491')
   end
 
+  # is dissimilar to is a relation between two entities in which one is considered dissimilar to the other based on some criteria.
+  # (http://semanticscience.org/resource/SIO_000495)
   def self.is_dissimilar_to
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000495')
   end
 
+  # is opposite to is a relation between two entities in which one is diametrically opposed to the other. 
+  # (http://semanticscience.org/resource/SIO_000496)
   def self.is_opposite_to
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000496')
   end
 
+  # is version of is a relation that holds between any two versions in which one is a subsequent or alternate version of (through a branch).
+  # (http://semanticscience.org/resource/SIO_000497)
   def self.is_version_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000497')
   end
@@ -722,6 +758,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000553')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000557)
   def self.is_described_by
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000557')
   end
@@ -750,6 +788,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000628')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000629)
   def self.is_subject_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000629')
   end
@@ -778,6 +818,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000632')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000633)
   def self.is_modelled_by
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000633')
   end
@@ -794,6 +836,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000635')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000636)
   def self.is_trigger_for
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000636')
   end
@@ -810,14 +854,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000642')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000643)
   def self.is_realizable_property_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000643')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000644)
   def self.has_realizable_property
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000644')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000646)
   def self.is_capability_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000646')
   end
@@ -858,10 +908,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000668')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000671)
   def self.has_identifier
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000671')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000672)
   def self.is_identifier_for
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000672')
   end
@@ -878,22 +932,32 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000674')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000679)
   def self.has_time_boundary
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000679')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000680)
   def self.has_start_time
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000680')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000681)
   def self.has_end_time
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000681')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000682)
   def self.is_start_time_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000682')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000684)
   def self.is_end_time_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000684')
   end
@@ -904,30 +968,44 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000687')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000697)
   def self.is_mutual_disposition_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000697')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000699)
   def self.is_greater_than_or_equal_to
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000699')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000709)
   def self.is_mutually_related_to
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000709')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000710)
   def self.is_mutual_role_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000710')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000733)
   def self.is_lesser_than_or_equal_to
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000733')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000734)
   def self.is_greater_than
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000734')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000735)
   def self.is_lesser_than
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000735')
   end
@@ -944,10 +1022,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000737')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000738)
   def self.is_equal_to
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000738')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000749)
   def self.is_inequal_to
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000749')
   end
@@ -958,6 +1040,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000772')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000773)
   def self.is_evidence_for
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000773')
   end
@@ -968,6 +1052,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000774')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000775)
   def self.is_refuting_evidence_for
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000775')
   end
@@ -978,6 +1064,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000793')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000892)
   def self.in_relation_from
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000892')
   end
@@ -1036,12 +1124,74 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000975')
   end
 
+  # is specialization of is a relation between a more specific instance (in terms of spatial/temporal localization & other attributres) than the other.
+  # (http://semanticscience.org/resource/SIO_001096)
+  def self.is_specialization_of
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001096')
+  end
+
+  # is generalization of is a relation between a more general instance (in terms of spatial/temporal localization & other attributres) than the other.
+  # (http://semanticscience.org/resource/SIO_001097)
+  def self.is_generalization_of
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001097')
+  end
+
+  # is alternate of relates two specialized instances.
+  # (http://semanticscience.org/resource/SIO_001098)
+  def self.is_alternate_of
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001098')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001101)
+  def self.is_mutual_capability_of
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001101')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001154)
+  def self.regulates
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001154')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001155)
+  def self.is_regulated_by
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001155')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001156)
+  def self.results_in
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001156')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001157)
+  def self.is_result_of
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001157')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001158)
+  def self.affects
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001158')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001159)
+  def self.is_affected_by
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001159')
+  end
+
   # A relation between an biological information content entity and a product that it (directly/indirectly) encodes.
   # (http://semanticscience.org/resource/SIO_010078)
   def self.encodes
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010078')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010079)
   def self.is_encoded_by
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010079')
   end
@@ -1052,14 +1202,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010080')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010081)
   def self.is_transcribed_from
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010081')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010082)
   def self.is_translated_into
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010082')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010083)
   def self.is_translated_from
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010083')
   end
@@ -1100,6 +1256,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000006')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000009)
   def self.social_entity
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000009')
   end
@@ -1176,10 +1334,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000030')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000031)
   def self.start_date
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000031')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000032)
   def self.end_date
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000032')
   end
@@ -1208,6 +1370,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000036')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000037)
+  def self.spatial_quantity
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_000037')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000037)
   def self.physical_dimensional_quantity
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000037')
   end
@@ -1218,45 +1388,63 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000038')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000039)
   def self.depth
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000039')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000040)
   def self.height
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000040')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000041)
   def self.length
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000041')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000042)
   def self.width
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000042')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000043)
   def self.thickness
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000043')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000045)
   def self.area
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000045')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000046)
   def self.perimeter
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000046')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000047)
   def self.circumference
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000047')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000049)
   def self.volume
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000049')
   end
 
-  # composition is the quality of having anatomical parts.
+  # composition quality is a quality that describes its composition or anatomy.
   # (http://semanticscience.org/resource/SIO_000051)
-  def self.composition
+  def self.compositional_quality
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000051')
   end
 
@@ -1314,6 +1502,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000072')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000073)
   def self.polar_coordinate
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000073')
   end
@@ -1436,7 +1626,13 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000090')
   end
 
-  # An effective specification is a specification composed of a sequence of instructions to achieve some objective.
+  # An action specification is a specification composed of a sequence of instructions to achieve some objective.
+  # (http://semanticscience.org/resource/SIO_000091)
+  def self.action_specification
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_000091')
+  end
+
+  # An action specification is a specification composed of a sequence of instructions to achieve some objective.
   # (http://semanticscience.org/resource/SIO_000091)
   def self.effective_specification
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000091')
@@ -1526,6 +1722,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000108')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000109)
   def self.novel
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000109')
   end
@@ -1536,6 +1734,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000110')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000111)
   def self.document_section
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000111')
   end
@@ -1564,6 +1764,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000115')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000116)
   def self.name
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000116')
   end
@@ -1634,6 +1836,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000127')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000129)
   def self.ontology_document
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000129')
   end
@@ -1644,6 +1848,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000130')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000131)
   def self.motif
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000131')
   end
@@ -1804,6 +2010,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000162')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000163)
   def self.newspaper
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000163')
   end
@@ -2042,6 +2250,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000237')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000238)
   def self.logical_operator
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000238')
   end
@@ -2124,10 +2334,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000268')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000269)
   def self.true
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000269')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000270)
   def self.false
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000270')
   end
@@ -2138,7 +2352,7 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000275')
   end
 
-  # An emotion is a quality that an individual experiences due to an internal state of being or an involuntary physiological response.
+  # An emotion is a process (experience) that arises internally or from an involuntary physiological response to a stimulus.
   # (http://semanticscience.org/resource/SIO_000276)
   def self.emotion
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000276')
@@ -2150,6 +2364,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000279')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000280)
   def self.disjunction_or
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000280')
   end
@@ -2172,10 +2388,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000284')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000285)
   def self.academic_organization
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000285')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000287)
   def self.social_relation
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000287')
   end
@@ -2186,10 +2406,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000289')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000290)
   def self.university
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000290')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000295)
   def self.collection_of_documents
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000295')
   end
@@ -2266,10 +2490,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000308')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000309)
   def self.volume_number
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000309')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000314)
   def self.polymer
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000314')
   end
@@ -2322,6 +2550,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000326')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000327)
   def self.polar_coordinate_system
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000327')
   end
@@ -2332,14 +2562,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000328')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000329)
   def self.cylindrical_coordinate_system
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000329')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000330)
   def self.spherical_coordinate_system
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000330')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000331)
   def self.OWL_ontology
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000331')
   end
@@ -2368,11 +2604,13 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000342')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000343)
   def self.to_modify
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000343')
   end
 
-  # To record is the capability to register or collect information in a specified format on some physical medium.
+  # To record is the capability to detect and transcribe information in a specified format on some physical medium.
   # (http://semanticscience.org/resource/SIO_000344)
   def self.to_record
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000344')
@@ -2432,6 +2670,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000354')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000357)
   def self.fitness
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000357')
   end
@@ -2442,6 +2682,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000358')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000359)
   def self.purpose
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000359')
   end
@@ -2494,6 +2736,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000373')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000374)
   def self.to_reduce_energy
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000374')
   end
@@ -2504,6 +2748,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000375')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000376)
   def self.to_change_materially
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000376')
   end
@@ -2514,6 +2760,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000377')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000378)
   def self.to_change_appearance
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000378')
   end
@@ -2554,16 +2802,28 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000384')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000385)
   def self.to_change_energetically
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000385')
   end
 
-  # Ambiguous label.
+  # Either:
+  #   -- No comment or description provided. --
+  #   (http://semanticscience.org/resource/SIO_000386)
+  # Or:
+  #   -- No comment or description provided. --
+  #   (http://semanticscience.org/resource/SIO_010358)
   def self.to_oxidize
     return [ RDF::URI.new('http://semanticscience.org/resource/SIO_000386'), RDF::URI.new('http://semanticscience.org/resource/SIO_010358') ]
   end
 
-  # Ambiguous label.
+  # Either:
+  #   -- No comment or description provided. --
+  #   (http://semanticscience.org/resource/SIO_000387)
+  # Or:
+  #   -- No comment or description provided. --
+  #   (http://semanticscience.org/resource/SIO_010359)
   def self.to_reduce
     return [ RDF::URI.new('http://semanticscience.org/resource/SIO_000387'), RDF::URI.new('http://semanticscience.org/resource/SIO_010359') ]
   end
@@ -2598,34 +2858,50 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000392')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000393)
   def self.patient
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000393')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000394)
   def self.doctor
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000394')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000395)
   def self.to_regulate
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000395')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000395)
   def self.to_modulate
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000395')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000396)
   def self.file
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000396')
   end
 
+  # to provide is the capability to make available some object to another that requires it.
+  # (http://semanticscience.org/resource/SIO_000397)
   def self.to_provide
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000397')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000398)
   def self.nurse
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000398')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000399)
   def self.study_subject
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000399')
   end
@@ -2654,22 +2930,32 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000403')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000404)
   def self.professor
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000404')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000405)
   def self.student
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000405')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000406)
   def self.academic
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000406')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000407)
   def self.to_increase_the_rate_of_formation
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000407')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000408)
   def self.to_investigate
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000408')
   end
@@ -2710,6 +2996,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000414')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000415)
   def self.geopolitical_region
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000415')
   end
@@ -2744,34 +3032,50 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000423')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000428)
   def self.year
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000428')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000429)
   def self.month
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000429')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000430)
   def self.day
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000430')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000431)
   def self.century
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000431')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000432)
   def self.millenium
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000432')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000433)
   def self.hour
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000433')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000434)
   def self.minute
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000434')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000435)
   def self.second
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000435')
   end
@@ -2788,6 +3092,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000437')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000438)
   def self.altitude
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000438')
   end
@@ -2843,6 +3149,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000447')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000448)
   def self.figure_part
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000448')
   end
@@ -3010,6 +3318,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000471')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000472)
   def self.scientific_data
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000472')
   end
@@ -3039,6 +3349,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000476')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000478)
   def self.sequence_variant_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000478')
   end
@@ -3049,10 +3361,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000479')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000480)
   def self.insertion_variant_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000480')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000481)
   def self.deletion_variant_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000481')
   end
@@ -3063,26 +3379,38 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000483')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000485)
   def self.human
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000485')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000486)
   def self.mouse
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000486')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000487)
   def self.rat
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000487')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000488)
   def self.worm
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000488')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000489)
   def self.e_coli
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000489')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000492)
   def self.to_consume
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000492')
   end
@@ -3099,10 +3427,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000494')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000498)
   def self.person
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000498')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000499)
   def self.to_decrease_the_rate_of_formation
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000499')
   end
@@ -3143,6 +3475,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000505')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000506)
   def self.geometric_entity
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000506')
   end
@@ -3316,6 +3650,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000533')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000534)
   def self.positionally_oriented_line
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000534')
   end
@@ -3326,6 +3662,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000535')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000536)
   def self.to_regulate_the_rate_of_formation
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000536')
   end
@@ -3360,14 +3698,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000541')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000542)
   def self.to_serve_as
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000542')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000543)
   def self.to_serve_as_a_host
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000543')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000544)
   def self.to_infect
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000544')
   end
@@ -3384,30 +3728,44 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000545')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000546)
   def self.collection_of_points
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000546')
   end
 
+  # to cause disease is the capability to materially change a biological object in that it functions abnormally.
+  # (http://semanticscience.org/resource/SIO_000547)
   def self.to_cause_disease
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000547')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000549)
   def self.to_reduce_the_activation_energy
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000549')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000549)
   def self.to_activate
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000549')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000550)
   def self.to_increase_the_activation_energy
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000550')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000550)
   def self.to_inhibit
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000550')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000551)
   def self.to_change_the_activation_energy
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000551')
   end
@@ -3424,6 +3782,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000555')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000556)
   def self.lipid_residue
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000556')
   end
@@ -3500,6 +3860,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000572')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000573)
   def self.passive_movement
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000573')
   end
@@ -3534,10 +3896,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000578')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000579)
   def self.symport_enabled_secondary_active_transport
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000579')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000580)
   def self.antiport_enabled_secondary_active_transport
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000580')
   end
@@ -3584,7 +3950,7 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000588')
   end
 
-  # regulation is the imposition of a requirement or action of one party to another.
+  # regulation is a process that modulates the attributes of an object or process.
   # (http://semanticscience.org/resource/SIO_000589)
   def self.regulation
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000589')
@@ -3620,6 +3986,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000594')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000595)
   def self.parameterized_data_transformation
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000595')
   end
@@ -3642,6 +4010,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000598')
   end
 
+  # structure is the specification that refers to the composition and arrangement of parts of an object.
+  # (http://semanticscience.org/resource/SIO_000600)
   def self.structure
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000600')
   end
@@ -3652,6 +4022,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000602')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000605)
   def self.sound_wave
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000605')
   end
@@ -3662,14 +4034,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000608')
   end
 
+  # regulation of a process is a process that modulates the duration, frequency, spatial extent of a target process.
+  # (http://semanticscience.org/resource/SIO_000609)
   def self.regulation_of_process
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000609')
   end
 
+  # regulation of capability is the regulation of the ability of one party by another.
+  # (http://semanticscience.org/resource/SIO_000610)
   def self.regulation_of_capability
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000610')
   end
 
+  # the regulation of the enzymatic activity.
+  # (http://semanticscience.org/resource/SIO_000611)
   def self.regulation_of_catalytic_capability
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000611')
   end
@@ -3740,32 +4118,40 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000621')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000622)
   def self.RDFS_ontology
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000622')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000623)
   def self.OBO_ontology
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000623')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000624)
   def self.chemical_functional_group
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000624')
   end
 
-  # Chemical structure is the quality of molecular geometry and electronic structure.
+  # chemical structure is the structure of a chemical entity in terms of its molecular geometry and electronic structure.
   # (http://semanticscience.org/resource/SIO_000625)
   def self.chemical_structure
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000625')
   end
 
+  # Molecular structure is the spatial arrangement of atoms in a molecule and the chemical bonds that hold the atoms together.
+  # (http://semanticscience.org/resource/SIO_000626)
   def self.molecular_structure
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000626')
   end
 
-  # Molecular geometry is the spatial arrangement of atoms in a molecule and the chemical bonds that hold the atoms together.
-  # (http://semanticscience.org/resource/SIO_000627)
+  # Molecular structure is the spatial arrangement of atoms in a molecule and the chemical bonds that hold the atoms together.
+  # (http://semanticscience.org/resource/SIO_000626)
   def self.molecular_geometry
-    return RDF::URI.new('http://semanticscience.org/resource/SIO_000627')
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_000626')
   end
 
   # a probability measure is quantity of how likely it is that some event will occur.
@@ -3786,14 +4172,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000640')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000647)
   def self.process_model
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000647')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000648)
   def self.physical_model
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000648')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000649)
   def self.information_processing_procedure
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000649')
   end
@@ -3810,18 +4202,26 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000651')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000653)
   def self.version_label
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000653')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000653)
   def self.a_version_label_is_a_label_for_a_particular_form_or_variation_of_an_earlier_or_original_type
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000653')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000654)
   def self.software_version_label
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000654')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000654)
   def self.a_software_version_label_is_a_version_label_for_a_piece_of_software
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000654')
   end
@@ -3832,26 +4232,38 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000660')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000661)
   def self.province
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000661')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000662)
   def self.state
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000662')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000663)
   def self.territory
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000663')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000664)
   def self.country
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000664')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000665)
   def self.city
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000665')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000666)
   def self.township
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000666')
   end
@@ -3862,10 +4274,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000667')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000669)
   def self.start_time
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000669')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000670)
   def self.end_time
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000670')
   end
@@ -3876,6 +4292,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000675')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000676)
   def self.social_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000676')
   end
@@ -3898,17 +4316,21 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000683')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000686)
   def self.department
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000686')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000688)
   def self.institute
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000688')
   end
 
   # to be a part of is the capability to be assembled into a larger structure that persists in time.
   # (http://semanticscience.org/resource/SIO_000689)
-  def self.to_be_part_of
+  def self.to_be_a_part_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000689')
   end
 
@@ -3918,10 +4340,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000690')
   end
 
-  def self.to_be_part_of_a_group
-    return RDF::URI.new('http://semanticscience.org/resource/SIO_000691')
-  end
-
+  # to be actively interacted with is the capability to be manipulated by some device or agent.
+  # (http://semanticscience.org/resource/SIO_000692)
   def self.to_be_actively_interacted_with
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000692')
   end
@@ -3932,14 +4352,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000693')
   end
 
+  # to be passively interacted with is the capability of an object to be observed.
+  # (http://semanticscience.org/resource/SIO_000694)
   def self.to_be_passively_interacted_with
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000694')
   end
 
+  # to be recorded is the capability of an object to be observed in such a way that information about it can be transcribed in a specified format on some physical medium.
+  # (http://semanticscience.org/resource/SIO_000695)
   def self.to_be_recorded
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000695')
   end
 
+  # to be observed is the capability of an object to be perceived.
+  # (http://semanticscience.org/resource/SIO_000696)
   def self.to_be_observed
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000696')
   end
@@ -3962,7 +4388,7 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000701')
   end
 
-  # to be interacted with is the capability of an object to be physically touched or perturbed.
+  # to be interacted with is the capability of an object to be target of a physical interaction.
   # (http://semanticscience.org/resource/SIO_000702)
   def self.to_be_interacted_with
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000702')
@@ -3986,42 +4412,62 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000705')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000706)
   def self.occupational_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000706')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000707)
   def self.student_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000707')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000708)
   def self.professor_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000708')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000711)
   def self.academic_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000711')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000712)
   def self.medical_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000712')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000713)
   def self.doctor_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000713')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000714)
   def self.nurse_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000714')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000715)
   def self.patient_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000715')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000716)
   def self.medical_practitioner
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000716')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000717)
   def self.dentist_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000717')
   end
@@ -4056,6 +4502,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000721')
   end
 
+  # to be compared is the capability of an object to be examined in order to note the similarities or differences among a set of objects.
+  # (http://semanticscience.org/resource/SIO_000722)
   def self.to_be_compared
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000722')
   end
@@ -4072,18 +4520,26 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000724')
   end
 
+  # to be examined is the capability of an object to be observed in a detailed manner.
+  # (http://semanticscience.org/resource/SIO_000725)
   def self.to_be_examined
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000725')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000726)
   def self.administrative_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000726')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000727)
   def self.secretary_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000727')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000728)
   def self.chemical_identifier
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000728')
   end
@@ -4094,14 +4550,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000729')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000730)
   def self.physical_entity_identifier
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000730')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000731)
   def self.informational_entity_identifier
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000731')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000732)
   def self.molecular_identifier
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000732')
   end
@@ -4124,10 +4586,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000741')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000742)
   def self.local_maximum_stationary_point
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000742')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000743)
   def self.local_minimum_stationary_point
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000743')
   end
@@ -4172,6 +4638,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000748')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000750)
   def self.database
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000750')
   end
@@ -4188,6 +4656,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000752')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000753)
   def self.column
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000753')
   end
@@ -4198,6 +4668,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000754')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000755)
   def self.cell_informational
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000755')
   end
@@ -4214,24 +4686,32 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000756')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000757)
   def self.database_column
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000757')
   end
 
-  # disorder is a quality in one or more anatomical parts (an anatomical collection) that are considered abnormal
+  # disordered is a structural quality in which the parts of an object are non-rigid.
   # (http://semanticscience.org/resource/SIO_000758)
-  def self.disorder
+  def self.disordered
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000758')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000759)
   def self.unique_cell
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000759')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000760)
   def self.referencing_cell
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000760')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000761)
   def self.referent_cell
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000761')
   end
@@ -4256,16 +4736,18 @@ class SIO
 
   # a p-value or probability value is the probability of obtaining a test statistic at least as extreme as the one that was actually observed, assuming that the null hypothesis is true
   # (http://semanticscience.org/resource/SIO_000765)
-  def self.p_value
+  def self.probability_value
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000765')
   end
 
   # a p-value or probability value is the probability of obtaining a test statistic at least as extreme as the one that was actually observed, assuming that the null hypothesis is true
   # (http://semanticscience.org/resource/SIO_000765)
-  def self.probability_value
+  def self.p_value
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000765')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000766)
   def self.street_name
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000766')
   end
@@ -4276,6 +4758,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000767')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000768)
   def self.apartment_number
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000768')
   end
@@ -4328,6 +4812,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000780')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000783)
   def self.spatial_boundary
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000783')
   end
@@ -4350,6 +4836,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000786')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000787)
   def self.page_number
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000787')
   end
@@ -4462,19 +4950,27 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000806')
   end
 
+  # a partial negative charge is a negative charge where the value of the charge is negative.
+  # (http://semanticscience.org/resource/SIO_000807)
   def self.partial_positive_charge
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000807')
   end
 
+  # a partial positive charge is a partial charge where the value of the charge is positive.
+  # (http://semanticscience.org/resource/SIO_000808)
   def self.partial_negative_charge
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000808')
   end
 
+  # the quality of having a charge that is not a full multiple of 1 unit charge.
+  # (http://semanticscience.org/resource/SIO_000809)
   def self.partial_charge
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000809')
   end
 
-  def self.unitary_charge
+  # a complete charge is a charge where the value of the charge is a multiple of 1.
+  # (http://semanticscience.org/resource/SIO_000810)
+  def self.complete_charge
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000810')
   end
 
@@ -4508,7 +5004,7 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000815')
   end
 
-  # apathy is an emotion exhibited by lack of interest, enthusiasm, or concern
+  # apathy is an emotion characterized by lack of interest, enthusiasm, or concern
   # (http://semanticscience.org/resource/SIO_000816)
   def self.apathy
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000816')
@@ -4538,7 +5034,7 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000820')
   end
 
-  # contempt is disgust  towards a lower status individual.
+  # contempt is disgust towards a lower status individual.
   # (http://semanticscience.org/resource/SIO_000821)
   def self.contempt
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000821')
@@ -4628,6 +5124,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000835')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000836)
   def self.excitement
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000836')
   end
@@ -4698,7 +5196,7 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000846')
   end
 
-  # indifference is an emotion exhibited by lack of interest, concern, or sympathy.
+  # indifference is an emotion characterized by lack of interest, concern, or sympathy.
   # (http://semanticscience.org/resource/SIO_000847)
   def self.indifference
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000847')
@@ -4716,10 +5214,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000849')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000850)
   def self.joy
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000850')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000850)
   def self.joy_is_an_emotion_of_intense_happiness
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000850')
   end
@@ -4766,6 +5268,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000857')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000858)
   def self.pleasure
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000858')
   end
@@ -4776,16 +5280,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000859')
   end
 
-  # Rage is a feeling of intense anger that is  associated with the Fight-or-flight response.
+  # Rage is a feeling of intense anger that is associated with the Fight-or-flight response.
   # (http://semanticscience.org/resource/SIO_000860)
   def self.rage
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000860')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000861)
   def self.regret
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000861')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000862)
   def self.remorse
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000862')
   end
@@ -4796,10 +5304,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000863')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000864)
   def self.satisfaction
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000864')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000864)
   def self.satisfaction_is_an_emotion_of_fulfillment_of_one_s_wishes_expectations_or_needs_or_the_pleasure_derived_from_this
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000864')
   end
@@ -4858,18 +5370,26 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000873')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000875)
   def self.department_chair_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000875')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000876)
   def self.student_advisor_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000876')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000877)
   def self.undergraduate_student_advisor_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000877')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000878)
   def self.graduate_student_advisor_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000878')
   end
@@ -4886,6 +5406,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000880')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000881)
   def self.investigational_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000881')
   end
@@ -4896,10 +5418,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000882')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000883)
   def self.subject_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000883')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000884)
   def self.publishing_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000884')
   end
@@ -5108,6 +5634,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000923')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000924)
   def self.television_program
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000924')
   end
@@ -5178,6 +5706,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000936')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000937)
   def self.textual_chart
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000937')
   end
@@ -5212,6 +5742,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000941')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000942)
   def self.numeric_label
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000942')
   end
@@ -5294,6 +5826,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000954')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000955)
   def self.environment
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000955')
   end
@@ -5340,22 +5874,32 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000963')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000964)
   def self.standard_operating_procedure
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000964')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000965)
   def self.agreement_quality
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000965')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000966)
   def self.agreement
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000966')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000967)
   def self.disagreement
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000967')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000968)
   def self.poison_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000968')
   end
@@ -5432,6 +5976,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000986')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_000987)
   def self.predicted_gene
     return RDF::URI.new('http://semanticscience.org/resource/SIO_000987')
   end
@@ -5556,10 +6102,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001008')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001009)
   def self.toxic
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001009')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001010)
   def self.non_toxic
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001010')
   end
@@ -5642,6 +6192,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001023')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001024)
   def self.medical_procedure
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001024')
   end
@@ -5694,30 +6246,44 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001032')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001033)
   def self.text_quality
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001033')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001034)
   def self.reviewed
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001034')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001035)
   def self.peer_reviewed
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001035')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001036)
   def self.draft
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001036')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001037)
   def self.finalized
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001037')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001038)
   def self.editor_reviewed
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001038')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001039)
   def self.written
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001039')
   end
@@ -5746,24 +6312,32 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001042')
   end
 
-  # a protocol is a predefined procedural method in the design and implementation of experiments. In addition to providing a detailed set of procedures and lists of required equipment and instruments, protocols often include information on safety precautions, the calculation of results and reporting standards, including statistical analysis and rules for predefining and documenting excluded data to avoid bias.
+  # an experimental protocol is an action specification with respect to the design and implementation of experiments. In addition to providing a detailed set of procedures and lists of required equipment and instruments, experimental protocols often include information on safety precautions, the calculation of results and reporting standards, including statistical analysis and rules for predefining and documenting excluded data to avoid bias.
   # (http://semanticscience.org/resource/SIO_001043)
-  def self.protocol
+  def self.experimental_protocol
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001043')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001044)
   def self.viroid
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001044')
   end
 
+  # the quality of being polar or not polar.
+  # (http://semanticscience.org/resource/SIO_001045)
   def self.polar_quality
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001045')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001046)
   def self.polar
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001046')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001047)
   def self.non_polar
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001047')
   end
@@ -5924,10 +6498,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001071')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001072)
   def self.text_span_end_position
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001072')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001072)
   def self.text_span_end_position_is_the_position_offset_of_the_last_character_of_a_text_span_in_relation_the_text_it_is_from
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001072')
   end
@@ -5935,6 +6513,12 @@ class SIO
   # a text span is a subset of contiguous sequence of characters of a textual entity.
   # (http://semanticscience.org/resource/SIO_001073)
   def self.text_span
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001073')
+  end
+
+  # a text span is a subset of contiguous sequence of characters of a textual entity.
+  # (http://semanticscience.org/resource/SIO_001073)
+  def self.selector
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001073')
   end
 
@@ -5950,10 +6534,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001075')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001076)
   def self.microarray_experiment
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001076')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001077)
   def self.gene_expression_value
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001077')
   end
@@ -5994,6 +6582,606 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_001083')
   end
 
+  # a liquid solution is a heterogeneous substance in a liquid state.
+  # (http://semanticscience.org/resource/SIO_001084)
+  def self.liquid_solution
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001084')
+  end
+
+  # to remove a covalent bond is the capability to covalently modify a chemical entity by removing a covalent bond.
+  # (http://semanticscience.org/resource/SIO_001085)
+  def self.to_remove_a_covalent_bond
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001085')
+  end
+
+  # to add a covalent bond is the capability to covalently modify a chemical entity by adding a covalent bond.
+  # (http://semanticscience.org/resource/SIO_001086)
+  def self.to_add_a_covalent_bond
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001086')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001087)
+  def self.to_modify_electronically
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001087')
+  end
+
+  # concentration is the quantity of a constituent divided by the total volume of a mixture.
+  # (http://semanticscience.org/resource/SIO_001088)
+  def self.concentration
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001088')
+  end
+
+  # pH is a measure of the activity of the (solvated) hydrogen ion. 
+  # (http://semanticscience.org/resource/SIO_001089)
+  def self.pH
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001089')
+  end
+
+  # homogeneous is a quality that describes the uniform composition of an object.
+  # (http://semanticscience.org/resource/SIO_001090)
+  def self.homogeneous
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001090')
+  end
+
+  # homogeneous is a quality that describes the varied composition of an object.
+  # (http://semanticscience.org/resource/SIO_001091)
+  def self.heterogeneous
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001091')
+  end
+
+  # a structural quality is a quality of an object that describes its structure.
+  # (http://semanticscience.org/resource/SIO_001092)
+  def self.structural_quality
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001092')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001093)
+  def self.rigid
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001093')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001094)
+  def self.bent
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001094')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001095)
+  def self.curved
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001095')
+  end
+
+  # electronic structure is the electron configuration is the distribution of electrons of an atom or molecule (or other physical structure) in atomic or molecular orbitals.
+  # (http://semanticscience.org/resource/SIO_001099)
+  def self.electronic_structure
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001099')
+  end
+
+  # electronic structure is the electron configuration is the distribution of electrons of an atom or molecule (or other physical structure) in atomic or molecular orbitals.
+  # (http://semanticscience.org/resource/SIO_001099)
+  def self.electronic_configuration
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001099')
+  end
+
+  # a crystal structure is the arrangement of atoms or molecules in a crystalline liquid or solid.
+  # (http://semanticscience.org/resource/SIO_001100)
+  def self.crystal_structure
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001100')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001102)
+  def self.to_interact_and_to_be_interacted_with
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001102')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001103)
+  def self.to_gain_a_covalent_bond
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001103')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001104)
+  def self.to_lose_a_covalent_bond
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001104')
+  end
+
+  # to ingest is the capability to take into the body by the mouth for digestion or absorption
+  # (http://semanticscience.org/resource/SIO_001105)
+  def self.to_ingest
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001105')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001106)
+  def self.to_produce
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001106')
+  end
+
+  # a pathway is an effective specification that outlines a set of actions that forms a way to achieve an objective.
+  # (http://semanticscience.org/resource/SIO_001107)
+  def self.pathway
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001107')
+  end
+
+  # a pathway is an effective specification that outlines a set of actions that forms a way to achieve an objective.
+  # (http://semanticscience.org/resource/SIO_001107)
+  def self.biological_pathway
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001107')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001108)
+  def self.centrality_measure
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001108')
+  end
+
+  # a mean is the central tendency of a collection of numbers taken as the sum of the numbers divided by the size of the collection.
+  # (http://semanticscience.org/resource/SIO_001109)
+  def self.mean
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001109')
+  end
+
+  # a mean is the central tendency of a collection of numbers taken as the sum of the numbers divided by the size of the collection.
+  # (http://semanticscience.org/resource/SIO_001109)
+  def self.arithmeritic_mean
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001109')
+  end
+
+  # a median is the numerical value separating the higher half of a sample, a population, or a probability distribution, from the lower half. 
+  # (http://semanticscience.org/resource/SIO_001110)
+  def self.median
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001110')
+  end
+
+  # a mode is the value that appears most often in a set of data.
+  # (http://semanticscience.org/resource/SIO_001111)
+  def self.mode
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001111')
+  end
+
+  # a sum is the result of adding a set of values together.
+  # (http://semanticscience.org/resource/SIO_001112)
+  def self.sum
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001112')
+  end
+
+  # a minimal value is smallest value of an attribute for the entities in the defined set.
+  # (http://semanticscience.org/resource/SIO_001113)
+  def self.minimal_value
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001113')
+  end
+
+  # a minimal value is smallest value of an attribute for the entities in the defined set.
+  # (http://semanticscience.org/resource/SIO_001113)
+  def self.min
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001113')
+  end
+
+  # a maximal value is largest value of an attribute for the entities in the defined set.
+  # (http://semanticscience.org/resource/SIO_001114)
+  def self.maximal_value
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001114')
+  end
+
+  # a maximal value is largest value of an attribute for the entities in the defined set.
+  # (http://semanticscience.org/resource/SIO_001114)
+  def self.max
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001114')
+  end
+
+  # a count of the instances of a class or members in a collection.
+  # (http://semanticscience.org/resource/SIO_001115)
+  def self.member_count
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001115')
+  end
+
+  # a union is a list of all of the values of an attribute for the entities in the defined set.
+  # (http://semanticscience.org/resource/SIO_001116)
+  def self.union
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001116')
+  end
+
+  # an intersection is a list of only the values of an attribute for the entities in the defined set where all entities have that value.
+  # (http://semanticscience.org/resource/SIO_001117)
+  def self.intersection
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001117')
+  end
+
+  # a sequence is an ordered list of entities. Like a set, it contains members (also called elements, or terms).
+  # (http://semanticscience.org/resource/SIO_001118)
+  def self.sequence
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001118')
+  end
+
+  # a gene-variant disease association in which a mutation in the gene/protein results in the development or maintenance of the disease.
+  # (http://semanticscience.org/resource/SIO_001119)
+  def self.gene_disease_association_linked_with_causal_mutation
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001119')
+  end
+
+  # a gene disease association in which the gene is a therapeutic marker for the disease.
+  # (http://semanticscience.org/resource/SIO_001120)
+  def self.therapeutic_gene_disease_association
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001120')
+  end
+
+  # a gene disease association in which the gene is a therapeutic marker for the disease.
+  # (http://semanticscience.org/resource/SIO_001120)
+  def self.gene_disease_association_arising_from_a_therapeutic_role_of_the_gene_protein
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001120')
+  end
+
+  # a gene-disease association in which the gene/protein is involved in the etiology or maintenance of the disease.
+  # (http://semanticscience.org/resource/SIO_001121)
+  def self.gene_disease_biomarker_association
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001121')
+  end
+
+  # a gene-disease association in which a sequence variation (a mutation, a SNP) is associated with the disease.
+  # (http://semanticscience.org/resource/SIO_001122)
+  def self.gene_disease_association_linked_with_genetic_variation
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001122')
+  end
+
+  # a gene-disease association in which a sequence variation (a mutation, a SNP) is associated with the disease.
+  # (http://semanticscience.org/resource/SIO_001122)
+  def self.gene_variant_disease_association
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001122')
+  end
+
+  # a gene-disease association in which the disease phenotype is associated with an altered expression of the gene.
+  # (http://semanticscience.org/resource/SIO_001123)
+  def self.gene_disease_association_linked_with_altered_gene_expression
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001123')
+  end
+
+  # a gene-disease association in which the disease phenotype is associated with post-translational modifications in the protein product.
+  # (http://semanticscience.org/resource/SIO_001124)
+  def self.gene_disease_association_linked_with_post_translational_modification
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001124')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001125)
+  def self.regulation_of_transcription
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001125')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001126)
+  def self.regulation_of_translation
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001126')
+  end
+
+  # A process that modulates the frequency, rate or extent of process involved in the creation or destruction of a molecule.
+  # (http://semanticscience.org/resource/SIO_001127)
+  def self.regulation_of_molecular_quantity
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001127')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001128)
+  def self.regulation_of_molecular_production
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001128')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001129)
+  def self.regulation_of_molecular_degradation
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001129')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001130)
+  def self.protein_mediated_regulation_of_translation
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001130')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001131)
+  def self.rna_mediated_regulation_of_translation
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001131')
+  end
+
+  # the process of maintaining some the frequency, rate or extent of another process.
+  # (http://semanticscience.org/resource/SIO_001132)
+  def self.process_maintenance
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001132')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001133)
+  def self.increased_frequency_of_process
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001133')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001134)
+  def self.decreased_frequency_of_process
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001134')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001135)
+  def self.regulation_of_process_frequency
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001135')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001136)
+  def self.regulation_of_process_duration
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001136')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001137)
+  def self.increased_duration_of_process
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001137')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001138)
+  def self.decreased_duration_of_process
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001138')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001139)
+  def self.regulation_of_process_spatial_extent
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001139')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001140)
+  def self.increased_spatial_extent_of_process
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001140')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001141)
+  def self.decreased_spatial_extent_of_process
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001141')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001142)
+  def self.maintenance_of_spatial_extent_of_process
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001142')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001143)
+  def self.maintenance_of_duration_of_process
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001143')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001144)
+  def self.maintenance_of_frequency_of_process
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001144')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001145)
+  def self.regulation_of_participant_quantity
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001145')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001146)
+  def self.increased_object_production
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001146')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001147)
+  def self.decreased_object_production
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001147')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001148)
+  def self.increased_object_consumption
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001148')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001149)
+  def self.decreased_object_consumption
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001149')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001150)
+  def self.regulation_of_object_consumption
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001150')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001151)
+  def self.regulation_of_object_production
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001151')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001152)
+  def self.maintenance_of_object_production
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001152')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001153)
+  def self.maintenance_of_object_consumption
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001153')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001160)
+  def self.number_of_objects_produced
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001160')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001161)
+  def self.number_of_objects_consumed
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001161')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001162)
+  def self.change_in_number_of_objects_produced
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001162')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001163)
+  def self.increase_in_number_of_objects_produced
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001163')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001164)
+  def self.decrease_in_number_of_objects_produced
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001164')
+  end
+
+  # an user account allows a user to authenticate to system services and be granted authorization to access them.
+  # (http://semanticscience.org/resource/SIO_001165)
+  def self.user_account
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001165')
+  end
+
+  # An annotation is a written explanatory or critical description, or other in-context information (e.g., pattern, motif, link), that has been associated with data or other types of information.
+  # (http://semanticscience.org/resource/SIO_001166)
+  def self.annotation
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001166')
+  end
+
+  # a comment is a verbal or written remark often related to an added piece of information, or an observation or statement.
+  # (http://semanticscience.org/resource/SIO_001167)
+  def self.comment
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001167')
+  end
+
+  # an audio recording is an electrical or mechanical inscription and re-creation of sound waves, such as spoken voice, singing, instrumental music, or sound effects.
+  # (http://semanticscience.org/resource/SIO_001168)
+  def self.audio_recording
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001168')
+  end
+
+  # an issue is a single instance of a periodically published journal, magazine, or newspaper.
+  # (http://semanticscience.org/resource/SIO_001169)
+  def self.issue
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001169')
+  end
+
+  # a slideshow is a visual presentation of information contained within a collection of slides.
+  # (http://semanticscience.org/resource/SIO_001170)
+  def self.slideshow
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001170')
+  end
+
+  # a database cross-reference is an association between one data item and another
+  # (http://semanticscience.org/resource/SIO_001171)
+  def self.database_cross_reference
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001171')
+  end
+
+  # a database cross-reference is an association between one data item and another
+  # (http://semanticscience.org/resource/SIO_001171)
+  def self.dbxref
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001171')
+  end
+
+  # an exact cross-reference is a database cross-reference in which one entity is equivalent to the other based on all the entitie's attributes (minus the source)
+  # (http://semanticscience.org/resource/SIO_001172)
+  def self.exact_cross_reference
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001172')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001173)
+  def self.double_stranded_DNA
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001173')
+  end
+
+  # a nucleic acid strand is a single-stranded nucleic acid that is part of a double stranded nucleic acid complex.
+  # (http://semanticscience.org/resource/SIO_001174)
+  def self.nucleic_acid_strand
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001174')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001175)
+  def self.positive_nucleic_acid_strand
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001175')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001176)
+  def self.negative_nucleic_acid_strand
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001176')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001177)
+  def self.double_stranded_nucleic_acid
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001177')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001178)
+  def self.double_stranded_RNA
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001178')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001179)
+  def self.full_agreement
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001179')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001180)
+  def self.partial_agreement
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001180')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001181)
+  def self.full_disagreement
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001181')
+  end
+
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_001182)
+  def self.partial_disagreement
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001182')
+  end
+
+  # a statement is a proposition that is either (a) a meaningful declarative sentence that is either true or false, or (b) that which a true or false declarative sentence asserts
+  # (http://semanticscience.org/resource/SIO_001183)
+  def self.statement
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001183')
+  end
+
+  # a slope or gradient of a line describes its steepness, incline, or grade. A higher slope value indicates a steeper incline. Slope is normally described by the ratio of the "rise" divided by the "run" between two points on a line.
+  # (http://semanticscience.org/resource/SIO_001184)
+  def self.slope
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001184')
+  end
+
+  # a software process identifier is an identifier for a software process in some operating system.
+  # (http://semanticscience.org/resource/SIO_001185)
+  def self.software_process_identifier
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_001185')
+  end
+
   # a biological organisn is a biological entity that consists of one or more cells and is capable of genomic replication (independently or not).
   # (http://semanticscience.org/resource/SIO_010000)
   def self.organism
@@ -6030,22 +7218,32 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010005')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010007)
   def self.polypeptide
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010007')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010008)
   def self.nucleic_acid
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010008')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010009)
   def self.ribonucleic_acid
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010009')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010010)
   def self.deoxyribonucleic_acid
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010010')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010011)
   def self.lipid
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010011')
   end
@@ -6056,34 +7254,50 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010013')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010014)
   def self.primary_structure_descriptor
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010014')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010015)
   def self.protein_sequence
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010015')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010015)
   def self.polypeptide_sequence
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010015')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010016)
   def self.nucleic_acid_sequence
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010016')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010017)
   def self.ribonucleic_acid_sequence
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010017')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010017)
   def self.RNA_sequence
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010017')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010018)
   def self.deoxyribonucleic_acid_sequence
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010018')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010018)
   def self.DNA_sequence
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010018')
   end
@@ -6100,18 +7314,26 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010020')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010022)
   def self.secondary_structure_descriptor
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010022')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010023)
   def self.tertiary_structure_descriptor
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010023')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010024)
   def self.quaternary_structure
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010024')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010025)
   def self.carbohydrate_polymer
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010025')
   end
@@ -6128,14 +7350,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010027')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010028)
   def self.genetic_data
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010028')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010029)
   def self.biological_sex
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010029')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010030)
   def self.monosaccharide
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010030')
   end
@@ -6194,10 +7422,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010039')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010040)
   def self.binding_site
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010040')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010041)
   def self.active_site
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010041')
   end
@@ -6208,6 +7440,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010042')
   end
 
+  # a protein is an organic polymer that is composed of a linear polymer of amino acids.
+  # (http://semanticscience.org/resource/SIO_010043)
   def self.protein
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010043')
   end
@@ -6242,10 +7476,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010048')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010049)
   def self.molecular_site
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010049')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010050)
   def self.allosteric_site
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010050')
   end
@@ -6262,6 +7500,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010052')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010053)
   def self.lineage
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010053')
   end
@@ -6284,6 +7524,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010056')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010057)
   def self.organismal_stative_quality
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010057')
   end
@@ -6300,10 +7542,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010059')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010060)
   def self.family_history
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010060')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010061)
   def self.generation_number
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010061')
   end
@@ -6314,22 +7560,32 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010064')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010065)
   def self.bioinformatic_data
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010065')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010066)
   def self.sequence_alignment
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010066')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010067)
   def self.multiple_sequence_alignment
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010067')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010068)
   def self.pairwise_sequence_alignment
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010068')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010071)
   def self.organic_submolecule
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010071')
   end
@@ -6340,14 +7596,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010072')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010073)
   def self.open_reading_frame
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010073')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010074)
   def self.amino_acid_residue
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010074')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010075)
   def self.nucleotide_residue
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010075')
   end
@@ -6370,50 +7632,74 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010084')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010085)
   def self.gene_regulatory_component
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010085')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010086)
   def self.enhancer
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010086')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010087)
   def self.inactive_ingredient
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010087')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010088)
   def self.to_serve_as_a_template_for_molecular_synthesis
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010088')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010089)
   def self.to_serve_as_a_template_for_protein_synthesis
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010089')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010090)
   def self.to_serve_as_a_template_for_RNA_synthesis
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010090')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010091)
   def self.to_serve_as_a_template_for_DNA_synthesis
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010091')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010092)
   def self.deoxyribonucleic_acid_template
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010092')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010093)
   def self.deoxyribonucleic_acid_primer
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010093')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010094)
   def self.to_serve_as_a_primer_for_DNA_synthesis
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010094')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010095)
   def self.RNA_transcript_component
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010095')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010096)
   def self.mature_mRNA
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010096')
   end
@@ -6424,10 +7710,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010097')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010098)
   def self.mRNA_splice_variant
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010098')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010099)
   def self.messenger_RNA
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010099')
   end
@@ -6468,17 +7758,21 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010284')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010285)
   def self.molecular_complex_formation
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010285')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010286)
   def self.molecular_complex_dissociation
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010286')
   end
 
-  # Biochemical regulation is a biochemical process that changes the frequency, rate or extent of a downstream biochemical process.
+  # A process that changes the frequency, rate or extent of a biochemical process.
   # (http://semanticscience.org/resource/SIO_010287)
-  def self.biochemical_regulation
+  def self.regulation_of_biochemical_process
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010287')
   end
 
@@ -6494,30 +7788,32 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010289')
   end
 
-  # Positve regulation is a biochemical regulation that increases the frequency, rate or extent of a downstream biochemical process.
+  # up-regulation is a process that increases the frequency, rate or extent of one or more processes in relation to a reference state.
+  # (http://semanticscience.org/resource/SIO_010295)
+  def self.process_up_regulation
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_010295')
+  end
+
+  # up-regulation is a process that increases the frequency, rate or extent of one or more processes in relation to a reference state.
   # (http://semanticscience.org/resource/SIO_010295)
   def self.positive_regulation
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010295')
   end
 
-  # Positve regulation is a biochemical regulation that increases the frequency, rate or extent of a downstream biochemical process.
-  # (http://semanticscience.org/resource/SIO_010295)
-  def self.Positive_biochemical_regulation
-    return RDF::URI.new('http://semanticscience.org/resource/SIO_010295')
+  # down-regulation is a process that decreases the frequency, rate or extent of one or more processes in relation to a reference state.
+  # (http://semanticscience.org/resource/SIO_010296)
+  def self.process_down_regulation
+    return RDF::URI.new('http://semanticscience.org/resource/SIO_010296')
   end
 
-  # Negative regulation is a biochemical regulation that decreases the frequency, rate or extent of a downstream biochemical process.
+  # down-regulation is a process that decreases the frequency, rate or extent of one or more processes in relation to a reference state.
   # (http://semanticscience.org/resource/SIO_010296)
   def self.negative_regulation
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010296')
   end
 
-  # Negative regulation is a biochemical regulation that decreases the frequency, rate or extent of a downstream biochemical process.
-  # (http://semanticscience.org/resource/SIO_010296)
-  def self.Negative_biochemical_regulation
-    return RDF::URI.new('http://semanticscience.org/resource/SIO_010296')
-  end
-
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010298)
   def self.medical_data
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010298')
   end
@@ -6540,6 +7836,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010301')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010307)
   def self.molecular_modification
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010307')
   end
@@ -6562,26 +7860,38 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010310')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010334)
   def self.carbohydrate_residue
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010334')
   end
 
+  # a nucleic acid part is a component of a nucleic acid.
+  # (http://semanticscience.org/resource/SIO_010335)
   def self.nucleic_acid_part
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010335')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010336)
   def self.deoxyribonucleotide_residue
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010336')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010337)
   def self.ribonucleotide_residue
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010337')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010338)
   def self.pharmaceutical_component
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010338')
   end
 
+  # to covalently modify is to materially change a molecule by adding or removing covalent bonds between atoms.
+  # (http://semanticscience.org/resource/SIO_010340)
   def self.to_covalently_modify
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010340')
   end
@@ -6616,58 +7926,86 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010345')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010346)
   def self.organic_polymer
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010346')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010347)
   def self.to_modify_conformation_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010347')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010349)
   def self.to_cleave
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010349')
   end
 
+  # to combine is the capability to modify a set of objects in a way that the object is merged with another object to form a new object or substance.
+  # (http://semanticscience.org/resource/SIO_010351)
   def self.to_combine
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010351')
   end
 
+  # to breathe is the capability to inhale and exhale air into the body during respiration.
+  # (http://semanticscience.org/resource/SIO_010353)
   def self.to_breathe
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010353')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010354)
   def self.to_conformationally_activate
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010354')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010355)
   def self.to_conformationally_inhibit
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010355')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010360)
   def self.to_modify_oxidation_state_of
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010360')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010362)
   def self.substrate
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010362')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010363)
   def self.product
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010363')
   end
 
+  # to be modified is the capability to be actively interacted with in such a way that it leads to a physical reconfiguration.
+  # (http://semanticscience.org/resource/SIO_010364)
   def self.to_be_modified
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010364')
   end
 
+  # to be cleaved is the capability to be modified in a way that splits one part of the object from the other.
+  # (http://semanticscience.org/resource/SIO_010365)
   def self.to_be_cleaved
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010365')
   end
 
+  # to be covalently modified is the capability of a chemical entity to have bonds added or removed
+  # (http://semanticscience.org/resource/SIO_010366)
   def self.to_be_covalently_modified
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010366')
   end
 
+  # to be combined is the capability to be modified in a way that the object is merged with another object to form a new object or substance.
+  # (http://semanticscience.org/resource/SIO_010367)
   def self.to_be_combined
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010367')
   end
@@ -6678,26 +8016,38 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010368')
   end
 
+  # to be electronically modified is the capability of a chemical entity to have electrons added or removed
+  # (http://semanticscience.org/resource/SIO_010369)
   def self.to_be_electronically_modified
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010369')
   end
 
+  # to gain an electron is the capability of a chemical entity to receive an electron.
+  # (http://semanticscience.org/resource/SIO_010370)
   def self.to_gain_an_electron
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010370')
   end
 
+  # to lose an electron is the capability of a chemical entity to lose an electron.
+  # (http://semanticscience.org/resource/SIO_010371)
   def self.to_lose_an_electron
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010371')
   end
 
+  # to be activated is the capability to be modified in such a way that the conformational change leads to an increase in another capability.
+  # (http://semanticscience.org/resource/SIO_010372)
   def self.to_be_activated
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010372')
   end
 
+  # to be inhibited is the capability to be modified in such a way that the conformational change leads to an decrease in another capability.
+  # (http://semanticscience.org/resource/SIO_010373)
   def self.to_be_inhibited
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010373')
   end
 
+  # to be conformationally changed is the capability to be modified in such a way that the object's conformation is changed.
+  # (http://semanticscience.org/resource/SIO_010374)
   def self.to_be_conformationally_changed
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010374')
   end
@@ -6714,14 +8064,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010376')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010377)
   def self.cellular_organism
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010377')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010378)
   def self.non_cellular_organism
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010378')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010379)
   def self.virus
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010379')
   end
@@ -6732,6 +8088,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010383')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010410)
   def self.specialized_chemical_entity
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010410')
   end
@@ -6766,7 +8124,7 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010416')
   end
 
-  # A solvent is a liquid substance that can dissolve other substances (solutes).
+  # A solvent is a substance that can dissolve other substances (solutes).
   # (http://semanticscience.org/resource/SIO_010417)
   def self.solvent
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010417')
@@ -6784,10 +8142,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010419')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010420)
   def self.receptor
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010420')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010423)
   def self.target
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010423')
   end
@@ -6810,9 +8172,9 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010426')
   end
 
-  # a solution component is a part of a solution.
+  # a liquid solution component is a part of a liquid solution.
   # (http://semanticscience.org/resource/SIO_010427)
-  def self.solution_component
+  def self.liquid_solution_component
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010427')
   end
 
@@ -6828,10 +8190,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010429')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010430)
   def self.test_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010430')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010431)
   def self.control_role
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010431')
   end
@@ -6866,18 +8232,26 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010436')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010437)
   def self.signal_transducer
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010437')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010438)
   def self.signal
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010438')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010439)
   def self.messenger
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010439')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010440)
   def self.second_messenger
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010440')
   end
@@ -6888,10 +8262,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010441')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010442)
   def self.charge_quality
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010442')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010443)
   def self.intron
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010443')
   end
@@ -6902,26 +8280,38 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010444')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010445)
   def self.exon
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010445')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010446)
   def self.promoter
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010446')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010447)
   def self.start_codon
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010447')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010448)
   def self.stop_codon
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010448')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010450)
   def self.RNA_transcript
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010450')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010451)
   def self.splice_site
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010451')
   end
@@ -6974,25 +8364,31 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010459')
   end
 
+  # a non-polar solvent is a solvent that exhibits a non-polar quality.
+  # (http://semanticscience.org/resource/SIO_010460)
   def self.nonpolar_solvent
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010460')
   end
 
-  # the quality of having a positive charge
+  # a positive charge is a charge where the value is positive.
   # (http://semanticscience.org/resource/SIO_010461)
   def self.positive_charge
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010461')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010462)
   def self.heterogeneous_substance
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010462')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010463)
   def self.homogeneous_substance
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010463')
   end
 
-  # the quality of having a negative charge
+  # a negative charge is a charge where the value is negative.
   # (http://semanticscience.org/resource/SIO_010464)
   def self.negative_charge
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010464')
@@ -7004,14 +8400,20 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010465')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010468)
   def self.alpha_helix
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010468')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010469)
   def self.beta_strand
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010469')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010471)
   def self.protein_part
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010471')
   end
@@ -7028,22 +8430,32 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010497')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010498)
   def self.single_bond
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010498')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010499)
   def self.double_bond
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010499')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010500)
   def self.triple_bond
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010500')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010501)
   def self.aromatic_bond
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010501')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010502)
   def self.disulfide_bond
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010502')
   end
@@ -7060,6 +8472,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010504')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010505)
   def self.base_stack
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010505')
   end
@@ -7144,10 +8558,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010518')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010519)
   def self.polar_addition_reaction
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010519')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010520)
   def self.non_polar_addition_reaction
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010520')
   end
@@ -7170,30 +8588,38 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010523')
   end
 
-  # a biochemical pathway specifies a series of biochemical reactions towards achieving some objective.
+  # a biochemical pathway specifies a series of biochemical modifications and transformations towards achieving some biological outcome.
   # (http://semanticscience.org/resource/SIO_010525)
   def self.biochemical_pathway
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010525')
   end
 
-  # a chemical reaction pathway specifies is a series of chemical reactions towards producing some chemical product.
+  # a chemical reaction pathway specifies a series of chemical reactions towards producing some chemical product.
   # (http://semanticscience.org/resource/SIO_010526)
   def self.chemical_reaction_pathway
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010526')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010527)
   def self.chemical_synthesis_pathway
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010527')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010528)
   def self.chemical_degradation_pathway
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010528')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010530)
   def self.a_d_structure_model
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010530')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010531)
   def self.sequence_profile
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010531')
   end
@@ -7210,6 +8636,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010533')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010673)
   def self.medical_history
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010673')
   end
@@ -7286,6 +8714,8 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010785')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_010786)
   def self.carbon_allotrope
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010786')
   end
@@ -7344,496 +8774,740 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_010795')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011000)
   def self.boron_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011000')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011001)
   def self.carbon_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011001')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011002)
   def self.hydrogen_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011002')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011003)
   def self.helium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011003')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011004)
   def self.lithium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011004')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011005)
   def self.beryllium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011005')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011006)
   def self.nitrogen_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011006')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011007)
   def self.oxygen_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011007')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011008)
   def self.fluorine_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011008')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011009)
   def self.neon_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011009')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011010)
   def self.sodium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011010')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011011)
   def self.magnesium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011011')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011012)
   def self.aluminium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011012')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011013)
   def self.silicon_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011013')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011014)
   def self.phosphorus_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011014')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011015)
   def self.sulfur_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011015')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011016)
   def self.chlorine_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011016')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011017)
   def self.argon_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011017')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011018)
   def self.potassium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011018')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011019)
   def self.calcium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011019')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011020)
   def self.scandium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011020')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011021)
   def self.titanium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011021')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011022)
   def self.vanadium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011022')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011023)
   def self.chromium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011023')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011024)
   def self.manganese_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011024')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011025)
   def self.iron_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011025')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011026)
   def self.cobalt_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011026')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011027)
   def self.nickel_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011027')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011028)
   def self.copper_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011028')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011029)
   def self.zinc_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011029')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011030)
   def self.gallium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011030')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011031)
   def self.germanium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011031')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011032)
   def self.arsenic_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011032')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011033)
   def self.selenium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011033')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011034)
   def self.bromine_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011034')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011035)
   def self.krypton_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011035')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011036)
   def self.rubidium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011036')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011037)
   def self.strontium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011037')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011038)
   def self.yttrium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011038')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011039)
   def self.zirconium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011039')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011040)
   def self.niobium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011040')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011041)
   def self.molybdemum_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011041')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011042)
   def self.technetium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011042')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011043)
   def self.ruthenium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011043')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011044)
   def self.rhodium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011044')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011045)
   def self.palladium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011045')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011046)
   def self.silver_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011046')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011047)
   def self.cadmium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011047')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011048)
   def self.indium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011048')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011049)
   def self.tin_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011049')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011050)
   def self.antimony_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011050')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011051)
   def self.tellurium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011051')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011052)
   def self.iodine_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011052')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011053)
   def self.xenon_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011053')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011054)
   def self.caesium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011054')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011055)
   def self.barium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011055')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011056)
   def self.lanthanum_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011056')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011057)
   def self.hafnium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011057')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011058)
   def self.tantalum_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011058')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011059)
   def self.tungsten_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011059')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011060)
   def self.rhenium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011060')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011061)
   def self.osmium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011061')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011062)
   def self.iridium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011062')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011063)
   def self.platinum_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011063')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011064)
   def self.gold_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011064')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011065)
   def self.mercury_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011065')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011066)
   def self.thallium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011066')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011067)
   def self.lead_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011067')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011068)
   def self.bismuth_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011068')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011069)
   def self.polonium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011069')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011070)
   def self.astatine_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011070')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011071)
   def self.radon_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011071')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011072)
   def self.francium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011072')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011073)
   def self.radium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011073')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011074)
   def self.actinium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011074')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011075)
   def self.rutherfordium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011075')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011076)
   def self.dubnium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011076')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011077)
   def self.seaborgium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011077')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011078)
   def self.bohrium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011078')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011079)
   def self.hassium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011079')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011080)
   def self.meitnerium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011080')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011081)
   def self.darmstadtium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011081')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011082)
   def self.roentgenium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011082')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011083)
   def self.copernicium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011083')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011084)
   def self.unutrium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011084')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011085)
   def self.ununquadium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011085')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011086)
   def self.ununpentium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011086')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011087)
   def self.ununhexium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011087')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011088)
   def self.ununseptium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011088')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011089)
   def self.ununoctium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011089')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011090)
   def self.cerium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011090')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011091)
   def self.praseodymium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011091')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011092)
   def self.neodymium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011092')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011093)
   def self.promethium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011093')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011094)
   def self.samarium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011094')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011095)
   def self.europium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011095')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011096)
   def self.gadolinium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011096')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011097)
   def self.terbium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011097')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011098)
   def self.dysprosium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011098')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011099)
   def self.holmium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011099')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011100)
   def self.erbium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011100')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011101)
   def self.thulium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011101')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011102)
   def self.ytterbium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011102')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011103)
   def self.lutetium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011103')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011104)
   def self.thorium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011104')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011105)
   def self.protactinium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011105')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011106)
   def self.uranium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011106')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011107)
   def self.neptunium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011107')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011108)
   def self.plutonium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011108')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011109)
   def self.americium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011109')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011110)
   def self.curium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011110')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011111)
   def self.berkelium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011111')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011112)
   def self.californium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011112')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011113)
   def self.einsteinium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011113')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011114)
   def self.fermium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011114')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011115)
   def self.mendelevium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011115')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011116)
   def self.nobelium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011116')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011117)
   def self.lawrencium_atom
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011117')
   end
 
-  # a covalent chemical bond is a strong submolecular interaction between atoms.
+  # a covalent bond is a strong submolecular interaction between atoms.
   # (http://semanticscience.org/resource/SIO_011118)
-  def self.covalent_chemical_bond
+  def self.covalent_bond
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011118')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011119)
   def self.biomolecular_structure_descriptor
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011119')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011120)
   def self.molecular_structure_file
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011120')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011121)
   def self.molecular_structure_descriptor
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011121')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011123)
   def self.chemical_data
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011123')
   end
@@ -7850,10 +9524,14 @@ class SIO
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011126')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011130)
   def self.PDB_file
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011130')
   end
 
+  # -- No comment or description provided. --
+  # (http://semanticscience.org/resource/SIO_011131)
   def self.collection_of_3d_molecular_structure_models
     return RDF::URI.new('http://semanticscience.org/resource/SIO_011131')
   end
@@ -8412,6 +10090,36 @@ class SIO
       return true
     end
     if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_000975') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001096') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001097') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001098') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001101') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001154') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001155') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001156') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001157') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001158') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001159') then
       return true
     end
     if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_010078') then
@@ -9850,9 +11558,6 @@ class SIO
     if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_000626') then
       return true
     end
-    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_000627') then
-      return true
-    end
     if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_000638') then
       return true
     end
@@ -9938,9 +11643,6 @@ class SIO
       return true
     end
     if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_000690') then
-      return true
-    end
-    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_000691') then
       return true
     end
     if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_000692') then
@@ -11018,6 +12720,282 @@ class SIO
       return true
     end
     if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001083') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001084') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001085') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001086') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001087') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001088') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001089') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001090') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001091') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001092') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001093') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001094') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001095') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001099') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001100') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001102') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001103') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001104') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001105') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001106') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001107') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001108') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001109') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001110') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001111') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001112') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001113') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001114') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001115') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001116') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001117') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001118') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001119') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001120') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001121') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001122') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001123') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001124') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001125') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001126') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001127') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001128') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001129') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001130') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001131') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001132') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001133') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001134') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001135') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001136') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001137') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001138') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001139') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001140') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001141') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001142') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001143') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001144') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001145') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001146') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001147') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001148') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001149') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001150') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001151') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001152') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001153') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001160') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001161') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001162') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001163') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001164') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001165') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001166') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001167') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001168') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001169') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001170') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001171') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001172') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001173') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001174') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001175') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001176') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001177') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001178') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001179') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001180') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001181') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001182') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001183') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001184') then
+      return true
+    end
+    if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_001185') then
       return true
     end
     if uri == RDF::URI.new('http://semanticscience.org/resource/SIO_010000') then
@@ -12223,7 +14201,7 @@ class SIO
   end
 
 private
-  @@parent_properties = { RDF::URI.new('http://semanticscience.org/resource/SIO_000008') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000011') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000020') => RDF::URI.new('http://semanticscience.org/resource/SIO_000210') , RDF::URI.new('http://semanticscience.org/resource/SIO_000028') => RDF::URI.new('http://semanticscience.org/resource/SIO_000145') , RDF::URI.new('http://semanticscience.org/resource/SIO_000029') => RDF::URI.new('http://semanticscience.org/resource/SIO_000096') , RDF::URI.new('http://semanticscience.org/resource/SIO_000053') => RDF::URI.new('http://semanticscience.org/resource/SIO_000028') , RDF::URI.new('http://semanticscience.org/resource/SIO_000054') => RDF::URI.new('http://semanticscience.org/resource/SIO_000053') , RDF::URI.new('http://semanticscience.org/resource/SIO_000059') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000060') => RDF::URI.new('http://semanticscience.org/resource/SIO_000205') , RDF::URI.new('http://semanticscience.org/resource/SIO_000061') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000062') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000063') => RDF::URI.new('http://semanticscience.org/resource/SIO_000062') , RDF::URI.new('http://semanticscience.org/resource/SIO_000064') => RDF::URI.new('http://semanticscience.org/resource/SIO_000219') , RDF::URI.new('http://semanticscience.org/resource/SIO_000066') => RDF::URI.new('http://semanticscience.org/resource/SIO_000253') , RDF::URI.new('http://semanticscience.org/resource/SIO_000068') => RDF::URI.new('http://semanticscience.org/resource/SIO_000061') , RDF::URI.new('http://semanticscience.org/resource/SIO_000093') => RDF::URI.new('http://semanticscience.org/resource/SIO_000068') , RDF::URI.new('http://semanticscience.org/resource/SIO_000095') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000096') => RDF::URI.new('http://semanticscience.org/resource/SIO_000093') , RDF::URI.new('http://semanticscience.org/resource/SIO_000128') => RDF::URI.new('http://semanticscience.org/resource/SIO_000061') , RDF::URI.new('http://semanticscience.org/resource/SIO_000132') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000139') => RDF::URI.new('http://semanticscience.org/resource/SIO_000132') , RDF::URI.new('http://semanticscience.org/resource/SIO_000145') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000202') => RDF::URI.new('http://semanticscience.org/resource/SIO_000145') , RDF::URI.new('http://semanticscience.org/resource/SIO_000203') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000204') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000205') => RDF::URI.new('http://semanticscience.org/resource/SIO_000212') , RDF::URI.new('http://semanticscience.org/resource/SIO_000206') => RDF::URI.new('http://semanticscience.org/resource/SIO_000772') , RDF::URI.new('http://semanticscience.org/resource/SIO_000207') => RDF::URI.new('http://semanticscience.org/resource/SIO_000772') , RDF::URI.new('http://semanticscience.org/resource/SIO_000208') => RDF::URI.new('http://semanticscience.org/resource/SIO_000773') , RDF::URI.new('http://semanticscience.org/resource/SIO_000209') => RDF::URI.new('http://semanticscience.org/resource/SIO_000773') , RDF::URI.new('http://semanticscience.org/resource/SIO_000210') => RDF::URI.new('http://semanticscience.org/resource/SIO_000628') , RDF::URI.new('http://semanticscience.org/resource/SIO_000211') => RDF::URI.new('http://semanticscience.org/resource/SIO_000203') , RDF::URI.new('http://semanticscience.org/resource/SIO_000212') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000213') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000214') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000215') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000216') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000217') => RDF::URI.new('http://semanticscience.org/resource/SIO_000223') , RDF::URI.new('http://semanticscience.org/resource/SIO_000218') => RDF::URI.new('http://semanticscience.org/resource/SIO_000224') , RDF::URI.new('http://semanticscience.org/resource/SIO_000219') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000221') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000222') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000223') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000224') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000225') => RDF::URI.new('http://semanticscience.org/resource/SIO_000235') , RDF::URI.new('http://semanticscience.org/resource/SIO_000226') => RDF::URI.new('http://semanticscience.org/resource/SIO_000236') , RDF::URI.new('http://semanticscience.org/resource/SIO_000227') => RDF::URI.new('http://semanticscience.org/resource/SIO_000643') , RDF::URI.new('http://semanticscience.org/resource/SIO_000228') => RDF::URI.new('http://semanticscience.org/resource/SIO_000644') , RDF::URI.new('http://semanticscience.org/resource/SIO_000229') => RDF::URI.new('http://semanticscience.org/resource/SIO_000132') , RDF::URI.new('http://semanticscience.org/resource/SIO_000230') => RDF::URI.new('http://semanticscience.org/resource/SIO_000132') , RDF::URI.new('http://semanticscience.org/resource/SIO_000231') => RDF::URI.new('http://semanticscience.org/resource/SIO_000062') , RDF::URI.new('http://semanticscience.org/resource/SIO_000232') => RDF::URI.new('http://semanticscience.org/resource/SIO_000062') , RDF::URI.new('http://semanticscience.org/resource/SIO_000233') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000234') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000235') => RDF::URI.new('http://semanticscience.org/resource/SIO_000586') , RDF::URI.new('http://semanticscience.org/resource/SIO_000236') => RDF::URI.new('http://semanticscience.org/resource/SIO_000646') , RDF::URI.new('http://semanticscience.org/resource/SIO_000240') => RDF::URI.new('http://semanticscience.org/resource/SIO_000203') , RDF::URI.new('http://semanticscience.org/resource/SIO_000241') => RDF::URI.new('http://semanticscience.org/resource/SIO_000652') , RDF::URI.new('http://semanticscience.org/resource/SIO_000242') => RDF::URI.new('http://semanticscience.org/resource/SIO_000652') , RDF::URI.new('http://semanticscience.org/resource/SIO_000243') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000244') => RDF::URI.new('http://semanticscience.org/resource/SIO_000352') , RDF::URI.new('http://semanticscience.org/resource/SIO_000245') => RDF::URI.new('http://semanticscience.org/resource/SIO_000294') , RDF::URI.new('http://semanticscience.org/resource/SIO_000246') => RDF::URI.new('http://semanticscience.org/resource/SIO_000245') , RDF::URI.new('http://semanticscience.org/resource/SIO_000247') => RDF::URI.new('http://semanticscience.org/resource/SIO_000244') , RDF::URI.new('http://semanticscience.org/resource/SIO_000248') => RDF::URI.new('http://semanticscience.org/resource/SIO_000352') , RDF::URI.new('http://semanticscience.org/resource/SIO_000249') => RDF::URI.new('http://semanticscience.org/resource/SIO_000294') , RDF::URI.new('http://semanticscience.org/resource/SIO_000250') => RDF::URI.new('http://semanticscience.org/resource/SIO_000248') , RDF::URI.new('http://semanticscience.org/resource/SIO_000251') => RDF::URI.new('http://semanticscience.org/resource/SIO_000249') , RDF::URI.new('http://semanticscience.org/resource/SIO_000252') => RDF::URI.new('http://semanticscience.org/resource/SIO_000212') , RDF::URI.new('http://semanticscience.org/resource/SIO_000253') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000254') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000255') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000272') => RDF::URI.new('http://semanticscience.org/resource/SIO_000736') , RDF::URI.new('http://semanticscience.org/resource/SIO_000273') => RDF::URI.new('http://semanticscience.org/resource/SIO_000053') , RDF::URI.new('http://semanticscience.org/resource/SIO_000274') => RDF::URI.new('http://semanticscience.org/resource/SIO_000497') , RDF::URI.new('http://semanticscience.org/resource/SIO_000277') => RDF::URI.new('http://semanticscience.org/resource/SIO_000631') , RDF::URI.new('http://semanticscience.org/resource/SIO_000278') => RDF::URI.new('http://semanticscience.org/resource/SIO_000252') , RDF::URI.new('http://semanticscience.org/resource/SIO_000283') => RDF::URI.new('http://semanticscience.org/resource/SIO_000272') , RDF::URI.new('http://semanticscience.org/resource/SIO_000286') => RDF::URI.new('http://semanticscience.org/resource/SIO_000497') , RDF::URI.new('http://semanticscience.org/resource/SIO_000288') => RDF::URI.new('http://semanticscience.org/resource/SIO_000203') , RDF::URI.new('http://semanticscience.org/resource/SIO_000291') => RDF::URI.new('http://semanticscience.org/resource/SIO_000230') , RDF::URI.new('http://semanticscience.org/resource/SIO_000292') => RDF::URI.new('http://semanticscience.org/resource/SIO_000231') , RDF::URI.new('http://semanticscience.org/resource/SIO_000293') => RDF::URI.new('http://semanticscience.org/resource/SIO_000203') , RDF::URI.new('http://semanticscience.org/resource/SIO_000294') => RDF::URI.new('http://semanticscience.org/resource/SIO_000243') , RDF::URI.new('http://semanticscience.org/resource/SIO_000310') => RDF::URI.new('http://semanticscience.org/resource/SIO_000093') , RDF::URI.new('http://semanticscience.org/resource/SIO_000311') => RDF::URI.new('http://semanticscience.org/resource/SIO_000232') , RDF::URI.new('http://semanticscience.org/resource/SIO_000312') => RDF::URI.new('http://semanticscience.org/resource/SIO_000229') , RDF::URI.new('http://semanticscience.org/resource/SIO_000313') => RDF::URI.new('http://semanticscience.org/resource/SIO_000310') , RDF::URI.new('http://semanticscience.org/resource/SIO_000322') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000323') => RDF::URI.new('http://semanticscience.org/resource/SIO_000128') , RDF::URI.new('http://semanticscience.org/resource/SIO_000324') => RDF::URI.new('http://semanticscience.org/resource/SIO_000202') , RDF::URI.new('http://semanticscience.org/resource/SIO_000325') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000332') => RDF::URI.new('http://semanticscience.org/resource/SIO_000563') , RDF::URI.new('http://semanticscience.org/resource/SIO_000334') => RDF::URI.new('http://semanticscience.org/resource/SIO_000652') , RDF::URI.new('http://semanticscience.org/resource/SIO_000335') => RDF::URI.new('http://semanticscience.org/resource/SIO_000652') , RDF::URI.new('http://semanticscience.org/resource/SIO_000338') => RDF::URI.new('http://semanticscience.org/resource/SIO_000563') , RDF::URI.new('http://semanticscience.org/resource/SIO_000339') => RDF::URI.new('http://semanticscience.org/resource/SIO_000557') , RDF::URI.new('http://semanticscience.org/resource/SIO_000341') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000352') => RDF::URI.new('http://semanticscience.org/resource/SIO_000243') , RDF::URI.new('http://semanticscience.org/resource/SIO_000355') => RDF::URI.new('http://semanticscience.org/resource/SIO_000132') , RDF::URI.new('http://semanticscience.org/resource/SIO_000356') => RDF::URI.new('http://semanticscience.org/resource/SIO_000062') , RDF::URI.new('http://semanticscience.org/resource/SIO_000362') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000363') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000364') => RDF::URI.new('http://semanticscience.org/resource/SIO_000253') , RDF::URI.new('http://semanticscience.org/resource/SIO_000365') => RDF::URI.new('http://semanticscience.org/resource/SIO_000219') , RDF::URI.new('http://semanticscience.org/resource/SIO_000369') => RDF::URI.new('http://semanticscience.org/resource/SIO_000273') , RDF::URI.new('http://semanticscience.org/resource/SIO_000420') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000421') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000422') => RDF::URI.new('http://semanticscience.org/resource/SIO_000283') , RDF::URI.new('http://semanticscience.org/resource/SIO_000424') => RDF::URI.new('http://semanticscience.org/resource/SIO_000283') , RDF::URI.new('http://semanticscience.org/resource/SIO_000425') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000426') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000427') => RDF::URI.new('http://semanticscience.org/resource/SIO_000424') , RDF::URI.new('http://semanticscience.org/resource/SIO_000477') => RDF::URI.new('http://semanticscience.org/resource/SIO_000422') , RDF::URI.new('http://semanticscience.org/resource/SIO_000482') => RDF::URI.new('http://semanticscience.org/resource/SIO_000283') , RDF::URI.new('http://semanticscience.org/resource/SIO_000484') => RDF::URI.new('http://semanticscience.org/resource/SIO_000482') , RDF::URI.new('http://semanticscience.org/resource/SIO_000490') => RDF::URI.new('http://semanticscience.org/resource/SIO_000482') , RDF::URI.new('http://semanticscience.org/resource/SIO_000491') => RDF::URI.new('http://semanticscience.org/resource/SIO_000482') , RDF::URI.new('http://semanticscience.org/resource/SIO_000495') => RDF::URI.new('http://semanticscience.org/resource/SIO_000272') , RDF::URI.new('http://semanticscience.org/resource/SIO_000496') => RDF::URI.new('http://semanticscience.org/resource/SIO_000495') , RDF::URI.new('http://semanticscience.org/resource/SIO_000497') => RDF::URI.new('http://semanticscience.org/resource/SIO_000272') , RDF::URI.new('http://semanticscience.org/resource/SIO_000552') => RDF::URI.new('http://semanticscience.org/resource/SIO_000230') , RDF::URI.new('http://semanticscience.org/resource/SIO_000553') => RDF::URI.new('http://semanticscience.org/resource/SIO_000231') , RDF::URI.new('http://semanticscience.org/resource/SIO_000557') => RDF::URI.new('http://semanticscience.org/resource/SIO_000212') , RDF::URI.new('http://semanticscience.org/resource/SIO_000558') => RDF::URI.new('http://semanticscience.org/resource/SIO_010302') , RDF::URI.new('http://semanticscience.org/resource/SIO_000563') => RDF::URI.new('http://semanticscience.org/resource/SIO_000628') , RDF::URI.new('http://semanticscience.org/resource/SIO_000586') => RDF::URI.new('http://semanticscience.org/resource/SIO_000644') , RDF::URI.new('http://semanticscience.org/resource/SIO_000628') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000629') => RDF::URI.new('http://semanticscience.org/resource/SIO_000557') , RDF::URI.new('http://semanticscience.org/resource/SIO_000630') => RDF::URI.new('http://semanticscience.org/resource/SIO_010302') , RDF::URI.new('http://semanticscience.org/resource/SIO_000631') => RDF::URI.new('http://semanticscience.org/resource/SIO_000628') , RDF::URI.new('http://semanticscience.org/resource/SIO_000632') => RDF::URI.new('http://semanticscience.org/resource/SIO_000210') , RDF::URI.new('http://semanticscience.org/resource/SIO_000633') => RDF::URI.new('http://semanticscience.org/resource/SIO_000205') , RDF::URI.new('http://semanticscience.org/resource/SIO_000634') => RDF::URI.new('http://semanticscience.org/resource/SIO_000558') , RDF::URI.new('http://semanticscience.org/resource/SIO_000635') => RDF::URI.new('http://semanticscience.org/resource/SIO_000294') , RDF::URI.new('http://semanticscience.org/resource/SIO_000636') => RDF::URI.new('http://semanticscience.org/resource/SIO_000352') , RDF::URI.new('http://semanticscience.org/resource/SIO_000641') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000642') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000643') => RDF::URI.new('http://semanticscience.org/resource/SIO_000224') , RDF::URI.new('http://semanticscience.org/resource/SIO_000644') => RDF::URI.new('http://semanticscience.org/resource/SIO_000223') , RDF::URI.new('http://semanticscience.org/resource/SIO_000646') => RDF::URI.new('http://semanticscience.org/resource/SIO_000643') , RDF::URI.new('http://semanticscience.org/resource/SIO_000652') => RDF::URI.new('http://semanticscience.org/resource/SIO_000203') , RDF::URI.new('http://semanticscience.org/resource/SIO_000655') => RDF::URI.new('http://semanticscience.org/resource/SIO_000294') , RDF::URI.new('http://semanticscience.org/resource/SIO_000656') => RDF::URI.new('http://semanticscience.org/resource/SIO_000655') , RDF::URI.new('http://semanticscience.org/resource/SIO_000657') => RDF::URI.new('http://semanticscience.org/resource/SIO_000352') , RDF::URI.new('http://semanticscience.org/resource/SIO_000658') => RDF::URI.new('http://semanticscience.org/resource/SIO_000657') , RDF::URI.new('http://semanticscience.org/resource/SIO_000668') => RDF::URI.new('http://semanticscience.org/resource/SIO_000631') , RDF::URI.new('http://semanticscience.org/resource/SIO_000671') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000672') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000673') => RDF::URI.new('http://semanticscience.org/resource/SIO_000671') , RDF::URI.new('http://semanticscience.org/resource/SIO_000674') => RDF::URI.new('http://semanticscience.org/resource/SIO_000672') , RDF::URI.new('http://semanticscience.org/resource/SIO_000679') => RDF::URI.new('http://semanticscience.org/resource/SIO_000054') , RDF::URI.new('http://semanticscience.org/resource/SIO_000680') => RDF::URI.new('http://semanticscience.org/resource/SIO_000679') , RDF::URI.new('http://semanticscience.org/resource/SIO_000681') => RDF::URI.new('http://semanticscience.org/resource/SIO_000679') , RDF::URI.new('http://semanticscience.org/resource/SIO_000682') => RDF::URI.new('http://semanticscience.org/resource/SIO_000029') , RDF::URI.new('http://semanticscience.org/resource/SIO_000684') => RDF::URI.new('http://semanticscience.org/resource/SIO_000029') , RDF::URI.new('http://semanticscience.org/resource/SIO_000687') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000697') => RDF::URI.new('http://semanticscience.org/resource/SIO_000709') , RDF::URI.new('http://semanticscience.org/resource/SIO_000699') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000709') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000710') => RDF::URI.new('http://semanticscience.org/resource/SIO_000709') , RDF::URI.new('http://semanticscience.org/resource/SIO_000733') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000734') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000735') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000736') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000737') => RDF::URI.new('http://semanticscience.org/resource/SIO_000736') , RDF::URI.new('http://semanticscience.org/resource/SIO_000738') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000749') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000772') => RDF::URI.new('http://semanticscience.org/resource/SIO_000631') , RDF::URI.new('http://semanticscience.org/resource/SIO_000773') => RDF::URI.new('http://semanticscience.org/resource/SIO_000252') , RDF::URI.new('http://semanticscience.org/resource/SIO_000774') => RDF::URI.new('http://semanticscience.org/resource/SIO_000772') , RDF::URI.new('http://semanticscience.org/resource/SIO_000775') => RDF::URI.new('http://semanticscience.org/resource/SIO_000773') , RDF::URI.new('http://semanticscience.org/resource/SIO_000793') => RDF::URI.new('http://semanticscience.org/resource/SIO_000687') , RDF::URI.new('http://semanticscience.org/resource/SIO_000892') => RDF::URI.new('http://semanticscience.org/resource/SIO_000252') , RDF::URI.new('http://semanticscience.org/resource/SIO_000900') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000901') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000905') => RDF::URI.new('http://semanticscience.org/resource/SIO_000291') , RDF::URI.new('http://semanticscience.org/resource/SIO_000970') => RDF::URI.new('http://semanticscience.org/resource/SIO_000975') , RDF::URI.new('http://semanticscience.org/resource/SIO_000971') => RDF::URI.new('http://semanticscience.org/resource/SIO_000974') , RDF::URI.new('http://semanticscience.org/resource/SIO_000972') => RDF::URI.new('http://semanticscience.org/resource/SIO_000974') , RDF::URI.new('http://semanticscience.org/resource/SIO_000973') => RDF::URI.new('http://semanticscience.org/resource/SIO_000975') , RDF::URI.new('http://semanticscience.org/resource/SIO_000974') => RDF::URI.new('http://semanticscience.org/resource/SIO_000053') , RDF::URI.new('http://semanticscience.org/resource/SIO_000975') => RDF::URI.new('http://semanticscience.org/resource/SIO_000093') , RDF::URI.new('http://semanticscience.org/resource/SIO_010078') => RDF::URI.new('http://semanticscience.org/resource/SIO_000338') , RDF::URI.new('http://semanticscience.org/resource/SIO_010079') => RDF::URI.new('http://semanticscience.org/resource/SIO_000339') , RDF::URI.new('http://semanticscience.org/resource/SIO_010080') => RDF::URI.new('http://semanticscience.org/resource/SIO_010078') , RDF::URI.new('http://semanticscience.org/resource/SIO_010081') => RDF::URI.new('http://semanticscience.org/resource/SIO_010079') , RDF::URI.new('http://semanticscience.org/resource/SIO_010082') => RDF::URI.new('http://semanticscience.org/resource/SIO_010078') , RDF::URI.new('http://semanticscience.org/resource/SIO_010083') => RDF::URI.new('http://semanticscience.org/resource/SIO_010079') , RDF::URI.new('http://semanticscience.org/resource/SIO_010302') => RDF::URI.new('http://semanticscience.org/resource/SIO_000272') , RDF::URI.new('http://semanticscience.org/resource/SIO_000009') => RDF::URI.new('http://semanticscience.org/resource/SIO_000015') , RDF::URI.new('http://semanticscience.org/resource/SIO_000012') => RDF::URI.new('http://semanticscience.org/resource/SIO_000620') , RDF::URI.new('http://semanticscience.org/resource/SIO_000013') => RDF::URI.new('http://semanticscience.org/resource/SIO_000056') , RDF::URI.new('http://semanticscience.org/resource/SIO_000016') => RDF::URI.new('http://semanticscience.org/resource/SIO_000340') , RDF::URI.new('http://semanticscience.org/resource/SIO_000017') => RDF::URI.new('http://semanticscience.org/resource/SIO_000112') , RDF::URI.new('http://semanticscience.org/resource/SIO_000019') => RDF::URI.new('http://semanticscience.org/resource/SIO_000370') , RDF::URI.new('http://semanticscience.org/resource/SIO_000031') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000032') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000034') => RDF::URI.new('http://semanticscience.org/resource/SIO_000033') , RDF::URI.new('http://semanticscience.org/resource/SIO_000035') => RDF::URI.new('http://semanticscience.org/resource/SIO_000033') , RDF::URI.new('http://semanticscience.org/resource/SIO_000036') => RDF::URI.new('http://semanticscience.org/resource/SIO_000959') , RDF::URI.new('http://semanticscience.org/resource/SIO_000038') => RDF::URI.new('http://semanticscience.org/resource/SIO_000037') , RDF::URI.new('http://semanticscience.org/resource/SIO_000039') => RDF::URI.new('http://semanticscience.org/resource/SIO_000038') , RDF::URI.new('http://semanticscience.org/resource/SIO_000040') => RDF::URI.new('http://semanticscience.org/resource/SIO_000790') , RDF::URI.new('http://semanticscience.org/resource/SIO_000041') => RDF::URI.new('http://semanticscience.org/resource/SIO_000038') , RDF::URI.new('http://semanticscience.org/resource/SIO_000042') => RDF::URI.new('http://semanticscience.org/resource/SIO_000038') , RDF::URI.new('http://semanticscience.org/resource/SIO_000043') => RDF::URI.new('http://semanticscience.org/resource/SIO_000039') , RDF::URI.new('http://semanticscience.org/resource/SIO_000044') => RDF::URI.new('http://semanticscience.org/resource/SIO_000037') , RDF::URI.new('http://semanticscience.org/resource/SIO_000045') => RDF::URI.new('http://semanticscience.org/resource/SIO_000044') , RDF::URI.new('http://semanticscience.org/resource/SIO_000046') => RDF::URI.new('http://semanticscience.org/resource/SIO_000044') , RDF::URI.new('http://semanticscience.org/resource/SIO_000047') => RDF::URI.new('http://semanticscience.org/resource/SIO_000046') , RDF::URI.new('http://semanticscience.org/resource/SIO_000048') => RDF::URI.new('http://semanticscience.org/resource/SIO_000037') , RDF::URI.new('http://semanticscience.org/resource/SIO_000049') => RDF::URI.new('http://semanticscience.org/resource/SIO_000048') , RDF::URI.new('http://semanticscience.org/resource/SIO_000051') => RDF::URI.new('http://semanticscience.org/resource/SIO_000026') , RDF::URI.new('http://semanticscience.org/resource/SIO_000055') => RDF::URI.new('http://semanticscience.org/resource/SIO_000026') , RDF::URI.new('http://semanticscience.org/resource/SIO_000057') => RDF::URI.new('http://semanticscience.org/resource/SIO_000056') , RDF::URI.new('http://semanticscience.org/resource/SIO_000071') => RDF::URI.new('http://semanticscience.org/resource/SIO_000070') , RDF::URI.new('http://semanticscience.org/resource/SIO_000072') => RDF::URI.new('http://semanticscience.org/resource/SIO_000071') , RDF::URI.new('http://semanticscience.org/resource/SIO_000073') => RDF::URI.new('http://semanticscience.org/resource/SIO_000071') , RDF::URI.new('http://semanticscience.org/resource/SIO_000074') => RDF::URI.new('http://semanticscience.org/resource/SIO_000052') , RDF::URI.new('http://semanticscience.org/resource/SIO_000075') => RDF::URI.new('http://semanticscience.org/resource/SIO_000015') , RDF::URI.new('http://semanticscience.org/resource/SIO_000076') => RDF::URI.new('http://semanticscience.org/resource/SIO_000091') , RDF::URI.new('http://semanticscience.org/resource/SIO_000077') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000079') => RDF::URI.new('http://semanticscience.org/resource/SIO_000078') , RDF::URI.new('http://semanticscience.org/resource/SIO_000080') => RDF::URI.new('http://semanticscience.org/resource/SIO_000612') , RDF::URI.new('http://semanticscience.org/resource/SIO_000081') => RDF::URI.new('http://semanticscience.org/resource/SIO_000080') , RDF::URI.new('http://semanticscience.org/resource/SIO_000082') => RDF::URI.new('http://semanticscience.org/resource/SIO_000081') , RDF::URI.new('http://semanticscience.org/resource/SIO_000083') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000085') => RDF::URI.new('http://semanticscience.org/resource/SIO_000113') , RDF::URI.new('http://semanticscience.org/resource/SIO_000087') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000094') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000097') => RDF::URI.new('http://semanticscience.org/resource/SIO_000602') , RDF::URI.new('http://semanticscience.org/resource/SIO_000098') => RDF::URI.new('http://semanticscience.org/resource/SIO_000097') , RDF::URI.new('http://semanticscience.org/resource/SIO_000099') => RDF::URI.new('http://semanticscience.org/resource/SIO_000097') , RDF::URI.new('http://semanticscience.org/resource/SIO_000100') => RDF::URI.new('http://semanticscience.org/resource/SIO_000097') , RDF::URI.new('http://semanticscience.org/resource/SIO_000101') => RDF::URI.new('http://semanticscience.org/resource/SIO_000097') , RDF::URI.new('http://semanticscience.org/resource/SIO_000102') => RDF::URI.new('http://semanticscience.org/resource/SIO_000101') , RDF::URI.new('http://semanticscience.org/resource/SIO_000103') => RDF::URI.new('http://semanticscience.org/resource/SIO_000097') , RDF::URI.new('http://semanticscience.org/resource/SIO_000104') => RDF::URI.new('http://semanticscience.org/resource/SIO_000078') , RDF::URI.new('http://semanticscience.org/resource/SIO_000106') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000107') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000108') => RDF::URI.new('http://semanticscience.org/resource/SIO_000078') , RDF::URI.new('http://semanticscience.org/resource/SIO_000109') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000113') => RDF::URI.new('http://semanticscience.org/resource/SIO_000483') , RDF::URI.new('http://semanticscience.org/resource/SIO_000117') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000118') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000119') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000120') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000121') => RDF::URI.new('http://semanticscience.org/resource/SIO_000162') , RDF::URI.new('http://semanticscience.org/resource/SIO_000122') => RDF::URI.new('http://semanticscience.org/resource/SIO_000342') , RDF::URI.new('http://semanticscience.org/resource/SIO_000123') => RDF::URI.new('http://semanticscience.org/resource/SIO_000342') , RDF::URI.new('http://semanticscience.org/resource/SIO_000124') => RDF::URI.new('http://semanticscience.org/resource/SIO_000342') , RDF::URI.new('http://semanticscience.org/resource/SIO_000125') => RDF::URI.new('http://semanticscience.org/resource/SIO_000342') , RDF::URI.new('http://semanticscience.org/resource/SIO_000127') => RDF::URI.new('http://semanticscience.org/resource/SIO_000094') , RDF::URI.new('http://semanticscience.org/resource/SIO_000129') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000130') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000131') => RDF::URI.new('http://semanticscience.org/resource/SIO_000130') , RDF::URI.new('http://semanticscience.org/resource/SIO_000133') => RDF::URI.new('http://semanticscience.org/resource/SIO_000275') , RDF::URI.new('http://semanticscience.org/resource/SIO_000135') => RDF::URI.new('http://semanticscience.org/resource/SIO_000136') , RDF::URI.new('http://semanticscience.org/resource/SIO_000137') => RDF::URI.new('http://semanticscience.org/resource/SIO_000326') , RDF::URI.new('http://semanticscience.org/resource/SIO_000138') => RDF::URI.new('http://semanticscience.org/resource/SIO_000289') , RDF::URI.new('http://semanticscience.org/resource/SIO_000140') => RDF::URI.new('http://semanticscience.org/resource/SIO_000101') , RDF::URI.new('http://semanticscience.org/resource/SIO_000141') => RDF::URI.new('http://semanticscience.org/resource/SIO_000316') , RDF::URI.new('http://semanticscience.org/resource/SIO_000142') => RDF::URI.new('http://semanticscience.org/resource/SIO_000141') , RDF::URI.new('http://semanticscience.org/resource/SIO_000143') => RDF::URI.new('http://semanticscience.org/resource/SIO_000141') , RDF::URI.new('http://semanticscience.org/resource/SIO_000144') => RDF::URI.new('http://semanticscience.org/resource/SIO_000920') , RDF::URI.new('http://semanticscience.org/resource/SIO_000147') => RDF::URI.new('http://semanticscience.org/resource/SIO_000133') , RDF::URI.new('http://semanticscience.org/resource/SIO_000148') => RDF::URI.new('http://semanticscience.org/resource/SIO_000651') , RDF::URI.new('http://semanticscience.org/resource/SIO_000150') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000151') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000152') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000153') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000154') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000155') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000156') => RDF::URI.new('http://semanticscience.org/resource/SIO_000106') , RDF::URI.new('http://semanticscience.org/resource/SIO_000157') => RDF::URI.new('http://semanticscience.org/resource/SIO_000106') , RDF::URI.new('http://semanticscience.org/resource/SIO_000158') => RDF::URI.new('http://semanticscience.org/resource/SIO_000295') , RDF::URI.new('http://semanticscience.org/resource/SIO_000159') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000160') => RDF::URI.new('http://semanticscience.org/resource/SIO_000162') , RDF::URI.new('http://semanticscience.org/resource/SIO_000161') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000162') => RDF::URI.new('http://semanticscience.org/resource/SIO_000295') , RDF::URI.new('http://semanticscience.org/resource/SIO_000163') => RDF::URI.new('http://semanticscience.org/resource/SIO_000162') , RDF::URI.new('http://semanticscience.org/resource/SIO_000164') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000165') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000166') => RDF::URI.new('http://semanticscience.org/resource/SIO_000165') , RDF::URI.new('http://semanticscience.org/resource/SIO_000167') => RDF::URI.new('http://semanticscience.org/resource/SIO_000165') , RDF::URI.new('http://semanticscience.org/resource/SIO_000168') => RDF::URI.new('http://semanticscience.org/resource/SIO_000165') , RDF::URI.new('http://semanticscience.org/resource/SIO_000169') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000170') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000171') => RDF::URI.new('http://semanticscience.org/resource/SIO_000651') , RDF::URI.new('http://semanticscience.org/resource/SIO_000172') => RDF::URI.new('http://semanticscience.org/resource/SIO_000328') , RDF::URI.new('http://semanticscience.org/resource/SIO_000173') => RDF::URI.new('http://semanticscience.org/resource/SIO_000287') , RDF::URI.new('http://semanticscience.org/resource/SIO_000174') => RDF::URI.new('http://semanticscience.org/resource/SIO_000171') , RDF::URI.new('http://semanticscience.org/resource/SIO_000175') => RDF::URI.new('http://semanticscience.org/resource/SIO_000185') , RDF::URI.new('http://semanticscience.org/resource/SIO_000176') => RDF::URI.new('http://semanticscience.org/resource/SIO_000171') , RDF::URI.new('http://semanticscience.org/resource/SIO_000177') => RDF::URI.new('http://semanticscience.org/resource/SIO_000944') , RDF::URI.new('http://semanticscience.org/resource/SIO_000178') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_000179') => RDF::URI.new('http://semanticscience.org/resource/SIO_000651') , RDF::URI.new('http://semanticscience.org/resource/SIO_000180') => RDF::URI.new('http://semanticscience.org/resource/SIO_000179') , RDF::URI.new('http://semanticscience.org/resource/SIO_000181') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000182') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000183') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000184') => RDF::URI.new('http://semanticscience.org/resource/SIO_000183') , RDF::URI.new('http://semanticscience.org/resource/SIO_000185') => RDF::URI.new('http://semanticscience.org/resource/SIO_000179') , RDF::URI.new('http://semanticscience.org/resource/SIO_000186') => RDF::URI.new('http://semanticscience.org/resource/SIO_000653') , RDF::URI.new('http://semanticscience.org/resource/SIO_000188') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000189') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000190') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000191') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000192') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000193') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000194') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000195') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000196') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000197') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000198') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000199') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000200') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000201') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000220') => RDF::URI.new('http://semanticscience.org/resource/SIO_000238') , RDF::URI.new('http://semanticscience.org/resource/SIO_000237') => RDF::URI.new('http://semanticscience.org/resource/SIO_000179') , RDF::URI.new('http://semanticscience.org/resource/SIO_000238') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000239') => RDF::URI.new('http://semanticscience.org/resource/SIO_000238') , RDF::URI.new('http://semanticscience.org/resource/SIO_000261') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_000262') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_000263') => RDF::URI.new('http://semanticscience.org/resource/SIO_000259') , RDF::URI.new('http://semanticscience.org/resource/SIO_000264') => RDF::URI.new('http://semanticscience.org/resource/SIO_000259') , RDF::URI.new('http://semanticscience.org/resource/SIO_000268') => RDF::URI.new('http://semanticscience.org/resource/SIO_000436') , RDF::URI.new('http://semanticscience.org/resource/SIO_000276') => RDF::URI.new('http://semanticscience.org/resource/SIO_000026') , RDF::URI.new('http://semanticscience.org/resource/SIO_000280') => RDF::URI.new('http://semanticscience.org/resource/SIO_000238') , RDF::URI.new('http://semanticscience.org/resource/SIO_000281') => RDF::URI.new('http://semanticscience.org/resource/SIO_000238') , RDF::URI.new('http://semanticscience.org/resource/SIO_000282') => RDF::URI.new('http://semanticscience.org/resource/SIO_000280') , RDF::URI.new('http://semanticscience.org/resource/SIO_000284') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_000285') => RDF::URI.new('http://semanticscience.org/resource/SIO_000012') , RDF::URI.new('http://semanticscience.org/resource/SIO_000287') => RDF::URI.new('http://semanticscience.org/resource/SIO_000009') , RDF::URI.new('http://semanticscience.org/resource/SIO_000290') => RDF::URI.new('http://semanticscience.org/resource/SIO_000285') , RDF::URI.new('http://semanticscience.org/resource/SIO_000297') => RDF::URI.new('http://semanticscience.org/resource/SIO_000612') , RDF::URI.new('http://semanticscience.org/resource/SIO_000301') => RDF::URI.new('http://semanticscience.org/resource/SIO_000082') , RDF::URI.new('http://semanticscience.org/resource/SIO_000302') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000304') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000305') => RDF::URI.new('http://semanticscience.org/resource/SIO_000613') , RDF::URI.new('http://semanticscience.org/resource/SIO_000306') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000307') => RDF::URI.new('http://semanticscience.org/resource/SIO_000005') , RDF::URI.new('http://semanticscience.org/resource/SIO_000308') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_000309') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_000316') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_000317') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_000318') => RDF::URI.new('http://semanticscience.org/resource/SIO_000013') , RDF::URI.new('http://semanticscience.org/resource/SIO_000319') => RDF::URI.new('http://semanticscience.org/resource/SIO_000013') , RDF::URI.new('http://semanticscience.org/resource/SIO_000320') => RDF::URI.new('http://semanticscience.org/resource/SIO_000317') , RDF::URI.new('http://semanticscience.org/resource/SIO_000321') => RDF::URI.new('http://semanticscience.org/resource/SIO_000320') , RDF::URI.new('http://semanticscience.org/resource/SIO_000326') => RDF::URI.new('http://semanticscience.org/resource/SIO_000275') , RDF::URI.new('http://semanticscience.org/resource/SIO_000327') => RDF::URI.new('http://semanticscience.org/resource/SIO_000320') , RDF::URI.new('http://semanticscience.org/resource/SIO_000329') => RDF::URI.new('http://semanticscience.org/resource/SIO_000320') , RDF::URI.new('http://semanticscience.org/resource/SIO_000330') => RDF::URI.new('http://semanticscience.org/resource/SIO_000320') , RDF::URI.new('http://semanticscience.org/resource/SIO_000331') => RDF::URI.new('http://semanticscience.org/resource/SIO_000129') , RDF::URI.new('http://semanticscience.org/resource/SIO_000343') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000344') => RDF::URI.new('http://semanticscience.org/resource/SIO_000639') , RDF::URI.new('http://semanticscience.org/resource/SIO_000345') => RDF::URI.new('http://semanticscience.org/resource/SIO_000378') , RDF::URI.new('http://semanticscience.org/resource/SIO_000346') => RDF::URI.new('http://semanticscience.org/resource/SIO_000351') , RDF::URI.new('http://semanticscience.org/resource/SIO_000347') => RDF::URI.new('http://semanticscience.org/resource/SIO_000374') , RDF::URI.new('http://semanticscience.org/resource/SIO_000348') => RDF::URI.new('http://semanticscience.org/resource/SIO_000347') , RDF::URI.new('http://semanticscience.org/resource/SIO_000349') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000350') => RDF::URI.new('http://semanticscience.org/resource/SIO_000385') , RDF::URI.new('http://semanticscience.org/resource/SIO_000351') => RDF::URI.new('http://semanticscience.org/resource/SIO_000385') , RDF::URI.new('http://semanticscience.org/resource/SIO_000353') => RDF::URI.new('http://semanticscience.org/resource/SIO_000639') , RDF::URI.new('http://semanticscience.org/resource/SIO_000354') => RDF::URI.new('http://semanticscience.org/resource/SIO_000112') , RDF::URI.new('http://semanticscience.org/resource/SIO_000357') => RDF::URI.new('http://semanticscience.org/resource/SIO_010019') , RDF::URI.new('http://semanticscience.org/resource/SIO_000358') => RDF::URI.new('http://semanticscience.org/resource/SIO_000825') , RDF::URI.new('http://semanticscience.org/resource/SIO_000359') => RDF::URI.new('http://semanticscience.org/resource/SIO_000337') , RDF::URI.new('http://semanticscience.org/resource/SIO_000366') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000367') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000368') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000371') => RDF::URI.new('http://semanticscience.org/resource/SIO_000408') , RDF::URI.new('http://semanticscience.org/resource/SIO_000372') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000373') => RDF::URI.new('http://semanticscience.org/resource/SIO_000346') , RDF::URI.new('http://semanticscience.org/resource/SIO_000374') => RDF::URI.new('http://semanticscience.org/resource/SIO_000385') , RDF::URI.new('http://semanticscience.org/resource/SIO_000375') => RDF::URI.new('http://semanticscience.org/resource/SIO_000351') , RDF::URI.new('http://semanticscience.org/resource/SIO_000376') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000377') => RDF::URI.new('http://semanticscience.org/resource/SIO_000378') , RDF::URI.new('http://semanticscience.org/resource/SIO_000378') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000379') => RDF::URI.new('http://semanticscience.org/resource/SIO_001055') , RDF::URI.new('http://semanticscience.org/resource/SIO_000380') => RDF::URI.new('http://semanticscience.org/resource/SIO_000392') , RDF::URI.new('http://semanticscience.org/resource/SIO_000381') => RDF::URI.new('http://semanticscience.org/resource/SIO_000380') , RDF::URI.new('http://semanticscience.org/resource/SIO_000382') => RDF::URI.new('http://semanticscience.org/resource/SIO_000349') , RDF::URI.new('http://semanticscience.org/resource/SIO_000383') => RDF::URI.new('http://semanticscience.org/resource/SIO_000351') , RDF::URI.new('http://semanticscience.org/resource/SIO_000384') => RDF::URI.new('http://semanticscience.org/resource/SIO_000374') , RDF::URI.new('http://semanticscience.org/resource/SIO_000385') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000386') => RDF::URI.new('http://semanticscience.org/resource/SIO_000385') , RDF::URI.new('http://semanticscience.org/resource/SIO_000387') => RDF::URI.new('http://semanticscience.org/resource/SIO_000385') , RDF::URI.new('http://semanticscience.org/resource/SIO_000388') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000389') => RDF::URI.new('http://semanticscience.org/resource/SIO_000349') , RDF::URI.new('http://semanticscience.org/resource/SIO_000390') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000392') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000393') => RDF::URI.new('http://semanticscience.org/resource/SIO_000498') , RDF::URI.new('http://semanticscience.org/resource/SIO_000395') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000396') => RDF::URI.new('http://semanticscience.org/resource/SIO_000602') , RDF::URI.new('http://semanticscience.org/resource/SIO_000397') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000399') => RDF::URI.new('http://semanticscience.org/resource/SIO_000498') , RDF::URI.new('http://semanticscience.org/resource/SIO_000400') => RDF::URI.new('http://semanticscience.org/resource/SIO_000072') , RDF::URI.new('http://semanticscience.org/resource/SIO_000401') => RDF::URI.new('http://semanticscience.org/resource/SIO_000072') , RDF::URI.new('http://semanticscience.org/resource/SIO_000402') => RDF::URI.new('http://semanticscience.org/resource/SIO_000072') , RDF::URI.new('http://semanticscience.org/resource/SIO_000403') => RDF::URI.new('http://semanticscience.org/resource/SIO_000620') , RDF::URI.new('http://semanticscience.org/resource/SIO_000404') => RDF::URI.new('http://semanticscience.org/resource/SIO_000406') , RDF::URI.new('http://semanticscience.org/resource/SIO_000405') => RDF::URI.new('http://semanticscience.org/resource/SIO_000406') , RDF::URI.new('http://semanticscience.org/resource/SIO_000406') => RDF::URI.new('http://semanticscience.org/resource/SIO_000498') , RDF::URI.new('http://semanticscience.org/resource/SIO_000407') => RDF::URI.new('http://semanticscience.org/resource/SIO_000536') , RDF::URI.new('http://semanticscience.org/resource/SIO_000408') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000409') => RDF::URI.new('http://semanticscience.org/resource/SIO_000014') , RDF::URI.new('http://semanticscience.org/resource/SIO_000410') => RDF::URI.new('http://semanticscience.org/resource/SIO_000828') , RDF::URI.new('http://semanticscience.org/resource/SIO_000411') => RDF::URI.new('http://semanticscience.org/resource/SIO_000828') , RDF::URI.new('http://semanticscience.org/resource/SIO_000412') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000413') => RDF::URI.new('http://semanticscience.org/resource/SIO_000414') , RDF::URI.new('http://semanticscience.org/resource/SIO_000414') => RDF::URI.new('http://semanticscience.org/resource/SIO_000370') , RDF::URI.new('http://semanticscience.org/resource/SIO_000415') => RDF::URI.new('http://semanticscience.org/resource/SIO_000413') , RDF::URI.new('http://semanticscience.org/resource/SIO_000417') => RDF::URI.new('http://semanticscience.org/resource/SIO_000391') , RDF::URI.new('http://semanticscience.org/resource/SIO_000418') => RDF::URI.new('http://semanticscience.org/resource/SIO_000391') , RDF::URI.new('http://semanticscience.org/resource/SIO_000419') => RDF::URI.new('http://semanticscience.org/resource/SIO_000080') , RDF::URI.new('http://semanticscience.org/resource/SIO_000423') => RDF::URI.new('http://semanticscience.org/resource/SIO_000083') , RDF::URI.new('http://semanticscience.org/resource/SIO_000428') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000429') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000430') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000431') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000432') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000433') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000434') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000435') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000438') => RDF::URI.new('http://semanticscience.org/resource/SIO_000790') , RDF::URI.new('http://semanticscience.org/resource/SIO_000439') => RDF::URI.new('http://semanticscience.org/resource/SIO_000056') , RDF::URI.new('http://semanticscience.org/resource/SIO_000442') => RDF::URI.new('http://semanticscience.org/resource/SIO_000083') , RDF::URI.new('http://semanticscience.org/resource/SIO_000443') => RDF::URI.new('http://semanticscience.org/resource/SIO_000083') , RDF::URI.new('http://semanticscience.org/resource/SIO_000444') => RDF::URI.new('http://semanticscience.org/resource/SIO_000443') , RDF::URI.new('http://semanticscience.org/resource/SIO_000445') => RDF::URI.new('http://semanticscience.org/resource/SIO_000443') , RDF::URI.new('http://semanticscience.org/resource/SIO_000446') => RDF::URI.new('http://semanticscience.org/resource/SIO_000443') , RDF::URI.new('http://semanticscience.org/resource/SIO_000447') => RDF::URI.new('http://semanticscience.org/resource/SIO_000083') , RDF::URI.new('http://semanticscience.org/resource/SIO_000449') => RDF::URI.new('http://semanticscience.org/resource/SIO_000448') , RDF::URI.new('http://semanticscience.org/resource/SIO_000452') => RDF::URI.new('http://semanticscience.org/resource/SIO_000451') , RDF::URI.new('http://semanticscience.org/resource/SIO_000453') => RDF::URI.new('http://semanticscience.org/resource/SIO_000451') , RDF::URI.new('http://semanticscience.org/resource/SIO_000454') => RDF::URI.new('http://semanticscience.org/resource/SIO_000451') , RDF::URI.new('http://semanticscience.org/resource/SIO_000455') => RDF::URI.new('http://semanticscience.org/resource/SIO_000450') , RDF::URI.new('http://semanticscience.org/resource/SIO_000456') => RDF::URI.new('http://semanticscience.org/resource/SIO_000455') , RDF::URI.new('http://semanticscience.org/resource/SIO_000457') => RDF::URI.new('http://semanticscience.org/resource/SIO_000455') , RDF::URI.new('http://semanticscience.org/resource/SIO_000458') => RDF::URI.new('http://semanticscience.org/resource/SIO_000450') , RDF::URI.new('http://semanticscience.org/resource/SIO_000459') => RDF::URI.new('http://semanticscience.org/resource/SIO_000458') , RDF::URI.new('http://semanticscience.org/resource/SIO_000460') => RDF::URI.new('http://semanticscience.org/resource/SIO_000458') , RDF::URI.new('http://semanticscience.org/resource/SIO_000461') => RDF::URI.new('http://semanticscience.org/resource/SIO_000458') , RDF::URI.new('http://semanticscience.org/resource/SIO_000462') => RDF::URI.new('http://semanticscience.org/resource/SIO_000461') , RDF::URI.new('http://semanticscience.org/resource/SIO_000463') => RDF::URI.new('http://semanticscience.org/resource/SIO_000461') , RDF::URI.new('http://semanticscience.org/resource/SIO_000464') => RDF::URI.new('http://semanticscience.org/resource/SIO_000150') , RDF::URI.new('http://semanticscience.org/resource/SIO_000466') => RDF::URI.new('http://semanticscience.org/resource/SIO_000742') , RDF::URI.new('http://semanticscience.org/resource/SIO_000467') => RDF::URI.new('http://semanticscience.org/resource/SIO_000743') , RDF::URI.new('http://semanticscience.org/resource/SIO_000468') => RDF::URI.new('http://semanticscience.org/resource/SIO_000448') , RDF::URI.new('http://semanticscience.org/resource/SIO_000470') => RDF::URI.new('http://semanticscience.org/resource/SIO_000185') , RDF::URI.new('http://semanticscience.org/resource/SIO_000471') => RDF::URI.new('http://semanticscience.org/resource/SIO_000185') , RDF::URI.new('http://semanticscience.org/resource/SIO_000472') => RDF::URI.new('http://semanticscience.org/resource/SIO_000069') , RDF::URI.new('http://semanticscience.org/resource/SIO_000475') => RDF::URI.new('http://semanticscience.org/resource/SIO_000026') , RDF::URI.new('http://semanticscience.org/resource/SIO_000478') => RDF::URI.new('http://semanticscience.org/resource/SIO_000479') , RDF::URI.new('http://semanticscience.org/resource/SIO_000479') => RDF::URI.new('http://semanticscience.org/resource/SIO_000721') , RDF::URI.new('http://semanticscience.org/resource/SIO_000480') => RDF::URI.new('http://semanticscience.org/resource/SIO_000478') , RDF::URI.new('http://semanticscience.org/resource/SIO_000481') => RDF::URI.new('http://semanticscience.org/resource/SIO_000478') , RDF::URI.new('http://semanticscience.org/resource/SIO_000485') => RDF::URI.new('http://semanticscience.org/resource/SIO_010375') , RDF::URI.new('http://semanticscience.org/resource/SIO_000486') => RDF::URI.new('http://semanticscience.org/resource/SIO_010375') , RDF::URI.new('http://semanticscience.org/resource/SIO_000487') => RDF::URI.new('http://semanticscience.org/resource/SIO_010375') , RDF::URI.new('http://semanticscience.org/resource/SIO_000488') => RDF::URI.new('http://semanticscience.org/resource/SIO_010375') , RDF::URI.new('http://semanticscience.org/resource/SIO_000489') => RDF::URI.new('http://semanticscience.org/resource/SIO_010376') , RDF::URI.new('http://semanticscience.org/resource/SIO_000492') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000493') => RDF::URI.new('http://semanticscience.org/resource/SIO_000113') , RDF::URI.new('http://semanticscience.org/resource/SIO_000494') => RDF::URI.new('http://semanticscience.org/resource/SIO_000701') , RDF::URI.new('http://semanticscience.org/resource/SIO_000498') => RDF::URI.new('http://semanticscience.org/resource/SIO_000485') , RDF::URI.new('http://semanticscience.org/resource/SIO_000499') => RDF::URI.new('http://semanticscience.org/resource/SIO_000536') , RDF::URI.new('http://semanticscience.org/resource/SIO_000505') => RDF::URI.new('http://semanticscience.org/resource/SIO_000506') , RDF::URI.new('http://semanticscience.org/resource/SIO_000506') => RDF::URI.new('http://semanticscience.org/resource/SIO_000015') , RDF::URI.new('http://semanticscience.org/resource/SIO_000507') => RDF::URI.new('http://semanticscience.org/resource/SIO_000506') , RDF::URI.new('http://semanticscience.org/resource/SIO_000508') => RDF::URI.new('http://semanticscience.org/resource/SIO_000532') , RDF::URI.new('http://semanticscience.org/resource/SIO_000509') => RDF::URI.new('http://semanticscience.org/resource/SIO_000532') , RDF::URI.new('http://semanticscience.org/resource/SIO_000511') => RDF::URI.new('http://semanticscience.org/resource/SIO_000608') , RDF::URI.new('http://semanticscience.org/resource/SIO_000513') => RDF::URI.new('http://semanticscience.org/resource/SIO_000512') , RDF::URI.new('http://semanticscience.org/resource/SIO_000514') => RDF::URI.new('http://semanticscience.org/resource/SIO_000513') , RDF::URI.new('http://semanticscience.org/resource/SIO_000515') => RDF::URI.new('http://semanticscience.org/resource/SIO_000513') , RDF::URI.new('http://semanticscience.org/resource/SIO_000516') => RDF::URI.new('http://semanticscience.org/resource/SIO_000511') , RDF::URI.new('http://semanticscience.org/resource/SIO_000517') => RDF::URI.new('http://semanticscience.org/resource/SIO_000505') , RDF::URI.new('http://semanticscience.org/resource/SIO_000518') => RDF::URI.new('http://semanticscience.org/resource/SIO_000517') , RDF::URI.new('http://semanticscience.org/resource/SIO_000519') => RDF::URI.new('http://semanticscience.org/resource/SIO_000518') , RDF::URI.new('http://semanticscience.org/resource/SIO_000520') => RDF::URI.new('http://semanticscience.org/resource/SIO_000505') , RDF::URI.new('http://semanticscience.org/resource/SIO_000525') => RDF::URI.new('http://semanticscience.org/resource/SIO_000534') , RDF::URI.new('http://semanticscience.org/resource/SIO_000526') => RDF::URI.new('http://semanticscience.org/resource/SIO_000534') , RDF::URI.new('http://semanticscience.org/resource/SIO_000527') => RDF::URI.new('http://semanticscience.org/resource/SIO_000535') , RDF::URI.new('http://semanticscience.org/resource/SIO_000528') => RDF::URI.new('http://semanticscience.org/resource/SIO_000527') , RDF::URI.new('http://semanticscience.org/resource/SIO_000529') => RDF::URI.new('http://semanticscience.org/resource/SIO_000527') , RDF::URI.new('http://semanticscience.org/resource/SIO_000530') => RDF::URI.new('http://semanticscience.org/resource/SIO_000527') , RDF::URI.new('http://semanticscience.org/resource/SIO_000531') => RDF::URI.new('http://semanticscience.org/resource/SIO_000535') , RDF::URI.new('http://semanticscience.org/resource/SIO_000532') => RDF::URI.new('http://semanticscience.org/resource/SIO_000507') , RDF::URI.new('http://semanticscience.org/resource/SIO_000533') => RDF::URI.new('http://semanticscience.org/resource/SIO_000540') , RDF::URI.new('http://semanticscience.org/resource/SIO_000534') => RDF::URI.new('http://semanticscience.org/resource/SIO_000511') , RDF::URI.new('http://semanticscience.org/resource/SIO_000535') => RDF::URI.new('http://semanticscience.org/resource/SIO_000511') , RDF::URI.new('http://semanticscience.org/resource/SIO_000536') => RDF::URI.new('http://semanticscience.org/resource/SIO_000395') , RDF::URI.new('http://semanticscience.org/resource/SIO_000537') => RDF::URI.new('http://semanticscience.org/resource/SIO_000055') , RDF::URI.new('http://semanticscience.org/resource/SIO_000538') => RDF::URI.new('http://semanticscience.org/resource/SIO_000537') , RDF::URI.new('http://semanticscience.org/resource/SIO_000539') => RDF::URI.new('http://semanticscience.org/resource/SIO_000511') , RDF::URI.new('http://semanticscience.org/resource/SIO_000540') => RDF::URI.new('http://semanticscience.org/resource/SIO_000516') , RDF::URI.new('http://semanticscience.org/resource/SIO_000541') => RDF::URI.new('http://semanticscience.org/resource/SIO_000540') , RDF::URI.new('http://semanticscience.org/resource/SIO_000542') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000544') => RDF::URI.new('http://semanticscience.org/resource/SIO_000372') , RDF::URI.new('http://semanticscience.org/resource/SIO_000547') => RDF::URI.new('http://semanticscience.org/resource/SIO_000376') , RDF::URI.new('http://semanticscience.org/resource/SIO_000549') => RDF::URI.new('http://semanticscience.org/resource/SIO_010355') , RDF::URI.new('http://semanticscience.org/resource/SIO_000550') => RDF::URI.new('http://semanticscience.org/resource/SIO_010354') , RDF::URI.new('http://semanticscience.org/resource/SIO_000551') => RDF::URI.new('http://semanticscience.org/resource/SIO_010347') , RDF::URI.new('http://semanticscience.org/resource/SIO_000554') => RDF::URI.new('http://semanticscience.org/resource/SIO_000307') , RDF::URI.new('http://semanticscience.org/resource/SIO_000555') => RDF::URI.new('http://semanticscience.org/resource/SIO_000307') , RDF::URI.new('http://semanticscience.org/resource/SIO_000556') => RDF::URI.new('http://semanticscience.org/resource/SIO_010071') , RDF::URI.new('http://semanticscience.org/resource/SIO_000561') => RDF::URI.new('http://semanticscience.org/resource/SIO_011121') , RDF::URI.new('http://semanticscience.org/resource/SIO_000562') => RDF::URI.new('http://semanticscience.org/resource/SIO_000576') , RDF::URI.new('http://semanticscience.org/resource/SIO_000564') => RDF::URI.new('http://semanticscience.org/resource/SIO_000573') , RDF::URI.new('http://semanticscience.org/resource/SIO_000566') => RDF::URI.new('http://semanticscience.org/resource/SIO_000368') , RDF::URI.new('http://semanticscience.org/resource/SIO_000567') => RDF::URI.new('http://semanticscience.org/resource/SIO_000569') , RDF::URI.new('http://semanticscience.org/resource/SIO_000568') => RDF::URI.new('http://semanticscience.org/resource/SIO_000569') , RDF::URI.new('http://semanticscience.org/resource/SIO_000569') => RDF::URI.new('http://semanticscience.org/resource/SIO_000368') , RDF::URI.new('http://semanticscience.org/resource/SIO_000570') => RDF::URI.new('http://semanticscience.org/resource/SIO_000006') , RDF::URI.new('http://semanticscience.org/resource/SIO_000571') => RDF::URI.new('http://semanticscience.org/resource/SIO_000564') , RDF::URI.new('http://semanticscience.org/resource/SIO_000572') => RDF::URI.new('http://semanticscience.org/resource/SIO_000564') , RDF::URI.new('http://semanticscience.org/resource/SIO_000573') => RDF::URI.new('http://semanticscience.org/resource/SIO_000570') , RDF::URI.new('http://semanticscience.org/resource/SIO_000574') => RDF::URI.new('http://semanticscience.org/resource/SIO_000570') , RDF::URI.new('http://semanticscience.org/resource/SIO_000576') => RDF::URI.new('http://semanticscience.org/resource/SIO_010283') , RDF::URI.new('http://semanticscience.org/resource/SIO_000577') => RDF::URI.new('http://semanticscience.org/resource/SIO_010284') , RDF::URI.new('http://semanticscience.org/resource/SIO_000578') => RDF::URI.new('http://semanticscience.org/resource/SIO_010284') , RDF::URI.new('http://semanticscience.org/resource/SIO_000579') => RDF::URI.new('http://semanticscience.org/resource/SIO_000578') , RDF::URI.new('http://semanticscience.org/resource/SIO_000580') => RDF::URI.new('http://semanticscience.org/resource/SIO_000578') , RDF::URI.new('http://semanticscience.org/resource/SIO_000581') => RDF::URI.new('http://semanticscience.org/resource/SIO_000574') , RDF::URI.new('http://semanticscience.org/resource/SIO_000585') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_000587') => RDF::URI.new('http://semanticscience.org/resource/SIO_000588') , RDF::URI.new('http://semanticscience.org/resource/SIO_000589') => RDF::URI.new('http://semanticscience.org/resource/SIO_000593') , RDF::URI.new('http://semanticscience.org/resource/SIO_000590') => RDF::URI.new('http://semanticscience.org/resource/SIO_000559') , RDF::URI.new('http://semanticscience.org/resource/SIO_000596') => RDF::URI.new('http://semanticscience.org/resource/SIO_000956') , RDF::URI.new('http://semanticscience.org/resource/SIO_000597') => RDF::URI.new('http://semanticscience.org/resource/SIO_000598') , RDF::URI.new('http://semanticscience.org/resource/SIO_000598') => RDF::URI.new('http://semanticscience.org/resource/SIO_000596') , RDF::URI.new('http://semanticscience.org/resource/SIO_000600') => RDF::URI.new('http://semanticscience.org/resource/SIO_000026') , RDF::URI.new('http://semanticscience.org/resource/SIO_000602') => RDF::URI.new('http://semanticscience.org/resource/SIO_000015') , RDF::URI.new('http://semanticscience.org/resource/SIO_000605') => RDF::URI.new('http://semanticscience.org/resource/SIO_000650') , RDF::URI.new('http://semanticscience.org/resource/SIO_000608') => RDF::URI.new('http://semanticscience.org/resource/SIO_000506') , RDF::URI.new('http://semanticscience.org/resource/SIO_000609') => RDF::URI.new('http://semanticscience.org/resource/SIO_000589') , RDF::URI.new('http://semanticscience.org/resource/SIO_000610') => RDF::URI.new('http://semanticscience.org/resource/SIO_000589') , RDF::URI.new('http://semanticscience.org/resource/SIO_000611') => RDF::URI.new('http://semanticscience.org/resource/SIO_000610') , RDF::URI.new('http://semanticscience.org/resource/SIO_000613') => RDF::URI.new('http://semanticscience.org/resource/SIO_000788') , RDF::URI.new('http://semanticscience.org/resource/SIO_000619') => RDF::URI.new('http://semanticscience.org/resource/SIO_000012') , RDF::URI.new('http://semanticscience.org/resource/SIO_000620') => RDF::URI.new('http://semanticscience.org/resource/SIO_000010') , RDF::URI.new('http://semanticscience.org/resource/SIO_000621') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_000622') => RDF::URI.new('http://semanticscience.org/resource/SIO_000129') , RDF::URI.new('http://semanticscience.org/resource/SIO_000623') => RDF::URI.new('http://semanticscience.org/resource/SIO_000129') , RDF::URI.new('http://semanticscience.org/resource/SIO_000624') => RDF::URI.new('http://semanticscience.org/resource/SIO_010441') , RDF::URI.new('http://semanticscience.org/resource/SIO_000625') => RDF::URI.new('http://semanticscience.org/resource/SIO_000600') , RDF::URI.new('http://semanticscience.org/resource/SIO_000626') => RDF::URI.new('http://semanticscience.org/resource/SIO_000625') , RDF::URI.new('http://semanticscience.org/resource/SIO_000627') => RDF::URI.new('http://semanticscience.org/resource/SIO_000626') , RDF::URI.new('http://semanticscience.org/resource/SIO_000638') => RDF::URI.new('http://semanticscience.org/resource/SIO_000257') , RDF::URI.new('http://semanticscience.org/resource/SIO_000639') => RDF::URI.new('http://semanticscience.org/resource/SIO_000701') , RDF::URI.new('http://semanticscience.org/resource/SIO_000640') => RDF::URI.new('http://semanticscience.org/resource/SIO_000555') , RDF::URI.new('http://semanticscience.org/resource/SIO_000648') => RDF::URI.new('http://semanticscience.org/resource/SIO_000510') , RDF::URI.new('http://semanticscience.org/resource/SIO_000649') => RDF::URI.new('http://semanticscience.org/resource/SIO_000999') , RDF::URI.new('http://semanticscience.org/resource/SIO_000650') => RDF::URI.new('http://semanticscience.org/resource/SIO_000004') , RDF::URI.new('http://semanticscience.org/resource/SIO_000651') => RDF::URI.new('http://semanticscience.org/resource/SIO_000079') , RDF::URI.new('http://semanticscience.org/resource/SIO_000660') => RDF::URI.new('http://semanticscience.org/resource/SIO_000019') , RDF::URI.new('http://semanticscience.org/resource/SIO_000661') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000662') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000663') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000664') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000665') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000666') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000667') => RDF::URI.new('http://semanticscience.org/resource/SIO_000649') , RDF::URI.new('http://semanticscience.org/resource/SIO_000669') => RDF::URI.new('http://semanticscience.org/resource/SIO_000418') , RDF::URI.new('http://semanticscience.org/resource/SIO_000670') => RDF::URI.new('http://semanticscience.org/resource/SIO_000418') , RDF::URI.new('http://semanticscience.org/resource/SIO_000676') => RDF::URI.new('http://semanticscience.org/resource/SIO_000016') , RDF::URI.new('http://semanticscience.org/resource/SIO_000677') => RDF::URI.new('http://semanticscience.org/resource/SIO_000016') , RDF::URI.new('http://semanticscience.org/resource/SIO_000678') => RDF::URI.new('http://semanticscience.org/resource/SIO_000016') , RDF::URI.new('http://semanticscience.org/resource/SIO_000683') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_000686') => RDF::URI.new('http://semanticscience.org/resource/SIO_000285') , RDF::URI.new('http://semanticscience.org/resource/SIO_000688') => RDF::URI.new('http://semanticscience.org/resource/SIO_000285') , RDF::URI.new('http://semanticscience.org/resource/SIO_000689') => RDF::URI.new('http://semanticscience.org/resource/SIO_000692') , RDF::URI.new('http://semanticscience.org/resource/SIO_000690') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000691') => RDF::URI.new('http://semanticscience.org/resource/SIO_000690') , RDF::URI.new('http://semanticscience.org/resource/SIO_000693') => RDF::URI.new('http://semanticscience.org/resource/SIO_000012') , RDF::URI.new('http://semanticscience.org/resource/SIO_000698') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000700') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000704') => RDF::URI.new('http://semanticscience.org/resource/SIO_000678') , RDF::URI.new('http://semanticscience.org/resource/SIO_000705') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_000706') => RDF::URI.new('http://semanticscience.org/resource/SIO_000676') , RDF::URI.new('http://semanticscience.org/resource/SIO_000711') => RDF::URI.new('http://semanticscience.org/resource/SIO_000706') , RDF::URI.new('http://semanticscience.org/resource/SIO_000712') => RDF::URI.new('http://semanticscience.org/resource/SIO_000706') , RDF::URI.new('http://semanticscience.org/resource/SIO_000713') => RDF::URI.new('http://semanticscience.org/resource/SIO_000712') , RDF::URI.new('http://semanticscience.org/resource/SIO_000714') => RDF::URI.new('http://semanticscience.org/resource/SIO_000712') , RDF::URI.new('http://semanticscience.org/resource/SIO_000715') => RDF::URI.new('http://semanticscience.org/resource/SIO_000712') , RDF::URI.new('http://semanticscience.org/resource/SIO_000716') => RDF::URI.new('http://semanticscience.org/resource/SIO_000498') , RDF::URI.new('http://semanticscience.org/resource/SIO_000717') => RDF::URI.new('http://semanticscience.org/resource/SIO_000712') , RDF::URI.new('http://semanticscience.org/resource/SIO_000721') => RDF::URI.new('http://semanticscience.org/resource/SIO_000678') , RDF::URI.new('http://semanticscience.org/resource/SIO_000722') => RDF::URI.new('http://semanticscience.org/resource/SIO_000725') , RDF::URI.new('http://semanticscience.org/resource/SIO_000723') => RDF::URI.new('http://semanticscience.org/resource/SIO_000724') , RDF::URI.new('http://semanticscience.org/resource/SIO_000724') => RDF::URI.new('http://semanticscience.org/resource/SIO_000353') , RDF::URI.new('http://semanticscience.org/resource/SIO_000725') => RDF::URI.new('http://semanticscience.org/resource/SIO_000696') , RDF::URI.new('http://semanticscience.org/resource/SIO_000726') => RDF::URI.new('http://semanticscience.org/resource/SIO_000706') , RDF::URI.new('http://semanticscience.org/resource/SIO_000727') => RDF::URI.new('http://semanticscience.org/resource/SIO_000726') , RDF::URI.new('http://semanticscience.org/resource/SIO_000728') => RDF::URI.new('http://semanticscience.org/resource/SIO_000730') , RDF::URI.new('http://semanticscience.org/resource/SIO_000730') => RDF::URI.new('http://semanticscience.org/resource/SIO_000115') , RDF::URI.new('http://semanticscience.org/resource/SIO_000731') => RDF::URI.new('http://semanticscience.org/resource/SIO_000115') , RDF::URI.new('http://semanticscience.org/resource/SIO_000732') => RDF::URI.new('http://semanticscience.org/resource/SIO_000728') , RDF::URI.new('http://semanticscience.org/resource/SIO_000740') => RDF::URI.new('http://semanticscience.org/resource/SIO_000608') , RDF::URI.new('http://semanticscience.org/resource/SIO_000741') => RDF::URI.new('http://semanticscience.org/resource/SIO_000465') , RDF::URI.new('http://semanticscience.org/resource/SIO_000742') => RDF::URI.new('http://semanticscience.org/resource/SIO_000741') , RDF::URI.new('http://semanticscience.org/resource/SIO_000743') => RDF::URI.new('http://semanticscience.org/resource/SIO_000741') , RDF::URI.new('http://semanticscience.org/resource/SIO_000750') => RDF::URI.new('http://semanticscience.org/resource/SIO_000602') , RDF::URI.new('http://semanticscience.org/resource/SIO_000751') => RDF::URI.new('http://semanticscience.org/resource/SIO_000555') , RDF::URI.new('http://semanticscience.org/resource/SIO_000760') => RDF::URI.new('http://semanticscience.org/resource/SIO_000755') , RDF::URI.new('http://semanticscience.org/resource/SIO_000766') => RDF::URI.new('http://semanticscience.org/resource/SIO_000328') , RDF::URI.new('http://semanticscience.org/resource/SIO_000767') => RDF::URI.new('http://semanticscience.org/resource/SIO_000013') , RDF::URI.new('http://semanticscience.org/resource/SIO_000768') => RDF::URI.new('http://semanticscience.org/resource/SIO_000179') , RDF::URI.new('http://semanticscience.org/resource/SIO_000769') => RDF::URI.new('http://semanticscience.org/resource/SIO_000052') , RDF::URI.new('http://semanticscience.org/resource/SIO_000770') => RDF::URI.new('http://semanticscience.org/resource/SIO_000052') , RDF::URI.new('http://semanticscience.org/resource/SIO_000771') => RDF::URI.new('http://semanticscience.org/resource/SIO_000088') , RDF::URI.new('http://semanticscience.org/resource/SIO_000777') => RDF::URI.new('http://semanticscience.org/resource/SIO_000692') , RDF::URI.new('http://semanticscience.org/resource/SIO_000778') => RDF::URI.new('http://semanticscience.org/resource/SIO_000378') , RDF::URI.new('http://semanticscience.org/resource/SIO_000780') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000783') => RDF::URI.new('http://semanticscience.org/resource/SIO_000370') , RDF::URI.new('http://semanticscience.org/resource/SIO_000784') => RDF::URI.new('http://semanticscience.org/resource/SIO_010029') , RDF::URI.new('http://semanticscience.org/resource/SIO_000785') => RDF::URI.new('http://semanticscience.org/resource/SIO_000136') , RDF::URI.new('http://semanticscience.org/resource/SIO_000786') => RDF::URI.new('http://semanticscience.org/resource/SIO_000078') , RDF::URI.new('http://semanticscience.org/resource/SIO_000787') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_000788') => RDF::URI.new('http://semanticscience.org/resource/SIO_000056') , RDF::URI.new('http://semanticscience.org/resource/SIO_000789') => RDF::URI.new('http://semanticscience.org/resource/SIO_000788') , RDF::URI.new('http://semanticscience.org/resource/SIO_000790') => RDF::URI.new('http://semanticscience.org/resource/SIO_000038') , RDF::URI.new('http://semanticscience.org/resource/SIO_000791') => RDF::URI.new('http://semanticscience.org/resource/SIO_000943') , RDF::URI.new('http://semanticscience.org/resource/SIO_000792') => RDF::URI.new('http://semanticscience.org/resource/SIO_000953') , RDF::URI.new('http://semanticscience.org/resource/SIO_000794') => RDF::URI.new('http://semanticscience.org/resource/SIO_000257') , RDF::URI.new('http://semanticscience.org/resource/SIO_000796') => RDF::URI.new('http://semanticscience.org/resource/SIO_000880') , RDF::URI.new('http://semanticscience.org/resource/SIO_000797') => RDF::URI.new('http://semanticscience.org/resource/SIO_000879') , RDF::URI.new('http://semanticscience.org/resource/SIO_000799') => RDF::URI.new('http://semanticscience.org/resource/SIO_000889') , RDF::URI.new('http://semanticscience.org/resource/SIO_000800') => RDF::URI.new('http://semanticscience.org/resource/SIO_000799') , RDF::URI.new('http://semanticscience.org/resource/SIO_000801') => RDF::URI.new('http://semanticscience.org/resource/SIO_000800') , RDF::URI.new('http://semanticscience.org/resource/SIO_000802') => RDF::URI.new('http://semanticscience.org/resource/SIO_000800') , RDF::URI.new('http://semanticscience.org/resource/SIO_000803') => RDF::URI.new('http://semanticscience.org/resource/SIO_000880') , RDF::URI.new('http://semanticscience.org/resource/SIO_000804') => RDF::URI.new('http://semanticscience.org/resource/SIO_000880') , RDF::URI.new('http://semanticscience.org/resource/SIO_000805') => RDF::URI.new('http://semanticscience.org/resource/SIO_010442') , RDF::URI.new('http://semanticscience.org/resource/SIO_000806') => RDF::URI.new('http://semanticscience.org/resource/SIO_010442') , RDF::URI.new('http://semanticscience.org/resource/SIO_000807') => RDF::URI.new('http://semanticscience.org/resource/SIO_000809') , RDF::URI.new('http://semanticscience.org/resource/SIO_000808') => RDF::URI.new('http://semanticscience.org/resource/SIO_000809') , RDF::URI.new('http://semanticscience.org/resource/SIO_000809') => RDF::URI.new('http://semanticscience.org/resource/SIO_000805') , RDF::URI.new('http://semanticscience.org/resource/SIO_000810') => RDF::URI.new('http://semanticscience.org/resource/SIO_000805') , RDF::URI.new('http://semanticscience.org/resource/SIO_000812') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000813') => RDF::URI.new('http://semanticscience.org/resource/SIO_000815') , RDF::URI.new('http://semanticscience.org/resource/SIO_000814') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000815') => RDF::URI.new('http://semanticscience.org/resource/SIO_000949') , RDF::URI.new('http://semanticscience.org/resource/SIO_000816') => RDF::URI.new('http://semanticscience.org/resource/SIO_000847') , RDF::URI.new('http://semanticscience.org/resource/SIO_000817') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000818') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000819') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000820') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000821') => RDF::URI.new('http://semanticscience.org/resource/SIO_000828') , RDF::URI.new('http://semanticscience.org/resource/SIO_000822') => RDF::URI.new('http://semanticscience.org/resource/SIO_000840') , RDF::URI.new('http://semanticscience.org/resource/SIO_000823') => RDF::URI.new('http://semanticscience.org/resource/SIO_000825') , RDF::URI.new('http://semanticscience.org/resource/SIO_000824') => RDF::URI.new('http://semanticscience.org/resource/SIO_000863') , RDF::URI.new('http://semanticscience.org/resource/SIO_000825') => RDF::URI.new('http://semanticscience.org/resource/SIO_000848') , RDF::URI.new('http://semanticscience.org/resource/SIO_000826') => RDF::URI.new('http://semanticscience.org/resource/SIO_000863') , RDF::URI.new('http://semanticscience.org/resource/SIO_000827') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000828') => RDF::URI.new('http://semanticscience.org/resource/SIO_000844') , RDF::URI.new('http://semanticscience.org/resource/SIO_000829') => RDF::URI.new('http://semanticscience.org/resource/SIO_000837') , RDF::URI.new('http://semanticscience.org/resource/SIO_000830') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000831') => RDF::URI.new('http://semanticscience.org/resource/SIO_000276') , RDF::URI.new('http://semanticscience.org/resource/SIO_000832') => RDF::URI.new('http://semanticscience.org/resource/SIO_000276') , RDF::URI.new('http://semanticscience.org/resource/SIO_000833') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000834') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000835') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000836') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000837') => RDF::URI.new('http://semanticscience.org/resource/SIO_000949') , RDF::URI.new('http://semanticscience.org/resource/SIO_000838') => RDF::URI.new('http://semanticscience.org/resource/SIO_000814') , RDF::URI.new('http://semanticscience.org/resource/SIO_000839') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000840') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000841') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000842') => RDF::URI.new('http://semanticscience.org/resource/SIO_000863') , RDF::URI.new('http://semanticscience.org/resource/SIO_000843') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000844') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000845') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000846') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000847') => RDF::URI.new('http://semanticscience.org/resource/SIO_000276') , RDF::URI.new('http://semanticscience.org/resource/SIO_000848') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000849') => RDF::URI.new('http://semanticscience.org/resource/SIO_000834') , RDF::URI.new('http://semanticscience.org/resource/SIO_000850') => RDF::URI.new('http://semanticscience.org/resource/SIO_000840') , RDF::URI.new('http://semanticscience.org/resource/SIO_000851') => RDF::URI.new('http://semanticscience.org/resource/SIO_000828') , RDF::URI.new('http://semanticscience.org/resource/SIO_000852') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000853') => RDF::URI.new('http://semanticscience.org/resource/SIO_000825') , RDF::URI.new('http://semanticscience.org/resource/SIO_000854') => RDF::URI.new('http://semanticscience.org/resource/SIO_000863') , RDF::URI.new('http://semanticscience.org/resource/SIO_000855') => RDF::URI.new('http://semanticscience.org/resource/SIO_000837') , RDF::URI.new('http://semanticscience.org/resource/SIO_000856') => RDF::URI.new('http://semanticscience.org/resource/SIO_000825') , RDF::URI.new('http://semanticscience.org/resource/SIO_000857') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000858') => RDF::URI.new('http://semanticscience.org/resource/SIO_000840') , RDF::URI.new('http://semanticscience.org/resource/SIO_000859') => RDF::URI.new('http://semanticscience.org/resource/SIO_000864') , RDF::URI.new('http://semanticscience.org/resource/SIO_000860') => RDF::URI.new('http://semanticscience.org/resource/SIO_000410') , RDF::URI.new('http://semanticscience.org/resource/SIO_000861') => RDF::URI.new('http://semanticscience.org/resource/SIO_000873') , RDF::URI.new('http://semanticscience.org/resource/SIO_000862') => RDF::URI.new('http://semanticscience.org/resource/SIO_000873') , RDF::URI.new('http://semanticscience.org/resource/SIO_000863') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000864') => RDF::URI.new('http://semanticscience.org/resource/SIO_000822') , RDF::URI.new('http://semanticscience.org/resource/SIO_000865') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000866') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000867') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000868') => RDF::URI.new('http://semanticscience.org/resource/SIO_000863') , RDF::URI.new('http://semanticscience.org/resource/SIO_000869') => RDF::URI.new('http://semanticscience.org/resource/SIO_000845') , RDF::URI.new('http://semanticscience.org/resource/SIO_000870') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000871') => RDF::URI.new('http://semanticscience.org/resource/SIO_000829') , RDF::URI.new('http://semanticscience.org/resource/SIO_000872') => RDF::URI.new('http://semanticscience.org/resource/SIO_000870') , RDF::URI.new('http://semanticscience.org/resource/SIO_000873') => RDF::URI.new('http://semanticscience.org/resource/SIO_000949') , RDF::URI.new('http://semanticscience.org/resource/SIO_000875') => RDF::URI.new('http://semanticscience.org/resource/SIO_000711') , RDF::URI.new('http://semanticscience.org/resource/SIO_000876') => RDF::URI.new('http://semanticscience.org/resource/SIO_000711') , RDF::URI.new('http://semanticscience.org/resource/SIO_000877') => RDF::URI.new('http://semanticscience.org/resource/SIO_000876') , RDF::URI.new('http://semanticscience.org/resource/SIO_000878') => RDF::URI.new('http://semanticscience.org/resource/SIO_000876') , RDF::URI.new('http://semanticscience.org/resource/SIO_000879') => RDF::URI.new('http://semanticscience.org/resource/SIO_000889') , RDF::URI.new('http://semanticscience.org/resource/SIO_000880') => RDF::URI.new('http://semanticscience.org/resource/SIO_000889') , RDF::URI.new('http://semanticscience.org/resource/SIO_000881') => RDF::URI.new('http://semanticscience.org/resource/SIO_000677') , RDF::URI.new('http://semanticscience.org/resource/SIO_000882') => RDF::URI.new('http://semanticscience.org/resource/SIO_000888') , RDF::URI.new('http://semanticscience.org/resource/SIO_000883') => RDF::URI.new('http://semanticscience.org/resource/SIO_000881') , RDF::URI.new('http://semanticscience.org/resource/SIO_000884') => RDF::URI.new('http://semanticscience.org/resource/SIO_000706') , RDF::URI.new('http://semanticscience.org/resource/SIO_000885') => RDF::URI.new('http://semanticscience.org/resource/SIO_000884') , RDF::URI.new('http://semanticscience.org/resource/SIO_000886') => RDF::URI.new('http://semanticscience.org/resource/SIO_000884') , RDF::URI.new('http://semanticscience.org/resource/SIO_000890') => RDF::URI.new('http://semanticscience.org/resource/SIO_000891') , RDF::URI.new('http://semanticscience.org/resource/SIO_000891') => RDF::URI.new('http://semanticscience.org/resource/SIO_000888') , RDF::URI.new('http://semanticscience.org/resource/SIO_000894') => RDF::URI.new('http://semanticscience.org/resource/SIO_000692') , RDF::URI.new('http://semanticscience.org/resource/SIO_000895') => RDF::URI.new('http://semanticscience.org/resource/SIO_000894') , RDF::URI.new('http://semanticscience.org/resource/SIO_000896') => RDF::URI.new('http://semanticscience.org/resource/SIO_000879') , RDF::URI.new('http://semanticscience.org/resource/SIO_000898') => RDF::URI.new('http://semanticscience.org/resource/SIO_000897') , RDF::URI.new('http://semanticscience.org/resource/SIO_000899') => RDF::URI.new('http://semanticscience.org/resource/SIO_010506') , RDF::URI.new('http://semanticscience.org/resource/SIO_000902') => RDF::URI.new('http://semanticscience.org/resource/SIO_000458') , RDF::URI.new('http://semanticscience.org/resource/SIO_000903') => RDF::URI.new('http://semanticscience.org/resource/SIO_000458') , RDF::URI.new('http://semanticscience.org/resource/SIO_000904') => RDF::URI.new('http://semanticscience.org/resource/SIO_000080') , RDF::URI.new('http://semanticscience.org/resource/SIO_000906') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000907') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000908') => RDF::URI.new('http://semanticscience.org/resource/SIO_000934') , RDF::URI.new('http://semanticscience.org/resource/SIO_000909') => RDF::URI.new('http://semanticscience.org/resource/SIO_000447') , RDF::URI.new('http://semanticscience.org/resource/SIO_000910') => RDF::URI.new('http://semanticscience.org/resource/SIO_000907') , RDF::URI.new('http://semanticscience.org/resource/SIO_000911') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000912') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_000913') => RDF::URI.new('http://semanticscience.org/resource/SIO_000912') , RDF::URI.new('http://semanticscience.org/resource/SIO_000914') => RDF::URI.new('http://semanticscience.org/resource/SIO_000912') , RDF::URI.new('http://semanticscience.org/resource/SIO_000920') => RDF::URI.new('http://semanticscience.org/resource/SIO_000367') , RDF::URI.new('http://semanticscience.org/resource/SIO_000921') => RDF::URI.new('http://semanticscience.org/resource/SIO_000367') , RDF::URI.new('http://semanticscience.org/resource/SIO_000922') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000923') => RDF::URI.new('http://semanticscience.org/resource/SIO_000898') , RDF::URI.new('http://semanticscience.org/resource/SIO_000924') => RDF::URI.new('http://semanticscience.org/resource/SIO_000612') , RDF::URI.new('http://semanticscience.org/resource/SIO_000926') => RDF::URI.new('http://semanticscience.org/resource/SIO_000957') , RDF::URI.new('http://semanticscience.org/resource/SIO_000927') => RDF::URI.new('http://semanticscience.org/resource/SIO_000957') , RDF::URI.new('http://semanticscience.org/resource/SIO_000928') => RDF::URI.new('http://semanticscience.org/resource/SIO_000956') , RDF::URI.new('http://semanticscience.org/resource/SIO_000929') => RDF::URI.new('http://semanticscience.org/resource/SIO_000940') , RDF::URI.new('http://semanticscience.org/resource/SIO_000930') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000931') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000932') => RDF::URI.new('http://semanticscience.org/resource/SIO_000911') , RDF::URI.new('http://semanticscience.org/resource/SIO_000933') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000934') => RDF::URI.new('http://semanticscience.org/resource/SIO_000083') , RDF::URI.new('http://semanticscience.org/resource/SIO_000935') => RDF::URI.new('http://semanticscience.org/resource/SIO_000940') , RDF::URI.new('http://semanticscience.org/resource/SIO_000936') => RDF::URI.new('http://semanticscience.org/resource/SIO_000937') , RDF::URI.new('http://semanticscience.org/resource/SIO_000937') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000938') => RDF::URI.new('http://semanticscience.org/resource/SIO_000937') , RDF::URI.new('http://semanticscience.org/resource/SIO_000939') => RDF::URI.new('http://semanticscience.org/resource/SIO_000937') , RDF::URI.new('http://semanticscience.org/resource/SIO_000940') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000941') => RDF::URI.new('http://semanticscience.org/resource/SIO_000969') , RDF::URI.new('http://semanticscience.org/resource/SIO_000942') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_000943') => RDF::URI.new('http://semanticscience.org/resource/SIO_000788') , RDF::URI.new('http://semanticscience.org/resource/SIO_000944') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000945') => RDF::URI.new('http://semanticscience.org/resource/SIO_000931') , RDF::URI.new('http://semanticscience.org/resource/SIO_000946') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000947') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000948') => RDF::URI.new('http://semanticscience.org/resource/SIO_000945') , RDF::URI.new('http://semanticscience.org/resource/SIO_000949') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000950') => RDF::URI.new('http://semanticscience.org/resource/SIO_000828') , RDF::URI.new('http://semanticscience.org/resource/SIO_000951') => RDF::URI.new('http://semanticscience.org/resource/SIO_000845') , RDF::URI.new('http://semanticscience.org/resource/SIO_000952') => RDF::URI.new('http://semanticscience.org/resource/SIO_000144') , RDF::URI.new('http://semanticscience.org/resource/SIO_000953') => RDF::URI.new('http://semanticscience.org/resource/SIO_000788') , RDF::URI.new('http://semanticscience.org/resource/SIO_000954') => RDF::URI.new('http://semanticscience.org/resource/SIO_010058') , RDF::URI.new('http://semanticscience.org/resource/SIO_000955') => RDF::URI.new('http://semanticscience.org/resource/SIO_000414') , RDF::URI.new('http://semanticscience.org/resource/SIO_000956') => RDF::URI.new('http://semanticscience.org/resource/SIO_010462') , RDF::URI.new('http://semanticscience.org/resource/SIO_000957') => RDF::URI.new('http://semanticscience.org/resource/SIO_000956') , RDF::URI.new('http://semanticscience.org/resource/SIO_000959') => RDF::URI.new('http://semanticscience.org/resource/SIO_000005') , RDF::URI.new('http://semanticscience.org/resource/SIO_000960') => RDF::URI.new('http://semanticscience.org/resource/SIO_000959') , RDF::URI.new('http://semanticscience.org/resource/SIO_000961') => RDF::URI.new('http://semanticscience.org/resource/SIO_000959') , RDF::URI.new('http://semanticscience.org/resource/SIO_000962') => RDF::URI.new('http://semanticscience.org/resource/SIO_000959') , RDF::URI.new('http://semanticscience.org/resource/SIO_000963') => RDF::URI.new('http://semanticscience.org/resource/SIO_000033') , RDF::URI.new('http://semanticscience.org/resource/SIO_000964') => RDF::URI.new('http://semanticscience.org/resource/SIO_001043') , RDF::URI.new('http://semanticscience.org/resource/SIO_000965') => RDF::URI.new('http://semanticscience.org/resource/SIO_000436') , RDF::URI.new('http://semanticscience.org/resource/SIO_000966') => RDF::URI.new('http://semanticscience.org/resource/SIO_000965') , RDF::URI.new('http://semanticscience.org/resource/SIO_000967') => RDF::URI.new('http://semanticscience.org/resource/SIO_000965') , RDF::URI.new('http://semanticscience.org/resource/SIO_000969') => RDF::URI.new('http://semanticscience.org/resource/SIO_000593') , RDF::URI.new('http://semanticscience.org/resource/SIO_000977') => RDF::URI.new('http://semanticscience.org/resource/SIO_000786') , RDF::URI.new('http://semanticscience.org/resource/SIO_000978') => RDF::URI.new('http://semanticscience.org/resource/SIO_000786') , RDF::URI.new('http://semanticscience.org/resource/SIO_000979') => RDF::URI.new('http://semanticscience.org/resource/SIO_000786') , RDF::URI.new('http://semanticscience.org/resource/SIO_000980') => RDF::URI.new('http://semanticscience.org/resource/SIO_000104') , RDF::URI.new('http://semanticscience.org/resource/SIO_000981') => RDF::URI.new('http://semanticscience.org/resource/SIO_000104') , RDF::URI.new('http://semanticscience.org/resource/SIO_000982') => RDF::URI.new('http://semanticscience.org/resource/SIO_000104') , RDF::URI.new('http://semanticscience.org/resource/SIO_000984') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_000985') => RDF::URI.new('http://semanticscience.org/resource/SIO_010035') , RDF::URI.new('http://semanticscience.org/resource/SIO_000986') => RDF::URI.new('http://semanticscience.org/resource/SIO_010035') , RDF::URI.new('http://semanticscience.org/resource/SIO_000988') => RDF::URI.new('http://semanticscience.org/resource/SIO_010335') , RDF::URI.new('http://semanticscience.org/resource/SIO_000989') => RDF::URI.new('http://semanticscience.org/resource/SIO_000030') , RDF::URI.new('http://semanticscience.org/resource/SIO_000992') => RDF::URI.new('http://semanticscience.org/resource/SIO_000959') , RDF::URI.new('http://semanticscience.org/resource/SIO_000994') => RDF::URI.new('http://semanticscience.org/resource/SIO_000747') , RDF::URI.new('http://semanticscience.org/resource/SIO_000995') => RDF::URI.new('http://semanticscience.org/resource/SIO_000033') , RDF::URI.new('http://semanticscience.org/resource/SIO_000996') => RDF::URI.new('http://semanticscience.org/resource/SIO_000963') , RDF::URI.new('http://semanticscience.org/resource/SIO_000997') => RDF::URI.new('http://semanticscience.org/resource/SIO_000033') , RDF::URI.new('http://semanticscience.org/resource/SIO_001002') => RDF::URI.new('http://semanticscience.org/resource/SIO_001024') , RDF::URI.new('http://semanticscience.org/resource/SIO_001003') => RDF::URI.new('http://semanticscience.org/resource/SIO_001004') , RDF::URI.new('http://semanticscience.org/resource/SIO_001008') => RDF::URI.new('http://semanticscience.org/resource/SIO_001011') , RDF::URI.new('http://semanticscience.org/resource/SIO_001009') => RDF::URI.new('http://semanticscience.org/resource/SIO_001008') , RDF::URI.new('http://semanticscience.org/resource/SIO_001010') => RDF::URI.new('http://semanticscience.org/resource/SIO_001008') , RDF::URI.new('http://semanticscience.org/resource/SIO_001011') => RDF::URI.new('http://semanticscience.org/resource/SIO_000026') , RDF::URI.new('http://semanticscience.org/resource/SIO_001012') => RDF::URI.new('http://semanticscience.org/resource/SIO_010058') , RDF::URI.new('http://semanticscience.org/resource/SIO_001013') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_001014') => RDF::URI.new('http://semanticscience.org/resource/SIO_000475') , RDF::URI.new('http://semanticscience.org/resource/SIO_001015') => RDF::URI.new('http://semanticscience.org/resource/SIO_000475') , RDF::URI.new('http://semanticscience.org/resource/SIO_001016') => RDF::URI.new('http://semanticscience.org/resource/SIO_001062') , RDF::URI.new('http://semanticscience.org/resource/SIO_001017') => RDF::URI.new('http://semanticscience.org/resource/SIO_000136') , RDF::URI.new('http://semanticscience.org/resource/SIO_001018') => RDF::URI.new('http://semanticscience.org/resource/SIO_000257') , RDF::URI.new('http://semanticscience.org/resource/SIO_001019') => RDF::URI.new('http://semanticscience.org/resource/SIO_000258') , RDF::URI.new('http://semanticscience.org/resource/SIO_001020') => RDF::URI.new('http://semanticscience.org/resource/SIO_001019') , RDF::URI.new('http://semanticscience.org/resource/SIO_001021') => RDF::URI.new('http://semanticscience.org/resource/SIO_000638') , RDF::URI.new('http://semanticscience.org/resource/SIO_001022') => RDF::URI.new('http://semanticscience.org/resource/SIO_001024') , RDF::URI.new('http://semanticscience.org/resource/SIO_001023') => RDF::URI.new('http://semanticscience.org/resource/SIO_001024') , RDF::URI.new('http://semanticscience.org/resource/SIO_001024') => RDF::URI.new('http://semanticscience.org/resource/SIO_000999') , RDF::URI.new('http://semanticscience.org/resource/SIO_001025') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_001026') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_001027') => RDF::URI.new('http://semanticscience.org/resource/SIO_000088') , RDF::URI.new('http://semanticscience.org/resource/SIO_001028') => RDF::URI.new('http://semanticscience.org/resource/SIO_001026') , RDF::URI.new('http://semanticscience.org/resource/SIO_001030') => RDF::URI.new('http://semanticscience.org/resource/SIO_000654') , RDF::URI.new('http://semanticscience.org/resource/SIO_001031') => RDF::URI.new('http://semanticscience.org/resource/SIO_000654') , RDF::URI.new('http://semanticscience.org/resource/SIO_001032') => RDF::URI.new('http://semanticscience.org/resource/SIO_000654') , RDF::URI.new('http://semanticscience.org/resource/SIO_001034') => RDF::URI.new('http://semanticscience.org/resource/SIO_001033') , RDF::URI.new('http://semanticscience.org/resource/SIO_001035') => RDF::URI.new('http://semanticscience.org/resource/SIO_001034') , RDF::URI.new('http://semanticscience.org/resource/SIO_001036') => RDF::URI.new('http://semanticscience.org/resource/SIO_001033') , RDF::URI.new('http://semanticscience.org/resource/SIO_001037') => RDF::URI.new('http://semanticscience.org/resource/SIO_001033') , RDF::URI.new('http://semanticscience.org/resource/SIO_001038') => RDF::URI.new('http://semanticscience.org/resource/SIO_001034') , RDF::URI.new('http://semanticscience.org/resource/SIO_001039') => RDF::URI.new('http://semanticscience.org/resource/SIO_001033') , RDF::URI.new('http://semanticscience.org/resource/SIO_001040') => RDF::URI.new('http://semanticscience.org/resource/SIO_000078') , RDF::URI.new('http://semanticscience.org/resource/SIO_001042') => RDF::URI.new('http://semanticscience.org/resource/SIO_000091') , RDF::URI.new('http://semanticscience.org/resource/SIO_001043') => RDF::URI.new('http://semanticscience.org/resource/SIO_000091') , RDF::URI.new('http://semanticscience.org/resource/SIO_001044') => RDF::URI.new('http://semanticscience.org/resource/SIO_010378') , RDF::URI.new('http://semanticscience.org/resource/SIO_001045') => RDF::URI.new('http://semanticscience.org/resource/SIO_001011') , RDF::URI.new('http://semanticscience.org/resource/SIO_001046') => RDF::URI.new('http://semanticscience.org/resource/SIO_001045') , RDF::URI.new('http://semanticscience.org/resource/SIO_001047') => RDF::URI.new('http://semanticscience.org/resource/SIO_001045') , RDF::URI.new('http://semanticscience.org/resource/SIO_001048') => RDF::URI.new('http://semanticscience.org/resource/SIO_000994') , RDF::URI.new('http://semanticscience.org/resource/SIO_001053') => RDF::URI.new('http://semanticscience.org/resource/SIO_000683') , RDF::URI.new('http://semanticscience.org/resource/SIO_001058') => RDF::URI.new('http://semanticscience.org/resource/SIO_001072') , RDF::URI.new('http://semanticscience.org/resource/SIO_001059') => RDF::URI.new('http://semanticscience.org/resource/SIO_000969') , RDF::URI.new('http://semanticscience.org/resource/SIO_001060') => RDF::URI.new('http://semanticscience.org/resource/SIO_000963') , RDF::URI.new('http://semanticscience.org/resource/SIO_001061') => RDF::URI.new('http://semanticscience.org/resource/SIO_000620') , RDF::URI.new('http://semanticscience.org/resource/SIO_001062') => RDF::URI.new('http://semanticscience.org/resource/SIO_001061') , RDF::URI.new('http://semanticscience.org/resource/SIO_001063') => RDF::URI.new('http://semanticscience.org/resource/SIO_000620') , RDF::URI.new('http://semanticscience.org/resource/SIO_001064') => RDF::URI.new('http://semanticscience.org/resource/SIO_000620') , RDF::URI.new('http://semanticscience.org/resource/SIO_001065') => RDF::URI.new('http://semanticscience.org/resource/SIO_001004') , RDF::URI.new('http://semanticscience.org/resource/SIO_001067') => RDF::URI.new('http://semanticscience.org/resource/SIO_000976') , RDF::URI.new('http://semanticscience.org/resource/SIO_001068') => RDF::URI.new('http://semanticscience.org/resource/SIO_000403') , RDF::URI.new('http://semanticscience.org/resource/SIO_001069') => RDF::URI.new('http://semanticscience.org/resource/SIO_000403') , RDF::URI.new('http://semanticscience.org/resource/SIO_001070') => RDF::URI.new('http://semanticscience.org/resource/SIO_000367') , RDF::URI.new('http://semanticscience.org/resource/SIO_001071') => RDF::URI.new('http://semanticscience.org/resource/SIO_000943') , RDF::URI.new('http://semanticscience.org/resource/SIO_001072') => RDF::URI.new('http://semanticscience.org/resource/SIO_000953') , RDF::URI.new('http://semanticscience.org/resource/SIO_001074') => RDF::URI.new('http://semanticscience.org/resource/SIO_001018') , RDF::URI.new('http://semanticscience.org/resource/SIO_001075') => RDF::URI.new('http://semanticscience.org/resource/SIO_000732') , RDF::URI.new('http://semanticscience.org/resource/SIO_001076') => RDF::URI.new('http://semanticscience.org/resource/SIO_000994') , RDF::URI.new('http://semanticscience.org/resource/SIO_001077') => RDF::URI.new('http://semanticscience.org/resource/SIO_000258') , RDF::URI.new('http://semanticscience.org/resource/SIO_001078') => RDF::URI.new('http://semanticscience.org/resource/SIO_001018') , RDF::URI.new('http://semanticscience.org/resource/SIO_001079') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_001080') => RDF::URI.new('http://semanticscience.org/resource/SIO_000616') , RDF::URI.new('http://semanticscience.org/resource/SIO_001083') => RDF::URI.new('http://semanticscience.org/resource/SIO_000418') , RDF::URI.new('http://semanticscience.org/resource/SIO_010000') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_010001') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_010003') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_010004') => RDF::URI.new('http://semanticscience.org/resource/SIO_000004') , RDF::URI.new('http://semanticscience.org/resource/SIO_010005') => RDF::URI.new('http://semanticscience.org/resource/SIO_010020') , RDF::URI.new('http://semanticscience.org/resource/SIO_010011') => RDF::URI.new('http://semanticscience.org/resource/SIO_010072') , RDF::URI.new('http://semanticscience.org/resource/SIO_010014') => RDF::URI.new('http://semanticscience.org/resource/SIO_011119') , RDF::URI.new('http://semanticscience.org/resource/SIO_010019') => RDF::URI.new('http://semanticscience.org/resource/SIO_000472') , RDF::URI.new('http://semanticscience.org/resource/SIO_010022') => RDF::URI.new('http://semanticscience.org/resource/SIO_011119') , RDF::URI.new('http://semanticscience.org/resource/SIO_010023') => RDF::URI.new('http://semanticscience.org/resource/SIO_011119') , RDF::URI.new('http://semanticscience.org/resource/SIO_010024') => RDF::URI.new('http://semanticscience.org/resource/SIO_011119') , RDF::URI.new('http://semanticscience.org/resource/SIO_010026') => RDF::URI.new('http://semanticscience.org/resource/SIO_010028') , RDF::URI.new('http://semanticscience.org/resource/SIO_010028') => RDF::URI.new('http://semanticscience.org/resource/SIO_010019') , RDF::URI.new('http://semanticscience.org/resource/SIO_010029') => RDF::URI.new('http://semanticscience.org/resource/SIO_000475') , RDF::URI.new('http://semanticscience.org/resource/SIO_010030') => RDF::URI.new('http://semanticscience.org/resource/SIO_010072') , RDF::URI.new('http://semanticscience.org/resource/SIO_010031') => RDF::URI.new('http://semanticscience.org/resource/SIO_000732') , RDF::URI.new('http://semanticscience.org/resource/SIO_010032') => RDF::URI.new('http://semanticscience.org/resource/SIO_000729') , RDF::URI.new('http://semanticscience.org/resource/SIO_010033') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010034') => RDF::URI.new('http://semanticscience.org/resource/SIO_010496') , RDF::URI.new('http://semanticscience.org/resource/SIO_010035') => RDF::URI.new('http://semanticscience.org/resource/SIO_010335') , RDF::URI.new('http://semanticscience.org/resource/SIO_010038') => RDF::URI.new('http://semanticscience.org/resource/SIO_011125') , RDF::URI.new('http://semanticscience.org/resource/SIO_010039') => RDF::URI.new('http://semanticscience.org/resource/SIO_010411') , RDF::URI.new('http://semanticscience.org/resource/SIO_010040') => RDF::URI.new('http://semanticscience.org/resource/SIO_010049') , RDF::URI.new('http://semanticscience.org/resource/SIO_010041') => RDF::URI.new('http://semanticscience.org/resource/SIO_010049') , RDF::URI.new('http://semanticscience.org/resource/SIO_010042') => RDF::URI.new('http://semanticscience.org/resource/SIO_010335') , RDF::URI.new('http://semanticscience.org/resource/SIO_010044') => RDF::URI.new('http://semanticscience.org/resource/SIO_010004') , RDF::URI.new('http://semanticscience.org/resource/SIO_010045') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010046') => RDF::URI.new('http://semanticscience.org/resource/SIO_010462') , RDF::URI.new('http://semanticscience.org/resource/SIO_010047') => RDF::URI.new('http://semanticscience.org/resource/SIO_010020') , RDF::URI.new('http://semanticscience.org/resource/SIO_010048') => RDF::URI.new('http://semanticscience.org/resource/SIO_010029') , RDF::URI.new('http://semanticscience.org/resource/SIO_010049') => RDF::URI.new('http://semanticscience.org/resource/SIO_000019') , RDF::URI.new('http://semanticscience.org/resource/SIO_010050') => RDF::URI.new('http://semanticscience.org/resource/SIO_010040') , RDF::URI.new('http://semanticscience.org/resource/SIO_010051') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_010052') => RDF::URI.new('http://semanticscience.org/resource/SIO_010029') , RDF::URI.new('http://semanticscience.org/resource/SIO_010053') => RDF::URI.new('http://semanticscience.org/resource/SIO_010028') , RDF::URI.new('http://semanticscience.org/resource/SIO_010054') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_010056') => RDF::URI.new('http://semanticscience.org/resource/SIO_000475') , RDF::URI.new('http://semanticscience.org/resource/SIO_010057') => RDF::URI.new('http://semanticscience.org/resource/SIO_000475') , RDF::URI.new('http://semanticscience.org/resource/SIO_010058') => RDF::URI.new('http://semanticscience.org/resource/SIO_010057') , RDF::URI.new('http://semanticscience.org/resource/SIO_010059') => RDF::URI.new('http://semanticscience.org/resource/SIO_010057') , RDF::URI.new('http://semanticscience.org/resource/SIO_010060') => RDF::URI.new('http://semanticscience.org/resource/SIO_010053') , RDF::URI.new('http://semanticscience.org/resource/SIO_010061') => RDF::URI.new('http://semanticscience.org/resource/SIO_010028') , RDF::URI.new('http://semanticscience.org/resource/SIO_010064') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010065') => RDF::URI.new('http://semanticscience.org/resource/SIO_000472') , RDF::URI.new('http://semanticscience.org/resource/SIO_010066') => RDF::URI.new('http://semanticscience.org/resource/SIO_010065') , RDF::URI.new('http://semanticscience.org/resource/SIO_010067') => RDF::URI.new('http://semanticscience.org/resource/SIO_010066') , RDF::URI.new('http://semanticscience.org/resource/SIO_010068') => RDF::URI.new('http://semanticscience.org/resource/SIO_010066') , RDF::URI.new('http://semanticscience.org/resource/SIO_010070') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010074') => RDF::URI.new('http://semanticscience.org/resource/SIO_010471') , RDF::URI.new('http://semanticscience.org/resource/SIO_010075') => RDF::URI.new('http://semanticscience.org/resource/SIO_010335') , RDF::URI.new('http://semanticscience.org/resource/SIO_010076') => RDF::URI.new('http://semanticscience.org/resource/SIO_010038') , RDF::URI.new('http://semanticscience.org/resource/SIO_010077') => RDF::URI.new('http://semanticscience.org/resource/SIO_010338') , RDF::URI.new('http://semanticscience.org/resource/SIO_010085') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010086') => RDF::URI.new('http://semanticscience.org/resource/SIO_010085') , RDF::URI.new('http://semanticscience.org/resource/SIO_010087') => RDF::URI.new('http://semanticscience.org/resource/SIO_010338') , RDF::URI.new('http://semanticscience.org/resource/SIO_010088') => RDF::URI.new('http://semanticscience.org/resource/SIO_000542') , RDF::URI.new('http://semanticscience.org/resource/SIO_010089') => RDF::URI.new('http://semanticscience.org/resource/SIO_010088') , RDF::URI.new('http://semanticscience.org/resource/SIO_010090') => RDF::URI.new('http://semanticscience.org/resource/SIO_010088') , RDF::URI.new('http://semanticscience.org/resource/SIO_010091') => RDF::URI.new('http://semanticscience.org/resource/SIO_010088') , RDF::URI.new('http://semanticscience.org/resource/SIO_010094') => RDF::URI.new('http://semanticscience.org/resource/SIO_000542') , RDF::URI.new('http://semanticscience.org/resource/SIO_010099') => RDF::URI.new('http://semanticscience.org/resource/SIO_010450') , RDF::URI.new('http://semanticscience.org/resource/SIO_010278') => RDF::URI.new('http://semanticscience.org/resource/SIO_000476') , RDF::URI.new('http://semanticscience.org/resource/SIO_010284') => RDF::URI.new('http://semanticscience.org/resource/SIO_000576') , RDF::URI.new('http://semanticscience.org/resource/SIO_010287') => RDF::URI.new('http://semanticscience.org/resource/SIO_000609') , RDF::URI.new('http://semanticscience.org/resource/SIO_010295') => RDF::URI.new('http://semanticscience.org/resource/SIO_010287') , RDF::URI.new('http://semanticscience.org/resource/SIO_010296') => RDF::URI.new('http://semanticscience.org/resource/SIO_010287') , RDF::URI.new('http://semanticscience.org/resource/SIO_010298') => RDF::URI.new('http://semanticscience.org/resource/SIO_010019') , RDF::URI.new('http://semanticscience.org/resource/SIO_010307') => RDF::URI.new('http://semanticscience.org/resource/SIO_010345') , RDF::URI.new('http://semanticscience.org/resource/SIO_010308') => RDF::URI.new('http://semanticscience.org/resource/SIO_010013') , RDF::URI.new('http://semanticscience.org/resource/SIO_010309') => RDF::URI.new('http://semanticscience.org/resource/SIO_010308') , RDF::URI.new('http://semanticscience.org/resource/SIO_010310') => RDF::URI.new('http://semanticscience.org/resource/SIO_010308') , RDF::URI.new('http://semanticscience.org/resource/SIO_010334') => RDF::URI.new('http://semanticscience.org/resource/SIO_010071') , RDF::URI.new('http://semanticscience.org/resource/SIO_010336') => RDF::URI.new('http://semanticscience.org/resource/SIO_010075') , RDF::URI.new('http://semanticscience.org/resource/SIO_010337') => RDF::URI.new('http://semanticscience.org/resource/SIO_010075') , RDF::URI.new('http://semanticscience.org/resource/SIO_010338') => RDF::URI.new('http://semanticscience.org/resource/SIO_011125') , RDF::URI.new('http://semanticscience.org/resource/SIO_010340') => RDF::URI.new('http://semanticscience.org/resource/SIO_000376') , RDF::URI.new('http://semanticscience.org/resource/SIO_010344') => RDF::URI.new('http://semanticscience.org/resource/SIO_011125') , RDF::URI.new('http://semanticscience.org/resource/SIO_010347') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_010349') => RDF::URI.new('http://semanticscience.org/resource/SIO_010340') , RDF::URI.new('http://semanticscience.org/resource/SIO_010351') => RDF::URI.new('http://semanticscience.org/resource/SIO_010340') , RDF::URI.new('http://semanticscience.org/resource/SIO_010353') => RDF::URI.new('http://semanticscience.org/resource/SIO_000492') , RDF::URI.new('http://semanticscience.org/resource/SIO_010354') => RDF::URI.new('http://semanticscience.org/resource/SIO_010347') , RDF::URI.new('http://semanticscience.org/resource/SIO_010355') => RDF::URI.new('http://semanticscience.org/resource/SIO_010347') , RDF::URI.new('http://semanticscience.org/resource/SIO_010358') => RDF::URI.new('http://semanticscience.org/resource/SIO_010360') , RDF::URI.new('http://semanticscience.org/resource/SIO_010359') => RDF::URI.new('http://semanticscience.org/resource/SIO_010360') , RDF::URI.new('http://semanticscience.org/resource/SIO_010360') => RDF::URI.new('http://semanticscience.org/resource/SIO_000376') , RDF::URI.new('http://semanticscience.org/resource/SIO_010362') => RDF::URI.new('http://semanticscience.org/resource/SIO_010423') , RDF::URI.new('http://semanticscience.org/resource/SIO_010364') => RDF::URI.new('http://semanticscience.org/resource/SIO_000692') , RDF::URI.new('http://semanticscience.org/resource/SIO_010365') => RDF::URI.new('http://semanticscience.org/resource/SIO_010366') , RDF::URI.new('http://semanticscience.org/resource/SIO_010366') => RDF::URI.new('http://semanticscience.org/resource/SIO_010364') , RDF::URI.new('http://semanticscience.org/resource/SIO_010367') => RDF::URI.new('http://semanticscience.org/resource/SIO_010366') , RDF::URI.new('http://semanticscience.org/resource/SIO_010368') => RDF::URI.new('http://semanticscience.org/resource/SIO_000692') , RDF::URI.new('http://semanticscience.org/resource/SIO_010369') => RDF::URI.new('http://semanticscience.org/resource/SIO_010364') , RDF::URI.new('http://semanticscience.org/resource/SIO_010370') => RDF::URI.new('http://semanticscience.org/resource/SIO_010369') , RDF::URI.new('http://semanticscience.org/resource/SIO_010371') => RDF::URI.new('http://semanticscience.org/resource/SIO_010369') , RDF::URI.new('http://semanticscience.org/resource/SIO_010372') => RDF::URI.new('http://semanticscience.org/resource/SIO_010374') , RDF::URI.new('http://semanticscience.org/resource/SIO_010373') => RDF::URI.new('http://semanticscience.org/resource/SIO_010374') , RDF::URI.new('http://semanticscience.org/resource/SIO_010374') => RDF::URI.new('http://semanticscience.org/resource/SIO_010364') , RDF::URI.new('http://semanticscience.org/resource/SIO_010377') => RDF::URI.new('http://semanticscience.org/resource/SIO_010000') , RDF::URI.new('http://semanticscience.org/resource/SIO_010378') => RDF::URI.new('http://semanticscience.org/resource/SIO_010000') , RDF::URI.new('http://semanticscience.org/resource/SIO_010379') => RDF::URI.new('http://semanticscience.org/resource/SIO_010378') , RDF::URI.new('http://semanticscience.org/resource/SIO_010383') => RDF::URI.new('http://semanticscience.org/resource/SIO_000619') , RDF::URI.new('http://semanticscience.org/resource/SIO_010411') => RDF::URI.new('http://semanticscience.org/resource/SIO_010462') , RDF::URI.new('http://semanticscience.org/resource/SIO_010412') => RDF::URI.new('http://semanticscience.org/resource/SIO_001050') , RDF::URI.new('http://semanticscience.org/resource/SIO_010414') => RDF::URI.new('http://semanticscience.org/resource/SIO_010000') , RDF::URI.new('http://semanticscience.org/resource/SIO_010415') => RDF::URI.new('http://semanticscience.org/resource/SIO_010000') , RDF::URI.new('http://semanticscience.org/resource/SIO_010416') => RDF::URI.new('http://semanticscience.org/resource/SIO_010427') , RDF::URI.new('http://semanticscience.org/resource/SIO_010417') => RDF::URI.new('http://semanticscience.org/resource/SIO_010427') , RDF::URI.new('http://semanticscience.org/resource/SIO_010418') => RDF::URI.new('http://semanticscience.org/resource/SIO_010427') , RDF::URI.new('http://semanticscience.org/resource/SIO_010419') => RDF::URI.new('http://semanticscience.org/resource/SIO_011125') , RDF::URI.new('http://semanticscience.org/resource/SIO_010420') => RDF::URI.new('http://semanticscience.org/resource/SIO_010437') , RDF::URI.new('http://semanticscience.org/resource/SIO_010424') => RDF::URI.new('http://semanticscience.org/resource/SIO_010426') , RDF::URI.new('http://semanticscience.org/resource/SIO_010425') => RDF::URI.new('http://semanticscience.org/resource/SIO_010426') , RDF::URI.new('http://semanticscience.org/resource/SIO_010426') => RDF::URI.new('http://semanticscience.org/resource/SIO_011126') , RDF::URI.new('http://semanticscience.org/resource/SIO_010427') => RDF::URI.new('http://semanticscience.org/resource/SIO_011126') , RDF::URI.new('http://semanticscience.org/resource/SIO_010428') => RDF::URI.new('http://semanticscience.org/resource/SIO_000881') , RDF::URI.new('http://semanticscience.org/resource/SIO_010429') => RDF::URI.new('http://semanticscience.org/resource/SIO_010462') , RDF::URI.new('http://semanticscience.org/resource/SIO_010430') => RDF::URI.new('http://semanticscience.org/resource/SIO_010428') , RDF::URI.new('http://semanticscience.org/resource/SIO_010431') => RDF::URI.new('http://semanticscience.org/resource/SIO_010428') , RDF::URI.new('http://semanticscience.org/resource/SIO_010433') => RDF::URI.new('http://semanticscience.org/resource/SIO_010033') , RDF::URI.new('http://semanticscience.org/resource/SIO_010434') => RDF::URI.new('http://semanticscience.org/resource/SIO_010436') , RDF::URI.new('http://semanticscience.org/resource/SIO_010435') => RDF::URI.new('http://semanticscience.org/resource/SIO_010436') , RDF::URI.new('http://semanticscience.org/resource/SIO_010437') => RDF::URI.new('http://semanticscience.org/resource/SIO_011125') , RDF::URI.new('http://semanticscience.org/resource/SIO_010438') => RDF::URI.new('http://semanticscience.org/resource/SIO_010437') , RDF::URI.new('http://semanticscience.org/resource/SIO_010439') => RDF::URI.new('http://semanticscience.org/resource/SIO_010437') , RDF::URI.new('http://semanticscience.org/resource/SIO_010440') => RDF::URI.new('http://semanticscience.org/resource/SIO_010439') , RDF::URI.new('http://semanticscience.org/resource/SIO_010442') => RDF::URI.new('http://semanticscience.org/resource/SIO_001011') , RDF::URI.new('http://semanticscience.org/resource/SIO_010445') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010446') => RDF::URI.new('http://semanticscience.org/resource/SIO_010085') , RDF::URI.new('http://semanticscience.org/resource/SIO_010447') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010448') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010451') => RDF::URI.new('http://semanticscience.org/resource/SIO_010095') , RDF::URI.new('http://semanticscience.org/resource/SIO_010452') => RDF::URI.new('http://semanticscience.org/resource/SIO_010049') , RDF::URI.new('http://semanticscience.org/resource/SIO_010453') => RDF::URI.new('http://semanticscience.org/resource/SIO_010427') , RDF::URI.new('http://semanticscience.org/resource/SIO_010454') => RDF::URI.new('http://semanticscience.org/resource/SIO_010427') , RDF::URI.new('http://semanticscience.org/resource/SIO_010456') => RDF::URI.new('http://semanticscience.org/resource/SIO_010004') , RDF::URI.new('http://semanticscience.org/resource/SIO_010461') => RDF::URI.new('http://semanticscience.org/resource/SIO_000810') , RDF::URI.new('http://semanticscience.org/resource/SIO_010462') => RDF::URI.new('http://semanticscience.org/resource/SIO_011126') , RDF::URI.new('http://semanticscience.org/resource/SIO_010463') => RDF::URI.new('http://semanticscience.org/resource/SIO_011126') , RDF::URI.new('http://semanticscience.org/resource/SIO_010464') => RDF::URI.new('http://semanticscience.org/resource/SIO_000810') , RDF::URI.new('http://semanticscience.org/resource/SIO_010465') => RDF::URI.new('http://semanticscience.org/resource/SIO_010497') , RDF::URI.new('http://semanticscience.org/resource/SIO_010468') => RDF::URI.new('http://semanticscience.org/resource/SIO_010471') , RDF::URI.new('http://semanticscience.org/resource/SIO_010469') => RDF::URI.new('http://semanticscience.org/resource/SIO_010471') , RDF::URI.new('http://semanticscience.org/resource/SIO_010471') => RDF::URI.new('http://semanticscience.org/resource/SIO_010071') , RDF::URI.new('http://semanticscience.org/resource/SIO_010496') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010498') => RDF::URI.new('http://semanticscience.org/resource/SIO_011118') , RDF::URI.new('http://semanticscience.org/resource/SIO_010499') => RDF::URI.new('http://semanticscience.org/resource/SIO_011118') , RDF::URI.new('http://semanticscience.org/resource/SIO_010500') => RDF::URI.new('http://semanticscience.org/resource/SIO_011118') , RDF::URI.new('http://semanticscience.org/resource/SIO_010501') => RDF::URI.new('http://semanticscience.org/resource/SIO_011118') , RDF::URI.new('http://semanticscience.org/resource/SIO_010502') => RDF::URI.new('http://semanticscience.org/resource/SIO_010498') , RDF::URI.new('http://semanticscience.org/resource/SIO_010503') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010504') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010505') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010507') => RDF::URI.new('http://semanticscience.org/resource/SIO_010345') , RDF::URI.new('http://semanticscience.org/resource/SIO_010510') => RDF::URI.new('http://semanticscience.org/resource/SIO_010345') , RDF::URI.new('http://semanticscience.org/resource/SIO_010511') => RDF::URI.new('http://semanticscience.org/resource/SIO_010510') , RDF::URI.new('http://semanticscience.org/resource/SIO_010512') => RDF::URI.new('http://semanticscience.org/resource/SIO_010510') , RDF::URI.new('http://semanticscience.org/resource/SIO_010513') => RDF::URI.new('http://semanticscience.org/resource/SIO_010512') , RDF::URI.new('http://semanticscience.org/resource/SIO_010514') => RDF::URI.new('http://semanticscience.org/resource/SIO_010512') , RDF::URI.new('http://semanticscience.org/resource/SIO_010515') => RDF::URI.new('http://semanticscience.org/resource/SIO_010510') , RDF::URI.new('http://semanticscience.org/resource/SIO_010516') => RDF::URI.new('http://semanticscience.org/resource/SIO_010345') , RDF::URI.new('http://semanticscience.org/resource/SIO_010517') => RDF::URI.new('http://semanticscience.org/resource/SIO_010345') , RDF::URI.new('http://semanticscience.org/resource/SIO_010518') => RDF::URI.new('http://semanticscience.org/resource/SIO_010516') , RDF::URI.new('http://semanticscience.org/resource/SIO_010519') => RDF::URI.new('http://semanticscience.org/resource/SIO_010518') , RDF::URI.new('http://semanticscience.org/resource/SIO_010520') => RDF::URI.new('http://semanticscience.org/resource/SIO_010518') , RDF::URI.new('http://semanticscience.org/resource/SIO_010521') => RDF::URI.new('http://semanticscience.org/resource/SIO_010520') , RDF::URI.new('http://semanticscience.org/resource/SIO_010522') => RDF::URI.new('http://semanticscience.org/resource/SIO_010519') , RDF::URI.new('http://semanticscience.org/resource/SIO_010523') => RDF::URI.new('http://semanticscience.org/resource/SIO_010519') , RDF::URI.new('http://semanticscience.org/resource/SIO_010525') => RDF::URI.new('http://semanticscience.org/resource/SIO_010526') , RDF::URI.new('http://semanticscience.org/resource/SIO_010527') => RDF::URI.new('http://semanticscience.org/resource/SIO_010526') , RDF::URI.new('http://semanticscience.org/resource/SIO_010528') => RDF::URI.new('http://semanticscience.org/resource/SIO_010526') , RDF::URI.new('http://semanticscience.org/resource/SIO_010530') => RDF::URI.new('http://semanticscience.org/resource/SIO_010023') , RDF::URI.new('http://semanticscience.org/resource/SIO_010531') => RDF::URI.new('http://semanticscience.org/resource/SIO_010065') , RDF::URI.new('http://semanticscience.org/resource/SIO_010532') => RDF::URI.new('http://semanticscience.org/resource/SIO_010525') , RDF::URI.new('http://semanticscience.org/resource/SIO_010533') => RDF::URI.new('http://semanticscience.org/resource/SIO_010525') , RDF::URI.new('http://semanticscience.org/resource/SIO_010673') => RDF::URI.new('http://semanticscience.org/resource/SIO_010298') , RDF::URI.new('http://semanticscience.org/resource/SIO_010775') => RDF::URI.new('http://semanticscience.org/resource/SIO_010455') , RDF::URI.new('http://semanticscience.org/resource/SIO_010776') => RDF::URI.new('http://semanticscience.org/resource/SIO_010775') , RDF::URI.new('http://semanticscience.org/resource/SIO_010777') => RDF::URI.new('http://semanticscience.org/resource/SIO_010775') , RDF::URI.new('http://semanticscience.org/resource/SIO_010778') => RDF::URI.new('http://semanticscience.org/resource/SIO_010775') , RDF::URI.new('http://semanticscience.org/resource/SIO_010779') => RDF::URI.new('http://semanticscience.org/resource/SIO_010455') , RDF::URI.new('http://semanticscience.org/resource/SIO_010781') => RDF::URI.new('http://semanticscience.org/resource/SIO_010780') , RDF::URI.new('http://semanticscience.org/resource/SIO_010782') => RDF::URI.new('http://semanticscience.org/resource/SIO_010780') , RDF::URI.new('http://semanticscience.org/resource/SIO_010783') => RDF::URI.new('http://semanticscience.org/resource/SIO_010780') , RDF::URI.new('http://semanticscience.org/resource/SIO_010785') => RDF::URI.new('http://semanticscience.org/resource/SIO_010037') , RDF::URI.new('http://semanticscience.org/resource/SIO_010787') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010788') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010789') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010790') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010791') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010792') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010793') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010794') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010795') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_011000') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011001') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011002') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011003') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011004') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011005') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011006') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011007') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011008') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011009') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011010') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011011') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011012') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011013') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011014') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011015') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011016') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011017') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011018') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011019') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011020') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011021') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011022') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011023') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011024') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011025') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011026') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011027') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011028') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011029') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011030') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011031') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011032') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011033') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011034') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011035') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011036') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011037') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011038') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011039') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011040') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011041') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011042') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011043') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011044') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011045') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011046') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011047') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011048') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011049') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011050') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011051') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011052') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011053') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011054') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011055') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011056') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011057') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011058') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011059') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011060') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011061') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011062') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011063') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011064') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011065') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011066') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011067') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011068') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011069') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011070') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011071') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011072') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011073') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011074') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011075') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011076') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011077') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011078') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011079') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011080') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011081') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011082') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011083') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011084') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011085') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011086') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011087') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011088') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011089') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011090') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011091') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011092') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011093') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011094') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011095') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011096') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011097') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011098') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011099') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011100') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011101') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011102') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011103') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011104') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011105') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011106') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011107') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011108') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011109') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011110') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011111') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011112') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011113') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011114') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011115') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011116') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011117') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011123') => RDF::URI.new('http://semanticscience.org/resource/SIO_000472') , RDF::URI.new('http://semanticscience.org/resource/SIO_011126') => RDF::URI.new('http://semanticscience.org/resource/SIO_010004') , RDF::URI.new('http://semanticscience.org/resource/SIO_011130') => RDF::URI.new('http://semanticscience.org/resource/SIO_011120') }
+  @@parent_properties = { RDF::URI.new('http://semanticscience.org/resource/SIO_000008') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000011') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000020') => RDF::URI.new('http://semanticscience.org/resource/SIO_000210') , RDF::URI.new('http://semanticscience.org/resource/SIO_000028') => RDF::URI.new('http://semanticscience.org/resource/SIO_000145') , RDF::URI.new('http://semanticscience.org/resource/SIO_000029') => RDF::URI.new('http://semanticscience.org/resource/SIO_000096') , RDF::URI.new('http://semanticscience.org/resource/SIO_000053') => RDF::URI.new('http://semanticscience.org/resource/SIO_000028') , RDF::URI.new('http://semanticscience.org/resource/SIO_000054') => RDF::URI.new('http://semanticscience.org/resource/SIO_000053') , RDF::URI.new('http://semanticscience.org/resource/SIO_000059') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000060') => RDF::URI.new('http://semanticscience.org/resource/SIO_000205') , RDF::URI.new('http://semanticscience.org/resource/SIO_000061') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000062') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000063') => RDF::URI.new('http://semanticscience.org/resource/SIO_000062') , RDF::URI.new('http://semanticscience.org/resource/SIO_000064') => RDF::URI.new('http://semanticscience.org/resource/SIO_000219') , RDF::URI.new('http://semanticscience.org/resource/SIO_000066') => RDF::URI.new('http://semanticscience.org/resource/SIO_000253') , RDF::URI.new('http://semanticscience.org/resource/SIO_000068') => RDF::URI.new('http://semanticscience.org/resource/SIO_000061') , RDF::URI.new('http://semanticscience.org/resource/SIO_000093') => RDF::URI.new('http://semanticscience.org/resource/SIO_000068') , RDF::URI.new('http://semanticscience.org/resource/SIO_000095') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000096') => RDF::URI.new('http://semanticscience.org/resource/SIO_000093') , RDF::URI.new('http://semanticscience.org/resource/SIO_000128') => RDF::URI.new('http://semanticscience.org/resource/SIO_000061') , RDF::URI.new('http://semanticscience.org/resource/SIO_000132') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000139') => RDF::URI.new('http://semanticscience.org/resource/SIO_000132') , RDF::URI.new('http://semanticscience.org/resource/SIO_000145') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000202') => RDF::URI.new('http://semanticscience.org/resource/SIO_000145') , RDF::URI.new('http://semanticscience.org/resource/SIO_000203') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000204') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000205') => RDF::URI.new('http://semanticscience.org/resource/SIO_000212') , RDF::URI.new('http://semanticscience.org/resource/SIO_000206') => RDF::URI.new('http://semanticscience.org/resource/SIO_000772') , RDF::URI.new('http://semanticscience.org/resource/SIO_000207') => RDF::URI.new('http://semanticscience.org/resource/SIO_000772') , RDF::URI.new('http://semanticscience.org/resource/SIO_000208') => RDF::URI.new('http://semanticscience.org/resource/SIO_000773') , RDF::URI.new('http://semanticscience.org/resource/SIO_000209') => RDF::URI.new('http://semanticscience.org/resource/SIO_000773') , RDF::URI.new('http://semanticscience.org/resource/SIO_000210') => RDF::URI.new('http://semanticscience.org/resource/SIO_000628') , RDF::URI.new('http://semanticscience.org/resource/SIO_000211') => RDF::URI.new('http://semanticscience.org/resource/SIO_000203') , RDF::URI.new('http://semanticscience.org/resource/SIO_000212') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000213') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000214') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000215') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000216') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000217') => RDF::URI.new('http://semanticscience.org/resource/SIO_000223') , RDF::URI.new('http://semanticscience.org/resource/SIO_000218') => RDF::URI.new('http://semanticscience.org/resource/SIO_000224') , RDF::URI.new('http://semanticscience.org/resource/SIO_000219') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000221') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000222') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000223') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000224') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000225') => RDF::URI.new('http://semanticscience.org/resource/SIO_000235') , RDF::URI.new('http://semanticscience.org/resource/SIO_000226') => RDF::URI.new('http://semanticscience.org/resource/SIO_000236') , RDF::URI.new('http://semanticscience.org/resource/SIO_000227') => RDF::URI.new('http://semanticscience.org/resource/SIO_000643') , RDF::URI.new('http://semanticscience.org/resource/SIO_000228') => RDF::URI.new('http://semanticscience.org/resource/SIO_000644') , RDF::URI.new('http://semanticscience.org/resource/SIO_000229') => RDF::URI.new('http://semanticscience.org/resource/SIO_000132') , RDF::URI.new('http://semanticscience.org/resource/SIO_000230') => RDF::URI.new('http://semanticscience.org/resource/SIO_000132') , RDF::URI.new('http://semanticscience.org/resource/SIO_000231') => RDF::URI.new('http://semanticscience.org/resource/SIO_000062') , RDF::URI.new('http://semanticscience.org/resource/SIO_000232') => RDF::URI.new('http://semanticscience.org/resource/SIO_000062') , RDF::URI.new('http://semanticscience.org/resource/SIO_000233') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000234') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000235') => RDF::URI.new('http://semanticscience.org/resource/SIO_000586') , RDF::URI.new('http://semanticscience.org/resource/SIO_000236') => RDF::URI.new('http://semanticscience.org/resource/SIO_000646') , RDF::URI.new('http://semanticscience.org/resource/SIO_000240') => RDF::URI.new('http://semanticscience.org/resource/SIO_000203') , RDF::URI.new('http://semanticscience.org/resource/SIO_000241') => RDF::URI.new('http://semanticscience.org/resource/SIO_000652') , RDF::URI.new('http://semanticscience.org/resource/SIO_000242') => RDF::URI.new('http://semanticscience.org/resource/SIO_000652') , RDF::URI.new('http://semanticscience.org/resource/SIO_000243') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000244') => RDF::URI.new('http://semanticscience.org/resource/SIO_000352') , RDF::URI.new('http://semanticscience.org/resource/SIO_000245') => RDF::URI.new('http://semanticscience.org/resource/SIO_000294') , RDF::URI.new('http://semanticscience.org/resource/SIO_000246') => RDF::URI.new('http://semanticscience.org/resource/SIO_000245') , RDF::URI.new('http://semanticscience.org/resource/SIO_000247') => RDF::URI.new('http://semanticscience.org/resource/SIO_000244') , RDF::URI.new('http://semanticscience.org/resource/SIO_000248') => RDF::URI.new('http://semanticscience.org/resource/SIO_000352') , RDF::URI.new('http://semanticscience.org/resource/SIO_000249') => RDF::URI.new('http://semanticscience.org/resource/SIO_000294') , RDF::URI.new('http://semanticscience.org/resource/SIO_000250') => RDF::URI.new('http://semanticscience.org/resource/SIO_000248') , RDF::URI.new('http://semanticscience.org/resource/SIO_000251') => RDF::URI.new('http://semanticscience.org/resource/SIO_000249') , RDF::URI.new('http://semanticscience.org/resource/SIO_000252') => RDF::URI.new('http://semanticscience.org/resource/SIO_000212') , RDF::URI.new('http://semanticscience.org/resource/SIO_000253') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000254') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000255') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000272') => RDF::URI.new('http://semanticscience.org/resource/SIO_000736') , RDF::URI.new('http://semanticscience.org/resource/SIO_000273') => RDF::URI.new('http://semanticscience.org/resource/SIO_000053') , RDF::URI.new('http://semanticscience.org/resource/SIO_000274') => RDF::URI.new('http://semanticscience.org/resource/SIO_000497') , RDF::URI.new('http://semanticscience.org/resource/SIO_000277') => RDF::URI.new('http://semanticscience.org/resource/SIO_000631') , RDF::URI.new('http://semanticscience.org/resource/SIO_000278') => RDF::URI.new('http://semanticscience.org/resource/SIO_000252') , RDF::URI.new('http://semanticscience.org/resource/SIO_000283') => RDF::URI.new('http://semanticscience.org/resource/SIO_000272') , RDF::URI.new('http://semanticscience.org/resource/SIO_000286') => RDF::URI.new('http://semanticscience.org/resource/SIO_000497') , RDF::URI.new('http://semanticscience.org/resource/SIO_000288') => RDF::URI.new('http://semanticscience.org/resource/SIO_000203') , RDF::URI.new('http://semanticscience.org/resource/SIO_000291') => RDF::URI.new('http://semanticscience.org/resource/SIO_000230') , RDF::URI.new('http://semanticscience.org/resource/SIO_000292') => RDF::URI.new('http://semanticscience.org/resource/SIO_000231') , RDF::URI.new('http://semanticscience.org/resource/SIO_000293') => RDF::URI.new('http://semanticscience.org/resource/SIO_000203') , RDF::URI.new('http://semanticscience.org/resource/SIO_000294') => RDF::URI.new('http://semanticscience.org/resource/SIO_000243') , RDF::URI.new('http://semanticscience.org/resource/SIO_000310') => RDF::URI.new('http://semanticscience.org/resource/SIO_000093') , RDF::URI.new('http://semanticscience.org/resource/SIO_000311') => RDF::URI.new('http://semanticscience.org/resource/SIO_000232') , RDF::URI.new('http://semanticscience.org/resource/SIO_000312') => RDF::URI.new('http://semanticscience.org/resource/SIO_000229') , RDF::URI.new('http://semanticscience.org/resource/SIO_000313') => RDF::URI.new('http://semanticscience.org/resource/SIO_000310') , RDF::URI.new('http://semanticscience.org/resource/SIO_000322') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000323') => RDF::URI.new('http://semanticscience.org/resource/SIO_000128') , RDF::URI.new('http://semanticscience.org/resource/SIO_000324') => RDF::URI.new('http://semanticscience.org/resource/SIO_000202') , RDF::URI.new('http://semanticscience.org/resource/SIO_000325') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000332') => RDF::URI.new('http://semanticscience.org/resource/SIO_000563') , RDF::URI.new('http://semanticscience.org/resource/SIO_000334') => RDF::URI.new('http://semanticscience.org/resource/SIO_000652') , RDF::URI.new('http://semanticscience.org/resource/SIO_000335') => RDF::URI.new('http://semanticscience.org/resource/SIO_000652') , RDF::URI.new('http://semanticscience.org/resource/SIO_000338') => RDF::URI.new('http://semanticscience.org/resource/SIO_000563') , RDF::URI.new('http://semanticscience.org/resource/SIO_000339') => RDF::URI.new('http://semanticscience.org/resource/SIO_000557') , RDF::URI.new('http://semanticscience.org/resource/SIO_000341') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000352') => RDF::URI.new('http://semanticscience.org/resource/SIO_000243') , RDF::URI.new('http://semanticscience.org/resource/SIO_000355') => RDF::URI.new('http://semanticscience.org/resource/SIO_000132') , RDF::URI.new('http://semanticscience.org/resource/SIO_000356') => RDF::URI.new('http://semanticscience.org/resource/SIO_000062') , RDF::URI.new('http://semanticscience.org/resource/SIO_000362') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000363') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000364') => RDF::URI.new('http://semanticscience.org/resource/SIO_000253') , RDF::URI.new('http://semanticscience.org/resource/SIO_000365') => RDF::URI.new('http://semanticscience.org/resource/SIO_000219') , RDF::URI.new('http://semanticscience.org/resource/SIO_000369') => RDF::URI.new('http://semanticscience.org/resource/SIO_000273') , RDF::URI.new('http://semanticscience.org/resource/SIO_000420') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000421') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000422') => RDF::URI.new('http://semanticscience.org/resource/SIO_000283') , RDF::URI.new('http://semanticscience.org/resource/SIO_000424') => RDF::URI.new('http://semanticscience.org/resource/SIO_000283') , RDF::URI.new('http://semanticscience.org/resource/SIO_000425') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000426') => RDF::URI.new('http://semanticscience.org/resource/SIO_000425') , RDF::URI.new('http://semanticscience.org/resource/SIO_000427') => RDF::URI.new('http://semanticscience.org/resource/SIO_000424') , RDF::URI.new('http://semanticscience.org/resource/SIO_000477') => RDF::URI.new('http://semanticscience.org/resource/SIO_000422') , RDF::URI.new('http://semanticscience.org/resource/SIO_000482') => RDF::URI.new('http://semanticscience.org/resource/SIO_000283') , RDF::URI.new('http://semanticscience.org/resource/SIO_000484') => RDF::URI.new('http://semanticscience.org/resource/SIO_000482') , RDF::URI.new('http://semanticscience.org/resource/SIO_000490') => RDF::URI.new('http://semanticscience.org/resource/SIO_000482') , RDF::URI.new('http://semanticscience.org/resource/SIO_000491') => RDF::URI.new('http://semanticscience.org/resource/SIO_000482') , RDF::URI.new('http://semanticscience.org/resource/SIO_000495') => RDF::URI.new('http://semanticscience.org/resource/SIO_000272') , RDF::URI.new('http://semanticscience.org/resource/SIO_000496') => RDF::URI.new('http://semanticscience.org/resource/SIO_000495') , RDF::URI.new('http://semanticscience.org/resource/SIO_000497') => RDF::URI.new('http://semanticscience.org/resource/SIO_000272') , RDF::URI.new('http://semanticscience.org/resource/SIO_000552') => RDF::URI.new('http://semanticscience.org/resource/SIO_000230') , RDF::URI.new('http://semanticscience.org/resource/SIO_000553') => RDF::URI.new('http://semanticscience.org/resource/SIO_000231') , RDF::URI.new('http://semanticscience.org/resource/SIO_000557') => RDF::URI.new('http://semanticscience.org/resource/SIO_000212') , RDF::URI.new('http://semanticscience.org/resource/SIO_000558') => RDF::URI.new('http://semanticscience.org/resource/SIO_010302') , RDF::URI.new('http://semanticscience.org/resource/SIO_000563') => RDF::URI.new('http://semanticscience.org/resource/SIO_000628') , RDF::URI.new('http://semanticscience.org/resource/SIO_000586') => RDF::URI.new('http://semanticscience.org/resource/SIO_000644') , RDF::URI.new('http://semanticscience.org/resource/SIO_000628') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000629') => RDF::URI.new('http://semanticscience.org/resource/SIO_000557') , RDF::URI.new('http://semanticscience.org/resource/SIO_000630') => RDF::URI.new('http://semanticscience.org/resource/SIO_010302') , RDF::URI.new('http://semanticscience.org/resource/SIO_000631') => RDF::URI.new('http://semanticscience.org/resource/SIO_000628') , RDF::URI.new('http://semanticscience.org/resource/SIO_000632') => RDF::URI.new('http://semanticscience.org/resource/SIO_000210') , RDF::URI.new('http://semanticscience.org/resource/SIO_000633') => RDF::URI.new('http://semanticscience.org/resource/SIO_000205') , RDF::URI.new('http://semanticscience.org/resource/SIO_000634') => RDF::URI.new('http://semanticscience.org/resource/SIO_000558') , RDF::URI.new('http://semanticscience.org/resource/SIO_000635') => RDF::URI.new('http://semanticscience.org/resource/SIO_000294') , RDF::URI.new('http://semanticscience.org/resource/SIO_000636') => RDF::URI.new('http://semanticscience.org/resource/SIO_000352') , RDF::URI.new('http://semanticscience.org/resource/SIO_000641') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000642') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000643') => RDF::URI.new('http://semanticscience.org/resource/SIO_000224') , RDF::URI.new('http://semanticscience.org/resource/SIO_000644') => RDF::URI.new('http://semanticscience.org/resource/SIO_000223') , RDF::URI.new('http://semanticscience.org/resource/SIO_000646') => RDF::URI.new('http://semanticscience.org/resource/SIO_000643') , RDF::URI.new('http://semanticscience.org/resource/SIO_000652') => RDF::URI.new('http://semanticscience.org/resource/SIO_000203') , RDF::URI.new('http://semanticscience.org/resource/SIO_000655') => RDF::URI.new('http://semanticscience.org/resource/SIO_000294') , RDF::URI.new('http://semanticscience.org/resource/SIO_000656') => RDF::URI.new('http://semanticscience.org/resource/SIO_000655') , RDF::URI.new('http://semanticscience.org/resource/SIO_000657') => RDF::URI.new('http://semanticscience.org/resource/SIO_000352') , RDF::URI.new('http://semanticscience.org/resource/SIO_000658') => RDF::URI.new('http://semanticscience.org/resource/SIO_000657') , RDF::URI.new('http://semanticscience.org/resource/SIO_000668') => RDF::URI.new('http://semanticscience.org/resource/SIO_000628') , RDF::URI.new('http://semanticscience.org/resource/SIO_000671') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000672') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000673') => RDF::URI.new('http://semanticscience.org/resource/SIO_000671') , RDF::URI.new('http://semanticscience.org/resource/SIO_000674') => RDF::URI.new('http://semanticscience.org/resource/SIO_000672') , RDF::URI.new('http://semanticscience.org/resource/SIO_000679') => RDF::URI.new('http://semanticscience.org/resource/SIO_000054') , RDF::URI.new('http://semanticscience.org/resource/SIO_000680') => RDF::URI.new('http://semanticscience.org/resource/SIO_000679') , RDF::URI.new('http://semanticscience.org/resource/SIO_000681') => RDF::URI.new('http://semanticscience.org/resource/SIO_000679') , RDF::URI.new('http://semanticscience.org/resource/SIO_000682') => RDF::URI.new('http://semanticscience.org/resource/SIO_000029') , RDF::URI.new('http://semanticscience.org/resource/SIO_000684') => RDF::URI.new('http://semanticscience.org/resource/SIO_000029') , RDF::URI.new('http://semanticscience.org/resource/SIO_000687') => RDF::URI.new('http://semanticscience.org/resource/SIO_000322') , RDF::URI.new('http://semanticscience.org/resource/SIO_000697') => RDF::URI.new('http://semanticscience.org/resource/SIO_000709') , RDF::URI.new('http://semanticscience.org/resource/SIO_000699') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000709') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000710') => RDF::URI.new('http://semanticscience.org/resource/SIO_000709') , RDF::URI.new('http://semanticscience.org/resource/SIO_000733') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000734') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000735') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000736') => RDF::URI.new('http://semanticscience.org/resource/SIO_000001') , RDF::URI.new('http://semanticscience.org/resource/SIO_000737') => RDF::URI.new('http://semanticscience.org/resource/SIO_000736') , RDF::URI.new('http://semanticscience.org/resource/SIO_000738') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000749') => RDF::URI.new('http://semanticscience.org/resource/SIO_000737') , RDF::URI.new('http://semanticscience.org/resource/SIO_000772') => RDF::URI.new('http://semanticscience.org/resource/SIO_000631') , RDF::URI.new('http://semanticscience.org/resource/SIO_000773') => RDF::URI.new('http://semanticscience.org/resource/SIO_000252') , RDF::URI.new('http://semanticscience.org/resource/SIO_000774') => RDF::URI.new('http://semanticscience.org/resource/SIO_000772') , RDF::URI.new('http://semanticscience.org/resource/SIO_000775') => RDF::URI.new('http://semanticscience.org/resource/SIO_000773') , RDF::URI.new('http://semanticscience.org/resource/SIO_000793') => RDF::URI.new('http://semanticscience.org/resource/SIO_000687') , RDF::URI.new('http://semanticscience.org/resource/SIO_000892') => RDF::URI.new('http://semanticscience.org/resource/SIO_000212') , RDF::URI.new('http://semanticscience.org/resource/SIO_000900') => RDF::URI.new('http://semanticscience.org/resource/SIO_000008') , RDF::URI.new('http://semanticscience.org/resource/SIO_000901') => RDF::URI.new('http://semanticscience.org/resource/SIO_000011') , RDF::URI.new('http://semanticscience.org/resource/SIO_000905') => RDF::URI.new('http://semanticscience.org/resource/SIO_000291') , RDF::URI.new('http://semanticscience.org/resource/SIO_000970') => RDF::URI.new('http://semanticscience.org/resource/SIO_000975') , RDF::URI.new('http://semanticscience.org/resource/SIO_000971') => RDF::URI.new('http://semanticscience.org/resource/SIO_000974') , RDF::URI.new('http://semanticscience.org/resource/SIO_000972') => RDF::URI.new('http://semanticscience.org/resource/SIO_000974') , RDF::URI.new('http://semanticscience.org/resource/SIO_000973') => RDF::URI.new('http://semanticscience.org/resource/SIO_000975') , RDF::URI.new('http://semanticscience.org/resource/SIO_000974') => RDF::URI.new('http://semanticscience.org/resource/SIO_000053') , RDF::URI.new('http://semanticscience.org/resource/SIO_000975') => RDF::URI.new('http://semanticscience.org/resource/SIO_000093') , RDF::URI.new('http://semanticscience.org/resource/SIO_001096') => RDF::URI.new('http://semanticscience.org/resource/SIO_000272') , RDF::URI.new('http://semanticscience.org/resource/SIO_001097') => RDF::URI.new('http://semanticscience.org/resource/SIO_000272') , RDF::URI.new('http://semanticscience.org/resource/SIO_001098') => RDF::URI.new('http://semanticscience.org/resource/SIO_000272') , RDF::URI.new('http://semanticscience.org/resource/SIO_001101') => RDF::URI.new('http://semanticscience.org/resource/SIO_000709') , RDF::URI.new('http://semanticscience.org/resource/SIO_001154') => RDF::URI.new('http://semanticscience.org/resource/SIO_000294') , RDF::URI.new('http://semanticscience.org/resource/SIO_001155') => RDF::URI.new('http://semanticscience.org/resource/SIO_000352') , RDF::URI.new('http://semanticscience.org/resource/SIO_001156') => RDF::URI.new('http://semanticscience.org/resource/SIO_000294') , RDF::URI.new('http://semanticscience.org/resource/SIO_001157') => RDF::URI.new('http://semanticscience.org/resource/SIO_000352') , RDF::URI.new('http://semanticscience.org/resource/SIO_001158') => RDF::URI.new('http://semanticscience.org/resource/SIO_000132') , RDF::URI.new('http://semanticscience.org/resource/SIO_001159') => RDF::URI.new('http://semanticscience.org/resource/SIO_000062') , RDF::URI.new('http://semanticscience.org/resource/SIO_010078') => RDF::URI.new('http://semanticscience.org/resource/SIO_000338') , RDF::URI.new('http://semanticscience.org/resource/SIO_010079') => RDF::URI.new('http://semanticscience.org/resource/SIO_000339') , RDF::URI.new('http://semanticscience.org/resource/SIO_010080') => RDF::URI.new('http://semanticscience.org/resource/SIO_010078') , RDF::URI.new('http://semanticscience.org/resource/SIO_010081') => RDF::URI.new('http://semanticscience.org/resource/SIO_010079') , RDF::URI.new('http://semanticscience.org/resource/SIO_010082') => RDF::URI.new('http://semanticscience.org/resource/SIO_010078') , RDF::URI.new('http://semanticscience.org/resource/SIO_010083') => RDF::URI.new('http://semanticscience.org/resource/SIO_010079') , RDF::URI.new('http://semanticscience.org/resource/SIO_010302') => RDF::URI.new('http://semanticscience.org/resource/SIO_000272') , RDF::URI.new('http://semanticscience.org/resource/SIO_000009') => RDF::URI.new('http://semanticscience.org/resource/SIO_000015') , RDF::URI.new('http://semanticscience.org/resource/SIO_000012') => RDF::URI.new('http://semanticscience.org/resource/SIO_000620') , RDF::URI.new('http://semanticscience.org/resource/SIO_000013') => RDF::URI.new('http://semanticscience.org/resource/SIO_000056') , RDF::URI.new('http://semanticscience.org/resource/SIO_000016') => RDF::URI.new('http://semanticscience.org/resource/SIO_000340') , RDF::URI.new('http://semanticscience.org/resource/SIO_000017') => RDF::URI.new('http://semanticscience.org/resource/SIO_000112') , RDF::URI.new('http://semanticscience.org/resource/SIO_000019') => RDF::URI.new('http://semanticscience.org/resource/SIO_000370') , RDF::URI.new('http://semanticscience.org/resource/SIO_000031') => RDF::URI.new('http://semanticscience.org/resource/SIO_000418') , RDF::URI.new('http://semanticscience.org/resource/SIO_000032') => RDF::URI.new('http://semanticscience.org/resource/SIO_000418') , RDF::URI.new('http://semanticscience.org/resource/SIO_000034') => RDF::URI.new('http://semanticscience.org/resource/SIO_000033') , RDF::URI.new('http://semanticscience.org/resource/SIO_000035') => RDF::URI.new('http://semanticscience.org/resource/SIO_000033') , RDF::URI.new('http://semanticscience.org/resource/SIO_000036') => RDF::URI.new('http://semanticscience.org/resource/SIO_000959') , RDF::URI.new('http://semanticscience.org/resource/SIO_000038') => RDF::URI.new('http://semanticscience.org/resource/SIO_000037') , RDF::URI.new('http://semanticscience.org/resource/SIO_000039') => RDF::URI.new('http://semanticscience.org/resource/SIO_000038') , RDF::URI.new('http://semanticscience.org/resource/SIO_000040') => RDF::URI.new('http://semanticscience.org/resource/SIO_000790') , RDF::URI.new('http://semanticscience.org/resource/SIO_000041') => RDF::URI.new('http://semanticscience.org/resource/SIO_000038') , RDF::URI.new('http://semanticscience.org/resource/SIO_000042') => RDF::URI.new('http://semanticscience.org/resource/SIO_000038') , RDF::URI.new('http://semanticscience.org/resource/SIO_000043') => RDF::URI.new('http://semanticscience.org/resource/SIO_000039') , RDF::URI.new('http://semanticscience.org/resource/SIO_000044') => RDF::URI.new('http://semanticscience.org/resource/SIO_000037') , RDF::URI.new('http://semanticscience.org/resource/SIO_000045') => RDF::URI.new('http://semanticscience.org/resource/SIO_000044') , RDF::URI.new('http://semanticscience.org/resource/SIO_000046') => RDF::URI.new('http://semanticscience.org/resource/SIO_000044') , RDF::URI.new('http://semanticscience.org/resource/SIO_000047') => RDF::URI.new('http://semanticscience.org/resource/SIO_000046') , RDF::URI.new('http://semanticscience.org/resource/SIO_000048') => RDF::URI.new('http://semanticscience.org/resource/SIO_000037') , RDF::URI.new('http://semanticscience.org/resource/SIO_000049') => RDF::URI.new('http://semanticscience.org/resource/SIO_000048') , RDF::URI.new('http://semanticscience.org/resource/SIO_000051') => RDF::URI.new('http://semanticscience.org/resource/SIO_000026') , RDF::URI.new('http://semanticscience.org/resource/SIO_000055') => RDF::URI.new('http://semanticscience.org/resource/SIO_000026') , RDF::URI.new('http://semanticscience.org/resource/SIO_000057') => RDF::URI.new('http://semanticscience.org/resource/SIO_000056') , RDF::URI.new('http://semanticscience.org/resource/SIO_000071') => RDF::URI.new('http://semanticscience.org/resource/SIO_000070') , RDF::URI.new('http://semanticscience.org/resource/SIO_000072') => RDF::URI.new('http://semanticscience.org/resource/SIO_000071') , RDF::URI.new('http://semanticscience.org/resource/SIO_000073') => RDF::URI.new('http://semanticscience.org/resource/SIO_000071') , RDF::URI.new('http://semanticscience.org/resource/SIO_000074') => RDF::URI.new('http://semanticscience.org/resource/SIO_000052') , RDF::URI.new('http://semanticscience.org/resource/SIO_000075') => RDF::URI.new('http://semanticscience.org/resource/SIO_000015') , RDF::URI.new('http://semanticscience.org/resource/SIO_000076') => RDF::URI.new('http://semanticscience.org/resource/SIO_000091') , RDF::URI.new('http://semanticscience.org/resource/SIO_000077') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000079') => RDF::URI.new('http://semanticscience.org/resource/SIO_000078') , RDF::URI.new('http://semanticscience.org/resource/SIO_000080') => RDF::URI.new('http://semanticscience.org/resource/SIO_000612') , RDF::URI.new('http://semanticscience.org/resource/SIO_000081') => RDF::URI.new('http://semanticscience.org/resource/SIO_000080') , RDF::URI.new('http://semanticscience.org/resource/SIO_000082') => RDF::URI.new('http://semanticscience.org/resource/SIO_000081') , RDF::URI.new('http://semanticscience.org/resource/SIO_000083') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000085') => RDF::URI.new('http://semanticscience.org/resource/SIO_000113') , RDF::URI.new('http://semanticscience.org/resource/SIO_000087') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000094') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000097') => RDF::URI.new('http://semanticscience.org/resource/SIO_000602') , RDF::URI.new('http://semanticscience.org/resource/SIO_000098') => RDF::URI.new('http://semanticscience.org/resource/SIO_000097') , RDF::URI.new('http://semanticscience.org/resource/SIO_000099') => RDF::URI.new('http://semanticscience.org/resource/SIO_000097') , RDF::URI.new('http://semanticscience.org/resource/SIO_000100') => RDF::URI.new('http://semanticscience.org/resource/SIO_000097') , RDF::URI.new('http://semanticscience.org/resource/SIO_000101') => RDF::URI.new('http://semanticscience.org/resource/SIO_000097') , RDF::URI.new('http://semanticscience.org/resource/SIO_000102') => RDF::URI.new('http://semanticscience.org/resource/SIO_000101') , RDF::URI.new('http://semanticscience.org/resource/SIO_000103') => RDF::URI.new('http://semanticscience.org/resource/SIO_000097') , RDF::URI.new('http://semanticscience.org/resource/SIO_000104') => RDF::URI.new('http://semanticscience.org/resource/SIO_000078') , RDF::URI.new('http://semanticscience.org/resource/SIO_000106') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000107') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000108') => RDF::URI.new('http://semanticscience.org/resource/SIO_000078') , RDF::URI.new('http://semanticscience.org/resource/SIO_000109') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000113') => RDF::URI.new('http://semanticscience.org/resource/SIO_000483') , RDF::URI.new('http://semanticscience.org/resource/SIO_000117') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000118') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000119') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000120') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000121') => RDF::URI.new('http://semanticscience.org/resource/SIO_000162') , RDF::URI.new('http://semanticscience.org/resource/SIO_000122') => RDF::URI.new('http://semanticscience.org/resource/SIO_000342') , RDF::URI.new('http://semanticscience.org/resource/SIO_000123') => RDF::URI.new('http://semanticscience.org/resource/SIO_000342') , RDF::URI.new('http://semanticscience.org/resource/SIO_000124') => RDF::URI.new('http://semanticscience.org/resource/SIO_000342') , RDF::URI.new('http://semanticscience.org/resource/SIO_000125') => RDF::URI.new('http://semanticscience.org/resource/SIO_000342') , RDF::URI.new('http://semanticscience.org/resource/SIO_000127') => RDF::URI.new('http://semanticscience.org/resource/SIO_000094') , RDF::URI.new('http://semanticscience.org/resource/SIO_000129') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000130') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000131') => RDF::URI.new('http://semanticscience.org/resource/SIO_000130') , RDF::URI.new('http://semanticscience.org/resource/SIO_000133') => RDF::URI.new('http://semanticscience.org/resource/SIO_000275') , RDF::URI.new('http://semanticscience.org/resource/SIO_000135') => RDF::URI.new('http://semanticscience.org/resource/SIO_000136') , RDF::URI.new('http://semanticscience.org/resource/SIO_000137') => RDF::URI.new('http://semanticscience.org/resource/SIO_000326') , RDF::URI.new('http://semanticscience.org/resource/SIO_000138') => RDF::URI.new('http://semanticscience.org/resource/SIO_000289') , RDF::URI.new('http://semanticscience.org/resource/SIO_000140') => RDF::URI.new('http://semanticscience.org/resource/SIO_000101') , RDF::URI.new('http://semanticscience.org/resource/SIO_000141') => RDF::URI.new('http://semanticscience.org/resource/SIO_000316') , RDF::URI.new('http://semanticscience.org/resource/SIO_000142') => RDF::URI.new('http://semanticscience.org/resource/SIO_000141') , RDF::URI.new('http://semanticscience.org/resource/SIO_000143') => RDF::URI.new('http://semanticscience.org/resource/SIO_000141') , RDF::URI.new('http://semanticscience.org/resource/SIO_000144') => RDF::URI.new('http://semanticscience.org/resource/SIO_000920') , RDF::URI.new('http://semanticscience.org/resource/SIO_000147') => RDF::URI.new('http://semanticscience.org/resource/SIO_000133') , RDF::URI.new('http://semanticscience.org/resource/SIO_000148') => RDF::URI.new('http://semanticscience.org/resource/SIO_000651') , RDF::URI.new('http://semanticscience.org/resource/SIO_000151') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000152') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000153') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000154') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000155') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000156') => RDF::URI.new('http://semanticscience.org/resource/SIO_000106') , RDF::URI.new('http://semanticscience.org/resource/SIO_000157') => RDF::URI.new('http://semanticscience.org/resource/SIO_000106') , RDF::URI.new('http://semanticscience.org/resource/SIO_000158') => RDF::URI.new('http://semanticscience.org/resource/SIO_000295') , RDF::URI.new('http://semanticscience.org/resource/SIO_000159') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000160') => RDF::URI.new('http://semanticscience.org/resource/SIO_000162') , RDF::URI.new('http://semanticscience.org/resource/SIO_000161') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000162') => RDF::URI.new('http://semanticscience.org/resource/SIO_000295') , RDF::URI.new('http://semanticscience.org/resource/SIO_000163') => RDF::URI.new('http://semanticscience.org/resource/SIO_000162') , RDF::URI.new('http://semanticscience.org/resource/SIO_000164') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000165') => RDF::URI.new('http://semanticscience.org/resource/SIO_000087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000166') => RDF::URI.new('http://semanticscience.org/resource/SIO_000165') , RDF::URI.new('http://semanticscience.org/resource/SIO_000167') => RDF::URI.new('http://semanticscience.org/resource/SIO_000165') , RDF::URI.new('http://semanticscience.org/resource/SIO_000168') => RDF::URI.new('http://semanticscience.org/resource/SIO_000165') , RDF::URI.new('http://semanticscience.org/resource/SIO_000169') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000170') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000171') => RDF::URI.new('http://semanticscience.org/resource/SIO_000651') , RDF::URI.new('http://semanticscience.org/resource/SIO_000172') => RDF::URI.new('http://semanticscience.org/resource/SIO_000328') , RDF::URI.new('http://semanticscience.org/resource/SIO_000173') => RDF::URI.new('http://semanticscience.org/resource/SIO_000287') , RDF::URI.new('http://semanticscience.org/resource/SIO_000174') => RDF::URI.new('http://semanticscience.org/resource/SIO_000171') , RDF::URI.new('http://semanticscience.org/resource/SIO_000175') => RDF::URI.new('http://semanticscience.org/resource/SIO_000185') , RDF::URI.new('http://semanticscience.org/resource/SIO_000176') => RDF::URI.new('http://semanticscience.org/resource/SIO_000171') , RDF::URI.new('http://semanticscience.org/resource/SIO_000177') => RDF::URI.new('http://semanticscience.org/resource/SIO_000944') , RDF::URI.new('http://semanticscience.org/resource/SIO_000178') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_000179') => RDF::URI.new('http://semanticscience.org/resource/SIO_000651') , RDF::URI.new('http://semanticscience.org/resource/SIO_000180') => RDF::URI.new('http://semanticscience.org/resource/SIO_000179') , RDF::URI.new('http://semanticscience.org/resource/SIO_000181') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000182') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000183') => RDF::URI.new('http://semanticscience.org/resource/SIO_000116') , RDF::URI.new('http://semanticscience.org/resource/SIO_000184') => RDF::URI.new('http://semanticscience.org/resource/SIO_000183') , RDF::URI.new('http://semanticscience.org/resource/SIO_000185') => RDF::URI.new('http://semanticscience.org/resource/SIO_000179') , RDF::URI.new('http://semanticscience.org/resource/SIO_000186') => RDF::URI.new('http://semanticscience.org/resource/SIO_000653') , RDF::URI.new('http://semanticscience.org/resource/SIO_000188') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000189') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000190') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000191') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000192') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000193') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000194') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000195') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000196') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000197') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000198') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000199') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000200') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000201') => RDF::URI.new('http://semanticscience.org/resource/SIO_000111') , RDF::URI.new('http://semanticscience.org/resource/SIO_000220') => RDF::URI.new('http://semanticscience.org/resource/SIO_000238') , RDF::URI.new('http://semanticscience.org/resource/SIO_000237') => RDF::URI.new('http://semanticscience.org/resource/SIO_000179') , RDF::URI.new('http://semanticscience.org/resource/SIO_000238') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000239') => RDF::URI.new('http://semanticscience.org/resource/SIO_000238') , RDF::URI.new('http://semanticscience.org/resource/SIO_000261') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_000262') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_000263') => RDF::URI.new('http://semanticscience.org/resource/SIO_000259') , RDF::URI.new('http://semanticscience.org/resource/SIO_000264') => RDF::URI.new('http://semanticscience.org/resource/SIO_000259') , RDF::URI.new('http://semanticscience.org/resource/SIO_000268') => RDF::URI.new('http://semanticscience.org/resource/SIO_000436') , RDF::URI.new('http://semanticscience.org/resource/SIO_000276') => RDF::URI.new('http://semanticscience.org/resource/SIO_000006') , RDF::URI.new('http://semanticscience.org/resource/SIO_000280') => RDF::URI.new('http://semanticscience.org/resource/SIO_000238') , RDF::URI.new('http://semanticscience.org/resource/SIO_000281') => RDF::URI.new('http://semanticscience.org/resource/SIO_000238') , RDF::URI.new('http://semanticscience.org/resource/SIO_000282') => RDF::URI.new('http://semanticscience.org/resource/SIO_000280') , RDF::URI.new('http://semanticscience.org/resource/SIO_000284') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_000285') => RDF::URI.new('http://semanticscience.org/resource/SIO_000012') , RDF::URI.new('http://semanticscience.org/resource/SIO_000287') => RDF::URI.new('http://semanticscience.org/resource/SIO_000009') , RDF::URI.new('http://semanticscience.org/resource/SIO_000290') => RDF::URI.new('http://semanticscience.org/resource/SIO_000285') , RDF::URI.new('http://semanticscience.org/resource/SIO_000297') => RDF::URI.new('http://semanticscience.org/resource/SIO_000612') , RDF::URI.new('http://semanticscience.org/resource/SIO_000301') => RDF::URI.new('http://semanticscience.org/resource/SIO_000082') , RDF::URI.new('http://semanticscience.org/resource/SIO_000302') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000304') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000305') => RDF::URI.new('http://semanticscience.org/resource/SIO_000613') , RDF::URI.new('http://semanticscience.org/resource/SIO_000306') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_000307') => RDF::URI.new('http://semanticscience.org/resource/SIO_000005') , RDF::URI.new('http://semanticscience.org/resource/SIO_000308') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_000309') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_000316') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_000317') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_000318') => RDF::URI.new('http://semanticscience.org/resource/SIO_000013') , RDF::URI.new('http://semanticscience.org/resource/SIO_000319') => RDF::URI.new('http://semanticscience.org/resource/SIO_000013') , RDF::URI.new('http://semanticscience.org/resource/SIO_000320') => RDF::URI.new('http://semanticscience.org/resource/SIO_000317') , RDF::URI.new('http://semanticscience.org/resource/SIO_000321') => RDF::URI.new('http://semanticscience.org/resource/SIO_000320') , RDF::URI.new('http://semanticscience.org/resource/SIO_000326') => RDF::URI.new('http://semanticscience.org/resource/SIO_000275') , RDF::URI.new('http://semanticscience.org/resource/SIO_000327') => RDF::URI.new('http://semanticscience.org/resource/SIO_000320') , RDF::URI.new('http://semanticscience.org/resource/SIO_000329') => RDF::URI.new('http://semanticscience.org/resource/SIO_000320') , RDF::URI.new('http://semanticscience.org/resource/SIO_000330') => RDF::URI.new('http://semanticscience.org/resource/SIO_000320') , RDF::URI.new('http://semanticscience.org/resource/SIO_000331') => RDF::URI.new('http://semanticscience.org/resource/SIO_000129') , RDF::URI.new('http://semanticscience.org/resource/SIO_000343') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000344') => RDF::URI.new('http://semanticscience.org/resource/SIO_000639') , RDF::URI.new('http://semanticscience.org/resource/SIO_000345') => RDF::URI.new('http://semanticscience.org/resource/SIO_000378') , RDF::URI.new('http://semanticscience.org/resource/SIO_000346') => RDF::URI.new('http://semanticscience.org/resource/SIO_000351') , RDF::URI.new('http://semanticscience.org/resource/SIO_000347') => RDF::URI.new('http://semanticscience.org/resource/SIO_000374') , RDF::URI.new('http://semanticscience.org/resource/SIO_000348') => RDF::URI.new('http://semanticscience.org/resource/SIO_000347') , RDF::URI.new('http://semanticscience.org/resource/SIO_000349') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000350') => RDF::URI.new('http://semanticscience.org/resource/SIO_001087') , RDF::URI.new('http://semanticscience.org/resource/SIO_000351') => RDF::URI.new('http://semanticscience.org/resource/SIO_000385') , RDF::URI.new('http://semanticscience.org/resource/SIO_000353') => RDF::URI.new('http://semanticscience.org/resource/SIO_000639') , RDF::URI.new('http://semanticscience.org/resource/SIO_000354') => RDF::URI.new('http://semanticscience.org/resource/SIO_000112') , RDF::URI.new('http://semanticscience.org/resource/SIO_000357') => RDF::URI.new('http://semanticscience.org/resource/SIO_010019') , RDF::URI.new('http://semanticscience.org/resource/SIO_000358') => RDF::URI.new('http://semanticscience.org/resource/SIO_000825') , RDF::URI.new('http://semanticscience.org/resource/SIO_000359') => RDF::URI.new('http://semanticscience.org/resource/SIO_000337') , RDF::URI.new('http://semanticscience.org/resource/SIO_000366') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000367') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000368') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000371') => RDF::URI.new('http://semanticscience.org/resource/SIO_000408') , RDF::URI.new('http://semanticscience.org/resource/SIO_000372') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000373') => RDF::URI.new('http://semanticscience.org/resource/SIO_000346') , RDF::URI.new('http://semanticscience.org/resource/SIO_000374') => RDF::URI.new('http://semanticscience.org/resource/SIO_000385') , RDF::URI.new('http://semanticscience.org/resource/SIO_000375') => RDF::URI.new('http://semanticscience.org/resource/SIO_000351') , RDF::URI.new('http://semanticscience.org/resource/SIO_000376') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000377') => RDF::URI.new('http://semanticscience.org/resource/SIO_000378') , RDF::URI.new('http://semanticscience.org/resource/SIO_000378') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000379') => RDF::URI.new('http://semanticscience.org/resource/SIO_001055') , RDF::URI.new('http://semanticscience.org/resource/SIO_000380') => RDF::URI.new('http://semanticscience.org/resource/SIO_000392') , RDF::URI.new('http://semanticscience.org/resource/SIO_000381') => RDF::URI.new('http://semanticscience.org/resource/SIO_000380') , RDF::URI.new('http://semanticscience.org/resource/SIO_000382') => RDF::URI.new('http://semanticscience.org/resource/SIO_000349') , RDF::URI.new('http://semanticscience.org/resource/SIO_000383') => RDF::URI.new('http://semanticscience.org/resource/SIO_000351') , RDF::URI.new('http://semanticscience.org/resource/SIO_000384') => RDF::URI.new('http://semanticscience.org/resource/SIO_000374') , RDF::URI.new('http://semanticscience.org/resource/SIO_000385') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000386') => RDF::URI.new('http://semanticscience.org/resource/SIO_000350') , RDF::URI.new('http://semanticscience.org/resource/SIO_000387') => RDF::URI.new('http://semanticscience.org/resource/SIO_000350') , RDF::URI.new('http://semanticscience.org/resource/SIO_000388') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000389') => RDF::URI.new('http://semanticscience.org/resource/SIO_000349') , RDF::URI.new('http://semanticscience.org/resource/SIO_000390') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000392') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000393') => RDF::URI.new('http://semanticscience.org/resource/SIO_000498') , RDF::URI.new('http://semanticscience.org/resource/SIO_000395') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000396') => RDF::URI.new('http://semanticscience.org/resource/SIO_000602') , RDF::URI.new('http://semanticscience.org/resource/SIO_000397') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000399') => RDF::URI.new('http://semanticscience.org/resource/SIO_000498') , RDF::URI.new('http://semanticscience.org/resource/SIO_000400') => RDF::URI.new('http://semanticscience.org/resource/SIO_000072') , RDF::URI.new('http://semanticscience.org/resource/SIO_000401') => RDF::URI.new('http://semanticscience.org/resource/SIO_000072') , RDF::URI.new('http://semanticscience.org/resource/SIO_000402') => RDF::URI.new('http://semanticscience.org/resource/SIO_000072') , RDF::URI.new('http://semanticscience.org/resource/SIO_000403') => RDF::URI.new('http://semanticscience.org/resource/SIO_000620') , RDF::URI.new('http://semanticscience.org/resource/SIO_000404') => RDF::URI.new('http://semanticscience.org/resource/SIO_000406') , RDF::URI.new('http://semanticscience.org/resource/SIO_000405') => RDF::URI.new('http://semanticscience.org/resource/SIO_000406') , RDF::URI.new('http://semanticscience.org/resource/SIO_000406') => RDF::URI.new('http://semanticscience.org/resource/SIO_000498') , RDF::URI.new('http://semanticscience.org/resource/SIO_000407') => RDF::URI.new('http://semanticscience.org/resource/SIO_000536') , RDF::URI.new('http://semanticscience.org/resource/SIO_000408') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000409') => RDF::URI.new('http://semanticscience.org/resource/SIO_000014') , RDF::URI.new('http://semanticscience.org/resource/SIO_000410') => RDF::URI.new('http://semanticscience.org/resource/SIO_000828') , RDF::URI.new('http://semanticscience.org/resource/SIO_000411') => RDF::URI.new('http://semanticscience.org/resource/SIO_000828') , RDF::URI.new('http://semanticscience.org/resource/SIO_000412') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000413') => RDF::URI.new('http://semanticscience.org/resource/SIO_000414') , RDF::URI.new('http://semanticscience.org/resource/SIO_000414') => RDF::URI.new('http://semanticscience.org/resource/SIO_000370') , RDF::URI.new('http://semanticscience.org/resource/SIO_000415') => RDF::URI.new('http://semanticscience.org/resource/SIO_000413') , RDF::URI.new('http://semanticscience.org/resource/SIO_000417') => RDF::URI.new('http://semanticscience.org/resource/SIO_000391') , RDF::URI.new('http://semanticscience.org/resource/SIO_000418') => RDF::URI.new('http://semanticscience.org/resource/SIO_000391') , RDF::URI.new('http://semanticscience.org/resource/SIO_000419') => RDF::URI.new('http://semanticscience.org/resource/SIO_000080') , RDF::URI.new('http://semanticscience.org/resource/SIO_000423') => RDF::URI.new('http://semanticscience.org/resource/SIO_000083') , RDF::URI.new('http://semanticscience.org/resource/SIO_000428') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000429') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000430') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000431') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000432') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000433') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000434') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000435') => RDF::URI.new('http://semanticscience.org/resource/SIO_000417') , RDF::URI.new('http://semanticscience.org/resource/SIO_000438') => RDF::URI.new('http://semanticscience.org/resource/SIO_000790') , RDF::URI.new('http://semanticscience.org/resource/SIO_000439') => RDF::URI.new('http://semanticscience.org/resource/SIO_000056') , RDF::URI.new('http://semanticscience.org/resource/SIO_000442') => RDF::URI.new('http://semanticscience.org/resource/SIO_000083') , RDF::URI.new('http://semanticscience.org/resource/SIO_000443') => RDF::URI.new('http://semanticscience.org/resource/SIO_000083') , RDF::URI.new('http://semanticscience.org/resource/SIO_000444') => RDF::URI.new('http://semanticscience.org/resource/SIO_000443') , RDF::URI.new('http://semanticscience.org/resource/SIO_000445') => RDF::URI.new('http://semanticscience.org/resource/SIO_000443') , RDF::URI.new('http://semanticscience.org/resource/SIO_000446') => RDF::URI.new('http://semanticscience.org/resource/SIO_000443') , RDF::URI.new('http://semanticscience.org/resource/SIO_000447') => RDF::URI.new('http://semanticscience.org/resource/SIO_000083') , RDF::URI.new('http://semanticscience.org/resource/SIO_000449') => RDF::URI.new('http://semanticscience.org/resource/SIO_000448') , RDF::URI.new('http://semanticscience.org/resource/SIO_000452') => RDF::URI.new('http://semanticscience.org/resource/SIO_000451') , RDF::URI.new('http://semanticscience.org/resource/SIO_000453') => RDF::URI.new('http://semanticscience.org/resource/SIO_000451') , RDF::URI.new('http://semanticscience.org/resource/SIO_000454') => RDF::URI.new('http://semanticscience.org/resource/SIO_000451') , RDF::URI.new('http://semanticscience.org/resource/SIO_000455') => RDF::URI.new('http://semanticscience.org/resource/SIO_000450') , RDF::URI.new('http://semanticscience.org/resource/SIO_000456') => RDF::URI.new('http://semanticscience.org/resource/SIO_000455') , RDF::URI.new('http://semanticscience.org/resource/SIO_000457') => RDF::URI.new('http://semanticscience.org/resource/SIO_000455') , RDF::URI.new('http://semanticscience.org/resource/SIO_000458') => RDF::URI.new('http://semanticscience.org/resource/SIO_000450') , RDF::URI.new('http://semanticscience.org/resource/SIO_000459') => RDF::URI.new('http://semanticscience.org/resource/SIO_000458') , RDF::URI.new('http://semanticscience.org/resource/SIO_000460') => RDF::URI.new('http://semanticscience.org/resource/SIO_000458') , RDF::URI.new('http://semanticscience.org/resource/SIO_000461') => RDF::URI.new('http://semanticscience.org/resource/SIO_000458') , RDF::URI.new('http://semanticscience.org/resource/SIO_000462') => RDF::URI.new('http://semanticscience.org/resource/SIO_000461') , RDF::URI.new('http://semanticscience.org/resource/SIO_000463') => RDF::URI.new('http://semanticscience.org/resource/SIO_000461') , RDF::URI.new('http://semanticscience.org/resource/SIO_000464') => RDF::URI.new('http://semanticscience.org/resource/SIO_000150') , RDF::URI.new('http://semanticscience.org/resource/SIO_000466') => RDF::URI.new('http://semanticscience.org/resource/SIO_000742') , RDF::URI.new('http://semanticscience.org/resource/SIO_000467') => RDF::URI.new('http://semanticscience.org/resource/SIO_000743') , RDF::URI.new('http://semanticscience.org/resource/SIO_000468') => RDF::URI.new('http://semanticscience.org/resource/SIO_000448') , RDF::URI.new('http://semanticscience.org/resource/SIO_000470') => RDF::URI.new('http://semanticscience.org/resource/SIO_000185') , RDF::URI.new('http://semanticscience.org/resource/SIO_000471') => RDF::URI.new('http://semanticscience.org/resource/SIO_000185') , RDF::URI.new('http://semanticscience.org/resource/SIO_000472') => RDF::URI.new('http://semanticscience.org/resource/SIO_000069') , RDF::URI.new('http://semanticscience.org/resource/SIO_000475') => RDF::URI.new('http://semanticscience.org/resource/SIO_000026') , RDF::URI.new('http://semanticscience.org/resource/SIO_000478') => RDF::URI.new('http://semanticscience.org/resource/SIO_000479') , RDF::URI.new('http://semanticscience.org/resource/SIO_000479') => RDF::URI.new('http://semanticscience.org/resource/SIO_000721') , RDF::URI.new('http://semanticscience.org/resource/SIO_000480') => RDF::URI.new('http://semanticscience.org/resource/SIO_000478') , RDF::URI.new('http://semanticscience.org/resource/SIO_000481') => RDF::URI.new('http://semanticscience.org/resource/SIO_000478') , RDF::URI.new('http://semanticscience.org/resource/SIO_000485') => RDF::URI.new('http://semanticscience.org/resource/SIO_010375') , RDF::URI.new('http://semanticscience.org/resource/SIO_000486') => RDF::URI.new('http://semanticscience.org/resource/SIO_010375') , RDF::URI.new('http://semanticscience.org/resource/SIO_000487') => RDF::URI.new('http://semanticscience.org/resource/SIO_010375') , RDF::URI.new('http://semanticscience.org/resource/SIO_000488') => RDF::URI.new('http://semanticscience.org/resource/SIO_010375') , RDF::URI.new('http://semanticscience.org/resource/SIO_000489') => RDF::URI.new('http://semanticscience.org/resource/SIO_010376') , RDF::URI.new('http://semanticscience.org/resource/SIO_000492') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000493') => RDF::URI.new('http://semanticscience.org/resource/SIO_000113') , RDF::URI.new('http://semanticscience.org/resource/SIO_000494') => RDF::URI.new('http://semanticscience.org/resource/SIO_000701') , RDF::URI.new('http://semanticscience.org/resource/SIO_000498') => RDF::URI.new('http://semanticscience.org/resource/SIO_000485') , RDF::URI.new('http://semanticscience.org/resource/SIO_000499') => RDF::URI.new('http://semanticscience.org/resource/SIO_000536') , RDF::URI.new('http://semanticscience.org/resource/SIO_000505') => RDF::URI.new('http://semanticscience.org/resource/SIO_000506') , RDF::URI.new('http://semanticscience.org/resource/SIO_000506') => RDF::URI.new('http://semanticscience.org/resource/SIO_000015') , RDF::URI.new('http://semanticscience.org/resource/SIO_000507') => RDF::URI.new('http://semanticscience.org/resource/SIO_000506') , RDF::URI.new('http://semanticscience.org/resource/SIO_000508') => RDF::URI.new('http://semanticscience.org/resource/SIO_000532') , RDF::URI.new('http://semanticscience.org/resource/SIO_000509') => RDF::URI.new('http://semanticscience.org/resource/SIO_000532') , RDF::URI.new('http://semanticscience.org/resource/SIO_000511') => RDF::URI.new('http://semanticscience.org/resource/SIO_000608') , RDF::URI.new('http://semanticscience.org/resource/SIO_000513') => RDF::URI.new('http://semanticscience.org/resource/SIO_000512') , RDF::URI.new('http://semanticscience.org/resource/SIO_000514') => RDF::URI.new('http://semanticscience.org/resource/SIO_000513') , RDF::URI.new('http://semanticscience.org/resource/SIO_000515') => RDF::URI.new('http://semanticscience.org/resource/SIO_000513') , RDF::URI.new('http://semanticscience.org/resource/SIO_000516') => RDF::URI.new('http://semanticscience.org/resource/SIO_000511') , RDF::URI.new('http://semanticscience.org/resource/SIO_000517') => RDF::URI.new('http://semanticscience.org/resource/SIO_000505') , RDF::URI.new('http://semanticscience.org/resource/SIO_000518') => RDF::URI.new('http://semanticscience.org/resource/SIO_000517') , RDF::URI.new('http://semanticscience.org/resource/SIO_000519') => RDF::URI.new('http://semanticscience.org/resource/SIO_000518') , RDF::URI.new('http://semanticscience.org/resource/SIO_000520') => RDF::URI.new('http://semanticscience.org/resource/SIO_000505') , RDF::URI.new('http://semanticscience.org/resource/SIO_000525') => RDF::URI.new('http://semanticscience.org/resource/SIO_000534') , RDF::URI.new('http://semanticscience.org/resource/SIO_000526') => RDF::URI.new('http://semanticscience.org/resource/SIO_000534') , RDF::URI.new('http://semanticscience.org/resource/SIO_000527') => RDF::URI.new('http://semanticscience.org/resource/SIO_000535') , RDF::URI.new('http://semanticscience.org/resource/SIO_000528') => RDF::URI.new('http://semanticscience.org/resource/SIO_000527') , RDF::URI.new('http://semanticscience.org/resource/SIO_000529') => RDF::URI.new('http://semanticscience.org/resource/SIO_000527') , RDF::URI.new('http://semanticscience.org/resource/SIO_000530') => RDF::URI.new('http://semanticscience.org/resource/SIO_000527') , RDF::URI.new('http://semanticscience.org/resource/SIO_000531') => RDF::URI.new('http://semanticscience.org/resource/SIO_000535') , RDF::URI.new('http://semanticscience.org/resource/SIO_000532') => RDF::URI.new('http://semanticscience.org/resource/SIO_000507') , RDF::URI.new('http://semanticscience.org/resource/SIO_000533') => RDF::URI.new('http://semanticscience.org/resource/SIO_000540') , RDF::URI.new('http://semanticscience.org/resource/SIO_000534') => RDF::URI.new('http://semanticscience.org/resource/SIO_000511') , RDF::URI.new('http://semanticscience.org/resource/SIO_000535') => RDF::URI.new('http://semanticscience.org/resource/SIO_000511') , RDF::URI.new('http://semanticscience.org/resource/SIO_000536') => RDF::URI.new('http://semanticscience.org/resource/SIO_000395') , RDF::URI.new('http://semanticscience.org/resource/SIO_000537') => RDF::URI.new('http://semanticscience.org/resource/SIO_000055') , RDF::URI.new('http://semanticscience.org/resource/SIO_000538') => RDF::URI.new('http://semanticscience.org/resource/SIO_000537') , RDF::URI.new('http://semanticscience.org/resource/SIO_000539') => RDF::URI.new('http://semanticscience.org/resource/SIO_000511') , RDF::URI.new('http://semanticscience.org/resource/SIO_000540') => RDF::URI.new('http://semanticscience.org/resource/SIO_000516') , RDF::URI.new('http://semanticscience.org/resource/SIO_000541') => RDF::URI.new('http://semanticscience.org/resource/SIO_000540') , RDF::URI.new('http://semanticscience.org/resource/SIO_000542') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000544') => RDF::URI.new('http://semanticscience.org/resource/SIO_000372') , RDF::URI.new('http://semanticscience.org/resource/SIO_000547') => RDF::URI.new('http://semanticscience.org/resource/SIO_000376') , RDF::URI.new('http://semanticscience.org/resource/SIO_000549') => RDF::URI.new('http://semanticscience.org/resource/SIO_010355') , RDF::URI.new('http://semanticscience.org/resource/SIO_000550') => RDF::URI.new('http://semanticscience.org/resource/SIO_010354') , RDF::URI.new('http://semanticscience.org/resource/SIO_000551') => RDF::URI.new('http://semanticscience.org/resource/SIO_010347') , RDF::URI.new('http://semanticscience.org/resource/SIO_000554') => RDF::URI.new('http://semanticscience.org/resource/SIO_000307') , RDF::URI.new('http://semanticscience.org/resource/SIO_000555') => RDF::URI.new('http://semanticscience.org/resource/SIO_000307') , RDF::URI.new('http://semanticscience.org/resource/SIO_000556') => RDF::URI.new('http://semanticscience.org/resource/SIO_010071') , RDF::URI.new('http://semanticscience.org/resource/SIO_000561') => RDF::URI.new('http://semanticscience.org/resource/SIO_011121') , RDF::URI.new('http://semanticscience.org/resource/SIO_000562') => RDF::URI.new('http://semanticscience.org/resource/SIO_000576') , RDF::URI.new('http://semanticscience.org/resource/SIO_000564') => RDF::URI.new('http://semanticscience.org/resource/SIO_000573') , RDF::URI.new('http://semanticscience.org/resource/SIO_000566') => RDF::URI.new('http://semanticscience.org/resource/SIO_000368') , RDF::URI.new('http://semanticscience.org/resource/SIO_000567') => RDF::URI.new('http://semanticscience.org/resource/SIO_000569') , RDF::URI.new('http://semanticscience.org/resource/SIO_000568') => RDF::URI.new('http://semanticscience.org/resource/SIO_000569') , RDF::URI.new('http://semanticscience.org/resource/SIO_000569') => RDF::URI.new('http://semanticscience.org/resource/SIO_000368') , RDF::URI.new('http://semanticscience.org/resource/SIO_000570') => RDF::URI.new('http://semanticscience.org/resource/SIO_000006') , RDF::URI.new('http://semanticscience.org/resource/SIO_000571') => RDF::URI.new('http://semanticscience.org/resource/SIO_000564') , RDF::URI.new('http://semanticscience.org/resource/SIO_000572') => RDF::URI.new('http://semanticscience.org/resource/SIO_000564') , RDF::URI.new('http://semanticscience.org/resource/SIO_000573') => RDF::URI.new('http://semanticscience.org/resource/SIO_000570') , RDF::URI.new('http://semanticscience.org/resource/SIO_000574') => RDF::URI.new('http://semanticscience.org/resource/SIO_000570') , RDF::URI.new('http://semanticscience.org/resource/SIO_000576') => RDF::URI.new('http://semanticscience.org/resource/SIO_010283') , RDF::URI.new('http://semanticscience.org/resource/SIO_000577') => RDF::URI.new('http://semanticscience.org/resource/SIO_010284') , RDF::URI.new('http://semanticscience.org/resource/SIO_000578') => RDF::URI.new('http://semanticscience.org/resource/SIO_010284') , RDF::URI.new('http://semanticscience.org/resource/SIO_000579') => RDF::URI.new('http://semanticscience.org/resource/SIO_000578') , RDF::URI.new('http://semanticscience.org/resource/SIO_000580') => RDF::URI.new('http://semanticscience.org/resource/SIO_000578') , RDF::URI.new('http://semanticscience.org/resource/SIO_000581') => RDF::URI.new('http://semanticscience.org/resource/SIO_000574') , RDF::URI.new('http://semanticscience.org/resource/SIO_000585') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_000587') => RDF::URI.new('http://semanticscience.org/resource/SIO_000588') , RDF::URI.new('http://semanticscience.org/resource/SIO_000589') => RDF::URI.new('http://semanticscience.org/resource/SIO_000593') , RDF::URI.new('http://semanticscience.org/resource/SIO_000590') => RDF::URI.new('http://semanticscience.org/resource/SIO_000559') , RDF::URI.new('http://semanticscience.org/resource/SIO_000596') => RDF::URI.new('http://semanticscience.org/resource/SIO_000956') , RDF::URI.new('http://semanticscience.org/resource/SIO_000597') => RDF::URI.new('http://semanticscience.org/resource/SIO_000598') , RDF::URI.new('http://semanticscience.org/resource/SIO_000598') => RDF::URI.new('http://semanticscience.org/resource/SIO_000596') , RDF::URI.new('http://semanticscience.org/resource/SIO_000600') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_000602') => RDF::URI.new('http://semanticscience.org/resource/SIO_000015') , RDF::URI.new('http://semanticscience.org/resource/SIO_000605') => RDF::URI.new('http://semanticscience.org/resource/SIO_000650') , RDF::URI.new('http://semanticscience.org/resource/SIO_000608') => RDF::URI.new('http://semanticscience.org/resource/SIO_000506') , RDF::URI.new('http://semanticscience.org/resource/SIO_000613') => RDF::URI.new('http://semanticscience.org/resource/SIO_000788') , RDF::URI.new('http://semanticscience.org/resource/SIO_000619') => RDF::URI.new('http://semanticscience.org/resource/SIO_000012') , RDF::URI.new('http://semanticscience.org/resource/SIO_000620') => RDF::URI.new('http://semanticscience.org/resource/SIO_000010') , RDF::URI.new('http://semanticscience.org/resource/SIO_000621') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_000622') => RDF::URI.new('http://semanticscience.org/resource/SIO_000129') , RDF::URI.new('http://semanticscience.org/resource/SIO_000623') => RDF::URI.new('http://semanticscience.org/resource/SIO_000129') , RDF::URI.new('http://semanticscience.org/resource/SIO_000624') => RDF::URI.new('http://semanticscience.org/resource/SIO_010441') , RDF::URI.new('http://semanticscience.org/resource/SIO_000625') => RDF::URI.new('http://semanticscience.org/resource/SIO_000600') , RDF::URI.new('http://semanticscience.org/resource/SIO_000626') => RDF::URI.new('http://semanticscience.org/resource/SIO_000625') , RDF::URI.new('http://semanticscience.org/resource/SIO_000638') => RDF::URI.new('http://semanticscience.org/resource/SIO_000257') , RDF::URI.new('http://semanticscience.org/resource/SIO_000639') => RDF::URI.new('http://semanticscience.org/resource/SIO_000701') , RDF::URI.new('http://semanticscience.org/resource/SIO_000640') => RDF::URI.new('http://semanticscience.org/resource/SIO_000555') , RDF::URI.new('http://semanticscience.org/resource/SIO_000648') => RDF::URI.new('http://semanticscience.org/resource/SIO_000510') , RDF::URI.new('http://semanticscience.org/resource/SIO_000649') => RDF::URI.new('http://semanticscience.org/resource/SIO_000999') , RDF::URI.new('http://semanticscience.org/resource/SIO_000650') => RDF::URI.new('http://semanticscience.org/resource/SIO_000004') , RDF::URI.new('http://semanticscience.org/resource/SIO_000651') => RDF::URI.new('http://semanticscience.org/resource/SIO_000079') , RDF::URI.new('http://semanticscience.org/resource/SIO_000660') => RDF::URI.new('http://semanticscience.org/resource/SIO_000019') , RDF::URI.new('http://semanticscience.org/resource/SIO_000661') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000662') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000663') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000664') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000665') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000666') => RDF::URI.new('http://semanticscience.org/resource/SIO_000415') , RDF::URI.new('http://semanticscience.org/resource/SIO_000667') => RDF::URI.new('http://semanticscience.org/resource/SIO_000649') , RDF::URI.new('http://semanticscience.org/resource/SIO_000669') => RDF::URI.new('http://semanticscience.org/resource/SIO_000418') , RDF::URI.new('http://semanticscience.org/resource/SIO_000670') => RDF::URI.new('http://semanticscience.org/resource/SIO_000418') , RDF::URI.new('http://semanticscience.org/resource/SIO_000676') => RDF::URI.new('http://semanticscience.org/resource/SIO_000016') , RDF::URI.new('http://semanticscience.org/resource/SIO_000677') => RDF::URI.new('http://semanticscience.org/resource/SIO_000016') , RDF::URI.new('http://semanticscience.org/resource/SIO_000678') => RDF::URI.new('http://semanticscience.org/resource/SIO_000016') , RDF::URI.new('http://semanticscience.org/resource/SIO_000683') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_000686') => RDF::URI.new('http://semanticscience.org/resource/SIO_000285') , RDF::URI.new('http://semanticscience.org/resource/SIO_000688') => RDF::URI.new('http://semanticscience.org/resource/SIO_000285') , RDF::URI.new('http://semanticscience.org/resource/SIO_000689') => RDF::URI.new('http://semanticscience.org/resource/SIO_010367') , RDF::URI.new('http://semanticscience.org/resource/SIO_000690') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_000693') => RDF::URI.new('http://semanticscience.org/resource/SIO_000012') , RDF::URI.new('http://semanticscience.org/resource/SIO_000698') => RDF::URI.new('http://semanticscience.org/resource/SIO_000376') , RDF::URI.new('http://semanticscience.org/resource/SIO_000700') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_000704') => RDF::URI.new('http://semanticscience.org/resource/SIO_000678') , RDF::URI.new('http://semanticscience.org/resource/SIO_000705') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_000706') => RDF::URI.new('http://semanticscience.org/resource/SIO_000676') , RDF::URI.new('http://semanticscience.org/resource/SIO_000711') => RDF::URI.new('http://semanticscience.org/resource/SIO_000706') , RDF::URI.new('http://semanticscience.org/resource/SIO_000712') => RDF::URI.new('http://semanticscience.org/resource/SIO_000706') , RDF::URI.new('http://semanticscience.org/resource/SIO_000713') => RDF::URI.new('http://semanticscience.org/resource/SIO_000712') , RDF::URI.new('http://semanticscience.org/resource/SIO_000714') => RDF::URI.new('http://semanticscience.org/resource/SIO_000712') , RDF::URI.new('http://semanticscience.org/resource/SIO_000715') => RDF::URI.new('http://semanticscience.org/resource/SIO_000712') , RDF::URI.new('http://semanticscience.org/resource/SIO_000716') => RDF::URI.new('http://semanticscience.org/resource/SIO_000498') , RDF::URI.new('http://semanticscience.org/resource/SIO_000717') => RDF::URI.new('http://semanticscience.org/resource/SIO_000712') , RDF::URI.new('http://semanticscience.org/resource/SIO_000721') => RDF::URI.new('http://semanticscience.org/resource/SIO_000678') , RDF::URI.new('http://semanticscience.org/resource/SIO_000722') => RDF::URI.new('http://semanticscience.org/resource/SIO_000725') , RDF::URI.new('http://semanticscience.org/resource/SIO_000723') => RDF::URI.new('http://semanticscience.org/resource/SIO_000724') , RDF::URI.new('http://semanticscience.org/resource/SIO_000724') => RDF::URI.new('http://semanticscience.org/resource/SIO_000353') , RDF::URI.new('http://semanticscience.org/resource/SIO_000725') => RDF::URI.new('http://semanticscience.org/resource/SIO_000696') , RDF::URI.new('http://semanticscience.org/resource/SIO_000726') => RDF::URI.new('http://semanticscience.org/resource/SIO_000706') , RDF::URI.new('http://semanticscience.org/resource/SIO_000727') => RDF::URI.new('http://semanticscience.org/resource/SIO_000726') , RDF::URI.new('http://semanticscience.org/resource/SIO_000728') => RDF::URI.new('http://semanticscience.org/resource/SIO_000730') , RDF::URI.new('http://semanticscience.org/resource/SIO_000730') => RDF::URI.new('http://semanticscience.org/resource/SIO_000115') , RDF::URI.new('http://semanticscience.org/resource/SIO_000731') => RDF::URI.new('http://semanticscience.org/resource/SIO_000115') , RDF::URI.new('http://semanticscience.org/resource/SIO_000732') => RDF::URI.new('http://semanticscience.org/resource/SIO_000728') , RDF::URI.new('http://semanticscience.org/resource/SIO_000740') => RDF::URI.new('http://semanticscience.org/resource/SIO_000608') , RDF::URI.new('http://semanticscience.org/resource/SIO_000741') => RDF::URI.new('http://semanticscience.org/resource/SIO_000465') , RDF::URI.new('http://semanticscience.org/resource/SIO_000742') => RDF::URI.new('http://semanticscience.org/resource/SIO_000741') , RDF::URI.new('http://semanticscience.org/resource/SIO_000743') => RDF::URI.new('http://semanticscience.org/resource/SIO_000741') , RDF::URI.new('http://semanticscience.org/resource/SIO_000750') => RDF::URI.new('http://semanticscience.org/resource/SIO_000602') , RDF::URI.new('http://semanticscience.org/resource/SIO_000751') => RDF::URI.new('http://semanticscience.org/resource/SIO_000555') , RDF::URI.new('http://semanticscience.org/resource/SIO_000760') => RDF::URI.new('http://semanticscience.org/resource/SIO_000755') , RDF::URI.new('http://semanticscience.org/resource/SIO_000766') => RDF::URI.new('http://semanticscience.org/resource/SIO_000328') , RDF::URI.new('http://semanticscience.org/resource/SIO_000767') => RDF::URI.new('http://semanticscience.org/resource/SIO_000013') , RDF::URI.new('http://semanticscience.org/resource/SIO_000768') => RDF::URI.new('http://semanticscience.org/resource/SIO_000179') , RDF::URI.new('http://semanticscience.org/resource/SIO_000769') => RDF::URI.new('http://semanticscience.org/resource/SIO_000052') , RDF::URI.new('http://semanticscience.org/resource/SIO_000770') => RDF::URI.new('http://semanticscience.org/resource/SIO_000052') , RDF::URI.new('http://semanticscience.org/resource/SIO_000771') => RDF::URI.new('http://semanticscience.org/resource/SIO_000088') , RDF::URI.new('http://semanticscience.org/resource/SIO_000777') => RDF::URI.new('http://semanticscience.org/resource/SIO_000639') , RDF::URI.new('http://semanticscience.org/resource/SIO_000778') => RDF::URI.new('http://semanticscience.org/resource/SIO_000378') , RDF::URI.new('http://semanticscience.org/resource/SIO_000780') => RDF::URI.new('http://semanticscience.org/resource/SIO_000690') , RDF::URI.new('http://semanticscience.org/resource/SIO_000783') => RDF::URI.new('http://semanticscience.org/resource/SIO_000370') , RDF::URI.new('http://semanticscience.org/resource/SIO_000784') => RDF::URI.new('http://semanticscience.org/resource/SIO_010029') , RDF::URI.new('http://semanticscience.org/resource/SIO_000785') => RDF::URI.new('http://semanticscience.org/resource/SIO_000136') , RDF::URI.new('http://semanticscience.org/resource/SIO_000786') => RDF::URI.new('http://semanticscience.org/resource/SIO_000078') , RDF::URI.new('http://semanticscience.org/resource/SIO_000787') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_000788') => RDF::URI.new('http://semanticscience.org/resource/SIO_000056') , RDF::URI.new('http://semanticscience.org/resource/SIO_000789') => RDF::URI.new('http://semanticscience.org/resource/SIO_000788') , RDF::URI.new('http://semanticscience.org/resource/SIO_000790') => RDF::URI.new('http://semanticscience.org/resource/SIO_000038') , RDF::URI.new('http://semanticscience.org/resource/SIO_000791') => RDF::URI.new('http://semanticscience.org/resource/SIO_000943') , RDF::URI.new('http://semanticscience.org/resource/SIO_000792') => RDF::URI.new('http://semanticscience.org/resource/SIO_000953') , RDF::URI.new('http://semanticscience.org/resource/SIO_000794') => RDF::URI.new('http://semanticscience.org/resource/SIO_000257') , RDF::URI.new('http://semanticscience.org/resource/SIO_000796') => RDF::URI.new('http://semanticscience.org/resource/SIO_000880') , RDF::URI.new('http://semanticscience.org/resource/SIO_000797') => RDF::URI.new('http://semanticscience.org/resource/SIO_000879') , RDF::URI.new('http://semanticscience.org/resource/SIO_000799') => RDF::URI.new('http://semanticscience.org/resource/SIO_000889') , RDF::URI.new('http://semanticscience.org/resource/SIO_000800') => RDF::URI.new('http://semanticscience.org/resource/SIO_000799') , RDF::URI.new('http://semanticscience.org/resource/SIO_000801') => RDF::URI.new('http://semanticscience.org/resource/SIO_000800') , RDF::URI.new('http://semanticscience.org/resource/SIO_000802') => RDF::URI.new('http://semanticscience.org/resource/SIO_000800') , RDF::URI.new('http://semanticscience.org/resource/SIO_000803') => RDF::URI.new('http://semanticscience.org/resource/SIO_000880') , RDF::URI.new('http://semanticscience.org/resource/SIO_000804') => RDF::URI.new('http://semanticscience.org/resource/SIO_000880') , RDF::URI.new('http://semanticscience.org/resource/SIO_000805') => RDF::URI.new('http://semanticscience.org/resource/SIO_010442') , RDF::URI.new('http://semanticscience.org/resource/SIO_000806') => RDF::URI.new('http://semanticscience.org/resource/SIO_010442') , RDF::URI.new('http://semanticscience.org/resource/SIO_000807') => RDF::URI.new('http://semanticscience.org/resource/SIO_000809') , RDF::URI.new('http://semanticscience.org/resource/SIO_000808') => RDF::URI.new('http://semanticscience.org/resource/SIO_000809') , RDF::URI.new('http://semanticscience.org/resource/SIO_000809') => RDF::URI.new('http://semanticscience.org/resource/SIO_000805') , RDF::URI.new('http://semanticscience.org/resource/SIO_000810') => RDF::URI.new('http://semanticscience.org/resource/SIO_000805') , RDF::URI.new('http://semanticscience.org/resource/SIO_000812') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000813') => RDF::URI.new('http://semanticscience.org/resource/SIO_000815') , RDF::URI.new('http://semanticscience.org/resource/SIO_000814') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000815') => RDF::URI.new('http://semanticscience.org/resource/SIO_000949') , RDF::URI.new('http://semanticscience.org/resource/SIO_000816') => RDF::URI.new('http://semanticscience.org/resource/SIO_000847') , RDF::URI.new('http://semanticscience.org/resource/SIO_000817') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000818') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000819') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000820') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000821') => RDF::URI.new('http://semanticscience.org/resource/SIO_000828') , RDF::URI.new('http://semanticscience.org/resource/SIO_000822') => RDF::URI.new('http://semanticscience.org/resource/SIO_000840') , RDF::URI.new('http://semanticscience.org/resource/SIO_000823') => RDF::URI.new('http://semanticscience.org/resource/SIO_000825') , RDF::URI.new('http://semanticscience.org/resource/SIO_000824') => RDF::URI.new('http://semanticscience.org/resource/SIO_000863') , RDF::URI.new('http://semanticscience.org/resource/SIO_000825') => RDF::URI.new('http://semanticscience.org/resource/SIO_000848') , RDF::URI.new('http://semanticscience.org/resource/SIO_000826') => RDF::URI.new('http://semanticscience.org/resource/SIO_000863') , RDF::URI.new('http://semanticscience.org/resource/SIO_000827') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000828') => RDF::URI.new('http://semanticscience.org/resource/SIO_000844') , RDF::URI.new('http://semanticscience.org/resource/SIO_000829') => RDF::URI.new('http://semanticscience.org/resource/SIO_000837') , RDF::URI.new('http://semanticscience.org/resource/SIO_000830') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000831') => RDF::URI.new('http://semanticscience.org/resource/SIO_000276') , RDF::URI.new('http://semanticscience.org/resource/SIO_000832') => RDF::URI.new('http://semanticscience.org/resource/SIO_000276') , RDF::URI.new('http://semanticscience.org/resource/SIO_000833') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000834') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000835') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000836') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000837') => RDF::URI.new('http://semanticscience.org/resource/SIO_000949') , RDF::URI.new('http://semanticscience.org/resource/SIO_000838') => RDF::URI.new('http://semanticscience.org/resource/SIO_000814') , RDF::URI.new('http://semanticscience.org/resource/SIO_000839') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000840') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000841') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000842') => RDF::URI.new('http://semanticscience.org/resource/SIO_000863') , RDF::URI.new('http://semanticscience.org/resource/SIO_000843') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000844') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000845') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000846') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000847') => RDF::URI.new('http://semanticscience.org/resource/SIO_000276') , RDF::URI.new('http://semanticscience.org/resource/SIO_000848') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000849') => RDF::URI.new('http://semanticscience.org/resource/SIO_000834') , RDF::URI.new('http://semanticscience.org/resource/SIO_000850') => RDF::URI.new('http://semanticscience.org/resource/SIO_000840') , RDF::URI.new('http://semanticscience.org/resource/SIO_000851') => RDF::URI.new('http://semanticscience.org/resource/SIO_000828') , RDF::URI.new('http://semanticscience.org/resource/SIO_000852') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000853') => RDF::URI.new('http://semanticscience.org/resource/SIO_000825') , RDF::URI.new('http://semanticscience.org/resource/SIO_000854') => RDF::URI.new('http://semanticscience.org/resource/SIO_000863') , RDF::URI.new('http://semanticscience.org/resource/SIO_000855') => RDF::URI.new('http://semanticscience.org/resource/SIO_000837') , RDF::URI.new('http://semanticscience.org/resource/SIO_000856') => RDF::URI.new('http://semanticscience.org/resource/SIO_000825') , RDF::URI.new('http://semanticscience.org/resource/SIO_000857') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000858') => RDF::URI.new('http://semanticscience.org/resource/SIO_000840') , RDF::URI.new('http://semanticscience.org/resource/SIO_000859') => RDF::URI.new('http://semanticscience.org/resource/SIO_000864') , RDF::URI.new('http://semanticscience.org/resource/SIO_000860') => RDF::URI.new('http://semanticscience.org/resource/SIO_000410') , RDF::URI.new('http://semanticscience.org/resource/SIO_000861') => RDF::URI.new('http://semanticscience.org/resource/SIO_000873') , RDF::URI.new('http://semanticscience.org/resource/SIO_000862') => RDF::URI.new('http://semanticscience.org/resource/SIO_000873') , RDF::URI.new('http://semanticscience.org/resource/SIO_000863') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000864') => RDF::URI.new('http://semanticscience.org/resource/SIO_000822') , RDF::URI.new('http://semanticscience.org/resource/SIO_000865') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000866') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000867') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000868') => RDF::URI.new('http://semanticscience.org/resource/SIO_000863') , RDF::URI.new('http://semanticscience.org/resource/SIO_000869') => RDF::URI.new('http://semanticscience.org/resource/SIO_000845') , RDF::URI.new('http://semanticscience.org/resource/SIO_000870') => RDF::URI.new('http://semanticscience.org/resource/SIO_000831') , RDF::URI.new('http://semanticscience.org/resource/SIO_000871') => RDF::URI.new('http://semanticscience.org/resource/SIO_000829') , RDF::URI.new('http://semanticscience.org/resource/SIO_000872') => RDF::URI.new('http://semanticscience.org/resource/SIO_000870') , RDF::URI.new('http://semanticscience.org/resource/SIO_000873') => RDF::URI.new('http://semanticscience.org/resource/SIO_000949') , RDF::URI.new('http://semanticscience.org/resource/SIO_000875') => RDF::URI.new('http://semanticscience.org/resource/SIO_000711') , RDF::URI.new('http://semanticscience.org/resource/SIO_000876') => RDF::URI.new('http://semanticscience.org/resource/SIO_000711') , RDF::URI.new('http://semanticscience.org/resource/SIO_000877') => RDF::URI.new('http://semanticscience.org/resource/SIO_000876') , RDF::URI.new('http://semanticscience.org/resource/SIO_000878') => RDF::URI.new('http://semanticscience.org/resource/SIO_000876') , RDF::URI.new('http://semanticscience.org/resource/SIO_000879') => RDF::URI.new('http://semanticscience.org/resource/SIO_000889') , RDF::URI.new('http://semanticscience.org/resource/SIO_000880') => RDF::URI.new('http://semanticscience.org/resource/SIO_000889') , RDF::URI.new('http://semanticscience.org/resource/SIO_000881') => RDF::URI.new('http://semanticscience.org/resource/SIO_000677') , RDF::URI.new('http://semanticscience.org/resource/SIO_000882') => RDF::URI.new('http://semanticscience.org/resource/SIO_000888') , RDF::URI.new('http://semanticscience.org/resource/SIO_000883') => RDF::URI.new('http://semanticscience.org/resource/SIO_000881') , RDF::URI.new('http://semanticscience.org/resource/SIO_000884') => RDF::URI.new('http://semanticscience.org/resource/SIO_000706') , RDF::URI.new('http://semanticscience.org/resource/SIO_000885') => RDF::URI.new('http://semanticscience.org/resource/SIO_000884') , RDF::URI.new('http://semanticscience.org/resource/SIO_000886') => RDF::URI.new('http://semanticscience.org/resource/SIO_000884') , RDF::URI.new('http://semanticscience.org/resource/SIO_000890') => RDF::URI.new('http://semanticscience.org/resource/SIO_000891') , RDF::URI.new('http://semanticscience.org/resource/SIO_000891') => RDF::URI.new('http://semanticscience.org/resource/SIO_000888') , RDF::URI.new('http://semanticscience.org/resource/SIO_000894') => RDF::URI.new('http://semanticscience.org/resource/SIO_000692') , RDF::URI.new('http://semanticscience.org/resource/SIO_000895') => RDF::URI.new('http://semanticscience.org/resource/SIO_000894') , RDF::URI.new('http://semanticscience.org/resource/SIO_000896') => RDF::URI.new('http://semanticscience.org/resource/SIO_000879') , RDF::URI.new('http://semanticscience.org/resource/SIO_000898') => RDF::URI.new('http://semanticscience.org/resource/SIO_000897') , RDF::URI.new('http://semanticscience.org/resource/SIO_000899') => RDF::URI.new('http://semanticscience.org/resource/SIO_010506') , RDF::URI.new('http://semanticscience.org/resource/SIO_000902') => RDF::URI.new('http://semanticscience.org/resource/SIO_000458') , RDF::URI.new('http://semanticscience.org/resource/SIO_000903') => RDF::URI.new('http://semanticscience.org/resource/SIO_000458') , RDF::URI.new('http://semanticscience.org/resource/SIO_000904') => RDF::URI.new('http://semanticscience.org/resource/SIO_000080') , RDF::URI.new('http://semanticscience.org/resource/SIO_000906') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000907') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000908') => RDF::URI.new('http://semanticscience.org/resource/SIO_000934') , RDF::URI.new('http://semanticscience.org/resource/SIO_000909') => RDF::URI.new('http://semanticscience.org/resource/SIO_000447') , RDF::URI.new('http://semanticscience.org/resource/SIO_000910') => RDF::URI.new('http://semanticscience.org/resource/SIO_000907') , RDF::URI.new('http://semanticscience.org/resource/SIO_000911') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000912') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_000913') => RDF::URI.new('http://semanticscience.org/resource/SIO_000912') , RDF::URI.new('http://semanticscience.org/resource/SIO_000914') => RDF::URI.new('http://semanticscience.org/resource/SIO_000912') , RDF::URI.new('http://semanticscience.org/resource/SIO_000920') => RDF::URI.new('http://semanticscience.org/resource/SIO_000367') , RDF::URI.new('http://semanticscience.org/resource/SIO_000921') => RDF::URI.new('http://semanticscience.org/resource/SIO_000367') , RDF::URI.new('http://semanticscience.org/resource/SIO_000922') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000923') => RDF::URI.new('http://semanticscience.org/resource/SIO_000898') , RDF::URI.new('http://semanticscience.org/resource/SIO_000924') => RDF::URI.new('http://semanticscience.org/resource/SIO_000612') , RDF::URI.new('http://semanticscience.org/resource/SIO_000926') => RDF::URI.new('http://semanticscience.org/resource/SIO_000957') , RDF::URI.new('http://semanticscience.org/resource/SIO_000927') => RDF::URI.new('http://semanticscience.org/resource/SIO_000957') , RDF::URI.new('http://semanticscience.org/resource/SIO_000928') => RDF::URI.new('http://semanticscience.org/resource/SIO_000956') , RDF::URI.new('http://semanticscience.org/resource/SIO_000929') => RDF::URI.new('http://semanticscience.org/resource/SIO_000940') , RDF::URI.new('http://semanticscience.org/resource/SIO_000930') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000931') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000932') => RDF::URI.new('http://semanticscience.org/resource/SIO_000911') , RDF::URI.new('http://semanticscience.org/resource/SIO_000933') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000934') => RDF::URI.new('http://semanticscience.org/resource/SIO_000083') , RDF::URI.new('http://semanticscience.org/resource/SIO_000935') => RDF::URI.new('http://semanticscience.org/resource/SIO_000940') , RDF::URI.new('http://semanticscience.org/resource/SIO_000936') => RDF::URI.new('http://semanticscience.org/resource/SIO_000937') , RDF::URI.new('http://semanticscience.org/resource/SIO_000937') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000938') => RDF::URI.new('http://semanticscience.org/resource/SIO_000937') , RDF::URI.new('http://semanticscience.org/resource/SIO_000939') => RDF::URI.new('http://semanticscience.org/resource/SIO_000937') , RDF::URI.new('http://semanticscience.org/resource/SIO_000940') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000941') => RDF::URI.new('http://semanticscience.org/resource/SIO_000969') , RDF::URI.new('http://semanticscience.org/resource/SIO_000942') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_000943') => RDF::URI.new('http://semanticscience.org/resource/SIO_000788') , RDF::URI.new('http://semanticscience.org/resource/SIO_000944') => RDF::URI.new('http://semanticscience.org/resource/SIO_000075') , RDF::URI.new('http://semanticscience.org/resource/SIO_000945') => RDF::URI.new('http://semanticscience.org/resource/SIO_000931') , RDF::URI.new('http://semanticscience.org/resource/SIO_000946') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000947') => RDF::URI.new('http://semanticscience.org/resource/SIO_000904') , RDF::URI.new('http://semanticscience.org/resource/SIO_000948') => RDF::URI.new('http://semanticscience.org/resource/SIO_000945') , RDF::URI.new('http://semanticscience.org/resource/SIO_000949') => RDF::URI.new('http://semanticscience.org/resource/SIO_000832') , RDF::URI.new('http://semanticscience.org/resource/SIO_000950') => RDF::URI.new('http://semanticscience.org/resource/SIO_000828') , RDF::URI.new('http://semanticscience.org/resource/SIO_000951') => RDF::URI.new('http://semanticscience.org/resource/SIO_000845') , RDF::URI.new('http://semanticscience.org/resource/SIO_000952') => RDF::URI.new('http://semanticscience.org/resource/SIO_000144') , RDF::URI.new('http://semanticscience.org/resource/SIO_000953') => RDF::URI.new('http://semanticscience.org/resource/SIO_000788') , RDF::URI.new('http://semanticscience.org/resource/SIO_000954') => RDF::URI.new('http://semanticscience.org/resource/SIO_010058') , RDF::URI.new('http://semanticscience.org/resource/SIO_000955') => RDF::URI.new('http://semanticscience.org/resource/SIO_000414') , RDF::URI.new('http://semanticscience.org/resource/SIO_000956') => RDF::URI.new('http://semanticscience.org/resource/SIO_010462') , RDF::URI.new('http://semanticscience.org/resource/SIO_000957') => RDF::URI.new('http://semanticscience.org/resource/SIO_000956') , RDF::URI.new('http://semanticscience.org/resource/SIO_000959') => RDF::URI.new('http://semanticscience.org/resource/SIO_000005') , RDF::URI.new('http://semanticscience.org/resource/SIO_000960') => RDF::URI.new('http://semanticscience.org/resource/SIO_000959') , RDF::URI.new('http://semanticscience.org/resource/SIO_000961') => RDF::URI.new('http://semanticscience.org/resource/SIO_000959') , RDF::URI.new('http://semanticscience.org/resource/SIO_000962') => RDF::URI.new('http://semanticscience.org/resource/SIO_000959') , RDF::URI.new('http://semanticscience.org/resource/SIO_000963') => RDF::URI.new('http://semanticscience.org/resource/SIO_000033') , RDF::URI.new('http://semanticscience.org/resource/SIO_000964') => RDF::URI.new('http://semanticscience.org/resource/SIO_001043') , RDF::URI.new('http://semanticscience.org/resource/SIO_000965') => RDF::URI.new('http://semanticscience.org/resource/SIO_000436') , RDF::URI.new('http://semanticscience.org/resource/SIO_000966') => RDF::URI.new('http://semanticscience.org/resource/SIO_000965') , RDF::URI.new('http://semanticscience.org/resource/SIO_000967') => RDF::URI.new('http://semanticscience.org/resource/SIO_000965') , RDF::URI.new('http://semanticscience.org/resource/SIO_000969') => RDF::URI.new('http://semanticscience.org/resource/SIO_000593') , RDF::URI.new('http://semanticscience.org/resource/SIO_000977') => RDF::URI.new('http://semanticscience.org/resource/SIO_000786') , RDF::URI.new('http://semanticscience.org/resource/SIO_000978') => RDF::URI.new('http://semanticscience.org/resource/SIO_000786') , RDF::URI.new('http://semanticscience.org/resource/SIO_000979') => RDF::URI.new('http://semanticscience.org/resource/SIO_000786') , RDF::URI.new('http://semanticscience.org/resource/SIO_000980') => RDF::URI.new('http://semanticscience.org/resource/SIO_000104') , RDF::URI.new('http://semanticscience.org/resource/SIO_000981') => RDF::URI.new('http://semanticscience.org/resource/SIO_000104') , RDF::URI.new('http://semanticscience.org/resource/SIO_000982') => RDF::URI.new('http://semanticscience.org/resource/SIO_000104') , RDF::URI.new('http://semanticscience.org/resource/SIO_000984') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_000985') => RDF::URI.new('http://semanticscience.org/resource/SIO_010035') , RDF::URI.new('http://semanticscience.org/resource/SIO_000986') => RDF::URI.new('http://semanticscience.org/resource/SIO_010035') , RDF::URI.new('http://semanticscience.org/resource/SIO_000988') => RDF::URI.new('http://semanticscience.org/resource/SIO_010335') , RDF::URI.new('http://semanticscience.org/resource/SIO_000989') => RDF::URI.new('http://semanticscience.org/resource/SIO_000030') , RDF::URI.new('http://semanticscience.org/resource/SIO_000992') => RDF::URI.new('http://semanticscience.org/resource/SIO_000959') , RDF::URI.new('http://semanticscience.org/resource/SIO_000994') => RDF::URI.new('http://semanticscience.org/resource/SIO_000747') , RDF::URI.new('http://semanticscience.org/resource/SIO_000995') => RDF::URI.new('http://semanticscience.org/resource/SIO_000033') , RDF::URI.new('http://semanticscience.org/resource/SIO_000996') => RDF::URI.new('http://semanticscience.org/resource/SIO_000963') , RDF::URI.new('http://semanticscience.org/resource/SIO_000997') => RDF::URI.new('http://semanticscience.org/resource/SIO_000033') , RDF::URI.new('http://semanticscience.org/resource/SIO_001002') => RDF::URI.new('http://semanticscience.org/resource/SIO_001024') , RDF::URI.new('http://semanticscience.org/resource/SIO_001003') => RDF::URI.new('http://semanticscience.org/resource/SIO_001004') , RDF::URI.new('http://semanticscience.org/resource/SIO_001008') => RDF::URI.new('http://semanticscience.org/resource/SIO_001011') , RDF::URI.new('http://semanticscience.org/resource/SIO_001009') => RDF::URI.new('http://semanticscience.org/resource/SIO_001008') , RDF::URI.new('http://semanticscience.org/resource/SIO_001010') => RDF::URI.new('http://semanticscience.org/resource/SIO_001008') , RDF::URI.new('http://semanticscience.org/resource/SIO_001011') => RDF::URI.new('http://semanticscience.org/resource/SIO_000026') , RDF::URI.new('http://semanticscience.org/resource/SIO_001012') => RDF::URI.new('http://semanticscience.org/resource/SIO_010058') , RDF::URI.new('http://semanticscience.org/resource/SIO_001013') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_001014') => RDF::URI.new('http://semanticscience.org/resource/SIO_000475') , RDF::URI.new('http://semanticscience.org/resource/SIO_001015') => RDF::URI.new('http://semanticscience.org/resource/SIO_000475') , RDF::URI.new('http://semanticscience.org/resource/SIO_001016') => RDF::URI.new('http://semanticscience.org/resource/SIO_001062') , RDF::URI.new('http://semanticscience.org/resource/SIO_001017') => RDF::URI.new('http://semanticscience.org/resource/SIO_000136') , RDF::URI.new('http://semanticscience.org/resource/SIO_001018') => RDF::URI.new('http://semanticscience.org/resource/SIO_000257') , RDF::URI.new('http://semanticscience.org/resource/SIO_001019') => RDF::URI.new('http://semanticscience.org/resource/SIO_000258') , RDF::URI.new('http://semanticscience.org/resource/SIO_001020') => RDF::URI.new('http://semanticscience.org/resource/SIO_001019') , RDF::URI.new('http://semanticscience.org/resource/SIO_001021') => RDF::URI.new('http://semanticscience.org/resource/SIO_000638') , RDF::URI.new('http://semanticscience.org/resource/SIO_001022') => RDF::URI.new('http://semanticscience.org/resource/SIO_001024') , RDF::URI.new('http://semanticscience.org/resource/SIO_001023') => RDF::URI.new('http://semanticscience.org/resource/SIO_001024') , RDF::URI.new('http://semanticscience.org/resource/SIO_001024') => RDF::URI.new('http://semanticscience.org/resource/SIO_000999') , RDF::URI.new('http://semanticscience.org/resource/SIO_001025') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_001026') => RDF::URI.new('http://semanticscience.org/resource/SIO_000148') , RDF::URI.new('http://semanticscience.org/resource/SIO_001027') => RDF::URI.new('http://semanticscience.org/resource/SIO_000088') , RDF::URI.new('http://semanticscience.org/resource/SIO_001028') => RDF::URI.new('http://semanticscience.org/resource/SIO_001026') , RDF::URI.new('http://semanticscience.org/resource/SIO_001030') => RDF::URI.new('http://semanticscience.org/resource/SIO_000654') , RDF::URI.new('http://semanticscience.org/resource/SIO_001031') => RDF::URI.new('http://semanticscience.org/resource/SIO_000654') , RDF::URI.new('http://semanticscience.org/resource/SIO_001032') => RDF::URI.new('http://semanticscience.org/resource/SIO_000654') , RDF::URI.new('http://semanticscience.org/resource/SIO_001034') => RDF::URI.new('http://semanticscience.org/resource/SIO_001033') , RDF::URI.new('http://semanticscience.org/resource/SIO_001035') => RDF::URI.new('http://semanticscience.org/resource/SIO_001034') , RDF::URI.new('http://semanticscience.org/resource/SIO_001036') => RDF::URI.new('http://semanticscience.org/resource/SIO_001033') , RDF::URI.new('http://semanticscience.org/resource/SIO_001037') => RDF::URI.new('http://semanticscience.org/resource/SIO_001033') , RDF::URI.new('http://semanticscience.org/resource/SIO_001038') => RDF::URI.new('http://semanticscience.org/resource/SIO_001034') , RDF::URI.new('http://semanticscience.org/resource/SIO_001039') => RDF::URI.new('http://semanticscience.org/resource/SIO_001033') , RDF::URI.new('http://semanticscience.org/resource/SIO_001040') => RDF::URI.new('http://semanticscience.org/resource/SIO_000078') , RDF::URI.new('http://semanticscience.org/resource/SIO_001042') => RDF::URI.new('http://semanticscience.org/resource/SIO_000091') , RDF::URI.new('http://semanticscience.org/resource/SIO_001043') => RDF::URI.new('http://semanticscience.org/resource/SIO_000091') , RDF::URI.new('http://semanticscience.org/resource/SIO_001044') => RDF::URI.new('http://semanticscience.org/resource/SIO_010378') , RDF::URI.new('http://semanticscience.org/resource/SIO_001045') => RDF::URI.new('http://semanticscience.org/resource/SIO_001011') , RDF::URI.new('http://semanticscience.org/resource/SIO_001046') => RDF::URI.new('http://semanticscience.org/resource/SIO_001045') , RDF::URI.new('http://semanticscience.org/resource/SIO_001047') => RDF::URI.new('http://semanticscience.org/resource/SIO_001045') , RDF::URI.new('http://semanticscience.org/resource/SIO_001048') => RDF::URI.new('http://semanticscience.org/resource/SIO_000994') , RDF::URI.new('http://semanticscience.org/resource/SIO_001053') => RDF::URI.new('http://semanticscience.org/resource/SIO_000683') , RDF::URI.new('http://semanticscience.org/resource/SIO_001058') => RDF::URI.new('http://semanticscience.org/resource/SIO_001072') , RDF::URI.new('http://semanticscience.org/resource/SIO_001059') => RDF::URI.new('http://semanticscience.org/resource/SIO_000969') , RDF::URI.new('http://semanticscience.org/resource/SIO_001060') => RDF::URI.new('http://semanticscience.org/resource/SIO_000963') , RDF::URI.new('http://semanticscience.org/resource/SIO_001061') => RDF::URI.new('http://semanticscience.org/resource/SIO_000620') , RDF::URI.new('http://semanticscience.org/resource/SIO_001062') => RDF::URI.new('http://semanticscience.org/resource/SIO_001061') , RDF::URI.new('http://semanticscience.org/resource/SIO_001063') => RDF::URI.new('http://semanticscience.org/resource/SIO_000620') , RDF::URI.new('http://semanticscience.org/resource/SIO_001064') => RDF::URI.new('http://semanticscience.org/resource/SIO_000620') , RDF::URI.new('http://semanticscience.org/resource/SIO_001065') => RDF::URI.new('http://semanticscience.org/resource/SIO_001004') , RDF::URI.new('http://semanticscience.org/resource/SIO_001067') => RDF::URI.new('http://semanticscience.org/resource/SIO_000976') , RDF::URI.new('http://semanticscience.org/resource/SIO_001068') => RDF::URI.new('http://semanticscience.org/resource/SIO_000403') , RDF::URI.new('http://semanticscience.org/resource/SIO_001069') => RDF::URI.new('http://semanticscience.org/resource/SIO_000403') , RDF::URI.new('http://semanticscience.org/resource/SIO_001070') => RDF::URI.new('http://semanticscience.org/resource/SIO_000367') , RDF::URI.new('http://semanticscience.org/resource/SIO_001071') => RDF::URI.new('http://semanticscience.org/resource/SIO_000943') , RDF::URI.new('http://semanticscience.org/resource/SIO_001072') => RDF::URI.new('http://semanticscience.org/resource/SIO_000953') , RDF::URI.new('http://semanticscience.org/resource/SIO_001074') => RDF::URI.new('http://semanticscience.org/resource/SIO_001018') , RDF::URI.new('http://semanticscience.org/resource/SIO_001075') => RDF::URI.new('http://semanticscience.org/resource/SIO_000732') , RDF::URI.new('http://semanticscience.org/resource/SIO_001076') => RDF::URI.new('http://semanticscience.org/resource/SIO_000994') , RDF::URI.new('http://semanticscience.org/resource/SIO_001077') => RDF::URI.new('http://semanticscience.org/resource/SIO_000258') , RDF::URI.new('http://semanticscience.org/resource/SIO_001078') => RDF::URI.new('http://semanticscience.org/resource/SIO_001018') , RDF::URI.new('http://semanticscience.org/resource/SIO_001079') => RDF::URI.new('http://semanticscience.org/resource/SIO_000315') , RDF::URI.new('http://semanticscience.org/resource/SIO_001080') => RDF::URI.new('http://semanticscience.org/resource/SIO_000616') , RDF::URI.new('http://semanticscience.org/resource/SIO_001083') => RDF::URI.new('http://semanticscience.org/resource/SIO_000418') , RDF::URI.new('http://semanticscience.org/resource/SIO_001084') => RDF::URI.new('http://semanticscience.org/resource/SIO_010462') , RDF::URI.new('http://semanticscience.org/resource/SIO_001085') => RDF::URI.new('http://semanticscience.org/resource/SIO_010340') , RDF::URI.new('http://semanticscience.org/resource/SIO_001086') => RDF::URI.new('http://semanticscience.org/resource/SIO_010340') , RDF::URI.new('http://semanticscience.org/resource/SIO_001087') => RDF::URI.new('http://semanticscience.org/resource/SIO_000385') , RDF::URI.new('http://semanticscience.org/resource/SIO_001089') => RDF::URI.new('http://semanticscience.org/resource/SIO_000257') , RDF::URI.new('http://semanticscience.org/resource/SIO_001090') => RDF::URI.new('http://semanticscience.org/resource/SIO_000051') , RDF::URI.new('http://semanticscience.org/resource/SIO_001091') => RDF::URI.new('http://semanticscience.org/resource/SIO_000051') , RDF::URI.new('http://semanticscience.org/resource/SIO_001092') => RDF::URI.new('http://semanticscience.org/resource/SIO_000026') , RDF::URI.new('http://semanticscience.org/resource/SIO_001093') => RDF::URI.new('http://semanticscience.org/resource/SIO_001092') , RDF::URI.new('http://semanticscience.org/resource/SIO_001094') => RDF::URI.new('http://semanticscience.org/resource/SIO_000537') , RDF::URI.new('http://semanticscience.org/resource/SIO_001095') => RDF::URI.new('http://semanticscience.org/resource/SIO_000537') , RDF::URI.new('http://semanticscience.org/resource/SIO_001099') => RDF::URI.new('http://semanticscience.org/resource/SIO_000625') , RDF::URI.new('http://semanticscience.org/resource/SIO_001100') => RDF::URI.new('http://semanticscience.org/resource/SIO_000626') , RDF::URI.new('http://semanticscience.org/resource/SIO_001103') => RDF::URI.new('http://semanticscience.org/resource/SIO_010366') , RDF::URI.new('http://semanticscience.org/resource/SIO_001104') => RDF::URI.new('http://semanticscience.org/resource/SIO_010366') , RDF::URI.new('http://semanticscience.org/resource/SIO_001105') => RDF::URI.new('http://semanticscience.org/resource/SIO_000492') , RDF::URI.new('http://semanticscience.org/resource/SIO_001106') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_001107') => RDF::URI.new('http://semanticscience.org/resource/SIO_000091') , RDF::URI.new('http://semanticscience.org/resource/SIO_001108') => RDF::URI.new('http://semanticscience.org/resource/SIO_000052') , RDF::URI.new('http://semanticscience.org/resource/SIO_001109') => RDF::URI.new('http://semanticscience.org/resource/SIO_001108') , RDF::URI.new('http://semanticscience.org/resource/SIO_001110') => RDF::URI.new('http://semanticscience.org/resource/SIO_001108') , RDF::URI.new('http://semanticscience.org/resource/SIO_001111') => RDF::URI.new('http://semanticscience.org/resource/SIO_001108') , RDF::URI.new('http://semanticscience.org/resource/SIO_001112') => RDF::URI.new('http://semanticscience.org/resource/SIO_000052') , RDF::URI.new('http://semanticscience.org/resource/SIO_001115') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_001116') => RDF::URI.new('http://semanticscience.org/resource/SIO_000150') , RDF::URI.new('http://semanticscience.org/resource/SIO_001117') => RDF::URI.new('http://semanticscience.org/resource/SIO_000150') , RDF::URI.new('http://semanticscience.org/resource/SIO_001119') => RDF::URI.new('http://semanticscience.org/resource/SIO_001122') , RDF::URI.new('http://semanticscience.org/resource/SIO_001120') => RDF::URI.new('http://semanticscience.org/resource/SIO_000983') , RDF::URI.new('http://semanticscience.org/resource/SIO_001121') => RDF::URI.new('http://semanticscience.org/resource/SIO_000983') , RDF::URI.new('http://semanticscience.org/resource/SIO_001122') => RDF::URI.new('http://semanticscience.org/resource/SIO_001121') , RDF::URI.new('http://semanticscience.org/resource/SIO_001123') => RDF::URI.new('http://semanticscience.org/resource/SIO_001121') , RDF::URI.new('http://semanticscience.org/resource/SIO_001124') => RDF::URI.new('http://semanticscience.org/resource/SIO_001121') , RDF::URI.new('http://semanticscience.org/resource/SIO_001125') => RDF::URI.new('http://semanticscience.org/resource/SIO_010287') , RDF::URI.new('http://semanticscience.org/resource/SIO_001126') => RDF::URI.new('http://semanticscience.org/resource/SIO_010287') , RDF::URI.new('http://semanticscience.org/resource/SIO_001127') => RDF::URI.new('http://semanticscience.org/resource/SIO_010287') , RDF::URI.new('http://semanticscience.org/resource/SIO_001128') => RDF::URI.new('http://semanticscience.org/resource/SIO_001127') , RDF::URI.new('http://semanticscience.org/resource/SIO_001129') => RDF::URI.new('http://semanticscience.org/resource/SIO_001127') , RDF::URI.new('http://semanticscience.org/resource/SIO_001130') => RDF::URI.new('http://semanticscience.org/resource/SIO_001126') , RDF::URI.new('http://semanticscience.org/resource/SIO_001131') => RDF::URI.new('http://semanticscience.org/resource/SIO_001126') , RDF::URI.new('http://semanticscience.org/resource/SIO_001132') => RDF::URI.new('http://semanticscience.org/resource/SIO_000609') , RDF::URI.new('http://semanticscience.org/resource/SIO_001133') => RDF::URI.new('http://semanticscience.org/resource/SIO_001135') , RDF::URI.new('http://semanticscience.org/resource/SIO_001134') => RDF::URI.new('http://semanticscience.org/resource/SIO_001135') , RDF::URI.new('http://semanticscience.org/resource/SIO_001135') => RDF::URI.new('http://semanticscience.org/resource/SIO_000609') , RDF::URI.new('http://semanticscience.org/resource/SIO_001136') => RDF::URI.new('http://semanticscience.org/resource/SIO_000609') , RDF::URI.new('http://semanticscience.org/resource/SIO_001137') => RDF::URI.new('http://semanticscience.org/resource/SIO_001136') , RDF::URI.new('http://semanticscience.org/resource/SIO_001138') => RDF::URI.new('http://semanticscience.org/resource/SIO_001136') , RDF::URI.new('http://semanticscience.org/resource/SIO_001139') => RDF::URI.new('http://semanticscience.org/resource/SIO_000609') , RDF::URI.new('http://semanticscience.org/resource/SIO_001140') => RDF::URI.new('http://semanticscience.org/resource/SIO_001139') , RDF::URI.new('http://semanticscience.org/resource/SIO_001141') => RDF::URI.new('http://semanticscience.org/resource/SIO_001139') , RDF::URI.new('http://semanticscience.org/resource/SIO_001142') => RDF::URI.new('http://semanticscience.org/resource/SIO_001139') , RDF::URI.new('http://semanticscience.org/resource/SIO_001143') => RDF::URI.new('http://semanticscience.org/resource/SIO_001136') , RDF::URI.new('http://semanticscience.org/resource/SIO_001144') => RDF::URI.new('http://semanticscience.org/resource/SIO_001135') , RDF::URI.new('http://semanticscience.org/resource/SIO_001146') => RDF::URI.new('http://semanticscience.org/resource/SIO_001151') , RDF::URI.new('http://semanticscience.org/resource/SIO_001147') => RDF::URI.new('http://semanticscience.org/resource/SIO_001151') , RDF::URI.new('http://semanticscience.org/resource/SIO_001148') => RDF::URI.new('http://semanticscience.org/resource/SIO_001150') , RDF::URI.new('http://semanticscience.org/resource/SIO_001149') => RDF::URI.new('http://semanticscience.org/resource/SIO_001150') , RDF::URI.new('http://semanticscience.org/resource/SIO_001150') => RDF::URI.new('http://semanticscience.org/resource/SIO_001145') , RDF::URI.new('http://semanticscience.org/resource/SIO_001151') => RDF::URI.new('http://semanticscience.org/resource/SIO_001145') , RDF::URI.new('http://semanticscience.org/resource/SIO_001152') => RDF::URI.new('http://semanticscience.org/resource/SIO_001151') , RDF::URI.new('http://semanticscience.org/resource/SIO_001153') => RDF::URI.new('http://semanticscience.org/resource/SIO_001150') , RDF::URI.new('http://semanticscience.org/resource/SIO_001160') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_001161') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_001162') => RDF::URI.new('http://semanticscience.org/resource/SIO_000794') , RDF::URI.new('http://semanticscience.org/resource/SIO_001163') => RDF::URI.new('http://semanticscience.org/resource/SIO_001162') , RDF::URI.new('http://semanticscience.org/resource/SIO_001164') => RDF::URI.new('http://semanticscience.org/resource/SIO_001162') , RDF::URI.new('http://semanticscience.org/resource/SIO_001165') => RDF::URI.new('http://semanticscience.org/resource/SIO_000602') , RDF::URI.new('http://semanticscience.org/resource/SIO_001167') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_001168') => RDF::URI.new('http://semanticscience.org/resource/SIO_000612') , RDF::URI.new('http://semanticscience.org/resource/SIO_001170') => RDF::URI.new('http://semanticscience.org/resource/SIO_000612') , RDF::URI.new('http://semanticscience.org/resource/SIO_001171') => RDF::URI.new('http://semanticscience.org/resource/SIO_000897') , RDF::URI.new('http://semanticscience.org/resource/SIO_001172') => RDF::URI.new('http://semanticscience.org/resource/SIO_001171') , RDF::URI.new('http://semanticscience.org/resource/SIO_001173') => RDF::URI.new('http://semanticscience.org/resource/SIO_001177') , RDF::URI.new('http://semanticscience.org/resource/SIO_001174') => RDF::URI.new('http://semanticscience.org/resource/SIO_010008') , RDF::URI.new('http://semanticscience.org/resource/SIO_001175') => RDF::URI.new('http://semanticscience.org/resource/SIO_001174') , RDF::URI.new('http://semanticscience.org/resource/SIO_001176') => RDF::URI.new('http://semanticscience.org/resource/SIO_001174') , RDF::URI.new('http://semanticscience.org/resource/SIO_001177') => RDF::URI.new('http://semanticscience.org/resource/SIO_010071') , RDF::URI.new('http://semanticscience.org/resource/SIO_001178') => RDF::URI.new('http://semanticscience.org/resource/SIO_001177') , RDF::URI.new('http://semanticscience.org/resource/SIO_001179') => RDF::URI.new('http://semanticscience.org/resource/SIO_000966') , RDF::URI.new('http://semanticscience.org/resource/SIO_001180') => RDF::URI.new('http://semanticscience.org/resource/SIO_000966') , RDF::URI.new('http://semanticscience.org/resource/SIO_001181') => RDF::URI.new('http://semanticscience.org/resource/SIO_000967') , RDF::URI.new('http://semanticscience.org/resource/SIO_001182') => RDF::URI.new('http://semanticscience.org/resource/SIO_000967') , RDF::URI.new('http://semanticscience.org/resource/SIO_001183') => RDF::URI.new('http://semanticscience.org/resource/SIO_000256') , RDF::URI.new('http://semanticscience.org/resource/SIO_001184') => RDF::URI.new('http://semanticscience.org/resource/SIO_001018') , RDF::URI.new('http://semanticscience.org/resource/SIO_001185') => RDF::URI.new('http://semanticscience.org/resource/SIO_000731') , RDF::URI.new('http://semanticscience.org/resource/SIO_010000') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_010001') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_010003') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_010004') => RDF::URI.new('http://semanticscience.org/resource/SIO_000004') , RDF::URI.new('http://semanticscience.org/resource/SIO_010005') => RDF::URI.new('http://semanticscience.org/resource/SIO_010020') , RDF::URI.new('http://semanticscience.org/resource/SIO_010011') => RDF::URI.new('http://semanticscience.org/resource/SIO_010072') , RDF::URI.new('http://semanticscience.org/resource/SIO_010014') => RDF::URI.new('http://semanticscience.org/resource/SIO_011119') , RDF::URI.new('http://semanticscience.org/resource/SIO_010019') => RDF::URI.new('http://semanticscience.org/resource/SIO_000472') , RDF::URI.new('http://semanticscience.org/resource/SIO_010022') => RDF::URI.new('http://semanticscience.org/resource/SIO_011119') , RDF::URI.new('http://semanticscience.org/resource/SIO_010023') => RDF::URI.new('http://semanticscience.org/resource/SIO_011119') , RDF::URI.new('http://semanticscience.org/resource/SIO_010024') => RDF::URI.new('http://semanticscience.org/resource/SIO_011119') , RDF::URI.new('http://semanticscience.org/resource/SIO_010026') => RDF::URI.new('http://semanticscience.org/resource/SIO_010028') , RDF::URI.new('http://semanticscience.org/resource/SIO_010028') => RDF::URI.new('http://semanticscience.org/resource/SIO_010019') , RDF::URI.new('http://semanticscience.org/resource/SIO_010029') => RDF::URI.new('http://semanticscience.org/resource/SIO_000475') , RDF::URI.new('http://semanticscience.org/resource/SIO_010030') => RDF::URI.new('http://semanticscience.org/resource/SIO_010072') , RDF::URI.new('http://semanticscience.org/resource/SIO_010031') => RDF::URI.new('http://semanticscience.org/resource/SIO_000732') , RDF::URI.new('http://semanticscience.org/resource/SIO_010032') => RDF::URI.new('http://semanticscience.org/resource/SIO_000729') , RDF::URI.new('http://semanticscience.org/resource/SIO_010033') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010034') => RDF::URI.new('http://semanticscience.org/resource/SIO_010496') , RDF::URI.new('http://semanticscience.org/resource/SIO_010035') => RDF::URI.new('http://semanticscience.org/resource/SIO_010335') , RDF::URI.new('http://semanticscience.org/resource/SIO_010038') => RDF::URI.new('http://semanticscience.org/resource/SIO_011125') , RDF::URI.new('http://semanticscience.org/resource/SIO_010039') => RDF::URI.new('http://semanticscience.org/resource/SIO_010411') , RDF::URI.new('http://semanticscience.org/resource/SIO_010040') => RDF::URI.new('http://semanticscience.org/resource/SIO_010049') , RDF::URI.new('http://semanticscience.org/resource/SIO_010041') => RDF::URI.new('http://semanticscience.org/resource/SIO_010049') , RDF::URI.new('http://semanticscience.org/resource/SIO_010042') => RDF::URI.new('http://semanticscience.org/resource/SIO_010335') , RDF::URI.new('http://semanticscience.org/resource/SIO_010044') => RDF::URI.new('http://semanticscience.org/resource/SIO_010004') , RDF::URI.new('http://semanticscience.org/resource/SIO_010045') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010046') => RDF::URI.new('http://semanticscience.org/resource/SIO_010462') , RDF::URI.new('http://semanticscience.org/resource/SIO_010047') => RDF::URI.new('http://semanticscience.org/resource/SIO_010020') , RDF::URI.new('http://semanticscience.org/resource/SIO_010048') => RDF::URI.new('http://semanticscience.org/resource/SIO_010029') , RDF::URI.new('http://semanticscience.org/resource/SIO_010049') => RDF::URI.new('http://semanticscience.org/resource/SIO_000019') , RDF::URI.new('http://semanticscience.org/resource/SIO_010050') => RDF::URI.new('http://semanticscience.org/resource/SIO_010040') , RDF::URI.new('http://semanticscience.org/resource/SIO_010051') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_010052') => RDF::URI.new('http://semanticscience.org/resource/SIO_010029') , RDF::URI.new('http://semanticscience.org/resource/SIO_010053') => RDF::URI.new('http://semanticscience.org/resource/SIO_010028') , RDF::URI.new('http://semanticscience.org/resource/SIO_010054') => RDF::URI.new('http://semanticscience.org/resource/SIO_010046') , RDF::URI.new('http://semanticscience.org/resource/SIO_010056') => RDF::URI.new('http://semanticscience.org/resource/SIO_000475') , RDF::URI.new('http://semanticscience.org/resource/SIO_010057') => RDF::URI.new('http://semanticscience.org/resource/SIO_000475') , RDF::URI.new('http://semanticscience.org/resource/SIO_010058') => RDF::URI.new('http://semanticscience.org/resource/SIO_010057') , RDF::URI.new('http://semanticscience.org/resource/SIO_010059') => RDF::URI.new('http://semanticscience.org/resource/SIO_010057') , RDF::URI.new('http://semanticscience.org/resource/SIO_010060') => RDF::URI.new('http://semanticscience.org/resource/SIO_010053') , RDF::URI.new('http://semanticscience.org/resource/SIO_010061') => RDF::URI.new('http://semanticscience.org/resource/SIO_010028') , RDF::URI.new('http://semanticscience.org/resource/SIO_010064') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010065') => RDF::URI.new('http://semanticscience.org/resource/SIO_000472') , RDF::URI.new('http://semanticscience.org/resource/SIO_010066') => RDF::URI.new('http://semanticscience.org/resource/SIO_010065') , RDF::URI.new('http://semanticscience.org/resource/SIO_010067') => RDF::URI.new('http://semanticscience.org/resource/SIO_010066') , RDF::URI.new('http://semanticscience.org/resource/SIO_010068') => RDF::URI.new('http://semanticscience.org/resource/SIO_010066') , RDF::URI.new('http://semanticscience.org/resource/SIO_010070') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010074') => RDF::URI.new('http://semanticscience.org/resource/SIO_010471') , RDF::URI.new('http://semanticscience.org/resource/SIO_010075') => RDF::URI.new('http://semanticscience.org/resource/SIO_010335') , RDF::URI.new('http://semanticscience.org/resource/SIO_010076') => RDF::URI.new('http://semanticscience.org/resource/SIO_010038') , RDF::URI.new('http://semanticscience.org/resource/SIO_010077') => RDF::URI.new('http://semanticscience.org/resource/SIO_010338') , RDF::URI.new('http://semanticscience.org/resource/SIO_010085') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010086') => RDF::URI.new('http://semanticscience.org/resource/SIO_010085') , RDF::URI.new('http://semanticscience.org/resource/SIO_010087') => RDF::URI.new('http://semanticscience.org/resource/SIO_010338') , RDF::URI.new('http://semanticscience.org/resource/SIO_010088') => RDF::URI.new('http://semanticscience.org/resource/SIO_000542') , RDF::URI.new('http://semanticscience.org/resource/SIO_010089') => RDF::URI.new('http://semanticscience.org/resource/SIO_010088') , RDF::URI.new('http://semanticscience.org/resource/SIO_010090') => RDF::URI.new('http://semanticscience.org/resource/SIO_010088') , RDF::URI.new('http://semanticscience.org/resource/SIO_010091') => RDF::URI.new('http://semanticscience.org/resource/SIO_010088') , RDF::URI.new('http://semanticscience.org/resource/SIO_010094') => RDF::URI.new('http://semanticscience.org/resource/SIO_000542') , RDF::URI.new('http://semanticscience.org/resource/SIO_010099') => RDF::URI.new('http://semanticscience.org/resource/SIO_010450') , RDF::URI.new('http://semanticscience.org/resource/SIO_010278') => RDF::URI.new('http://semanticscience.org/resource/SIO_000476') , RDF::URI.new('http://semanticscience.org/resource/SIO_010284') => RDF::URI.new('http://semanticscience.org/resource/SIO_000576') , RDF::URI.new('http://semanticscience.org/resource/SIO_010287') => RDF::URI.new('http://semanticscience.org/resource/SIO_000609') , RDF::URI.new('http://semanticscience.org/resource/SIO_010295') => RDF::URI.new('http://semanticscience.org/resource/SIO_000609') , RDF::URI.new('http://semanticscience.org/resource/SIO_010296') => RDF::URI.new('http://semanticscience.org/resource/SIO_000609') , RDF::URI.new('http://semanticscience.org/resource/SIO_010298') => RDF::URI.new('http://semanticscience.org/resource/SIO_010019') , RDF::URI.new('http://semanticscience.org/resource/SIO_010307') => RDF::URI.new('http://semanticscience.org/resource/SIO_010345') , RDF::URI.new('http://semanticscience.org/resource/SIO_010308') => RDF::URI.new('http://semanticscience.org/resource/SIO_010013') , RDF::URI.new('http://semanticscience.org/resource/SIO_010309') => RDF::URI.new('http://semanticscience.org/resource/SIO_010308') , RDF::URI.new('http://semanticscience.org/resource/SIO_010310') => RDF::URI.new('http://semanticscience.org/resource/SIO_010308') , RDF::URI.new('http://semanticscience.org/resource/SIO_010334') => RDF::URI.new('http://semanticscience.org/resource/SIO_010071') , RDF::URI.new('http://semanticscience.org/resource/SIO_010336') => RDF::URI.new('http://semanticscience.org/resource/SIO_010075') , RDF::URI.new('http://semanticscience.org/resource/SIO_010337') => RDF::URI.new('http://semanticscience.org/resource/SIO_010075') , RDF::URI.new('http://semanticscience.org/resource/SIO_010338') => RDF::URI.new('http://semanticscience.org/resource/SIO_011125') , RDF::URI.new('http://semanticscience.org/resource/SIO_010340') => RDF::URI.new('http://semanticscience.org/resource/SIO_000376') , RDF::URI.new('http://semanticscience.org/resource/SIO_010344') => RDF::URI.new('http://semanticscience.org/resource/SIO_011125') , RDF::URI.new('http://semanticscience.org/resource/SIO_010347') => RDF::URI.new('http://semanticscience.org/resource/SIO_000343') , RDF::URI.new('http://semanticscience.org/resource/SIO_010349') => RDF::URI.new('http://semanticscience.org/resource/SIO_000698') , RDF::URI.new('http://semanticscience.org/resource/SIO_010351') => RDF::URI.new('http://semanticscience.org/resource/SIO_000376') , RDF::URI.new('http://semanticscience.org/resource/SIO_010353') => RDF::URI.new('http://semanticscience.org/resource/SIO_000494') , RDF::URI.new('http://semanticscience.org/resource/SIO_010354') => RDF::URI.new('http://semanticscience.org/resource/SIO_010347') , RDF::URI.new('http://semanticscience.org/resource/SIO_010355') => RDF::URI.new('http://semanticscience.org/resource/SIO_010347') , RDF::URI.new('http://semanticscience.org/resource/SIO_010358') => RDF::URI.new('http://semanticscience.org/resource/SIO_010360') , RDF::URI.new('http://semanticscience.org/resource/SIO_010359') => RDF::URI.new('http://semanticscience.org/resource/SIO_010360') , RDF::URI.new('http://semanticscience.org/resource/SIO_010360') => RDF::URI.new('http://semanticscience.org/resource/SIO_000376') , RDF::URI.new('http://semanticscience.org/resource/SIO_010362') => RDF::URI.new('http://semanticscience.org/resource/SIO_010423') , RDF::URI.new('http://semanticscience.org/resource/SIO_010364') => RDF::URI.new('http://semanticscience.org/resource/SIO_000692') , RDF::URI.new('http://semanticscience.org/resource/SIO_010365') => RDF::URI.new('http://semanticscience.org/resource/SIO_010364') , RDF::URI.new('http://semanticscience.org/resource/SIO_010366') => RDF::URI.new('http://semanticscience.org/resource/SIO_010364') , RDF::URI.new('http://semanticscience.org/resource/SIO_010367') => RDF::URI.new('http://semanticscience.org/resource/SIO_010364') , RDF::URI.new('http://semanticscience.org/resource/SIO_010368') => RDF::URI.new('http://semanticscience.org/resource/SIO_000692') , RDF::URI.new('http://semanticscience.org/resource/SIO_010369') => RDF::URI.new('http://semanticscience.org/resource/SIO_010364') , RDF::URI.new('http://semanticscience.org/resource/SIO_010370') => RDF::URI.new('http://semanticscience.org/resource/SIO_010369') , RDF::URI.new('http://semanticscience.org/resource/SIO_010371') => RDF::URI.new('http://semanticscience.org/resource/SIO_010369') , RDF::URI.new('http://semanticscience.org/resource/SIO_010372') => RDF::URI.new('http://semanticscience.org/resource/SIO_010374') , RDF::URI.new('http://semanticscience.org/resource/SIO_010373') => RDF::URI.new('http://semanticscience.org/resource/SIO_010374') , RDF::URI.new('http://semanticscience.org/resource/SIO_010374') => RDF::URI.new('http://semanticscience.org/resource/SIO_010364') , RDF::URI.new('http://semanticscience.org/resource/SIO_010377') => RDF::URI.new('http://semanticscience.org/resource/SIO_010000') , RDF::URI.new('http://semanticscience.org/resource/SIO_010378') => RDF::URI.new('http://semanticscience.org/resource/SIO_010000') , RDF::URI.new('http://semanticscience.org/resource/SIO_010379') => RDF::URI.new('http://semanticscience.org/resource/SIO_010378') , RDF::URI.new('http://semanticscience.org/resource/SIO_010383') => RDF::URI.new('http://semanticscience.org/resource/SIO_000619') , RDF::URI.new('http://semanticscience.org/resource/SIO_010411') => RDF::URI.new('http://semanticscience.org/resource/SIO_010462') , RDF::URI.new('http://semanticscience.org/resource/SIO_010412') => RDF::URI.new('http://semanticscience.org/resource/SIO_001050') , RDF::URI.new('http://semanticscience.org/resource/SIO_010414') => RDF::URI.new('http://semanticscience.org/resource/SIO_010000') , RDF::URI.new('http://semanticscience.org/resource/SIO_010415') => RDF::URI.new('http://semanticscience.org/resource/SIO_010000') , RDF::URI.new('http://semanticscience.org/resource/SIO_010416') => RDF::URI.new('http://semanticscience.org/resource/SIO_010427') , RDF::URI.new('http://semanticscience.org/resource/SIO_010417') => RDF::URI.new('http://semanticscience.org/resource/SIO_010427') , RDF::URI.new('http://semanticscience.org/resource/SIO_010418') => RDF::URI.new('http://semanticscience.org/resource/SIO_010427') , RDF::URI.new('http://semanticscience.org/resource/SIO_010419') => RDF::URI.new('http://semanticscience.org/resource/SIO_011125') , RDF::URI.new('http://semanticscience.org/resource/SIO_010420') => RDF::URI.new('http://semanticscience.org/resource/SIO_010437') , RDF::URI.new('http://semanticscience.org/resource/SIO_010424') => RDF::URI.new('http://semanticscience.org/resource/SIO_010426') , RDF::URI.new('http://semanticscience.org/resource/SIO_010425') => RDF::URI.new('http://semanticscience.org/resource/SIO_010426') , RDF::URI.new('http://semanticscience.org/resource/SIO_010426') => RDF::URI.new('http://semanticscience.org/resource/SIO_011126') , RDF::URI.new('http://semanticscience.org/resource/SIO_010427') => RDF::URI.new('http://semanticscience.org/resource/SIO_010462') , RDF::URI.new('http://semanticscience.org/resource/SIO_010428') => RDF::URI.new('http://semanticscience.org/resource/SIO_000881') , RDF::URI.new('http://semanticscience.org/resource/SIO_010429') => RDF::URI.new('http://semanticscience.org/resource/SIO_010462') , RDF::URI.new('http://semanticscience.org/resource/SIO_010430') => RDF::URI.new('http://semanticscience.org/resource/SIO_010428') , RDF::URI.new('http://semanticscience.org/resource/SIO_010431') => RDF::URI.new('http://semanticscience.org/resource/SIO_010428') , RDF::URI.new('http://semanticscience.org/resource/SIO_010433') => RDF::URI.new('http://semanticscience.org/resource/SIO_010033') , RDF::URI.new('http://semanticscience.org/resource/SIO_010434') => RDF::URI.new('http://semanticscience.org/resource/SIO_010436') , RDF::URI.new('http://semanticscience.org/resource/SIO_010435') => RDF::URI.new('http://semanticscience.org/resource/SIO_010436') , RDF::URI.new('http://semanticscience.org/resource/SIO_010437') => RDF::URI.new('http://semanticscience.org/resource/SIO_011125') , RDF::URI.new('http://semanticscience.org/resource/SIO_010438') => RDF::URI.new('http://semanticscience.org/resource/SIO_010437') , RDF::URI.new('http://semanticscience.org/resource/SIO_010439') => RDF::URI.new('http://semanticscience.org/resource/SIO_010437') , RDF::URI.new('http://semanticscience.org/resource/SIO_010440') => RDF::URI.new('http://semanticscience.org/resource/SIO_010439') , RDF::URI.new('http://semanticscience.org/resource/SIO_010442') => RDF::URI.new('http://semanticscience.org/resource/SIO_001011') , RDF::URI.new('http://semanticscience.org/resource/SIO_010445') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010446') => RDF::URI.new('http://semanticscience.org/resource/SIO_010085') , RDF::URI.new('http://semanticscience.org/resource/SIO_010447') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010448') => RDF::URI.new('http://semanticscience.org/resource/SIO_010444') , RDF::URI.new('http://semanticscience.org/resource/SIO_010451') => RDF::URI.new('http://semanticscience.org/resource/SIO_010095') , RDF::URI.new('http://semanticscience.org/resource/SIO_010452') => RDF::URI.new('http://semanticscience.org/resource/SIO_010049') , RDF::URI.new('http://semanticscience.org/resource/SIO_010453') => RDF::URI.new('http://semanticscience.org/resource/SIO_010427') , RDF::URI.new('http://semanticscience.org/resource/SIO_010454') => RDF::URI.new('http://semanticscience.org/resource/SIO_010427') , RDF::URI.new('http://semanticscience.org/resource/SIO_010456') => RDF::URI.new('http://semanticscience.org/resource/SIO_010410') , RDF::URI.new('http://semanticscience.org/resource/SIO_010461') => RDF::URI.new('http://semanticscience.org/resource/SIO_000810') , RDF::URI.new('http://semanticscience.org/resource/SIO_010462') => RDF::URI.new('http://semanticscience.org/resource/SIO_011126') , RDF::URI.new('http://semanticscience.org/resource/SIO_010463') => RDF::URI.new('http://semanticscience.org/resource/SIO_011126') , RDF::URI.new('http://semanticscience.org/resource/SIO_010464') => RDF::URI.new('http://semanticscience.org/resource/SIO_000810') , RDF::URI.new('http://semanticscience.org/resource/SIO_010465') => RDF::URI.new('http://semanticscience.org/resource/SIO_010497') , RDF::URI.new('http://semanticscience.org/resource/SIO_010468') => RDF::URI.new('http://semanticscience.org/resource/SIO_010471') , RDF::URI.new('http://semanticscience.org/resource/SIO_010469') => RDF::URI.new('http://semanticscience.org/resource/SIO_010471') , RDF::URI.new('http://semanticscience.org/resource/SIO_010471') => RDF::URI.new('http://semanticscience.org/resource/SIO_010071') , RDF::URI.new('http://semanticscience.org/resource/SIO_010496') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010498') => RDF::URI.new('http://semanticscience.org/resource/SIO_011118') , RDF::URI.new('http://semanticscience.org/resource/SIO_010499') => RDF::URI.new('http://semanticscience.org/resource/SIO_011118') , RDF::URI.new('http://semanticscience.org/resource/SIO_010500') => RDF::URI.new('http://semanticscience.org/resource/SIO_011118') , RDF::URI.new('http://semanticscience.org/resource/SIO_010501') => RDF::URI.new('http://semanticscience.org/resource/SIO_011118') , RDF::URI.new('http://semanticscience.org/resource/SIO_010502') => RDF::URI.new('http://semanticscience.org/resource/SIO_010498') , RDF::URI.new('http://semanticscience.org/resource/SIO_010503') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010504') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010505') => RDF::URI.new('http://semanticscience.org/resource/SIO_010005') , RDF::URI.new('http://semanticscience.org/resource/SIO_010507') => RDF::URI.new('http://semanticscience.org/resource/SIO_010345') , RDF::URI.new('http://semanticscience.org/resource/SIO_010510') => RDF::URI.new('http://semanticscience.org/resource/SIO_010345') , RDF::URI.new('http://semanticscience.org/resource/SIO_010511') => RDF::URI.new('http://semanticscience.org/resource/SIO_010510') , RDF::URI.new('http://semanticscience.org/resource/SIO_010512') => RDF::URI.new('http://semanticscience.org/resource/SIO_010510') , RDF::URI.new('http://semanticscience.org/resource/SIO_010513') => RDF::URI.new('http://semanticscience.org/resource/SIO_010512') , RDF::URI.new('http://semanticscience.org/resource/SIO_010514') => RDF::URI.new('http://semanticscience.org/resource/SIO_010512') , RDF::URI.new('http://semanticscience.org/resource/SIO_010515') => RDF::URI.new('http://semanticscience.org/resource/SIO_010510') , RDF::URI.new('http://semanticscience.org/resource/SIO_010516') => RDF::URI.new('http://semanticscience.org/resource/SIO_010345') , RDF::URI.new('http://semanticscience.org/resource/SIO_010517') => RDF::URI.new('http://semanticscience.org/resource/SIO_010345') , RDF::URI.new('http://semanticscience.org/resource/SIO_010518') => RDF::URI.new('http://semanticscience.org/resource/SIO_010516') , RDF::URI.new('http://semanticscience.org/resource/SIO_010519') => RDF::URI.new('http://semanticscience.org/resource/SIO_010518') , RDF::URI.new('http://semanticscience.org/resource/SIO_010520') => RDF::URI.new('http://semanticscience.org/resource/SIO_010518') , RDF::URI.new('http://semanticscience.org/resource/SIO_010521') => RDF::URI.new('http://semanticscience.org/resource/SIO_010520') , RDF::URI.new('http://semanticscience.org/resource/SIO_010522') => RDF::URI.new('http://semanticscience.org/resource/SIO_010519') , RDF::URI.new('http://semanticscience.org/resource/SIO_010523') => RDF::URI.new('http://semanticscience.org/resource/SIO_010519') , RDF::URI.new('http://semanticscience.org/resource/SIO_010525') => RDF::URI.new('http://semanticscience.org/resource/SIO_010526') , RDF::URI.new('http://semanticscience.org/resource/SIO_010527') => RDF::URI.new('http://semanticscience.org/resource/SIO_010526') , RDF::URI.new('http://semanticscience.org/resource/SIO_010528') => RDF::URI.new('http://semanticscience.org/resource/SIO_010526') , RDF::URI.new('http://semanticscience.org/resource/SIO_010530') => RDF::URI.new('http://semanticscience.org/resource/SIO_010023') , RDF::URI.new('http://semanticscience.org/resource/SIO_010531') => RDF::URI.new('http://semanticscience.org/resource/SIO_010065') , RDF::URI.new('http://semanticscience.org/resource/SIO_010532') => RDF::URI.new('http://semanticscience.org/resource/SIO_010525') , RDF::URI.new('http://semanticscience.org/resource/SIO_010533') => RDF::URI.new('http://semanticscience.org/resource/SIO_010525') , RDF::URI.new('http://semanticscience.org/resource/SIO_010673') => RDF::URI.new('http://semanticscience.org/resource/SIO_010298') , RDF::URI.new('http://semanticscience.org/resource/SIO_010775') => RDF::URI.new('http://semanticscience.org/resource/SIO_010455') , RDF::URI.new('http://semanticscience.org/resource/SIO_010776') => RDF::URI.new('http://semanticscience.org/resource/SIO_010775') , RDF::URI.new('http://semanticscience.org/resource/SIO_010777') => RDF::URI.new('http://semanticscience.org/resource/SIO_010775') , RDF::URI.new('http://semanticscience.org/resource/SIO_010778') => RDF::URI.new('http://semanticscience.org/resource/SIO_010775') , RDF::URI.new('http://semanticscience.org/resource/SIO_010779') => RDF::URI.new('http://semanticscience.org/resource/SIO_010455') , RDF::URI.new('http://semanticscience.org/resource/SIO_010781') => RDF::URI.new('http://semanticscience.org/resource/SIO_010780') , RDF::URI.new('http://semanticscience.org/resource/SIO_010782') => RDF::URI.new('http://semanticscience.org/resource/SIO_010780') , RDF::URI.new('http://semanticscience.org/resource/SIO_010783') => RDF::URI.new('http://semanticscience.org/resource/SIO_010780') , RDF::URI.new('http://semanticscience.org/resource/SIO_010785') => RDF::URI.new('http://semanticscience.org/resource/SIO_010037') , RDF::URI.new('http://semanticscience.org/resource/SIO_010787') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010788') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010789') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010790') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010791') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010792') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010793') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010794') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_010795') => RDF::URI.new('http://semanticscience.org/resource/SIO_010786') , RDF::URI.new('http://semanticscience.org/resource/SIO_011000') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011001') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011002') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011003') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011004') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011005') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011006') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011007') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011008') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011009') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011010') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011011') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011012') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011013') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011014') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011015') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011016') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011017') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011018') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011019') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011020') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011021') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011022') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011023') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011024') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011025') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011026') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011027') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011028') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011029') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011030') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011031') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011032') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011033') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011034') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011035') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011036') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011037') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011038') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011039') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011040') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011041') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011042') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011043') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011044') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011045') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011046') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011047') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011048') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011049') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011050') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011051') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011052') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011053') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011054') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011055') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011056') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011057') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011058') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011059') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011060') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011061') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011062') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011063') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011064') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011065') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011066') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011067') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011068') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011069') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011070') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011071') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011072') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011073') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011074') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011075') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011076') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011077') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011078') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011079') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011080') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011081') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011082') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011083') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011084') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011085') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011086') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011087') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011088') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011089') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011090') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011091') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011092') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011093') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011094') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011095') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011096') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011097') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011098') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011099') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011100') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011101') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011102') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011103') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011104') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011105') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011106') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011107') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011108') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011109') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011110') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011111') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011112') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011113') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011114') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011115') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011116') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011117') => RDF::URI.new('http://semanticscience.org/resource/SIO_010044') , RDF::URI.new('http://semanticscience.org/resource/SIO_011123') => RDF::URI.new('http://semanticscience.org/resource/SIO_000472') , RDF::URI.new('http://semanticscience.org/resource/SIO_011126') => RDF::URI.new('http://semanticscience.org/resource/SIO_010004') , RDF::URI.new('http://semanticscience.org/resource/SIO_011130') => RDF::URI.new('http://semanticscience.org/resource/SIO_011120') }
 
 end
 
