@@ -1,5 +1,4 @@
 package org.biointerchange.vocabulary;
-
 import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
@@ -10,6 +9,8 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.ResourceFactory;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.Predicate;
+
+module BioInterchange;
 
 public class SOFA {
 
@@ -2947,10 +2948,10 @@ public class SOFA {
   }
 
   private static Resource _namespace_SOFA(String accession) {
-    if (isClass(ResourceFactory.createResource("http://purl.obolibrary.org/obo/http_//purl.org/obo/" + accession))) {
-      return ResourceFactory.createResource("http://purl.obolibrary.org/obo/http_//purl.org/obo/" + accession);
+    if (isClass(ResourceFactory.createResource("http://purl.obolibrary.org/obo/" + accession))) {
+      return ResourceFactory.createResource("http://purl.obolibrary.org/obo/" + accession);
     } else {
-      return ResourceFactory.createProperty("http://purl.obolibrary.org/obo/http_//purl.org/obo/" + accession);
+      return ResourceFactory.createProperty("http://purl.obolibrary.org/obo/" + accession);
     }
   }
 
@@ -2964,5 +2965,7 @@ public class SOFA {
     return map;
   }
 
+
+}
 
 }

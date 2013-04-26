@@ -1,5 +1,4 @@
 package org.biointerchange.vocabulary;
-
 import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
@@ -10,6 +9,8 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.ResourceFactory;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.Predicate;
+
+module BioInterchange;
 
 public class SIO {
 
@@ -22,7 +23,7 @@ public class SIO {
   }
 
   /**
-   * has attribute is a relation between an entity and some attribute or property.
+   * has attribute is a relation that associates a entity with an attribute where an attribute is an intrinsic characteristic such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier) either directly or indirectly through generalization of entities of the same type.
    * (http://semanticscience.org/resource/SIO_000008)
    */
   public static Resource has_attribute() {
@@ -30,7 +31,7 @@ public class SIO {
   }
 
   /**
-   * is attribute of is a relation between an attribute and the entity that it is ascribed to
+   * is attribute of is a relation that associates an attribute with an entity where an attribute is an intrinsic characteristic such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier) either directly or indirectly through generalization of entities of the same type.
    * (http://semanticscience.org/resource/SIO_000011)
    */
   public static Resource is_attribute_of() {
@@ -53,6 +54,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000028");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000029)
+   */
   public static Resource is_time_boundary_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000029");
   }
@@ -81,6 +86,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000059");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000060)
+   */
   public static Resource is_denoted_by() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000060");
   }
@@ -237,10 +246,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000207");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000208)
+   */
   public static Resource is_supporting_evidence_for() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000208");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000209)
+   */
   public static Resource is_disputing_evidence_for() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000209");
   }
@@ -525,6 +542,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000248");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000249)
+   */
   public static Resource is_preceded_by() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000249");
   }
@@ -641,6 +662,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000286");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000288)
+   */
   public static Resource is_covalently_connected_to_transitive() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000288");
   }
@@ -757,6 +782,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000334");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000335)
+   */
   public static Resource is_weakly_interacting_with() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000335");
   }
@@ -801,6 +830,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000355");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000356)
+   */
   public static Resource is_realized_in() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000356");
   }
@@ -813,6 +846,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000362");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000363)
+   */
   public static Resource is_satisfied_by() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000363");
   }
@@ -849,6 +886,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000369");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000420)
+   */
   public static Resource has_expression() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000420");
   }
@@ -885,6 +926,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000425");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000426)
+   */
   public static Resource is_manifestation_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000426");
   }
@@ -897,6 +942,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000427");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000477)
+   */
   public static Resource is_broader_than() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000477");
   }
@@ -909,14 +958,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000482");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000484)
+   */
   public static Resource is_exact_match_to() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000484");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000490)
+   */
   public static Resource is_close_match_to() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000490");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000491)
+   */
   public static Resource is_broad_match_to() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000491");
   }
@@ -961,6 +1022,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000553");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000557)
+   */
   public static Resource is_described_by() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000557");
   }
@@ -997,6 +1062,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000628");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000629)
+   */
   public static Resource is_subject_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000629");
   }
@@ -1033,6 +1102,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000632");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000633)
+   */
   public static Resource is_modelled_by() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000633");
   }
@@ -1053,6 +1126,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000635");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000636)
+   */
   public static Resource is_trigger_for() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000636");
   }
@@ -1073,14 +1150,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000642");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000643)
+   */
   public static Resource is_realizable_property_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000643");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000644)
+   */
   public static Resource has_realizable_property() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000644");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000646)
+   */
   public static Resource is_capability_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000646");
   }
@@ -1133,10 +1222,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000668");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000671)
+   */
   public static Resource has_identifier() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000671");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000672)
+   */
   public static Resource is_identifier_for() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000672");
   }
@@ -1157,22 +1254,42 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000674");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000679)
+   */
   public static Resource has_time_boundary() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000679");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000680)
+   */
   public static Resource has_start_time() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000680");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000681)
+   */
   public static Resource has_end_time() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000681");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000682)
+   */
   public static Resource is_start_time_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000682");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000684)
+   */
   public static Resource is_end_time_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000684");
   }
@@ -1185,30 +1302,58 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000687");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000697)
+   */
   public static Resource is_mutual_disposition_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000697");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000699)
+   */
   public static Resource is_greater_than_or_equal_to() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000699");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000709)
+   */
   public static Resource is_mutually_related_to() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000709");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000710)
+   */
   public static Resource is_mutual_role_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000710");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000733)
+   */
   public static Resource is_lesser_than_or_equal_to() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000733");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000734)
+   */
   public static Resource is_greater_than() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000734");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000735)
+   */
   public static Resource is_lesser_than() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000735");
   }
@@ -1229,10 +1374,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000737");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000738)
+   */
   public static Resource is_equal_to() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000738");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000749)
+   */
   public static Resource is_inequal_to() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000749");
   }
@@ -1245,6 +1398,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000772");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000773)
+   */
   public static Resource is_evidence_for() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000773");
   }
@@ -1257,6 +1414,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000774");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000775)
+   */
   public static Resource is_refuting_evidence_for() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000775");
   }
@@ -1269,6 +1430,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000793");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000892)
+   */
   public static Resource in_relation_from() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000892");
   }
@@ -1369,30 +1534,58 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001098");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001101)
+   */
   public static Resource is_mutual_capability_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001101");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001154)
+   */
   public static Resource regulates() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001154");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001155)
+   */
   public static Resource is_regulated_by() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001155");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001156)
+   */
   public static Resource results_in() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001156");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001157)
+   */
   public static Resource is_result_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001157");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001158)
+   */
   public static Resource affects() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001158");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001159)
+   */
   public static Resource is_affected_by() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001159");
   }
@@ -1405,6 +1598,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010078");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010079)
+   */
   public static Resource is_encoded_by() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010079");
   }
@@ -1417,14 +1614,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010080");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010081)
+   */
   public static Resource is_transcribed_from() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010081");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010082)
+   */
   public static Resource is_translated_into() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010082");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010083)
+   */
   public static Resource is_translated_from() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010083");
   }
@@ -1477,6 +1686,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000006");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000009)
+   */
   public static Resource social_entity() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000009");
   }
@@ -1577,10 +1790,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000030");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000031)
+   */
   public static Resource start_date() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000031");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000032)
+   */
   public static Resource end_date() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000032");
   }
@@ -1617,10 +1838,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000036");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000037)
+   */
   public static Resource spatial_quantity() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000037");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000037)
+   */
   public static Resource physical_dimensional_quantity() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000037");
   }
@@ -1633,38 +1862,74 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000038");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000039)
+   */
   public static Resource depth() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000039");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000040)
+   */
   public static Resource height() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000040");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000041)
+   */
   public static Resource length() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000041");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000042)
+   */
   public static Resource width() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000042");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000043)
+   */
   public static Resource thickness() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000043");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000045)
+   */
   public static Resource area() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000045");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000046)
+   */
   public static Resource perimeter() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000046");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000047)
+   */
   public static Resource circumference() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000047");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000049)
+   */
   public static Resource volume() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000049");
   }
@@ -1749,6 +2014,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000072");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000073)
+   */
   public static Resource polar_coordinate() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000073");
   }
@@ -1910,7 +2179,15 @@ public class SIO {
   }
 
   /**
-   * An effective specification is a specification composed of a sequence of instructions to achieve some objective.
+   * An action specification is a specification composed of a sequence of instructions to achieve some objective.
+   * (http://semanticscience.org/resource/SIO_000091)
+   */
+  public static Resource action_specification() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_000091");
+  }
+
+  /**
+   * An action specification is a specification composed of a sequence of instructions to achieve some objective.
    * (http://semanticscience.org/resource/SIO_000091)
    */
   public static Resource effective_specification() {
@@ -2029,6 +2306,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000108");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000109)
+   */
   public static Resource novel() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000109");
   }
@@ -2041,6 +2322,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000110");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000111)
+   */
   public static Resource document_section() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000111");
   }
@@ -2077,6 +2362,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000115");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000116)
+   */
   public static Resource name() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000116");
   }
@@ -2169,6 +2458,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000127");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000129)
+   */
   public static Resource ontology_document() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000129");
   }
@@ -2181,6 +2474,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000130");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000131)
+   */
   public static Resource motif() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000131");
   }
@@ -2393,6 +2690,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000162");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000163)
+   */
   public static Resource newspaper() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000163");
   }
@@ -2709,6 +3010,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000237");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000238)
+   */
   public static Resource logical_operator() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000238");
   }
@@ -2817,10 +3122,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000268");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000269)
+   */
   public static Resource _true_() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000269");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000270)
+   */
   public static Resource _false_() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000270");
   }
@@ -2849,6 +3162,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000279");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000280)
+   */
   public static Resource disjunction_or() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000280");
   }
@@ -2877,10 +3194,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000284");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000285)
+   */
   public static Resource academic_organization() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000285");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000287)
+   */
   public static Resource social_relation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000287");
   }
@@ -2893,10 +3218,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000289");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000290)
+   */
   public static Resource university() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000290");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000295)
+   */
   public static Resource collection_of_documents() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000295");
   }
@@ -2997,10 +3330,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000308");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000309)
+   */
   public static Resource volume_number() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000309");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000314)
+   */
   public static Resource polymer() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000314");
   }
@@ -3069,6 +3410,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000326");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000327)
+   */
   public static Resource polar_coordinate_system() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000327");
   }
@@ -3081,14 +3426,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000328");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000329)
+   */
   public static Resource cylindrical_coordinate_system() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000329");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000330)
+   */
   public static Resource spherical_coordinate_system() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000330");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000331)
+   */
   public static Resource OWL_ontology() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000331");
   }
@@ -3125,6 +3482,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000342");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000343)
+   */
   public static Resource to_modify() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000343");
   }
@@ -3209,6 +3570,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000354");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000357)
+   */
   public static Resource fitness() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000357");
   }
@@ -3221,6 +3586,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000358");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000359)
+   */
   public static Resource purpose() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000359");
   }
@@ -3289,6 +3658,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000373");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000374)
+   */
   public static Resource to_reduce_energy() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000374");
   }
@@ -3301,6 +3674,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000375");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000376)
+   */
   public static Resource to_change_materially() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000376");
   }
@@ -3313,6 +3690,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000377");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000378)
+   */
   public static Resource to_change_appearance() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000378");
   }
@@ -3365,19 +3746,33 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000384");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000385)
+   */
   public static Resource to_change_energetically() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000385");
   }
 
   /**
-   * Ambiguous label.
+   * Either:
+   *   -- No comment or description provided. --
+   *   (http://semanticscience.org/resource/SIO_000386)
+   * Or:
+   *   -- No comment or description provided. --
+   *   (http://semanticscience.org/resource/SIO_010358)
    */
   public static Set<Resource> to_oxidize() {
     return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_SIO("http://semanticscience.org/resource/SIO_000386"), _namespace_SIO("http://semanticscience.org/resource/SIO_010358") }));
   }
 
   /**
-   * Ambiguous label.
+   * Either:
+   *   -- No comment or description provided. --
+   *   (http://semanticscience.org/resource/SIO_000387)
+   * Or:
+   *   -- No comment or description provided. --
+   *   (http://semanticscience.org/resource/SIO_010359)
    */
   public static Set<Resource> to_reduce() {
     return new HashSet<Resource>(Arrays.asList(new Resource[] { _namespace_SIO("http://semanticscience.org/resource/SIO_000387"), _namespace_SIO("http://semanticscience.org/resource/SIO_010359") }));
@@ -3423,22 +3818,42 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000392");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000393)
+   */
   public static Resource patient() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000393");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000394)
+   */
   public static Resource doctor() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000394");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000395)
+   */
   public static Resource to_regulate() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000395");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000395)
+   */
   public static Resource to_modulate() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000395");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000396)
+   */
   public static Resource file() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000396");
   }
@@ -3451,10 +3866,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000397");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000398)
+   */
   public static Resource nurse() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000398");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000399)
+   */
   public static Resource study_subject() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000399");
   }
@@ -3491,22 +3914,42 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000403");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000404)
+   */
   public static Resource professor() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000404");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000405)
+   */
   public static Resource student() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000405");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000406)
+   */
   public static Resource academic() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000406");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000407)
+   */
   public static Resource to_increase_the_rate_of_formation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000407");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000408)
+   */
   public static Resource to_investigate() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000408");
   }
@@ -3559,6 +4002,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000414");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000415)
+   */
   public static Resource geopolitical_region() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000415");
   }
@@ -3603,34 +4050,66 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000423");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000428)
+   */
   public static Resource year() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000428");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000429)
+   */
   public static Resource month() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000429");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000430)
+   */
   public static Resource day() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000430");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000431)
+   */
   public static Resource century() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000431");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000432)
+   */
   public static Resource millenium() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000432");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000433)
+   */
   public static Resource hour() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000433");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000434)
+   */
   public static Resource minute() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000434");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000435)
+   */
   public static Resource second() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000435");
   }
@@ -3651,6 +4130,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000437");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000438)
+   */
   public static Resource altitude() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000438");
   }
@@ -3722,6 +4205,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000447");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000448)
+   */
   public static Resource figure_part() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000448");
   }
@@ -3941,6 +4428,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000471");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000472)
+   */
   public static Resource scientific_data() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000472");
   }
@@ -3978,6 +4469,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000476");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000478)
+   */
   public static Resource sequence_variant_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000478");
   }
@@ -3990,10 +4485,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000479");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000480)
+   */
   public static Resource insertion_variant_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000480");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000481)
+   */
   public static Resource deletion_variant_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000481");
   }
@@ -4006,26 +4509,50 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000483");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000485)
+   */
   public static Resource human() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000485");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000486)
+   */
   public static Resource mouse() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000486");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000487)
+   */
   public static Resource rat() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000487");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000488)
+   */
   public static Resource worm() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000488");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000489)
+   */
   public static Resource e_coli() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000489");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000492)
+   */
   public static Resource to_consume() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000492");
   }
@@ -4046,10 +4573,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000494");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000498)
+   */
   public static Resource person() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000498");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000499)
+   */
   public static Resource to_decrease_the_rate_of_formation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000499");
   }
@@ -4102,6 +4637,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000505");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000506)
+   */
   public static Resource geometric_entity() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000506");
   }
@@ -4329,6 +4868,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000533");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000534)
+   */
   public static Resource positionally_oriented_line() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000534");
   }
@@ -4341,6 +4884,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000535");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000536)
+   */
   public static Resource to_regulate_the_rate_of_formation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000536");
   }
@@ -4385,14 +4932,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000541");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000542)
+   */
   public static Resource to_serve_as() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000542");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000543)
+   */
   public static Resource to_serve_as_a_host() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000543");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000544)
+   */
   public static Resource to_infect() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000544");
   }
@@ -4413,6 +4972,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000545");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000546)
+   */
   public static Resource collection_of_points() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000546");
   }
@@ -4425,22 +4988,42 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000547");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000549)
+   */
   public static Resource to_reduce_the_activation_energy() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000549");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000549)
+   */
   public static Resource to_activate() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000549");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000550)
+   */
   public static Resource to_increase_the_activation_energy() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000550");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000550)
+   */
   public static Resource to_inhibit() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000550");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000551)
+   */
   public static Resource to_change_the_activation_energy() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000551");
   }
@@ -4461,6 +5044,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000555");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000556)
+   */
   public static Resource lipid_residue() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000556");
   }
@@ -4561,6 +5148,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000572");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000573)
+   */
   public static Resource passive_movement() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000573");
   }
@@ -4605,10 +5196,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000578");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000579)
+   */
   public static Resource symport_enabled_secondary_active_transport() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000579");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000580)
+   */
   public static Resource antiport_enabled_secondary_active_transport() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000580");
   }
@@ -4717,6 +5316,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000594");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000595)
+   */
   public static Resource parameterized_data_transformation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000595");
   }
@@ -4761,6 +5364,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000602");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000605)
+   */
   public static Resource sound_wave() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000605");
   }
@@ -4885,14 +5492,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000621");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000622)
+   */
   public static Resource RDFS_ontology() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000622");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000623)
+   */
   public static Resource OBO_ontology() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000623");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000624)
+   */
   public static Resource chemical_functional_group() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000624");
   }
@@ -4945,14 +5564,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000640");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000647)
+   */
   public static Resource process_model() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000647");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000648)
+   */
   public static Resource physical_model() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000648");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000649)
+   */
   public static Resource information_processing_procedure() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000649");
   }
@@ -4973,18 +5604,34 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000651");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000653)
+   */
   public static Resource version_label() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000653");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000653)
+   */
   public static Resource a_version_label_is_a_label_for_a_particular_form_or_variation_of_an_earlier_or_original_type() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000653");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000654)
+   */
   public static Resource software_version_label() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000654");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000654)
+   */
   public static Resource a_software_version_label_is_a_version_label_for_a_piece_of_software() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000654");
   }
@@ -4997,26 +5644,50 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000660");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000661)
+   */
   public static Resource province() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000661");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000662)
+   */
   public static Resource state() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000662");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000663)
+   */
   public static Resource territory() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000663");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000664)
+   */
   public static Resource country() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000664");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000665)
+   */
   public static Resource city() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000665");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000666)
+   */
   public static Resource township() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000666");
   }
@@ -5029,10 +5700,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000667");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000669)
+   */
   public static Resource start_time() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000669");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000670)
+   */
   public static Resource end_time() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000670");
   }
@@ -5045,6 +5724,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000675");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000676)
+   */
   public static Resource social_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000676");
   }
@@ -5073,10 +5756,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000683");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000686)
+   */
   public static Resource department() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000686");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000688)
+   */
   public static Resource institute() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000688");
   }
@@ -5193,42 +5884,82 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000705");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000706)
+   */
   public static Resource occupational_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000706");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000707)
+   */
   public static Resource student_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000707");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000708)
+   */
   public static Resource professor_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000708");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000711)
+   */
   public static Resource academic_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000711");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000712)
+   */
   public static Resource medical_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000712");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000713)
+   */
   public static Resource doctor_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000713");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000714)
+   */
   public static Resource nurse_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000714");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000715)
+   */
   public static Resource patient_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000715");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000716)
+   */
   public static Resource medical_practitioner() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000716");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000717)
+   */
   public static Resource dentist_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000717");
   }
@@ -5305,14 +6036,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000725");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000726)
+   */
   public static Resource administrative_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000726");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000727)
+   */
   public static Resource secretary_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000727");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000728)
+   */
   public static Resource chemical_identifier() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000728");
   }
@@ -5325,14 +6068,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000729");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000730)
+   */
   public static Resource physical_entity_identifier() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000730");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000731)
+   */
   public static Resource informational_entity_identifier() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000731");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000732)
+   */
   public static Resource molecular_identifier() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000732");
   }
@@ -5361,10 +6116,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000741");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000742)
+   */
   public static Resource local_maximum_stationary_point() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000742");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000743)
+   */
   public static Resource local_minimum_stationary_point() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000743");
   }
@@ -5421,6 +6184,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000748");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000750)
+   */
   public static Resource database() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000750");
   }
@@ -5441,6 +6208,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000752");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000753)
+   */
   public static Resource column() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000753");
   }
@@ -5453,6 +6224,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000754");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000755)
+   */
   public static Resource cell_informational() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000755");
   }
@@ -5473,6 +6248,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000756");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000757)
+   */
   public static Resource database_column() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000757");
   }
@@ -5485,14 +6264,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000758");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000759)
+   */
   public static Resource unique_cell() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000759");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000760)
+   */
   public static Resource referencing_cell() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000760");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000761)
+   */
   public static Resource referent_cell() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000761");
   }
@@ -5537,6 +6328,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000765");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000766)
+   */
   public static Resource street_name() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000766");
   }
@@ -5549,6 +6344,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000767");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000768)
+   */
   public static Resource apartment_number() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000768");
   }
@@ -5617,6 +6416,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000780");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000783)
+   */
   public static Resource spatial_boundary() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000783");
   }
@@ -5645,6 +6448,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000786");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000787)
+   */
   public static Resource page_number() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000787");
   }
@@ -5793,19 +6600,35 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000806");
   }
 
+  /**
+   * a partial negative charge is a negative charge where the value of the charge is negative.
+   * (http://semanticscience.org/resource/SIO_000807)
+   */
   public static Resource partial_positive_charge() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000807");
   }
 
+  /**
+   * a partial positive charge is a partial charge where the value of the charge is positive.
+   * (http://semanticscience.org/resource/SIO_000808)
+   */
   public static Resource partial_negative_charge() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000808");
   }
 
+  /**
+   * the quality of having a charge that is not a full multiple of 1 unit charge.
+   * (http://semanticscience.org/resource/SIO_000809)
+   */
   public static Resource partial_charge() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000809");
   }
 
-  public static Resource unitary_charge() {
+  /**
+   * a complete charge is a charge where the value of the charge is a multiple of 1.
+   * (http://semanticscience.org/resource/SIO_000810)
+   */
+  public static Resource complete_charge() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000810");
   }
 
@@ -6009,6 +6832,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000835");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000836)
+   */
   public static Resource excitement() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000836");
   }
@@ -6125,10 +6952,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000849");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000850)
+   */
   public static Resource joy() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000850");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000850)
+   */
   public static Resource joy_is_an_emotion_of_intense_happiness() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000850");
   }
@@ -6189,6 +7024,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000857");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000858)
+   */
   public static Resource pleasure() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000858");
   }
@@ -6209,10 +7048,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000860");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000861)
+   */
   public static Resource regret() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000861");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000862)
+   */
   public static Resource remorse() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000862");
   }
@@ -6225,10 +7072,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000863");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000864)
+   */
   public static Resource satisfaction() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000864");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000864)
+   */
   public static Resource satisfaction_is_an_emotion_of_fulfillment_of_one_s_wishes_expectations_or_needs_or_the_pleasure_derived_from_this() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000864");
   }
@@ -6305,18 +7160,34 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000873");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000875)
+   */
   public static Resource department_chair_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000875");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000876)
+   */
   public static Resource student_advisor_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000876");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000877)
+   */
   public static Resource undergraduate_student_advisor_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000877");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000878)
+   */
   public static Resource graduate_student_advisor_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000878");
   }
@@ -6337,6 +7208,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000880");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000881)
+   */
   public static Resource investigational_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000881");
   }
@@ -6349,10 +7224,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000882");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000883)
+   */
   public static Resource subject_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000883");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000884)
+   */
   public static Resource publishing_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000884");
   }
@@ -6629,6 +7512,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000923");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000924)
+   */
   public static Resource television_program() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000924");
   }
@@ -6721,6 +7608,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000936");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000937)
+   */
   public static Resource textual_chart() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000937");
   }
@@ -6765,6 +7656,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000941");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000942)
+   */
   public static Resource numeric_label() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000942");
   }
@@ -6873,6 +7768,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000954");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000955)
+   */
   public static Resource environment() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000955");
   }
@@ -6933,22 +7832,42 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000963");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000964)
+   */
   public static Resource standard_operating_procedure() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000964");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000965)
+   */
   public static Resource agreement_quality() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000965");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000966)
+   */
   public static Resource agreement() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000966");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000967)
+   */
   public static Resource disagreement() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000967");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000968)
+   */
   public static Resource poison_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000968");
   }
@@ -7049,6 +7968,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000986");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_000987)
+   */
   public static Resource predicted_gene() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_000987");
   }
@@ -7213,10 +8136,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001008");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001009)
+   */
   public static Resource toxic() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001009");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001010)
+   */
   public static Resource non_toxic() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001010");
   }
@@ -7325,6 +8256,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001023");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001024)
+   */
   public static Resource medical_procedure() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001024");
   }
@@ -7393,30 +8328,58 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001032");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001033)
+   */
   public static Resource text_quality() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001033");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001034)
+   */
   public static Resource reviewed() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001034");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001035)
+   */
   public static Resource peer_reviewed() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001035");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001036)
+   */
   public static Resource draft() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001036");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001037)
+   */
   public static Resource finalized() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001037");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001038)
+   */
   public static Resource editor_reviewed() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001038");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001039)
+   */
   public static Resource written() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001039");
   }
@@ -7454,25 +8417,41 @@ public class SIO {
   }
 
   /**
-   * a protocol is a predefined procedural method in the design and implementation of experiments. In addition to providing a detailed set of procedures and lists of required equipment and instruments, protocols often include information on safety precautions, the calculation of results and reporting standards, including statistical analysis and rules for predefining and documenting excluded data to avoid bias.
+   * an experimental protocol is an action specification with respect to the design and implementation of experiments. In addition to providing a detailed set of procedures and lists of required equipment and instruments, experimental protocols often include information on safety precautions, the calculation of results and reporting standards, including statistical analysis and rules for predefining and documenting excluded data to avoid bias.
    * (http://semanticscience.org/resource/SIO_001043)
    */
-  public static Resource protocol() {
+  public static Resource experimental_protocol() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001043");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001044)
+   */
   public static Resource viroid() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001044");
   }
 
+  /**
+   * the quality of being polar or not polar.
+   * (http://semanticscience.org/resource/SIO_001045)
+   */
   public static Resource polar_quality() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001045");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001046)
+   */
   public static Resource polar() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001046");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001047)
+   */
   public static Resource non_polar() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001047");
   }
@@ -7685,10 +8664,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001071");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001072)
+   */
   public static Resource text_span_end_position() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001072");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001072)
+   */
   public static Resource text_span_end_position_is_the_position_offset_of_the_last_character_of_a_text_span_in_relation_the_text_it_is_from() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001072");
   }
@@ -7725,10 +8712,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001075");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001076)
+   */
   public static Resource microarray_experiment() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001076");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001077)
+   */
   public static Resource gene_expression_value() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001077");
   }
@@ -7805,6 +8800,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001086");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001087)
+   */
   public static Resource to_modify_electronically() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001087");
   }
@@ -7849,14 +8848,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001092");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001093)
+   */
   public static Resource rigid() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001093");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001094)
+   */
   public static Resource bent() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001094");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001095)
+   */
   public static Resource curved() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001095");
   }
@@ -7885,14 +8896,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001100");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001102)
+   */
   public static Resource to_interact_and_to_be_interacted_with() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001102");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001103)
+   */
   public static Resource to_gain_a_covalent_bond() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001103");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001104)
+   */
   public static Resource to_lose_a_covalent_bond() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001104");
   }
@@ -7905,14 +8928,34 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001105");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001106)
+   */
   public static Resource to_produce() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001106");
   }
 
+  /**
+   * a pathway is an effective specification that outlines a set of actions that forms a way to achieve an objective.
+   * (http://semanticscience.org/resource/SIO_001107)
+   */
   public static Resource pathway() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001107");
   }
 
+  /**
+   * a pathway is an effective specification that outlines a set of actions that forms a way to achieve an objective.
+   * (http://semanticscience.org/resource/SIO_001107)
+   */
+  public static Resource biological_pathway() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001107");
+  }
+
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001108)
+   */
   public static Resource centrality_measure() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001108");
   }
@@ -8025,7 +9068,7 @@ public class SIO {
    * a gene-variant disease association in which a mutation in the gene/protein results in the development or maintenance of the disease.
    * (http://semanticscience.org/resource/SIO_001119)
    */
-  public static Resource gene_disease_association_linked_with_casual_mutation() {
+  public static Resource gene_disease_association_linked_with_causal_mutation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001119");
   }
 
@@ -8046,7 +9089,7 @@ public class SIO {
   }
 
   /**
-   * a gene-disease association in which a the gene/protein is involved in the etiology or maintenance of the disease.
+   * a gene-disease association in which the gene/protein is involved in the etiology or maintenance of the disease.
    * (http://semanticscience.org/resource/SIO_001121)
    */
   public static Resource gene_disease_biomarker_association() {
@@ -8078,17 +9121,25 @@ public class SIO {
   }
 
   /**
-   * a gene disease-association in which the disease phenotype is associated with post-translational modifications in the protein product.
+   * a gene-disease association in which the disease phenotype is associated with post-translational modifications in the protein product.
    * (http://semanticscience.org/resource/SIO_001124)
    */
   public static Resource gene_disease_association_linked_with_post_translational_modification() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001124");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001125)
+   */
   public static Resource regulation_of_transcription() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001125");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001126)
+   */
   public static Resource regulation_of_translation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001126");
   }
@@ -8101,18 +9152,34 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001127");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001128)
+   */
   public static Resource regulation_of_molecular_production() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001128");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001129)
+   */
   public static Resource regulation_of_molecular_degradation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001129");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001130)
+   */
   public static Resource protein_mediated_regulation_of_translation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001130");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001131)
+   */
   public static Resource rna_mediated_regulation_of_translation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001131");
   }
@@ -8125,106 +9192,210 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001132");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001133)
+   */
   public static Resource increased_frequency_of_process() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001133");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001134)
+   */
   public static Resource decreased_frequency_of_process() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001134");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001135)
+   */
   public static Resource regulation_of_process_frequency() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001135");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001136)
+   */
   public static Resource regulation_of_process_duration() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001136");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001137)
+   */
   public static Resource increased_duration_of_process() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001137");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001138)
+   */
   public static Resource decreased_duration_of_process() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001138");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001139)
+   */
   public static Resource regulation_of_process_spatial_extent() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001139");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001140)
+   */
   public static Resource increased_spatial_extent_of_process() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001140");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001141)
+   */
   public static Resource decreased_spatial_extent_of_process() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001141");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001142)
+   */
   public static Resource maintenance_of_spatial_extent_of_process() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001142");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001143)
+   */
   public static Resource maintenance_of_duration_of_process() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001143");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001144)
+   */
   public static Resource maintenance_of_frequency_of_process() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001144");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001145)
+   */
   public static Resource regulation_of_participant_quantity() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001145");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001146)
+   */
   public static Resource increased_object_production() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001146");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001147)
+   */
   public static Resource decreased_object_production() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001147");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001148)
+   */
   public static Resource increased_object_consumption() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001148");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001149)
+   */
   public static Resource decreased_object_consumption() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001149");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001150)
+   */
   public static Resource regulation_of_object_consumption() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001150");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001151)
+   */
   public static Resource regulation_of_object_production() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001151");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001152)
+   */
   public static Resource maintenance_of_object_production() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001152");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001153)
+   */
   public static Resource maintenance_of_object_consumption() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001153");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001160)
+   */
   public static Resource number_of_objects_produced() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001160");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001161)
+   */
   public static Resource number_of_objects_consumed() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001161");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001162)
+   */
   public static Resource change_in_number_of_objects_produced() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001162");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001163)
+   */
   public static Resource increase_in_number_of_objects_produced() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001163");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001164)
+   */
   public static Resource decrease_in_number_of_objects_produced() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_001164");
   }
@@ -8278,6 +9449,134 @@ public class SIO {
   }
 
   /**
+   * a database cross-reference is an association between one data item and another
+   * (http://semanticscience.org/resource/SIO_001171)
+   */
+  public static Resource database_cross_reference() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001171");
+  }
+
+  /**
+   * a database cross-reference is an association between one data item and another
+   * (http://semanticscience.org/resource/SIO_001171)
+   */
+  public static Resource dbxref() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001171");
+  }
+
+  /**
+   * an exact cross-reference is a database cross-reference in which one entity is equivalent to the other based on all the entitie"s attributes (minus the source)
+   * (http://semanticscience.org/resource/SIO_001172)
+   */
+  public static Resource exact_cross_reference() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001172");
+  }
+
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001173)
+   */
+  public static Resource double_stranded_DNA() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001173");
+  }
+
+  /**
+   * a nucleic acid strand is a single-stranded nucleic acid that is part of a double stranded nucleic acid complex.
+   * (http://semanticscience.org/resource/SIO_001174)
+   */
+  public static Resource nucleic_acid_strand() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001174");
+  }
+
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001175)
+   */
+  public static Resource positive_nucleic_acid_strand() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001175");
+  }
+
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001176)
+   */
+  public static Resource negative_nucleic_acid_strand() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001176");
+  }
+
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001177)
+   */
+  public static Resource double_stranded_nucleic_acid() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001177");
+  }
+
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001178)
+   */
+  public static Resource double_stranded_RNA() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001178");
+  }
+
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001179)
+   */
+  public static Resource full_agreement() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001179");
+  }
+
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001180)
+   */
+  public static Resource partial_agreement() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001180");
+  }
+
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001181)
+   */
+  public static Resource full_disagreement() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001181");
+  }
+
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_001182)
+   */
+  public static Resource partial_disagreement() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001182");
+  }
+
+  /**
+   * a statement is a proposition that is either (a) a meaningful declarative sentence that is either true or false, or (b) that which a true or false declarative sentence asserts
+   * (http://semanticscience.org/resource/SIO_001183)
+   */
+  public static Resource statement() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001183");
+  }
+
+  /**
+   * a slope or gradient of a line describes its steepness, incline, or grade. A higher slope value indicates a steeper incline. Slope is normally described by the ratio of the "rise" divided by the "run" between two points on a line.
+   * (http://semanticscience.org/resource/SIO_001184)
+   */
+  public static Resource slope() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001184");
+  }
+
+  /**
+   * a software process identifier is an identifier for a software process in some operating system.
+   * (http://semanticscience.org/resource/SIO_001185)
+   */
+  public static Resource software_process_identifier() {
+    return _namespace_SIO("http://semanticscience.org/resource/SIO_001185");
+  }
+
+  /**
    * a biological organisn is a biological entity that consists of one or more cells and is capable of genomic replication (independently or not).
    * (http://semanticscience.org/resource/SIO_010000)
    */
@@ -8325,22 +9624,42 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010005");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010007)
+   */
   public static Resource polypeptide() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010007");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010008)
+   */
   public static Resource nucleic_acid() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010008");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010009)
+   */
   public static Resource ribonucleic_acid() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010009");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010010)
+   */
   public static Resource deoxyribonucleic_acid() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010010");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010011)
+   */
   public static Resource lipid() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010011");
   }
@@ -8353,34 +9672,66 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010013");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010014)
+   */
   public static Resource primary_structure_descriptor() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010014");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010015)
+   */
   public static Resource protein_sequence() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010015");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010015)
+   */
   public static Resource polypeptide_sequence() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010015");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010016)
+   */
   public static Resource nucleic_acid_sequence() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010016");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010017)
+   */
   public static Resource ribonucleic_acid_sequence() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010017");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010017)
+   */
   public static Resource RNA_sequence() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010017");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010018)
+   */
   public static Resource deoxyribonucleic_acid_sequence() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010018");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010018)
+   */
   public static Resource DNA_sequence() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010018");
   }
@@ -8401,18 +9752,34 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010020");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010022)
+   */
   public static Resource secondary_structure_descriptor() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010022");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010023)
+   */
   public static Resource tertiary_structure_descriptor() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010023");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010024)
+   */
   public static Resource quaternary_structure() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010024");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010025)
+   */
   public static Resource carbohydrate_polymer() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010025");
   }
@@ -8433,14 +9800,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010027");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010028)
+   */
   public static Resource genetic_data() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010028");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010029)
+   */
   public static Resource biological_sex() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010029");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010030)
+   */
   public static Resource monosaccharide() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010030");
   }
@@ -8517,10 +9896,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010039");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010040)
+   */
   public static Resource binding_site() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010040");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010041)
+   */
   public static Resource active_site() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010041");
   }
@@ -8533,6 +9920,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010042");
   }
 
+  /**
+   * a protein is an organic polymer that is composed of a linear polymer of amino acids.
+   * (http://semanticscience.org/resource/SIO_010043)
+   */
   public static Resource protein() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010043");
   }
@@ -8577,10 +9968,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010048");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010049)
+   */
   public static Resource molecular_site() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010049");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010050)
+   */
   public static Resource allosteric_site() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010050");
   }
@@ -8601,6 +10000,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010052");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010053)
+   */
   public static Resource lineage() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010053");
   }
@@ -8629,6 +10032,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010056");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010057)
+   */
   public static Resource organismal_stative_quality() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010057");
   }
@@ -8649,10 +10056,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010059");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010060)
+   */
   public static Resource family_history() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010060");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010061)
+   */
   public static Resource generation_number() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010061");
   }
@@ -8665,22 +10080,42 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010064");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010065)
+   */
   public static Resource bioinformatic_data() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010065");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010066)
+   */
   public static Resource sequence_alignment() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010066");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010067)
+   */
   public static Resource multiple_sequence_alignment() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010067");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010068)
+   */
   public static Resource pairwise_sequence_alignment() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010068");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010071)
+   */
   public static Resource organic_submolecule() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010071");
   }
@@ -8693,14 +10128,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010072");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010073)
+   */
   public static Resource open_reading_frame() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010073");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010074)
+   */
   public static Resource amino_acid_residue() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010074");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010075)
+   */
   public static Resource nucleotide_residue() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010075");
   }
@@ -8729,50 +10176,98 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010084");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010085)
+   */
   public static Resource gene_regulatory_component() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010085");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010086)
+   */
   public static Resource enhancer() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010086");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010087)
+   */
   public static Resource inactive_ingredient() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010087");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010088)
+   */
   public static Resource to_serve_as_a_template_for_molecular_synthesis() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010088");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010089)
+   */
   public static Resource to_serve_as_a_template_for_protein_synthesis() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010089");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010090)
+   */
   public static Resource to_serve_as_a_template_for_RNA_synthesis() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010090");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010091)
+   */
   public static Resource to_serve_as_a_template_for_DNA_synthesis() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010091");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010092)
+   */
   public static Resource deoxyribonucleic_acid_template() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010092");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010093)
+   */
   public static Resource deoxyribonucleic_acid_primer() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010093");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010094)
+   */
   public static Resource to_serve_as_a_primer_for_DNA_synthesis() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010094");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010095)
+   */
   public static Resource RNA_transcript_component() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010095");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010096)
+   */
   public static Resource mature_mRNA() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010096");
   }
@@ -8785,10 +10280,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010097");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010098)
+   */
   public static Resource mRNA_splice_variant() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010098");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010099)
+   */
   public static Resource messenger_RNA() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010099");
   }
@@ -8841,10 +10344,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010284");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010285)
+   */
   public static Resource molecular_complex_formation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010285");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010286)
+   */
   public static Resource molecular_complex_dissociation() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010286");
   }
@@ -8905,6 +10416,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010296");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010298)
+   */
   public static Resource medical_data() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010298");
   }
@@ -8933,6 +10448,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010301");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010307)
+   */
   public static Resource molecular_modification() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010307");
   }
@@ -8961,22 +10480,42 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010310");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010334)
+   */
   public static Resource carbohydrate_residue() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010334");
   }
 
+  /**
+   * a nucleic acid part is a component of a nucleic acid.
+   * (http://semanticscience.org/resource/SIO_010335)
+   */
   public static Resource nucleic_acid_part() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010335");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010336)
+   */
   public static Resource deoxyribonucleotide_residue() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010336");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010337)
+   */
   public static Resource ribonucleotide_residue() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010337");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010338)
+   */
   public static Resource pharmaceutical_component() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010338");
   }
@@ -9029,14 +10568,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010345");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010346)
+   */
   public static Resource organic_polymer() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010346");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010347)
+   */
   public static Resource to_modify_conformation_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010347");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010349)
+   */
   public static Resource to_cleave() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010349");
   }
@@ -9057,22 +10608,42 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010353");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010354)
+   */
   public static Resource to_conformationally_activate() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010354");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010355)
+   */
   public static Resource to_conformationally_inhibit() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010355");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010360)
+   */
   public static Resource to_modify_oxidation_state_of() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010360");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010362)
+   */
   public static Resource substrate() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010362");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010363)
+   */
   public static Resource product() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010363");
   }
@@ -9181,14 +10752,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010376");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010377)
+   */
   public static Resource cellular_organism() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010377");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010378)
+   */
   public static Resource non_cellular_organism() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010378");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010379)
+   */
   public static Resource virus() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010379");
   }
@@ -9201,6 +10784,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010383");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010410)
+   */
   public static Resource specialized_chemical_entity() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010410");
   }
@@ -9269,10 +10856,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010419");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010420)
+   */
   public static Resource receptor() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010420");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010423)
+   */
   public static Resource target() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010423");
   }
@@ -9325,10 +10920,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010429");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010430)
+   */
   public static Resource test_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010430");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010431)
+   */
   public static Resource control_role() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010431");
   }
@@ -9373,18 +10976,34 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010436");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010437)
+   */
   public static Resource signal_transducer() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010437");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010438)
+   */
   public static Resource signal() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010438");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010439)
+   */
   public static Resource messenger() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010439");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010440)
+   */
   public static Resource second_messenger() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010440");
   }
@@ -9397,10 +11016,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010441");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010442)
+   */
   public static Resource charge_quality() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010442");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010443)
+   */
   public static Resource intron() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010443");
   }
@@ -9413,26 +11040,50 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010444");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010445)
+   */
   public static Resource exon() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010445");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010446)
+   */
   public static Resource promoter() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010446");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010447)
+   */
   public static Resource start_codon() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010447");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010448)
+   */
   public static Resource stop_codon() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010448");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010450)
+   */
   public static Resource RNA_transcript() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010450");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010451)
+   */
   public static Resource splice_site() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010451");
   }
@@ -9510,23 +11161,31 @@ public class SIO {
   }
 
   /**
-   * the quality of having a positive charge
+   * a positive charge is a charge where the value is positive.
    * (http://semanticscience.org/resource/SIO_010461)
    */
   public static Resource positive_charge() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010461");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010462)
+   */
   public static Resource heterogeneous_substance() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010462");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010463)
+   */
   public static Resource homogeneous_substance() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010463");
   }
 
   /**
-   * the quality of having a negative charge
+   * a negative charge is a charge where the value is negative.
    * (http://semanticscience.org/resource/SIO_010464)
    */
   public static Resource negative_charge() {
@@ -9541,14 +11200,26 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010465");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010468)
+   */
   public static Resource alpha_helix() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010468");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010469)
+   */
   public static Resource beta_strand() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010469");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010471)
+   */
   public static Resource protein_part() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010471");
   }
@@ -9569,22 +11240,42 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010497");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010498)
+   */
   public static Resource single_bond() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010498");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010499)
+   */
   public static Resource double_bond() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010499");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010500)
+   */
   public static Resource triple_bond() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010500");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010501)
+   */
   public static Resource aromatic_bond() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010501");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010502)
+   */
   public static Resource disulfide_bond() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010502");
   }
@@ -9605,6 +11296,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010504");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010505)
+   */
   public static Resource base_stack() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010505");
   }
@@ -9715,10 +11410,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010518");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010519)
+   */
   public static Resource polar_addition_reaction() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010519");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010520)
+   */
   public static Resource non_polar_addition_reaction() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010520");
   }
@@ -9748,7 +11451,7 @@ public class SIO {
   }
 
   /**
-   * a biochemical pathway specifies a series of biochemical reactions towards achieving some objective.
+   * a biochemical pathway specifies a series of biochemical modifications and transformations towards achieving some biological outcome.
    * (http://semanticscience.org/resource/SIO_010525)
    */
   public static Resource biochemical_pathway() {
@@ -9763,18 +11466,34 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010526");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010527)
+   */
   public static Resource chemical_synthesis_pathway() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010527");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010528)
+   */
   public static Resource chemical_degradation_pathway() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010528");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010530)
+   */
   public static Resource a_d_structure_model() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010530");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010531)
+   */
   public static Resource sequence_profile() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010531");
   }
@@ -9795,6 +11514,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010533");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010673)
+   */
   public static Resource medical_history() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010673");
   }
@@ -9895,6 +11618,10 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010785");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_010786)
+   */
   public static Resource carbon_allotrope() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010786");
   }
@@ -9971,474 +11698,946 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_010795");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011000)
+   */
   public static Resource boron_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011000");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011001)
+   */
   public static Resource carbon_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011001");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011002)
+   */
   public static Resource hydrogen_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011002");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011003)
+   */
   public static Resource helium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011003");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011004)
+   */
   public static Resource lithium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011004");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011005)
+   */
   public static Resource beryllium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011005");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011006)
+   */
   public static Resource nitrogen_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011006");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011007)
+   */
   public static Resource oxygen_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011007");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011008)
+   */
   public static Resource fluorine_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011008");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011009)
+   */
   public static Resource neon_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011009");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011010)
+   */
   public static Resource sodium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011010");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011011)
+   */
   public static Resource magnesium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011011");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011012)
+   */
   public static Resource aluminium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011012");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011013)
+   */
   public static Resource silicon_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011013");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011014)
+   */
   public static Resource phosphorus_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011014");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011015)
+   */
   public static Resource sulfur_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011015");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011016)
+   */
   public static Resource chlorine_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011016");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011017)
+   */
   public static Resource argon_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011017");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011018)
+   */
   public static Resource potassium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011018");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011019)
+   */
   public static Resource calcium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011019");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011020)
+   */
   public static Resource scandium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011020");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011021)
+   */
   public static Resource titanium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011021");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011022)
+   */
   public static Resource vanadium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011022");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011023)
+   */
   public static Resource chromium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011023");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011024)
+   */
   public static Resource manganese_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011024");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011025)
+   */
   public static Resource iron_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011025");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011026)
+   */
   public static Resource cobalt_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011026");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011027)
+   */
   public static Resource nickel_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011027");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011028)
+   */
   public static Resource copper_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011028");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011029)
+   */
   public static Resource zinc_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011029");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011030)
+   */
   public static Resource gallium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011030");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011031)
+   */
   public static Resource germanium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011031");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011032)
+   */
   public static Resource arsenic_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011032");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011033)
+   */
   public static Resource selenium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011033");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011034)
+   */
   public static Resource bromine_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011034");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011035)
+   */
   public static Resource krypton_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011035");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011036)
+   */
   public static Resource rubidium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011036");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011037)
+   */
   public static Resource strontium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011037");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011038)
+   */
   public static Resource yttrium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011038");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011039)
+   */
   public static Resource zirconium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011039");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011040)
+   */
   public static Resource niobium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011040");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011041)
+   */
   public static Resource molybdemum_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011041");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011042)
+   */
   public static Resource technetium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011042");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011043)
+   */
   public static Resource ruthenium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011043");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011044)
+   */
   public static Resource rhodium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011044");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011045)
+   */
   public static Resource palladium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011045");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011046)
+   */
   public static Resource silver_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011046");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011047)
+   */
   public static Resource cadmium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011047");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011048)
+   */
   public static Resource indium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011048");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011049)
+   */
   public static Resource tin_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011049");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011050)
+   */
   public static Resource antimony_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011050");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011051)
+   */
   public static Resource tellurium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011051");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011052)
+   */
   public static Resource iodine_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011052");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011053)
+   */
   public static Resource xenon_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011053");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011054)
+   */
   public static Resource caesium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011054");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011055)
+   */
   public static Resource barium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011055");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011056)
+   */
   public static Resource lanthanum_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011056");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011057)
+   */
   public static Resource hafnium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011057");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011058)
+   */
   public static Resource tantalum_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011058");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011059)
+   */
   public static Resource tungsten_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011059");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011060)
+   */
   public static Resource rhenium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011060");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011061)
+   */
   public static Resource osmium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011061");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011062)
+   */
   public static Resource iridium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011062");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011063)
+   */
   public static Resource platinum_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011063");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011064)
+   */
   public static Resource gold_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011064");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011065)
+   */
   public static Resource mercury_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011065");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011066)
+   */
   public static Resource thallium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011066");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011067)
+   */
   public static Resource lead_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011067");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011068)
+   */
   public static Resource bismuth_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011068");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011069)
+   */
   public static Resource polonium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011069");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011070)
+   */
   public static Resource astatine_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011070");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011071)
+   */
   public static Resource radon_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011071");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011072)
+   */
   public static Resource francium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011072");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011073)
+   */
   public static Resource radium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011073");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011074)
+   */
   public static Resource actinium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011074");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011075)
+   */
   public static Resource rutherfordium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011075");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011076)
+   */
   public static Resource dubnium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011076");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011077)
+   */
   public static Resource seaborgium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011077");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011078)
+   */
   public static Resource bohrium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011078");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011079)
+   */
   public static Resource hassium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011079");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011080)
+   */
   public static Resource meitnerium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011080");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011081)
+   */
   public static Resource darmstadtium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011081");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011082)
+   */
   public static Resource roentgenium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011082");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011083)
+   */
   public static Resource copernicium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011083");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011084)
+   */
   public static Resource unutrium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011084");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011085)
+   */
   public static Resource ununquadium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011085");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011086)
+   */
   public static Resource ununpentium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011086");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011087)
+   */
   public static Resource ununhexium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011087");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011088)
+   */
   public static Resource ununseptium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011088");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011089)
+   */
   public static Resource ununoctium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011089");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011090)
+   */
   public static Resource cerium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011090");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011091)
+   */
   public static Resource praseodymium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011091");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011092)
+   */
   public static Resource neodymium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011092");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011093)
+   */
   public static Resource promethium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011093");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011094)
+   */
   public static Resource samarium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011094");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011095)
+   */
   public static Resource europium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011095");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011096)
+   */
   public static Resource gadolinium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011096");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011097)
+   */
   public static Resource terbium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011097");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011098)
+   */
   public static Resource dysprosium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011098");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011099)
+   */
   public static Resource holmium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011099");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011100)
+   */
   public static Resource erbium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011100");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011101)
+   */
   public static Resource thulium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011101");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011102)
+   */
   public static Resource ytterbium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011102");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011103)
+   */
   public static Resource lutetium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011103");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011104)
+   */
   public static Resource thorium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011104");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011105)
+   */
   public static Resource protactinium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011105");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011106)
+   */
   public static Resource uranium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011106");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011107)
+   */
   public static Resource neptunium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011107");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011108)
+   */
   public static Resource plutonium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011108");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011109)
+   */
   public static Resource americium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011109");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011110)
+   */
   public static Resource curium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011110");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011111)
+   */
   public static Resource berkelium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011111");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011112)
+   */
   public static Resource californium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011112");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011113)
+   */
   public static Resource einsteinium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011113");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011114)
+   */
   public static Resource fermium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011114");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011115)
+   */
   public static Resource mendelevium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011115");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011116)
+   */
   public static Resource nobelium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011116");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011117)
+   */
   public static Resource lawrencium_atom() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011117");
   }
@@ -10451,18 +12650,34 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011118");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011119)
+   */
   public static Resource biomolecular_structure_descriptor() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011119");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011120)
+   */
   public static Resource molecular_structure_file() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011120");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011121)
+   */
   public static Resource molecular_structure_descriptor() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011121");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011123)
+   */
   public static Resource chemical_data() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011123");
   }
@@ -10483,10 +12698,18 @@ public class SIO {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011126");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011130)
+   */
   public static Resource PDB_file() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011130");
   }
 
+  /**
+   * -- No comment or description provided. --
+   * (http://semanticscience.org/resource/SIO_011131)
+   */
   public static Resource collection_of_3d_molecular_structure_models() {
     return _namespace_SIO("http://semanticscience.org/resource/SIO_011131");
   }
@@ -13914,6 +16137,51 @@ public class SIO {
     if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001170")) {
       return true;
     }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001171")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001172")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001173")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001174")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001175")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001176")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001177")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001178")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001179")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001180")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001181")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001182")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001183")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001184")) {
+      return true;
+    }
+    if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_001185")) {
+      return true;
+    }
     if (uri == _namespace_SIO("http://semanticscience.org/resource/SIO_010000")) {
       return true;
     }
@@ -15140,5 +17408,7 @@ public class SIO {
     return map;
   }
 
+
+}
 
 }

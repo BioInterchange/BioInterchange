@@ -2,10 +2,7 @@ import rdflib
 
 from rdflib import Namespace
 
-__namespace_SIO = Namespace('http://semanticscience.org/resource/SIO_000001)')
-
-def _namespace_SIO(accession):
-    return __namespace_SIO[accession]
+module BioInterchange
 
 class SIO:
 
@@ -18,15 +15,15 @@ class SIO:
 
     @classmethod
     def has_attribute(cls):
-        """has attribute is a relation between an entity and some attribute or property.
-        (cls, http://semanticscience.org/resource/SIO_000008)
+        """has attribute is a relation that associates a entity with an attribute where an attribute is an intrinsic characteristic such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (cls, e.g. a quantity, position, label/identifier) either directly or indirectly through generalization of entities of the same type.
+        (http://semanticscience.org/resource/SIO_000008)
         """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000008')
 
     @classmethod
     def is_attribute_of(cls):
-        """is attribute of is a relation between an attribute and the entity that it is ascribed to
-        (cls, http://semanticscience.org/resource/SIO_000011)
+        """is attribute of is a relation that associates an attribute with an entity where an attribute is an intrinsic characteristic such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (cls, e.g. a quantity, position, label/identifier) either directly or indirectly through generalization of entities of the same type.
+        (http://semanticscience.org/resource/SIO_000011)
         """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000011')
 
@@ -46,6 +43,9 @@ class SIO:
 
     @classmethod
     def is_time_boundary_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000029)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000029')
 
     @classmethod
@@ -71,6 +71,9 @@ class SIO:
 
     @classmethod
     def is_denoted_by(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000060)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000060')
 
     @classmethod
@@ -208,10 +211,16 @@ class SIO:
 
     @classmethod
     def is_supporting_evidence_for(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000208)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000208')
 
     @classmethod
     def is_disputing_evidence_for(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000209)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000209')
 
     @classmethod
@@ -461,6 +470,9 @@ class SIO:
 
     @classmethod
     def is_preceded_by(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000249)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000249')
 
     @classmethod
@@ -563,6 +575,9 @@ class SIO:
 
     @classmethod
     def is_covalently_connected_to_transitive(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000288)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000288')
 
     @classmethod
@@ -665,6 +680,9 @@ class SIO:
 
     @classmethod
     def is_weakly_interacting_with(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000335)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000335')
 
     @classmethod
@@ -704,6 +722,9 @@ class SIO:
 
     @classmethod
     def is_realized_in(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000356)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000356')
 
     @classmethod
@@ -715,6 +736,9 @@ class SIO:
 
     @classmethod
     def is_satisfied_by(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000363)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000363')
 
     @classmethod
@@ -747,6 +771,9 @@ class SIO:
 
     @classmethod
     def has_expression(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000420)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000420')
 
     @classmethod
@@ -779,6 +806,9 @@ class SIO:
 
     @classmethod
     def is_manifestation_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000426)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000426')
 
     @classmethod
@@ -790,6 +820,9 @@ class SIO:
 
     @classmethod
     def is_broader_than(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000477)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000477')
 
     @classmethod
@@ -801,14 +834,23 @@ class SIO:
 
     @classmethod
     def is_exact_match_to(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000484)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000484')
 
     @classmethod
     def is_close_match_to(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000490)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000490')
 
     @classmethod
     def is_broad_match_to(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000491)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000491')
 
     @classmethod
@@ -848,6 +890,9 @@ class SIO:
 
     @classmethod
     def is_described_by(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000557)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000557')
 
     @classmethod
@@ -880,6 +925,9 @@ class SIO:
 
     @classmethod
     def is_subject_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000629)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000629')
 
     @classmethod
@@ -912,6 +960,9 @@ class SIO:
 
     @classmethod
     def is_modelled_by(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000633)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000633')
 
     @classmethod
@@ -930,6 +981,9 @@ class SIO:
 
     @classmethod
     def is_trigger_for(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000636)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000636')
 
     @classmethod
@@ -948,14 +1002,23 @@ class SIO:
 
     @classmethod
     def is_realizable_property_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000643)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000643')
 
     @classmethod
     def has_realizable_property(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000644)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000644')
 
     @classmethod
     def is_capability_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000646)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000646')
 
     @classmethod
@@ -1002,10 +1065,16 @@ class SIO:
 
     @classmethod
     def has_identifier(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000671)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000671')
 
     @classmethod
     def is_identifier_for(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000672)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000672')
 
     @classmethod
@@ -1024,22 +1093,37 @@ class SIO:
 
     @classmethod
     def has_time_boundary(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000679)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000679')
 
     @classmethod
     def has_start_time(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000680)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000680')
 
     @classmethod
     def has_end_time(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000681)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000681')
 
     @classmethod
     def is_start_time_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000682)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000682')
 
     @classmethod
     def is_end_time_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000684)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000684')
 
     @classmethod
@@ -1051,30 +1135,51 @@ class SIO:
 
     @classmethod
     def is_mutual_disposition_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000697)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000697')
 
     @classmethod
     def is_greater_than_or_equal_to(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000699)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000699')
 
     @classmethod
     def is_mutually_related_to(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000709)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000709')
 
     @classmethod
     def is_mutual_role_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000710)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000710')
 
     @classmethod
     def is_lesser_than_or_equal_to(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000733)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000733')
 
     @classmethod
     def is_greater_than(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000734)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000734')
 
     @classmethod
     def is_lesser_than(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000735)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000735')
 
     @classmethod
@@ -1093,10 +1198,16 @@ class SIO:
 
     @classmethod
     def is_equal_to(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000738)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000738')
 
     @classmethod
     def is_inequal_to(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000749)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000749')
 
     @classmethod
@@ -1108,6 +1219,9 @@ class SIO:
 
     @classmethod
     def is_evidence_for(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000773)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000773')
 
     @classmethod
@@ -1119,6 +1233,9 @@ class SIO:
 
     @classmethod
     def is_refuting_evidence_for(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000775)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000775')
 
     @classmethod
@@ -1130,6 +1247,9 @@ class SIO:
 
     @classmethod
     def in_relation_from(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000892)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000892')
 
     @classmethod
@@ -1218,30 +1338,51 @@ class SIO:
 
     @classmethod
     def is_mutual_capability_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001101)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001101')
 
     @classmethod
     def regulates(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001154)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001154')
 
     @classmethod
     def is_regulated_by(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001155)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001155')
 
     @classmethod
     def results_in(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001156)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001156')
 
     @classmethod
     def is_result_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001157)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001157')
 
     @classmethod
     def affects(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001158)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001158')
 
     @classmethod
     def is_affected_by(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001159)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001159')
 
     @classmethod
@@ -1253,6 +1394,9 @@ class SIO:
 
     @classmethod
     def is_encoded_by(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010079)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010079')
 
     @classmethod
@@ -1264,14 +1408,23 @@ class SIO:
 
     @classmethod
     def is_transcribed_from(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010081)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010081')
 
     @classmethod
     def is_translated_into(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010082)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010082')
 
     @classmethod
     def is_translated_from(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010083)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010083')
 
     @classmethod
@@ -1318,6 +1471,9 @@ class SIO:
 
     @classmethod
     def social_entity(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000009)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000009')
 
     @classmethod
@@ -1406,10 +1562,16 @@ class SIO:
 
     @classmethod
     def start_date(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000031)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000031')
 
     @classmethod
     def end_date(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000032)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000032')
 
     @classmethod
@@ -1442,10 +1604,16 @@ class SIO:
 
     @classmethod
     def spatial_quantity(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000037)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000037')
 
     @classmethod
     def physical_dimensional_quantity(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000037)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000037')
 
     @classmethod
@@ -1457,38 +1625,65 @@ class SIO:
 
     @classmethod
     def depth(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000039)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000039')
 
     @classmethod
     def height(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000040)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000040')
 
     @classmethod
     def length(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000041)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000041')
 
     @classmethod
     def width(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000042)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000042')
 
     @classmethod
     def thickness(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000043)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000043')
 
     @classmethod
     def area(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000045)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000045')
 
     @classmethod
     def perimeter(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000046)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000046')
 
     @classmethod
     def circumference(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000047)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000047')
 
     @classmethod
     def volume(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000049)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000049')
 
     @classmethod
@@ -1563,6 +1758,9 @@ class SIO:
 
     @classmethod
     def polar_coordinate(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000073)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000073')
 
     @classmethod
@@ -1703,8 +1901,15 @@ class SIO:
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000090')
 
     @classmethod
+    def action_specification(cls):
+        """An action specification is a specification composed of a sequence of instructions to achieve some objective.
+        (cls, http://semanticscience.org/resource/SIO_000091)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_000091')
+
+    @classmethod
     def effective_specification(cls):
-        """An effective specification is a specification composed of a sequence of instructions to achieve some objective.
+        """An action specification is a specification composed of a sequence of instructions to achieve some objective.
         (cls, http://semanticscience.org/resource/SIO_000091)
         """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000091')
@@ -1809,6 +2014,9 @@ class SIO:
 
     @classmethod
     def novel(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000109)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000109')
 
     @classmethod
@@ -1820,6 +2028,9 @@ class SIO:
 
     @classmethod
     def document_section(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000111)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000111')
 
     @classmethod
@@ -1852,6 +2063,9 @@ class SIO:
 
     @classmethod
     def name(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000116)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000116')
 
     @classmethod
@@ -1933,6 +2147,9 @@ class SIO:
 
     @classmethod
     def ontology_document(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000129)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000129')
 
     @classmethod
@@ -1944,6 +2161,9 @@ class SIO:
 
     @classmethod
     def motif(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000131)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000131')
 
     @classmethod
@@ -2130,6 +2350,9 @@ class SIO:
 
     @classmethod
     def newspaper(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000163)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000163')
 
     @classmethod
@@ -2407,6 +2630,9 @@ class SIO:
 
     @classmethod
     def logical_operator(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000238)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000238')
 
     @classmethod
@@ -2502,10 +2728,16 @@ class SIO:
 
     @classmethod
     def true(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000269)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000269')
 
     @classmethod
     def false(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000270)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000270')
 
     @classmethod
@@ -2531,6 +2763,9 @@ class SIO:
 
     @classmethod
     def disjunction_or(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000280)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000280')
 
     @classmethod
@@ -2556,10 +2791,16 @@ class SIO:
 
     @classmethod
     def academic_organization(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000285)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000285')
 
     @classmethod
     def social_relation(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000287)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000287')
 
     @classmethod
@@ -2571,10 +2812,16 @@ class SIO:
 
     @classmethod
     def university(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000290)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000290')
 
     @classmethod
     def collection_of_documents(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000295)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000295')
 
     @classmethod
@@ -2663,10 +2910,16 @@ class SIO:
 
     @classmethod
     def volume_number(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000309)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000309')
 
     @classmethod
     def polymer(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000314)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000314')
 
     @classmethod
@@ -2727,6 +2980,9 @@ class SIO:
 
     @classmethod
     def polar_coordinate_system(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000327)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000327')
 
     @classmethod
@@ -2738,14 +2994,23 @@ class SIO:
 
     @classmethod
     def cylindrical_coordinate_system(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000329)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000329')
 
     @classmethod
     def spherical_coordinate_system(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000330)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000330')
 
     @classmethod
     def OWL_ontology(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000331)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000331')
 
     @classmethod
@@ -2778,6 +3043,9 @@ class SIO:
 
     @classmethod
     def to_modify(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000343)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000343')
 
     @classmethod
@@ -2852,6 +3120,9 @@ class SIO:
 
     @classmethod
     def fitness(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000357)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000357')
 
     @classmethod
@@ -2863,6 +3134,9 @@ class SIO:
 
     @classmethod
     def purpose(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000359)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000359')
 
     @classmethod
@@ -2923,6 +3197,9 @@ class SIO:
 
     @classmethod
     def to_reduce_energy(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000374)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000374')
 
     @classmethod
@@ -2934,6 +3211,9 @@ class SIO:
 
     @classmethod
     def to_change_materially(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000376)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000376')
 
     @classmethod
@@ -2945,6 +3225,9 @@ class SIO:
 
     @classmethod
     def to_change_appearance(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000378)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000378')
 
     @classmethod
@@ -2991,17 +3274,30 @@ class SIO:
 
     @classmethod
     def to_change_energetically(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000385)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000385')
 
     @classmethod
     def to_oxidize(cls):
-        """Ambiguous label.
+        """Either:
+            -- No comment or description provided. --
+            (cls, http://semanticscience.org/resource/SIO_000386)
+        Or:
+            -- No comment or description provided. --
+            (http://semanticscience.org/resource/SIO_010358)
         """
         return [ _namespace_SIO('http://semanticscience.org/resource/SIO_000386'), _namespace_SIO('http://semanticscience.org/resource/SIO_010358') ]
 
     @classmethod
     def to_reduce(cls):
-        """Ambiguous label.
+        """Either:
+            -- No comment or description provided. --
+            (cls, http://semanticscience.org/resource/SIO_000387)
+        Or:
+            -- No comment or description provided. --
+            (http://semanticscience.org/resource/SIO_010359)
         """
         return [ _namespace_SIO('http://semanticscience.org/resource/SIO_000387'), _namespace_SIO('http://semanticscience.org/resource/SIO_010359') ]
 
@@ -3042,22 +3338,37 @@ class SIO:
 
     @classmethod
     def patient(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000393)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000393')
 
     @classmethod
     def doctor(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000394)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000394')
 
     @classmethod
     def to_regulate(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000395)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000395')
 
     @classmethod
     def to_modulate(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000395)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000395')
 
     @classmethod
     def file(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000396)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000396')
 
     @classmethod
@@ -3069,10 +3380,16 @@ class SIO:
 
     @classmethod
     def nurse(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000398)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000398')
 
     @classmethod
     def study_subject(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000399)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000399')
 
     @classmethod
@@ -3105,22 +3422,37 @@ class SIO:
 
     @classmethod
     def professor(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000404)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000404')
 
     @classmethod
     def student(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000405)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000405')
 
     @classmethod
     def academic(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000406)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000406')
 
     @classmethod
     def to_increase_the_rate_of_formation(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000407)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000407')
 
     @classmethod
     def to_investigate(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000408)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000408')
 
     @classmethod
@@ -3167,6 +3499,9 @@ class SIO:
 
     @classmethod
     def geopolitical_region(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000415)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000415')
 
     @classmethod
@@ -3206,34 +3541,58 @@ class SIO:
 
     @classmethod
     def year(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000428)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000428')
 
     @classmethod
     def month(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000429)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000429')
 
     @classmethod
     def day(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000430)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000430')
 
     @classmethod
     def century(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000431)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000431')
 
     @classmethod
     def millenium(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000432)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000432')
 
     @classmethod
     def hour(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000433)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000433')
 
     @classmethod
     def minute(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000434)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000434')
 
     @classmethod
     def second(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000435)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000435')
 
     @classmethod
@@ -3252,6 +3611,9 @@ class SIO:
 
     @classmethod
     def altitude(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000438)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000438')
 
     @classmethod
@@ -3315,6 +3677,9 @@ class SIO:
 
     @classmethod
     def figure_part(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000448)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000448')
 
     @classmethod
@@ -3508,6 +3873,9 @@ class SIO:
 
     @classmethod
     def scientific_data(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000472)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000472')
 
     @classmethod
@@ -3541,6 +3909,9 @@ class SIO:
 
     @classmethod
     def sequence_variant_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000478)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000478')
 
     @classmethod
@@ -3552,10 +3923,16 @@ class SIO:
 
     @classmethod
     def insertion_variant_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000480)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000480')
 
     @classmethod
     def deletion_variant_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000481)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000481')
 
     @classmethod
@@ -3567,26 +3944,44 @@ class SIO:
 
     @classmethod
     def human(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000485)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000485')
 
     @classmethod
     def mouse(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000486)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000486')
 
     @classmethod
     def rat(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000487)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000487')
 
     @classmethod
     def worm(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000488)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000488')
 
     @classmethod
     def e_coli(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000489)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000489')
 
     @classmethod
     def to_consume(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000492)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000492')
 
     @classmethod
@@ -3605,10 +4000,16 @@ class SIO:
 
     @classmethod
     def person(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000498)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000498')
 
     @classmethod
     def to_decrease_the_rate_of_formation(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000499)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000499')
 
     @classmethod
@@ -3655,6 +4056,9 @@ class SIO:
 
     @classmethod
     def geometric_entity(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000506)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000506')
 
     @classmethod
@@ -3855,6 +4259,9 @@ class SIO:
 
     @classmethod
     def positionally_oriented_line(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000534)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000534')
 
     @classmethod
@@ -3866,6 +4273,9 @@ class SIO:
 
     @classmethod
     def to_regulate_the_rate_of_formation(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000536)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000536')
 
     @classmethod
@@ -3905,14 +4315,23 @@ class SIO:
 
     @classmethod
     def to_serve_as(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000542)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000542')
 
     @classmethod
     def to_serve_as_a_host(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000543)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000543')
 
     @classmethod
     def to_infect(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000544)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000544')
 
     @classmethod
@@ -3931,6 +4350,9 @@ class SIO:
 
     @classmethod
     def collection_of_points(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000546)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000546')
 
     @classmethod
@@ -3942,22 +4364,37 @@ class SIO:
 
     @classmethod
     def to_reduce_the_activation_energy(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000549)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000549')
 
     @classmethod
     def to_activate(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000549)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000549')
 
     @classmethod
     def to_increase_the_activation_energy(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000550)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000550')
 
     @classmethod
     def to_inhibit(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000550)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000550')
 
     @classmethod
     def to_change_the_activation_energy(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000551)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000551')
 
     @classmethod
@@ -3976,6 +4413,9 @@ class SIO:
 
     @classmethod
     def lipid_residue(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000556)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000556')
 
     @classmethod
@@ -4064,6 +4504,9 @@ class SIO:
 
     @classmethod
     def passive_movement(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000573)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000573')
 
     @classmethod
@@ -4103,10 +4546,16 @@ class SIO:
 
     @classmethod
     def symport_enabled_secondary_active_transport(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000579)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000579')
 
     @classmethod
     def antiport_enabled_secondary_active_transport(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000580)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000580')
 
     @classmethod
@@ -4202,6 +4651,9 @@ class SIO:
 
     @classmethod
     def parameterized_data_transformation(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000595)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000595')
 
     @classmethod
@@ -4241,6 +4693,9 @@ class SIO:
 
     @classmethod
     def sound_wave(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000605)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000605')
 
     @classmethod
@@ -4350,14 +4805,23 @@ class SIO:
 
     @classmethod
     def RDFS_ontology(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000622)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000622')
 
     @classmethod
     def OBO_ontology(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000623)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000623')
 
     @classmethod
     def chemical_functional_group(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000624)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000624')
 
     @classmethod
@@ -4404,14 +4868,23 @@ class SIO:
 
     @classmethod
     def process_model(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000647)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000647')
 
     @classmethod
     def physical_model(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000648)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000648')
 
     @classmethod
     def information_processing_procedure(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000649)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000649')
 
     @classmethod
@@ -4430,18 +4903,30 @@ class SIO:
 
     @classmethod
     def version_label(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000653)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000653')
 
     @classmethod
     def a_version_label_is_a_label_for_a_particular_form_or_variation_of_an_earlier_or_original_type(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000653)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000653')
 
     @classmethod
     def software_version_label(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000654)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000654')
 
     @classmethod
     def a_software_version_label_is_a_version_label_for_a_piece_of_software(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000654)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000654')
 
     @classmethod
@@ -4453,26 +4938,44 @@ class SIO:
 
     @classmethod
     def province(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000661)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000661')
 
     @classmethod
     def state(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000662)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000662')
 
     @classmethod
     def territory(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000663)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000663')
 
     @classmethod
     def country(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000664)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000664')
 
     @classmethod
     def city(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000665)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000665')
 
     @classmethod
     def township(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000666)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000666')
 
     @classmethod
@@ -4484,10 +4987,16 @@ class SIO:
 
     @classmethod
     def start_time(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000669)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000669')
 
     @classmethod
     def end_time(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000670)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000670')
 
     @classmethod
@@ -4499,6 +5008,9 @@ class SIO:
 
     @classmethod
     def social_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000676)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000676')
 
     @classmethod
@@ -4524,10 +5036,16 @@ class SIO:
 
     @classmethod
     def department(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000686)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000686')
 
     @classmethod
     def institute(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000688)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000688')
 
     @classmethod
@@ -4630,42 +5148,72 @@ class SIO:
 
     @classmethod
     def occupational_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000706)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000706')
 
     @classmethod
     def student_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000707)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000707')
 
     @classmethod
     def professor_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000708)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000708')
 
     @classmethod
     def academic_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000711)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000711')
 
     @classmethod
     def medical_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000712)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000712')
 
     @classmethod
     def doctor_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000713)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000713')
 
     @classmethod
     def nurse_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000714)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000714')
 
     @classmethod
     def patient_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000715)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000715')
 
     @classmethod
     def medical_practitioner(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000716)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000716')
 
     @classmethod
     def dentist_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000717)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000717')
 
     @classmethod
@@ -4733,14 +5281,23 @@ class SIO:
 
     @classmethod
     def administrative_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000726)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000726')
 
     @classmethod
     def secretary_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000727)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000727')
 
     @classmethod
     def chemical_identifier(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000728)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000728')
 
     @classmethod
@@ -4752,14 +5309,23 @@ class SIO:
 
     @classmethod
     def physical_entity_identifier(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000730)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000730')
 
     @classmethod
     def informational_entity_identifier(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000731)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000731')
 
     @classmethod
     def molecular_identifier(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000732)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000732')
 
     @classmethod
@@ -4785,10 +5351,16 @@ class SIO:
 
     @classmethod
     def local_maximum_stationary_point(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000742)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000742')
 
     @classmethod
     def local_minimum_stationary_point(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000743)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000743')
 
     @classmethod
@@ -4839,6 +5411,9 @@ class SIO:
 
     @classmethod
     def database(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000750)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000750')
 
     @classmethod
@@ -4857,6 +5432,9 @@ class SIO:
 
     @classmethod
     def column(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000753)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000753')
 
     @classmethod
@@ -4868,6 +5446,9 @@ class SIO:
 
     @classmethod
     def cell_informational(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000755)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000755')
 
     @classmethod
@@ -4886,6 +5467,9 @@ class SIO:
 
     @classmethod
     def database_column(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000757)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000757')
 
     @classmethod
@@ -4897,14 +5481,23 @@ class SIO:
 
     @classmethod
     def unique_cell(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000759)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000759')
 
     @classmethod
     def referencing_cell(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000760)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000760')
 
     @classmethod
     def referent_cell(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000761)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000761')
 
     @classmethod
@@ -4944,6 +5537,9 @@ class SIO:
 
     @classmethod
     def street_name(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000766)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000766')
 
     @classmethod
@@ -4955,6 +5551,9 @@ class SIO:
 
     @classmethod
     def apartment_number(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000768)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000768')
 
     @classmethod
@@ -5015,6 +5614,9 @@ class SIO:
 
     @classmethod
     def spatial_boundary(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000783)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000783')
 
     @classmethod
@@ -5040,6 +5642,9 @@ class SIO:
 
     @classmethod
     def page_number(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000787)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000787')
 
     @classmethod
@@ -5170,18 +5775,30 @@ class SIO:
 
     @classmethod
     def partial_positive_charge(cls):
+        """a partial negative charge is a negative charge where the value of the charge is negative.
+        (cls, http://semanticscience.org/resource/SIO_000807)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000807')
 
     @classmethod
     def partial_negative_charge(cls):
+        """a partial positive charge is a partial charge where the value of the charge is positive.
+        (cls, http://semanticscience.org/resource/SIO_000808)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000808')
 
     @classmethod
     def partial_charge(cls):
+        """the quality of having a charge that is not a full multiple of 1 unit charge.
+        (cls, http://semanticscience.org/resource/SIO_000809)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000809')
 
     @classmethod
-    def unitary_charge(cls):
+    def complete_charge(cls):
+        """a complete charge is a charge where the value of the charge is a multiple of 1.
+        (cls, http://semanticscience.org/resource/SIO_000810)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000810')
 
     @classmethod
@@ -5361,6 +5978,9 @@ class SIO:
 
     @classmethod
     def excitement(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000836)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000836')
 
     @classmethod
@@ -5463,10 +6083,16 @@ class SIO:
 
     @classmethod
     def joy(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000850)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000850')
 
     @classmethod
     def joy_is_an_emotion_of_intense_happiness(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000850)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000850')
 
     @classmethod
@@ -5520,6 +6146,9 @@ class SIO:
 
     @classmethod
     def pleasure(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000858)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000858')
 
     @classmethod
@@ -5538,10 +6167,16 @@ class SIO:
 
     @classmethod
     def regret(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000861)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000861')
 
     @classmethod
     def remorse(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000862)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000862')
 
     @classmethod
@@ -5553,10 +6188,16 @@ class SIO:
 
     @classmethod
     def satisfaction(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000864)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000864')
 
     @classmethod
     def satisfaction_is_an_emotion_of_fulfillment_of_one_s_wishes_expectations_or_needs_or_the_pleasure_derived_from_this(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000864)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000864')
 
     @classmethod
@@ -5624,18 +6265,30 @@ class SIO:
 
     @classmethod
     def department_chair_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000875)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000875')
 
     @classmethod
     def student_advisor_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000876)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000876')
 
     @classmethod
     def undergraduate_student_advisor_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000877)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000877')
 
     @classmethod
     def graduate_student_advisor_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000878)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000878')
 
     @classmethod
@@ -5654,6 +6307,9 @@ class SIO:
 
     @classmethod
     def investigational_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000881)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000881')
 
     @classmethod
@@ -5665,10 +6321,16 @@ class SIO:
 
     @classmethod
     def subject_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000883)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000883')
 
     @classmethod
     def publishing_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000884)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000884')
 
     @classmethod
@@ -5911,6 +6573,9 @@ class SIO:
 
     @classmethod
     def television_program(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000924)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000924')
 
     @classmethod
@@ -5992,6 +6657,9 @@ class SIO:
 
     @classmethod
     def textual_chart(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000937)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000937')
 
     @classmethod
@@ -6031,6 +6699,9 @@ class SIO:
 
     @classmethod
     def numeric_label(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000942)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000942')
 
     @classmethod
@@ -6126,6 +6797,9 @@ class SIO:
 
     @classmethod
     def environment(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000955)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000955')
 
     @classmethod
@@ -6179,22 +6853,37 @@ class SIO:
 
     @classmethod
     def standard_operating_procedure(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000964)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000964')
 
     @classmethod
     def agreement_quality(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000965)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000965')
 
     @classmethod
     def agreement(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000966)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000966')
 
     @classmethod
     def disagreement(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000967)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000967')
 
     @classmethod
     def poison_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000968)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000968')
 
     @classmethod
@@ -6283,6 +6972,9 @@ class SIO:
 
     @classmethod
     def predicted_gene(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_000987)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_000987')
 
     @classmethod
@@ -6427,10 +7119,16 @@ class SIO:
 
     @classmethod
     def toxic(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001009)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001009')
 
     @classmethod
     def non_toxic(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001010)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001010')
 
     @classmethod
@@ -6526,6 +7224,9 @@ class SIO:
 
     @classmethod
     def medical_procedure(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001024)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001024')
 
     @classmethod
@@ -6586,30 +7287,51 @@ class SIO:
 
     @classmethod
     def text_quality(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001033)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001033')
 
     @classmethod
     def reviewed(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001034)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001034')
 
     @classmethod
     def peer_reviewed(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001035)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001035')
 
     @classmethod
     def draft(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001036)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001036')
 
     @classmethod
     def finalized(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001037)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001037')
 
     @classmethod
     def editor_reviewed(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001038)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001038')
 
     @classmethod
     def written(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001039)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001039')
 
     @classmethod
@@ -6641,26 +7363,38 @@ class SIO:
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001042')
 
     @classmethod
-    def protocol(cls):
-        """a protocol is a predefined procedural method in the design and implementation of experiments. In addition to providing a detailed set of procedures and lists of required equipment and instruments, protocols often include information on safety precautions, the calculation of results and reporting standards, including statistical analysis and rules for predefining and documenting excluded data to avoid bias.
+    def experimental_protocol(cls):
+        """an experimental protocol is an action specification with respect to the design and implementation of experiments. In addition to providing a detailed set of procedures and lists of required equipment and instruments, experimental protocols often include information on safety precautions, the calculation of results and reporting standards, including statistical analysis and rules for predefining and documenting excluded data to avoid bias.
         (cls, http://semanticscience.org/resource/SIO_001043)
         """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001043')
 
     @classmethod
     def viroid(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001044)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001044')
 
     @classmethod
     def polar_quality(cls):
+        """the quality of being polar or not polar.
+        (cls, http://semanticscience.org/resource/SIO_001045)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001045')
 
     @classmethod
     def polar(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001046)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001046')
 
     @classmethod
     def non_polar(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001047)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001047')
 
     @classmethod
@@ -6847,10 +7581,16 @@ class SIO:
 
     @classmethod
     def text_span_end_position(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001072)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001072')
 
     @classmethod
     def text_span_end_position_is_the_position_offset_of_the_last_character_of_a_text_span_in_relation_the_text_it_is_from(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001072)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001072')
 
     @classmethod
@@ -6883,10 +7623,16 @@ class SIO:
 
     @classmethod
     def microarray_experiment(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001076)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001076')
 
     @classmethod
     def gene_expression_value(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001077)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001077')
 
     @classmethod
@@ -6954,6 +7700,9 @@ class SIO:
 
     @classmethod
     def to_modify_electronically(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001087)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001087')
 
     @classmethod
@@ -6993,14 +7742,23 @@ class SIO:
 
     @classmethod
     def rigid(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001093)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001093')
 
     @classmethod
     def bent(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001094)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001094')
 
     @classmethod
     def curved(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001095)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001095')
 
     @classmethod
@@ -7026,14 +7784,23 @@ class SIO:
 
     @classmethod
     def to_interact_and_to_be_interacted_with(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001102)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001102')
 
     @classmethod
     def to_gain_a_covalent_bond(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001103)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001103')
 
     @classmethod
     def to_lose_a_covalent_bond(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001104)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001104')
 
     @classmethod
@@ -7045,14 +7812,30 @@ class SIO:
 
     @classmethod
     def to_produce(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001106)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001106')
 
     @classmethod
     def pathway(cls):
+        """a pathway is an effective specification that outlines a set of actions that forms a way to achieve an objective.
+        (cls, http://semanticscience.org/resource/SIO_001107)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001107')
+
+    @classmethod
+    def biological_pathway(cls):
+        """a pathway is an effective specification that outlines a set of actions that forms a way to achieve an objective.
+        (cls, http://semanticscience.org/resource/SIO_001107)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001107')
 
     @classmethod
     def centrality_measure(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001108)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001108')
 
     @classmethod
@@ -7147,7 +7930,7 @@ class SIO:
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001118')
 
     @classmethod
-    def gene_disease_association_linked_with_casual_mutation(cls):
+    def gene_disease_association_linked_with_causal_mutation(cls):
         """a gene-variant disease association in which a mutation in the gene/protein results in the development or maintenance of the disease.
         (cls, http://semanticscience.org/resource/SIO_001119)
         """
@@ -7169,7 +7952,7 @@ class SIO:
 
     @classmethod
     def gene_disease_biomarker_association(cls):
-        """a gene-disease association in which a the gene/protein is involved in the etiology or maintenance of the disease.
+        """a gene-disease association in which the gene/protein is involved in the etiology or maintenance of the disease.
         (cls, http://semanticscience.org/resource/SIO_001121)
         """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001121')
@@ -7197,17 +7980,23 @@ class SIO:
 
     @classmethod
     def gene_disease_association_linked_with_post_translational_modification(cls):
-        """a gene disease-association in which the disease phenotype is associated with post-translational modifications in the protein product.
+        """a gene-disease association in which the disease phenotype is associated with post-translational modifications in the protein product.
         (cls, http://semanticscience.org/resource/SIO_001124)
         """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001124')
 
     @classmethod
     def regulation_of_transcription(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001125)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001125')
 
     @classmethod
     def regulation_of_translation(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001126)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001126')
 
     @classmethod
@@ -7219,18 +8008,30 @@ class SIO:
 
     @classmethod
     def regulation_of_molecular_production(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001128)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001128')
 
     @classmethod
     def regulation_of_molecular_degradation(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001129)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001129')
 
     @classmethod
     def protein_mediated_regulation_of_translation(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001130)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001130')
 
     @classmethod
     def rna_mediated_regulation_of_translation(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001131)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001131')
 
     @classmethod
@@ -7242,106 +8043,184 @@ class SIO:
 
     @classmethod
     def increased_frequency_of_process(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001133)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001133')
 
     @classmethod
     def decreased_frequency_of_process(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001134)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001134')
 
     @classmethod
     def regulation_of_process_frequency(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001135)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001135')
 
     @classmethod
     def regulation_of_process_duration(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001136)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001136')
 
     @classmethod
     def increased_duration_of_process(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001137)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001137')
 
     @classmethod
     def decreased_duration_of_process(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001138)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001138')
 
     @classmethod
     def regulation_of_process_spatial_extent(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001139)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001139')
 
     @classmethod
     def increased_spatial_extent_of_process(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001140)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001140')
 
     @classmethod
     def decreased_spatial_extent_of_process(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001141)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001141')
 
     @classmethod
     def maintenance_of_spatial_extent_of_process(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001142)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001142')
 
     @classmethod
     def maintenance_of_duration_of_process(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001143)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001143')
 
     @classmethod
     def maintenance_of_frequency_of_process(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001144)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001144')
 
     @classmethod
     def regulation_of_participant_quantity(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001145)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001145')
 
     @classmethod
     def increased_object_production(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001146)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001146')
 
     @classmethod
     def decreased_object_production(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001147)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001147')
 
     @classmethod
     def increased_object_consumption(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001148)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001148')
 
     @classmethod
     def decreased_object_consumption(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001149)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001149')
 
     @classmethod
     def regulation_of_object_consumption(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001150)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001150')
 
     @classmethod
     def regulation_of_object_production(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001151)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001151')
 
     @classmethod
     def maintenance_of_object_production(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001152)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001152')
 
     @classmethod
     def maintenance_of_object_consumption(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001153)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001153')
 
     @classmethod
     def number_of_objects_produced(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001160)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001160')
 
     @classmethod
     def number_of_objects_consumed(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001161)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001161')
 
     @classmethod
     def change_in_number_of_objects_produced(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001162)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001162')
 
     @classmethod
     def increase_in_number_of_objects_produced(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001163)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001163')
 
     @classmethod
     def decrease_in_number_of_objects_produced(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001164)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001164')
 
     @classmethod
@@ -7387,6 +8266,118 @@ class SIO:
         return _namespace_SIO('http://semanticscience.org/resource/SIO_001170')
 
     @classmethod
+    def database_cross_reference(cls):
+        """a database cross-reference is an association between one data item and another
+        (cls, http://semanticscience.org/resource/SIO_001171)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001171')
+
+    @classmethod
+    def dbxref(cls):
+        """a database cross-reference is an association between one data item and another
+        (cls, http://semanticscience.org/resource/SIO_001171)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001171')
+
+    @classmethod
+    def exact_cross_reference(cls):
+        """an exact cross-reference is a database cross-reference in which one entity is equivalent to the other based on all the entitie's attributes (cls, minus the source)
+        (http://semanticscience.org/resource/SIO_001172)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001172')
+
+    @classmethod
+    def double_stranded_DNA(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001173)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001173')
+
+    @classmethod
+    def nucleic_acid_strand(cls):
+        """a nucleic acid strand is a single-stranded nucleic acid that is part of a double stranded nucleic acid complex.
+        (cls, http://semanticscience.org/resource/SIO_001174)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001174')
+
+    @classmethod
+    def positive_nucleic_acid_strand(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001175)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001175')
+
+    @classmethod
+    def negative_nucleic_acid_strand(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001176)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001176')
+
+    @classmethod
+    def double_stranded_nucleic_acid(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001177)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001177')
+
+    @classmethod
+    def double_stranded_RNA(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001178)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001178')
+
+    @classmethod
+    def full_agreement(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001179)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001179')
+
+    @classmethod
+    def partial_agreement(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001180)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001180')
+
+    @classmethod
+    def full_disagreement(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001181)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001181')
+
+    @classmethod
+    def partial_disagreement(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_001182)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001182')
+
+    @classmethod
+    def statement(cls):
+        """a statement is a proposition that is either (cls, a) a meaningful declarative sentence that is either true or false, or (b) that which a true or false declarative sentence asserts
+        (http://semanticscience.org/resource/SIO_001183)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001183')
+
+    @classmethod
+    def slope(cls):
+        """a slope or gradient of a line describes its steepness, incline, or grade. A higher slope value indicates a steeper incline. Slope is normally described by the ratio of the "rise" divided by the "run" between two points on a line.
+        (cls, http://semanticscience.org/resource/SIO_001184)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001184')
+
+    @classmethod
+    def software_process_identifier(cls):
+        """a software process identifier is an identifier for a software process in some operating system.
+        (cls, http://semanticscience.org/resource/SIO_001185)
+        """
+        return _namespace_SIO('http://semanticscience.org/resource/SIO_001185')
+
+    @classmethod
     def organism(cls):
         """a biological organisn is a biological entity that consists of one or more cells and is capable of genomic replication (cls, independently or not).
         (http://semanticscience.org/resource/SIO_010000)
@@ -7430,22 +8421,37 @@ class SIO:
 
     @classmethod
     def polypeptide(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010007)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010007')
 
     @classmethod
     def nucleic_acid(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010008)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010008')
 
     @classmethod
     def ribonucleic_acid(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010009)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010009')
 
     @classmethod
     def deoxyribonucleic_acid(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010010)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010010')
 
     @classmethod
     def lipid(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010011)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010011')
 
     @classmethod
@@ -7457,34 +8463,58 @@ class SIO:
 
     @classmethod
     def primary_structure_descriptor(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010014)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010014')
 
     @classmethod
     def protein_sequence(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010015)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010015')
 
     @classmethod
     def polypeptide_sequence(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010015)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010015')
 
     @classmethod
     def nucleic_acid_sequence(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010016)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010016')
 
     @classmethod
     def ribonucleic_acid_sequence(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010017)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010017')
 
     @classmethod
     def RNA_sequence(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010017)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010017')
 
     @classmethod
     def deoxyribonucleic_acid_sequence(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010018)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010018')
 
     @classmethod
     def DNA_sequence(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010018)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010018')
 
     @classmethod
@@ -7503,18 +8533,30 @@ class SIO:
 
     @classmethod
     def secondary_structure_descriptor(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010022)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010022')
 
     @classmethod
     def tertiary_structure_descriptor(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010023)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010023')
 
     @classmethod
     def quaternary_structure(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010024)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010024')
 
     @classmethod
     def carbohydrate_polymer(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010025)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010025')
 
     @classmethod
@@ -7533,14 +8575,23 @@ class SIO:
 
     @classmethod
     def genetic_data(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010028)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010028')
 
     @classmethod
     def biological_sex(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010029)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010029')
 
     @classmethod
     def monosaccharide(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010030)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010030')
 
     @classmethod
@@ -7608,10 +8659,16 @@ class SIO:
 
     @classmethod
     def binding_site(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010040)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010040')
 
     @classmethod
     def active_site(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010041)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010041')
 
     @classmethod
@@ -7623,6 +8680,9 @@ class SIO:
 
     @classmethod
     def protein(cls):
+        """a protein is an organic polymer that is composed of a linear polymer of amino acids.
+        (cls, http://semanticscience.org/resource/SIO_010043)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010043')
 
     @classmethod
@@ -7662,10 +8722,16 @@ class SIO:
 
     @classmethod
     def molecular_site(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010049)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010049')
 
     @classmethod
     def allosteric_site(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010050)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010050')
 
     @classmethod
@@ -7684,6 +8750,9 @@ class SIO:
 
     @classmethod
     def lineage(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010053)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010053')
 
     @classmethod
@@ -7709,6 +8778,9 @@ class SIO:
 
     @classmethod
     def organismal_stative_quality(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010057)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010057')
 
     @classmethod
@@ -7727,10 +8799,16 @@ class SIO:
 
     @classmethod
     def family_history(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010060)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010060')
 
     @classmethod
     def generation_number(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010061)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010061')
 
     @classmethod
@@ -7742,22 +8820,37 @@ class SIO:
 
     @classmethod
     def bioinformatic_data(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010065)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010065')
 
     @classmethod
     def sequence_alignment(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010066)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010066')
 
     @classmethod
     def multiple_sequence_alignment(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010067)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010067')
 
     @classmethod
     def pairwise_sequence_alignment(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010068)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010068')
 
     @classmethod
     def organic_submolecule(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010071)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010071')
 
     @classmethod
@@ -7769,14 +8862,23 @@ class SIO:
 
     @classmethod
     def open_reading_frame(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010073)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010073')
 
     @classmethod
     def amino_acid_residue(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010074)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010074')
 
     @classmethod
     def nucleotide_residue(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010075)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010075')
 
     @classmethod
@@ -7802,50 +8904,86 @@ class SIO:
 
     @classmethod
     def gene_regulatory_component(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010085)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010085')
 
     @classmethod
     def enhancer(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010086)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010086')
 
     @classmethod
     def inactive_ingredient(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010087)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010087')
 
     @classmethod
     def to_serve_as_a_template_for_molecular_synthesis(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010088)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010088')
 
     @classmethod
     def to_serve_as_a_template_for_protein_synthesis(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010089)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010089')
 
     @classmethod
     def to_serve_as_a_template_for_RNA_synthesis(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010090)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010090')
 
     @classmethod
     def to_serve_as_a_template_for_DNA_synthesis(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010091)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010091')
 
     @classmethod
     def deoxyribonucleic_acid_template(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010092)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010092')
 
     @classmethod
     def deoxyribonucleic_acid_primer(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010093)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010093')
 
     @classmethod
     def to_serve_as_a_primer_for_DNA_synthesis(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010094)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010094')
 
     @classmethod
     def RNA_transcript_component(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010095)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010095')
 
     @classmethod
     def mature_mRNA(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010096)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010096')
 
     @classmethod
@@ -7857,10 +8995,16 @@ class SIO:
 
     @classmethod
     def mRNA_splice_variant(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010098)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010098')
 
     @classmethod
     def messenger_RNA(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010099)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010099')
 
     @classmethod
@@ -7907,10 +9051,16 @@ class SIO:
 
     @classmethod
     def molecular_complex_formation(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010285)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010285')
 
     @classmethod
     def molecular_complex_dissociation(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010286)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010286')
 
     @classmethod
@@ -7964,6 +9114,9 @@ class SIO:
 
     @classmethod
     def medical_data(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010298)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010298')
 
     @classmethod
@@ -7989,6 +9142,9 @@ class SIO:
 
     @classmethod
     def molecular_modification(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010307)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010307')
 
     @classmethod
@@ -8014,22 +9170,37 @@ class SIO:
 
     @classmethod
     def carbohydrate_residue(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010334)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010334')
 
     @classmethod
     def nucleic_acid_part(cls):
+        """a nucleic acid part is a component of a nucleic acid.
+        (cls, http://semanticscience.org/resource/SIO_010335)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010335')
 
     @classmethod
     def deoxyribonucleotide_residue(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010336)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010336')
 
     @classmethod
     def ribonucleotide_residue(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010337)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010337')
 
     @classmethod
     def pharmaceutical_component(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010338)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010338')
 
     @classmethod
@@ -8076,14 +9247,23 @@ class SIO:
 
     @classmethod
     def organic_polymer(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010346)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010346')
 
     @classmethod
     def to_modify_conformation_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010347)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010347')
 
     @classmethod
     def to_cleave(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010349)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010349')
 
     @classmethod
@@ -8102,22 +9282,37 @@ class SIO:
 
     @classmethod
     def to_conformationally_activate(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010354)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010354')
 
     @classmethod
     def to_conformationally_inhibit(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010355)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010355')
 
     @classmethod
     def to_modify_oxidation_state_of(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010360)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010360')
 
     @classmethod
     def substrate(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010362)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010362')
 
     @classmethod
     def product(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010363)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010363')
 
     @classmethod
@@ -8213,14 +9408,23 @@ class SIO:
 
     @classmethod
     def cellular_organism(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010377)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010377')
 
     @classmethod
     def non_cellular_organism(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010378)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010378')
 
     @classmethod
     def virus(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010379)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010379')
 
     @classmethod
@@ -8232,6 +9436,9 @@ class SIO:
 
     @classmethod
     def specialized_chemical_entity(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010410)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010410')
 
     @classmethod
@@ -8292,10 +9499,16 @@ class SIO:
 
     @classmethod
     def receptor(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010420)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010420')
 
     @classmethod
     def target(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010423)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010423')
 
     @classmethod
@@ -8342,10 +9555,16 @@ class SIO:
 
     @classmethod
     def test_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010430)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010430')
 
     @classmethod
     def control_role(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010431)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010431')
 
     @classmethod
@@ -8385,18 +9604,30 @@ class SIO:
 
     @classmethod
     def signal_transducer(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010437)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010437')
 
     @classmethod
     def signal(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010438)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010438')
 
     @classmethod
     def messenger(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010439)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010439')
 
     @classmethod
     def second_messenger(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010440)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010440')
 
     @classmethod
@@ -8408,10 +9639,16 @@ class SIO:
 
     @classmethod
     def charge_quality(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010442)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010442')
 
     @classmethod
     def intron(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010443)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010443')
 
     @classmethod
@@ -8423,26 +9660,44 @@ class SIO:
 
     @classmethod
     def exon(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010445)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010445')
 
     @classmethod
     def promoter(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010446)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010446')
 
     @classmethod
     def start_codon(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010447)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010447')
 
     @classmethod
     def stop_codon(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010448)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010448')
 
     @classmethod
     def RNA_transcript(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010450)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010450')
 
     @classmethod
     def splice_site(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010451)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010451')
 
     @classmethod
@@ -8510,22 +9765,28 @@ class SIO:
 
     @classmethod
     def positive_charge(cls):
-        """the quality of having a positive charge
+        """a positive charge is a charge where the value is positive.
         (cls, http://semanticscience.org/resource/SIO_010461)
         """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010461')
 
     @classmethod
     def heterogeneous_substance(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010462)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010462')
 
     @classmethod
     def homogeneous_substance(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010463)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010463')
 
     @classmethod
     def negative_charge(cls):
-        """the quality of having a negative charge
+        """a negative charge is a charge where the value is negative.
         (cls, http://semanticscience.org/resource/SIO_010464)
         """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010464')
@@ -8539,14 +9800,23 @@ class SIO:
 
     @classmethod
     def alpha_helix(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010468)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010468')
 
     @classmethod
     def beta_strand(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010469)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010469')
 
     @classmethod
     def protein_part(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010471)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010471')
 
     @classmethod
@@ -8565,22 +9835,37 @@ class SIO:
 
     @classmethod
     def single_bond(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010498)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010498')
 
     @classmethod
     def double_bond(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010499)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010499')
 
     @classmethod
     def triple_bond(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010500)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010500')
 
     @classmethod
     def aromatic_bond(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010501)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010501')
 
     @classmethod
     def disulfide_bond(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010502)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010502')
 
     @classmethod
@@ -8599,6 +9884,9 @@ class SIO:
 
     @classmethod
     def base_stack(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010505)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010505')
 
     @classmethod
@@ -8696,10 +9984,16 @@ class SIO:
 
     @classmethod
     def polar_addition_reaction(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010519)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010519')
 
     @classmethod
     def non_polar_addition_reaction(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010520)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010520')
 
     @classmethod
@@ -8725,7 +10019,7 @@ class SIO:
 
     @classmethod
     def biochemical_pathway(cls):
-        """a biochemical pathway specifies a series of biochemical reactions towards achieving some objective.
+        """a biochemical pathway specifies a series of biochemical modifications and transformations towards achieving some biological outcome.
         (cls, http://semanticscience.org/resource/SIO_010525)
         """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010525')
@@ -8739,18 +10033,30 @@ class SIO:
 
     @classmethod
     def chemical_synthesis_pathway(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010527)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010527')
 
     @classmethod
     def chemical_degradation_pathway(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010528)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010528')
 
     @classmethod
     def a_d_structure_model(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010530)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010530')
 
     @classmethod
     def sequence_profile(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010531)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010531')
 
     @classmethod
@@ -8769,6 +10075,9 @@ class SIO:
 
     @classmethod
     def medical_history(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010673)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010673')
 
     @classmethod
@@ -8857,6 +10166,9 @@ class SIO:
 
     @classmethod
     def carbon_allotrope(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_010786)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_010786')
 
     @classmethod
@@ -8924,474 +10236,828 @@ class SIO:
 
     @classmethod
     def boron_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011000)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011000')
 
     @classmethod
     def carbon_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011001)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011001')
 
     @classmethod
     def hydrogen_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011002)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011002')
 
     @classmethod
     def helium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011003)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011003')
 
     @classmethod
     def lithium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011004)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011004')
 
     @classmethod
     def beryllium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011005)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011005')
 
     @classmethod
     def nitrogen_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011006)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011006')
 
     @classmethod
     def oxygen_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011007)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011007')
 
     @classmethod
     def fluorine_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011008)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011008')
 
     @classmethod
     def neon_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011009)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011009')
 
     @classmethod
     def sodium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011010)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011010')
 
     @classmethod
     def magnesium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011011)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011011')
 
     @classmethod
     def aluminium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011012)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011012')
 
     @classmethod
     def silicon_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011013)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011013')
 
     @classmethod
     def phosphorus_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011014)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011014')
 
     @classmethod
     def sulfur_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011015)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011015')
 
     @classmethod
     def chlorine_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011016)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011016')
 
     @classmethod
     def argon_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011017)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011017')
 
     @classmethod
     def potassium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011018)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011018')
 
     @classmethod
     def calcium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011019)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011019')
 
     @classmethod
     def scandium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011020)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011020')
 
     @classmethod
     def titanium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011021)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011021')
 
     @classmethod
     def vanadium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011022)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011022')
 
     @classmethod
     def chromium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011023)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011023')
 
     @classmethod
     def manganese_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011024)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011024')
 
     @classmethod
     def iron_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011025)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011025')
 
     @classmethod
     def cobalt_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011026)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011026')
 
     @classmethod
     def nickel_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011027)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011027')
 
     @classmethod
     def copper_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011028)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011028')
 
     @classmethod
     def zinc_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011029)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011029')
 
     @classmethod
     def gallium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011030)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011030')
 
     @classmethod
     def germanium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011031)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011031')
 
     @classmethod
     def arsenic_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011032)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011032')
 
     @classmethod
     def selenium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011033)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011033')
 
     @classmethod
     def bromine_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011034)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011034')
 
     @classmethod
     def krypton_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011035)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011035')
 
     @classmethod
     def rubidium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011036)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011036')
 
     @classmethod
     def strontium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011037)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011037')
 
     @classmethod
     def yttrium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011038)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011038')
 
     @classmethod
     def zirconium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011039)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011039')
 
     @classmethod
     def niobium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011040)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011040')
 
     @classmethod
     def molybdemum_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011041)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011041')
 
     @classmethod
     def technetium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011042)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011042')
 
     @classmethod
     def ruthenium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011043)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011043')
 
     @classmethod
     def rhodium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011044)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011044')
 
     @classmethod
     def palladium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011045)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011045')
 
     @classmethod
     def silver_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011046)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011046')
 
     @classmethod
     def cadmium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011047)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011047')
 
     @classmethod
     def indium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011048)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011048')
 
     @classmethod
     def tin_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011049)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011049')
 
     @classmethod
     def antimony_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011050)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011050')
 
     @classmethod
     def tellurium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011051)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011051')
 
     @classmethod
     def iodine_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011052)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011052')
 
     @classmethod
     def xenon_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011053)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011053')
 
     @classmethod
     def caesium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011054)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011054')
 
     @classmethod
     def barium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011055)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011055')
 
     @classmethod
     def lanthanum_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011056)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011056')
 
     @classmethod
     def hafnium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011057)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011057')
 
     @classmethod
     def tantalum_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011058)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011058')
 
     @classmethod
     def tungsten_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011059)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011059')
 
     @classmethod
     def rhenium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011060)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011060')
 
     @classmethod
     def osmium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011061)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011061')
 
     @classmethod
     def iridium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011062)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011062')
 
     @classmethod
     def platinum_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011063)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011063')
 
     @classmethod
     def gold_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011064)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011064')
 
     @classmethod
     def mercury_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011065)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011065')
 
     @classmethod
     def thallium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011066)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011066')
 
     @classmethod
     def lead_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011067)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011067')
 
     @classmethod
     def bismuth_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011068)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011068')
 
     @classmethod
     def polonium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011069)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011069')
 
     @classmethod
     def astatine_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011070)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011070')
 
     @classmethod
     def radon_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011071)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011071')
 
     @classmethod
     def francium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011072)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011072')
 
     @classmethod
     def radium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011073)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011073')
 
     @classmethod
     def actinium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011074)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011074')
 
     @classmethod
     def rutherfordium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011075)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011075')
 
     @classmethod
     def dubnium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011076)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011076')
 
     @classmethod
     def seaborgium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011077)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011077')
 
     @classmethod
     def bohrium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011078)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011078')
 
     @classmethod
     def hassium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011079)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011079')
 
     @classmethod
     def meitnerium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011080)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011080')
 
     @classmethod
     def darmstadtium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011081)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011081')
 
     @classmethod
     def roentgenium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011082)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011082')
 
     @classmethod
     def copernicium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011083)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011083')
 
     @classmethod
     def unutrium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011084)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011084')
 
     @classmethod
     def ununquadium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011085)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011085')
 
     @classmethod
     def ununpentium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011086)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011086')
 
     @classmethod
     def ununhexium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011087)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011087')
 
     @classmethod
     def ununseptium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011088)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011088')
 
     @classmethod
     def ununoctium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011089)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011089')
 
     @classmethod
     def cerium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011090)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011090')
 
     @classmethod
     def praseodymium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011091)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011091')
 
     @classmethod
     def neodymium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011092)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011092')
 
     @classmethod
     def promethium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011093)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011093')
 
     @classmethod
     def samarium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011094)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011094')
 
     @classmethod
     def europium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011095)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011095')
 
     @classmethod
     def gadolinium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011096)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011096')
 
     @classmethod
     def terbium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011097)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011097')
 
     @classmethod
     def dysprosium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011098)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011098')
 
     @classmethod
     def holmium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011099)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011099')
 
     @classmethod
     def erbium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011100)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011100')
 
     @classmethod
     def thulium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011101)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011101')
 
     @classmethod
     def ytterbium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011102)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011102')
 
     @classmethod
     def lutetium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011103)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011103')
 
     @classmethod
     def thorium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011104)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011104')
 
     @classmethod
     def protactinium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011105)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011105')
 
     @classmethod
     def uranium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011106)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011106')
 
     @classmethod
     def neptunium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011107)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011107')
 
     @classmethod
     def plutonium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011108)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011108')
 
     @classmethod
     def americium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011109)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011109')
 
     @classmethod
     def curium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011110)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011110')
 
     @classmethod
     def berkelium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011111)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011111')
 
     @classmethod
     def californium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011112)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011112')
 
     @classmethod
     def einsteinium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011113)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011113')
 
     @classmethod
     def fermium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011114)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011114')
 
     @classmethod
     def mendelevium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011115)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011115')
 
     @classmethod
     def nobelium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011116)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011116')
 
     @classmethod
     def lawrencium_atom(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011117)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011117')
 
     @classmethod
@@ -9403,18 +11069,30 @@ class SIO:
 
     @classmethod
     def biomolecular_structure_descriptor(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011119)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011119')
 
     @classmethod
     def molecular_structure_file(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011120)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011120')
 
     @classmethod
     def molecular_structure_descriptor(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011121)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011121')
 
     @classmethod
     def chemical_data(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011123)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011123')
 
     @classmethod
@@ -9433,10 +11111,16 @@ class SIO:
 
     @classmethod
     def PDB_file(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011130)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011130')
 
     @classmethod
     def collection_of_3d_molecular_structure_models(cls):
+        """-- No comment or description provided. --
+        (cls, http://semanticscience.org/resource/SIO_011131)
+        """
         return _namespace_SIO('http://semanticscience.org/resource/SIO_011131')
 
     @classmethod
@@ -11727,6 +13411,36 @@ class SIO:
             return True
         if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001170'):
             return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001171'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001172'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001173'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001174'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001175'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001176'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001177'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001178'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001179'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001180'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001181'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001182'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001183'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001184'):
+            return True
+        if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_001185'):
+            return True
         if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_010000'):
             return True
         if uri == _namespace_SIO('http://semanticscience.org/resource/SIO_010001'):
@@ -12539,5 +14253,11 @@ class SIO:
             return cls.has_parent(cls.__parent_properties[uri], parent)
         return False
 
-    __parent_properties = { _namespace_SIO('http://semanticscience.org/resource/SIO_000008') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000011') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000020') : _namespace_SIO('http://semanticscience.org/resource/SIO_000210') , _namespace_SIO('http://semanticscience.org/resource/SIO_000028') : _namespace_SIO('http://semanticscience.org/resource/SIO_000145') , _namespace_SIO('http://semanticscience.org/resource/SIO_000029') : _namespace_SIO('http://semanticscience.org/resource/SIO_000096') , _namespace_SIO('http://semanticscience.org/resource/SIO_000053') : _namespace_SIO('http://semanticscience.org/resource/SIO_000028') , _namespace_SIO('http://semanticscience.org/resource/SIO_000054') : _namespace_SIO('http://semanticscience.org/resource/SIO_000053') , _namespace_SIO('http://semanticscience.org/resource/SIO_000059') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000060') : _namespace_SIO('http://semanticscience.org/resource/SIO_000205') , _namespace_SIO('http://semanticscience.org/resource/SIO_000061') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000062') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000063') : _namespace_SIO('http://semanticscience.org/resource/SIO_000062') , _namespace_SIO('http://semanticscience.org/resource/SIO_000064') : _namespace_SIO('http://semanticscience.org/resource/SIO_000219') , _namespace_SIO('http://semanticscience.org/resource/SIO_000066') : _namespace_SIO('http://semanticscience.org/resource/SIO_000253') , _namespace_SIO('http://semanticscience.org/resource/SIO_000068') : _namespace_SIO('http://semanticscience.org/resource/SIO_000061') , _namespace_SIO('http://semanticscience.org/resource/SIO_000093') : _namespace_SIO('http://semanticscience.org/resource/SIO_000068') , _namespace_SIO('http://semanticscience.org/resource/SIO_000095') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000096') : _namespace_SIO('http://semanticscience.org/resource/SIO_000093') , _namespace_SIO('http://semanticscience.org/resource/SIO_000128') : _namespace_SIO('http://semanticscience.org/resource/SIO_000061') , _namespace_SIO('http://semanticscience.org/resource/SIO_000132') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000139') : _namespace_SIO('http://semanticscience.org/resource/SIO_000132') , _namespace_SIO('http://semanticscience.org/resource/SIO_000145') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000202') : _namespace_SIO('http://semanticscience.org/resource/SIO_000145') , _namespace_SIO('http://semanticscience.org/resource/SIO_000203') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000204') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000205') : _namespace_SIO('http://semanticscience.org/resource/SIO_000212') , _namespace_SIO('http://semanticscience.org/resource/SIO_000206') : _namespace_SIO('http://semanticscience.org/resource/SIO_000772') , _namespace_SIO('http://semanticscience.org/resource/SIO_000207') : _namespace_SIO('http://semanticscience.org/resource/SIO_000772') , _namespace_SIO('http://semanticscience.org/resource/SIO_000208') : _namespace_SIO('http://semanticscience.org/resource/SIO_000773') , _namespace_SIO('http://semanticscience.org/resource/SIO_000209') : _namespace_SIO('http://semanticscience.org/resource/SIO_000773') , _namespace_SIO('http://semanticscience.org/resource/SIO_000210') : _namespace_SIO('http://semanticscience.org/resource/SIO_000628') , _namespace_SIO('http://semanticscience.org/resource/SIO_000211') : _namespace_SIO('http://semanticscience.org/resource/SIO_000203') , _namespace_SIO('http://semanticscience.org/resource/SIO_000212') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000213') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000214') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000215') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000216') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000217') : _namespace_SIO('http://semanticscience.org/resource/SIO_000223') , _namespace_SIO('http://semanticscience.org/resource/SIO_000218') : _namespace_SIO('http://semanticscience.org/resource/SIO_000224') , _namespace_SIO('http://semanticscience.org/resource/SIO_000219') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000221') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000222') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000223') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000224') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000225') : _namespace_SIO('http://semanticscience.org/resource/SIO_000235') , _namespace_SIO('http://semanticscience.org/resource/SIO_000226') : _namespace_SIO('http://semanticscience.org/resource/SIO_000236') , _namespace_SIO('http://semanticscience.org/resource/SIO_000227') : _namespace_SIO('http://semanticscience.org/resource/SIO_000643') , _namespace_SIO('http://semanticscience.org/resource/SIO_000228') : _namespace_SIO('http://semanticscience.org/resource/SIO_000644') , _namespace_SIO('http://semanticscience.org/resource/SIO_000229') : _namespace_SIO('http://semanticscience.org/resource/SIO_000132') , _namespace_SIO('http://semanticscience.org/resource/SIO_000230') : _namespace_SIO('http://semanticscience.org/resource/SIO_000132') , _namespace_SIO('http://semanticscience.org/resource/SIO_000231') : _namespace_SIO('http://semanticscience.org/resource/SIO_000062') , _namespace_SIO('http://semanticscience.org/resource/SIO_000232') : _namespace_SIO('http://semanticscience.org/resource/SIO_000062') , _namespace_SIO('http://semanticscience.org/resource/SIO_000233') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000234') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000235') : _namespace_SIO('http://semanticscience.org/resource/SIO_000586') , _namespace_SIO('http://semanticscience.org/resource/SIO_000236') : _namespace_SIO('http://semanticscience.org/resource/SIO_000646') , _namespace_SIO('http://semanticscience.org/resource/SIO_000240') : _namespace_SIO('http://semanticscience.org/resource/SIO_000203') , _namespace_SIO('http://semanticscience.org/resource/SIO_000241') : _namespace_SIO('http://semanticscience.org/resource/SIO_000652') , _namespace_SIO('http://semanticscience.org/resource/SIO_000242') : _namespace_SIO('http://semanticscience.org/resource/SIO_000652') , _namespace_SIO('http://semanticscience.org/resource/SIO_000243') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000244') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_000245') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_000246') : _namespace_SIO('http://semanticscience.org/resource/SIO_000245') , _namespace_SIO('http://semanticscience.org/resource/SIO_000247') : _namespace_SIO('http://semanticscience.org/resource/SIO_000244') , _namespace_SIO('http://semanticscience.org/resource/SIO_000248') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_000249') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_000250') : _namespace_SIO('http://semanticscience.org/resource/SIO_000248') , _namespace_SIO('http://semanticscience.org/resource/SIO_000251') : _namespace_SIO('http://semanticscience.org/resource/SIO_000249') , _namespace_SIO('http://semanticscience.org/resource/SIO_000252') : _namespace_SIO('http://semanticscience.org/resource/SIO_000212') , _namespace_SIO('http://semanticscience.org/resource/SIO_000253') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000254') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000255') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000272') : _namespace_SIO('http://semanticscience.org/resource/SIO_000736') , _namespace_SIO('http://semanticscience.org/resource/SIO_000273') : _namespace_SIO('http://semanticscience.org/resource/SIO_000053') , _namespace_SIO('http://semanticscience.org/resource/SIO_000274') : _namespace_SIO('http://semanticscience.org/resource/SIO_000497') , _namespace_SIO('http://semanticscience.org/resource/SIO_000277') : _namespace_SIO('http://semanticscience.org/resource/SIO_000631') , _namespace_SIO('http://semanticscience.org/resource/SIO_000278') : _namespace_SIO('http://semanticscience.org/resource/SIO_000252') , _namespace_SIO('http://semanticscience.org/resource/SIO_000283') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_000286') : _namespace_SIO('http://semanticscience.org/resource/SIO_000497') , _namespace_SIO('http://semanticscience.org/resource/SIO_000288') : _namespace_SIO('http://semanticscience.org/resource/SIO_000203') , _namespace_SIO('http://semanticscience.org/resource/SIO_000291') : _namespace_SIO('http://semanticscience.org/resource/SIO_000230') , _namespace_SIO('http://semanticscience.org/resource/SIO_000292') : _namespace_SIO('http://semanticscience.org/resource/SIO_000231') , _namespace_SIO('http://semanticscience.org/resource/SIO_000293') : _namespace_SIO('http://semanticscience.org/resource/SIO_000203') , _namespace_SIO('http://semanticscience.org/resource/SIO_000294') : _namespace_SIO('http://semanticscience.org/resource/SIO_000243') , _namespace_SIO('http://semanticscience.org/resource/SIO_000310') : _namespace_SIO('http://semanticscience.org/resource/SIO_000093') , _namespace_SIO('http://semanticscience.org/resource/SIO_000311') : _namespace_SIO('http://semanticscience.org/resource/SIO_000232') , _namespace_SIO('http://semanticscience.org/resource/SIO_000312') : _namespace_SIO('http://semanticscience.org/resource/SIO_000229') , _namespace_SIO('http://semanticscience.org/resource/SIO_000313') : _namespace_SIO('http://semanticscience.org/resource/SIO_000310') , _namespace_SIO('http://semanticscience.org/resource/SIO_000322') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000323') : _namespace_SIO('http://semanticscience.org/resource/SIO_000128') , _namespace_SIO('http://semanticscience.org/resource/SIO_000324') : _namespace_SIO('http://semanticscience.org/resource/SIO_000202') , _namespace_SIO('http://semanticscience.org/resource/SIO_000325') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000332') : _namespace_SIO('http://semanticscience.org/resource/SIO_000563') , _namespace_SIO('http://semanticscience.org/resource/SIO_000334') : _namespace_SIO('http://semanticscience.org/resource/SIO_000652') , _namespace_SIO('http://semanticscience.org/resource/SIO_000335') : _namespace_SIO('http://semanticscience.org/resource/SIO_000652') , _namespace_SIO('http://semanticscience.org/resource/SIO_000338') : _namespace_SIO('http://semanticscience.org/resource/SIO_000563') , _namespace_SIO('http://semanticscience.org/resource/SIO_000339') : _namespace_SIO('http://semanticscience.org/resource/SIO_000557') , _namespace_SIO('http://semanticscience.org/resource/SIO_000341') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000352') : _namespace_SIO('http://semanticscience.org/resource/SIO_000243') , _namespace_SIO('http://semanticscience.org/resource/SIO_000355') : _namespace_SIO('http://semanticscience.org/resource/SIO_000132') , _namespace_SIO('http://semanticscience.org/resource/SIO_000356') : _namespace_SIO('http://semanticscience.org/resource/SIO_000062') , _namespace_SIO('http://semanticscience.org/resource/SIO_000362') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000363') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000364') : _namespace_SIO('http://semanticscience.org/resource/SIO_000253') , _namespace_SIO('http://semanticscience.org/resource/SIO_000365') : _namespace_SIO('http://semanticscience.org/resource/SIO_000219') , _namespace_SIO('http://semanticscience.org/resource/SIO_000369') : _namespace_SIO('http://semanticscience.org/resource/SIO_000273') , _namespace_SIO('http://semanticscience.org/resource/SIO_000420') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000421') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000422') : _namespace_SIO('http://semanticscience.org/resource/SIO_000283') , _namespace_SIO('http://semanticscience.org/resource/SIO_000424') : _namespace_SIO('http://semanticscience.org/resource/SIO_000283') , _namespace_SIO('http://semanticscience.org/resource/SIO_000425') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000426') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000427') : _namespace_SIO('http://semanticscience.org/resource/SIO_000424') , _namespace_SIO('http://semanticscience.org/resource/SIO_000477') : _namespace_SIO('http://semanticscience.org/resource/SIO_000422') , _namespace_SIO('http://semanticscience.org/resource/SIO_000482') : _namespace_SIO('http://semanticscience.org/resource/SIO_000283') , _namespace_SIO('http://semanticscience.org/resource/SIO_000484') : _namespace_SIO('http://semanticscience.org/resource/SIO_000482') , _namespace_SIO('http://semanticscience.org/resource/SIO_000490') : _namespace_SIO('http://semanticscience.org/resource/SIO_000482') , _namespace_SIO('http://semanticscience.org/resource/SIO_000491') : _namespace_SIO('http://semanticscience.org/resource/SIO_000482') , _namespace_SIO('http://semanticscience.org/resource/SIO_000495') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_000496') : _namespace_SIO('http://semanticscience.org/resource/SIO_000495') , _namespace_SIO('http://semanticscience.org/resource/SIO_000497') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_000552') : _namespace_SIO('http://semanticscience.org/resource/SIO_000230') , _namespace_SIO('http://semanticscience.org/resource/SIO_000553') : _namespace_SIO('http://semanticscience.org/resource/SIO_000231') , _namespace_SIO('http://semanticscience.org/resource/SIO_000557') : _namespace_SIO('http://semanticscience.org/resource/SIO_000212') , _namespace_SIO('http://semanticscience.org/resource/SIO_000558') : _namespace_SIO('http://semanticscience.org/resource/SIO_010302') , _namespace_SIO('http://semanticscience.org/resource/SIO_000563') : _namespace_SIO('http://semanticscience.org/resource/SIO_000628') , _namespace_SIO('http://semanticscience.org/resource/SIO_000586') : _namespace_SIO('http://semanticscience.org/resource/SIO_000644') , _namespace_SIO('http://semanticscience.org/resource/SIO_000628') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000629') : _namespace_SIO('http://semanticscience.org/resource/SIO_000557') , _namespace_SIO('http://semanticscience.org/resource/SIO_000630') : _namespace_SIO('http://semanticscience.org/resource/SIO_010302') , _namespace_SIO('http://semanticscience.org/resource/SIO_000631') : _namespace_SIO('http://semanticscience.org/resource/SIO_000628') , _namespace_SIO('http://semanticscience.org/resource/SIO_000632') : _namespace_SIO('http://semanticscience.org/resource/SIO_000210') , _namespace_SIO('http://semanticscience.org/resource/SIO_000633') : _namespace_SIO('http://semanticscience.org/resource/SIO_000205') , _namespace_SIO('http://semanticscience.org/resource/SIO_000634') : _namespace_SIO('http://semanticscience.org/resource/SIO_000558') , _namespace_SIO('http://semanticscience.org/resource/SIO_000635') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_000636') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_000641') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000642') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000643') : _namespace_SIO('http://semanticscience.org/resource/SIO_000224') , _namespace_SIO('http://semanticscience.org/resource/SIO_000644') : _namespace_SIO('http://semanticscience.org/resource/SIO_000223') , _namespace_SIO('http://semanticscience.org/resource/SIO_000646') : _namespace_SIO('http://semanticscience.org/resource/SIO_000643') , _namespace_SIO('http://semanticscience.org/resource/SIO_000652') : _namespace_SIO('http://semanticscience.org/resource/SIO_000203') , _namespace_SIO('http://semanticscience.org/resource/SIO_000655') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_000656') : _namespace_SIO('http://semanticscience.org/resource/SIO_000655') , _namespace_SIO('http://semanticscience.org/resource/SIO_000657') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_000658') : _namespace_SIO('http://semanticscience.org/resource/SIO_000657') , _namespace_SIO('http://semanticscience.org/resource/SIO_000668') : _namespace_SIO('http://semanticscience.org/resource/SIO_000631') , _namespace_SIO('http://semanticscience.org/resource/SIO_000671') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000672') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000673') : _namespace_SIO('http://semanticscience.org/resource/SIO_000671') , _namespace_SIO('http://semanticscience.org/resource/SIO_000674') : _namespace_SIO('http://semanticscience.org/resource/SIO_000672') , _namespace_SIO('http://semanticscience.org/resource/SIO_000679') : _namespace_SIO('http://semanticscience.org/resource/SIO_000054') , _namespace_SIO('http://semanticscience.org/resource/SIO_000680') : _namespace_SIO('http://semanticscience.org/resource/SIO_000679') , _namespace_SIO('http://semanticscience.org/resource/SIO_000681') : _namespace_SIO('http://semanticscience.org/resource/SIO_000679') , _namespace_SIO('http://semanticscience.org/resource/SIO_000682') : _namespace_SIO('http://semanticscience.org/resource/SIO_000029') , _namespace_SIO('http://semanticscience.org/resource/SIO_000684') : _namespace_SIO('http://semanticscience.org/resource/SIO_000029') , _namespace_SIO('http://semanticscience.org/resource/SIO_000687') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000697') : _namespace_SIO('http://semanticscience.org/resource/SIO_000709') , _namespace_SIO('http://semanticscience.org/resource/SIO_000699') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000709') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000710') : _namespace_SIO('http://semanticscience.org/resource/SIO_000709') , _namespace_SIO('http://semanticscience.org/resource/SIO_000733') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000734') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000735') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000736') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000737') : _namespace_SIO('http://semanticscience.org/resource/SIO_000736') , _namespace_SIO('http://semanticscience.org/resource/SIO_000738') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000749') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000772') : _namespace_SIO('http://semanticscience.org/resource/SIO_000631') , _namespace_SIO('http://semanticscience.org/resource/SIO_000773') : _namespace_SIO('http://semanticscience.org/resource/SIO_000252') , _namespace_SIO('http://semanticscience.org/resource/SIO_000774') : _namespace_SIO('http://semanticscience.org/resource/SIO_000772') , _namespace_SIO('http://semanticscience.org/resource/SIO_000775') : _namespace_SIO('http://semanticscience.org/resource/SIO_000773') , _namespace_SIO('http://semanticscience.org/resource/SIO_000793') : _namespace_SIO('http://semanticscience.org/resource/SIO_000687') , _namespace_SIO('http://semanticscience.org/resource/SIO_000892') : _namespace_SIO('http://semanticscience.org/resource/SIO_000252') , _namespace_SIO('http://semanticscience.org/resource/SIO_000900') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000901') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000905') : _namespace_SIO('http://semanticscience.org/resource/SIO_000291') , _namespace_SIO('http://semanticscience.org/resource/SIO_000970') : _namespace_SIO('http://semanticscience.org/resource/SIO_000975') , _namespace_SIO('http://semanticscience.org/resource/SIO_000971') : _namespace_SIO('http://semanticscience.org/resource/SIO_000974') , _namespace_SIO('http://semanticscience.org/resource/SIO_000972') : _namespace_SIO('http://semanticscience.org/resource/SIO_000974') , _namespace_SIO('http://semanticscience.org/resource/SIO_000973') : _namespace_SIO('http://semanticscience.org/resource/SIO_000975') , _namespace_SIO('http://semanticscience.org/resource/SIO_000974') : _namespace_SIO('http://semanticscience.org/resource/SIO_000053') , _namespace_SIO('http://semanticscience.org/resource/SIO_000975') : _namespace_SIO('http://semanticscience.org/resource/SIO_000093') , _namespace_SIO('http://semanticscience.org/resource/SIO_001096') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_001097') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_001098') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_001101') : _namespace_SIO('http://semanticscience.org/resource/SIO_000709') , _namespace_SIO('http://semanticscience.org/resource/SIO_001154') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_001155') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_001156') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_001157') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_001158') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_001159') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_010078') : _namespace_SIO('http://semanticscience.org/resource/SIO_000338') , _namespace_SIO('http://semanticscience.org/resource/SIO_010079') : _namespace_SIO('http://semanticscience.org/resource/SIO_000339') , _namespace_SIO('http://semanticscience.org/resource/SIO_010080') : _namespace_SIO('http://semanticscience.org/resource/SIO_010078') , _namespace_SIO('http://semanticscience.org/resource/SIO_010081') : _namespace_SIO('http://semanticscience.org/resource/SIO_010079') , _namespace_SIO('http://semanticscience.org/resource/SIO_010082') : _namespace_SIO('http://semanticscience.org/resource/SIO_010078') , _namespace_SIO('http://semanticscience.org/resource/SIO_010083') : _namespace_SIO('http://semanticscience.org/resource/SIO_010079') , _namespace_SIO('http://semanticscience.org/resource/SIO_010302') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_000009') : _namespace_SIO('http://semanticscience.org/resource/SIO_000015') , _namespace_SIO('http://semanticscience.org/resource/SIO_000012') : _namespace_SIO('http://semanticscience.org/resource/SIO_000620') , _namespace_SIO('http://semanticscience.org/resource/SIO_000013') : _namespace_SIO('http://semanticscience.org/resource/SIO_000056') , _namespace_SIO('http://semanticscience.org/resource/SIO_000016') : _namespace_SIO('http://semanticscience.org/resource/SIO_000340') , _namespace_SIO('http://semanticscience.org/resource/SIO_000017') : _namespace_SIO('http://semanticscience.org/resource/SIO_000112') , _namespace_SIO('http://semanticscience.org/resource/SIO_000019') : _namespace_SIO('http://semanticscience.org/resource/SIO_000370') , _namespace_SIO('http://semanticscience.org/resource/SIO_000031') : _namespace_SIO('http://semanticscience.org/resource/SIO_000418') , _namespace_SIO('http://semanticscience.org/resource/SIO_000032') : _namespace_SIO('http://semanticscience.org/resource/SIO_000418') , _namespace_SIO('http://semanticscience.org/resource/SIO_000034') : _namespace_SIO('http://semanticscience.org/resource/SIO_000033') , _namespace_SIO('http://semanticscience.org/resource/SIO_000035') : _namespace_SIO('http://semanticscience.org/resource/SIO_000033') , _namespace_SIO('http://semanticscience.org/resource/SIO_000036') : _namespace_SIO('http://semanticscience.org/resource/SIO_000959') , _namespace_SIO('http://semanticscience.org/resource/SIO_000038') : _namespace_SIO('http://semanticscience.org/resource/SIO_000037') , _namespace_SIO('http://semanticscience.org/resource/SIO_000039') : _namespace_SIO('http://semanticscience.org/resource/SIO_000038') , _namespace_SIO('http://semanticscience.org/resource/SIO_000040') : _namespace_SIO('http://semanticscience.org/resource/SIO_000790') , _namespace_SIO('http://semanticscience.org/resource/SIO_000041') : _namespace_SIO('http://semanticscience.org/resource/SIO_000038') , _namespace_SIO('http://semanticscience.org/resource/SIO_000042') : _namespace_SIO('http://semanticscience.org/resource/SIO_000038') , _namespace_SIO('http://semanticscience.org/resource/SIO_000043') : _namespace_SIO('http://semanticscience.org/resource/SIO_000039') , _namespace_SIO('http://semanticscience.org/resource/SIO_000044') : _namespace_SIO('http://semanticscience.org/resource/SIO_000037') , _namespace_SIO('http://semanticscience.org/resource/SIO_000045') : _namespace_SIO('http://semanticscience.org/resource/SIO_000044') , _namespace_SIO('http://semanticscience.org/resource/SIO_000046') : _namespace_SIO('http://semanticscience.org/resource/SIO_000044') , _namespace_SIO('http://semanticscience.org/resource/SIO_000047') : _namespace_SIO('http://semanticscience.org/resource/SIO_000046') , _namespace_SIO('http://semanticscience.org/resource/SIO_000048') : _namespace_SIO('http://semanticscience.org/resource/SIO_000037') , _namespace_SIO('http://semanticscience.org/resource/SIO_000049') : _namespace_SIO('http://semanticscience.org/resource/SIO_000048') , _namespace_SIO('http://semanticscience.org/resource/SIO_000051') : _namespace_SIO('http://semanticscience.org/resource/SIO_000026') , _namespace_SIO('http://semanticscience.org/resource/SIO_000055') : _namespace_SIO('http://semanticscience.org/resource/SIO_000026') , _namespace_SIO('http://semanticscience.org/resource/SIO_000057') : _namespace_SIO('http://semanticscience.org/resource/SIO_000056') , _namespace_SIO('http://semanticscience.org/resource/SIO_000071') : _namespace_SIO('http://semanticscience.org/resource/SIO_000070') , _namespace_SIO('http://semanticscience.org/resource/SIO_000072') : _namespace_SIO('http://semanticscience.org/resource/SIO_000071') , _namespace_SIO('http://semanticscience.org/resource/SIO_000073') : _namespace_SIO('http://semanticscience.org/resource/SIO_000071') , _namespace_SIO('http://semanticscience.org/resource/SIO_000074') : _namespace_SIO('http://semanticscience.org/resource/SIO_000052') , _namespace_SIO('http://semanticscience.org/resource/SIO_000075') : _namespace_SIO('http://semanticscience.org/resource/SIO_000015') , _namespace_SIO('http://semanticscience.org/resource/SIO_000076') : _namespace_SIO('http://semanticscience.org/resource/SIO_000091') , _namespace_SIO('http://semanticscience.org/resource/SIO_000077') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000079') : _namespace_SIO('http://semanticscience.org/resource/SIO_000078') , _namespace_SIO('http://semanticscience.org/resource/SIO_000080') : _namespace_SIO('http://semanticscience.org/resource/SIO_000612') , _namespace_SIO('http://semanticscience.org/resource/SIO_000081') : _namespace_SIO('http://semanticscience.org/resource/SIO_000080') , _namespace_SIO('http://semanticscience.org/resource/SIO_000082') : _namespace_SIO('http://semanticscience.org/resource/SIO_000081') , _namespace_SIO('http://semanticscience.org/resource/SIO_000083') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000085') : _namespace_SIO('http://semanticscience.org/resource/SIO_000113') , _namespace_SIO('http://semanticscience.org/resource/SIO_000087') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000094') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000097') : _namespace_SIO('http://semanticscience.org/resource/SIO_000602') , _namespace_SIO('http://semanticscience.org/resource/SIO_000098') : _namespace_SIO('http://semanticscience.org/resource/SIO_000097') , _namespace_SIO('http://semanticscience.org/resource/SIO_000099') : _namespace_SIO('http://semanticscience.org/resource/SIO_000097') , _namespace_SIO('http://semanticscience.org/resource/SIO_000100') : _namespace_SIO('http://semanticscience.org/resource/SIO_000097') , _namespace_SIO('http://semanticscience.org/resource/SIO_000101') : _namespace_SIO('http://semanticscience.org/resource/SIO_000097') , _namespace_SIO('http://semanticscience.org/resource/SIO_000102') : _namespace_SIO('http://semanticscience.org/resource/SIO_000101') , _namespace_SIO('http://semanticscience.org/resource/SIO_000103') : _namespace_SIO('http://semanticscience.org/resource/SIO_000097') , _namespace_SIO('http://semanticscience.org/resource/SIO_000104') : _namespace_SIO('http://semanticscience.org/resource/SIO_000078') , _namespace_SIO('http://semanticscience.org/resource/SIO_000106') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000107') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000108') : _namespace_SIO('http://semanticscience.org/resource/SIO_000078') , _namespace_SIO('http://semanticscience.org/resource/SIO_000109') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000113') : _namespace_SIO('http://semanticscience.org/resource/SIO_000483') , _namespace_SIO('http://semanticscience.org/resource/SIO_000117') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000118') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000119') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000120') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000121') : _namespace_SIO('http://semanticscience.org/resource/SIO_000162') , _namespace_SIO('http://semanticscience.org/resource/SIO_000122') : _namespace_SIO('http://semanticscience.org/resource/SIO_000342') , _namespace_SIO('http://semanticscience.org/resource/SIO_000123') : _namespace_SIO('http://semanticscience.org/resource/SIO_000342') , _namespace_SIO('http://semanticscience.org/resource/SIO_000124') : _namespace_SIO('http://semanticscience.org/resource/SIO_000342') , _namespace_SIO('http://semanticscience.org/resource/SIO_000125') : _namespace_SIO('http://semanticscience.org/resource/SIO_000342') , _namespace_SIO('http://semanticscience.org/resource/SIO_000127') : _namespace_SIO('http://semanticscience.org/resource/SIO_000094') , _namespace_SIO('http://semanticscience.org/resource/SIO_000129') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000130') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000131') : _namespace_SIO('http://semanticscience.org/resource/SIO_000130') , _namespace_SIO('http://semanticscience.org/resource/SIO_000133') : _namespace_SIO('http://semanticscience.org/resource/SIO_000275') , _namespace_SIO('http://semanticscience.org/resource/SIO_000135') : _namespace_SIO('http://semanticscience.org/resource/SIO_000136') , _namespace_SIO('http://semanticscience.org/resource/SIO_000137') : _namespace_SIO('http://semanticscience.org/resource/SIO_000326') , _namespace_SIO('http://semanticscience.org/resource/SIO_000138') : _namespace_SIO('http://semanticscience.org/resource/SIO_000289') , _namespace_SIO('http://semanticscience.org/resource/SIO_000140') : _namespace_SIO('http://semanticscience.org/resource/SIO_000101') , _namespace_SIO('http://semanticscience.org/resource/SIO_000141') : _namespace_SIO('http://semanticscience.org/resource/SIO_000316') , _namespace_SIO('http://semanticscience.org/resource/SIO_000142') : _namespace_SIO('http://semanticscience.org/resource/SIO_000141') , _namespace_SIO('http://semanticscience.org/resource/SIO_000143') : _namespace_SIO('http://semanticscience.org/resource/SIO_000141') , _namespace_SIO('http://semanticscience.org/resource/SIO_000144') : _namespace_SIO('http://semanticscience.org/resource/SIO_000920') , _namespace_SIO('http://semanticscience.org/resource/SIO_000147') : _namespace_SIO('http://semanticscience.org/resource/SIO_000133') , _namespace_SIO('http://semanticscience.org/resource/SIO_000148') : _namespace_SIO('http://semanticscience.org/resource/SIO_000651') , _namespace_SIO('http://semanticscience.org/resource/SIO_000151') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000152') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000153') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000154') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000155') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000156') : _namespace_SIO('http://semanticscience.org/resource/SIO_000106') , _namespace_SIO('http://semanticscience.org/resource/SIO_000157') : _namespace_SIO('http://semanticscience.org/resource/SIO_000106') , _namespace_SIO('http://semanticscience.org/resource/SIO_000158') : _namespace_SIO('http://semanticscience.org/resource/SIO_000295') , _namespace_SIO('http://semanticscience.org/resource/SIO_000159') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000160') : _namespace_SIO('http://semanticscience.org/resource/SIO_000162') , _namespace_SIO('http://semanticscience.org/resource/SIO_000161') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000162') : _namespace_SIO('http://semanticscience.org/resource/SIO_000295') , _namespace_SIO('http://semanticscience.org/resource/SIO_000163') : _namespace_SIO('http://semanticscience.org/resource/SIO_000162') , _namespace_SIO('http://semanticscience.org/resource/SIO_000164') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000165') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000166') : _namespace_SIO('http://semanticscience.org/resource/SIO_000165') , _namespace_SIO('http://semanticscience.org/resource/SIO_000167') : _namespace_SIO('http://semanticscience.org/resource/SIO_000165') , _namespace_SIO('http://semanticscience.org/resource/SIO_000168') : _namespace_SIO('http://semanticscience.org/resource/SIO_000165') , _namespace_SIO('http://semanticscience.org/resource/SIO_000169') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000170') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000171') : _namespace_SIO('http://semanticscience.org/resource/SIO_000651') , _namespace_SIO('http://semanticscience.org/resource/SIO_000172') : _namespace_SIO('http://semanticscience.org/resource/SIO_000328') , _namespace_SIO('http://semanticscience.org/resource/SIO_000173') : _namespace_SIO('http://semanticscience.org/resource/SIO_000287') , _namespace_SIO('http://semanticscience.org/resource/SIO_000174') : _namespace_SIO('http://semanticscience.org/resource/SIO_000171') , _namespace_SIO('http://semanticscience.org/resource/SIO_000175') : _namespace_SIO('http://semanticscience.org/resource/SIO_000185') , _namespace_SIO('http://semanticscience.org/resource/SIO_000176') : _namespace_SIO('http://semanticscience.org/resource/SIO_000171') , _namespace_SIO('http://semanticscience.org/resource/SIO_000177') : _namespace_SIO('http://semanticscience.org/resource/SIO_000944') , _namespace_SIO('http://semanticscience.org/resource/SIO_000178') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_000179') : _namespace_SIO('http://semanticscience.org/resource/SIO_000651') , _namespace_SIO('http://semanticscience.org/resource/SIO_000180') : _namespace_SIO('http://semanticscience.org/resource/SIO_000179') , _namespace_SIO('http://semanticscience.org/resource/SIO_000181') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000182') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000183') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000184') : _namespace_SIO('http://semanticscience.org/resource/SIO_000183') , _namespace_SIO('http://semanticscience.org/resource/SIO_000185') : _namespace_SIO('http://semanticscience.org/resource/SIO_000179') , _namespace_SIO('http://semanticscience.org/resource/SIO_000186') : _namespace_SIO('http://semanticscience.org/resource/SIO_000653') , _namespace_SIO('http://semanticscience.org/resource/SIO_000188') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000189') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000190') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000191') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000192') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000193') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000194') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000195') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000196') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000197') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000198') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000199') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000200') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000201') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000220') : _namespace_SIO('http://semanticscience.org/resource/SIO_000238') , _namespace_SIO('http://semanticscience.org/resource/SIO_000237') : _namespace_SIO('http://semanticscience.org/resource/SIO_000179') , _namespace_SIO('http://semanticscience.org/resource/SIO_000238') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000239') : _namespace_SIO('http://semanticscience.org/resource/SIO_000238') , _namespace_SIO('http://semanticscience.org/resource/SIO_000261') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_000262') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_000263') : _namespace_SIO('http://semanticscience.org/resource/SIO_000259') , _namespace_SIO('http://semanticscience.org/resource/SIO_000264') : _namespace_SIO('http://semanticscience.org/resource/SIO_000259') , _namespace_SIO('http://semanticscience.org/resource/SIO_000268') : _namespace_SIO('http://semanticscience.org/resource/SIO_000436') , _namespace_SIO('http://semanticscience.org/resource/SIO_000276') : _namespace_SIO('http://semanticscience.org/resource/SIO_000006') , _namespace_SIO('http://semanticscience.org/resource/SIO_000280') : _namespace_SIO('http://semanticscience.org/resource/SIO_000238') , _namespace_SIO('http://semanticscience.org/resource/SIO_000281') : _namespace_SIO('http://semanticscience.org/resource/SIO_000238') , _namespace_SIO('http://semanticscience.org/resource/SIO_000282') : _namespace_SIO('http://semanticscience.org/resource/SIO_000280') , _namespace_SIO('http://semanticscience.org/resource/SIO_000284') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_000285') : _namespace_SIO('http://semanticscience.org/resource/SIO_000012') , _namespace_SIO('http://semanticscience.org/resource/SIO_000287') : _namespace_SIO('http://semanticscience.org/resource/SIO_000009') , _namespace_SIO('http://semanticscience.org/resource/SIO_000290') : _namespace_SIO('http://semanticscience.org/resource/SIO_000285') , _namespace_SIO('http://semanticscience.org/resource/SIO_000297') : _namespace_SIO('http://semanticscience.org/resource/SIO_000612') , _namespace_SIO('http://semanticscience.org/resource/SIO_000301') : _namespace_SIO('http://semanticscience.org/resource/SIO_000082') , _namespace_SIO('http://semanticscience.org/resource/SIO_000302') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000304') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000305') : _namespace_SIO('http://semanticscience.org/resource/SIO_000613') , _namespace_SIO('http://semanticscience.org/resource/SIO_000306') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000307') : _namespace_SIO('http://semanticscience.org/resource/SIO_000005') , _namespace_SIO('http://semanticscience.org/resource/SIO_000308') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_000309') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_000316') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000317') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000318') : _namespace_SIO('http://semanticscience.org/resource/SIO_000013') , _namespace_SIO('http://semanticscience.org/resource/SIO_000319') : _namespace_SIO('http://semanticscience.org/resource/SIO_000013') , _namespace_SIO('http://semanticscience.org/resource/SIO_000320') : _namespace_SIO('http://semanticscience.org/resource/SIO_000317') , _namespace_SIO('http://semanticscience.org/resource/SIO_000321') : _namespace_SIO('http://semanticscience.org/resource/SIO_000320') , _namespace_SIO('http://semanticscience.org/resource/SIO_000326') : _namespace_SIO('http://semanticscience.org/resource/SIO_000275') , _namespace_SIO('http://semanticscience.org/resource/SIO_000327') : _namespace_SIO('http://semanticscience.org/resource/SIO_000320') , _namespace_SIO('http://semanticscience.org/resource/SIO_000329') : _namespace_SIO('http://semanticscience.org/resource/SIO_000320') , _namespace_SIO('http://semanticscience.org/resource/SIO_000330') : _namespace_SIO('http://semanticscience.org/resource/SIO_000320') , _namespace_SIO('http://semanticscience.org/resource/SIO_000331') : _namespace_SIO('http://semanticscience.org/resource/SIO_000129') , _namespace_SIO('http://semanticscience.org/resource/SIO_000343') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000344') : _namespace_SIO('http://semanticscience.org/resource/SIO_000639') , _namespace_SIO('http://semanticscience.org/resource/SIO_000345') : _namespace_SIO('http://semanticscience.org/resource/SIO_000378') , _namespace_SIO('http://semanticscience.org/resource/SIO_000346') : _namespace_SIO('http://semanticscience.org/resource/SIO_000351') , _namespace_SIO('http://semanticscience.org/resource/SIO_000347') : _namespace_SIO('http://semanticscience.org/resource/SIO_000374') , _namespace_SIO('http://semanticscience.org/resource/SIO_000348') : _namespace_SIO('http://semanticscience.org/resource/SIO_000347') , _namespace_SIO('http://semanticscience.org/resource/SIO_000349') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000350') : _namespace_SIO('http://semanticscience.org/resource/SIO_001087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000351') : _namespace_SIO('http://semanticscience.org/resource/SIO_000385') , _namespace_SIO('http://semanticscience.org/resource/SIO_000353') : _namespace_SIO('http://semanticscience.org/resource/SIO_000639') , _namespace_SIO('http://semanticscience.org/resource/SIO_000354') : _namespace_SIO('http://semanticscience.org/resource/SIO_000112') , _namespace_SIO('http://semanticscience.org/resource/SIO_000357') : _namespace_SIO('http://semanticscience.org/resource/SIO_010019') , _namespace_SIO('http://semanticscience.org/resource/SIO_000358') : _namespace_SIO('http://semanticscience.org/resource/SIO_000825') , _namespace_SIO('http://semanticscience.org/resource/SIO_000359') : _namespace_SIO('http://semanticscience.org/resource/SIO_000337') , _namespace_SIO('http://semanticscience.org/resource/SIO_000366') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000367') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000368') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000371') : _namespace_SIO('http://semanticscience.org/resource/SIO_000408') , _namespace_SIO('http://semanticscience.org/resource/SIO_000372') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000373') : _namespace_SIO('http://semanticscience.org/resource/SIO_000346') , _namespace_SIO('http://semanticscience.org/resource/SIO_000374') : _namespace_SIO('http://semanticscience.org/resource/SIO_000385') , _namespace_SIO('http://semanticscience.org/resource/SIO_000375') : _namespace_SIO('http://semanticscience.org/resource/SIO_000351') , _namespace_SIO('http://semanticscience.org/resource/SIO_000376') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000377') : _namespace_SIO('http://semanticscience.org/resource/SIO_000378') , _namespace_SIO('http://semanticscience.org/resource/SIO_000378') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000379') : _namespace_SIO('http://semanticscience.org/resource/SIO_001055') , _namespace_SIO('http://semanticscience.org/resource/SIO_000380') : _namespace_SIO('http://semanticscience.org/resource/SIO_000392') , _namespace_SIO('http://semanticscience.org/resource/SIO_000381') : _namespace_SIO('http://semanticscience.org/resource/SIO_000380') , _namespace_SIO('http://semanticscience.org/resource/SIO_000382') : _namespace_SIO('http://semanticscience.org/resource/SIO_000349') , _namespace_SIO('http://semanticscience.org/resource/SIO_000383') : _namespace_SIO('http://semanticscience.org/resource/SIO_000351') , _namespace_SIO('http://semanticscience.org/resource/SIO_000384') : _namespace_SIO('http://semanticscience.org/resource/SIO_000374') , _namespace_SIO('http://semanticscience.org/resource/SIO_000385') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000386') : _namespace_SIO('http://semanticscience.org/resource/SIO_000350') , _namespace_SIO('http://semanticscience.org/resource/SIO_000387') : _namespace_SIO('http://semanticscience.org/resource/SIO_000350') , _namespace_SIO('http://semanticscience.org/resource/SIO_000388') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000389') : _namespace_SIO('http://semanticscience.org/resource/SIO_000349') , _namespace_SIO('http://semanticscience.org/resource/SIO_000390') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000392') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000393') : _namespace_SIO('http://semanticscience.org/resource/SIO_000498') , _namespace_SIO('http://semanticscience.org/resource/SIO_000395') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000396') : _namespace_SIO('http://semanticscience.org/resource/SIO_000602') , _namespace_SIO('http://semanticscience.org/resource/SIO_000397') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000399') : _namespace_SIO('http://semanticscience.org/resource/SIO_000498') , _namespace_SIO('http://semanticscience.org/resource/SIO_000400') : _namespace_SIO('http://semanticscience.org/resource/SIO_000072') , _namespace_SIO('http://semanticscience.org/resource/SIO_000401') : _namespace_SIO('http://semanticscience.org/resource/SIO_000072') , _namespace_SIO('http://semanticscience.org/resource/SIO_000402') : _namespace_SIO('http://semanticscience.org/resource/SIO_000072') , _namespace_SIO('http://semanticscience.org/resource/SIO_000403') : _namespace_SIO('http://semanticscience.org/resource/SIO_000620') , _namespace_SIO('http://semanticscience.org/resource/SIO_000404') : _namespace_SIO('http://semanticscience.org/resource/SIO_000406') , _namespace_SIO('http://semanticscience.org/resource/SIO_000405') : _namespace_SIO('http://semanticscience.org/resource/SIO_000406') , _namespace_SIO('http://semanticscience.org/resource/SIO_000406') : _namespace_SIO('http://semanticscience.org/resource/SIO_000498') , _namespace_SIO('http://semanticscience.org/resource/SIO_000407') : _namespace_SIO('http://semanticscience.org/resource/SIO_000536') , _namespace_SIO('http://semanticscience.org/resource/SIO_000408') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000409') : _namespace_SIO('http://semanticscience.org/resource/SIO_000014') , _namespace_SIO('http://semanticscience.org/resource/SIO_000410') : _namespace_SIO('http://semanticscience.org/resource/SIO_000828') , _namespace_SIO('http://semanticscience.org/resource/SIO_000411') : _namespace_SIO('http://semanticscience.org/resource/SIO_000828') , _namespace_SIO('http://semanticscience.org/resource/SIO_000412') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000413') : _namespace_SIO('http://semanticscience.org/resource/SIO_000414') , _namespace_SIO('http://semanticscience.org/resource/SIO_000414') : _namespace_SIO('http://semanticscience.org/resource/SIO_000370') , _namespace_SIO('http://semanticscience.org/resource/SIO_000415') : _namespace_SIO('http://semanticscience.org/resource/SIO_000413') , _namespace_SIO('http://semanticscience.org/resource/SIO_000417') : _namespace_SIO('http://semanticscience.org/resource/SIO_000391') , _namespace_SIO('http://semanticscience.org/resource/SIO_000418') : _namespace_SIO('http://semanticscience.org/resource/SIO_000391') , _namespace_SIO('http://semanticscience.org/resource/SIO_000419') : _namespace_SIO('http://semanticscience.org/resource/SIO_000080') , _namespace_SIO('http://semanticscience.org/resource/SIO_000423') : _namespace_SIO('http://semanticscience.org/resource/SIO_000083') , _namespace_SIO('http://semanticscience.org/resource/SIO_000428') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000429') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000430') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000431') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000432') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000433') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000434') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000435') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000438') : _namespace_SIO('http://semanticscience.org/resource/SIO_000790') , _namespace_SIO('http://semanticscience.org/resource/SIO_000439') : _namespace_SIO('http://semanticscience.org/resource/SIO_000056') , _namespace_SIO('http://semanticscience.org/resource/SIO_000442') : _namespace_SIO('http://semanticscience.org/resource/SIO_000083') , _namespace_SIO('http://semanticscience.org/resource/SIO_000443') : _namespace_SIO('http://semanticscience.org/resource/SIO_000083') , _namespace_SIO('http://semanticscience.org/resource/SIO_000444') : _namespace_SIO('http://semanticscience.org/resource/SIO_000443') , _namespace_SIO('http://semanticscience.org/resource/SIO_000445') : _namespace_SIO('http://semanticscience.org/resource/SIO_000443') , _namespace_SIO('http://semanticscience.org/resource/SIO_000446') : _namespace_SIO('http://semanticscience.org/resource/SIO_000443') , _namespace_SIO('http://semanticscience.org/resource/SIO_000447') : _namespace_SIO('http://semanticscience.org/resource/SIO_000083') , _namespace_SIO('http://semanticscience.org/resource/SIO_000449') : _namespace_SIO('http://semanticscience.org/resource/SIO_000448') , _namespace_SIO('http://semanticscience.org/resource/SIO_000452') : _namespace_SIO('http://semanticscience.org/resource/SIO_000451') , _namespace_SIO('http://semanticscience.org/resource/SIO_000453') : _namespace_SIO('http://semanticscience.org/resource/SIO_000451') , _namespace_SIO('http://semanticscience.org/resource/SIO_000454') : _namespace_SIO('http://semanticscience.org/resource/SIO_000451') , _namespace_SIO('http://semanticscience.org/resource/SIO_000455') : _namespace_SIO('http://semanticscience.org/resource/SIO_000450') , _namespace_SIO('http://semanticscience.org/resource/SIO_000456') : _namespace_SIO('http://semanticscience.org/resource/SIO_000455') , _namespace_SIO('http://semanticscience.org/resource/SIO_000457') : _namespace_SIO('http://semanticscience.org/resource/SIO_000455') , _namespace_SIO('http://semanticscience.org/resource/SIO_000458') : _namespace_SIO('http://semanticscience.org/resource/SIO_000450') , _namespace_SIO('http://semanticscience.org/resource/SIO_000459') : _namespace_SIO('http://semanticscience.org/resource/SIO_000458') , _namespace_SIO('http://semanticscience.org/resource/SIO_000460') : _namespace_SIO('http://semanticscience.org/resource/SIO_000458') , _namespace_SIO('http://semanticscience.org/resource/SIO_000461') : _namespace_SIO('http://semanticscience.org/resource/SIO_000458') , _namespace_SIO('http://semanticscience.org/resource/SIO_000462') : _namespace_SIO('http://semanticscience.org/resource/SIO_000461') , _namespace_SIO('http://semanticscience.org/resource/SIO_000463') : _namespace_SIO('http://semanticscience.org/resource/SIO_000461') , _namespace_SIO('http://semanticscience.org/resource/SIO_000464') : _namespace_SIO('http://semanticscience.org/resource/SIO_000150') , _namespace_SIO('http://semanticscience.org/resource/SIO_000466') : _namespace_SIO('http://semanticscience.org/resource/SIO_000742') , _namespace_SIO('http://semanticscience.org/resource/SIO_000467') : _namespace_SIO('http://semanticscience.org/resource/SIO_000743') , _namespace_SIO('http://semanticscience.org/resource/SIO_000468') : _namespace_SIO('http://semanticscience.org/resource/SIO_000448') , _namespace_SIO('http://semanticscience.org/resource/SIO_000470') : _namespace_SIO('http://semanticscience.org/resource/SIO_000185') , _namespace_SIO('http://semanticscience.org/resource/SIO_000471') : _namespace_SIO('http://semanticscience.org/resource/SIO_000185') , _namespace_SIO('http://semanticscience.org/resource/SIO_000472') : _namespace_SIO('http://semanticscience.org/resource/SIO_000069') , _namespace_SIO('http://semanticscience.org/resource/SIO_000475') : _namespace_SIO('http://semanticscience.org/resource/SIO_000026') , _namespace_SIO('http://semanticscience.org/resource/SIO_000478') : _namespace_SIO('http://semanticscience.org/resource/SIO_000479') , _namespace_SIO('http://semanticscience.org/resource/SIO_000479') : _namespace_SIO('http://semanticscience.org/resource/SIO_000721') , _namespace_SIO('http://semanticscience.org/resource/SIO_000480') : _namespace_SIO('http://semanticscience.org/resource/SIO_000478') , _namespace_SIO('http://semanticscience.org/resource/SIO_000481') : _namespace_SIO('http://semanticscience.org/resource/SIO_000478') , _namespace_SIO('http://semanticscience.org/resource/SIO_000485') : _namespace_SIO('http://semanticscience.org/resource/SIO_010375') , _namespace_SIO('http://semanticscience.org/resource/SIO_000486') : _namespace_SIO('http://semanticscience.org/resource/SIO_010375') , _namespace_SIO('http://semanticscience.org/resource/SIO_000487') : _namespace_SIO('http://semanticscience.org/resource/SIO_010375') , _namespace_SIO('http://semanticscience.org/resource/SIO_000488') : _namespace_SIO('http://semanticscience.org/resource/SIO_010375') , _namespace_SIO('http://semanticscience.org/resource/SIO_000489') : _namespace_SIO('http://semanticscience.org/resource/SIO_010376') , _namespace_SIO('http://semanticscience.org/resource/SIO_000492') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000493') : _namespace_SIO('http://semanticscience.org/resource/SIO_000113') , _namespace_SIO('http://semanticscience.org/resource/SIO_000494') : _namespace_SIO('http://semanticscience.org/resource/SIO_000701') , _namespace_SIO('http://semanticscience.org/resource/SIO_000498') : _namespace_SIO('http://semanticscience.org/resource/SIO_000485') , _namespace_SIO('http://semanticscience.org/resource/SIO_000499') : _namespace_SIO('http://semanticscience.org/resource/SIO_000536') , _namespace_SIO('http://semanticscience.org/resource/SIO_000505') : _namespace_SIO('http://semanticscience.org/resource/SIO_000506') , _namespace_SIO('http://semanticscience.org/resource/SIO_000506') : _namespace_SIO('http://semanticscience.org/resource/SIO_000015') , _namespace_SIO('http://semanticscience.org/resource/SIO_000507') : _namespace_SIO('http://semanticscience.org/resource/SIO_000506') , _namespace_SIO('http://semanticscience.org/resource/SIO_000508') : _namespace_SIO('http://semanticscience.org/resource/SIO_000532') , _namespace_SIO('http://semanticscience.org/resource/SIO_000509') : _namespace_SIO('http://semanticscience.org/resource/SIO_000532') , _namespace_SIO('http://semanticscience.org/resource/SIO_000511') : _namespace_SIO('http://semanticscience.org/resource/SIO_000608') , _namespace_SIO('http://semanticscience.org/resource/SIO_000513') : _namespace_SIO('http://semanticscience.org/resource/SIO_000512') , _namespace_SIO('http://semanticscience.org/resource/SIO_000514') : _namespace_SIO('http://semanticscience.org/resource/SIO_000513') , _namespace_SIO('http://semanticscience.org/resource/SIO_000515') : _namespace_SIO('http://semanticscience.org/resource/SIO_000513') , _namespace_SIO('http://semanticscience.org/resource/SIO_000516') : _namespace_SIO('http://semanticscience.org/resource/SIO_000511') , _namespace_SIO('http://semanticscience.org/resource/SIO_000517') : _namespace_SIO('http://semanticscience.org/resource/SIO_000505') , _namespace_SIO('http://semanticscience.org/resource/SIO_000518') : _namespace_SIO('http://semanticscience.org/resource/SIO_000517') , _namespace_SIO('http://semanticscience.org/resource/SIO_000519') : _namespace_SIO('http://semanticscience.org/resource/SIO_000518') , _namespace_SIO('http://semanticscience.org/resource/SIO_000520') : _namespace_SIO('http://semanticscience.org/resource/SIO_000505') , _namespace_SIO('http://semanticscience.org/resource/SIO_000525') : _namespace_SIO('http://semanticscience.org/resource/SIO_000534') , _namespace_SIO('http://semanticscience.org/resource/SIO_000526') : _namespace_SIO('http://semanticscience.org/resource/SIO_000534') , _namespace_SIO('http://semanticscience.org/resource/SIO_000527') : _namespace_SIO('http://semanticscience.org/resource/SIO_000535') , _namespace_SIO('http://semanticscience.org/resource/SIO_000528') : _namespace_SIO('http://semanticscience.org/resource/SIO_000527') , _namespace_SIO('http://semanticscience.org/resource/SIO_000529') : _namespace_SIO('http://semanticscience.org/resource/SIO_000527') , _namespace_SIO('http://semanticscience.org/resource/SIO_000530') : _namespace_SIO('http://semanticscience.org/resource/SIO_000527') , _namespace_SIO('http://semanticscience.org/resource/SIO_000531') : _namespace_SIO('http://semanticscience.org/resource/SIO_000535') , _namespace_SIO('http://semanticscience.org/resource/SIO_000532') : _namespace_SIO('http://semanticscience.org/resource/SIO_000507') , _namespace_SIO('http://semanticscience.org/resource/SIO_000533') : _namespace_SIO('http://semanticscience.org/resource/SIO_000540') , _namespace_SIO('http://semanticscience.org/resource/SIO_000534') : _namespace_SIO('http://semanticscience.org/resource/SIO_000511') , _namespace_SIO('http://semanticscience.org/resource/SIO_000535') : _namespace_SIO('http://semanticscience.org/resource/SIO_000511') , _namespace_SIO('http://semanticscience.org/resource/SIO_000536') : _namespace_SIO('http://semanticscience.org/resource/SIO_000395') , _namespace_SIO('http://semanticscience.org/resource/SIO_000537') : _namespace_SIO('http://semanticscience.org/resource/SIO_000055') , _namespace_SIO('http://semanticscience.org/resource/SIO_000538') : _namespace_SIO('http://semanticscience.org/resource/SIO_000537') , _namespace_SIO('http://semanticscience.org/resource/SIO_000539') : _namespace_SIO('http://semanticscience.org/resource/SIO_000511') , _namespace_SIO('http://semanticscience.org/resource/SIO_000540') : _namespace_SIO('http://semanticscience.org/resource/SIO_000516') , _namespace_SIO('http://semanticscience.org/resource/SIO_000541') : _namespace_SIO('http://semanticscience.org/resource/SIO_000540') , _namespace_SIO('http://semanticscience.org/resource/SIO_000542') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000544') : _namespace_SIO('http://semanticscience.org/resource/SIO_000372') , _namespace_SIO('http://semanticscience.org/resource/SIO_000547') : _namespace_SIO('http://semanticscience.org/resource/SIO_000376') , _namespace_SIO('http://semanticscience.org/resource/SIO_000549') : _namespace_SIO('http://semanticscience.org/resource/SIO_010355') , _namespace_SIO('http://semanticscience.org/resource/SIO_000550') : _namespace_SIO('http://semanticscience.org/resource/SIO_010354') , _namespace_SIO('http://semanticscience.org/resource/SIO_000551') : _namespace_SIO('http://semanticscience.org/resource/SIO_010347') , _namespace_SIO('http://semanticscience.org/resource/SIO_000554') : _namespace_SIO('http://semanticscience.org/resource/SIO_000307') , _namespace_SIO('http://semanticscience.org/resource/SIO_000555') : _namespace_SIO('http://semanticscience.org/resource/SIO_000307') , _namespace_SIO('http://semanticscience.org/resource/SIO_000556') : _namespace_SIO('http://semanticscience.org/resource/SIO_010071') , _namespace_SIO('http://semanticscience.org/resource/SIO_000561') : _namespace_SIO('http://semanticscience.org/resource/SIO_011121') , _namespace_SIO('http://semanticscience.org/resource/SIO_000562') : _namespace_SIO('http://semanticscience.org/resource/SIO_000576') , _namespace_SIO('http://semanticscience.org/resource/SIO_000564') : _namespace_SIO('http://semanticscience.org/resource/SIO_000573') , _namespace_SIO('http://semanticscience.org/resource/SIO_000566') : _namespace_SIO('http://semanticscience.org/resource/SIO_000368') , _namespace_SIO('http://semanticscience.org/resource/SIO_000567') : _namespace_SIO('http://semanticscience.org/resource/SIO_000569') , _namespace_SIO('http://semanticscience.org/resource/SIO_000568') : _namespace_SIO('http://semanticscience.org/resource/SIO_000569') , _namespace_SIO('http://semanticscience.org/resource/SIO_000569') : _namespace_SIO('http://semanticscience.org/resource/SIO_000368') , _namespace_SIO('http://semanticscience.org/resource/SIO_000570') : _namespace_SIO('http://semanticscience.org/resource/SIO_000006') , _namespace_SIO('http://semanticscience.org/resource/SIO_000571') : _namespace_SIO('http://semanticscience.org/resource/SIO_000564') , _namespace_SIO('http://semanticscience.org/resource/SIO_000572') : _namespace_SIO('http://semanticscience.org/resource/SIO_000564') , _namespace_SIO('http://semanticscience.org/resource/SIO_000573') : _namespace_SIO('http://semanticscience.org/resource/SIO_000570') , _namespace_SIO('http://semanticscience.org/resource/SIO_000574') : _namespace_SIO('http://semanticscience.org/resource/SIO_000570') , _namespace_SIO('http://semanticscience.org/resource/SIO_000576') : _namespace_SIO('http://semanticscience.org/resource/SIO_010283') , _namespace_SIO('http://semanticscience.org/resource/SIO_000577') : _namespace_SIO('http://semanticscience.org/resource/SIO_010284') , _namespace_SIO('http://semanticscience.org/resource/SIO_000578') : _namespace_SIO('http://semanticscience.org/resource/SIO_010284') , _namespace_SIO('http://semanticscience.org/resource/SIO_000579') : _namespace_SIO('http://semanticscience.org/resource/SIO_000578') , _namespace_SIO('http://semanticscience.org/resource/SIO_000580') : _namespace_SIO('http://semanticscience.org/resource/SIO_000578') , _namespace_SIO('http://semanticscience.org/resource/SIO_000581') : _namespace_SIO('http://semanticscience.org/resource/SIO_000574') , _namespace_SIO('http://semanticscience.org/resource/SIO_000585') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_000587') : _namespace_SIO('http://semanticscience.org/resource/SIO_000588') , _namespace_SIO('http://semanticscience.org/resource/SIO_000589') : _namespace_SIO('http://semanticscience.org/resource/SIO_000593') , _namespace_SIO('http://semanticscience.org/resource/SIO_000590') : _namespace_SIO('http://semanticscience.org/resource/SIO_000559') , _namespace_SIO('http://semanticscience.org/resource/SIO_000596') : _namespace_SIO('http://semanticscience.org/resource/SIO_000956') , _namespace_SIO('http://semanticscience.org/resource/SIO_000597') : _namespace_SIO('http://semanticscience.org/resource/SIO_000598') , _namespace_SIO('http://semanticscience.org/resource/SIO_000598') : _namespace_SIO('http://semanticscience.org/resource/SIO_000596') , _namespace_SIO('http://semanticscience.org/resource/SIO_000600') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000602') : _namespace_SIO('http://semanticscience.org/resource/SIO_000015') , _namespace_SIO('http://semanticscience.org/resource/SIO_000605') : _namespace_SIO('http://semanticscience.org/resource/SIO_000650') , _namespace_SIO('http://semanticscience.org/resource/SIO_000608') : _namespace_SIO('http://semanticscience.org/resource/SIO_000506') , _namespace_SIO('http://semanticscience.org/resource/SIO_000613') : _namespace_SIO('http://semanticscience.org/resource/SIO_000788') , _namespace_SIO('http://semanticscience.org/resource/SIO_000619') : _namespace_SIO('http://semanticscience.org/resource/SIO_000012') , _namespace_SIO('http://semanticscience.org/resource/SIO_000620') : _namespace_SIO('http://semanticscience.org/resource/SIO_000010') , _namespace_SIO('http://semanticscience.org/resource/SIO_000621') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000622') : _namespace_SIO('http://semanticscience.org/resource/SIO_000129') , _namespace_SIO('http://semanticscience.org/resource/SIO_000623') : _namespace_SIO('http://semanticscience.org/resource/SIO_000129') , _namespace_SIO('http://semanticscience.org/resource/SIO_000624') : _namespace_SIO('http://semanticscience.org/resource/SIO_010441') , _namespace_SIO('http://semanticscience.org/resource/SIO_000625') : _namespace_SIO('http://semanticscience.org/resource/SIO_000600') , _namespace_SIO('http://semanticscience.org/resource/SIO_000626') : _namespace_SIO('http://semanticscience.org/resource/SIO_000625') , _namespace_SIO('http://semanticscience.org/resource/SIO_000638') : _namespace_SIO('http://semanticscience.org/resource/SIO_000257') , _namespace_SIO('http://semanticscience.org/resource/SIO_000639') : _namespace_SIO('http://semanticscience.org/resource/SIO_000701') , _namespace_SIO('http://semanticscience.org/resource/SIO_000640') : _namespace_SIO('http://semanticscience.org/resource/SIO_000555') , _namespace_SIO('http://semanticscience.org/resource/SIO_000648') : _namespace_SIO('http://semanticscience.org/resource/SIO_000510') , _namespace_SIO('http://semanticscience.org/resource/SIO_000649') : _namespace_SIO('http://semanticscience.org/resource/SIO_000999') , _namespace_SIO('http://semanticscience.org/resource/SIO_000650') : _namespace_SIO('http://semanticscience.org/resource/SIO_000004') , _namespace_SIO('http://semanticscience.org/resource/SIO_000651') : _namespace_SIO('http://semanticscience.org/resource/SIO_000079') , _namespace_SIO('http://semanticscience.org/resource/SIO_000660') : _namespace_SIO('http://semanticscience.org/resource/SIO_000019') , _namespace_SIO('http://semanticscience.org/resource/SIO_000661') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000662') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000663') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000664') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000665') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000666') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000667') : _namespace_SIO('http://semanticscience.org/resource/SIO_000649') , _namespace_SIO('http://semanticscience.org/resource/SIO_000669') : _namespace_SIO('http://semanticscience.org/resource/SIO_000418') , _namespace_SIO('http://semanticscience.org/resource/SIO_000670') : _namespace_SIO('http://semanticscience.org/resource/SIO_000418') , _namespace_SIO('http://semanticscience.org/resource/SIO_000676') : _namespace_SIO('http://semanticscience.org/resource/SIO_000016') , _namespace_SIO('http://semanticscience.org/resource/SIO_000677') : _namespace_SIO('http://semanticscience.org/resource/SIO_000016') , _namespace_SIO('http://semanticscience.org/resource/SIO_000678') : _namespace_SIO('http://semanticscience.org/resource/SIO_000016') , _namespace_SIO('http://semanticscience.org/resource/SIO_000683') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_000686') : _namespace_SIO('http://semanticscience.org/resource/SIO_000285') , _namespace_SIO('http://semanticscience.org/resource/SIO_000688') : _namespace_SIO('http://semanticscience.org/resource/SIO_000285') , _namespace_SIO('http://semanticscience.org/resource/SIO_000689') : _namespace_SIO('http://semanticscience.org/resource/SIO_010367') , _namespace_SIO('http://semanticscience.org/resource/SIO_000690') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000693') : _namespace_SIO('http://semanticscience.org/resource/SIO_000012') , _namespace_SIO('http://semanticscience.org/resource/SIO_000698') : _namespace_SIO('http://semanticscience.org/resource/SIO_000376') , _namespace_SIO('http://semanticscience.org/resource/SIO_000700') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000704') : _namespace_SIO('http://semanticscience.org/resource/SIO_000678') , _namespace_SIO('http://semanticscience.org/resource/SIO_000705') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000706') : _namespace_SIO('http://semanticscience.org/resource/SIO_000676') , _namespace_SIO('http://semanticscience.org/resource/SIO_000711') : _namespace_SIO('http://semanticscience.org/resource/SIO_000706') , _namespace_SIO('http://semanticscience.org/resource/SIO_000712') : _namespace_SIO('http://semanticscience.org/resource/SIO_000706') , _namespace_SIO('http://semanticscience.org/resource/SIO_000713') : _namespace_SIO('http://semanticscience.org/resource/SIO_000712') , _namespace_SIO('http://semanticscience.org/resource/SIO_000714') : _namespace_SIO('http://semanticscience.org/resource/SIO_000712') , _namespace_SIO('http://semanticscience.org/resource/SIO_000715') : _namespace_SIO('http://semanticscience.org/resource/SIO_000712') , _namespace_SIO('http://semanticscience.org/resource/SIO_000716') : _namespace_SIO('http://semanticscience.org/resource/SIO_000498') , _namespace_SIO('http://semanticscience.org/resource/SIO_000717') : _namespace_SIO('http://semanticscience.org/resource/SIO_000712') , _namespace_SIO('http://semanticscience.org/resource/SIO_000721') : _namespace_SIO('http://semanticscience.org/resource/SIO_000678') , _namespace_SIO('http://semanticscience.org/resource/SIO_000722') : _namespace_SIO('http://semanticscience.org/resource/SIO_000725') , _namespace_SIO('http://semanticscience.org/resource/SIO_000723') : _namespace_SIO('http://semanticscience.org/resource/SIO_000724') , _namespace_SIO('http://semanticscience.org/resource/SIO_000724') : _namespace_SIO('http://semanticscience.org/resource/SIO_000353') , _namespace_SIO('http://semanticscience.org/resource/SIO_000725') : _namespace_SIO('http://semanticscience.org/resource/SIO_000696') , _namespace_SIO('http://semanticscience.org/resource/SIO_000726') : _namespace_SIO('http://semanticscience.org/resource/SIO_000706') , _namespace_SIO('http://semanticscience.org/resource/SIO_000727') : _namespace_SIO('http://semanticscience.org/resource/SIO_000726') , _namespace_SIO('http://semanticscience.org/resource/SIO_000728') : _namespace_SIO('http://semanticscience.org/resource/SIO_000730') , _namespace_SIO('http://semanticscience.org/resource/SIO_000730') : _namespace_SIO('http://semanticscience.org/resource/SIO_000115') , _namespace_SIO('http://semanticscience.org/resource/SIO_000731') : _namespace_SIO('http://semanticscience.org/resource/SIO_000115') , _namespace_SIO('http://semanticscience.org/resource/SIO_000732') : _namespace_SIO('http://semanticscience.org/resource/SIO_000728') , _namespace_SIO('http://semanticscience.org/resource/SIO_000740') : _namespace_SIO('http://semanticscience.org/resource/SIO_000608') , _namespace_SIO('http://semanticscience.org/resource/SIO_000741') : _namespace_SIO('http://semanticscience.org/resource/SIO_000465') , _namespace_SIO('http://semanticscience.org/resource/SIO_000742') : _namespace_SIO('http://semanticscience.org/resource/SIO_000741') , _namespace_SIO('http://semanticscience.org/resource/SIO_000743') : _namespace_SIO('http://semanticscience.org/resource/SIO_000741') , _namespace_SIO('http://semanticscience.org/resource/SIO_000750') : _namespace_SIO('http://semanticscience.org/resource/SIO_000602') , _namespace_SIO('http://semanticscience.org/resource/SIO_000751') : _namespace_SIO('http://semanticscience.org/resource/SIO_000555') , _namespace_SIO('http://semanticscience.org/resource/SIO_000760') : _namespace_SIO('http://semanticscience.org/resource/SIO_000755') , _namespace_SIO('http://semanticscience.org/resource/SIO_000766') : _namespace_SIO('http://semanticscience.org/resource/SIO_000328') , _namespace_SIO('http://semanticscience.org/resource/SIO_000767') : _namespace_SIO('http://semanticscience.org/resource/SIO_000013') , _namespace_SIO('http://semanticscience.org/resource/SIO_000768') : _namespace_SIO('http://semanticscience.org/resource/SIO_000179') , _namespace_SIO('http://semanticscience.org/resource/SIO_000769') : _namespace_SIO('http://semanticscience.org/resource/SIO_000052') , _namespace_SIO('http://semanticscience.org/resource/SIO_000770') : _namespace_SIO('http://semanticscience.org/resource/SIO_000052') , _namespace_SIO('http://semanticscience.org/resource/SIO_000771') : _namespace_SIO('http://semanticscience.org/resource/SIO_000088') , _namespace_SIO('http://semanticscience.org/resource/SIO_000777') : _namespace_SIO('http://semanticscience.org/resource/SIO_000639') , _namespace_SIO('http://semanticscience.org/resource/SIO_000778') : _namespace_SIO('http://semanticscience.org/resource/SIO_000378') , _namespace_SIO('http://semanticscience.org/resource/SIO_000780') : _namespace_SIO('http://semanticscience.org/resource/SIO_000690') , _namespace_SIO('http://semanticscience.org/resource/SIO_000783') : _namespace_SIO('http://semanticscience.org/resource/SIO_000370') , _namespace_SIO('http://semanticscience.org/resource/SIO_000784') : _namespace_SIO('http://semanticscience.org/resource/SIO_010029') , _namespace_SIO('http://semanticscience.org/resource/SIO_000785') : _namespace_SIO('http://semanticscience.org/resource/SIO_000136') , _namespace_SIO('http://semanticscience.org/resource/SIO_000786') : _namespace_SIO('http://semanticscience.org/resource/SIO_000078') , _namespace_SIO('http://semanticscience.org/resource/SIO_000787') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_000788') : _namespace_SIO('http://semanticscience.org/resource/SIO_000056') , _namespace_SIO('http://semanticscience.org/resource/SIO_000789') : _namespace_SIO('http://semanticscience.org/resource/SIO_000788') , _namespace_SIO('http://semanticscience.org/resource/SIO_000790') : _namespace_SIO('http://semanticscience.org/resource/SIO_000038') , _namespace_SIO('http://semanticscience.org/resource/SIO_000791') : _namespace_SIO('http://semanticscience.org/resource/SIO_000943') , _namespace_SIO('http://semanticscience.org/resource/SIO_000792') : _namespace_SIO('http://semanticscience.org/resource/SIO_000953') , _namespace_SIO('http://semanticscience.org/resource/SIO_000794') : _namespace_SIO('http://semanticscience.org/resource/SIO_000257') , _namespace_SIO('http://semanticscience.org/resource/SIO_000796') : _namespace_SIO('http://semanticscience.org/resource/SIO_000880') , _namespace_SIO('http://semanticscience.org/resource/SIO_000797') : _namespace_SIO('http://semanticscience.org/resource/SIO_000879') , _namespace_SIO('http://semanticscience.org/resource/SIO_000799') : _namespace_SIO('http://semanticscience.org/resource/SIO_000889') , _namespace_SIO('http://semanticscience.org/resource/SIO_000800') : _namespace_SIO('http://semanticscience.org/resource/SIO_000799') , _namespace_SIO('http://semanticscience.org/resource/SIO_000801') : _namespace_SIO('http://semanticscience.org/resource/SIO_000800') , _namespace_SIO('http://semanticscience.org/resource/SIO_000802') : _namespace_SIO('http://semanticscience.org/resource/SIO_000800') , _namespace_SIO('http://semanticscience.org/resource/SIO_000803') : _namespace_SIO('http://semanticscience.org/resource/SIO_000880') , _namespace_SIO('http://semanticscience.org/resource/SIO_000804') : _namespace_SIO('http://semanticscience.org/resource/SIO_000880') , _namespace_SIO('http://semanticscience.org/resource/SIO_000805') : _namespace_SIO('http://semanticscience.org/resource/SIO_010442') , _namespace_SIO('http://semanticscience.org/resource/SIO_000806') : _namespace_SIO('http://semanticscience.org/resource/SIO_010442') , _namespace_SIO('http://semanticscience.org/resource/SIO_000807') : _namespace_SIO('http://semanticscience.org/resource/SIO_000809') , _namespace_SIO('http://semanticscience.org/resource/SIO_000808') : _namespace_SIO('http://semanticscience.org/resource/SIO_000809') , _namespace_SIO('http://semanticscience.org/resource/SIO_000809') : _namespace_SIO('http://semanticscience.org/resource/SIO_000805') , _namespace_SIO('http://semanticscience.org/resource/SIO_000810') : _namespace_SIO('http://semanticscience.org/resource/SIO_000805') , _namespace_SIO('http://semanticscience.org/resource/SIO_000812') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000813') : _namespace_SIO('http://semanticscience.org/resource/SIO_000815') , _namespace_SIO('http://semanticscience.org/resource/SIO_000814') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000815') : _namespace_SIO('http://semanticscience.org/resource/SIO_000949') , _namespace_SIO('http://semanticscience.org/resource/SIO_000816') : _namespace_SIO('http://semanticscience.org/resource/SIO_000847') , _namespace_SIO('http://semanticscience.org/resource/SIO_000817') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000818') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000819') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000820') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000821') : _namespace_SIO('http://semanticscience.org/resource/SIO_000828') , _namespace_SIO('http://semanticscience.org/resource/SIO_000822') : _namespace_SIO('http://semanticscience.org/resource/SIO_000840') , _namespace_SIO('http://semanticscience.org/resource/SIO_000823') : _namespace_SIO('http://semanticscience.org/resource/SIO_000825') , _namespace_SIO('http://semanticscience.org/resource/SIO_000824') : _namespace_SIO('http://semanticscience.org/resource/SIO_000863') , _namespace_SIO('http://semanticscience.org/resource/SIO_000825') : _namespace_SIO('http://semanticscience.org/resource/SIO_000848') , _namespace_SIO('http://semanticscience.org/resource/SIO_000826') : _namespace_SIO('http://semanticscience.org/resource/SIO_000863') , _namespace_SIO('http://semanticscience.org/resource/SIO_000827') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000828') : _namespace_SIO('http://semanticscience.org/resource/SIO_000844') , _namespace_SIO('http://semanticscience.org/resource/SIO_000829') : _namespace_SIO('http://semanticscience.org/resource/SIO_000837') , _namespace_SIO('http://semanticscience.org/resource/SIO_000830') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000831') : _namespace_SIO('http://semanticscience.org/resource/SIO_000276') , _namespace_SIO('http://semanticscience.org/resource/SIO_000832') : _namespace_SIO('http://semanticscience.org/resource/SIO_000276') , _namespace_SIO('http://semanticscience.org/resource/SIO_000833') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000834') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000835') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000836') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000837') : _namespace_SIO('http://semanticscience.org/resource/SIO_000949') , _namespace_SIO('http://semanticscience.org/resource/SIO_000838') : _namespace_SIO('http://semanticscience.org/resource/SIO_000814') , _namespace_SIO('http://semanticscience.org/resource/SIO_000839') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000840') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000841') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000842') : _namespace_SIO('http://semanticscience.org/resource/SIO_000863') , _namespace_SIO('http://semanticscience.org/resource/SIO_000843') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000844') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000845') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000846') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000847') : _namespace_SIO('http://semanticscience.org/resource/SIO_000276') , _namespace_SIO('http://semanticscience.org/resource/SIO_000848') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000849') : _namespace_SIO('http://semanticscience.org/resource/SIO_000834') , _namespace_SIO('http://semanticscience.org/resource/SIO_000850') : _namespace_SIO('http://semanticscience.org/resource/SIO_000840') , _namespace_SIO('http://semanticscience.org/resource/SIO_000851') : _namespace_SIO('http://semanticscience.org/resource/SIO_000828') , _namespace_SIO('http://semanticscience.org/resource/SIO_000852') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000853') : _namespace_SIO('http://semanticscience.org/resource/SIO_000825') , _namespace_SIO('http://semanticscience.org/resource/SIO_000854') : _namespace_SIO('http://semanticscience.org/resource/SIO_000863') , _namespace_SIO('http://semanticscience.org/resource/SIO_000855') : _namespace_SIO('http://semanticscience.org/resource/SIO_000837') , _namespace_SIO('http://semanticscience.org/resource/SIO_000856') : _namespace_SIO('http://semanticscience.org/resource/SIO_000825') , _namespace_SIO('http://semanticscience.org/resource/SIO_000857') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000858') : _namespace_SIO('http://semanticscience.org/resource/SIO_000840') , _namespace_SIO('http://semanticscience.org/resource/SIO_000859') : _namespace_SIO('http://semanticscience.org/resource/SIO_000864') , _namespace_SIO('http://semanticscience.org/resource/SIO_000860') : _namespace_SIO('http://semanticscience.org/resource/SIO_000410') , _namespace_SIO('http://semanticscience.org/resource/SIO_000861') : _namespace_SIO('http://semanticscience.org/resource/SIO_000873') , _namespace_SIO('http://semanticscience.org/resource/SIO_000862') : _namespace_SIO('http://semanticscience.org/resource/SIO_000873') , _namespace_SIO('http://semanticscience.org/resource/SIO_000863') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000864') : _namespace_SIO('http://semanticscience.org/resource/SIO_000822') , _namespace_SIO('http://semanticscience.org/resource/SIO_000865') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000866') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000867') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000868') : _namespace_SIO('http://semanticscience.org/resource/SIO_000863') , _namespace_SIO('http://semanticscience.org/resource/SIO_000869') : _namespace_SIO('http://semanticscience.org/resource/SIO_000845') , _namespace_SIO('http://semanticscience.org/resource/SIO_000870') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000871') : _namespace_SIO('http://semanticscience.org/resource/SIO_000829') , _namespace_SIO('http://semanticscience.org/resource/SIO_000872') : _namespace_SIO('http://semanticscience.org/resource/SIO_000870') , _namespace_SIO('http://semanticscience.org/resource/SIO_000873') : _namespace_SIO('http://semanticscience.org/resource/SIO_000949') , _namespace_SIO('http://semanticscience.org/resource/SIO_000875') : _namespace_SIO('http://semanticscience.org/resource/SIO_000711') , _namespace_SIO('http://semanticscience.org/resource/SIO_000876') : _namespace_SIO('http://semanticscience.org/resource/SIO_000711') , _namespace_SIO('http://semanticscience.org/resource/SIO_000877') : _namespace_SIO('http://semanticscience.org/resource/SIO_000876') , _namespace_SIO('http://semanticscience.org/resource/SIO_000878') : _namespace_SIO('http://semanticscience.org/resource/SIO_000876') , _namespace_SIO('http://semanticscience.org/resource/SIO_000879') : _namespace_SIO('http://semanticscience.org/resource/SIO_000889') , _namespace_SIO('http://semanticscience.org/resource/SIO_000880') : _namespace_SIO('http://semanticscience.org/resource/SIO_000889') , _namespace_SIO('http://semanticscience.org/resource/SIO_000881') : _namespace_SIO('http://semanticscience.org/resource/SIO_000677') , _namespace_SIO('http://semanticscience.org/resource/SIO_000882') : _namespace_SIO('http://semanticscience.org/resource/SIO_000888') , _namespace_SIO('http://semanticscience.org/resource/SIO_000883') : _namespace_SIO('http://semanticscience.org/resource/SIO_000881') , _namespace_SIO('http://semanticscience.org/resource/SIO_000884') : _namespace_SIO('http://semanticscience.org/resource/SIO_000706') , _namespace_SIO('http://semanticscience.org/resource/SIO_000885') : _namespace_SIO('http://semanticscience.org/resource/SIO_000884') , _namespace_SIO('http://semanticscience.org/resource/SIO_000886') : _namespace_SIO('http://semanticscience.org/resource/SIO_000884') , _namespace_SIO('http://semanticscience.org/resource/SIO_000890') : _namespace_SIO('http://semanticscience.org/resource/SIO_000891') , _namespace_SIO('http://semanticscience.org/resource/SIO_000891') : _namespace_SIO('http://semanticscience.org/resource/SIO_000888') , _namespace_SIO('http://semanticscience.org/resource/SIO_000894') : _namespace_SIO('http://semanticscience.org/resource/SIO_000692') , _namespace_SIO('http://semanticscience.org/resource/SIO_000895') : _namespace_SIO('http://semanticscience.org/resource/SIO_000894') , _namespace_SIO('http://semanticscience.org/resource/SIO_000896') : _namespace_SIO('http://semanticscience.org/resource/SIO_000879') , _namespace_SIO('http://semanticscience.org/resource/SIO_000898') : _namespace_SIO('http://semanticscience.org/resource/SIO_000897') , _namespace_SIO('http://semanticscience.org/resource/SIO_000899') : _namespace_SIO('http://semanticscience.org/resource/SIO_010506') , _namespace_SIO('http://semanticscience.org/resource/SIO_000902') : _namespace_SIO('http://semanticscience.org/resource/SIO_000458') , _namespace_SIO('http://semanticscience.org/resource/SIO_000903') : _namespace_SIO('http://semanticscience.org/resource/SIO_000458') , _namespace_SIO('http://semanticscience.org/resource/SIO_000904') : _namespace_SIO('http://semanticscience.org/resource/SIO_000080') , _namespace_SIO('http://semanticscience.org/resource/SIO_000906') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000907') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000908') : _namespace_SIO('http://semanticscience.org/resource/SIO_000934') , _namespace_SIO('http://semanticscience.org/resource/SIO_000909') : _namespace_SIO('http://semanticscience.org/resource/SIO_000447') , _namespace_SIO('http://semanticscience.org/resource/SIO_000910') : _namespace_SIO('http://semanticscience.org/resource/SIO_000907') , _namespace_SIO('http://semanticscience.org/resource/SIO_000911') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000912') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000913') : _namespace_SIO('http://semanticscience.org/resource/SIO_000912') , _namespace_SIO('http://semanticscience.org/resource/SIO_000914') : _namespace_SIO('http://semanticscience.org/resource/SIO_000912') , _namespace_SIO('http://semanticscience.org/resource/SIO_000920') : _namespace_SIO('http://semanticscience.org/resource/SIO_000367') , _namespace_SIO('http://semanticscience.org/resource/SIO_000921') : _namespace_SIO('http://semanticscience.org/resource/SIO_000367') , _namespace_SIO('http://semanticscience.org/resource/SIO_000922') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000923') : _namespace_SIO('http://semanticscience.org/resource/SIO_000898') , _namespace_SIO('http://semanticscience.org/resource/SIO_000924') : _namespace_SIO('http://semanticscience.org/resource/SIO_000612') , _namespace_SIO('http://semanticscience.org/resource/SIO_000926') : _namespace_SIO('http://semanticscience.org/resource/SIO_000957') , _namespace_SIO('http://semanticscience.org/resource/SIO_000927') : _namespace_SIO('http://semanticscience.org/resource/SIO_000957') , _namespace_SIO('http://semanticscience.org/resource/SIO_000928') : _namespace_SIO('http://semanticscience.org/resource/SIO_000956') , _namespace_SIO('http://semanticscience.org/resource/SIO_000929') : _namespace_SIO('http://semanticscience.org/resource/SIO_000940') , _namespace_SIO('http://semanticscience.org/resource/SIO_000930') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000931') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000932') : _namespace_SIO('http://semanticscience.org/resource/SIO_000911') , _namespace_SIO('http://semanticscience.org/resource/SIO_000933') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000934') : _namespace_SIO('http://semanticscience.org/resource/SIO_000083') , _namespace_SIO('http://semanticscience.org/resource/SIO_000935') : _namespace_SIO('http://semanticscience.org/resource/SIO_000940') , _namespace_SIO('http://semanticscience.org/resource/SIO_000936') : _namespace_SIO('http://semanticscience.org/resource/SIO_000937') , _namespace_SIO('http://semanticscience.org/resource/SIO_000937') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000938') : _namespace_SIO('http://semanticscience.org/resource/SIO_000937') , _namespace_SIO('http://semanticscience.org/resource/SIO_000939') : _namespace_SIO('http://semanticscience.org/resource/SIO_000937') , _namespace_SIO('http://semanticscience.org/resource/SIO_000940') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000941') : _namespace_SIO('http://semanticscience.org/resource/SIO_000969') , _namespace_SIO('http://semanticscience.org/resource/SIO_000942') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_000943') : _namespace_SIO('http://semanticscience.org/resource/SIO_000788') , _namespace_SIO('http://semanticscience.org/resource/SIO_000944') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000945') : _namespace_SIO('http://semanticscience.org/resource/SIO_000931') , _namespace_SIO('http://semanticscience.org/resource/SIO_000946') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000947') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000948') : _namespace_SIO('http://semanticscience.org/resource/SIO_000945') , _namespace_SIO('http://semanticscience.org/resource/SIO_000949') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000950') : _namespace_SIO('http://semanticscience.org/resource/SIO_000828') , _namespace_SIO('http://semanticscience.org/resource/SIO_000951') : _namespace_SIO('http://semanticscience.org/resource/SIO_000845') , _namespace_SIO('http://semanticscience.org/resource/SIO_000952') : _namespace_SIO('http://semanticscience.org/resource/SIO_000144') , _namespace_SIO('http://semanticscience.org/resource/SIO_000953') : _namespace_SIO('http://semanticscience.org/resource/SIO_000788') , _namespace_SIO('http://semanticscience.org/resource/SIO_000954') : _namespace_SIO('http://semanticscience.org/resource/SIO_010058') , _namespace_SIO('http://semanticscience.org/resource/SIO_000955') : _namespace_SIO('http://semanticscience.org/resource/SIO_000414') , _namespace_SIO('http://semanticscience.org/resource/SIO_000956') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_000957') : _namespace_SIO('http://semanticscience.org/resource/SIO_000956') , _namespace_SIO('http://semanticscience.org/resource/SIO_000959') : _namespace_SIO('http://semanticscience.org/resource/SIO_000005') , _namespace_SIO('http://semanticscience.org/resource/SIO_000960') : _namespace_SIO('http://semanticscience.org/resource/SIO_000959') , _namespace_SIO('http://semanticscience.org/resource/SIO_000961') : _namespace_SIO('http://semanticscience.org/resource/SIO_000959') , _namespace_SIO('http://semanticscience.org/resource/SIO_000962') : _namespace_SIO('http://semanticscience.org/resource/SIO_000959') , _namespace_SIO('http://semanticscience.org/resource/SIO_000963') : _namespace_SIO('http://semanticscience.org/resource/SIO_000033') , _namespace_SIO('http://semanticscience.org/resource/SIO_000964') : _namespace_SIO('http://semanticscience.org/resource/SIO_001043') , _namespace_SIO('http://semanticscience.org/resource/SIO_000965') : _namespace_SIO('http://semanticscience.org/resource/SIO_000436') , _namespace_SIO('http://semanticscience.org/resource/SIO_000966') : _namespace_SIO('http://semanticscience.org/resource/SIO_000965') , _namespace_SIO('http://semanticscience.org/resource/SIO_000967') : _namespace_SIO('http://semanticscience.org/resource/SIO_000965') , _namespace_SIO('http://semanticscience.org/resource/SIO_000969') : _namespace_SIO('http://semanticscience.org/resource/SIO_000593') , _namespace_SIO('http://semanticscience.org/resource/SIO_000977') : _namespace_SIO('http://semanticscience.org/resource/SIO_000786') , _namespace_SIO('http://semanticscience.org/resource/SIO_000978') : _namespace_SIO('http://semanticscience.org/resource/SIO_000786') , _namespace_SIO('http://semanticscience.org/resource/SIO_000979') : _namespace_SIO('http://semanticscience.org/resource/SIO_000786') , _namespace_SIO('http://semanticscience.org/resource/SIO_000980') : _namespace_SIO('http://semanticscience.org/resource/SIO_000104') , _namespace_SIO('http://semanticscience.org/resource/SIO_000981') : _namespace_SIO('http://semanticscience.org/resource/SIO_000104') , _namespace_SIO('http://semanticscience.org/resource/SIO_000982') : _namespace_SIO('http://semanticscience.org/resource/SIO_000104') , _namespace_SIO('http://semanticscience.org/resource/SIO_000984') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_000985') : _namespace_SIO('http://semanticscience.org/resource/SIO_010035') , _namespace_SIO('http://semanticscience.org/resource/SIO_000986') : _namespace_SIO('http://semanticscience.org/resource/SIO_010035') , _namespace_SIO('http://semanticscience.org/resource/SIO_000988') : _namespace_SIO('http://semanticscience.org/resource/SIO_010335') , _namespace_SIO('http://semanticscience.org/resource/SIO_000989') : _namespace_SIO('http://semanticscience.org/resource/SIO_000030') , _namespace_SIO('http://semanticscience.org/resource/SIO_000992') : _namespace_SIO('http://semanticscience.org/resource/SIO_000959') , _namespace_SIO('http://semanticscience.org/resource/SIO_000994') : _namespace_SIO('http://semanticscience.org/resource/SIO_000747') , _namespace_SIO('http://semanticscience.org/resource/SIO_000995') : _namespace_SIO('http://semanticscience.org/resource/SIO_000033') , _namespace_SIO('http://semanticscience.org/resource/SIO_000996') : _namespace_SIO('http://semanticscience.org/resource/SIO_000963') , _namespace_SIO('http://semanticscience.org/resource/SIO_000997') : _namespace_SIO('http://semanticscience.org/resource/SIO_000033') , _namespace_SIO('http://semanticscience.org/resource/SIO_001002') : _namespace_SIO('http://semanticscience.org/resource/SIO_001024') , _namespace_SIO('http://semanticscience.org/resource/SIO_001003') : _namespace_SIO('http://semanticscience.org/resource/SIO_001004') , _namespace_SIO('http://semanticscience.org/resource/SIO_001008') : _namespace_SIO('http://semanticscience.org/resource/SIO_001011') , _namespace_SIO('http://semanticscience.org/resource/SIO_001009') : _namespace_SIO('http://semanticscience.org/resource/SIO_001008') , _namespace_SIO('http://semanticscience.org/resource/SIO_001010') : _namespace_SIO('http://semanticscience.org/resource/SIO_001008') , _namespace_SIO('http://semanticscience.org/resource/SIO_001011') : _namespace_SIO('http://semanticscience.org/resource/SIO_000026') , _namespace_SIO('http://semanticscience.org/resource/SIO_001012') : _namespace_SIO('http://semanticscience.org/resource/SIO_010058') , _namespace_SIO('http://semanticscience.org/resource/SIO_001013') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_001014') : _namespace_SIO('http://semanticscience.org/resource/SIO_000475') , _namespace_SIO('http://semanticscience.org/resource/SIO_001015') : _namespace_SIO('http://semanticscience.org/resource/SIO_000475') , _namespace_SIO('http://semanticscience.org/resource/SIO_001016') : _namespace_SIO('http://semanticscience.org/resource/SIO_001062') , _namespace_SIO('http://semanticscience.org/resource/SIO_001017') : _namespace_SIO('http://semanticscience.org/resource/SIO_000136') , _namespace_SIO('http://semanticscience.org/resource/SIO_001018') : _namespace_SIO('http://semanticscience.org/resource/SIO_000257') , _namespace_SIO('http://semanticscience.org/resource/SIO_001019') : _namespace_SIO('http://semanticscience.org/resource/SIO_000258') , _namespace_SIO('http://semanticscience.org/resource/SIO_001020') : _namespace_SIO('http://semanticscience.org/resource/SIO_001019') , _namespace_SIO('http://semanticscience.org/resource/SIO_001021') : _namespace_SIO('http://semanticscience.org/resource/SIO_000638') , _namespace_SIO('http://semanticscience.org/resource/SIO_001022') : _namespace_SIO('http://semanticscience.org/resource/SIO_001024') , _namespace_SIO('http://semanticscience.org/resource/SIO_001023') : _namespace_SIO('http://semanticscience.org/resource/SIO_001024') , _namespace_SIO('http://semanticscience.org/resource/SIO_001024') : _namespace_SIO('http://semanticscience.org/resource/SIO_000999') , _namespace_SIO('http://semanticscience.org/resource/SIO_001025') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_001026') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_001027') : _namespace_SIO('http://semanticscience.org/resource/SIO_000088') , _namespace_SIO('http://semanticscience.org/resource/SIO_001028') : _namespace_SIO('http://semanticscience.org/resource/SIO_001026') , _namespace_SIO('http://semanticscience.org/resource/SIO_001030') : _namespace_SIO('http://semanticscience.org/resource/SIO_000654') , _namespace_SIO('http://semanticscience.org/resource/SIO_001031') : _namespace_SIO('http://semanticscience.org/resource/SIO_000654') , _namespace_SIO('http://semanticscience.org/resource/SIO_001032') : _namespace_SIO('http://semanticscience.org/resource/SIO_000654') , _namespace_SIO('http://semanticscience.org/resource/SIO_001034') : _namespace_SIO('http://semanticscience.org/resource/SIO_001033') , _namespace_SIO('http://semanticscience.org/resource/SIO_001035') : _namespace_SIO('http://semanticscience.org/resource/SIO_001034') , _namespace_SIO('http://semanticscience.org/resource/SIO_001036') : _namespace_SIO('http://semanticscience.org/resource/SIO_001033') , _namespace_SIO('http://semanticscience.org/resource/SIO_001037') : _namespace_SIO('http://semanticscience.org/resource/SIO_001033') , _namespace_SIO('http://semanticscience.org/resource/SIO_001038') : _namespace_SIO('http://semanticscience.org/resource/SIO_001034') , _namespace_SIO('http://semanticscience.org/resource/SIO_001039') : _namespace_SIO('http://semanticscience.org/resource/SIO_001033') , _namespace_SIO('http://semanticscience.org/resource/SIO_001040') : _namespace_SIO('http://semanticscience.org/resource/SIO_000078') , _namespace_SIO('http://semanticscience.org/resource/SIO_001042') : _namespace_SIO('http://semanticscience.org/resource/SIO_000091') , _namespace_SIO('http://semanticscience.org/resource/SIO_001043') : _namespace_SIO('http://semanticscience.org/resource/SIO_000091') , _namespace_SIO('http://semanticscience.org/resource/SIO_001044') : _namespace_SIO('http://semanticscience.org/resource/SIO_010378') , _namespace_SIO('http://semanticscience.org/resource/SIO_001045') : _namespace_SIO('http://semanticscience.org/resource/SIO_001011') , _namespace_SIO('http://semanticscience.org/resource/SIO_001046') : _namespace_SIO('http://semanticscience.org/resource/SIO_001045') , _namespace_SIO('http://semanticscience.org/resource/SIO_001047') : _namespace_SIO('http://semanticscience.org/resource/SIO_001045') , _namespace_SIO('http://semanticscience.org/resource/SIO_001048') : _namespace_SIO('http://semanticscience.org/resource/SIO_000994') , _namespace_SIO('http://semanticscience.org/resource/SIO_001053') : _namespace_SIO('http://semanticscience.org/resource/SIO_000683') , _namespace_SIO('http://semanticscience.org/resource/SIO_001058') : _namespace_SIO('http://semanticscience.org/resource/SIO_001072') , _namespace_SIO('http://semanticscience.org/resource/SIO_001059') : _namespace_SIO('http://semanticscience.org/resource/SIO_000969') , _namespace_SIO('http://semanticscience.org/resource/SIO_001060') : _namespace_SIO('http://semanticscience.org/resource/SIO_000963') , _namespace_SIO('http://semanticscience.org/resource/SIO_001061') : _namespace_SIO('http://semanticscience.org/resource/SIO_000620') , _namespace_SIO('http://semanticscience.org/resource/SIO_001062') : _namespace_SIO('http://semanticscience.org/resource/SIO_001061') , _namespace_SIO('http://semanticscience.org/resource/SIO_001063') : _namespace_SIO('http://semanticscience.org/resource/SIO_000620') , _namespace_SIO('http://semanticscience.org/resource/SIO_001064') : _namespace_SIO('http://semanticscience.org/resource/SIO_000620') , _namespace_SIO('http://semanticscience.org/resource/SIO_001065') : _namespace_SIO('http://semanticscience.org/resource/SIO_001004') , _namespace_SIO('http://semanticscience.org/resource/SIO_001067') : _namespace_SIO('http://semanticscience.org/resource/SIO_000976') , _namespace_SIO('http://semanticscience.org/resource/SIO_001068') : _namespace_SIO('http://semanticscience.org/resource/SIO_000403') , _namespace_SIO('http://semanticscience.org/resource/SIO_001069') : _namespace_SIO('http://semanticscience.org/resource/SIO_000403') , _namespace_SIO('http://semanticscience.org/resource/SIO_001070') : _namespace_SIO('http://semanticscience.org/resource/SIO_000367') , _namespace_SIO('http://semanticscience.org/resource/SIO_001071') : _namespace_SIO('http://semanticscience.org/resource/SIO_000943') , _namespace_SIO('http://semanticscience.org/resource/SIO_001072') : _namespace_SIO('http://semanticscience.org/resource/SIO_000953') , _namespace_SIO('http://semanticscience.org/resource/SIO_001074') : _namespace_SIO('http://semanticscience.org/resource/SIO_001018') , _namespace_SIO('http://semanticscience.org/resource/SIO_001075') : _namespace_SIO('http://semanticscience.org/resource/SIO_000732') , _namespace_SIO('http://semanticscience.org/resource/SIO_001076') : _namespace_SIO('http://semanticscience.org/resource/SIO_000994') , _namespace_SIO('http://semanticscience.org/resource/SIO_001077') : _namespace_SIO('http://semanticscience.org/resource/SIO_000258') , _namespace_SIO('http://semanticscience.org/resource/SIO_001078') : _namespace_SIO('http://semanticscience.org/resource/SIO_001018') , _namespace_SIO('http://semanticscience.org/resource/SIO_001079') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_001080') : _namespace_SIO('http://semanticscience.org/resource/SIO_000616') , _namespace_SIO('http://semanticscience.org/resource/SIO_001083') : _namespace_SIO('http://semanticscience.org/resource/SIO_000418') , _namespace_SIO('http://semanticscience.org/resource/SIO_001084') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_001085') : _namespace_SIO('http://semanticscience.org/resource/SIO_010340') , _namespace_SIO('http://semanticscience.org/resource/SIO_001086') : _namespace_SIO('http://semanticscience.org/resource/SIO_010340') , _namespace_SIO('http://semanticscience.org/resource/SIO_001087') : _namespace_SIO('http://semanticscience.org/resource/SIO_000385') , _namespace_SIO('http://semanticscience.org/resource/SIO_001089') : _namespace_SIO('http://semanticscience.org/resource/SIO_000257') , _namespace_SIO('http://semanticscience.org/resource/SIO_001090') : _namespace_SIO('http://semanticscience.org/resource/SIO_000051') , _namespace_SIO('http://semanticscience.org/resource/SIO_001091') : _namespace_SIO('http://semanticscience.org/resource/SIO_000051') , _namespace_SIO('http://semanticscience.org/resource/SIO_001092') : _namespace_SIO('http://semanticscience.org/resource/SIO_000026') , _namespace_SIO('http://semanticscience.org/resource/SIO_001093') : _namespace_SIO('http://semanticscience.org/resource/SIO_001092') , _namespace_SIO('http://semanticscience.org/resource/SIO_001094') : _namespace_SIO('http://semanticscience.org/resource/SIO_000537') , _namespace_SIO('http://semanticscience.org/resource/SIO_001095') : _namespace_SIO('http://semanticscience.org/resource/SIO_000537') , _namespace_SIO('http://semanticscience.org/resource/SIO_001099') : _namespace_SIO('http://semanticscience.org/resource/SIO_000625') , _namespace_SIO('http://semanticscience.org/resource/SIO_001100') : _namespace_SIO('http://semanticscience.org/resource/SIO_000626') , _namespace_SIO('http://semanticscience.org/resource/SIO_001103') : _namespace_SIO('http://semanticscience.org/resource/SIO_010366') , _namespace_SIO('http://semanticscience.org/resource/SIO_001104') : _namespace_SIO('http://semanticscience.org/resource/SIO_010366') , _namespace_SIO('http://semanticscience.org/resource/SIO_001105') : _namespace_SIO('http://semanticscience.org/resource/SIO_000492') , _namespace_SIO('http://semanticscience.org/resource/SIO_001106') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_001107') : _namespace_SIO('http://semanticscience.org/resource/SIO_000091') , _namespace_SIO('http://semanticscience.org/resource/SIO_001108') : _namespace_SIO('http://semanticscience.org/resource/SIO_000052') , _namespace_SIO('http://semanticscience.org/resource/SIO_001109') : _namespace_SIO('http://semanticscience.org/resource/SIO_001108') , _namespace_SIO('http://semanticscience.org/resource/SIO_001110') : _namespace_SIO('http://semanticscience.org/resource/SIO_001108') , _namespace_SIO('http://semanticscience.org/resource/SIO_001111') : _namespace_SIO('http://semanticscience.org/resource/SIO_001108') , _namespace_SIO('http://semanticscience.org/resource/SIO_001112') : _namespace_SIO('http://semanticscience.org/resource/SIO_000052') , _namespace_SIO('http://semanticscience.org/resource/SIO_001115') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_001116') : _namespace_SIO('http://semanticscience.org/resource/SIO_000150') , _namespace_SIO('http://semanticscience.org/resource/SIO_001117') : _namespace_SIO('http://semanticscience.org/resource/SIO_000150') , _namespace_SIO('http://semanticscience.org/resource/SIO_001119') : _namespace_SIO('http://semanticscience.org/resource/SIO_001122') , _namespace_SIO('http://semanticscience.org/resource/SIO_001120') : _namespace_SIO('http://semanticscience.org/resource/SIO_000983') , _namespace_SIO('http://semanticscience.org/resource/SIO_001121') : _namespace_SIO('http://semanticscience.org/resource/SIO_000983') , _namespace_SIO('http://semanticscience.org/resource/SIO_001122') : _namespace_SIO('http://semanticscience.org/resource/SIO_001121') , _namespace_SIO('http://semanticscience.org/resource/SIO_001123') : _namespace_SIO('http://semanticscience.org/resource/SIO_001121') , _namespace_SIO('http://semanticscience.org/resource/SIO_001124') : _namespace_SIO('http://semanticscience.org/resource/SIO_001121') , _namespace_SIO('http://semanticscience.org/resource/SIO_001125') : _namespace_SIO('http://semanticscience.org/resource/SIO_010287') , _namespace_SIO('http://semanticscience.org/resource/SIO_001126') : _namespace_SIO('http://semanticscience.org/resource/SIO_010287') , _namespace_SIO('http://semanticscience.org/resource/SIO_001127') : _namespace_SIO('http://semanticscience.org/resource/SIO_010287') , _namespace_SIO('http://semanticscience.org/resource/SIO_001128') : _namespace_SIO('http://semanticscience.org/resource/SIO_001127') , _namespace_SIO('http://semanticscience.org/resource/SIO_001129') : _namespace_SIO('http://semanticscience.org/resource/SIO_001127') , _namespace_SIO('http://semanticscience.org/resource/SIO_001130') : _namespace_SIO('http://semanticscience.org/resource/SIO_001126') , _namespace_SIO('http://semanticscience.org/resource/SIO_001131') : _namespace_SIO('http://semanticscience.org/resource/SIO_001126') , _namespace_SIO('http://semanticscience.org/resource/SIO_001132') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_001133') : _namespace_SIO('http://semanticscience.org/resource/SIO_001135') , _namespace_SIO('http://semanticscience.org/resource/SIO_001134') : _namespace_SIO('http://semanticscience.org/resource/SIO_001135') , _namespace_SIO('http://semanticscience.org/resource/SIO_001135') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_001136') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_001137') : _namespace_SIO('http://semanticscience.org/resource/SIO_001136') , _namespace_SIO('http://semanticscience.org/resource/SIO_001138') : _namespace_SIO('http://semanticscience.org/resource/SIO_001136') , _namespace_SIO('http://semanticscience.org/resource/SIO_001139') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_001140') : _namespace_SIO('http://semanticscience.org/resource/SIO_001139') , _namespace_SIO('http://semanticscience.org/resource/SIO_001141') : _namespace_SIO('http://semanticscience.org/resource/SIO_001139') , _namespace_SIO('http://semanticscience.org/resource/SIO_001142') : _namespace_SIO('http://semanticscience.org/resource/SIO_001139') , _namespace_SIO('http://semanticscience.org/resource/SIO_001143') : _namespace_SIO('http://semanticscience.org/resource/SIO_001136') , _namespace_SIO('http://semanticscience.org/resource/SIO_001144') : _namespace_SIO('http://semanticscience.org/resource/SIO_001135') , _namespace_SIO('http://semanticscience.org/resource/SIO_001146') : _namespace_SIO('http://semanticscience.org/resource/SIO_001151') , _namespace_SIO('http://semanticscience.org/resource/SIO_001147') : _namespace_SIO('http://semanticscience.org/resource/SIO_001151') , _namespace_SIO('http://semanticscience.org/resource/SIO_001148') : _namespace_SIO('http://semanticscience.org/resource/SIO_001150') , _namespace_SIO('http://semanticscience.org/resource/SIO_001149') : _namespace_SIO('http://semanticscience.org/resource/SIO_001150') , _namespace_SIO('http://semanticscience.org/resource/SIO_001150') : _namespace_SIO('http://semanticscience.org/resource/SIO_001145') , _namespace_SIO('http://semanticscience.org/resource/SIO_001151') : _namespace_SIO('http://semanticscience.org/resource/SIO_001145') , _namespace_SIO('http://semanticscience.org/resource/SIO_001152') : _namespace_SIO('http://semanticscience.org/resource/SIO_001151') , _namespace_SIO('http://semanticscience.org/resource/SIO_001153') : _namespace_SIO('http://semanticscience.org/resource/SIO_001150') , _namespace_SIO('http://semanticscience.org/resource/SIO_001160') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_001161') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_001162') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_001163') : _namespace_SIO('http://semanticscience.org/resource/SIO_001162') , _namespace_SIO('http://semanticscience.org/resource/SIO_001164') : _namespace_SIO('http://semanticscience.org/resource/SIO_001162') , _namespace_SIO('http://semanticscience.org/resource/SIO_001165') : _namespace_SIO('http://semanticscience.org/resource/SIO_000602') , _namespace_SIO('http://semanticscience.org/resource/SIO_001167') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_001168') : _namespace_SIO('http://semanticscience.org/resource/SIO_000612') , _namespace_SIO('http://semanticscience.org/resource/SIO_001170') : _namespace_SIO('http://semanticscience.org/resource/SIO_000612') , _namespace_SIO('http://semanticscience.org/resource/SIO_010000') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_010001') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_010003') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_010004') : _namespace_SIO('http://semanticscience.org/resource/SIO_000004') , _namespace_SIO('http://semanticscience.org/resource/SIO_010005') : _namespace_SIO('http://semanticscience.org/resource/SIO_010020') , _namespace_SIO('http://semanticscience.org/resource/SIO_010011') : _namespace_SIO('http://semanticscience.org/resource/SIO_010072') , _namespace_SIO('http://semanticscience.org/resource/SIO_010014') : _namespace_SIO('http://semanticscience.org/resource/SIO_011119') , _namespace_SIO('http://semanticscience.org/resource/SIO_010019') : _namespace_SIO('http://semanticscience.org/resource/SIO_000472') , _namespace_SIO('http://semanticscience.org/resource/SIO_010022') : _namespace_SIO('http://semanticscience.org/resource/SIO_011119') , _namespace_SIO('http://semanticscience.org/resource/SIO_010023') : _namespace_SIO('http://semanticscience.org/resource/SIO_011119') , _namespace_SIO('http://semanticscience.org/resource/SIO_010024') : _namespace_SIO('http://semanticscience.org/resource/SIO_011119') , _namespace_SIO('http://semanticscience.org/resource/SIO_010026') : _namespace_SIO('http://semanticscience.org/resource/SIO_010028') , _namespace_SIO('http://semanticscience.org/resource/SIO_010028') : _namespace_SIO('http://semanticscience.org/resource/SIO_010019') , _namespace_SIO('http://semanticscience.org/resource/SIO_010029') : _namespace_SIO('http://semanticscience.org/resource/SIO_000475') , _namespace_SIO('http://semanticscience.org/resource/SIO_010030') : _namespace_SIO('http://semanticscience.org/resource/SIO_010072') , _namespace_SIO('http://semanticscience.org/resource/SIO_010031') : _namespace_SIO('http://semanticscience.org/resource/SIO_000732') , _namespace_SIO('http://semanticscience.org/resource/SIO_010032') : _namespace_SIO('http://semanticscience.org/resource/SIO_000729') , _namespace_SIO('http://semanticscience.org/resource/SIO_010033') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010034') : _namespace_SIO('http://semanticscience.org/resource/SIO_010496') , _namespace_SIO('http://semanticscience.org/resource/SIO_010035') : _namespace_SIO('http://semanticscience.org/resource/SIO_010335') , _namespace_SIO('http://semanticscience.org/resource/SIO_010038') : _namespace_SIO('http://semanticscience.org/resource/SIO_011125') , _namespace_SIO('http://semanticscience.org/resource/SIO_010039') : _namespace_SIO('http://semanticscience.org/resource/SIO_010411') , _namespace_SIO('http://semanticscience.org/resource/SIO_010040') : _namespace_SIO('http://semanticscience.org/resource/SIO_010049') , _namespace_SIO('http://semanticscience.org/resource/SIO_010041') : _namespace_SIO('http://semanticscience.org/resource/SIO_010049') , _namespace_SIO('http://semanticscience.org/resource/SIO_010042') : _namespace_SIO('http://semanticscience.org/resource/SIO_010335') , _namespace_SIO('http://semanticscience.org/resource/SIO_010044') : _namespace_SIO('http://semanticscience.org/resource/SIO_010004') , _namespace_SIO('http://semanticscience.org/resource/SIO_010045') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010046') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_010047') : _namespace_SIO('http://semanticscience.org/resource/SIO_010020') , _namespace_SIO('http://semanticscience.org/resource/SIO_010048') : _namespace_SIO('http://semanticscience.org/resource/SIO_010029') , _namespace_SIO('http://semanticscience.org/resource/SIO_010049') : _namespace_SIO('http://semanticscience.org/resource/SIO_000019') , _namespace_SIO('http://semanticscience.org/resource/SIO_010050') : _namespace_SIO('http://semanticscience.org/resource/SIO_010040') , _namespace_SIO('http://semanticscience.org/resource/SIO_010051') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_010052') : _namespace_SIO('http://semanticscience.org/resource/SIO_010029') , _namespace_SIO('http://semanticscience.org/resource/SIO_010053') : _namespace_SIO('http://semanticscience.org/resource/SIO_010028') , _namespace_SIO('http://semanticscience.org/resource/SIO_010054') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_010056') : _namespace_SIO('http://semanticscience.org/resource/SIO_000475') , _namespace_SIO('http://semanticscience.org/resource/SIO_010057') : _namespace_SIO('http://semanticscience.org/resource/SIO_000475') , _namespace_SIO('http://semanticscience.org/resource/SIO_010058') : _namespace_SIO('http://semanticscience.org/resource/SIO_010057') , _namespace_SIO('http://semanticscience.org/resource/SIO_010059') : _namespace_SIO('http://semanticscience.org/resource/SIO_010057') , _namespace_SIO('http://semanticscience.org/resource/SIO_010060') : _namespace_SIO('http://semanticscience.org/resource/SIO_010053') , _namespace_SIO('http://semanticscience.org/resource/SIO_010061') : _namespace_SIO('http://semanticscience.org/resource/SIO_010028') , _namespace_SIO('http://semanticscience.org/resource/SIO_010064') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010065') : _namespace_SIO('http://semanticscience.org/resource/SIO_000472') , _namespace_SIO('http://semanticscience.org/resource/SIO_010066') : _namespace_SIO('http://semanticscience.org/resource/SIO_010065') , _namespace_SIO('http://semanticscience.org/resource/SIO_010067') : _namespace_SIO('http://semanticscience.org/resource/SIO_010066') , _namespace_SIO('http://semanticscience.org/resource/SIO_010068') : _namespace_SIO('http://semanticscience.org/resource/SIO_010066') , _namespace_SIO('http://semanticscience.org/resource/SIO_010070') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010074') : _namespace_SIO('http://semanticscience.org/resource/SIO_010471') , _namespace_SIO('http://semanticscience.org/resource/SIO_010075') : _namespace_SIO('http://semanticscience.org/resource/SIO_010335') , _namespace_SIO('http://semanticscience.org/resource/SIO_010076') : _namespace_SIO('http://semanticscience.org/resource/SIO_010038') , _namespace_SIO('http://semanticscience.org/resource/SIO_010077') : _namespace_SIO('http://semanticscience.org/resource/SIO_010338') , _namespace_SIO('http://semanticscience.org/resource/SIO_010085') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010086') : _namespace_SIO('http://semanticscience.org/resource/SIO_010085') , _namespace_SIO('http://semanticscience.org/resource/SIO_010087') : _namespace_SIO('http://semanticscience.org/resource/SIO_010338') , _namespace_SIO('http://semanticscience.org/resource/SIO_010088') : _namespace_SIO('http://semanticscience.org/resource/SIO_000542') , _namespace_SIO('http://semanticscience.org/resource/SIO_010089') : _namespace_SIO('http://semanticscience.org/resource/SIO_010088') , _namespace_SIO('http://semanticscience.org/resource/SIO_010090') : _namespace_SIO('http://semanticscience.org/resource/SIO_010088') , _namespace_SIO('http://semanticscience.org/resource/SIO_010091') : _namespace_SIO('http://semanticscience.org/resource/SIO_010088') , _namespace_SIO('http://semanticscience.org/resource/SIO_010094') : _namespace_SIO('http://semanticscience.org/resource/SIO_000542') , _namespace_SIO('http://semanticscience.org/resource/SIO_010099') : _namespace_SIO('http://semanticscience.org/resource/SIO_010450') , _namespace_SIO('http://semanticscience.org/resource/SIO_010278') : _namespace_SIO('http://semanticscience.org/resource/SIO_000476') , _namespace_SIO('http://semanticscience.org/resource/SIO_010284') : _namespace_SIO('http://semanticscience.org/resource/SIO_000576') , _namespace_SIO('http://semanticscience.org/resource/SIO_010287') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_010295') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_010296') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_010298') : _namespace_SIO('http://semanticscience.org/resource/SIO_010019') , _namespace_SIO('http://semanticscience.org/resource/SIO_010307') : _namespace_SIO('http://semanticscience.org/resource/SIO_010345') , _namespace_SIO('http://semanticscience.org/resource/SIO_010308') : _namespace_SIO('http://semanticscience.org/resource/SIO_010013') , _namespace_SIO('http://semanticscience.org/resource/SIO_010309') : _namespace_SIO('http://semanticscience.org/resource/SIO_010308') , _namespace_SIO('http://semanticscience.org/resource/SIO_010310') : _namespace_SIO('http://semanticscience.org/resource/SIO_010308') , _namespace_SIO('http://semanticscience.org/resource/SIO_010334') : _namespace_SIO('http://semanticscience.org/resource/SIO_010071') , _namespace_SIO('http://semanticscience.org/resource/SIO_010336') : _namespace_SIO('http://semanticscience.org/resource/SIO_010075') , _namespace_SIO('http://semanticscience.org/resource/SIO_010337') : _namespace_SIO('http://semanticscience.org/resource/SIO_010075') , _namespace_SIO('http://semanticscience.org/resource/SIO_010338') : _namespace_SIO('http://semanticscience.org/resource/SIO_011125') , _namespace_SIO('http://semanticscience.org/resource/SIO_010340') : _namespace_SIO('http://semanticscience.org/resource/SIO_000376') , _namespace_SIO('http://semanticscience.org/resource/SIO_010344') : _namespace_SIO('http://semanticscience.org/resource/SIO_011125') , _namespace_SIO('http://semanticscience.org/resource/SIO_010347') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_010349') : _namespace_SIO('http://semanticscience.org/resource/SIO_000698') , _namespace_SIO('http://semanticscience.org/resource/SIO_010351') : _namespace_SIO('http://semanticscience.org/resource/SIO_000376') , _namespace_SIO('http://semanticscience.org/resource/SIO_010353') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_010354') : _namespace_SIO('http://semanticscience.org/resource/SIO_010347') , _namespace_SIO('http://semanticscience.org/resource/SIO_010355') : _namespace_SIO('http://semanticscience.org/resource/SIO_010347') , _namespace_SIO('http://semanticscience.org/resource/SIO_010358') : _namespace_SIO('http://semanticscience.org/resource/SIO_010360') , _namespace_SIO('http://semanticscience.org/resource/SIO_010359') : _namespace_SIO('http://semanticscience.org/resource/SIO_010360') , _namespace_SIO('http://semanticscience.org/resource/SIO_010360') : _namespace_SIO('http://semanticscience.org/resource/SIO_000376') , _namespace_SIO('http://semanticscience.org/resource/SIO_010362') : _namespace_SIO('http://semanticscience.org/resource/SIO_010423') , _namespace_SIO('http://semanticscience.org/resource/SIO_010364') : _namespace_SIO('http://semanticscience.org/resource/SIO_000692') , _namespace_SIO('http://semanticscience.org/resource/SIO_010365') : _namespace_SIO('http://semanticscience.org/resource/SIO_010364') , _namespace_SIO('http://semanticscience.org/resource/SIO_010366') : _namespace_SIO('http://semanticscience.org/resource/SIO_010364') , _namespace_SIO('http://semanticscience.org/resource/SIO_010367') : _namespace_SIO('http://semanticscience.org/resource/SIO_010364') , _namespace_SIO('http://semanticscience.org/resource/SIO_010368') : _namespace_SIO('http://semanticscience.org/resource/SIO_000692') , _namespace_SIO('http://semanticscience.org/resource/SIO_010369') : _namespace_SIO('http://semanticscience.org/resource/SIO_010364') , _namespace_SIO('http://semanticscience.org/resource/SIO_010370') : _namespace_SIO('http://semanticscience.org/resource/SIO_010369') , _namespace_SIO('http://semanticscience.org/resource/SIO_010371') : _namespace_SIO('http://semanticscience.org/resource/SIO_010369') , _namespace_SIO('http://semanticscience.org/resource/SIO_010372') : _namespace_SIO('http://semanticscience.org/resource/SIO_010374') , _namespace_SIO('http://semanticscience.org/resource/SIO_010373') : _namespace_SIO('http://semanticscience.org/resource/SIO_010374') , _namespace_SIO('http://semanticscience.org/resource/SIO_010374') : _namespace_SIO('http://semanticscience.org/resource/SIO_010364') , _namespace_SIO('http://semanticscience.org/resource/SIO_010377') : _namespace_SIO('http://semanticscience.org/resource/SIO_010000') , _namespace_SIO('http://semanticscience.org/resource/SIO_010378') : _namespace_SIO('http://semanticscience.org/resource/SIO_010000') , _namespace_SIO('http://semanticscience.org/resource/SIO_010379') : _namespace_SIO('http://semanticscience.org/resource/SIO_010378') , _namespace_SIO('http://semanticscience.org/resource/SIO_010383') : _namespace_SIO('http://semanticscience.org/resource/SIO_000619') , _namespace_SIO('http://semanticscience.org/resource/SIO_010411') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_010412') : _namespace_SIO('http://semanticscience.org/resource/SIO_001050') , _namespace_SIO('http://semanticscience.org/resource/SIO_010414') : _namespace_SIO('http://semanticscience.org/resource/SIO_010000') , _namespace_SIO('http://semanticscience.org/resource/SIO_010415') : _namespace_SIO('http://semanticscience.org/resource/SIO_010000') , _namespace_SIO('http://semanticscience.org/resource/SIO_010416') : _namespace_SIO('http://semanticscience.org/resource/SIO_010427') , _namespace_SIO('http://semanticscience.org/resource/SIO_010417') : _namespace_SIO('http://semanticscience.org/resource/SIO_010427') , _namespace_SIO('http://semanticscience.org/resource/SIO_010418') : _namespace_SIO('http://semanticscience.org/resource/SIO_010427') , _namespace_SIO('http://semanticscience.org/resource/SIO_010419') : _namespace_SIO('http://semanticscience.org/resource/SIO_011125') , _namespace_SIO('http://semanticscience.org/resource/SIO_010420') : _namespace_SIO('http://semanticscience.org/resource/SIO_010437') , _namespace_SIO('http://semanticscience.org/resource/SIO_010424') : _namespace_SIO('http://semanticscience.org/resource/SIO_010426') , _namespace_SIO('http://semanticscience.org/resource/SIO_010425') : _namespace_SIO('http://semanticscience.org/resource/SIO_010426') , _namespace_SIO('http://semanticscience.org/resource/SIO_010426') : _namespace_SIO('http://semanticscience.org/resource/SIO_011126') , _namespace_SIO('http://semanticscience.org/resource/SIO_010427') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_010428') : _namespace_SIO('http://semanticscience.org/resource/SIO_000881') , _namespace_SIO('http://semanticscience.org/resource/SIO_010429') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_010430') : _namespace_SIO('http://semanticscience.org/resource/SIO_010428') , _namespace_SIO('http://semanticscience.org/resource/SIO_010431') : _namespace_SIO('http://semanticscience.org/resource/SIO_010428') , _namespace_SIO('http://semanticscience.org/resource/SIO_010433') : _namespace_SIO('http://semanticscience.org/resource/SIO_010033') , _namespace_SIO('http://semanticscience.org/resource/SIO_010434') : _namespace_SIO('http://semanticscience.org/resource/SIO_010436') , _namespace_SIO('http://semanticscience.org/resource/SIO_010435') : _namespace_SIO('http://semanticscience.org/resource/SIO_010436') , _namespace_SIO('http://semanticscience.org/resource/SIO_010437') : _namespace_SIO('http://semanticscience.org/resource/SIO_011125') , _namespace_SIO('http://semanticscience.org/resource/SIO_010438') : _namespace_SIO('http://semanticscience.org/resource/SIO_010437') , _namespace_SIO('http://semanticscience.org/resource/SIO_010439') : _namespace_SIO('http://semanticscience.org/resource/SIO_010437') , _namespace_SIO('http://semanticscience.org/resource/SIO_010440') : _namespace_SIO('http://semanticscience.org/resource/SIO_010439') , _namespace_SIO('http://semanticscience.org/resource/SIO_010442') : _namespace_SIO('http://semanticscience.org/resource/SIO_001011') , _namespace_SIO('http://semanticscience.org/resource/SIO_010445') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010446') : _namespace_SIO('http://semanticscience.org/resource/SIO_010085') , _namespace_SIO('http://semanticscience.org/resource/SIO_010447') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010448') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010451') : _namespace_SIO('http://semanticscience.org/resource/SIO_010095') , _namespace_SIO('http://semanticscience.org/resource/SIO_010452') : _namespace_SIO('http://semanticscience.org/resource/SIO_010049') , _namespace_SIO('http://semanticscience.org/resource/SIO_010453') : _namespace_SIO('http://semanticscience.org/resource/SIO_010427') , _namespace_SIO('http://semanticscience.org/resource/SIO_010454') : _namespace_SIO('http://semanticscience.org/resource/SIO_010427') , _namespace_SIO('http://semanticscience.org/resource/SIO_010456') : _namespace_SIO('http://semanticscience.org/resource/SIO_010410') , _namespace_SIO('http://semanticscience.org/resource/SIO_010461') : _namespace_SIO('http://semanticscience.org/resource/SIO_000810') , _namespace_SIO('http://semanticscience.org/resource/SIO_010462') : _namespace_SIO('http://semanticscience.org/resource/SIO_011126') , _namespace_SIO('http://semanticscience.org/resource/SIO_010463') : _namespace_SIO('http://semanticscience.org/resource/SIO_011126') , _namespace_SIO('http://semanticscience.org/resource/SIO_010464') : _namespace_SIO('http://semanticscience.org/resource/SIO_000810') , _namespace_SIO('http://semanticscience.org/resource/SIO_010465') : _namespace_SIO('http://semanticscience.org/resource/SIO_010497') , _namespace_SIO('http://semanticscience.org/resource/SIO_010468') : _namespace_SIO('http://semanticscience.org/resource/SIO_010471') , _namespace_SIO('http://semanticscience.org/resource/SIO_010469') : _namespace_SIO('http://semanticscience.org/resource/SIO_010471') , _namespace_SIO('http://semanticscience.org/resource/SIO_010471') : _namespace_SIO('http://semanticscience.org/resource/SIO_010071') , _namespace_SIO('http://semanticscience.org/resource/SIO_010496') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010498') : _namespace_SIO('http://semanticscience.org/resource/SIO_011118') , _namespace_SIO('http://semanticscience.org/resource/SIO_010499') : _namespace_SIO('http://semanticscience.org/resource/SIO_011118') , _namespace_SIO('http://semanticscience.org/resource/SIO_010500') : _namespace_SIO('http://semanticscience.org/resource/SIO_011118') , _namespace_SIO('http://semanticscience.org/resource/SIO_010501') : _namespace_SIO('http://semanticscience.org/resource/SIO_011118') , _namespace_SIO('http://semanticscience.org/resource/SIO_010502') : _namespace_SIO('http://semanticscience.org/resource/SIO_010498') , _namespace_SIO('http://semanticscience.org/resource/SIO_010503') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010504') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010505') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010507') : _namespace_SIO('http://semanticscience.org/resource/SIO_010345') , _namespace_SIO('http://semanticscience.org/resource/SIO_010510') : _namespace_SIO('http://semanticscience.org/resource/SIO_010345') , _namespace_SIO('http://semanticscience.org/resource/SIO_010511') : _namespace_SIO('http://semanticscience.org/resource/SIO_010510') , _namespace_SIO('http://semanticscience.org/resource/SIO_010512') : _namespace_SIO('http://semanticscience.org/resource/SIO_010510') , _namespace_SIO('http://semanticscience.org/resource/SIO_010513') : _namespace_SIO('http://semanticscience.org/resource/SIO_010512') , _namespace_SIO('http://semanticscience.org/resource/SIO_010514') : _namespace_SIO('http://semanticscience.org/resource/SIO_010512') , _namespace_SIO('http://semanticscience.org/resource/SIO_010515') : _namespace_SIO('http://semanticscience.org/resource/SIO_010510') , _namespace_SIO('http://semanticscience.org/resource/SIO_010516') : _namespace_SIO('http://semanticscience.org/resource/SIO_010345') , _namespace_SIO('http://semanticscience.org/resource/SIO_010517') : _namespace_SIO('http://semanticscience.org/resource/SIO_010345') , _namespace_SIO('http://semanticscience.org/resource/SIO_010518') : _namespace_SIO('http://semanticscience.org/resource/SIO_010516') , _namespace_SIO('http://semanticscience.org/resource/SIO_010519') : _namespace_SIO('http://semanticscience.org/resource/SIO_010518') , _namespace_SIO('http://semanticscience.org/resource/SIO_010520') : _namespace_SIO('http://semanticscience.org/resource/SIO_010518') , _namespace_SIO('http://semanticscience.org/resource/SIO_010521') : _namespace_SIO('http://semanticscience.org/resource/SIO_010520') , _namespace_SIO('http://semanticscience.org/resource/SIO_010522') : _namespace_SIO('http://semanticscience.org/resource/SIO_010519') , _namespace_SIO('http://semanticscience.org/resource/SIO_010523') : _namespace_SIO('http://semanticscience.org/resource/SIO_010519') , _namespace_SIO('http://semanticscience.org/resource/SIO_010525') : _namespace_SIO('http://semanticscience.org/resource/SIO_010526') , _namespace_SIO('http://semanticscience.org/resource/SIO_010527') : _namespace_SIO('http://semanticscience.org/resource/SIO_010526') , _namespace_SIO('http://semanticscience.org/resource/SIO_010528') : _namespace_SIO('http://semanticscience.org/resource/SIO_010526') , _namespace_SIO('http://semanticscience.org/resource/SIO_010530') : _namespace_SIO('http://semanticscience.org/resource/SIO_010023') , _namespace_SIO('http://semanticscience.org/resource/SIO_010531') : _namespace_SIO('http://semanticscience.org/resource/SIO_010065') , _namespace_SIO('http://semanticscience.org/resource/SIO_010532') : _namespace_SIO('http://semanticscience.org/resource/SIO_010525') , _namespace_SIO('http://semanticscience.org/resource/SIO_010533') : _namespace_SIO('http://semanticscience.org/resource/SIO_010525') , _namespace_SIO('http://semanticscience.org/resource/SIO_010673') : _namespace_SIO('http://semanticscience.org/resource/SIO_010298') , _namespace_SIO('http://semanticscience.org/resource/SIO_010775') : _namespace_SIO('http://semanticscience.org/resource/SIO_010455') , _namespace_SIO('http://semanticscience.org/resource/SIO_010776') : _namespace_SIO('http://semanticscience.org/resource/SIO_010775') , _namespace_SIO('http://semanticscience.org/resource/SIO_010777') : _namespace_SIO('http://semanticscience.org/resource/SIO_010775') , _namespace_SIO('http://semanticscience.org/resource/SIO_010778') : _namespace_SIO('http://semanticscience.org/resource/SIO_010775') , _namespace_SIO('http://semanticscience.org/resource/SIO_010779') : _namespace_SIO('http://semanticscience.org/resource/SIO_010455') , _namespace_SIO('http://semanticscience.org/resource/SIO_010781') : _namespace_SIO('http://semanticscience.org/resource/SIO_010780') , _namespace_SIO('http://semanticscience.org/resource/SIO_010782') : _namespace_SIO('http://semanticscience.org/resource/SIO_010780') , _namespace_SIO('http://semanticscience.org/resource/SIO_010783') : _namespace_SIO('http://semanticscience.org/resource/SIO_010780') , _namespace_SIO('http://semanticscience.org/resource/SIO_010785') : _namespace_SIO('http://semanticscience.org/resource/SIO_010037') , _namespace_SIO('http://semanticscience.org/resource/SIO_010787') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010788') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010789') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010790') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010791') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010792') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010793') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010794') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010795') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_011000') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011001') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011002') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011003') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011004') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011005') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011006') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011007') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011008') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011009') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011010') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011011') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011012') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011013') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011014') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011015') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011016') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011017') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011018') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011019') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011020') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011021') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011022') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011023') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011024') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011025') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011026') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011027') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011028') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011029') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011030') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011031') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011032') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011033') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011034') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011035') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011036') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011037') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011038') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011039') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011040') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011041') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011042') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011043') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011044') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011045') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011046') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011047') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011048') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011049') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011050') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011051') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011052') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011053') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011054') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011055') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011056') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011057') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011058') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011059') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011060') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011061') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011062') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011063') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011064') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011065') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011066') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011067') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011068') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011069') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011070') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011071') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011072') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011073') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011074') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011075') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011076') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011077') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011078') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011079') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011080') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011081') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011082') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011083') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011084') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011085') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011086') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011087') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011088') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011089') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011090') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011091') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011092') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011093') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011094') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011095') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011096') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011097') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011098') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011099') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011100') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011101') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011102') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011103') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011104') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011105') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011106') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011107') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011108') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011109') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011110') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011111') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011112') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011113') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011114') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011115') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011116') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011117') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011123') : _namespace_SIO('http://semanticscience.org/resource/SIO_000472') , _namespace_SIO('http://semanticscience.org/resource/SIO_011126') : _namespace_SIO('http://semanticscience.org/resource/SIO_010004') , _namespace_SIO('http://semanticscience.org/resource/SIO_011130') : _namespace_SIO('http://semanticscience.org/resource/SIO_011120') }
+__namespace_SIO = Namespace('http://semanticscience.org/resource/SIO_000001)')
+
+def _namespace_SIO(accession):
+    return __namespace_SIO[accession]
+
+    __parent_properties = { _namespace_SIO('http://semanticscience.org/resource/SIO_000008') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000011') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000020') : _namespace_SIO('http://semanticscience.org/resource/SIO_000210') , _namespace_SIO('http://semanticscience.org/resource/SIO_000028') : _namespace_SIO('http://semanticscience.org/resource/SIO_000145') , _namespace_SIO('http://semanticscience.org/resource/SIO_000029') : _namespace_SIO('http://semanticscience.org/resource/SIO_000096') , _namespace_SIO('http://semanticscience.org/resource/SIO_000053') : _namespace_SIO('http://semanticscience.org/resource/SIO_000028') , _namespace_SIO('http://semanticscience.org/resource/SIO_000054') : _namespace_SIO('http://semanticscience.org/resource/SIO_000053') , _namespace_SIO('http://semanticscience.org/resource/SIO_000059') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000060') : _namespace_SIO('http://semanticscience.org/resource/SIO_000205') , _namespace_SIO('http://semanticscience.org/resource/SIO_000061') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000062') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000063') : _namespace_SIO('http://semanticscience.org/resource/SIO_000062') , _namespace_SIO('http://semanticscience.org/resource/SIO_000064') : _namespace_SIO('http://semanticscience.org/resource/SIO_000219') , _namespace_SIO('http://semanticscience.org/resource/SIO_000066') : _namespace_SIO('http://semanticscience.org/resource/SIO_000253') , _namespace_SIO('http://semanticscience.org/resource/SIO_000068') : _namespace_SIO('http://semanticscience.org/resource/SIO_000061') , _namespace_SIO('http://semanticscience.org/resource/SIO_000093') : _namespace_SIO('http://semanticscience.org/resource/SIO_000068') , _namespace_SIO('http://semanticscience.org/resource/SIO_000095') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000096') : _namespace_SIO('http://semanticscience.org/resource/SIO_000093') , _namespace_SIO('http://semanticscience.org/resource/SIO_000128') : _namespace_SIO('http://semanticscience.org/resource/SIO_000061') , _namespace_SIO('http://semanticscience.org/resource/SIO_000132') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000139') : _namespace_SIO('http://semanticscience.org/resource/SIO_000132') , _namespace_SIO('http://semanticscience.org/resource/SIO_000145') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000202') : _namespace_SIO('http://semanticscience.org/resource/SIO_000145') , _namespace_SIO('http://semanticscience.org/resource/SIO_000203') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000204') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000205') : _namespace_SIO('http://semanticscience.org/resource/SIO_000212') , _namespace_SIO('http://semanticscience.org/resource/SIO_000206') : _namespace_SIO('http://semanticscience.org/resource/SIO_000772') , _namespace_SIO('http://semanticscience.org/resource/SIO_000207') : _namespace_SIO('http://semanticscience.org/resource/SIO_000772') , _namespace_SIO('http://semanticscience.org/resource/SIO_000208') : _namespace_SIO('http://semanticscience.org/resource/SIO_000773') , _namespace_SIO('http://semanticscience.org/resource/SIO_000209') : _namespace_SIO('http://semanticscience.org/resource/SIO_000773') , _namespace_SIO('http://semanticscience.org/resource/SIO_000210') : _namespace_SIO('http://semanticscience.org/resource/SIO_000628') , _namespace_SIO('http://semanticscience.org/resource/SIO_000211') : _namespace_SIO('http://semanticscience.org/resource/SIO_000203') , _namespace_SIO('http://semanticscience.org/resource/SIO_000212') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000213') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000214') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000215') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000216') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000217') : _namespace_SIO('http://semanticscience.org/resource/SIO_000223') , _namespace_SIO('http://semanticscience.org/resource/SIO_000218') : _namespace_SIO('http://semanticscience.org/resource/SIO_000224') , _namespace_SIO('http://semanticscience.org/resource/SIO_000219') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000221') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000222') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000223') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000224') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000225') : _namespace_SIO('http://semanticscience.org/resource/SIO_000235') , _namespace_SIO('http://semanticscience.org/resource/SIO_000226') : _namespace_SIO('http://semanticscience.org/resource/SIO_000236') , _namespace_SIO('http://semanticscience.org/resource/SIO_000227') : _namespace_SIO('http://semanticscience.org/resource/SIO_000643') , _namespace_SIO('http://semanticscience.org/resource/SIO_000228') : _namespace_SIO('http://semanticscience.org/resource/SIO_000644') , _namespace_SIO('http://semanticscience.org/resource/SIO_000229') : _namespace_SIO('http://semanticscience.org/resource/SIO_000132') , _namespace_SIO('http://semanticscience.org/resource/SIO_000230') : _namespace_SIO('http://semanticscience.org/resource/SIO_000132') , _namespace_SIO('http://semanticscience.org/resource/SIO_000231') : _namespace_SIO('http://semanticscience.org/resource/SIO_000062') , _namespace_SIO('http://semanticscience.org/resource/SIO_000232') : _namespace_SIO('http://semanticscience.org/resource/SIO_000062') , _namespace_SIO('http://semanticscience.org/resource/SIO_000233') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000234') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000235') : _namespace_SIO('http://semanticscience.org/resource/SIO_000586') , _namespace_SIO('http://semanticscience.org/resource/SIO_000236') : _namespace_SIO('http://semanticscience.org/resource/SIO_000646') , _namespace_SIO('http://semanticscience.org/resource/SIO_000240') : _namespace_SIO('http://semanticscience.org/resource/SIO_000203') , _namespace_SIO('http://semanticscience.org/resource/SIO_000241') : _namespace_SIO('http://semanticscience.org/resource/SIO_000652') , _namespace_SIO('http://semanticscience.org/resource/SIO_000242') : _namespace_SIO('http://semanticscience.org/resource/SIO_000652') , _namespace_SIO('http://semanticscience.org/resource/SIO_000243') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000244') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_000245') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_000246') : _namespace_SIO('http://semanticscience.org/resource/SIO_000245') , _namespace_SIO('http://semanticscience.org/resource/SIO_000247') : _namespace_SIO('http://semanticscience.org/resource/SIO_000244') , _namespace_SIO('http://semanticscience.org/resource/SIO_000248') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_000249') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_000250') : _namespace_SIO('http://semanticscience.org/resource/SIO_000248') , _namespace_SIO('http://semanticscience.org/resource/SIO_000251') : _namespace_SIO('http://semanticscience.org/resource/SIO_000249') , _namespace_SIO('http://semanticscience.org/resource/SIO_000252') : _namespace_SIO('http://semanticscience.org/resource/SIO_000212') , _namespace_SIO('http://semanticscience.org/resource/SIO_000253') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000254') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000255') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000272') : _namespace_SIO('http://semanticscience.org/resource/SIO_000736') , _namespace_SIO('http://semanticscience.org/resource/SIO_000273') : _namespace_SIO('http://semanticscience.org/resource/SIO_000053') , _namespace_SIO('http://semanticscience.org/resource/SIO_000274') : _namespace_SIO('http://semanticscience.org/resource/SIO_000497') , _namespace_SIO('http://semanticscience.org/resource/SIO_000277') : _namespace_SIO('http://semanticscience.org/resource/SIO_000631') , _namespace_SIO('http://semanticscience.org/resource/SIO_000278') : _namespace_SIO('http://semanticscience.org/resource/SIO_000252') , _namespace_SIO('http://semanticscience.org/resource/SIO_000283') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_000286') : _namespace_SIO('http://semanticscience.org/resource/SIO_000497') , _namespace_SIO('http://semanticscience.org/resource/SIO_000288') : _namespace_SIO('http://semanticscience.org/resource/SIO_000203') , _namespace_SIO('http://semanticscience.org/resource/SIO_000291') : _namespace_SIO('http://semanticscience.org/resource/SIO_000230') , _namespace_SIO('http://semanticscience.org/resource/SIO_000292') : _namespace_SIO('http://semanticscience.org/resource/SIO_000231') , _namespace_SIO('http://semanticscience.org/resource/SIO_000293') : _namespace_SIO('http://semanticscience.org/resource/SIO_000203') , _namespace_SIO('http://semanticscience.org/resource/SIO_000294') : _namespace_SIO('http://semanticscience.org/resource/SIO_000243') , _namespace_SIO('http://semanticscience.org/resource/SIO_000310') : _namespace_SIO('http://semanticscience.org/resource/SIO_000093') , _namespace_SIO('http://semanticscience.org/resource/SIO_000311') : _namespace_SIO('http://semanticscience.org/resource/SIO_000232') , _namespace_SIO('http://semanticscience.org/resource/SIO_000312') : _namespace_SIO('http://semanticscience.org/resource/SIO_000229') , _namespace_SIO('http://semanticscience.org/resource/SIO_000313') : _namespace_SIO('http://semanticscience.org/resource/SIO_000310') , _namespace_SIO('http://semanticscience.org/resource/SIO_000322') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000323') : _namespace_SIO('http://semanticscience.org/resource/SIO_000128') , _namespace_SIO('http://semanticscience.org/resource/SIO_000324') : _namespace_SIO('http://semanticscience.org/resource/SIO_000202') , _namespace_SIO('http://semanticscience.org/resource/SIO_000325') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000332') : _namespace_SIO('http://semanticscience.org/resource/SIO_000563') , _namespace_SIO('http://semanticscience.org/resource/SIO_000334') : _namespace_SIO('http://semanticscience.org/resource/SIO_000652') , _namespace_SIO('http://semanticscience.org/resource/SIO_000335') : _namespace_SIO('http://semanticscience.org/resource/SIO_000652') , _namespace_SIO('http://semanticscience.org/resource/SIO_000338') : _namespace_SIO('http://semanticscience.org/resource/SIO_000563') , _namespace_SIO('http://semanticscience.org/resource/SIO_000339') : _namespace_SIO('http://semanticscience.org/resource/SIO_000557') , _namespace_SIO('http://semanticscience.org/resource/SIO_000341') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000352') : _namespace_SIO('http://semanticscience.org/resource/SIO_000243') , _namespace_SIO('http://semanticscience.org/resource/SIO_000355') : _namespace_SIO('http://semanticscience.org/resource/SIO_000132') , _namespace_SIO('http://semanticscience.org/resource/SIO_000356') : _namespace_SIO('http://semanticscience.org/resource/SIO_000062') , _namespace_SIO('http://semanticscience.org/resource/SIO_000362') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000363') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000364') : _namespace_SIO('http://semanticscience.org/resource/SIO_000253') , _namespace_SIO('http://semanticscience.org/resource/SIO_000365') : _namespace_SIO('http://semanticscience.org/resource/SIO_000219') , _namespace_SIO('http://semanticscience.org/resource/SIO_000369') : _namespace_SIO('http://semanticscience.org/resource/SIO_000273') , _namespace_SIO('http://semanticscience.org/resource/SIO_000420') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000421') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000422') : _namespace_SIO('http://semanticscience.org/resource/SIO_000283') , _namespace_SIO('http://semanticscience.org/resource/SIO_000424') : _namespace_SIO('http://semanticscience.org/resource/SIO_000283') , _namespace_SIO('http://semanticscience.org/resource/SIO_000425') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000426') : _namespace_SIO('http://semanticscience.org/resource/SIO_000425') , _namespace_SIO('http://semanticscience.org/resource/SIO_000427') : _namespace_SIO('http://semanticscience.org/resource/SIO_000424') , _namespace_SIO('http://semanticscience.org/resource/SIO_000477') : _namespace_SIO('http://semanticscience.org/resource/SIO_000422') , _namespace_SIO('http://semanticscience.org/resource/SIO_000482') : _namespace_SIO('http://semanticscience.org/resource/SIO_000283') , _namespace_SIO('http://semanticscience.org/resource/SIO_000484') : _namespace_SIO('http://semanticscience.org/resource/SIO_000482') , _namespace_SIO('http://semanticscience.org/resource/SIO_000490') : _namespace_SIO('http://semanticscience.org/resource/SIO_000482') , _namespace_SIO('http://semanticscience.org/resource/SIO_000491') : _namespace_SIO('http://semanticscience.org/resource/SIO_000482') , _namespace_SIO('http://semanticscience.org/resource/SIO_000495') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_000496') : _namespace_SIO('http://semanticscience.org/resource/SIO_000495') , _namespace_SIO('http://semanticscience.org/resource/SIO_000497') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_000552') : _namespace_SIO('http://semanticscience.org/resource/SIO_000230') , _namespace_SIO('http://semanticscience.org/resource/SIO_000553') : _namespace_SIO('http://semanticscience.org/resource/SIO_000231') , _namespace_SIO('http://semanticscience.org/resource/SIO_000557') : _namespace_SIO('http://semanticscience.org/resource/SIO_000212') , _namespace_SIO('http://semanticscience.org/resource/SIO_000558') : _namespace_SIO('http://semanticscience.org/resource/SIO_010302') , _namespace_SIO('http://semanticscience.org/resource/SIO_000563') : _namespace_SIO('http://semanticscience.org/resource/SIO_000628') , _namespace_SIO('http://semanticscience.org/resource/SIO_000586') : _namespace_SIO('http://semanticscience.org/resource/SIO_000644') , _namespace_SIO('http://semanticscience.org/resource/SIO_000628') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000629') : _namespace_SIO('http://semanticscience.org/resource/SIO_000557') , _namespace_SIO('http://semanticscience.org/resource/SIO_000630') : _namespace_SIO('http://semanticscience.org/resource/SIO_010302') , _namespace_SIO('http://semanticscience.org/resource/SIO_000631') : _namespace_SIO('http://semanticscience.org/resource/SIO_000628') , _namespace_SIO('http://semanticscience.org/resource/SIO_000632') : _namespace_SIO('http://semanticscience.org/resource/SIO_000210') , _namespace_SIO('http://semanticscience.org/resource/SIO_000633') : _namespace_SIO('http://semanticscience.org/resource/SIO_000205') , _namespace_SIO('http://semanticscience.org/resource/SIO_000634') : _namespace_SIO('http://semanticscience.org/resource/SIO_000558') , _namespace_SIO('http://semanticscience.org/resource/SIO_000635') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_000636') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_000641') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000642') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000643') : _namespace_SIO('http://semanticscience.org/resource/SIO_000224') , _namespace_SIO('http://semanticscience.org/resource/SIO_000644') : _namespace_SIO('http://semanticscience.org/resource/SIO_000223') , _namespace_SIO('http://semanticscience.org/resource/SIO_000646') : _namespace_SIO('http://semanticscience.org/resource/SIO_000643') , _namespace_SIO('http://semanticscience.org/resource/SIO_000652') : _namespace_SIO('http://semanticscience.org/resource/SIO_000203') , _namespace_SIO('http://semanticscience.org/resource/SIO_000655') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_000656') : _namespace_SIO('http://semanticscience.org/resource/SIO_000655') , _namespace_SIO('http://semanticscience.org/resource/SIO_000657') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_000658') : _namespace_SIO('http://semanticscience.org/resource/SIO_000657') , _namespace_SIO('http://semanticscience.org/resource/SIO_000668') : _namespace_SIO('http://semanticscience.org/resource/SIO_000628') , _namespace_SIO('http://semanticscience.org/resource/SIO_000671') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000672') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000673') : _namespace_SIO('http://semanticscience.org/resource/SIO_000671') , _namespace_SIO('http://semanticscience.org/resource/SIO_000674') : _namespace_SIO('http://semanticscience.org/resource/SIO_000672') , _namespace_SIO('http://semanticscience.org/resource/SIO_000679') : _namespace_SIO('http://semanticscience.org/resource/SIO_000054') , _namespace_SIO('http://semanticscience.org/resource/SIO_000680') : _namespace_SIO('http://semanticscience.org/resource/SIO_000679') , _namespace_SIO('http://semanticscience.org/resource/SIO_000681') : _namespace_SIO('http://semanticscience.org/resource/SIO_000679') , _namespace_SIO('http://semanticscience.org/resource/SIO_000682') : _namespace_SIO('http://semanticscience.org/resource/SIO_000029') , _namespace_SIO('http://semanticscience.org/resource/SIO_000684') : _namespace_SIO('http://semanticscience.org/resource/SIO_000029') , _namespace_SIO('http://semanticscience.org/resource/SIO_000687') : _namespace_SIO('http://semanticscience.org/resource/SIO_000322') , _namespace_SIO('http://semanticscience.org/resource/SIO_000697') : _namespace_SIO('http://semanticscience.org/resource/SIO_000709') , _namespace_SIO('http://semanticscience.org/resource/SIO_000699') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000709') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000710') : _namespace_SIO('http://semanticscience.org/resource/SIO_000709') , _namespace_SIO('http://semanticscience.org/resource/SIO_000733') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000734') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000735') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000736') : _namespace_SIO('http://semanticscience.org/resource/SIO_000001') , _namespace_SIO('http://semanticscience.org/resource/SIO_000737') : _namespace_SIO('http://semanticscience.org/resource/SIO_000736') , _namespace_SIO('http://semanticscience.org/resource/SIO_000738') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000749') : _namespace_SIO('http://semanticscience.org/resource/SIO_000737') , _namespace_SIO('http://semanticscience.org/resource/SIO_000772') : _namespace_SIO('http://semanticscience.org/resource/SIO_000631') , _namespace_SIO('http://semanticscience.org/resource/SIO_000773') : _namespace_SIO('http://semanticscience.org/resource/SIO_000252') , _namespace_SIO('http://semanticscience.org/resource/SIO_000774') : _namespace_SIO('http://semanticscience.org/resource/SIO_000772') , _namespace_SIO('http://semanticscience.org/resource/SIO_000775') : _namespace_SIO('http://semanticscience.org/resource/SIO_000773') , _namespace_SIO('http://semanticscience.org/resource/SIO_000793') : _namespace_SIO('http://semanticscience.org/resource/SIO_000687') , _namespace_SIO('http://semanticscience.org/resource/SIO_000892') : _namespace_SIO('http://semanticscience.org/resource/SIO_000212') , _namespace_SIO('http://semanticscience.org/resource/SIO_000900') : _namespace_SIO('http://semanticscience.org/resource/SIO_000008') , _namespace_SIO('http://semanticscience.org/resource/SIO_000901') : _namespace_SIO('http://semanticscience.org/resource/SIO_000011') , _namespace_SIO('http://semanticscience.org/resource/SIO_000905') : _namespace_SIO('http://semanticscience.org/resource/SIO_000291') , _namespace_SIO('http://semanticscience.org/resource/SIO_000970') : _namespace_SIO('http://semanticscience.org/resource/SIO_000975') , _namespace_SIO('http://semanticscience.org/resource/SIO_000971') : _namespace_SIO('http://semanticscience.org/resource/SIO_000974') , _namespace_SIO('http://semanticscience.org/resource/SIO_000972') : _namespace_SIO('http://semanticscience.org/resource/SIO_000974') , _namespace_SIO('http://semanticscience.org/resource/SIO_000973') : _namespace_SIO('http://semanticscience.org/resource/SIO_000975') , _namespace_SIO('http://semanticscience.org/resource/SIO_000974') : _namespace_SIO('http://semanticscience.org/resource/SIO_000053') , _namespace_SIO('http://semanticscience.org/resource/SIO_000975') : _namespace_SIO('http://semanticscience.org/resource/SIO_000093') , _namespace_SIO('http://semanticscience.org/resource/SIO_001096') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_001097') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_001098') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_001101') : _namespace_SIO('http://semanticscience.org/resource/SIO_000709') , _namespace_SIO('http://semanticscience.org/resource/SIO_001154') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_001155') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_001156') : _namespace_SIO('http://semanticscience.org/resource/SIO_000294') , _namespace_SIO('http://semanticscience.org/resource/SIO_001157') : _namespace_SIO('http://semanticscience.org/resource/SIO_000352') , _namespace_SIO('http://semanticscience.org/resource/SIO_001158') : _namespace_SIO('http://semanticscience.org/resource/SIO_000132') , _namespace_SIO('http://semanticscience.org/resource/SIO_001159') : _namespace_SIO('http://semanticscience.org/resource/SIO_000062') , _namespace_SIO('http://semanticscience.org/resource/SIO_010078') : _namespace_SIO('http://semanticscience.org/resource/SIO_000338') , _namespace_SIO('http://semanticscience.org/resource/SIO_010079') : _namespace_SIO('http://semanticscience.org/resource/SIO_000339') , _namespace_SIO('http://semanticscience.org/resource/SIO_010080') : _namespace_SIO('http://semanticscience.org/resource/SIO_010078') , _namespace_SIO('http://semanticscience.org/resource/SIO_010081') : _namespace_SIO('http://semanticscience.org/resource/SIO_010079') , _namespace_SIO('http://semanticscience.org/resource/SIO_010082') : _namespace_SIO('http://semanticscience.org/resource/SIO_010078') , _namespace_SIO('http://semanticscience.org/resource/SIO_010083') : _namespace_SIO('http://semanticscience.org/resource/SIO_010079') , _namespace_SIO('http://semanticscience.org/resource/SIO_010302') : _namespace_SIO('http://semanticscience.org/resource/SIO_000272') , _namespace_SIO('http://semanticscience.org/resource/SIO_000009') : _namespace_SIO('http://semanticscience.org/resource/SIO_000015') , _namespace_SIO('http://semanticscience.org/resource/SIO_000012') : _namespace_SIO('http://semanticscience.org/resource/SIO_000620') , _namespace_SIO('http://semanticscience.org/resource/SIO_000013') : _namespace_SIO('http://semanticscience.org/resource/SIO_000056') , _namespace_SIO('http://semanticscience.org/resource/SIO_000016') : _namespace_SIO('http://semanticscience.org/resource/SIO_000340') , _namespace_SIO('http://semanticscience.org/resource/SIO_000017') : _namespace_SIO('http://semanticscience.org/resource/SIO_000112') , _namespace_SIO('http://semanticscience.org/resource/SIO_000019') : _namespace_SIO('http://semanticscience.org/resource/SIO_000370') , _namespace_SIO('http://semanticscience.org/resource/SIO_000031') : _namespace_SIO('http://semanticscience.org/resource/SIO_000418') , _namespace_SIO('http://semanticscience.org/resource/SIO_000032') : _namespace_SIO('http://semanticscience.org/resource/SIO_000418') , _namespace_SIO('http://semanticscience.org/resource/SIO_000034') : _namespace_SIO('http://semanticscience.org/resource/SIO_000033') , _namespace_SIO('http://semanticscience.org/resource/SIO_000035') : _namespace_SIO('http://semanticscience.org/resource/SIO_000033') , _namespace_SIO('http://semanticscience.org/resource/SIO_000036') : _namespace_SIO('http://semanticscience.org/resource/SIO_000959') , _namespace_SIO('http://semanticscience.org/resource/SIO_000038') : _namespace_SIO('http://semanticscience.org/resource/SIO_000037') , _namespace_SIO('http://semanticscience.org/resource/SIO_000039') : _namespace_SIO('http://semanticscience.org/resource/SIO_000038') , _namespace_SIO('http://semanticscience.org/resource/SIO_000040') : _namespace_SIO('http://semanticscience.org/resource/SIO_000790') , _namespace_SIO('http://semanticscience.org/resource/SIO_000041') : _namespace_SIO('http://semanticscience.org/resource/SIO_000038') , _namespace_SIO('http://semanticscience.org/resource/SIO_000042') : _namespace_SIO('http://semanticscience.org/resource/SIO_000038') , _namespace_SIO('http://semanticscience.org/resource/SIO_000043') : _namespace_SIO('http://semanticscience.org/resource/SIO_000039') , _namespace_SIO('http://semanticscience.org/resource/SIO_000044') : _namespace_SIO('http://semanticscience.org/resource/SIO_000037') , _namespace_SIO('http://semanticscience.org/resource/SIO_000045') : _namespace_SIO('http://semanticscience.org/resource/SIO_000044') , _namespace_SIO('http://semanticscience.org/resource/SIO_000046') : _namespace_SIO('http://semanticscience.org/resource/SIO_000044') , _namespace_SIO('http://semanticscience.org/resource/SIO_000047') : _namespace_SIO('http://semanticscience.org/resource/SIO_000046') , _namespace_SIO('http://semanticscience.org/resource/SIO_000048') : _namespace_SIO('http://semanticscience.org/resource/SIO_000037') , _namespace_SIO('http://semanticscience.org/resource/SIO_000049') : _namespace_SIO('http://semanticscience.org/resource/SIO_000048') , _namespace_SIO('http://semanticscience.org/resource/SIO_000051') : _namespace_SIO('http://semanticscience.org/resource/SIO_000026') , _namespace_SIO('http://semanticscience.org/resource/SIO_000055') : _namespace_SIO('http://semanticscience.org/resource/SIO_000026') , _namespace_SIO('http://semanticscience.org/resource/SIO_000057') : _namespace_SIO('http://semanticscience.org/resource/SIO_000056') , _namespace_SIO('http://semanticscience.org/resource/SIO_000071') : _namespace_SIO('http://semanticscience.org/resource/SIO_000070') , _namespace_SIO('http://semanticscience.org/resource/SIO_000072') : _namespace_SIO('http://semanticscience.org/resource/SIO_000071') , _namespace_SIO('http://semanticscience.org/resource/SIO_000073') : _namespace_SIO('http://semanticscience.org/resource/SIO_000071') , _namespace_SIO('http://semanticscience.org/resource/SIO_000074') : _namespace_SIO('http://semanticscience.org/resource/SIO_000052') , _namespace_SIO('http://semanticscience.org/resource/SIO_000075') : _namespace_SIO('http://semanticscience.org/resource/SIO_000015') , _namespace_SIO('http://semanticscience.org/resource/SIO_000076') : _namespace_SIO('http://semanticscience.org/resource/SIO_000091') , _namespace_SIO('http://semanticscience.org/resource/SIO_000077') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000079') : _namespace_SIO('http://semanticscience.org/resource/SIO_000078') , _namespace_SIO('http://semanticscience.org/resource/SIO_000080') : _namespace_SIO('http://semanticscience.org/resource/SIO_000612') , _namespace_SIO('http://semanticscience.org/resource/SIO_000081') : _namespace_SIO('http://semanticscience.org/resource/SIO_000080') , _namespace_SIO('http://semanticscience.org/resource/SIO_000082') : _namespace_SIO('http://semanticscience.org/resource/SIO_000081') , _namespace_SIO('http://semanticscience.org/resource/SIO_000083') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000085') : _namespace_SIO('http://semanticscience.org/resource/SIO_000113') , _namespace_SIO('http://semanticscience.org/resource/SIO_000087') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000094') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000097') : _namespace_SIO('http://semanticscience.org/resource/SIO_000602') , _namespace_SIO('http://semanticscience.org/resource/SIO_000098') : _namespace_SIO('http://semanticscience.org/resource/SIO_000097') , _namespace_SIO('http://semanticscience.org/resource/SIO_000099') : _namespace_SIO('http://semanticscience.org/resource/SIO_000097') , _namespace_SIO('http://semanticscience.org/resource/SIO_000100') : _namespace_SIO('http://semanticscience.org/resource/SIO_000097') , _namespace_SIO('http://semanticscience.org/resource/SIO_000101') : _namespace_SIO('http://semanticscience.org/resource/SIO_000097') , _namespace_SIO('http://semanticscience.org/resource/SIO_000102') : _namespace_SIO('http://semanticscience.org/resource/SIO_000101') , _namespace_SIO('http://semanticscience.org/resource/SIO_000103') : _namespace_SIO('http://semanticscience.org/resource/SIO_000097') , _namespace_SIO('http://semanticscience.org/resource/SIO_000104') : _namespace_SIO('http://semanticscience.org/resource/SIO_000078') , _namespace_SIO('http://semanticscience.org/resource/SIO_000106') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000107') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000108') : _namespace_SIO('http://semanticscience.org/resource/SIO_000078') , _namespace_SIO('http://semanticscience.org/resource/SIO_000109') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000113') : _namespace_SIO('http://semanticscience.org/resource/SIO_000483') , _namespace_SIO('http://semanticscience.org/resource/SIO_000117') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000118') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000119') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000120') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000121') : _namespace_SIO('http://semanticscience.org/resource/SIO_000162') , _namespace_SIO('http://semanticscience.org/resource/SIO_000122') : _namespace_SIO('http://semanticscience.org/resource/SIO_000342') , _namespace_SIO('http://semanticscience.org/resource/SIO_000123') : _namespace_SIO('http://semanticscience.org/resource/SIO_000342') , _namespace_SIO('http://semanticscience.org/resource/SIO_000124') : _namespace_SIO('http://semanticscience.org/resource/SIO_000342') , _namespace_SIO('http://semanticscience.org/resource/SIO_000125') : _namespace_SIO('http://semanticscience.org/resource/SIO_000342') , _namespace_SIO('http://semanticscience.org/resource/SIO_000127') : _namespace_SIO('http://semanticscience.org/resource/SIO_000094') , _namespace_SIO('http://semanticscience.org/resource/SIO_000129') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000130') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000131') : _namespace_SIO('http://semanticscience.org/resource/SIO_000130') , _namespace_SIO('http://semanticscience.org/resource/SIO_000133') : _namespace_SIO('http://semanticscience.org/resource/SIO_000275') , _namespace_SIO('http://semanticscience.org/resource/SIO_000135') : _namespace_SIO('http://semanticscience.org/resource/SIO_000136') , _namespace_SIO('http://semanticscience.org/resource/SIO_000137') : _namespace_SIO('http://semanticscience.org/resource/SIO_000326') , _namespace_SIO('http://semanticscience.org/resource/SIO_000138') : _namespace_SIO('http://semanticscience.org/resource/SIO_000289') , _namespace_SIO('http://semanticscience.org/resource/SIO_000140') : _namespace_SIO('http://semanticscience.org/resource/SIO_000101') , _namespace_SIO('http://semanticscience.org/resource/SIO_000141') : _namespace_SIO('http://semanticscience.org/resource/SIO_000316') , _namespace_SIO('http://semanticscience.org/resource/SIO_000142') : _namespace_SIO('http://semanticscience.org/resource/SIO_000141') , _namespace_SIO('http://semanticscience.org/resource/SIO_000143') : _namespace_SIO('http://semanticscience.org/resource/SIO_000141') , _namespace_SIO('http://semanticscience.org/resource/SIO_000144') : _namespace_SIO('http://semanticscience.org/resource/SIO_000920') , _namespace_SIO('http://semanticscience.org/resource/SIO_000147') : _namespace_SIO('http://semanticscience.org/resource/SIO_000133') , _namespace_SIO('http://semanticscience.org/resource/SIO_000148') : _namespace_SIO('http://semanticscience.org/resource/SIO_000651') , _namespace_SIO('http://semanticscience.org/resource/SIO_000151') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000152') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000153') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000154') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000155') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000156') : _namespace_SIO('http://semanticscience.org/resource/SIO_000106') , _namespace_SIO('http://semanticscience.org/resource/SIO_000157') : _namespace_SIO('http://semanticscience.org/resource/SIO_000106') , _namespace_SIO('http://semanticscience.org/resource/SIO_000158') : _namespace_SIO('http://semanticscience.org/resource/SIO_000295') , _namespace_SIO('http://semanticscience.org/resource/SIO_000159') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000160') : _namespace_SIO('http://semanticscience.org/resource/SIO_000162') , _namespace_SIO('http://semanticscience.org/resource/SIO_000161') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000162') : _namespace_SIO('http://semanticscience.org/resource/SIO_000295') , _namespace_SIO('http://semanticscience.org/resource/SIO_000163') : _namespace_SIO('http://semanticscience.org/resource/SIO_000162') , _namespace_SIO('http://semanticscience.org/resource/SIO_000164') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000165') : _namespace_SIO('http://semanticscience.org/resource/SIO_000087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000166') : _namespace_SIO('http://semanticscience.org/resource/SIO_000165') , _namespace_SIO('http://semanticscience.org/resource/SIO_000167') : _namespace_SIO('http://semanticscience.org/resource/SIO_000165') , _namespace_SIO('http://semanticscience.org/resource/SIO_000168') : _namespace_SIO('http://semanticscience.org/resource/SIO_000165') , _namespace_SIO('http://semanticscience.org/resource/SIO_000169') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000170') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000171') : _namespace_SIO('http://semanticscience.org/resource/SIO_000651') , _namespace_SIO('http://semanticscience.org/resource/SIO_000172') : _namespace_SIO('http://semanticscience.org/resource/SIO_000328') , _namespace_SIO('http://semanticscience.org/resource/SIO_000173') : _namespace_SIO('http://semanticscience.org/resource/SIO_000287') , _namespace_SIO('http://semanticscience.org/resource/SIO_000174') : _namespace_SIO('http://semanticscience.org/resource/SIO_000171') , _namespace_SIO('http://semanticscience.org/resource/SIO_000175') : _namespace_SIO('http://semanticscience.org/resource/SIO_000185') , _namespace_SIO('http://semanticscience.org/resource/SIO_000176') : _namespace_SIO('http://semanticscience.org/resource/SIO_000171') , _namespace_SIO('http://semanticscience.org/resource/SIO_000177') : _namespace_SIO('http://semanticscience.org/resource/SIO_000944') , _namespace_SIO('http://semanticscience.org/resource/SIO_000178') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_000179') : _namespace_SIO('http://semanticscience.org/resource/SIO_000651') , _namespace_SIO('http://semanticscience.org/resource/SIO_000180') : _namespace_SIO('http://semanticscience.org/resource/SIO_000179') , _namespace_SIO('http://semanticscience.org/resource/SIO_000181') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000182') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000183') : _namespace_SIO('http://semanticscience.org/resource/SIO_000116') , _namespace_SIO('http://semanticscience.org/resource/SIO_000184') : _namespace_SIO('http://semanticscience.org/resource/SIO_000183') , _namespace_SIO('http://semanticscience.org/resource/SIO_000185') : _namespace_SIO('http://semanticscience.org/resource/SIO_000179') , _namespace_SIO('http://semanticscience.org/resource/SIO_000186') : _namespace_SIO('http://semanticscience.org/resource/SIO_000653') , _namespace_SIO('http://semanticscience.org/resource/SIO_000188') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000189') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000190') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000191') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000192') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000193') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000194') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000195') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000196') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000197') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000198') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000199') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000200') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000201') : _namespace_SIO('http://semanticscience.org/resource/SIO_000111') , _namespace_SIO('http://semanticscience.org/resource/SIO_000220') : _namespace_SIO('http://semanticscience.org/resource/SIO_000238') , _namespace_SIO('http://semanticscience.org/resource/SIO_000237') : _namespace_SIO('http://semanticscience.org/resource/SIO_000179') , _namespace_SIO('http://semanticscience.org/resource/SIO_000238') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000239') : _namespace_SIO('http://semanticscience.org/resource/SIO_000238') , _namespace_SIO('http://semanticscience.org/resource/SIO_000261') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_000262') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_000263') : _namespace_SIO('http://semanticscience.org/resource/SIO_000259') , _namespace_SIO('http://semanticscience.org/resource/SIO_000264') : _namespace_SIO('http://semanticscience.org/resource/SIO_000259') , _namespace_SIO('http://semanticscience.org/resource/SIO_000268') : _namespace_SIO('http://semanticscience.org/resource/SIO_000436') , _namespace_SIO('http://semanticscience.org/resource/SIO_000276') : _namespace_SIO('http://semanticscience.org/resource/SIO_000006') , _namespace_SIO('http://semanticscience.org/resource/SIO_000280') : _namespace_SIO('http://semanticscience.org/resource/SIO_000238') , _namespace_SIO('http://semanticscience.org/resource/SIO_000281') : _namespace_SIO('http://semanticscience.org/resource/SIO_000238') , _namespace_SIO('http://semanticscience.org/resource/SIO_000282') : _namespace_SIO('http://semanticscience.org/resource/SIO_000280') , _namespace_SIO('http://semanticscience.org/resource/SIO_000284') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_000285') : _namespace_SIO('http://semanticscience.org/resource/SIO_000012') , _namespace_SIO('http://semanticscience.org/resource/SIO_000287') : _namespace_SIO('http://semanticscience.org/resource/SIO_000009') , _namespace_SIO('http://semanticscience.org/resource/SIO_000290') : _namespace_SIO('http://semanticscience.org/resource/SIO_000285') , _namespace_SIO('http://semanticscience.org/resource/SIO_000297') : _namespace_SIO('http://semanticscience.org/resource/SIO_000612') , _namespace_SIO('http://semanticscience.org/resource/SIO_000301') : _namespace_SIO('http://semanticscience.org/resource/SIO_000082') , _namespace_SIO('http://semanticscience.org/resource/SIO_000302') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000304') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000305') : _namespace_SIO('http://semanticscience.org/resource/SIO_000613') , _namespace_SIO('http://semanticscience.org/resource/SIO_000306') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_000307') : _namespace_SIO('http://semanticscience.org/resource/SIO_000005') , _namespace_SIO('http://semanticscience.org/resource/SIO_000308') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_000309') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_000316') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000317') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000318') : _namespace_SIO('http://semanticscience.org/resource/SIO_000013') , _namespace_SIO('http://semanticscience.org/resource/SIO_000319') : _namespace_SIO('http://semanticscience.org/resource/SIO_000013') , _namespace_SIO('http://semanticscience.org/resource/SIO_000320') : _namespace_SIO('http://semanticscience.org/resource/SIO_000317') , _namespace_SIO('http://semanticscience.org/resource/SIO_000321') : _namespace_SIO('http://semanticscience.org/resource/SIO_000320') , _namespace_SIO('http://semanticscience.org/resource/SIO_000326') : _namespace_SIO('http://semanticscience.org/resource/SIO_000275') , _namespace_SIO('http://semanticscience.org/resource/SIO_000327') : _namespace_SIO('http://semanticscience.org/resource/SIO_000320') , _namespace_SIO('http://semanticscience.org/resource/SIO_000329') : _namespace_SIO('http://semanticscience.org/resource/SIO_000320') , _namespace_SIO('http://semanticscience.org/resource/SIO_000330') : _namespace_SIO('http://semanticscience.org/resource/SIO_000320') , _namespace_SIO('http://semanticscience.org/resource/SIO_000331') : _namespace_SIO('http://semanticscience.org/resource/SIO_000129') , _namespace_SIO('http://semanticscience.org/resource/SIO_000343') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000344') : _namespace_SIO('http://semanticscience.org/resource/SIO_000639') , _namespace_SIO('http://semanticscience.org/resource/SIO_000345') : _namespace_SIO('http://semanticscience.org/resource/SIO_000378') , _namespace_SIO('http://semanticscience.org/resource/SIO_000346') : _namespace_SIO('http://semanticscience.org/resource/SIO_000351') , _namespace_SIO('http://semanticscience.org/resource/SIO_000347') : _namespace_SIO('http://semanticscience.org/resource/SIO_000374') , _namespace_SIO('http://semanticscience.org/resource/SIO_000348') : _namespace_SIO('http://semanticscience.org/resource/SIO_000347') , _namespace_SIO('http://semanticscience.org/resource/SIO_000349') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000350') : _namespace_SIO('http://semanticscience.org/resource/SIO_001087') , _namespace_SIO('http://semanticscience.org/resource/SIO_000351') : _namespace_SIO('http://semanticscience.org/resource/SIO_000385') , _namespace_SIO('http://semanticscience.org/resource/SIO_000353') : _namespace_SIO('http://semanticscience.org/resource/SIO_000639') , _namespace_SIO('http://semanticscience.org/resource/SIO_000354') : _namespace_SIO('http://semanticscience.org/resource/SIO_000112') , _namespace_SIO('http://semanticscience.org/resource/SIO_000357') : _namespace_SIO('http://semanticscience.org/resource/SIO_010019') , _namespace_SIO('http://semanticscience.org/resource/SIO_000358') : _namespace_SIO('http://semanticscience.org/resource/SIO_000825') , _namespace_SIO('http://semanticscience.org/resource/SIO_000359') : _namespace_SIO('http://semanticscience.org/resource/SIO_000337') , _namespace_SIO('http://semanticscience.org/resource/SIO_000366') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000367') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000368') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000371') : _namespace_SIO('http://semanticscience.org/resource/SIO_000408') , _namespace_SIO('http://semanticscience.org/resource/SIO_000372') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000373') : _namespace_SIO('http://semanticscience.org/resource/SIO_000346') , _namespace_SIO('http://semanticscience.org/resource/SIO_000374') : _namespace_SIO('http://semanticscience.org/resource/SIO_000385') , _namespace_SIO('http://semanticscience.org/resource/SIO_000375') : _namespace_SIO('http://semanticscience.org/resource/SIO_000351') , _namespace_SIO('http://semanticscience.org/resource/SIO_000376') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000377') : _namespace_SIO('http://semanticscience.org/resource/SIO_000378') , _namespace_SIO('http://semanticscience.org/resource/SIO_000378') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000379') : _namespace_SIO('http://semanticscience.org/resource/SIO_001055') , _namespace_SIO('http://semanticscience.org/resource/SIO_000380') : _namespace_SIO('http://semanticscience.org/resource/SIO_000392') , _namespace_SIO('http://semanticscience.org/resource/SIO_000381') : _namespace_SIO('http://semanticscience.org/resource/SIO_000380') , _namespace_SIO('http://semanticscience.org/resource/SIO_000382') : _namespace_SIO('http://semanticscience.org/resource/SIO_000349') , _namespace_SIO('http://semanticscience.org/resource/SIO_000383') : _namespace_SIO('http://semanticscience.org/resource/SIO_000351') , _namespace_SIO('http://semanticscience.org/resource/SIO_000384') : _namespace_SIO('http://semanticscience.org/resource/SIO_000374') , _namespace_SIO('http://semanticscience.org/resource/SIO_000385') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000386') : _namespace_SIO('http://semanticscience.org/resource/SIO_000350') , _namespace_SIO('http://semanticscience.org/resource/SIO_000387') : _namespace_SIO('http://semanticscience.org/resource/SIO_000350') , _namespace_SIO('http://semanticscience.org/resource/SIO_000388') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000389') : _namespace_SIO('http://semanticscience.org/resource/SIO_000349') , _namespace_SIO('http://semanticscience.org/resource/SIO_000390') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000392') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000393') : _namespace_SIO('http://semanticscience.org/resource/SIO_000498') , _namespace_SIO('http://semanticscience.org/resource/SIO_000395') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000396') : _namespace_SIO('http://semanticscience.org/resource/SIO_000602') , _namespace_SIO('http://semanticscience.org/resource/SIO_000397') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000399') : _namespace_SIO('http://semanticscience.org/resource/SIO_000498') , _namespace_SIO('http://semanticscience.org/resource/SIO_000400') : _namespace_SIO('http://semanticscience.org/resource/SIO_000072') , _namespace_SIO('http://semanticscience.org/resource/SIO_000401') : _namespace_SIO('http://semanticscience.org/resource/SIO_000072') , _namespace_SIO('http://semanticscience.org/resource/SIO_000402') : _namespace_SIO('http://semanticscience.org/resource/SIO_000072') , _namespace_SIO('http://semanticscience.org/resource/SIO_000403') : _namespace_SIO('http://semanticscience.org/resource/SIO_000620') , _namespace_SIO('http://semanticscience.org/resource/SIO_000404') : _namespace_SIO('http://semanticscience.org/resource/SIO_000406') , _namespace_SIO('http://semanticscience.org/resource/SIO_000405') : _namespace_SIO('http://semanticscience.org/resource/SIO_000406') , _namespace_SIO('http://semanticscience.org/resource/SIO_000406') : _namespace_SIO('http://semanticscience.org/resource/SIO_000498') , _namespace_SIO('http://semanticscience.org/resource/SIO_000407') : _namespace_SIO('http://semanticscience.org/resource/SIO_000536') , _namespace_SIO('http://semanticscience.org/resource/SIO_000408') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000409') : _namespace_SIO('http://semanticscience.org/resource/SIO_000014') , _namespace_SIO('http://semanticscience.org/resource/SIO_000410') : _namespace_SIO('http://semanticscience.org/resource/SIO_000828') , _namespace_SIO('http://semanticscience.org/resource/SIO_000411') : _namespace_SIO('http://semanticscience.org/resource/SIO_000828') , _namespace_SIO('http://semanticscience.org/resource/SIO_000412') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000413') : _namespace_SIO('http://semanticscience.org/resource/SIO_000414') , _namespace_SIO('http://semanticscience.org/resource/SIO_000414') : _namespace_SIO('http://semanticscience.org/resource/SIO_000370') , _namespace_SIO('http://semanticscience.org/resource/SIO_000415') : _namespace_SIO('http://semanticscience.org/resource/SIO_000413') , _namespace_SIO('http://semanticscience.org/resource/SIO_000417') : _namespace_SIO('http://semanticscience.org/resource/SIO_000391') , _namespace_SIO('http://semanticscience.org/resource/SIO_000418') : _namespace_SIO('http://semanticscience.org/resource/SIO_000391') , _namespace_SIO('http://semanticscience.org/resource/SIO_000419') : _namespace_SIO('http://semanticscience.org/resource/SIO_000080') , _namespace_SIO('http://semanticscience.org/resource/SIO_000423') : _namespace_SIO('http://semanticscience.org/resource/SIO_000083') , _namespace_SIO('http://semanticscience.org/resource/SIO_000428') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000429') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000430') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000431') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000432') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000433') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000434') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000435') : _namespace_SIO('http://semanticscience.org/resource/SIO_000417') , _namespace_SIO('http://semanticscience.org/resource/SIO_000438') : _namespace_SIO('http://semanticscience.org/resource/SIO_000790') , _namespace_SIO('http://semanticscience.org/resource/SIO_000439') : _namespace_SIO('http://semanticscience.org/resource/SIO_000056') , _namespace_SIO('http://semanticscience.org/resource/SIO_000442') : _namespace_SIO('http://semanticscience.org/resource/SIO_000083') , _namespace_SIO('http://semanticscience.org/resource/SIO_000443') : _namespace_SIO('http://semanticscience.org/resource/SIO_000083') , _namespace_SIO('http://semanticscience.org/resource/SIO_000444') : _namespace_SIO('http://semanticscience.org/resource/SIO_000443') , _namespace_SIO('http://semanticscience.org/resource/SIO_000445') : _namespace_SIO('http://semanticscience.org/resource/SIO_000443') , _namespace_SIO('http://semanticscience.org/resource/SIO_000446') : _namespace_SIO('http://semanticscience.org/resource/SIO_000443') , _namespace_SIO('http://semanticscience.org/resource/SIO_000447') : _namespace_SIO('http://semanticscience.org/resource/SIO_000083') , _namespace_SIO('http://semanticscience.org/resource/SIO_000449') : _namespace_SIO('http://semanticscience.org/resource/SIO_000448') , _namespace_SIO('http://semanticscience.org/resource/SIO_000452') : _namespace_SIO('http://semanticscience.org/resource/SIO_000451') , _namespace_SIO('http://semanticscience.org/resource/SIO_000453') : _namespace_SIO('http://semanticscience.org/resource/SIO_000451') , _namespace_SIO('http://semanticscience.org/resource/SIO_000454') : _namespace_SIO('http://semanticscience.org/resource/SIO_000451') , _namespace_SIO('http://semanticscience.org/resource/SIO_000455') : _namespace_SIO('http://semanticscience.org/resource/SIO_000450') , _namespace_SIO('http://semanticscience.org/resource/SIO_000456') : _namespace_SIO('http://semanticscience.org/resource/SIO_000455') , _namespace_SIO('http://semanticscience.org/resource/SIO_000457') : _namespace_SIO('http://semanticscience.org/resource/SIO_000455') , _namespace_SIO('http://semanticscience.org/resource/SIO_000458') : _namespace_SIO('http://semanticscience.org/resource/SIO_000450') , _namespace_SIO('http://semanticscience.org/resource/SIO_000459') : _namespace_SIO('http://semanticscience.org/resource/SIO_000458') , _namespace_SIO('http://semanticscience.org/resource/SIO_000460') : _namespace_SIO('http://semanticscience.org/resource/SIO_000458') , _namespace_SIO('http://semanticscience.org/resource/SIO_000461') : _namespace_SIO('http://semanticscience.org/resource/SIO_000458') , _namespace_SIO('http://semanticscience.org/resource/SIO_000462') : _namespace_SIO('http://semanticscience.org/resource/SIO_000461') , _namespace_SIO('http://semanticscience.org/resource/SIO_000463') : _namespace_SIO('http://semanticscience.org/resource/SIO_000461') , _namespace_SIO('http://semanticscience.org/resource/SIO_000464') : _namespace_SIO('http://semanticscience.org/resource/SIO_000150') , _namespace_SIO('http://semanticscience.org/resource/SIO_000466') : _namespace_SIO('http://semanticscience.org/resource/SIO_000742') , _namespace_SIO('http://semanticscience.org/resource/SIO_000467') : _namespace_SIO('http://semanticscience.org/resource/SIO_000743') , _namespace_SIO('http://semanticscience.org/resource/SIO_000468') : _namespace_SIO('http://semanticscience.org/resource/SIO_000448') , _namespace_SIO('http://semanticscience.org/resource/SIO_000470') : _namespace_SIO('http://semanticscience.org/resource/SIO_000185') , _namespace_SIO('http://semanticscience.org/resource/SIO_000471') : _namespace_SIO('http://semanticscience.org/resource/SIO_000185') , _namespace_SIO('http://semanticscience.org/resource/SIO_000472') : _namespace_SIO('http://semanticscience.org/resource/SIO_000069') , _namespace_SIO('http://semanticscience.org/resource/SIO_000475') : _namespace_SIO('http://semanticscience.org/resource/SIO_000026') , _namespace_SIO('http://semanticscience.org/resource/SIO_000478') : _namespace_SIO('http://semanticscience.org/resource/SIO_000479') , _namespace_SIO('http://semanticscience.org/resource/SIO_000479') : _namespace_SIO('http://semanticscience.org/resource/SIO_000721') , _namespace_SIO('http://semanticscience.org/resource/SIO_000480') : _namespace_SIO('http://semanticscience.org/resource/SIO_000478') , _namespace_SIO('http://semanticscience.org/resource/SIO_000481') : _namespace_SIO('http://semanticscience.org/resource/SIO_000478') , _namespace_SIO('http://semanticscience.org/resource/SIO_000485') : _namespace_SIO('http://semanticscience.org/resource/SIO_010375') , _namespace_SIO('http://semanticscience.org/resource/SIO_000486') : _namespace_SIO('http://semanticscience.org/resource/SIO_010375') , _namespace_SIO('http://semanticscience.org/resource/SIO_000487') : _namespace_SIO('http://semanticscience.org/resource/SIO_010375') , _namespace_SIO('http://semanticscience.org/resource/SIO_000488') : _namespace_SIO('http://semanticscience.org/resource/SIO_010375') , _namespace_SIO('http://semanticscience.org/resource/SIO_000489') : _namespace_SIO('http://semanticscience.org/resource/SIO_010376') , _namespace_SIO('http://semanticscience.org/resource/SIO_000492') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000493') : _namespace_SIO('http://semanticscience.org/resource/SIO_000113') , _namespace_SIO('http://semanticscience.org/resource/SIO_000494') : _namespace_SIO('http://semanticscience.org/resource/SIO_000701') , _namespace_SIO('http://semanticscience.org/resource/SIO_000498') : _namespace_SIO('http://semanticscience.org/resource/SIO_000485') , _namespace_SIO('http://semanticscience.org/resource/SIO_000499') : _namespace_SIO('http://semanticscience.org/resource/SIO_000536') , _namespace_SIO('http://semanticscience.org/resource/SIO_000505') : _namespace_SIO('http://semanticscience.org/resource/SIO_000506') , _namespace_SIO('http://semanticscience.org/resource/SIO_000506') : _namespace_SIO('http://semanticscience.org/resource/SIO_000015') , _namespace_SIO('http://semanticscience.org/resource/SIO_000507') : _namespace_SIO('http://semanticscience.org/resource/SIO_000506') , _namespace_SIO('http://semanticscience.org/resource/SIO_000508') : _namespace_SIO('http://semanticscience.org/resource/SIO_000532') , _namespace_SIO('http://semanticscience.org/resource/SIO_000509') : _namespace_SIO('http://semanticscience.org/resource/SIO_000532') , _namespace_SIO('http://semanticscience.org/resource/SIO_000511') : _namespace_SIO('http://semanticscience.org/resource/SIO_000608') , _namespace_SIO('http://semanticscience.org/resource/SIO_000513') : _namespace_SIO('http://semanticscience.org/resource/SIO_000512') , _namespace_SIO('http://semanticscience.org/resource/SIO_000514') : _namespace_SIO('http://semanticscience.org/resource/SIO_000513') , _namespace_SIO('http://semanticscience.org/resource/SIO_000515') : _namespace_SIO('http://semanticscience.org/resource/SIO_000513') , _namespace_SIO('http://semanticscience.org/resource/SIO_000516') : _namespace_SIO('http://semanticscience.org/resource/SIO_000511') , _namespace_SIO('http://semanticscience.org/resource/SIO_000517') : _namespace_SIO('http://semanticscience.org/resource/SIO_000505') , _namespace_SIO('http://semanticscience.org/resource/SIO_000518') : _namespace_SIO('http://semanticscience.org/resource/SIO_000517') , _namespace_SIO('http://semanticscience.org/resource/SIO_000519') : _namespace_SIO('http://semanticscience.org/resource/SIO_000518') , _namespace_SIO('http://semanticscience.org/resource/SIO_000520') : _namespace_SIO('http://semanticscience.org/resource/SIO_000505') , _namespace_SIO('http://semanticscience.org/resource/SIO_000525') : _namespace_SIO('http://semanticscience.org/resource/SIO_000534') , _namespace_SIO('http://semanticscience.org/resource/SIO_000526') : _namespace_SIO('http://semanticscience.org/resource/SIO_000534') , _namespace_SIO('http://semanticscience.org/resource/SIO_000527') : _namespace_SIO('http://semanticscience.org/resource/SIO_000535') , _namespace_SIO('http://semanticscience.org/resource/SIO_000528') : _namespace_SIO('http://semanticscience.org/resource/SIO_000527') , _namespace_SIO('http://semanticscience.org/resource/SIO_000529') : _namespace_SIO('http://semanticscience.org/resource/SIO_000527') , _namespace_SIO('http://semanticscience.org/resource/SIO_000530') : _namespace_SIO('http://semanticscience.org/resource/SIO_000527') , _namespace_SIO('http://semanticscience.org/resource/SIO_000531') : _namespace_SIO('http://semanticscience.org/resource/SIO_000535') , _namespace_SIO('http://semanticscience.org/resource/SIO_000532') : _namespace_SIO('http://semanticscience.org/resource/SIO_000507') , _namespace_SIO('http://semanticscience.org/resource/SIO_000533') : _namespace_SIO('http://semanticscience.org/resource/SIO_000540') , _namespace_SIO('http://semanticscience.org/resource/SIO_000534') : _namespace_SIO('http://semanticscience.org/resource/SIO_000511') , _namespace_SIO('http://semanticscience.org/resource/SIO_000535') : _namespace_SIO('http://semanticscience.org/resource/SIO_000511') , _namespace_SIO('http://semanticscience.org/resource/SIO_000536') : _namespace_SIO('http://semanticscience.org/resource/SIO_000395') , _namespace_SIO('http://semanticscience.org/resource/SIO_000537') : _namespace_SIO('http://semanticscience.org/resource/SIO_000055') , _namespace_SIO('http://semanticscience.org/resource/SIO_000538') : _namespace_SIO('http://semanticscience.org/resource/SIO_000537') , _namespace_SIO('http://semanticscience.org/resource/SIO_000539') : _namespace_SIO('http://semanticscience.org/resource/SIO_000511') , _namespace_SIO('http://semanticscience.org/resource/SIO_000540') : _namespace_SIO('http://semanticscience.org/resource/SIO_000516') , _namespace_SIO('http://semanticscience.org/resource/SIO_000541') : _namespace_SIO('http://semanticscience.org/resource/SIO_000540') , _namespace_SIO('http://semanticscience.org/resource/SIO_000542') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000544') : _namespace_SIO('http://semanticscience.org/resource/SIO_000372') , _namespace_SIO('http://semanticscience.org/resource/SIO_000547') : _namespace_SIO('http://semanticscience.org/resource/SIO_000376') , _namespace_SIO('http://semanticscience.org/resource/SIO_000549') : _namespace_SIO('http://semanticscience.org/resource/SIO_010355') , _namespace_SIO('http://semanticscience.org/resource/SIO_000550') : _namespace_SIO('http://semanticscience.org/resource/SIO_010354') , _namespace_SIO('http://semanticscience.org/resource/SIO_000551') : _namespace_SIO('http://semanticscience.org/resource/SIO_010347') , _namespace_SIO('http://semanticscience.org/resource/SIO_000554') : _namespace_SIO('http://semanticscience.org/resource/SIO_000307') , _namespace_SIO('http://semanticscience.org/resource/SIO_000555') : _namespace_SIO('http://semanticscience.org/resource/SIO_000307') , _namespace_SIO('http://semanticscience.org/resource/SIO_000556') : _namespace_SIO('http://semanticscience.org/resource/SIO_010071') , _namespace_SIO('http://semanticscience.org/resource/SIO_000561') : _namespace_SIO('http://semanticscience.org/resource/SIO_011121') , _namespace_SIO('http://semanticscience.org/resource/SIO_000562') : _namespace_SIO('http://semanticscience.org/resource/SIO_000576') , _namespace_SIO('http://semanticscience.org/resource/SIO_000564') : _namespace_SIO('http://semanticscience.org/resource/SIO_000573') , _namespace_SIO('http://semanticscience.org/resource/SIO_000566') : _namespace_SIO('http://semanticscience.org/resource/SIO_000368') , _namespace_SIO('http://semanticscience.org/resource/SIO_000567') : _namespace_SIO('http://semanticscience.org/resource/SIO_000569') , _namespace_SIO('http://semanticscience.org/resource/SIO_000568') : _namespace_SIO('http://semanticscience.org/resource/SIO_000569') , _namespace_SIO('http://semanticscience.org/resource/SIO_000569') : _namespace_SIO('http://semanticscience.org/resource/SIO_000368') , _namespace_SIO('http://semanticscience.org/resource/SIO_000570') : _namespace_SIO('http://semanticscience.org/resource/SIO_000006') , _namespace_SIO('http://semanticscience.org/resource/SIO_000571') : _namespace_SIO('http://semanticscience.org/resource/SIO_000564') , _namespace_SIO('http://semanticscience.org/resource/SIO_000572') : _namespace_SIO('http://semanticscience.org/resource/SIO_000564') , _namespace_SIO('http://semanticscience.org/resource/SIO_000573') : _namespace_SIO('http://semanticscience.org/resource/SIO_000570') , _namespace_SIO('http://semanticscience.org/resource/SIO_000574') : _namespace_SIO('http://semanticscience.org/resource/SIO_000570') , _namespace_SIO('http://semanticscience.org/resource/SIO_000576') : _namespace_SIO('http://semanticscience.org/resource/SIO_010283') , _namespace_SIO('http://semanticscience.org/resource/SIO_000577') : _namespace_SIO('http://semanticscience.org/resource/SIO_010284') , _namespace_SIO('http://semanticscience.org/resource/SIO_000578') : _namespace_SIO('http://semanticscience.org/resource/SIO_010284') , _namespace_SIO('http://semanticscience.org/resource/SIO_000579') : _namespace_SIO('http://semanticscience.org/resource/SIO_000578') , _namespace_SIO('http://semanticscience.org/resource/SIO_000580') : _namespace_SIO('http://semanticscience.org/resource/SIO_000578') , _namespace_SIO('http://semanticscience.org/resource/SIO_000581') : _namespace_SIO('http://semanticscience.org/resource/SIO_000574') , _namespace_SIO('http://semanticscience.org/resource/SIO_000585') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_000587') : _namespace_SIO('http://semanticscience.org/resource/SIO_000588') , _namespace_SIO('http://semanticscience.org/resource/SIO_000589') : _namespace_SIO('http://semanticscience.org/resource/SIO_000593') , _namespace_SIO('http://semanticscience.org/resource/SIO_000590') : _namespace_SIO('http://semanticscience.org/resource/SIO_000559') , _namespace_SIO('http://semanticscience.org/resource/SIO_000596') : _namespace_SIO('http://semanticscience.org/resource/SIO_000956') , _namespace_SIO('http://semanticscience.org/resource/SIO_000597') : _namespace_SIO('http://semanticscience.org/resource/SIO_000598') , _namespace_SIO('http://semanticscience.org/resource/SIO_000598') : _namespace_SIO('http://semanticscience.org/resource/SIO_000596') , _namespace_SIO('http://semanticscience.org/resource/SIO_000600') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000602') : _namespace_SIO('http://semanticscience.org/resource/SIO_000015') , _namespace_SIO('http://semanticscience.org/resource/SIO_000605') : _namespace_SIO('http://semanticscience.org/resource/SIO_000650') , _namespace_SIO('http://semanticscience.org/resource/SIO_000608') : _namespace_SIO('http://semanticscience.org/resource/SIO_000506') , _namespace_SIO('http://semanticscience.org/resource/SIO_000613') : _namespace_SIO('http://semanticscience.org/resource/SIO_000788') , _namespace_SIO('http://semanticscience.org/resource/SIO_000619') : _namespace_SIO('http://semanticscience.org/resource/SIO_000012') , _namespace_SIO('http://semanticscience.org/resource/SIO_000620') : _namespace_SIO('http://semanticscience.org/resource/SIO_000010') , _namespace_SIO('http://semanticscience.org/resource/SIO_000621') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000622') : _namespace_SIO('http://semanticscience.org/resource/SIO_000129') , _namespace_SIO('http://semanticscience.org/resource/SIO_000623') : _namespace_SIO('http://semanticscience.org/resource/SIO_000129') , _namespace_SIO('http://semanticscience.org/resource/SIO_000624') : _namespace_SIO('http://semanticscience.org/resource/SIO_010441') , _namespace_SIO('http://semanticscience.org/resource/SIO_000625') : _namespace_SIO('http://semanticscience.org/resource/SIO_000600') , _namespace_SIO('http://semanticscience.org/resource/SIO_000626') : _namespace_SIO('http://semanticscience.org/resource/SIO_000625') , _namespace_SIO('http://semanticscience.org/resource/SIO_000638') : _namespace_SIO('http://semanticscience.org/resource/SIO_000257') , _namespace_SIO('http://semanticscience.org/resource/SIO_000639') : _namespace_SIO('http://semanticscience.org/resource/SIO_000701') , _namespace_SIO('http://semanticscience.org/resource/SIO_000640') : _namespace_SIO('http://semanticscience.org/resource/SIO_000555') , _namespace_SIO('http://semanticscience.org/resource/SIO_000648') : _namespace_SIO('http://semanticscience.org/resource/SIO_000510') , _namespace_SIO('http://semanticscience.org/resource/SIO_000649') : _namespace_SIO('http://semanticscience.org/resource/SIO_000999') , _namespace_SIO('http://semanticscience.org/resource/SIO_000650') : _namespace_SIO('http://semanticscience.org/resource/SIO_000004') , _namespace_SIO('http://semanticscience.org/resource/SIO_000651') : _namespace_SIO('http://semanticscience.org/resource/SIO_000079') , _namespace_SIO('http://semanticscience.org/resource/SIO_000660') : _namespace_SIO('http://semanticscience.org/resource/SIO_000019') , _namespace_SIO('http://semanticscience.org/resource/SIO_000661') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000662') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000663') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000664') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000665') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000666') : _namespace_SIO('http://semanticscience.org/resource/SIO_000415') , _namespace_SIO('http://semanticscience.org/resource/SIO_000667') : _namespace_SIO('http://semanticscience.org/resource/SIO_000649') , _namespace_SIO('http://semanticscience.org/resource/SIO_000669') : _namespace_SIO('http://semanticscience.org/resource/SIO_000418') , _namespace_SIO('http://semanticscience.org/resource/SIO_000670') : _namespace_SIO('http://semanticscience.org/resource/SIO_000418') , _namespace_SIO('http://semanticscience.org/resource/SIO_000676') : _namespace_SIO('http://semanticscience.org/resource/SIO_000016') , _namespace_SIO('http://semanticscience.org/resource/SIO_000677') : _namespace_SIO('http://semanticscience.org/resource/SIO_000016') , _namespace_SIO('http://semanticscience.org/resource/SIO_000678') : _namespace_SIO('http://semanticscience.org/resource/SIO_000016') , _namespace_SIO('http://semanticscience.org/resource/SIO_000683') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_000686') : _namespace_SIO('http://semanticscience.org/resource/SIO_000285') , _namespace_SIO('http://semanticscience.org/resource/SIO_000688') : _namespace_SIO('http://semanticscience.org/resource/SIO_000285') , _namespace_SIO('http://semanticscience.org/resource/SIO_000689') : _namespace_SIO('http://semanticscience.org/resource/SIO_010367') , _namespace_SIO('http://semanticscience.org/resource/SIO_000690') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_000693') : _namespace_SIO('http://semanticscience.org/resource/SIO_000012') , _namespace_SIO('http://semanticscience.org/resource/SIO_000698') : _namespace_SIO('http://semanticscience.org/resource/SIO_000376') , _namespace_SIO('http://semanticscience.org/resource/SIO_000700') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_000704') : _namespace_SIO('http://semanticscience.org/resource/SIO_000678') , _namespace_SIO('http://semanticscience.org/resource/SIO_000705') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000706') : _namespace_SIO('http://semanticscience.org/resource/SIO_000676') , _namespace_SIO('http://semanticscience.org/resource/SIO_000711') : _namespace_SIO('http://semanticscience.org/resource/SIO_000706') , _namespace_SIO('http://semanticscience.org/resource/SIO_000712') : _namespace_SIO('http://semanticscience.org/resource/SIO_000706') , _namespace_SIO('http://semanticscience.org/resource/SIO_000713') : _namespace_SIO('http://semanticscience.org/resource/SIO_000712') , _namespace_SIO('http://semanticscience.org/resource/SIO_000714') : _namespace_SIO('http://semanticscience.org/resource/SIO_000712') , _namespace_SIO('http://semanticscience.org/resource/SIO_000715') : _namespace_SIO('http://semanticscience.org/resource/SIO_000712') , _namespace_SIO('http://semanticscience.org/resource/SIO_000716') : _namespace_SIO('http://semanticscience.org/resource/SIO_000498') , _namespace_SIO('http://semanticscience.org/resource/SIO_000717') : _namespace_SIO('http://semanticscience.org/resource/SIO_000712') , _namespace_SIO('http://semanticscience.org/resource/SIO_000721') : _namespace_SIO('http://semanticscience.org/resource/SIO_000678') , _namespace_SIO('http://semanticscience.org/resource/SIO_000722') : _namespace_SIO('http://semanticscience.org/resource/SIO_000725') , _namespace_SIO('http://semanticscience.org/resource/SIO_000723') : _namespace_SIO('http://semanticscience.org/resource/SIO_000724') , _namespace_SIO('http://semanticscience.org/resource/SIO_000724') : _namespace_SIO('http://semanticscience.org/resource/SIO_000353') , _namespace_SIO('http://semanticscience.org/resource/SIO_000725') : _namespace_SIO('http://semanticscience.org/resource/SIO_000696') , _namespace_SIO('http://semanticscience.org/resource/SIO_000726') : _namespace_SIO('http://semanticscience.org/resource/SIO_000706') , _namespace_SIO('http://semanticscience.org/resource/SIO_000727') : _namespace_SIO('http://semanticscience.org/resource/SIO_000726') , _namespace_SIO('http://semanticscience.org/resource/SIO_000728') : _namespace_SIO('http://semanticscience.org/resource/SIO_000730') , _namespace_SIO('http://semanticscience.org/resource/SIO_000730') : _namespace_SIO('http://semanticscience.org/resource/SIO_000115') , _namespace_SIO('http://semanticscience.org/resource/SIO_000731') : _namespace_SIO('http://semanticscience.org/resource/SIO_000115') , _namespace_SIO('http://semanticscience.org/resource/SIO_000732') : _namespace_SIO('http://semanticscience.org/resource/SIO_000728') , _namespace_SIO('http://semanticscience.org/resource/SIO_000740') : _namespace_SIO('http://semanticscience.org/resource/SIO_000608') , _namespace_SIO('http://semanticscience.org/resource/SIO_000741') : _namespace_SIO('http://semanticscience.org/resource/SIO_000465') , _namespace_SIO('http://semanticscience.org/resource/SIO_000742') : _namespace_SIO('http://semanticscience.org/resource/SIO_000741') , _namespace_SIO('http://semanticscience.org/resource/SIO_000743') : _namespace_SIO('http://semanticscience.org/resource/SIO_000741') , _namespace_SIO('http://semanticscience.org/resource/SIO_000750') : _namespace_SIO('http://semanticscience.org/resource/SIO_000602') , _namespace_SIO('http://semanticscience.org/resource/SIO_000751') : _namespace_SIO('http://semanticscience.org/resource/SIO_000555') , _namespace_SIO('http://semanticscience.org/resource/SIO_000760') : _namespace_SIO('http://semanticscience.org/resource/SIO_000755') , _namespace_SIO('http://semanticscience.org/resource/SIO_000766') : _namespace_SIO('http://semanticscience.org/resource/SIO_000328') , _namespace_SIO('http://semanticscience.org/resource/SIO_000767') : _namespace_SIO('http://semanticscience.org/resource/SIO_000013') , _namespace_SIO('http://semanticscience.org/resource/SIO_000768') : _namespace_SIO('http://semanticscience.org/resource/SIO_000179') , _namespace_SIO('http://semanticscience.org/resource/SIO_000769') : _namespace_SIO('http://semanticscience.org/resource/SIO_000052') , _namespace_SIO('http://semanticscience.org/resource/SIO_000770') : _namespace_SIO('http://semanticscience.org/resource/SIO_000052') , _namespace_SIO('http://semanticscience.org/resource/SIO_000771') : _namespace_SIO('http://semanticscience.org/resource/SIO_000088') , _namespace_SIO('http://semanticscience.org/resource/SIO_000777') : _namespace_SIO('http://semanticscience.org/resource/SIO_000639') , _namespace_SIO('http://semanticscience.org/resource/SIO_000778') : _namespace_SIO('http://semanticscience.org/resource/SIO_000378') , _namespace_SIO('http://semanticscience.org/resource/SIO_000780') : _namespace_SIO('http://semanticscience.org/resource/SIO_000690') , _namespace_SIO('http://semanticscience.org/resource/SIO_000783') : _namespace_SIO('http://semanticscience.org/resource/SIO_000370') , _namespace_SIO('http://semanticscience.org/resource/SIO_000784') : _namespace_SIO('http://semanticscience.org/resource/SIO_010029') , _namespace_SIO('http://semanticscience.org/resource/SIO_000785') : _namespace_SIO('http://semanticscience.org/resource/SIO_000136') , _namespace_SIO('http://semanticscience.org/resource/SIO_000786') : _namespace_SIO('http://semanticscience.org/resource/SIO_000078') , _namespace_SIO('http://semanticscience.org/resource/SIO_000787') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_000788') : _namespace_SIO('http://semanticscience.org/resource/SIO_000056') , _namespace_SIO('http://semanticscience.org/resource/SIO_000789') : _namespace_SIO('http://semanticscience.org/resource/SIO_000788') , _namespace_SIO('http://semanticscience.org/resource/SIO_000790') : _namespace_SIO('http://semanticscience.org/resource/SIO_000038') , _namespace_SIO('http://semanticscience.org/resource/SIO_000791') : _namespace_SIO('http://semanticscience.org/resource/SIO_000943') , _namespace_SIO('http://semanticscience.org/resource/SIO_000792') : _namespace_SIO('http://semanticscience.org/resource/SIO_000953') , _namespace_SIO('http://semanticscience.org/resource/SIO_000794') : _namespace_SIO('http://semanticscience.org/resource/SIO_000257') , _namespace_SIO('http://semanticscience.org/resource/SIO_000796') : _namespace_SIO('http://semanticscience.org/resource/SIO_000880') , _namespace_SIO('http://semanticscience.org/resource/SIO_000797') : _namespace_SIO('http://semanticscience.org/resource/SIO_000879') , _namespace_SIO('http://semanticscience.org/resource/SIO_000799') : _namespace_SIO('http://semanticscience.org/resource/SIO_000889') , _namespace_SIO('http://semanticscience.org/resource/SIO_000800') : _namespace_SIO('http://semanticscience.org/resource/SIO_000799') , _namespace_SIO('http://semanticscience.org/resource/SIO_000801') : _namespace_SIO('http://semanticscience.org/resource/SIO_000800') , _namespace_SIO('http://semanticscience.org/resource/SIO_000802') : _namespace_SIO('http://semanticscience.org/resource/SIO_000800') , _namespace_SIO('http://semanticscience.org/resource/SIO_000803') : _namespace_SIO('http://semanticscience.org/resource/SIO_000880') , _namespace_SIO('http://semanticscience.org/resource/SIO_000804') : _namespace_SIO('http://semanticscience.org/resource/SIO_000880') , _namespace_SIO('http://semanticscience.org/resource/SIO_000805') : _namespace_SIO('http://semanticscience.org/resource/SIO_010442') , _namespace_SIO('http://semanticscience.org/resource/SIO_000806') : _namespace_SIO('http://semanticscience.org/resource/SIO_010442') , _namespace_SIO('http://semanticscience.org/resource/SIO_000807') : _namespace_SIO('http://semanticscience.org/resource/SIO_000809') , _namespace_SIO('http://semanticscience.org/resource/SIO_000808') : _namespace_SIO('http://semanticscience.org/resource/SIO_000809') , _namespace_SIO('http://semanticscience.org/resource/SIO_000809') : _namespace_SIO('http://semanticscience.org/resource/SIO_000805') , _namespace_SIO('http://semanticscience.org/resource/SIO_000810') : _namespace_SIO('http://semanticscience.org/resource/SIO_000805') , _namespace_SIO('http://semanticscience.org/resource/SIO_000812') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000813') : _namespace_SIO('http://semanticscience.org/resource/SIO_000815') , _namespace_SIO('http://semanticscience.org/resource/SIO_000814') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000815') : _namespace_SIO('http://semanticscience.org/resource/SIO_000949') , _namespace_SIO('http://semanticscience.org/resource/SIO_000816') : _namespace_SIO('http://semanticscience.org/resource/SIO_000847') , _namespace_SIO('http://semanticscience.org/resource/SIO_000817') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000818') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000819') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000820') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000821') : _namespace_SIO('http://semanticscience.org/resource/SIO_000828') , _namespace_SIO('http://semanticscience.org/resource/SIO_000822') : _namespace_SIO('http://semanticscience.org/resource/SIO_000840') , _namespace_SIO('http://semanticscience.org/resource/SIO_000823') : _namespace_SIO('http://semanticscience.org/resource/SIO_000825') , _namespace_SIO('http://semanticscience.org/resource/SIO_000824') : _namespace_SIO('http://semanticscience.org/resource/SIO_000863') , _namespace_SIO('http://semanticscience.org/resource/SIO_000825') : _namespace_SIO('http://semanticscience.org/resource/SIO_000848') , _namespace_SIO('http://semanticscience.org/resource/SIO_000826') : _namespace_SIO('http://semanticscience.org/resource/SIO_000863') , _namespace_SIO('http://semanticscience.org/resource/SIO_000827') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000828') : _namespace_SIO('http://semanticscience.org/resource/SIO_000844') , _namespace_SIO('http://semanticscience.org/resource/SIO_000829') : _namespace_SIO('http://semanticscience.org/resource/SIO_000837') , _namespace_SIO('http://semanticscience.org/resource/SIO_000830') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000831') : _namespace_SIO('http://semanticscience.org/resource/SIO_000276') , _namespace_SIO('http://semanticscience.org/resource/SIO_000832') : _namespace_SIO('http://semanticscience.org/resource/SIO_000276') , _namespace_SIO('http://semanticscience.org/resource/SIO_000833') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000834') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000835') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000836') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000837') : _namespace_SIO('http://semanticscience.org/resource/SIO_000949') , _namespace_SIO('http://semanticscience.org/resource/SIO_000838') : _namespace_SIO('http://semanticscience.org/resource/SIO_000814') , _namespace_SIO('http://semanticscience.org/resource/SIO_000839') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000840') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000841') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000842') : _namespace_SIO('http://semanticscience.org/resource/SIO_000863') , _namespace_SIO('http://semanticscience.org/resource/SIO_000843') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000844') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000845') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000846') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000847') : _namespace_SIO('http://semanticscience.org/resource/SIO_000276') , _namespace_SIO('http://semanticscience.org/resource/SIO_000848') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000849') : _namespace_SIO('http://semanticscience.org/resource/SIO_000834') , _namespace_SIO('http://semanticscience.org/resource/SIO_000850') : _namespace_SIO('http://semanticscience.org/resource/SIO_000840') , _namespace_SIO('http://semanticscience.org/resource/SIO_000851') : _namespace_SIO('http://semanticscience.org/resource/SIO_000828') , _namespace_SIO('http://semanticscience.org/resource/SIO_000852') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000853') : _namespace_SIO('http://semanticscience.org/resource/SIO_000825') , _namespace_SIO('http://semanticscience.org/resource/SIO_000854') : _namespace_SIO('http://semanticscience.org/resource/SIO_000863') , _namespace_SIO('http://semanticscience.org/resource/SIO_000855') : _namespace_SIO('http://semanticscience.org/resource/SIO_000837') , _namespace_SIO('http://semanticscience.org/resource/SIO_000856') : _namespace_SIO('http://semanticscience.org/resource/SIO_000825') , _namespace_SIO('http://semanticscience.org/resource/SIO_000857') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000858') : _namespace_SIO('http://semanticscience.org/resource/SIO_000840') , _namespace_SIO('http://semanticscience.org/resource/SIO_000859') : _namespace_SIO('http://semanticscience.org/resource/SIO_000864') , _namespace_SIO('http://semanticscience.org/resource/SIO_000860') : _namespace_SIO('http://semanticscience.org/resource/SIO_000410') , _namespace_SIO('http://semanticscience.org/resource/SIO_000861') : _namespace_SIO('http://semanticscience.org/resource/SIO_000873') , _namespace_SIO('http://semanticscience.org/resource/SIO_000862') : _namespace_SIO('http://semanticscience.org/resource/SIO_000873') , _namespace_SIO('http://semanticscience.org/resource/SIO_000863') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000864') : _namespace_SIO('http://semanticscience.org/resource/SIO_000822') , _namespace_SIO('http://semanticscience.org/resource/SIO_000865') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000866') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000867') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000868') : _namespace_SIO('http://semanticscience.org/resource/SIO_000863') , _namespace_SIO('http://semanticscience.org/resource/SIO_000869') : _namespace_SIO('http://semanticscience.org/resource/SIO_000845') , _namespace_SIO('http://semanticscience.org/resource/SIO_000870') : _namespace_SIO('http://semanticscience.org/resource/SIO_000831') , _namespace_SIO('http://semanticscience.org/resource/SIO_000871') : _namespace_SIO('http://semanticscience.org/resource/SIO_000829') , _namespace_SIO('http://semanticscience.org/resource/SIO_000872') : _namespace_SIO('http://semanticscience.org/resource/SIO_000870') , _namespace_SIO('http://semanticscience.org/resource/SIO_000873') : _namespace_SIO('http://semanticscience.org/resource/SIO_000949') , _namespace_SIO('http://semanticscience.org/resource/SIO_000875') : _namespace_SIO('http://semanticscience.org/resource/SIO_000711') , _namespace_SIO('http://semanticscience.org/resource/SIO_000876') : _namespace_SIO('http://semanticscience.org/resource/SIO_000711') , _namespace_SIO('http://semanticscience.org/resource/SIO_000877') : _namespace_SIO('http://semanticscience.org/resource/SIO_000876') , _namespace_SIO('http://semanticscience.org/resource/SIO_000878') : _namespace_SIO('http://semanticscience.org/resource/SIO_000876') , _namespace_SIO('http://semanticscience.org/resource/SIO_000879') : _namespace_SIO('http://semanticscience.org/resource/SIO_000889') , _namespace_SIO('http://semanticscience.org/resource/SIO_000880') : _namespace_SIO('http://semanticscience.org/resource/SIO_000889') , _namespace_SIO('http://semanticscience.org/resource/SIO_000881') : _namespace_SIO('http://semanticscience.org/resource/SIO_000677') , _namespace_SIO('http://semanticscience.org/resource/SIO_000882') : _namespace_SIO('http://semanticscience.org/resource/SIO_000888') , _namespace_SIO('http://semanticscience.org/resource/SIO_000883') : _namespace_SIO('http://semanticscience.org/resource/SIO_000881') , _namespace_SIO('http://semanticscience.org/resource/SIO_000884') : _namespace_SIO('http://semanticscience.org/resource/SIO_000706') , _namespace_SIO('http://semanticscience.org/resource/SIO_000885') : _namespace_SIO('http://semanticscience.org/resource/SIO_000884') , _namespace_SIO('http://semanticscience.org/resource/SIO_000886') : _namespace_SIO('http://semanticscience.org/resource/SIO_000884') , _namespace_SIO('http://semanticscience.org/resource/SIO_000890') : _namespace_SIO('http://semanticscience.org/resource/SIO_000891') , _namespace_SIO('http://semanticscience.org/resource/SIO_000891') : _namespace_SIO('http://semanticscience.org/resource/SIO_000888') , _namespace_SIO('http://semanticscience.org/resource/SIO_000894') : _namespace_SIO('http://semanticscience.org/resource/SIO_000692') , _namespace_SIO('http://semanticscience.org/resource/SIO_000895') : _namespace_SIO('http://semanticscience.org/resource/SIO_000894') , _namespace_SIO('http://semanticscience.org/resource/SIO_000896') : _namespace_SIO('http://semanticscience.org/resource/SIO_000879') , _namespace_SIO('http://semanticscience.org/resource/SIO_000898') : _namespace_SIO('http://semanticscience.org/resource/SIO_000897') , _namespace_SIO('http://semanticscience.org/resource/SIO_000899') : _namespace_SIO('http://semanticscience.org/resource/SIO_010506') , _namespace_SIO('http://semanticscience.org/resource/SIO_000902') : _namespace_SIO('http://semanticscience.org/resource/SIO_000458') , _namespace_SIO('http://semanticscience.org/resource/SIO_000903') : _namespace_SIO('http://semanticscience.org/resource/SIO_000458') , _namespace_SIO('http://semanticscience.org/resource/SIO_000904') : _namespace_SIO('http://semanticscience.org/resource/SIO_000080') , _namespace_SIO('http://semanticscience.org/resource/SIO_000906') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000907') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000908') : _namespace_SIO('http://semanticscience.org/resource/SIO_000934') , _namespace_SIO('http://semanticscience.org/resource/SIO_000909') : _namespace_SIO('http://semanticscience.org/resource/SIO_000447') , _namespace_SIO('http://semanticscience.org/resource/SIO_000910') : _namespace_SIO('http://semanticscience.org/resource/SIO_000907') , _namespace_SIO('http://semanticscience.org/resource/SIO_000911') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000912') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_000913') : _namespace_SIO('http://semanticscience.org/resource/SIO_000912') , _namespace_SIO('http://semanticscience.org/resource/SIO_000914') : _namespace_SIO('http://semanticscience.org/resource/SIO_000912') , _namespace_SIO('http://semanticscience.org/resource/SIO_000920') : _namespace_SIO('http://semanticscience.org/resource/SIO_000367') , _namespace_SIO('http://semanticscience.org/resource/SIO_000921') : _namespace_SIO('http://semanticscience.org/resource/SIO_000367') , _namespace_SIO('http://semanticscience.org/resource/SIO_000922') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000923') : _namespace_SIO('http://semanticscience.org/resource/SIO_000898') , _namespace_SIO('http://semanticscience.org/resource/SIO_000924') : _namespace_SIO('http://semanticscience.org/resource/SIO_000612') , _namespace_SIO('http://semanticscience.org/resource/SIO_000926') : _namespace_SIO('http://semanticscience.org/resource/SIO_000957') , _namespace_SIO('http://semanticscience.org/resource/SIO_000927') : _namespace_SIO('http://semanticscience.org/resource/SIO_000957') , _namespace_SIO('http://semanticscience.org/resource/SIO_000928') : _namespace_SIO('http://semanticscience.org/resource/SIO_000956') , _namespace_SIO('http://semanticscience.org/resource/SIO_000929') : _namespace_SIO('http://semanticscience.org/resource/SIO_000940') , _namespace_SIO('http://semanticscience.org/resource/SIO_000930') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000931') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000932') : _namespace_SIO('http://semanticscience.org/resource/SIO_000911') , _namespace_SIO('http://semanticscience.org/resource/SIO_000933') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000934') : _namespace_SIO('http://semanticscience.org/resource/SIO_000083') , _namespace_SIO('http://semanticscience.org/resource/SIO_000935') : _namespace_SIO('http://semanticscience.org/resource/SIO_000940') , _namespace_SIO('http://semanticscience.org/resource/SIO_000936') : _namespace_SIO('http://semanticscience.org/resource/SIO_000937') , _namespace_SIO('http://semanticscience.org/resource/SIO_000937') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000938') : _namespace_SIO('http://semanticscience.org/resource/SIO_000937') , _namespace_SIO('http://semanticscience.org/resource/SIO_000939') : _namespace_SIO('http://semanticscience.org/resource/SIO_000937') , _namespace_SIO('http://semanticscience.org/resource/SIO_000940') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000941') : _namespace_SIO('http://semanticscience.org/resource/SIO_000969') , _namespace_SIO('http://semanticscience.org/resource/SIO_000942') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_000943') : _namespace_SIO('http://semanticscience.org/resource/SIO_000788') , _namespace_SIO('http://semanticscience.org/resource/SIO_000944') : _namespace_SIO('http://semanticscience.org/resource/SIO_000075') , _namespace_SIO('http://semanticscience.org/resource/SIO_000945') : _namespace_SIO('http://semanticscience.org/resource/SIO_000931') , _namespace_SIO('http://semanticscience.org/resource/SIO_000946') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000947') : _namespace_SIO('http://semanticscience.org/resource/SIO_000904') , _namespace_SIO('http://semanticscience.org/resource/SIO_000948') : _namespace_SIO('http://semanticscience.org/resource/SIO_000945') , _namespace_SIO('http://semanticscience.org/resource/SIO_000949') : _namespace_SIO('http://semanticscience.org/resource/SIO_000832') , _namespace_SIO('http://semanticscience.org/resource/SIO_000950') : _namespace_SIO('http://semanticscience.org/resource/SIO_000828') , _namespace_SIO('http://semanticscience.org/resource/SIO_000951') : _namespace_SIO('http://semanticscience.org/resource/SIO_000845') , _namespace_SIO('http://semanticscience.org/resource/SIO_000952') : _namespace_SIO('http://semanticscience.org/resource/SIO_000144') , _namespace_SIO('http://semanticscience.org/resource/SIO_000953') : _namespace_SIO('http://semanticscience.org/resource/SIO_000788') , _namespace_SIO('http://semanticscience.org/resource/SIO_000954') : _namespace_SIO('http://semanticscience.org/resource/SIO_010058') , _namespace_SIO('http://semanticscience.org/resource/SIO_000955') : _namespace_SIO('http://semanticscience.org/resource/SIO_000414') , _namespace_SIO('http://semanticscience.org/resource/SIO_000956') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_000957') : _namespace_SIO('http://semanticscience.org/resource/SIO_000956') , _namespace_SIO('http://semanticscience.org/resource/SIO_000959') : _namespace_SIO('http://semanticscience.org/resource/SIO_000005') , _namespace_SIO('http://semanticscience.org/resource/SIO_000960') : _namespace_SIO('http://semanticscience.org/resource/SIO_000959') , _namespace_SIO('http://semanticscience.org/resource/SIO_000961') : _namespace_SIO('http://semanticscience.org/resource/SIO_000959') , _namespace_SIO('http://semanticscience.org/resource/SIO_000962') : _namespace_SIO('http://semanticscience.org/resource/SIO_000959') , _namespace_SIO('http://semanticscience.org/resource/SIO_000963') : _namespace_SIO('http://semanticscience.org/resource/SIO_000033') , _namespace_SIO('http://semanticscience.org/resource/SIO_000964') : _namespace_SIO('http://semanticscience.org/resource/SIO_001043') , _namespace_SIO('http://semanticscience.org/resource/SIO_000965') : _namespace_SIO('http://semanticscience.org/resource/SIO_000436') , _namespace_SIO('http://semanticscience.org/resource/SIO_000966') : _namespace_SIO('http://semanticscience.org/resource/SIO_000965') , _namespace_SIO('http://semanticscience.org/resource/SIO_000967') : _namespace_SIO('http://semanticscience.org/resource/SIO_000965') , _namespace_SIO('http://semanticscience.org/resource/SIO_000969') : _namespace_SIO('http://semanticscience.org/resource/SIO_000593') , _namespace_SIO('http://semanticscience.org/resource/SIO_000977') : _namespace_SIO('http://semanticscience.org/resource/SIO_000786') , _namespace_SIO('http://semanticscience.org/resource/SIO_000978') : _namespace_SIO('http://semanticscience.org/resource/SIO_000786') , _namespace_SIO('http://semanticscience.org/resource/SIO_000979') : _namespace_SIO('http://semanticscience.org/resource/SIO_000786') , _namespace_SIO('http://semanticscience.org/resource/SIO_000980') : _namespace_SIO('http://semanticscience.org/resource/SIO_000104') , _namespace_SIO('http://semanticscience.org/resource/SIO_000981') : _namespace_SIO('http://semanticscience.org/resource/SIO_000104') , _namespace_SIO('http://semanticscience.org/resource/SIO_000982') : _namespace_SIO('http://semanticscience.org/resource/SIO_000104') , _namespace_SIO('http://semanticscience.org/resource/SIO_000984') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_000985') : _namespace_SIO('http://semanticscience.org/resource/SIO_010035') , _namespace_SIO('http://semanticscience.org/resource/SIO_000986') : _namespace_SIO('http://semanticscience.org/resource/SIO_010035') , _namespace_SIO('http://semanticscience.org/resource/SIO_000988') : _namespace_SIO('http://semanticscience.org/resource/SIO_010335') , _namespace_SIO('http://semanticscience.org/resource/SIO_000989') : _namespace_SIO('http://semanticscience.org/resource/SIO_000030') , _namespace_SIO('http://semanticscience.org/resource/SIO_000992') : _namespace_SIO('http://semanticscience.org/resource/SIO_000959') , _namespace_SIO('http://semanticscience.org/resource/SIO_000994') : _namespace_SIO('http://semanticscience.org/resource/SIO_000747') , _namespace_SIO('http://semanticscience.org/resource/SIO_000995') : _namespace_SIO('http://semanticscience.org/resource/SIO_000033') , _namespace_SIO('http://semanticscience.org/resource/SIO_000996') : _namespace_SIO('http://semanticscience.org/resource/SIO_000963') , _namespace_SIO('http://semanticscience.org/resource/SIO_000997') : _namespace_SIO('http://semanticscience.org/resource/SIO_000033') , _namespace_SIO('http://semanticscience.org/resource/SIO_001002') : _namespace_SIO('http://semanticscience.org/resource/SIO_001024') , _namespace_SIO('http://semanticscience.org/resource/SIO_001003') : _namespace_SIO('http://semanticscience.org/resource/SIO_001004') , _namespace_SIO('http://semanticscience.org/resource/SIO_001008') : _namespace_SIO('http://semanticscience.org/resource/SIO_001011') , _namespace_SIO('http://semanticscience.org/resource/SIO_001009') : _namespace_SIO('http://semanticscience.org/resource/SIO_001008') , _namespace_SIO('http://semanticscience.org/resource/SIO_001010') : _namespace_SIO('http://semanticscience.org/resource/SIO_001008') , _namespace_SIO('http://semanticscience.org/resource/SIO_001011') : _namespace_SIO('http://semanticscience.org/resource/SIO_000026') , _namespace_SIO('http://semanticscience.org/resource/SIO_001012') : _namespace_SIO('http://semanticscience.org/resource/SIO_010058') , _namespace_SIO('http://semanticscience.org/resource/SIO_001013') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_001014') : _namespace_SIO('http://semanticscience.org/resource/SIO_000475') , _namespace_SIO('http://semanticscience.org/resource/SIO_001015') : _namespace_SIO('http://semanticscience.org/resource/SIO_000475') , _namespace_SIO('http://semanticscience.org/resource/SIO_001016') : _namespace_SIO('http://semanticscience.org/resource/SIO_001062') , _namespace_SIO('http://semanticscience.org/resource/SIO_001017') : _namespace_SIO('http://semanticscience.org/resource/SIO_000136') , _namespace_SIO('http://semanticscience.org/resource/SIO_001018') : _namespace_SIO('http://semanticscience.org/resource/SIO_000257') , _namespace_SIO('http://semanticscience.org/resource/SIO_001019') : _namespace_SIO('http://semanticscience.org/resource/SIO_000258') , _namespace_SIO('http://semanticscience.org/resource/SIO_001020') : _namespace_SIO('http://semanticscience.org/resource/SIO_001019') , _namespace_SIO('http://semanticscience.org/resource/SIO_001021') : _namespace_SIO('http://semanticscience.org/resource/SIO_000638') , _namespace_SIO('http://semanticscience.org/resource/SIO_001022') : _namespace_SIO('http://semanticscience.org/resource/SIO_001024') , _namespace_SIO('http://semanticscience.org/resource/SIO_001023') : _namespace_SIO('http://semanticscience.org/resource/SIO_001024') , _namespace_SIO('http://semanticscience.org/resource/SIO_001024') : _namespace_SIO('http://semanticscience.org/resource/SIO_000999') , _namespace_SIO('http://semanticscience.org/resource/SIO_001025') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_001026') : _namespace_SIO('http://semanticscience.org/resource/SIO_000148') , _namespace_SIO('http://semanticscience.org/resource/SIO_001027') : _namespace_SIO('http://semanticscience.org/resource/SIO_000088') , _namespace_SIO('http://semanticscience.org/resource/SIO_001028') : _namespace_SIO('http://semanticscience.org/resource/SIO_001026') , _namespace_SIO('http://semanticscience.org/resource/SIO_001030') : _namespace_SIO('http://semanticscience.org/resource/SIO_000654') , _namespace_SIO('http://semanticscience.org/resource/SIO_001031') : _namespace_SIO('http://semanticscience.org/resource/SIO_000654') , _namespace_SIO('http://semanticscience.org/resource/SIO_001032') : _namespace_SIO('http://semanticscience.org/resource/SIO_000654') , _namespace_SIO('http://semanticscience.org/resource/SIO_001034') : _namespace_SIO('http://semanticscience.org/resource/SIO_001033') , _namespace_SIO('http://semanticscience.org/resource/SIO_001035') : _namespace_SIO('http://semanticscience.org/resource/SIO_001034') , _namespace_SIO('http://semanticscience.org/resource/SIO_001036') : _namespace_SIO('http://semanticscience.org/resource/SIO_001033') , _namespace_SIO('http://semanticscience.org/resource/SIO_001037') : _namespace_SIO('http://semanticscience.org/resource/SIO_001033') , _namespace_SIO('http://semanticscience.org/resource/SIO_001038') : _namespace_SIO('http://semanticscience.org/resource/SIO_001034') , _namespace_SIO('http://semanticscience.org/resource/SIO_001039') : _namespace_SIO('http://semanticscience.org/resource/SIO_001033') , _namespace_SIO('http://semanticscience.org/resource/SIO_001040') : _namespace_SIO('http://semanticscience.org/resource/SIO_000078') , _namespace_SIO('http://semanticscience.org/resource/SIO_001042') : _namespace_SIO('http://semanticscience.org/resource/SIO_000091') , _namespace_SIO('http://semanticscience.org/resource/SIO_001043') : _namespace_SIO('http://semanticscience.org/resource/SIO_000091') , _namespace_SIO('http://semanticscience.org/resource/SIO_001044') : _namespace_SIO('http://semanticscience.org/resource/SIO_010378') , _namespace_SIO('http://semanticscience.org/resource/SIO_001045') : _namespace_SIO('http://semanticscience.org/resource/SIO_001011') , _namespace_SIO('http://semanticscience.org/resource/SIO_001046') : _namespace_SIO('http://semanticscience.org/resource/SIO_001045') , _namespace_SIO('http://semanticscience.org/resource/SIO_001047') : _namespace_SIO('http://semanticscience.org/resource/SIO_001045') , _namespace_SIO('http://semanticscience.org/resource/SIO_001048') : _namespace_SIO('http://semanticscience.org/resource/SIO_000994') , _namespace_SIO('http://semanticscience.org/resource/SIO_001053') : _namespace_SIO('http://semanticscience.org/resource/SIO_000683') , _namespace_SIO('http://semanticscience.org/resource/SIO_001058') : _namespace_SIO('http://semanticscience.org/resource/SIO_001072') , _namespace_SIO('http://semanticscience.org/resource/SIO_001059') : _namespace_SIO('http://semanticscience.org/resource/SIO_000969') , _namespace_SIO('http://semanticscience.org/resource/SIO_001060') : _namespace_SIO('http://semanticscience.org/resource/SIO_000963') , _namespace_SIO('http://semanticscience.org/resource/SIO_001061') : _namespace_SIO('http://semanticscience.org/resource/SIO_000620') , _namespace_SIO('http://semanticscience.org/resource/SIO_001062') : _namespace_SIO('http://semanticscience.org/resource/SIO_001061') , _namespace_SIO('http://semanticscience.org/resource/SIO_001063') : _namespace_SIO('http://semanticscience.org/resource/SIO_000620') , _namespace_SIO('http://semanticscience.org/resource/SIO_001064') : _namespace_SIO('http://semanticscience.org/resource/SIO_000620') , _namespace_SIO('http://semanticscience.org/resource/SIO_001065') : _namespace_SIO('http://semanticscience.org/resource/SIO_001004') , _namespace_SIO('http://semanticscience.org/resource/SIO_001067') : _namespace_SIO('http://semanticscience.org/resource/SIO_000976') , _namespace_SIO('http://semanticscience.org/resource/SIO_001068') : _namespace_SIO('http://semanticscience.org/resource/SIO_000403') , _namespace_SIO('http://semanticscience.org/resource/SIO_001069') : _namespace_SIO('http://semanticscience.org/resource/SIO_000403') , _namespace_SIO('http://semanticscience.org/resource/SIO_001070') : _namespace_SIO('http://semanticscience.org/resource/SIO_000367') , _namespace_SIO('http://semanticscience.org/resource/SIO_001071') : _namespace_SIO('http://semanticscience.org/resource/SIO_000943') , _namespace_SIO('http://semanticscience.org/resource/SIO_001072') : _namespace_SIO('http://semanticscience.org/resource/SIO_000953') , _namespace_SIO('http://semanticscience.org/resource/SIO_001074') : _namespace_SIO('http://semanticscience.org/resource/SIO_001018') , _namespace_SIO('http://semanticscience.org/resource/SIO_001075') : _namespace_SIO('http://semanticscience.org/resource/SIO_000732') , _namespace_SIO('http://semanticscience.org/resource/SIO_001076') : _namespace_SIO('http://semanticscience.org/resource/SIO_000994') , _namespace_SIO('http://semanticscience.org/resource/SIO_001077') : _namespace_SIO('http://semanticscience.org/resource/SIO_000258') , _namespace_SIO('http://semanticscience.org/resource/SIO_001078') : _namespace_SIO('http://semanticscience.org/resource/SIO_001018') , _namespace_SIO('http://semanticscience.org/resource/SIO_001079') : _namespace_SIO('http://semanticscience.org/resource/SIO_000315') , _namespace_SIO('http://semanticscience.org/resource/SIO_001080') : _namespace_SIO('http://semanticscience.org/resource/SIO_000616') , _namespace_SIO('http://semanticscience.org/resource/SIO_001083') : _namespace_SIO('http://semanticscience.org/resource/SIO_000418') , _namespace_SIO('http://semanticscience.org/resource/SIO_001084') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_001085') : _namespace_SIO('http://semanticscience.org/resource/SIO_010340') , _namespace_SIO('http://semanticscience.org/resource/SIO_001086') : _namespace_SIO('http://semanticscience.org/resource/SIO_010340') , _namespace_SIO('http://semanticscience.org/resource/SIO_001087') : _namespace_SIO('http://semanticscience.org/resource/SIO_000385') , _namespace_SIO('http://semanticscience.org/resource/SIO_001089') : _namespace_SIO('http://semanticscience.org/resource/SIO_000257') , _namespace_SIO('http://semanticscience.org/resource/SIO_001090') : _namespace_SIO('http://semanticscience.org/resource/SIO_000051') , _namespace_SIO('http://semanticscience.org/resource/SIO_001091') : _namespace_SIO('http://semanticscience.org/resource/SIO_000051') , _namespace_SIO('http://semanticscience.org/resource/SIO_001092') : _namespace_SIO('http://semanticscience.org/resource/SIO_000026') , _namespace_SIO('http://semanticscience.org/resource/SIO_001093') : _namespace_SIO('http://semanticscience.org/resource/SIO_001092') , _namespace_SIO('http://semanticscience.org/resource/SIO_001094') : _namespace_SIO('http://semanticscience.org/resource/SIO_000537') , _namespace_SIO('http://semanticscience.org/resource/SIO_001095') : _namespace_SIO('http://semanticscience.org/resource/SIO_000537') , _namespace_SIO('http://semanticscience.org/resource/SIO_001099') : _namespace_SIO('http://semanticscience.org/resource/SIO_000625') , _namespace_SIO('http://semanticscience.org/resource/SIO_001100') : _namespace_SIO('http://semanticscience.org/resource/SIO_000626') , _namespace_SIO('http://semanticscience.org/resource/SIO_001103') : _namespace_SIO('http://semanticscience.org/resource/SIO_010366') , _namespace_SIO('http://semanticscience.org/resource/SIO_001104') : _namespace_SIO('http://semanticscience.org/resource/SIO_010366') , _namespace_SIO('http://semanticscience.org/resource/SIO_001105') : _namespace_SIO('http://semanticscience.org/resource/SIO_000492') , _namespace_SIO('http://semanticscience.org/resource/SIO_001106') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_001107') : _namespace_SIO('http://semanticscience.org/resource/SIO_000091') , _namespace_SIO('http://semanticscience.org/resource/SIO_001108') : _namespace_SIO('http://semanticscience.org/resource/SIO_000052') , _namespace_SIO('http://semanticscience.org/resource/SIO_001109') : _namespace_SIO('http://semanticscience.org/resource/SIO_001108') , _namespace_SIO('http://semanticscience.org/resource/SIO_001110') : _namespace_SIO('http://semanticscience.org/resource/SIO_001108') , _namespace_SIO('http://semanticscience.org/resource/SIO_001111') : _namespace_SIO('http://semanticscience.org/resource/SIO_001108') , _namespace_SIO('http://semanticscience.org/resource/SIO_001112') : _namespace_SIO('http://semanticscience.org/resource/SIO_000052') , _namespace_SIO('http://semanticscience.org/resource/SIO_001115') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_001116') : _namespace_SIO('http://semanticscience.org/resource/SIO_000150') , _namespace_SIO('http://semanticscience.org/resource/SIO_001117') : _namespace_SIO('http://semanticscience.org/resource/SIO_000150') , _namespace_SIO('http://semanticscience.org/resource/SIO_001119') : _namespace_SIO('http://semanticscience.org/resource/SIO_001122') , _namespace_SIO('http://semanticscience.org/resource/SIO_001120') : _namespace_SIO('http://semanticscience.org/resource/SIO_000983') , _namespace_SIO('http://semanticscience.org/resource/SIO_001121') : _namespace_SIO('http://semanticscience.org/resource/SIO_000983') , _namespace_SIO('http://semanticscience.org/resource/SIO_001122') : _namespace_SIO('http://semanticscience.org/resource/SIO_001121') , _namespace_SIO('http://semanticscience.org/resource/SIO_001123') : _namespace_SIO('http://semanticscience.org/resource/SIO_001121') , _namespace_SIO('http://semanticscience.org/resource/SIO_001124') : _namespace_SIO('http://semanticscience.org/resource/SIO_001121') , _namespace_SIO('http://semanticscience.org/resource/SIO_001125') : _namespace_SIO('http://semanticscience.org/resource/SIO_010287') , _namespace_SIO('http://semanticscience.org/resource/SIO_001126') : _namespace_SIO('http://semanticscience.org/resource/SIO_010287') , _namespace_SIO('http://semanticscience.org/resource/SIO_001127') : _namespace_SIO('http://semanticscience.org/resource/SIO_010287') , _namespace_SIO('http://semanticscience.org/resource/SIO_001128') : _namespace_SIO('http://semanticscience.org/resource/SIO_001127') , _namespace_SIO('http://semanticscience.org/resource/SIO_001129') : _namespace_SIO('http://semanticscience.org/resource/SIO_001127') , _namespace_SIO('http://semanticscience.org/resource/SIO_001130') : _namespace_SIO('http://semanticscience.org/resource/SIO_001126') , _namespace_SIO('http://semanticscience.org/resource/SIO_001131') : _namespace_SIO('http://semanticscience.org/resource/SIO_001126') , _namespace_SIO('http://semanticscience.org/resource/SIO_001132') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_001133') : _namespace_SIO('http://semanticscience.org/resource/SIO_001135') , _namespace_SIO('http://semanticscience.org/resource/SIO_001134') : _namespace_SIO('http://semanticscience.org/resource/SIO_001135') , _namespace_SIO('http://semanticscience.org/resource/SIO_001135') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_001136') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_001137') : _namespace_SIO('http://semanticscience.org/resource/SIO_001136') , _namespace_SIO('http://semanticscience.org/resource/SIO_001138') : _namespace_SIO('http://semanticscience.org/resource/SIO_001136') , _namespace_SIO('http://semanticscience.org/resource/SIO_001139') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_001140') : _namespace_SIO('http://semanticscience.org/resource/SIO_001139') , _namespace_SIO('http://semanticscience.org/resource/SIO_001141') : _namespace_SIO('http://semanticscience.org/resource/SIO_001139') , _namespace_SIO('http://semanticscience.org/resource/SIO_001142') : _namespace_SIO('http://semanticscience.org/resource/SIO_001139') , _namespace_SIO('http://semanticscience.org/resource/SIO_001143') : _namespace_SIO('http://semanticscience.org/resource/SIO_001136') , _namespace_SIO('http://semanticscience.org/resource/SIO_001144') : _namespace_SIO('http://semanticscience.org/resource/SIO_001135') , _namespace_SIO('http://semanticscience.org/resource/SIO_001146') : _namespace_SIO('http://semanticscience.org/resource/SIO_001151') , _namespace_SIO('http://semanticscience.org/resource/SIO_001147') : _namespace_SIO('http://semanticscience.org/resource/SIO_001151') , _namespace_SIO('http://semanticscience.org/resource/SIO_001148') : _namespace_SIO('http://semanticscience.org/resource/SIO_001150') , _namespace_SIO('http://semanticscience.org/resource/SIO_001149') : _namespace_SIO('http://semanticscience.org/resource/SIO_001150') , _namespace_SIO('http://semanticscience.org/resource/SIO_001150') : _namespace_SIO('http://semanticscience.org/resource/SIO_001145') , _namespace_SIO('http://semanticscience.org/resource/SIO_001151') : _namespace_SIO('http://semanticscience.org/resource/SIO_001145') , _namespace_SIO('http://semanticscience.org/resource/SIO_001152') : _namespace_SIO('http://semanticscience.org/resource/SIO_001151') , _namespace_SIO('http://semanticscience.org/resource/SIO_001153') : _namespace_SIO('http://semanticscience.org/resource/SIO_001150') , _namespace_SIO('http://semanticscience.org/resource/SIO_001160') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_001161') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_001162') : _namespace_SIO('http://semanticscience.org/resource/SIO_000794') , _namespace_SIO('http://semanticscience.org/resource/SIO_001163') : _namespace_SIO('http://semanticscience.org/resource/SIO_001162') , _namespace_SIO('http://semanticscience.org/resource/SIO_001164') : _namespace_SIO('http://semanticscience.org/resource/SIO_001162') , _namespace_SIO('http://semanticscience.org/resource/SIO_001165') : _namespace_SIO('http://semanticscience.org/resource/SIO_000602') , _namespace_SIO('http://semanticscience.org/resource/SIO_001167') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_001168') : _namespace_SIO('http://semanticscience.org/resource/SIO_000612') , _namespace_SIO('http://semanticscience.org/resource/SIO_001170') : _namespace_SIO('http://semanticscience.org/resource/SIO_000612') , _namespace_SIO('http://semanticscience.org/resource/SIO_001171') : _namespace_SIO('http://semanticscience.org/resource/SIO_000897') , _namespace_SIO('http://semanticscience.org/resource/SIO_001172') : _namespace_SIO('http://semanticscience.org/resource/SIO_001171') , _namespace_SIO('http://semanticscience.org/resource/SIO_001173') : _namespace_SIO('http://semanticscience.org/resource/SIO_001177') , _namespace_SIO('http://semanticscience.org/resource/SIO_001174') : _namespace_SIO('http://semanticscience.org/resource/SIO_010008') , _namespace_SIO('http://semanticscience.org/resource/SIO_001175') : _namespace_SIO('http://semanticscience.org/resource/SIO_001174') , _namespace_SIO('http://semanticscience.org/resource/SIO_001176') : _namespace_SIO('http://semanticscience.org/resource/SIO_001174') , _namespace_SIO('http://semanticscience.org/resource/SIO_001177') : _namespace_SIO('http://semanticscience.org/resource/SIO_010071') , _namespace_SIO('http://semanticscience.org/resource/SIO_001178') : _namespace_SIO('http://semanticscience.org/resource/SIO_001177') , _namespace_SIO('http://semanticscience.org/resource/SIO_001179') : _namespace_SIO('http://semanticscience.org/resource/SIO_000966') , _namespace_SIO('http://semanticscience.org/resource/SIO_001180') : _namespace_SIO('http://semanticscience.org/resource/SIO_000966') , _namespace_SIO('http://semanticscience.org/resource/SIO_001181') : _namespace_SIO('http://semanticscience.org/resource/SIO_000967') , _namespace_SIO('http://semanticscience.org/resource/SIO_001182') : _namespace_SIO('http://semanticscience.org/resource/SIO_000967') , _namespace_SIO('http://semanticscience.org/resource/SIO_001183') : _namespace_SIO('http://semanticscience.org/resource/SIO_000256') , _namespace_SIO('http://semanticscience.org/resource/SIO_001184') : _namespace_SIO('http://semanticscience.org/resource/SIO_001018') , _namespace_SIO('http://semanticscience.org/resource/SIO_001185') : _namespace_SIO('http://semanticscience.org/resource/SIO_000731') , _namespace_SIO('http://semanticscience.org/resource/SIO_010000') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_010001') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_010003') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_010004') : _namespace_SIO('http://semanticscience.org/resource/SIO_000004') , _namespace_SIO('http://semanticscience.org/resource/SIO_010005') : _namespace_SIO('http://semanticscience.org/resource/SIO_010020') , _namespace_SIO('http://semanticscience.org/resource/SIO_010011') : _namespace_SIO('http://semanticscience.org/resource/SIO_010072') , _namespace_SIO('http://semanticscience.org/resource/SIO_010014') : _namespace_SIO('http://semanticscience.org/resource/SIO_011119') , _namespace_SIO('http://semanticscience.org/resource/SIO_010019') : _namespace_SIO('http://semanticscience.org/resource/SIO_000472') , _namespace_SIO('http://semanticscience.org/resource/SIO_010022') : _namespace_SIO('http://semanticscience.org/resource/SIO_011119') , _namespace_SIO('http://semanticscience.org/resource/SIO_010023') : _namespace_SIO('http://semanticscience.org/resource/SIO_011119') , _namespace_SIO('http://semanticscience.org/resource/SIO_010024') : _namespace_SIO('http://semanticscience.org/resource/SIO_011119') , _namespace_SIO('http://semanticscience.org/resource/SIO_010026') : _namespace_SIO('http://semanticscience.org/resource/SIO_010028') , _namespace_SIO('http://semanticscience.org/resource/SIO_010028') : _namespace_SIO('http://semanticscience.org/resource/SIO_010019') , _namespace_SIO('http://semanticscience.org/resource/SIO_010029') : _namespace_SIO('http://semanticscience.org/resource/SIO_000475') , _namespace_SIO('http://semanticscience.org/resource/SIO_010030') : _namespace_SIO('http://semanticscience.org/resource/SIO_010072') , _namespace_SIO('http://semanticscience.org/resource/SIO_010031') : _namespace_SIO('http://semanticscience.org/resource/SIO_000732') , _namespace_SIO('http://semanticscience.org/resource/SIO_010032') : _namespace_SIO('http://semanticscience.org/resource/SIO_000729') , _namespace_SIO('http://semanticscience.org/resource/SIO_010033') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010034') : _namespace_SIO('http://semanticscience.org/resource/SIO_010496') , _namespace_SIO('http://semanticscience.org/resource/SIO_010035') : _namespace_SIO('http://semanticscience.org/resource/SIO_010335') , _namespace_SIO('http://semanticscience.org/resource/SIO_010038') : _namespace_SIO('http://semanticscience.org/resource/SIO_011125') , _namespace_SIO('http://semanticscience.org/resource/SIO_010039') : _namespace_SIO('http://semanticscience.org/resource/SIO_010411') , _namespace_SIO('http://semanticscience.org/resource/SIO_010040') : _namespace_SIO('http://semanticscience.org/resource/SIO_010049') , _namespace_SIO('http://semanticscience.org/resource/SIO_010041') : _namespace_SIO('http://semanticscience.org/resource/SIO_010049') , _namespace_SIO('http://semanticscience.org/resource/SIO_010042') : _namespace_SIO('http://semanticscience.org/resource/SIO_010335') , _namespace_SIO('http://semanticscience.org/resource/SIO_010044') : _namespace_SIO('http://semanticscience.org/resource/SIO_010004') , _namespace_SIO('http://semanticscience.org/resource/SIO_010045') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010046') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_010047') : _namespace_SIO('http://semanticscience.org/resource/SIO_010020') , _namespace_SIO('http://semanticscience.org/resource/SIO_010048') : _namespace_SIO('http://semanticscience.org/resource/SIO_010029') , _namespace_SIO('http://semanticscience.org/resource/SIO_010049') : _namespace_SIO('http://semanticscience.org/resource/SIO_000019') , _namespace_SIO('http://semanticscience.org/resource/SIO_010050') : _namespace_SIO('http://semanticscience.org/resource/SIO_010040') , _namespace_SIO('http://semanticscience.org/resource/SIO_010051') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_010052') : _namespace_SIO('http://semanticscience.org/resource/SIO_010029') , _namespace_SIO('http://semanticscience.org/resource/SIO_010053') : _namespace_SIO('http://semanticscience.org/resource/SIO_010028') , _namespace_SIO('http://semanticscience.org/resource/SIO_010054') : _namespace_SIO('http://semanticscience.org/resource/SIO_010046') , _namespace_SIO('http://semanticscience.org/resource/SIO_010056') : _namespace_SIO('http://semanticscience.org/resource/SIO_000475') , _namespace_SIO('http://semanticscience.org/resource/SIO_010057') : _namespace_SIO('http://semanticscience.org/resource/SIO_000475') , _namespace_SIO('http://semanticscience.org/resource/SIO_010058') : _namespace_SIO('http://semanticscience.org/resource/SIO_010057') , _namespace_SIO('http://semanticscience.org/resource/SIO_010059') : _namespace_SIO('http://semanticscience.org/resource/SIO_010057') , _namespace_SIO('http://semanticscience.org/resource/SIO_010060') : _namespace_SIO('http://semanticscience.org/resource/SIO_010053') , _namespace_SIO('http://semanticscience.org/resource/SIO_010061') : _namespace_SIO('http://semanticscience.org/resource/SIO_010028') , _namespace_SIO('http://semanticscience.org/resource/SIO_010064') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010065') : _namespace_SIO('http://semanticscience.org/resource/SIO_000472') , _namespace_SIO('http://semanticscience.org/resource/SIO_010066') : _namespace_SIO('http://semanticscience.org/resource/SIO_010065') , _namespace_SIO('http://semanticscience.org/resource/SIO_010067') : _namespace_SIO('http://semanticscience.org/resource/SIO_010066') , _namespace_SIO('http://semanticscience.org/resource/SIO_010068') : _namespace_SIO('http://semanticscience.org/resource/SIO_010066') , _namespace_SIO('http://semanticscience.org/resource/SIO_010070') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010074') : _namespace_SIO('http://semanticscience.org/resource/SIO_010471') , _namespace_SIO('http://semanticscience.org/resource/SIO_010075') : _namespace_SIO('http://semanticscience.org/resource/SIO_010335') , _namespace_SIO('http://semanticscience.org/resource/SIO_010076') : _namespace_SIO('http://semanticscience.org/resource/SIO_010038') , _namespace_SIO('http://semanticscience.org/resource/SIO_010077') : _namespace_SIO('http://semanticscience.org/resource/SIO_010338') , _namespace_SIO('http://semanticscience.org/resource/SIO_010085') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010086') : _namespace_SIO('http://semanticscience.org/resource/SIO_010085') , _namespace_SIO('http://semanticscience.org/resource/SIO_010087') : _namespace_SIO('http://semanticscience.org/resource/SIO_010338') , _namespace_SIO('http://semanticscience.org/resource/SIO_010088') : _namespace_SIO('http://semanticscience.org/resource/SIO_000542') , _namespace_SIO('http://semanticscience.org/resource/SIO_010089') : _namespace_SIO('http://semanticscience.org/resource/SIO_010088') , _namespace_SIO('http://semanticscience.org/resource/SIO_010090') : _namespace_SIO('http://semanticscience.org/resource/SIO_010088') , _namespace_SIO('http://semanticscience.org/resource/SIO_010091') : _namespace_SIO('http://semanticscience.org/resource/SIO_010088') , _namespace_SIO('http://semanticscience.org/resource/SIO_010094') : _namespace_SIO('http://semanticscience.org/resource/SIO_000542') , _namespace_SIO('http://semanticscience.org/resource/SIO_010099') : _namespace_SIO('http://semanticscience.org/resource/SIO_010450') , _namespace_SIO('http://semanticscience.org/resource/SIO_010278') : _namespace_SIO('http://semanticscience.org/resource/SIO_000476') , _namespace_SIO('http://semanticscience.org/resource/SIO_010284') : _namespace_SIO('http://semanticscience.org/resource/SIO_000576') , _namespace_SIO('http://semanticscience.org/resource/SIO_010287') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_010295') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_010296') : _namespace_SIO('http://semanticscience.org/resource/SIO_000609') , _namespace_SIO('http://semanticscience.org/resource/SIO_010298') : _namespace_SIO('http://semanticscience.org/resource/SIO_010019') , _namespace_SIO('http://semanticscience.org/resource/SIO_010307') : _namespace_SIO('http://semanticscience.org/resource/SIO_010345') , _namespace_SIO('http://semanticscience.org/resource/SIO_010308') : _namespace_SIO('http://semanticscience.org/resource/SIO_010013') , _namespace_SIO('http://semanticscience.org/resource/SIO_010309') : _namespace_SIO('http://semanticscience.org/resource/SIO_010308') , _namespace_SIO('http://semanticscience.org/resource/SIO_010310') : _namespace_SIO('http://semanticscience.org/resource/SIO_010308') , _namespace_SIO('http://semanticscience.org/resource/SIO_010334') : _namespace_SIO('http://semanticscience.org/resource/SIO_010071') , _namespace_SIO('http://semanticscience.org/resource/SIO_010336') : _namespace_SIO('http://semanticscience.org/resource/SIO_010075') , _namespace_SIO('http://semanticscience.org/resource/SIO_010337') : _namespace_SIO('http://semanticscience.org/resource/SIO_010075') , _namespace_SIO('http://semanticscience.org/resource/SIO_010338') : _namespace_SIO('http://semanticscience.org/resource/SIO_011125') , _namespace_SIO('http://semanticscience.org/resource/SIO_010340') : _namespace_SIO('http://semanticscience.org/resource/SIO_000376') , _namespace_SIO('http://semanticscience.org/resource/SIO_010344') : _namespace_SIO('http://semanticscience.org/resource/SIO_011125') , _namespace_SIO('http://semanticscience.org/resource/SIO_010347') : _namespace_SIO('http://semanticscience.org/resource/SIO_000343') , _namespace_SIO('http://semanticscience.org/resource/SIO_010349') : _namespace_SIO('http://semanticscience.org/resource/SIO_000698') , _namespace_SIO('http://semanticscience.org/resource/SIO_010351') : _namespace_SIO('http://semanticscience.org/resource/SIO_000376') , _namespace_SIO('http://semanticscience.org/resource/SIO_010353') : _namespace_SIO('http://semanticscience.org/resource/SIO_000494') , _namespace_SIO('http://semanticscience.org/resource/SIO_010354') : _namespace_SIO('http://semanticscience.org/resource/SIO_010347') , _namespace_SIO('http://semanticscience.org/resource/SIO_010355') : _namespace_SIO('http://semanticscience.org/resource/SIO_010347') , _namespace_SIO('http://semanticscience.org/resource/SIO_010358') : _namespace_SIO('http://semanticscience.org/resource/SIO_010360') , _namespace_SIO('http://semanticscience.org/resource/SIO_010359') : _namespace_SIO('http://semanticscience.org/resource/SIO_010360') , _namespace_SIO('http://semanticscience.org/resource/SIO_010360') : _namespace_SIO('http://semanticscience.org/resource/SIO_000376') , _namespace_SIO('http://semanticscience.org/resource/SIO_010362') : _namespace_SIO('http://semanticscience.org/resource/SIO_010423') , _namespace_SIO('http://semanticscience.org/resource/SIO_010364') : _namespace_SIO('http://semanticscience.org/resource/SIO_000692') , _namespace_SIO('http://semanticscience.org/resource/SIO_010365') : _namespace_SIO('http://semanticscience.org/resource/SIO_010364') , _namespace_SIO('http://semanticscience.org/resource/SIO_010366') : _namespace_SIO('http://semanticscience.org/resource/SIO_010364') , _namespace_SIO('http://semanticscience.org/resource/SIO_010367') : _namespace_SIO('http://semanticscience.org/resource/SIO_010364') , _namespace_SIO('http://semanticscience.org/resource/SIO_010368') : _namespace_SIO('http://semanticscience.org/resource/SIO_000692') , _namespace_SIO('http://semanticscience.org/resource/SIO_010369') : _namespace_SIO('http://semanticscience.org/resource/SIO_010364') , _namespace_SIO('http://semanticscience.org/resource/SIO_010370') : _namespace_SIO('http://semanticscience.org/resource/SIO_010369') , _namespace_SIO('http://semanticscience.org/resource/SIO_010371') : _namespace_SIO('http://semanticscience.org/resource/SIO_010369') , _namespace_SIO('http://semanticscience.org/resource/SIO_010372') : _namespace_SIO('http://semanticscience.org/resource/SIO_010374') , _namespace_SIO('http://semanticscience.org/resource/SIO_010373') : _namespace_SIO('http://semanticscience.org/resource/SIO_010374') , _namespace_SIO('http://semanticscience.org/resource/SIO_010374') : _namespace_SIO('http://semanticscience.org/resource/SIO_010364') , _namespace_SIO('http://semanticscience.org/resource/SIO_010377') : _namespace_SIO('http://semanticscience.org/resource/SIO_010000') , _namespace_SIO('http://semanticscience.org/resource/SIO_010378') : _namespace_SIO('http://semanticscience.org/resource/SIO_010000') , _namespace_SIO('http://semanticscience.org/resource/SIO_010379') : _namespace_SIO('http://semanticscience.org/resource/SIO_010378') , _namespace_SIO('http://semanticscience.org/resource/SIO_010383') : _namespace_SIO('http://semanticscience.org/resource/SIO_000619') , _namespace_SIO('http://semanticscience.org/resource/SIO_010411') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_010412') : _namespace_SIO('http://semanticscience.org/resource/SIO_001050') , _namespace_SIO('http://semanticscience.org/resource/SIO_010414') : _namespace_SIO('http://semanticscience.org/resource/SIO_010000') , _namespace_SIO('http://semanticscience.org/resource/SIO_010415') : _namespace_SIO('http://semanticscience.org/resource/SIO_010000') , _namespace_SIO('http://semanticscience.org/resource/SIO_010416') : _namespace_SIO('http://semanticscience.org/resource/SIO_010427') , _namespace_SIO('http://semanticscience.org/resource/SIO_010417') : _namespace_SIO('http://semanticscience.org/resource/SIO_010427') , _namespace_SIO('http://semanticscience.org/resource/SIO_010418') : _namespace_SIO('http://semanticscience.org/resource/SIO_010427') , _namespace_SIO('http://semanticscience.org/resource/SIO_010419') : _namespace_SIO('http://semanticscience.org/resource/SIO_011125') , _namespace_SIO('http://semanticscience.org/resource/SIO_010420') : _namespace_SIO('http://semanticscience.org/resource/SIO_010437') , _namespace_SIO('http://semanticscience.org/resource/SIO_010424') : _namespace_SIO('http://semanticscience.org/resource/SIO_010426') , _namespace_SIO('http://semanticscience.org/resource/SIO_010425') : _namespace_SIO('http://semanticscience.org/resource/SIO_010426') , _namespace_SIO('http://semanticscience.org/resource/SIO_010426') : _namespace_SIO('http://semanticscience.org/resource/SIO_011126') , _namespace_SIO('http://semanticscience.org/resource/SIO_010427') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_010428') : _namespace_SIO('http://semanticscience.org/resource/SIO_000881') , _namespace_SIO('http://semanticscience.org/resource/SIO_010429') : _namespace_SIO('http://semanticscience.org/resource/SIO_010462') , _namespace_SIO('http://semanticscience.org/resource/SIO_010430') : _namespace_SIO('http://semanticscience.org/resource/SIO_010428') , _namespace_SIO('http://semanticscience.org/resource/SIO_010431') : _namespace_SIO('http://semanticscience.org/resource/SIO_010428') , _namespace_SIO('http://semanticscience.org/resource/SIO_010433') : _namespace_SIO('http://semanticscience.org/resource/SIO_010033') , _namespace_SIO('http://semanticscience.org/resource/SIO_010434') : _namespace_SIO('http://semanticscience.org/resource/SIO_010436') , _namespace_SIO('http://semanticscience.org/resource/SIO_010435') : _namespace_SIO('http://semanticscience.org/resource/SIO_010436') , _namespace_SIO('http://semanticscience.org/resource/SIO_010437') : _namespace_SIO('http://semanticscience.org/resource/SIO_011125') , _namespace_SIO('http://semanticscience.org/resource/SIO_010438') : _namespace_SIO('http://semanticscience.org/resource/SIO_010437') , _namespace_SIO('http://semanticscience.org/resource/SIO_010439') : _namespace_SIO('http://semanticscience.org/resource/SIO_010437') , _namespace_SIO('http://semanticscience.org/resource/SIO_010440') : _namespace_SIO('http://semanticscience.org/resource/SIO_010439') , _namespace_SIO('http://semanticscience.org/resource/SIO_010442') : _namespace_SIO('http://semanticscience.org/resource/SIO_001011') , _namespace_SIO('http://semanticscience.org/resource/SIO_010445') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010446') : _namespace_SIO('http://semanticscience.org/resource/SIO_010085') , _namespace_SIO('http://semanticscience.org/resource/SIO_010447') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010448') : _namespace_SIO('http://semanticscience.org/resource/SIO_010444') , _namespace_SIO('http://semanticscience.org/resource/SIO_010451') : _namespace_SIO('http://semanticscience.org/resource/SIO_010095') , _namespace_SIO('http://semanticscience.org/resource/SIO_010452') : _namespace_SIO('http://semanticscience.org/resource/SIO_010049') , _namespace_SIO('http://semanticscience.org/resource/SIO_010453') : _namespace_SIO('http://semanticscience.org/resource/SIO_010427') , _namespace_SIO('http://semanticscience.org/resource/SIO_010454') : _namespace_SIO('http://semanticscience.org/resource/SIO_010427') , _namespace_SIO('http://semanticscience.org/resource/SIO_010456') : _namespace_SIO('http://semanticscience.org/resource/SIO_010410') , _namespace_SIO('http://semanticscience.org/resource/SIO_010461') : _namespace_SIO('http://semanticscience.org/resource/SIO_000810') , _namespace_SIO('http://semanticscience.org/resource/SIO_010462') : _namespace_SIO('http://semanticscience.org/resource/SIO_011126') , _namespace_SIO('http://semanticscience.org/resource/SIO_010463') : _namespace_SIO('http://semanticscience.org/resource/SIO_011126') , _namespace_SIO('http://semanticscience.org/resource/SIO_010464') : _namespace_SIO('http://semanticscience.org/resource/SIO_000810') , _namespace_SIO('http://semanticscience.org/resource/SIO_010465') : _namespace_SIO('http://semanticscience.org/resource/SIO_010497') , _namespace_SIO('http://semanticscience.org/resource/SIO_010468') : _namespace_SIO('http://semanticscience.org/resource/SIO_010471') , _namespace_SIO('http://semanticscience.org/resource/SIO_010469') : _namespace_SIO('http://semanticscience.org/resource/SIO_010471') , _namespace_SIO('http://semanticscience.org/resource/SIO_010471') : _namespace_SIO('http://semanticscience.org/resource/SIO_010071') , _namespace_SIO('http://semanticscience.org/resource/SIO_010496') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010498') : _namespace_SIO('http://semanticscience.org/resource/SIO_011118') , _namespace_SIO('http://semanticscience.org/resource/SIO_010499') : _namespace_SIO('http://semanticscience.org/resource/SIO_011118') , _namespace_SIO('http://semanticscience.org/resource/SIO_010500') : _namespace_SIO('http://semanticscience.org/resource/SIO_011118') , _namespace_SIO('http://semanticscience.org/resource/SIO_010501') : _namespace_SIO('http://semanticscience.org/resource/SIO_011118') , _namespace_SIO('http://semanticscience.org/resource/SIO_010502') : _namespace_SIO('http://semanticscience.org/resource/SIO_010498') , _namespace_SIO('http://semanticscience.org/resource/SIO_010503') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010504') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010505') : _namespace_SIO('http://semanticscience.org/resource/SIO_010005') , _namespace_SIO('http://semanticscience.org/resource/SIO_010507') : _namespace_SIO('http://semanticscience.org/resource/SIO_010345') , _namespace_SIO('http://semanticscience.org/resource/SIO_010510') : _namespace_SIO('http://semanticscience.org/resource/SIO_010345') , _namespace_SIO('http://semanticscience.org/resource/SIO_010511') : _namespace_SIO('http://semanticscience.org/resource/SIO_010510') , _namespace_SIO('http://semanticscience.org/resource/SIO_010512') : _namespace_SIO('http://semanticscience.org/resource/SIO_010510') , _namespace_SIO('http://semanticscience.org/resource/SIO_010513') : _namespace_SIO('http://semanticscience.org/resource/SIO_010512') , _namespace_SIO('http://semanticscience.org/resource/SIO_010514') : _namespace_SIO('http://semanticscience.org/resource/SIO_010512') , _namespace_SIO('http://semanticscience.org/resource/SIO_010515') : _namespace_SIO('http://semanticscience.org/resource/SIO_010510') , _namespace_SIO('http://semanticscience.org/resource/SIO_010516') : _namespace_SIO('http://semanticscience.org/resource/SIO_010345') , _namespace_SIO('http://semanticscience.org/resource/SIO_010517') : _namespace_SIO('http://semanticscience.org/resource/SIO_010345') , _namespace_SIO('http://semanticscience.org/resource/SIO_010518') : _namespace_SIO('http://semanticscience.org/resource/SIO_010516') , _namespace_SIO('http://semanticscience.org/resource/SIO_010519') : _namespace_SIO('http://semanticscience.org/resource/SIO_010518') , _namespace_SIO('http://semanticscience.org/resource/SIO_010520') : _namespace_SIO('http://semanticscience.org/resource/SIO_010518') , _namespace_SIO('http://semanticscience.org/resource/SIO_010521') : _namespace_SIO('http://semanticscience.org/resource/SIO_010520') , _namespace_SIO('http://semanticscience.org/resource/SIO_010522') : _namespace_SIO('http://semanticscience.org/resource/SIO_010519') , _namespace_SIO('http://semanticscience.org/resource/SIO_010523') : _namespace_SIO('http://semanticscience.org/resource/SIO_010519') , _namespace_SIO('http://semanticscience.org/resource/SIO_010525') : _namespace_SIO('http://semanticscience.org/resource/SIO_010526') , _namespace_SIO('http://semanticscience.org/resource/SIO_010527') : _namespace_SIO('http://semanticscience.org/resource/SIO_010526') , _namespace_SIO('http://semanticscience.org/resource/SIO_010528') : _namespace_SIO('http://semanticscience.org/resource/SIO_010526') , _namespace_SIO('http://semanticscience.org/resource/SIO_010530') : _namespace_SIO('http://semanticscience.org/resource/SIO_010023') , _namespace_SIO('http://semanticscience.org/resource/SIO_010531') : _namespace_SIO('http://semanticscience.org/resource/SIO_010065') , _namespace_SIO('http://semanticscience.org/resource/SIO_010532') : _namespace_SIO('http://semanticscience.org/resource/SIO_010525') , _namespace_SIO('http://semanticscience.org/resource/SIO_010533') : _namespace_SIO('http://semanticscience.org/resource/SIO_010525') , _namespace_SIO('http://semanticscience.org/resource/SIO_010673') : _namespace_SIO('http://semanticscience.org/resource/SIO_010298') , _namespace_SIO('http://semanticscience.org/resource/SIO_010775') : _namespace_SIO('http://semanticscience.org/resource/SIO_010455') , _namespace_SIO('http://semanticscience.org/resource/SIO_010776') : _namespace_SIO('http://semanticscience.org/resource/SIO_010775') , _namespace_SIO('http://semanticscience.org/resource/SIO_010777') : _namespace_SIO('http://semanticscience.org/resource/SIO_010775') , _namespace_SIO('http://semanticscience.org/resource/SIO_010778') : _namespace_SIO('http://semanticscience.org/resource/SIO_010775') , _namespace_SIO('http://semanticscience.org/resource/SIO_010779') : _namespace_SIO('http://semanticscience.org/resource/SIO_010455') , _namespace_SIO('http://semanticscience.org/resource/SIO_010781') : _namespace_SIO('http://semanticscience.org/resource/SIO_010780') , _namespace_SIO('http://semanticscience.org/resource/SIO_010782') : _namespace_SIO('http://semanticscience.org/resource/SIO_010780') , _namespace_SIO('http://semanticscience.org/resource/SIO_010783') : _namespace_SIO('http://semanticscience.org/resource/SIO_010780') , _namespace_SIO('http://semanticscience.org/resource/SIO_010785') : _namespace_SIO('http://semanticscience.org/resource/SIO_010037') , _namespace_SIO('http://semanticscience.org/resource/SIO_010787') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010788') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010789') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010790') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010791') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010792') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010793') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010794') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_010795') : _namespace_SIO('http://semanticscience.org/resource/SIO_010786') , _namespace_SIO('http://semanticscience.org/resource/SIO_011000') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011001') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011002') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011003') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011004') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011005') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011006') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011007') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011008') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011009') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011010') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011011') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011012') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011013') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011014') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011015') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011016') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011017') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011018') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011019') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011020') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011021') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011022') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011023') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011024') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011025') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011026') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011027') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011028') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011029') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011030') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011031') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011032') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011033') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011034') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011035') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011036') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011037') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011038') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011039') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011040') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011041') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011042') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011043') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011044') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011045') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011046') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011047') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011048') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011049') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011050') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011051') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011052') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011053') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011054') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011055') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011056') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011057') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011058') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011059') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011060') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011061') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011062') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011063') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011064') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011065') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011066') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011067') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011068') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011069') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011070') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011071') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011072') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011073') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011074') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011075') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011076') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011077') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011078') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011079') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011080') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011081') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011082') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011083') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011084') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011085') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011086') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011087') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011088') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011089') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011090') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011091') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011092') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011093') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011094') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011095') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011096') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011097') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011098') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011099') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011100') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011101') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011102') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011103') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011104') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011105') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011106') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011107') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011108') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011109') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011110') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011111') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011112') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011113') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011114') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011115') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011116') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011117') : _namespace_SIO('http://semanticscience.org/resource/SIO_010044') , _namespace_SIO('http://semanticscience.org/resource/SIO_011123') : _namespace_SIO('http://semanticscience.org/resource/SIO_000472') , _namespace_SIO('http://semanticscience.org/resource/SIO_011126') : _namespace_SIO('http://semanticscience.org/resource/SIO_010004') , _namespace_SIO('http://semanticscience.org/resource/SIO_011130') : _namespace_SIO('http://semanticscience.org/resource/SIO_011120') }
+
 

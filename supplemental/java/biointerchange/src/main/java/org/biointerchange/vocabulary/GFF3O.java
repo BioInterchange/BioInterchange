@@ -1,5 +1,4 @@
 package org.biointerchange.vocabulary;
-
 import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
@@ -10,6 +9,9 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.ResourceFactory;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.Predicate;
+
+require "rdf";
+module BioInterchange;
 
 public class GFF3O {
 
@@ -645,5 +647,7 @@ public class GFF3O {
     return map;
   }
 
+
+}
 
 }

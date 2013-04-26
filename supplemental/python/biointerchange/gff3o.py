@@ -2,10 +2,8 @@ import rdflib
 
 from rdflib import Namespace
 
-__namespace_GFF3O = Namespace('http://www.biointerchange.org/gff3o#')
-
-def _namespace_GFF3O(accession):
-    return __namespace_GFF3O[accession]
+require 'rdf'
+module BioInterchange
 
 class GFF3O:
 
@@ -517,5 +515,11 @@ class GFF3O:
             return cls.has_parent(cls.__parent_properties[uri], parent)
         return False
 
+__namespace_GFF3O = Namespace('http://www.biointerchange.org/gff3o#')
+
+def _namespace_GFF3O(accession):
+    return __namespace_GFF3O[accession]
+
     __parent_properties = { _namespace_GFF3O('GFF3_0004') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0010') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0012') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0014') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0015') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0021') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0023') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0039') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0045') : _namespace_GFF3O('GFF3_0044') , _namespace_GFF3O('GFF3_0047') : _namespace_GFF3O('GFF3_0026') , _namespace_GFF3O('GFF3_0050') : _namespace_GFF3O('GFF3_0044') , _namespace_GFF3O('GFF3_0056') : _namespace_GFF3O('GFF3_0025') , _namespace_GFF3O('GFF3_0005') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0006') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0007') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0008') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0009') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0011') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0013') : _namespace_GFF3O('GFF3_0029') , _namespace_GFF3O('GFF3_0022') : _namespace_GFF3O('GFF3_0027') , _namespace_GFF3O('GFF3_0024') : _namespace_GFF3O('GFF3_0027') , _namespace_GFF3O('GFF3_0034') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0035') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0036') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0037') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0041') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0042') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0043') : _namespace_GFF3O('GFF3_0040') , _namespace_GFF3O('GFF3_0046') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0048') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0049') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0053') : _namespace_GFF3O('GFF3_0052') , _namespace_GFF3O('GFF3_0054') : _namespace_GFF3O('GFF3_0052') , _namespace_GFF3O('GFF3_0055') : _namespace_GFF3O('GFF3_0052') , _namespace_GFF3O('GFF3_0057') : _namespace_GFF3O('GFF3_0028') , _namespace_GFF3O('GFF3_0058') : _namespace_GFF3O('GFF3_0052') }
+
 
