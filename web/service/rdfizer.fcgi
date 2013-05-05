@@ -56,7 +56,8 @@ FCGI.each { |fcgi|
 
   begin
     request = JSON.parse(request)
-    parameters = JSON.parse(URI.decode(request['parameters']))
+    parameters = request['parameters']
+    parameters = JSON.parse(URI.decode(parameters)) if parameters.kind_of?(String)
     data = URI.decode(request['data'])
 
     raise ArgumentError, 'An input format must be given in the meta-data using the key "input".' unless parameters['input']
