@@ -235,7 +235,7 @@ Usage examples of accessing GFF3O's vocabulary:
 
 ### RESTful Web-Service
 
-A RESTful web-service is available via the URI: []()
+A RESTful web-service is available via the URI: [http://www.biointerchange.org/service/rdfizer.biocgi](http://www.biointerchange.org/service/rdfizer.biocgi)
 
 RDFization parameters and data are send as a single HTTP POST requests containing a JSON object. The JSON object has to be formatted as follows:
 
