@@ -1,5 +1,11 @@
+/* Generates RDF from provided data according to additionally given parameters.
+ *
+ * '#inputformat': select box that determines the type of input data that should be converted into RDF
+ * '#metainput': a text field that contains parameters for the RDF conversion in JSON format
+ * '#output': text field to which the RDF output is appended to
+ */
 function generateRDF() {
-  if ($('#inputformat').val() == 'biointerchange.gff3' || $('#inputformat').val() == 'dbcls.catanns.json' || $('#inputformat').val() == 'uk.ac.man.pdfx') {
+  if ($('#inputformat').val() == 'biointerchange.gff3' || $('#inputformat').val() == 'biointerchange.gvf' || $('#inputformat').val() == 'dbcls.catanns.json' || $('#inputformat').val() == 'uk.ac.man.pdfx') {
     request = '{ "parameters" : "' + escape($('#metainput').val()) + '", "data" : "' + escape($('#maininput').val()) + '" }'
     $.ajax({
       type: 'POST',
@@ -16,38 +22,57 @@ function generateRDF() {
   }
 }
 
+/* Determines valid RDF output converters ("writers" or serializers) based on the chosen input data type/format.
+ *
+ * '#inputformat': select box that determines the input format type
+ * '#outputformat': select box with all available output formats -- some of which might be disabled (based on selected input format)
+ */
 function selectDbclsCatannsJson() {
   var outputFormats = $('#outputformat')[0];
   for (var i = 0; i < outputFormats.length; i++)
-  if ($('#inputformat').val() == 'biointerchange.gff3') {
-    if (outputFormats[i].value == 'rdf.biointerchange.gff3') {
-      outputFormats[i].selected = true;
-      outputFormats[i].disabled = false;
+    if ($('#inputformat').val() == 'biointerchange.gff3') {
+      if (outputFormats[i].value == 'rdf.biointerchange.gff3') {
+        outputFormats[i].selected = true;
+        outputFormats[i].disabled = false;
+      } else {
+        outputFormats[i].selected = false;
+        outputFormats[i].disabled = true;
+      }
+    } else if ($('#inputformat').val() == 'biointerchange.gvf') {
+      if (outputFormats[i].value == 'rdf.biointerchange.gvf') {
+        outputFormats[i].selected = true;
+        outputFormats[i].disabled = false;
+      } else {
+        outputFormats[i].selected = false;
+        outputFormats[i].disabled = true;
+      }
+    } else if ($('#inputformat').val() == 'dbcls.catanns.json') {
+      if (outputFormats[i].value == 'rdf.bh12.sio') {
+        outputFormats[i].selected = true;
+        outputFormats[i].disabled = false;
+      } else {
+        outputFormats[i].selected = false;
+        outputFormats[i].disabled = true;
+      }
+    } else if ($('#inputformat').val() == 'uk.ac.man.pdfx') {
+      if (outputFormats[i].value == 'rdf.bh12.sio') {
+        outputFormats[i].selected = true;
+        outputFormats[i].disabled = false;
+      } else {
+        outputFormats[i].selected = false;
+        outputFormats[i].disabled = true;
+      }
     } else {
-      outputFormats[i].selected = false;
-      outputFormats[i].disabled = true;
+     // Woopsie.
     }
-  } else if ($('#inputformat').val() == 'dbcls.catanns.json') {
-    if (outputFormats[i].value == 'rdf.bh12.sio') {
-      outputFormats[i].selected = true;
-      outputFormats[i].disabled = false;
-    } else {
-      outputFormats[i].selected = false;
-      outputFormats[i].disabled = true;
-    }
-  } else if ($('#inputformat').val() == 'uk.ac.man.pdfx') {
-    if (outputFormats[i].value == 'rdf.bh12.sio') {
-      outputFormats[i].selected = true;
-      outputFormats[i].disabled = false;
-    } else {
-      outputFormats[i].selected = false;
-      outputFormats[i].disabled = true;
-    }
-  } else {
-    // Woopsie.
-  }
 }
 
+/* Pastes an example into the web form.
+ *
+ * '#inputformat': a select box determining the input data format
+ * '#metainput': text field that is being populated with example parameters in JSON format
+ * '#maininput': text field that is being populated with a data example
+ */
 function pasteExample() {
   if ($('#inputformat').val() == 'biointerchange.gff3') {
     $('#metainput').val(
@@ -60,10 +85,36 @@ function pasteExample() {
       "}\n"
     );
     $('#maininput').val(
+      "##gff-version 3\n" +
+      "##species http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9913\n" +
+      "##sequence-region ChrX.38 1 88516663\n" +
       "ChrX.38\tbovine_complete_cds_gmap_perfect\tgene\t15870\t16254\t.\t+\t.\tID=BC109609_ChrX.38\n" +
-      "ChrX.38\tbovine_complete_cds_gmap_perfect\tRNA\t15870\t16254\t.\t+\t.\tID=bovine_complete_cds_gmap_perfect_BC109609_ChrX.38;Parent=BC109609_ChrX.38\n" +
+      "ChrX.38\tbovine_complete_cds_gmap_perfect\tmRNA\t15870\t16254\t.\t+\t.\tID=bovine_complete_cds_gmap_perfect_BC109609_ChrX.38;Parent=BC109609_ChrX.38\n" +
       "ChrX.38\tbovine_complete_cds_gmap_perfect\tCDS\t15870\t16254\t.\t+\t0\tParent=bovine_complete_cds_gmap_perfect_BC109609_ChrX.38\n" +
       "ChrX.38\tbovine_complete_cds_gmap_perfect\texon\t15870\t16254\t.\t+\t0\tParent=bovine_complete_cds_gmap_perfect_BC109609_ChrX.38\n"
+    );
+  } else if ($('#inputformat').val() == 'biointerchange.gvf') {
+    $('#metainput').val(
+      "{\n" +
+      "  \"input\" : \"biointerchange.gvf\",\n" +
+      "  \"output\" : \"rdf.biointerchange.gvf\",\n" +
+      "  \"name\" : \"Peter Smith\",\n" +
+      "  \"name_id\" : \"peter.smith@some.example.domain\",\n" +
+      "  \"date\" : \"2012-07-19\"\n" +
+      "}\n"
+    );
+    $('#maininput').val(
+      "##gff-version 3\n" +
+      "##gvf-version 1.06\n" +
+      "##species http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4932\n" +
+      "##feature-ontology http://song.cvs.sourceforge.net/viewvc/song/ontology/so.obo?revision=1.283\n" +
+      "##data-source Source=ensembl;version=71;url=http://e71.ensembl.org/Saccharomyces_cerevisiae\n" +
+      "##sequence-region I 1 230218\n" +
+      "I\tSGRP\tSNV\t84\t84\t.\t+\t.\tID=1;Variant_seq=A;Variant_effect=upstream_gene_variant 0 transcript YAL067W-A,upstream_gene_variant 0 transcript YAL069W,upstream_gene_variant 0 transcript YAL068W-A,downstream_gene_variant 0 transcript YAL068C;Dbxref=SGRP:s01-84;Reference_seq=G\n" +
+      "I\tSGRP\tSNV\t109\t109\t.\t+\t.\tID=2;Variant_seq=C;Variant_effect=upstream_gene_variant 0 transcript YAL067W-A,upstream_gene_variant 0 transcript YAL068W-A,upstream_gene_variant 0 transcript YAL069W,downstream_gene_variant 0 transcript YAL068C;Dbxref=SGRP:s01-109;Reference_seq=G\n" +
+      "I\tSGRP\tSNV\t111\t111\t.\t+\t.\tID=3;Variant_seq=T;Variant_effect=upstream_gene_variant 0 transcript YAL067W-A,upstream_gene_variant 0 transcript YAL069W,upstream_gene_variant 0 transcript YAL068W-A,downstream_gene_variant 0 transcript YAL068C;Dbxref=SGRP:s01-111;Reference_seq=C\n" +
+      "I\tSGRP\tSNV\t114\t114\t.\t+\t.\tID=4;Variant_seq=C;Variant_effect=upstream_gene_variant 0 transcript YAL067W-A,upstream_gene_variant 0 transcript YAL068W-A,upstream_gene_variant 0 transcript YAL069W,downstream_gene_variant 0 transcript YAL068C;Dbxref=SGRP:s01-114;Reference_seq=T\n" +
+      "I\tSGRP\tSNV\t115\t115\t.\t+\t.\tID=5;Variant_seq=G;Variant_effect=upstream_gene_variant 0 transcript YAL067W-A,upstream_gene_variant 0 transcript YAL068W-A,upstream_gene_variant 0 transcript YAL069W,downstream_gene_variant 0 transcript YAL068C;Dbxref=SGRP:s01-115;Reference_seq=C\n"
     );
   } else if ($('#inputformat').val() == 'dbcls.catanns.json') {
     $('#metainput').val(

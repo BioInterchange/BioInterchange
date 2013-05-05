@@ -76,18 +76,22 @@
               <li>a RESTful web-service</li>
             </ol>
           </p>
+          <p>The interactive web-interfaces makes use of the RESTful web-service.
+          </p>
           <h3>Interactive Web-Interface</h3>
           <p>Select the input format of the data:<br />
             <select id="inputformat" style="min-width: 50%;" onchange="selectDbclsCatannsJson();">
               <option value="dbcls.catanns.json" selected>DBCLS PubAnnotation's Category Annotations (catanns) JSON</option>
               <option value="biointerchange.gff3">GFF3</option>
+              <option value="biointerchange.gvf">GVF</option>
               <option value="uk.ac.man.pdfx">PDFx XML</option>
             </select><br />
             Select the RDF serialization method (output format):<br />
             <span class="muted">Not all output format are supported for a given input format. Invalid choices are disabled automatically here.</span><br />
             <select id="outputformat" style="min-width: 50%;">
               <option id="output.rdf.bh12.sio" value="rdf.bh12.sio" selected>RDF using SIO and FOAF ontologies</option>
-              <option id="output.rdf.biointerchange.gff3" value="rdf.biointerchange.gff3" disabled>RDF using GFF3 ontology</option>
+              <option id="output.rdf.biointerchange.gff3" value="rdf.biointerchange.gff3" disabled>RDF using GFF3O ontology</option>
+              <option id="output.rdf.biointerchange.gvf" value="rdf.biointerchange.gvf" disabled>RDF using GVF1O ontology</option>
             </select><br />
             <a class="btn btn-info" onclick="pasteExample();">Paste Input-Specific Example</a>
           </p>
@@ -103,7 +107,9 @@
             <a class="btn" onclick="$('#output').empty();">Clear RDF</a>
           </p>
           <h3>RESTful Web-Service</h3>
-          <p>TODO</p>
+          <p>
+            TODO
+          </p>
         </div>
       </div>
 
