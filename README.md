@@ -235,11 +235,55 @@ Usage examples of accessing GFF3O's vocabulary:
 
 ### RESTful Web-Service
 
-TODO
+A RESTful web-service is available via the URI: []()
+
+RDFization parameters and data are send as a single HTTP POST requests containing a JSON object. The JSON object has to be formatted as follows:
+
+    {
+      "parameters" : {
+        "input" : "INPUT_FORMAT",
+        "output": "OUTPUT_METHOD"
+      },
+      "data" : "URL_ENCODED_DATA"
+    }
+
+*  `INPUT_FORMAT`: determines the input data type; available input formats are
+   *  `biointerchange.gff3`: [Generic Feature Format Version 3](http://www.sequenceontology.org/resources/gff3.html)
+   *  `biointerchange.gvf`: [Genome Variation Format](http://www.sequenceontology.org/resources/gvf.html)
+   *  `dbcls.catanns.json`: [PubAnnotation categorical annotations](http://pubannotation.dbcls.jp) JSON
+   *  `uk.ac.man.pdfx`: [pdfx](http://pdfx.cs.man.ac.uk) XML
+*  `OUTPUT_METHOD`: determines the RDFization method that should be used, output will always be RDF N-Triples; available output formats are
+   *  `rdf.biointerchange.gff3`: RDFization of `biointerchange.gff3`
+   *  `rdf.biointerchange.gvf`: RDFization of `biointerchange.gvf`
+   *  `rdf.bh12.sio`: RDFization of `dbcls.catanns.json` or `uk.ac.man.pdfx`
+*  `URL_ENCODED_DATA`: data for RDFization as [URL encoded](http://en.wikipedia.org/wiki/Percent-encoding) string
+
+#### Example
+
+A query example is part of BioInterchange's source repository. The file [webservice_example.json](https://raw.github.com/BioInterchange/BioInterchange/master/examples/webservice_example.json) contains the following query:
+
+    {
+        "parameters" : {
+          "input" : "biointerchange.gff3",
+          "output": "rdf.biointerchange.gff3"
+        },
+        "data" : "ChrX.38%09bovine_complete_cds_gmap_perfect%09gene%0915870%0916254%09.%09+%09.%09ID%3DBC109609_ChrX.38%0AChrX.38%09bovine_complete_cds_gmap_perfect%09mRNA%0915870%0916254%09.%09+%09.%09ID%3Dbovine_complete_cds_gmap_perfect_BC109609_ChrX.38%3BParent%3DBC109609_ChrX.38%0AChrX.38%09bovine_complete_cds_gmap_perfect%09CDS%0915870%0916254%09.%09+%090%09Parent%3Dbovine_complete_cds_gmap_perfect_BC109609_ChrX.38%0AChrX.38%09bovine_complete_cds_gmap_perfect%09exon%0915870%0916254%09.%09+%090%09Parent%3Dbovine_complete_cds_gmap_perfect_BC109609_ChrX.38%0A"
+    }
+
+The query can be run using the popular [cURL](http://en.wikipedia.org/wiki/CURL) tool:
+
+    curl -d '@webservice_example.json' http://www.biointerchange.org/service/rdfizer.biocgi
 
 ### Interactive Web-Site
 
-TODO
+BioInterchange has an [interactive web-interface](http://www.biointerchange.org/webservices.html) for RDFizing small amounts of data. Each input format and RDF serialization method pair comes with an example, which can be used as a guidance or test bed for learning how to use BioInterchange.
+
+#### Usage Instructions
+
+1.  select a data input format (for example, GFF3)
+2.  select a RDF serialization method/output format (for example, "RDF using GFF3O ontology")
+3.  paste RDF serialization method parameters and data in the text fields (or, click "Paste Input-Specific Example")
+4.  click "Generate RDF" and the RDFized data will appear below
 
 Build Notes
 -----------
