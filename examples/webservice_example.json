@@ -1,0 +1,7 @@
+{
+  "parameters" : {
+    "input" : "biointerchange.gff3",
+    "output": "rdf.biointerchange.gff3"
+  },
+  "data" : "ChrX.38%09bovine_complete_cds_gmap_perfect%09gene%0915870%0916254%09.%09+%09.%09ID%3DBC109609_ChrX.38%0AChrX.38%09bovine_complete_cds_gmap_perfect%09mRNA%0915870%0916254%09.%09+%09.%09ID%3Dbovine_complete_cds_gmap_perfect_BC109609_ChrX.38%3BParent%3DBC109609_ChrX.38%0AChrX.38%09bovine_complete_cds_gmap_perfect%09CDS%0915870%0916254%09.%09+%090%09Parent%3Dbovine_complete_cds_gmap_perfect_BC109609_ChrX.38%0AChrX.38%09bovine_complete_cds_gmap_perfect%09exon%0915870%0916254%09.%09+%090%09Parent%3Dbovine_complete_cds_gmap_perfect_BC109609_ChrX.38%0A"
+}
