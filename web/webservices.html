@@ -34,24 +34,11 @@
         <div class="container">
           <a class="brand" href="index.html">BioInterchange</a>
           <ul class="nav">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="cli.html">Shell Tool</a></li>
+            <li class="active"><a href="webservices.html">Web-Services</a></li>
+            <li><a href="api.html">API</a></li>
             <li><a href="ontologies.html">Ontologies</a></li>
             <li><a href="about.html">About</a></li>
-            <!--
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">To</a></li>
-                <li><a href="#">Be</a></li>
-                <li><a href="#">Done</a></li>
-                <li><a href="#">Dude</a></li>
-                <li class="divider"></li>
-                <li class="nav-header">API</li>
-                <li><a href="#">API usage information</a></li>
-                <li><a href="#">Implementing new readers/writers</a></li>
-              </ul>
-            </li>
-          -->
           </ul>
         </div>
       </div>
@@ -65,13 +52,13 @@
           <h1>Web-Services</h1>
           <p>Two query points to access BioInterchange are provided on the internet:
             <ol>
-              <li>an interactive web-interface</li>
-              <li>a RESTful web-service</li>
+              <li><a href="#interface">an interactive web-interface</a></li>
+              <li><a href="#webservice">a RESTful web-service</a></li>
             </ol>
           </p>
           <p>The interactive web-interfaces makes use of the RESTful web-service.
           </p>
-          <h3>Interactive Web-Interface</h3>
+          <h3 id="interface">Interactive Web-Interface</h3>
           <p>Select the input format of the data:<br />
             <select id="inputformat" style="min-width: 50%;" onchange="selectDbclsCatannsJson();">
               <option value="dbcls.catanns.json" selected>DBCLS PubAnnotation's Category Annotations (catanns) JSON</option>
@@ -99,9 +86,58 @@
             <a class="btn" onclick="$('#output').empty();">Clear RDF</a>
             <pre id="output" style="font-size: 75%; width: 100%; min-height: 50px;"><i>RDF output will be <b>concatenated</b> here...</i></pre>
           </p>
-          <h3>RESTful Web-Service</h3>
+          <h3 id="webservice">RESTful Web-Service</h3>
           <p>
-            TODO
+            A RESTful web-service is available via the URI: <code>http://www.biointerchange.org/service/rdfizer.biocgi</code>
+          </p>
+          <p>
+            RDFization parameters and data are send as a single HTTP POST requests containing a JSON object. The JSON object has to be formatted as follows:
+<pre>
+{
+  "parameters" : {
+    "input" : "INPUT_FORMAT",
+    "output": "OUTPUT_METHOD"
+  },
+  "data" : "URL_ENCODED_DATA"
+}
+</pre>
+            <ul>
+              <li><code>INPUT_FORMAT</code>: determines the input data type; available input formats are</li>
+              <ul>
+                <li><code>biointerchange.gff3</code>: <a href="http://www.sequenceontology.org/resources/gff3.html">Generic Feature Format Version 3</a></li>
+                <li><code>biointerchange.gvf</code>: <a href="http://www.sequenceontology.org/resources/gvf.html">Genome Variation Format</a></li>
+                <li><code>dbcls.catanns.json</code>: <a href="http://pubannotation.dbcls.jp">PubAnnotation categorical annotations</a></li>
+                <li><code>uk.ac.man.pdfx</code>: <a href=http://pdfx.cs.man.ac.uk">PDFx</a></li>
+              </ul>
+              <li><code>OUTPUT_METHOD</code>: determines the RDFization method that should be used, output will always be RDF N-Triples; available output formats are</li>
+              <ul>
+                <li><code>rdf.biointerchange.gff3</code>: RDFization of <code>biointerchange.gff3</code></li>
+                <li><code>rdf.biointerchange.gvf</code>: RDFization of <code>biointerchange.gvf</code></li>
+                <li><code>rdf.bh12.sio</code>: RDFization of <code>dbcls.catanns.json</code> or <code>uk.ac.man.pdfx</code></li>
+              </ul>
+              <li><code>URL_ENCODED_DATA</code>: data for RDFization as <a href="http://en.wikipedia.org/wiki/Percent-encoding">URL encoded</a> string</li>
+            </ul>
+          </p>
+          <h4>Example</h4>
+          <p>
+              A query example is part of BioInterchange's source repository. The file [webservice_example.json](https://raw.github.com/BioInterchange/BioInterchange/master/examples/webservice_example.json) contains the following query:
+
+<pre>
+{
+    "parameters" : {
+      "input" : "biointerchange.gff3",
+      "output": "rdf.biointerchange.gff3"
+    },
+    "data" : "ChrX.38%09bovine_complete_cds_gmap_perfect%09gene%0915870%0916254%09.%09+%09.%09ID%3DBC109609_ChrX.38%0AChrX.38%09bovine_complete_cds_gmap_perfect%09mRNA%0915870%0916254%09.%09+%09.%09ID%3Dbovine_complete_cds_gmap_perfect_BC109609_ChrX.38%3BParent%3DBC109609_ChrX.38%0AChrX.38%09bovine_complete_cds_gmap_perfect%09CDS%0915870%0916254%09.%09+%090%09Parent%3Dbovine_complete_cds_gmap_perfect_BC109609_ChrX.38%0AChrX.38%09bovine_complete_cds_gmap_perfect%09exon%0915870%0916254%09.%09+%090%09Parent%3Dbovine_complete_cds_gmap_perfect_BC109609_ChrX.38%0A"
+}
+</pre>
+          </p>
+          <p>
+            The query can be run using the popular [cURL](http://en.wikipedia.org/wiki/CURL) tool:
+
+<pre>
+curl -d '@webservice_example.json' http://www.biointerchange.org/service/rdfizer.biocgi
+</pre>
           </p>
         </div>
       </div>
@@ -109,7 +145,7 @@
       <hr>
 
       <footer>
-        <p>&copy; <a href="https://github.com/BioInterchange/BioInterchange#contributors">The BioInterchange Contributors</a> 2012&ndash;2013</p>
+        <p>&copy; <a href="about.html">The BioInterchange Contributors</a> 2012&ndash;2013</p>
       </footer>
 
     </div> <!-- /container -->

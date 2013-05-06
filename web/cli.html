@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BioInterchange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="bootstrap/js/jquery-1.8.1.min.js"></script>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <!-- <link rel="shortcut icon" href="../assets/ico/favicon.ico"> -->
+  </head>
+
+  <body>
+    <a href="https://github.com/BioInterchange/BioInterchange"><img style="z-index: 5000; position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="index.html">BioInterchange</a>
+          <ul class="nav">
+            <li class="active"><a href="cli.html">Shell Tool</a></li>
+            <li><a href="webservices.html">Web-Services</a></li>
+            <li><a href="api.html">API</a></li>
+            <li><a href="ontologies.html">Ontologies</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span12">
+          <h1>Shell Tool</h1>
+          <p>
+            BioInterchange's command-line tool <code>biointerchange</code> can be installed as a command line tools as follows:
+<pre>
+gem install biointerchange
+</pre>
+          </p>
+          <h4>Usage</h4>
+          <p>
+            Examples:
+<pre>
+biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.10096561.json --name 'Peter Smith' --name_id 'peter.smith@example.com'
+biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007-8-3-R40.xml --name 'Peter Smith' --name_id 'peter.smith@example.com'
+</pre>
+            Input formats:
+            <ul>
+              <li><code>biointerchange.gff3</code>: <a href="http://www.sequenceontology.org/resources/gff3.html">Generic Feature Format Version 3</a></li>
+              <li><code>biointerchange.gvf</code>: <a href="http://www.sequenceontology.org/resources/gvf.html">Genome Variation Format</a></li>
+              <li><code>dbcls.catanns.json</code>: <a href="http://pubannotation.dbcls.jp">PubAnnotation categorical annotations</a></li>
+              <li><code>uk.ac.man.pdfx</code>: <a href=http://pdfx.cs.man.ac.uk">PDFx</a></li>
+            </ul>
+            Output formats:
+            <ul>
+              <li><code>rdf.biointerchange.gff3</code>: RDFization of <code>biointerchange.gff3</code></li>
+              <li><code>rdf.biointerchange.gvf</code>: RDFization of <code>biointerchange.gvf</code></li>
+              <li><code>rdf.bh12.sio</code>: RDFization of <code>dbcls.catanns.json</code> or <code>uk.ac.man.pdfx</code></li>
+            </ul>
+          </p>
+          <h4>Using a Triple Store</h4>
+          <p>
+            RDF data produced by BioInterchange can be directly loaded into a triple store. The following gives an example about loading and querying RDF data using <a href="http://www.openrdf.org">Sesame</a>]; the commands are entered via Sesame's <code>bin/console.sh</code>:
+<pre>
+&gt; create memory.
+Please specify values for the following variables:
+Repository ID [memory]: testrepo
+Repository title [Memory store]: Test Repository
+Persist (true|false) [true]: false
+Sync delay [0]:
+Repository created
+&gt; open testrepo.
+testrepo&gt; load <path-to-your-rdf-data> .
+testrepo&gt; sparql select * where { ?s ?p ?o } .
+</pre>
+            To list all <code>seqid</code> entries from a GFF3/GVF-file conversion in the store, the following SPARQL query can be used:
+<pre>
+testrepo&gt; sparql select * where { ?s &lt;http://www.biointerchange.org/gvf1o#GVF1_0004&gt; ?o } .
+</pre>
+          </p>
+          <h4>Data Consistency Verification</h4>
+          <p>
+            Data consistency is verifyable for the output formats <code>rdf.biointerchange.gff3</code> and <code>rdf.biointerchange.gvf</code> using the BioInterchange <a href="ontologies.html">ontologies</a> GFF3O and GVF1O. The following is an example of how <a href="http://jena.apache.org">Jena</a>'s command line tools and the <a href="http://hermit-reasoner.com">HermiT reasoner</a> can be used for conistency verification:
+<pre>
+rdfcat &lt;path-to-gff3o/gvf1o&gt; &lt;yourdata.n3&gt; &gt; merged.xml
+java -d64 -Xmx4G -jar HermiT.jar -k -v merged.xml
+</pre>
+            Another approach is to load the data and its related GFF3O/GVF1O ontology into <a href="http://protege.stanford.edu">Protege</a>, merge them, and then use the "Explain inconsistent ontology" menu item to inspect possible data inconsistencies.
+          </p>
+          <h4>Example Data Provenance</h4>
+          <p>
+            The following list provides information on the origin of the example-data files in the <code>examples</code> directory:
+            <ul>
+              <li><code>BovineGenomeChrX.gff3.gz</code>: Gzipped GFF3 file describing a Bos taurus chromosome X. Downloaded from <a href="http://bovinegenome.org/?q=download_chromosome_gff3">http://bovinegenome.org/?q=download_chromosome_gff3</a></li>
+              <li><code>chromosome_BF.gff</code>: GFF3 file of floating contigs from the Baylor Sequencing Centre. Downloaded from <a href="http://dictybase.org/Downloads">http://dictybase.org/Downloads</a></li>
+              <li><code>estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf</code>: GVF file of EBI's <a href="http://www.ebi.ac.uk/dgva/database-genomic-variants-archive">DGVa</a>. Downloaded from <a href="ftp://ftp.ebi.ac.uk/pub/databases/dgva/estd176_Banerjee_et_al_2011/gvf/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf">ftp://ftp.ebi.ac.uk/pub/databases/dgva/estd176_Banerjee_et_al_2011/gvf/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf</a></li>
+              <li><code>gb-2007-8-3-R40.xml</code>: Generated by <a href="http://pdfx.cs.man.ac.uk">PDFx</a> from open-access source PDF <a href="http://genomebiology.com/content/pdf/gb-2007-8-3-r40.pdf">Sense-antisense pairs in mammals: functional and evolutionary considerations</a></li>
+              <li><code>Saccharomyces_cerevisiae_incl_consequences.gvf.gz</code>: Downloaded from <a href="ftp://ftp.ensembl.org/pub/release-71/variation/gvf/saccharomyces_cerevisiae/Saccharomyces_cerevisiae_incl_consequences.gvf.gz">ftp://ftp.ensembl.org/pub/release-71/variation/gvf/saccharomyces_cerevisiae/Saccharomyces_cerevisiae_incl_consequences.gvf.gz</a></li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; <a href="about.html">The BioInterchange Contributors</a> 2012&ndash;2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="biointerchange.js"></script>
+  </body>
+</html>
