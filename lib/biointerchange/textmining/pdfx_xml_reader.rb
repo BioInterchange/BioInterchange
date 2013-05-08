@@ -14,7 +14,6 @@ class PdfxXmlReader < BioInterchange::TextMining::TMReader
   #
   # +inputstream+:: Input IO stream to deserialize 
   def deserialize(inputstream)
-  
     #super(inputstream)
     
     raise BioInterchange::Exceptions::ImplementationReaderError, 'InputStream not of type IO, cannot read.' unless inputstream.kind_of?(IO) or inputstream.kind_of?(String)
@@ -22,10 +21,7 @@ class PdfxXmlReader < BioInterchange::TextMining::TMReader
     @input = inputstream
     
     pdfx
-    
   end
-
-
 
 private
 
@@ -35,11 +31,7 @@ private
     return list.document
   end
     
-
-	
-	
 	class MyListener
-	
 	  include REXML::StreamListener
     
     def initialize
@@ -49,7 +41,6 @@ private
       @map['sec_s'] = []
       @map['sec_l'] = []
     end
-    
     
     def tag_start(name, attr)
       #puts "tag_start: #{name}"
@@ -83,9 +74,7 @@ private
       end
     end
   
-  
     def text(data)
-      
       if @map['art']
         @map['art_l'] += data.length
       end
@@ -106,7 +95,6 @@ private
           @map['sec_l'][i] += data.length
         end
       end
-      
     end
     
     #TODO add deal with <author> type tags
@@ -153,8 +141,6 @@ private
     end
     
   end
-  
-
 
 end
 

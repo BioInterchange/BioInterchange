@@ -1,6 +1,6 @@
 module BioInterchange::TextMining
 
-class Document
+class Document < BioInterchange::Model
 
   # Creates a blank document representation.
   #

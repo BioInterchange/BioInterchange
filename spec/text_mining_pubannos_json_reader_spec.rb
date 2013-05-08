@@ -8,6 +8,7 @@ require 'rspec'
 v, $VERBOSE = $VERBOSE, nil
 load 'lib/biointerchange/core.rb'
 load 'lib/biointerchange/reader.rb'
+load 'lib/biointerchange/model.rb'
 load 'lib/biointerchange/textmining/text_mining_reader.rb'
 load 'lib/biointerchange/textmining/pubannos_json_reader.rb'
 load 'lib/biointerchange/textmining/document.rb'

@@ -29,6 +29,7 @@ module BioInterchange
 
   # Reader/writer interfaces
   require 'biointerchange/reader'
+  require 'biointerchange/model'
   require 'biointerchange/writer'
 
   #

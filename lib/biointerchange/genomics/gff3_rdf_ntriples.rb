@@ -13,7 +13,7 @@ module BioInterchange::Genomics
 # Outputs:
 # - rdf.biointerchange.gff3
 # - rdf.biointerchange.gvf
-class RDFWriter
+class RDFWriter < BioInterchange::Writer
 
   # Creates a new instance of a RDFWriter that will use the provided output stream to serialize RDF.
   #

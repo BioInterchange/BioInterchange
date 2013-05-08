@@ -20,13 +20,11 @@ private
 
   # Specific method for parsing of *Pubannotations* json format
   def pubannos(data)
-    
     result = JSON.parse(data)
     
     if result.has_key? 'Error'
       raise BioInterchange::Exceptions::InputFormatError, 'Error parsing the JSON input file: #{result["Error"]}'
     end
-    
    
     text = result['text']
     #doc_uri = "http://pubannotation.dbcls.jp/pmdocs/" + result['pmid'].to_s

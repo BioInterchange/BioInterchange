@@ -2,7 +2,7 @@ require 'stringio'
 
 module BioInterchange::Genomics
 
-class GFF3Reader
+class GFF3Reader < BioInterchange::Reader
 
   # Creates a new instance of a Generic Feature Format Version 3 (GFF3) reader.
   #
