@@ -62,7 +62,7 @@ describe BioInterchange::TextMining::RDFWriter do
 
     it 'full advanced json document' do
       ostream = StringIO.new
-      reader = BioInterchange::TextMining::PubannosJsonReader.new("Test", "http://test.com", "2012-12-09", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
+      reader = BioInterchange::TextMining::PubAnnosJSONReader.new("Test", "http://test.com", "2012-12-09", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
         
       model = reader.deserialize(File.new('examples/pubannotation.2626671.json'))
       

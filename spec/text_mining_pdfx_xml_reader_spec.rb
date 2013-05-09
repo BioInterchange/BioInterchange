@@ -16,12 +16,12 @@ load 'lib/biointerchange/textmining/content.rb'
 load 'lib/biointerchange/textmining/process.rb'
 $VERBOSE = v
 
-describe BioInterchange::TextMining::PdfxXmlReader do
+describe BioInterchange::TextMining::PDFxXMLReader do
   describe 'deserialization of pdfx text-mining documents' do
   
     describe 'IO check' do
       before :all do 
-        @reader = BioInterchange::TextMining::PdfxXmlReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
+        @reader = BioInterchange::TextMining::PDFxXMLReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
       end
       it 'reader is not postponed upon instantiation' do
         @reader.postponed?.should eql false
@@ -41,7 +41,7 @@ describe BioInterchange::TextMining::PdfxXmlReader do
     describe 'generated model check' do
   
       before :all do
-        reader = BioInterchange::TextMining::PdfxXmlReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
+        reader = BioInterchange::TextMining::PDFxXMLReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
         
         @model = reader.deserialize("<pdfx><job>rspec_test</job><article><article-title>TITLE</article-title><abstract>ABSTRACT</abstract><body>BODY TEXT<section>SECTION LEVEL 1<section>SECTION LEVEL 2.1</section><section>SECTION LEVEL 2.2</section>END SECTION LEVEL 1</section></body></article></pdfx>")
         

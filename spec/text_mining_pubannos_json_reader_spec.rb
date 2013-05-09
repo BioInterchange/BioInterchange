@@ -17,12 +17,12 @@ load 'lib/biointerchange/textmining/content_connection.rb'
 load 'lib/biointerchange/textmining/process.rb'
 $VERBOSE = v
 
-describe BioInterchange::TextMining::PubannosJsonReader do
+describe BioInterchange::TextMining::PubAnnosJSONReader do
   describe 'deserialization of pubannos json text-mining documents' do
   
     describe 'IO check' do
       before :all do 
-        @reader = BioInterchange::TextMining::PubannosJsonReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
+        @reader = BioInterchange::TextMining::PubAnnosJSONReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
       end
       it 'reader is not postponed upon instantiation' do
         @reader.postponed?.should eql false
@@ -47,7 +47,7 @@ describe BioInterchange::TextMining::PubannosJsonReader do
 
     describe 'old json generated model checks' do
       before :all do
-        reader = BioInterchange::TextMining::PubannosJsonReader.new("TestOld", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
+        reader = BioInterchange::TextMining::PubAnnosJSONReader.new("TestOld", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
         
         @model = reader.deserialize('{ "name": "Peter Smith", "name_id": "<peter.smith@example.json>", "date": "2012-08-12", "version": "3", "docurl":"http://example.org/example_json", "text":"Some document text. With two annotations of type protein.\n", "catanns":[{"annset_id":1,"begin":0,"category":"Protein","doc_id":9,"end":10,"id":139},{"annset_id":1,"begin":20,"category":"Protein","doc_id":9,"end":42,"id":138}]}')
 
@@ -79,7 +79,7 @@ describe BioInterchange::TextMining::PubannosJsonReader do
     describe 'basic generated model checks' do
   
       before :all do
-        reader = BioInterchange::TextMining::PubannosJsonReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
+        reader = BioInterchange::TextMining::PubAnnosJSONReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
         
         @model = reader.deserialize('{ "name": "Peter Smith", "name_id": "<peter.smith@example.json>", "date": "2012-12-08", "version": "3", "docurl":"http://example.org/example_json", "text":"Some document text. With two annotations of type protein.\n", 	"catanns":[{"id":"T1","span":{"begin":0,"end":10},"category":"NP"},{"id":"T2","span":{"begin":20,"end":42},"category":"NP"}]}')
       end
@@ -109,7 +109,7 @@ describe BioInterchange::TextMining::PubannosJsonReader do
     describe 'advanced generated model checks' do
   
       before :all do
-        reader = BioInterchange::TextMining::PubannosJsonReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
+        reader = BioInterchange::TextMining::PubAnnosJSONReader.new("Test", "http://test.com", "00-00-0000", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
         
         @model = reader.deserialize(File.new('examples/pubannotation.2626671.json'))
       end

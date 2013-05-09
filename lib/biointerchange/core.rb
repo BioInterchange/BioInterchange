@@ -199,9 +199,9 @@ module BioInterchange
       elsif opt['input'] == 'biointerchange.gvf' then
         reader = BioInterchange::Genomics::GVFReader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], opt['batchsize'])
       elsif opt['input'] == 'dbcls.catanns.json' then
-        reader = BioInterchange::TextMining::PubannosJsonReader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['version'])
+        reader = BioInterchange::TextMining::PubAnnosJSONReader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['version'])
       elsif opt['input'] == 'uk.ac.man.pdfx' then
-        reader = BioInterchange::TextMining::PdfxXmlReader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['annotate_version'])
+        reader = BioInterchange::TextMining::PDFxXMLReader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['annotate_version'])
       end
     
       if opt["file"]

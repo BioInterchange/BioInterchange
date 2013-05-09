@@ -3,7 +3,7 @@ module BioInterchange::TextMining
 require 'rexml/document'
 require 'rexml/streamlistener'
 
-class PdfxXmlReader < BioInterchange::TextMining::TMReader
+class PDFxXMLReader < BioInterchange::TextMining::TMReader
   
   # Reads input stream and returns associated +BioInterchange::TextMining::Document+ model
   #

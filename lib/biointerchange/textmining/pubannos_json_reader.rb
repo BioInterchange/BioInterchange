@@ -3,7 +3,7 @@ module BioInterchange::TextMining
 require 'rubygems'
 require 'json'
 
-class PubannosJsonReader < BioInterchange::TextMining::TMReader
+class PubAnnosJSONReader < BioInterchange::TextMining::TMReader
 
   def deserialize(inputstream)
     if inputstream.kind_of?(IO) then
