@@ -122,7 +122,7 @@ BioInterchange available.
 To install the BioInterchange egg, run:
 
     sudo easy_install rdflib
-    sudo easy_install http://www.biointerchange.org/eggs/biointerchange-0.2.1-py2.7.egg
+    sudo easy_install http://www.biointerchange.org/eggs/biointerchange-0.2.2-py2.7.egg
 
 Usage examples:
 
@@ -163,7 +163,7 @@ To use the BioInterchange artifact, set-up add the following to your Maven POM f
       <dependency>
         <groupId>org.biointerchange</groupId>
         <artifactId>vocabularies</artifactId>
-        <version>0.2.1</version>
+        <version>0.2.2</version>
       </dependency>
     </dependencies>
 
