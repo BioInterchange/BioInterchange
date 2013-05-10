@@ -13,6 +13,7 @@ require 'rdf/ntriples'
 
 # This will be obsolete once BioInterchange has been turned into a gem:
 load '../../lib/biointerchange/core.rb'
+load '../../lib/biointerchange/faldo.rb'
 load '../../lib/biointerchange/gff3o.rb'
 load '../../lib/biointerchange/gvf1o.rb'
 load '../../lib/biointerchange/sio.rb'
