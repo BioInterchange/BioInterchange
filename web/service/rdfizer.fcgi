@@ -40,8 +40,8 @@ load '../../lib/biointerchange/genomics/gvf_reader.rb'
 load '../../lib/biointerchange/genomics/gff3_rdf_ntriples.rb'
 
 input_formats = {}
-input_formats['dbcls.catanns.json'] = [ BioInterchange::TextMining::PubannosJsonReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
-input_formats['uk.ac.man.pdfx'] = [ BioInterchange::TextMining::PdfxXmlReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
+input_formats['dbcls.catanns.json'] = [ BioInterchange::TextMining::PubAnnosJSONReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
+input_formats['uk.ac.man.pdfx'] = [ BioInterchange::TextMining::PDFxXMLReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
 input_formats['biointerchange.gff3'] = [ BioInterchange::Genomics::GFF3Reader, 'name', 'name_uri', 'date' ]
 input_formats['biointerchange.gvf'] = [ BioInterchange::Genomics::GVFReader, 'name', 'name_uri', 'date' ]
 
