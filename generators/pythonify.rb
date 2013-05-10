@@ -5,6 +5,8 @@ def pythonify(rubysource, namespace)
   python_class = nil
   comment = nil
 
+  namespace_wrapper_generated = false
+
   cls = <<EOS
 import rdflib
 
@@ -14,6 +16,8 @@ EOS
 
   rubysource.each { |line|
     line.chomp!
+
+    next if line.start_with?('module ') or line.start_with?('require ')
 
     if line.match('http://') then
       namespace = line.scan(/http:\/\/[^']+/)[0].sub(/(\/[^\/#]+)'$/, '').sub(/(#).*$/, '\1') unless namespace
@@ -44,10 +48,12 @@ EOS
       transduction = nil
     elsif line.strip.start_with?('end') then
       transduction = nil
+      cls.gsub!(/_namespace_#{python_class}\(/, 'RDF::URI.new(') if line.start_with?('end') and not namespace_wrapper_generated
     elsif line.strip.start_with?('if ') or line.strip.start_with?('elsif') then
       transduction = "#{line.sub(/ then$/, '').sub('elsif', 'elif').gsub('@@', 'cls.__').gsub(/RDF::URI\.new\(([^)]+)\)/, "_namespace_#{python_class}(\\1)").gsub(/(\w)\?\(/, '\1(')}:"
     elsif line.strip.start_with?('private') then
       private_scope = true
+      namespace_wrapper_generated = true
       transduction = nil
       cls << "__namespace_#{python_class} = Namespace('#{namespace}')\n\n"
       cls << "def _namespace_#{python_class}(accession):\n"

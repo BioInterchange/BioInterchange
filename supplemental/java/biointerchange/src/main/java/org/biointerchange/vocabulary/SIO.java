@@ -10,7 +10,6 @@ import com.hp.hpl.jena.rdf.model.ResourceFactory;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.Predicate;
 
-module BioInterchange;
 
 public class SIO {
 
@@ -17411,4 +17410,3 @@ public class SIO {
 
 }
 
-}

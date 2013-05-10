@@ -5,6 +5,9 @@ def javaify(rubycode, namespace = nil)
   java_class = nil
   comment = nil
 
+  namespace_wrapper_generated = false
+  class_closed = false
+
   cls = <<EOS
 package org.biointerchange.vocabulary;
 import java.util.Arrays;
@@ -22,6 +25,8 @@ EOS
 
   rubycode.each { |line|
     line.chomp!
+
+    next if line.start_with?('module ') or line.start_with?('require ')
 
     if line.match('http://') then
       if line.match(/http:\/\/[^'")]+#[^'")]+/) then
@@ -78,7 +83,15 @@ EOS
       end
       transduction = nil
     elsif line.strip.start_with?('end') then
-      transduction = line.sub(/end/, '}')
+      if class_closed then
+        transduction = nil
+      else
+        if line.start_with?('end') then
+          class_closed = true
+          cls.gsub!(/_namespace_#{java_class}\(/, 'return ResourceFactory.createResource(') unless namespace_wrapper_generated
+        end
+        transduction = line.sub(/end/, '}')
+      end
     elsif line.strip.start_with?('if ') or line.strip.start_with?('elsif') then
       transduction = "#{line.sub(/ then$/, '').sub('elsif', 'else if').gsub('@@', '__').gsub(/RDF::URI\.new\(([^)]+)\)/, "_namespace_#{java_class}(\\1)").gsub(/(\w)\?\(/, '\1(')}".gsub(/\.has_key\(([^)]+)\)/, '.containsKey(\1)').gsub(/\[([^\]]+)\]/, '.get(\1)')
       if transduction.match(/if ([^=]+|_namespace_[^=]+) ?== ?([^_].*|_namespace_.*)/)
@@ -92,6 +105,7 @@ EOS
       transduction = line.sub(/return \[/, 'return new HashSet<Resource>(Arrays.asList(new Resource[] {').sub(/\]$/, '}));').gsub(/RDF::URI\.new\(([^)]+)\)/, "_namespace_#{java_class}(\\1)")
     elsif line.strip.start_with?('private') then
       private_scope = true
+      namespace_wrapper_generated = true
       transduction = "  private static Resource _namespace_#{java_class}(String accession) {\n"
       transduction << "    if (isClass(ResourceFactory.createResource(\"#{namespace}\" + accession))) {\n"
       transduction << "      return ResourceFactory.createResource(\"#{namespace}\" + accession);\n"

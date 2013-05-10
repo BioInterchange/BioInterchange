@@ -2,7 +2,6 @@ import rdflib
 
 from rdflib import Namespace
 
-module BioInterchange
 
 class SIO:
 

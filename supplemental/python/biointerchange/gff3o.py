@@ -2,8 +2,6 @@ import rdflib
 
 from rdflib import Namespace
 
-require 'rdf'
-module BioInterchange
 
 class GFF3O:
 
