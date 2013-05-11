@@ -10,11 +10,9 @@ class TMReader < BioInterchange::Reader
   # +processtype+:: Type of process that created this content
   # +version+:: Optional version number of resource that created this data (nil if manually curated, for example).
   def initialize(name, name_uri, date = nil, processtype = BioInterchange::TextMining::Process::UNSPECIFIED, version = nil)
-  
     metadata = {}
     metadata[BioInterchange::TextMining::Process::VERSION] = version
     @process = BioInterchange::TextMining::Process.new(name, name_uri, processtype, metadata, date)
-    
   end
   
   
