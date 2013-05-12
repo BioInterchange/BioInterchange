@@ -48,8 +48,9 @@ BioInterchange's command-line tool `biointerchange` can be installed as a comman
 
 Examples:
 
-    biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.10096561.json --name 'Peter Smith' --name_id 'peter.smith@example.com'
-    biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007-8-3-R40.xml --name 'Peter Smith' --name_id 'peter.smith@example.com'
+    biointerchange --input biointerchange.gvf --rdf rdf.biointerchange.gvf --batchsize 100 --file examples/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf
+    biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.10096561.json --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
+    biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007-8-3-R40.xml --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
 
 Input formats:
 
@@ -79,7 +80,7 @@ RDF data produced by BioInterchange can be directly loaded into a triple store. 
     testrepo> load <path-to-your-rdf-data> .
     testrepo> sparql select * where { ?s ?p ?o } .
 
-To list all `seqid` entries from a GFF3/GVF-file conversion in the store, the following SPARQL query can be used:
+To list all `seqid` entries from a GVF-file conversion in the store, the following SPARQL query can be used:
 
     testrepo> sparql select * where { ?s <http://www.biointerchange.org/gvf1o#GVF1_0004> ?o } .
 
