@@ -60,8 +60,9 @@ gem install biointerchange
           <p>
             Examples:
 <pre>
-biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.10096561.json --name 'Peter Smith' --name_id 'peter.smith@example.com'
-biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007-8-3-R40.xml --name 'Peter Smith' --name_id 'peter.smith@example.com'
+biointerchange --input biointerchange.gvf --rdf rdf.biointerchange.gvf --batchsize 100 --file examples/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf
+biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.10096561.json --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
+biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007-8-3-R40.xml --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
 </pre>
             Input formats:
             <ul>
