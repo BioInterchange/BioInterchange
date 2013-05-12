@@ -5,14 +5,16 @@ class TMReader < BioInterchange::Reader
   # Create a new instance of a text-mining data reader. Sets @process to a new +BioInterchange::TextMining::Process+ object.
   #
   # +name+:: Name of the process which generated this data
-  # +name_uri+:: URI of the resource that generated this data
+  # +name_id+:: URI of the resource that generated this data
   # +date+:: Optional date of data creation
   # +processtype+:: Type of process that created this content
   # +version+:: Optional version number of resource that created this data (nil if manually curated, for example).
-  def initialize(name, name_uri, date = nil, processtype = BioInterchange::TextMining::Process::UNSPECIFIED, version = nil)
+  def initialize(name, name_id, date = nil, processtype = BioInterchange::TextMining::Process::UNSPECIFIED, version = nil)
+    raise ArgumentError, 'Require "name" and "name_id" options to specify source of annotations (e.g., a manual annotators name, or software tool name) and their associated URI (e.g., email address, or webaddress).' unless name and name_id
+
     metadata = {}
     metadata[BioInterchange::TextMining::Process::VERSION] = version
-    @process = BioInterchange::TextMining::Process.new(name, name_uri, processtype, metadata, date)
+    @process = BioInterchange::TextMining::Process.new(name, name_id, processtype, metadata, date)
   end
   
   

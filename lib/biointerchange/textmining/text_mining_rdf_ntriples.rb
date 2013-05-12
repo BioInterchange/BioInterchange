@@ -6,6 +6,15 @@ module BioInterchange::TextMining
 
 class RDFWriter < BioInterchange::Writer
 
+  # Register writers:
+  BioInterchange::Registry.register_writer(
+    'rdf.bh12.sio',
+    RDFWriter,
+    [ 'dbcls.catanns.json', 'uk.ac.man.pdfx' ],
+    false,
+    'Semanticscience Integrated Ontology (SIO) based text-mining RDFization'
+  )
+
   # Creates a new instance of a RDFWriter that will use the provided output stream to serialize RDF.
   #
   # +ostream+:: instance of an IO class or derivative that is used for RDF serialization

@@ -5,6 +5,27 @@ require 'rexml/streamlistener'
 
 class PDFxXMLReader < BioInterchange::TextMining::TMReader
   
+  # Register reader:
+  BioInterchange::Registry.register_reader(
+    'uk.ac.man.pdfx',
+    PDFxXMLReader,
+    [
+      'name',
+      'name_id',
+      'date',
+      [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ],
+      'version'
+    ],
+    false,
+    'PDFx XML reader',
+    [
+      [ 'date <date>', 'date when the GFF3 file was created (optional)' ],
+      [ 'version <version>', 'version number of resource (optional)' ],
+      [ 'name <name>', 'name of the GFF3 file creator (required)' ],
+      [ 'name_id <id>', 'email address of the GFF3 file creator (required)' ]
+    ]
+  )
+
   # Reads input stream and returns associated +BioInterchange::TextMining::Document+ model
   #
   # Presently I assume a single document per xml file,
@@ -14,8 +35,6 @@ class PDFxXMLReader < BioInterchange::TextMining::TMReader
   #
   # +inputstream+:: Input IO stream to deserialize 
   def deserialize(inputstream)
-    #super(inputstream)
-    
     raise BioInterchange::Exceptions::ImplementationReaderError, 'InputStream not of type IO, cannot read.' unless inputstream.kind_of?(IO) or inputstream.kind_of?(String)
     
     @input = inputstream

@@ -39,16 +39,16 @@ load '../../lib/biointerchange/genomics/gvf_pragmas.rb'
 load '../../lib/biointerchange/genomics/gvf_reader.rb'
 load '../../lib/biointerchange/genomics/gff3_rdf_ntriples.rb'
 
-input_formats = {}
-input_formats['dbcls.catanns.json'] = [ BioInterchange::TextMining::PubAnnosJSONReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
-input_formats['uk.ac.man.pdfx'] = [ BioInterchange::TextMining::PDFxXMLReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
-input_formats['biointerchange.gff3'] = [ BioInterchange::Genomics::GFF3Reader, 'name', 'name_uri', 'date' ]
-input_formats['biointerchange.gvf'] = [ BioInterchange::Genomics::GVFReader, 'name', 'name_uri', 'date' ]
+#input_formats = {}
+#input_formats['dbcls.catanns.json'] = [ BioInterchange::TextMining::PubAnnosJSONReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
+#input_formats['uk.ac.man.pdfx'] = [ BioInterchange::TextMining::PDFxXMLReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
+#input_formats['biointerchange.gff3'] = [ BioInterchange::Genomics::GFF3Reader, 'name', 'name_uri', 'date' ]
+#input_formats['biointerchange.gvf'] = [ BioInterchange::Genomics::GVFReader, 'name', 'name_uri', 'date' ]
 
-output_formats = {}
-output_formats['rdf.bh12.sio'] = BioInterchange::TextMining::RDFWriter
-output_formats['rdf.biointerchange.gff3'] = BioInterchange::Genomics::RDFWriter
-output_formats['rdf.biointerchange.gvf'] = BioInterchange::Genomics::RDFWriter
+#output_formats = {}
+#output_formats['rdf.bh12.sio'] = BioInterchange::TextMining::RDFWriter
+#output_formats['rdf.biointerchange.gff3'] = BioInterchange::Genomics::RDFWriter
+#output_formats['rdf.biointerchange.gvf'] = BioInterchange::Genomics::RDFWriter
 
 FCGI.each { |fcgi|
   request = fcgi.in.read
@@ -67,14 +67,14 @@ FCGI.each { |fcgi|
     raise ArgumentError, 'An output format must be given in the meta-data using the key "output".' unless parameters['output']
     raise ArgumentError, "Unknown output format \"#{parameters['output']}\"." unless output_formats[parameters['output']]
 
-    reader_class, *args = input_formats[parameters['input']]
+    reader_class, *args = Registry.reader(parameters['input'])
     reader = reader_class.new(*BioInterchange::get_parameters(parameters, args))
     istream, ostream = IO.pipe
     ostream.print(data)
     ostream.close
     model = reader.deserialize(istream)
     istream, ostream = IO.pipe
-    output_formats[parameters['output']].new(ostream).serialize(model)
+    Registry.writer(parameters['output']).new(ostream).serialize(model)
     ostream.close
     fcgi.out.print(istream.read)
   rescue => e

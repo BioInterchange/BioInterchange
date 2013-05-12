@@ -28,6 +28,9 @@ module BioInterchange
   require 'biointerchange/so'
   require 'biointerchange/sofa'
 
+  # Registry for reader/writer management:
+  require 'biointerchange/registry'
+
   # Reader/writer interfaces
   require 'biointerchange/reader'
   require 'biointerchange/model'
@@ -97,7 +100,7 @@ module BioInterchange
         ["--batchsize", "-b", Getopt::OPTIONAL],                # batchsize for readers/writers that support +postpone?+
         ["--input", "-i", Getopt::REQUIRED],                    # input file format
         ["--rdf", "-r", Getopt::REQUIRED],                      # output file format
-        ["--annotate_name", Getopt::OPTIONAL],                  # name of resourcce/tool/person
+        ["--annotate_name", Getopt::OPTIONAL],                  # name of resource/tool/person
         ["--annotate_name_id", Getopt::OPTIONAL],               # uri of resource/tool/person
         ["--annotate_date", Getopt::OPTIONAL],                  # date of processing/annotation
         ["--annotate_version", Getopt::OPTIONAL],               # version number of resource
@@ -110,47 +113,38 @@ module BioInterchange
         puts "Usage: ruby #{$0} -i <format> -r <format> [options]"
         puts ''
         puts 'Supported input formats (--input <format>/-i <format>):'
-        puts '  biointerchange.gff3                : GFF3'
-        puts '  biointerchange.gvf                 : GVF'
-        puts '  dbcls.catanns.json                 : PubAnnotation JSON'
-        puts '  uk.ac.man.pdfx                     : PDFx XML'
+        Registry.reader_descriptions.each_pair { |reader_id, description|
+          puts "  #{reader_id}#{' ' * (34 - reader_id.length)} : #{description}"
+        }
         puts ''
         puts 'Supported output formats (--rdf <format>/-r <format>)'
-        puts '  rdf.biointerchange.gff3            : RDF N-Triples for the following input'
-        puts '    biointerchange.gff3'
-        puts '  rdf.biointerchange.gvf             : RDF N-Triples for the following input'
-        puts '    biointerchange.gff3'
-        puts '    biointerchange.gvf'
-        puts '  rdf.bh12.sio                       : RDF N-Triples for the following inputs'
-        puts '    dbcls.catanns.json'
-        puts '    uk.ac.man.pdfx'
+        Registry.writer_descriptions.each_pair { |writer_id, description|
+          puts "  #{writer_id}#{' ' * (34 - writer_id.length)} : #{description}"
+        }
         puts ''
         puts 'I/O options:'
+        puts '  -b <size>/--batchsize <size>       : process input in batches of the given size'
+        puts '                                      (if supported, see below for valid input/rdf pairs)'
         puts '  -f <file>/--file <file>            : file to read; STDIN used if not supplied'
         puts '  -o <file>/--out <file>             : output file; STDOUT used if not supplied'
-        puts ''
-        puts 'Input-/RDF-format specific options:'
-        puts '  Input: dbcls.catanns.json, uk.ac.man.pdfx'
-        puts '  Output: rdf.bh12.sio'
-        puts '  Options:'
-        puts '    --annotate_date <date>           : date of processing/annotation (optional)'
-        puts '    --annotate_version <version>     : version number of resource (optional)'
-        puts '    --annotate_name <name>           : name of resource/tool/person (required)'
-        puts '    --annotate_name_id <id>          : URI of resource/tool/person (required)'
-        puts ''
-        puts 'Input-/RDF-format specific options:'
-        puts '  Input: biointerchange.gff3 or biointerchange.gvf'
-        puts '  Output: rdf.biointerchange.gff3 or rdf.biointerchange.gvf'
-        puts '  Options:'
-        puts '    -b <size>/--batchsize <size>     : process features in batches of the given size (optional)'
-        puts '    -t <date>/--date <date>          : date when the GFF3/GVF file was created (optional)'
-        puts '    --name <name>                    : name of the GFF3/GVF file creator (optional)'
-        puts '    --name_id <id>                   : email address of the GFF3/GVF file creator (optional)'
         puts ''
         puts 'Other options:'
         puts '  -v / --version                     : print the Gem\'s version number and exit'
         puts '  -d / --debug                       : turn on debugging output (for stacktraces)'
         puts '  -h  --help                         : this message'
+        puts ''
+        puts 'Input-/RDF-format specific options:'
+        reader_writer_pairs = Registry.reader_writer_pairs
+        reader_writer_pairs.each_index { |reader_writer_pair_index|
+          reader_id, writer_id = reader_writer_pairs[reader_writer_pair_index]
+          puts "  Input format  : #{reader_id}"
+          puts "  Output format : #{writer_id}"
+          Registry.options_help(reader_id).each { |option_description|
+            option, description = option_description
+            puts "    --annotate_#{option}#{' ' * (21 - option.length)} : #{description}"
+          }
+          puts '' if reader_writer_pair_index + 1 < reader_writer_pairs.length
+        }
       
         exit 1
       end
@@ -166,62 +160,43 @@ module BioInterchange
       @@skip_rdf_graph = false if opt['no_rdf_graph_optimization']
 
       # Check if the input/rdf options are supported:
-      if opt['input'] == 'dbcls.catanns.json' or opt['input'] == 'uk.ac.man.pdfx' then
-        if opt['rdf'] == 'rdf.bh12.sio' then
-          raise ArgumentError, 'Require --name and --name_id options to specify source of annotations (e.g., a manual annotators name, or software tool name) and their associated URI (e.g., email address, or webaddress).' unless opt['name'] and opt['name_id']
-        else
-          unsupported_combination
-        end
-      elsif opt['input'] == 'biointerchange.gff3' then
-        if opt['rdf'] == 'rdf.biointerchange.gff3' then
-          # Okay. No further arguments required.
-        else
-          unsupported_combination
-        end
-      elsif opt['input'] == 'biointerchange.gvf' then
-        if opt['rdf'] == 'rdf.biointerchange.gff3' or opt['rdf'] == 'rdf.biointerchange.gvf' then
-          # Okay. No further arguments required.
-        else
-          unsupported_combination
-        end
-      else
-        unsupported_combination
-      end
+      unsupported_combination unless Registry.is_supported?(opt['input'], opt['rdf'])
       
-      wrong_type('batchsize', 'a positive integer') if opt['batchsize'] and not opt['batchsize'].match(/^[1-9][0-9]*$/)
+      if opt['batchsize'] then
+        batching_not_supported unless Registry.is_supporting_batch_processing?(opt['input'], opt['rdf'])
+        wrong_type('batchsize', 'a positive integer') unless opt['batchsize'].match(/^[1-9][0-9]*$/)
+      end
 
-      opt['batchsize'] = opt['batchsize'].to_i if opt['batchsize']
+      # Create a parameter map that can be passed along to Reader implementations:
+      map = {
+        'input'  => opt['input'],
+        'output' => opt['output']
+      }
+      map['batchsize'] = opt['batchsize'].to_i if opt['batchsize']
+      opt.each_key { |key|
+        map[key.sub(/^annotate_/, '')] = opt[key] if key.start_with?('annotate_')
+      }
 
       # Generate model from file (deserialization).
-      # Note: if-clauses are lexicographically ordered. 
-      reader = nil
-      if opt['input'] == 'biointerchange.gff3' then
-        reader = BioInterchange::Genomics::GFF3Reader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], opt['batchsize'])
-      elsif opt['input'] == 'biointerchange.gvf' then
-        reader = BioInterchange::Genomics::GVFReader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], opt['batchsize'])
-      elsif opt['input'] == 'dbcls.catanns.json' then
-        reader = BioInterchange::TextMining::PubAnnosJSONReader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['version'])
-      elsif opt['input'] == 'uk.ac.man.pdfx' then
-        reader = BioInterchange::TextMining::PDFxXMLReader.new(opt['annotate_name'], opt['annotate_name_id'], opt['annotate_date'], BioInterchange::TextMining::Process::UNSPECIFIED, opt['annotate_version'])
-      end
+      reader_class, *args = Registry.reader(opt['input'])
+      reader = reader_class.new(*BioInterchange::get_parameters(map, args))
     
-      if opt["file"]
-        input_source = File.new(opt["file"],'r')
+      input_source = nil
+      if opt['file'] then
+        input_source = File.new(opt['file'], 'r')
       else
         input_source = STDIN
       end
     
+      output_source = nil
+      if opt['out'] then
+        output_source = File.new(opt['out'], 'w')
+      else
+        output_source = STDOUT
+      end
+
       # Generate rdf from model (serialization).
-      # Note: if-clauses are lexicographically ordered. 
-      writer = nil
-      if opt['rdf'] == 'rdf.bh12.sio' then
-        writer = BioInterchange::TextMining::RDFWriter.new(File.new(opt['out'], 'w')) if opt['out']
-        writer = BioInterchange::TextMining::RDFWriter.new(STDOUT) unless opt['out']
-      end
-      if opt['rdf'] == 'rdf.biointerchange.gff3' or opt['rdf'] == 'rdf.biointerchange.gvf' then
-        writer = BioInterchange::Genomics::RDFWriter.new(File.new(opt['out'], 'w')) if opt['out']
-        writer = BioInterchange::Genomics::RDFWriter.new(STDOUT) unless opt['out']
-      end
+      writer = Registry.writer(opt['rdf']).new(output_source)
       
       begin
         model = reader.deserialize(input_source)
@@ -269,6 +244,10 @@ module BioInterchange
   end
 
 private
+
+  def self.batching_not_supported
+    raise ArgumentError, 'Batching is not supported for this input/output format combination.'
+  end
 
   def self.unsupported_combination
     raise ArgumentError, 'This input/output format combination is not supported.'

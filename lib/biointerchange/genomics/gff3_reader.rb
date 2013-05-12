@@ -4,6 +4,20 @@ module BioInterchange::Genomics
 
 class GFF3Reader < BioInterchange::Reader
 
+  # Register reader:
+  BioInterchange::Registry.register_reader(
+    'biointerchange.gff3',
+    GFF3Reader,
+    [ 'name', 'name_uri', 'date' ],
+    true,
+    'Generic Feature Format Version 3 (GFF3) reader',
+    [
+      [ 'date <date>', 'date when the GFF3 file was created (optional)' ],
+      [ 'name <name>', 'name of the GFF3 file creator (optional)' ],
+      [ 'name_id <id>', 'email address of the GFF3 file creator (optional)' ]
+    ]
+  )
+
   # Creates a new instance of a Generic Feature Format Version 3 (GFF3) reader.
   #
   # The reader supports batch processing.
@@ -94,7 +108,7 @@ protected
       if type.match(/^SO:\d{7}$/) then
         type = RDF::URI.new("http://www.sequenceontology.org/miso/current_release/term/#{feature.type}")
       else
-        type = BioInterchange::SOFA.send(BioInterchange.make_safe_label(type))
+        type = BioInterchange::SO.send(BioInterchange.make_safe_label(type))
       end
     rescue NoMethodError
       raise BioInterchange::Exceptions::InputFormatError, "Type of feature is set to an unknown SOFA term: \"#{type}\""

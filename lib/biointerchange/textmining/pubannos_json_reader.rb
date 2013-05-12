@@ -5,13 +5,36 @@ require 'json'
 
 class PubAnnosJSONReader < BioInterchange::TextMining::TMReader
 
+  # Register reader:
+  BioInterchange::Registry.register_reader(
+    'dbcls.catanns.json',
+    PubAnnosJSONReader,
+    [
+      'name',
+      'name_id',
+      'date',
+      [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ],
+      'version'
+    ],
+    false,
+    'PDFx XML reader',
+    [
+      [ 'date <date>', 'date when the GFF3 file was created (optional)' ],
+      [ 'version <version>', 'version number of resource (optional)' ],
+      [ 'name <name>', 'name of the GFF3 file creator (required)' ],
+      [ 'name_id <id>', 'email address of the GFF3 file creator (required)' ]
+    ]
+  )
+
+  # Deserialize a PubAnnotations JSON object.
+  #
+  # +inputstream+:: Input IO stream to deserialize 
   def deserialize(inputstream)
     if inputstream.kind_of?(IO) then
       pubannos(inputstream.read)
     elsif inputstream.kind_of?(String) then
       pubannos(inputstream)
     else
-      #else raise exception
       super(inputstream)
     end
   end

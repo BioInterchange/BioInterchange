@@ -15,6 +15,22 @@ module BioInterchange::Genomics
 # - rdf.biointerchange.gvf
 class RDFWriter < BioInterchange::Writer
 
+  # Register writers:
+  BioInterchange::Registry.register_writer(
+    'rdf.biointerchange.gff3',
+    BioInterchange::Genomics::RDFWriter,
+    [ 'biointerchange.gff3' ],
+    true,
+    'Generic Feature Format Version 3 Ontology (GFF3O) based RDFization'
+  )
+  BioInterchange::Registry.register_writer(
+    'rdf.biointerchange.gvf',
+    BioInterchange::Genomics::RDFWriter,
+    [ 'biointerchange.gvf' ],
+    true,
+    'Genome Variation Format Version 1 Ontology (GVF1O) based RDFization'
+  )
+
   # Creates a new instance of a RDFWriter that will use the provided output stream to serialize RDF.
   #
   # +ostream+:: instance of an IO class or derivative that is used for RDF serialization

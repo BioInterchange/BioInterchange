@@ -2,6 +2,20 @@ module BioInterchange::Genomics
 
 class GVFReader < GFF3Reader
 
+  # Register reader:
+  BioInterchange::Registry.register_reader(
+    'biointerchange.gvf',
+    GVFReader,
+    [ 'name', 'name_uri', 'date' ],
+    true,
+    'Genome Variation Format Version 1 (GVF) reader',
+    [
+      [ 'date <date>', 'date when the GVF file was created (optional)' ],
+      [ 'name <name>', 'name of the GVF file creator (optional)' ],
+      [ 'name_id <id>', 'email address of the GVF file creator (optional)' ]
+    ]
+  )
+
   # Creates a new instance of a Genome Variation Format (GVF) reader.
   #
   # +name+:: Optional name of the person who generated the GVF file.
