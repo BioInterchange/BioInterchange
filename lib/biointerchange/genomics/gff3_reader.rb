@@ -168,15 +168,15 @@ protected
       feature_set.set_pragma(name, { name => value.to_f })
     elsif name == 'sequence-region' then
       regions = feature_set.pragma(name)
-      regions = {} unless regions
+      regions = { name => {} } unless regions
       seqid, start_coordinate, end_coordinate = value.split(/\s+/, 3)
-      regions[seqid] = BioInterchange::Genomics::GFF3Landmark.new(seqid, start_coordinate.to_i, end_coordinate.to_i)
+      regions[name][seqid] = BioInterchange::Genomics::GFF3Landmark.new(seqid, start_coordinate.to_i, end_coordinate.to_i)
       feature_set.set_pragma(name, regions)
     elsif name == 'species' then
       feature_set.set_pragma(name, { name => value })
     else
       # Unhandled pragma. Just save the value in its string form.
-      feature_set.set_pragma(name, value)
+      feature_set.set_pragma(name, { name => value })
     end
   end
 
