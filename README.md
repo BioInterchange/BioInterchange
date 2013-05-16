@@ -439,6 +439,7 @@ In alphabetical order of the last name:
 * [Kevin B. Cohen](http://compbio.ucdenver.edu/Hunter_lab/Cohen/index.shtml)
 * [Geraint Duck](http://www.cs.man.ac.uk/~duckg)
 * [Michel Dumontier](http://dumontierlab.com)
+* [Begum Durgahee](http://utah.academia.edu/BDurgahee)
 * [Jin-Dong Kim](http://www.bioontology.org/Jin-Dong_Kim)
 
 Cite
