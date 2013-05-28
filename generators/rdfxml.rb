@@ -56,8 +56,17 @@ model.keys.each { |key|
 
   next unless type
 
+  # Move next if blank nodes
+  next if key.to_s.start_with?("_:") 
+  
   label = entry[RDF::RDFS.label].to_s
-  next if make_safe_label(label).empty?
+  
+  #next if make_safe_label(label).empty?
+  # If no label present, then get label from URI
+  if make_safe_label(label).empty? then
+     label = key.to_s.split('#')[1]
+  end
+  
   uri = key.to_s
 
   # Only deal with URI sub-classes/sub-properties, whilst ignoring restrictions, etc.
@@ -104,6 +113,11 @@ model.keys.each { |key|
   type = entry[RDF.type]
 
   label = entry[RDF::RDFS.label].to_s
+
+  # If no label present, then get label from URI
+  if make_safe_label(label).empty? then
+     label = key.to_s.split('#')[1]
+  end
 
   [ label, entry[SIO_SYN] ].compact.each { |label_or_synonym|
     label_or_synonym = label_or_synonym.to_s
