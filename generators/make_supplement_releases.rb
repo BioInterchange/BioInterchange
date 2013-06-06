@@ -22,6 +22,8 @@ python_path = 'supplemental/python/biointerchange'
 
 # Non-nil values overwrite URIs defaults (class- and property-URI prefixes):
 namespaces = {
+  'cdao.rb'   => nil,
+  'faldo.rb'  => nil,
   'gff3o.rb'  => nil,
   'goxref.rb' => '',
   'gvf1o.rb'  => nil,

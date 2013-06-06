@@ -20,6 +20,7 @@ module BioInterchange
   require 'biointerchange/exceptions'
 
   # Ontologies (besides the ones from the 'rdf' gem)
+  require 'biointerchange/cdao'
   require 'biointerchange/faldo'
   require 'biointerchange/gff3o'
   require 'biointerchange/goxref'
@@ -83,6 +84,19 @@ module BioInterchange
 
   # Writer
   # ...same GFF3 writer
+
+  #
+  # PHYLOGENETICS
+  #
+
+  # Reader
+  require 'biointerchange/phylogenetics/newick_reader'
+
+  # Model
+  require 'biointerchange/phylogenetics/tree_set'
+
+  # Writer
+  require 'biointerchange/phylogenetics/cdao_rdf_ntriples'
 
   #
   # ACTUAL COMMAND LINE IMPLEMENTATION
