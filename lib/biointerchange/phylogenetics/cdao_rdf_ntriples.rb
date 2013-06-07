@@ -49,7 +49,7 @@ protected
       end
     end
 
-    if node.name then
+    if node.name and not node.name.empty? then
       taxonomic_unit_uri = RDF::URI.new("#{tree_uri.to_s}/taxonomic_unit/#{node.object_id}")
       graph.insert(RDF::Statement.new(taxonomic_unit_uri, RDF.type, BioInterchange::CDAO.TU))
       graph.insert(RDF::Statement.new(node_uri, BioInterchange::CDAO::represents_TU, taxonomic_unit_uri))
