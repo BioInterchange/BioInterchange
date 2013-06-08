@@ -39,17 +39,9 @@ load '../../lib/biointerchange/genomics/gvf_feature_set.rb'
 load '../../lib/biointerchange/genomics/gvf_pragmas.rb'
 load '../../lib/biointerchange/genomics/gvf_reader.rb'
 load '../../lib/biointerchange/genomics/gff3_rdf_ntriples.rb'
-
-#input_formats = {}
-#input_formats['dbcls.catanns.json'] = [ BioInterchange::TextMining::PubAnnosJSONReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
-#input_formats['uk.ac.man.pdfx'] = [ BioInterchange::TextMining::PDFxXMLReader, 'name', 'name_id', 'date', [ Proc.new { |*args| BioInterchange::TextMining::TMReader::determine_process(*args) }, 'name_id' ], 'version' ]
-#input_formats['biointerchange.gff3'] = [ BioInterchange::Genomics::GFF3Reader, 'name', 'name_uri', 'date' ]
-#input_formats['biointerchange.gvf'] = [ BioInterchange::Genomics::GVFReader, 'name', 'name_uri', 'date' ]
-
-#output_formats = {}
-#output_formats['rdf.bh12.sio'] = BioInterchange::TextMining::RDFWriter
-#output_formats['rdf.biointerchange.gff3'] = BioInterchange::Genomics::RDFWriter
-#output_formats['rdf.biointerchange.gvf'] = BioInterchange::Genomics::RDFWriter
+load '../../lib/biointerchange/phylogenetics/tree_set.rb'
+load '../../lib/biointerchange/phylogenetics/newick_reader.rb'
+load '../../lib/biointerchange/phylogenetics/cdao_rdf_ntriples.rb'
 
 FCGI.each { |fcgi|
   request = fcgi.in.read

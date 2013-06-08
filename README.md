@@ -9,6 +9,7 @@ Supported input file formats (see examples directory):
 
 * [GFF3](http://www.sequenceontology.org/resources/gff3.html)
 * [GVF](http://www.sequenceontology.org/resources/gvf.html)
+* [Newick](http://evolution.genetics.washington.edu/phylip/newicktree.html)
 * [Pubannos JSON](http://pubannotation.dbcls.jp/)
 * [PDFx XML](http://pdfx.cs.man.ac.uk/)
 
@@ -18,6 +19,7 @@ Supported RDF output formats:
 
 Ontologies used in the RDF output:
 
+* [Comparative Data Analysis Ontology](http://sourceforge.net/apps/mediawiki/cdao/index.php?title=Main_Page) (CDAO)
 * [Generic Feature Format Version 3 Ontology](http://www.biointerchange.org/ontologies.html) (GFF3O)
 * [Genome Variation Format Version 1 Ontology](http://www.biointerchange.org/ontologies.html) (GVF1O)
 * [Semanticscience Integrated Ontology](http://code.google.com/p/semanticscience/wiki/SIO) (SIO)
@@ -435,11 +437,13 @@ RDFization parameters and data are send as a single HTTP POST requests containin
    *  `biointerchange.gff3`: [Generic Feature Format Version 3](http://www.sequenceontology.org/resources/gff3.html)
    *  `biointerchange.gvf`: [Genome Variation Format](http://www.sequenceontology.org/resources/gvf.html)
    *  `dbcls.catanns.json`: [PubAnnotation categorical annotations](http://pubannotation.dbcls.jp) JSON
+   *  `phylotastic.newick`: [Newick](http://evolution.genetics.washington.edu/phylip/newicktree.html)
    *  `uk.ac.man.pdfx`: [PDFx](http://pdfx.cs.man.ac.uk) XML
 *  `OUTPUT_METHOD`: determines the RDFization method that should be used, output will always be RDF N-Triples; available output formats are
    *  `rdf.biointerchange.gff3`: RDFization of `biointerchange.gff3`
    *  `rdf.biointerchange.gvf`: RDFization of `biointerchange.gvf`
    *  `rdf.bh12.sio`: RDFization of `dbcls.catanns.json` or `uk.ac.man.pdfx`
+   *  `rdf.phylotastic.newick`: RDFization of `phylotastic.newick`
 *  `URL_ENCODED_DATA`: data for RDFization as [URL encoded](http://en.wikipedia.org/wiki/Percent-encoding) string
 
 #### Example

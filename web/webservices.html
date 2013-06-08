@@ -64,14 +64,16 @@
               <option value="dbcls.catanns.json" selected>DBCLS PubAnnotation's Category Annotations (catanns) JSON</option>
               <option value="biointerchange.gff3">GFF3</option>
               <option value="biointerchange.gvf">GVF</option>
+              <option value="phylotastic.newick">Newick</option>
               <option value="uk.ac.man.pdfx">PDFx XML</option>
             </select><br />
             Select the RDF serialization method (output format):<br />
             <span class="muted">Not all output format are supported for a given input format. Invalid choices are disabled automatically here.</span><br />
             <select id="outputformat" style="min-width: 50%;">
-              <option id="output.rdf.bh12.sio" value="rdf.bh12.sio" selected>RDF using SIO and FOAF ontologies</option>
+              <option id="output.rdf.phylotastic.newick" value="rdf.phylotastic.newick" disabled>RDF using CDAO ontology</option>
               <option id="output.rdf.biointerchange.gff3" value="rdf.biointerchange.gff3" disabled>RDF using GFF3O ontology</option>
               <option id="output.rdf.biointerchange.gvf" value="rdf.biointerchange.gvf" disabled>RDF using GVF1O ontology</option>
+              <option id="output.rdf.bh12.sio" value="rdf.bh12.sio" selected>RDF using SIO and FOAF ontologies</option>
             </select><br />
             <a class="btn btn-info" onclick="pasteExample();">Paste Input-Specific Example</a>
           </p>
@@ -107,6 +109,7 @@
                 <li><code>biointerchange.gff3</code>: <a href="http://www.sequenceontology.org/resources/gff3.html">Generic Feature Format Version 3</a></li>
                 <li><code>biointerchange.gvf</code>: <a href="http://www.sequenceontology.org/resources/gvf.html">Genome Variation Format</a></li>
                 <li><code>dbcls.catanns.json</code>: <a href="http://pubannotation.dbcls.jp">PubAnnotation categorical annotations</a></li>
+                <li><code>phylotastic.newick</code>: <a href="http://evolution.genetics.washington.edu/phylip/newicktree.html">Newick tree file format</a></li>
                 <li><code>uk.ac.man.pdfx</code>: <a href=http://pdfx.cs.man.ac.uk">PDFx</a></li>
               </ul>
               <li><code>OUTPUT_METHOD</code>: determines the RDFization method that should be used, output will always be RDF N-Triples; available output formats are</li>
@@ -114,6 +117,7 @@
                 <li><code>rdf.biointerchange.gff3</code>: RDFization of <code>biointerchange.gff3</code></li>
                 <li><code>rdf.biointerchange.gvf</code>: RDFization of <code>biointerchange.gvf</code></li>
                 <li><code>rdf.bh12.sio</code>: RDFization of <code>dbcls.catanns.json</code> or <code>uk.ac.man.pdfx</code></li>
+                <li><code>rdf.phylotastic.newick</code>: RDFization of <code>phylotastic.newick</code></li>
               </ul>
               <li><code>URL_ENCODED_DATA</code>: data for RDFization as <a href="http://en.wikipedia.org/wiki/Percent-encoding">URL encoded</a> string</li>
             </ul>
