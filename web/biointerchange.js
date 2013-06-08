@@ -118,11 +118,13 @@ function pasteExample() {
       "##feature-ontology http://song.cvs.sourceforge.net/viewvc/song/ontology/so.obo?revision=1.283\n" +
       "##data-source Source=ensembl;version=71;url=http://e71.ensembl.org/Saccharomyces_cerevisiae\n" +
       "##sequence-region I 1 230218\n" +
-      "I\tSGRP\tSNV\t84\t84\t.\t+\t.\tID=1;Variant_seq=A;Variant_effect=upstream_gene_variant 0 transcript YAL067W-A,upstream_gene_variant 0 transcript YAL069W,upstream_gene_variant 0 transcript YAL068W-A,downstream_gene_variant 0 transcript YAL068C;Dbxref=SGRP:s01-84;Reference_seq=G\n" +
-      "I\tSGRP\tSNV\t109\t109\t.\t+\t.\tID=2;Variant_seq=C;Variant_effect=upstream_gene_variant 0 transcript YAL067W-A,upstream_gene_variant 0 transcript YAL068W-A,upstream_gene_variant 0 transcript YAL069W,downstream_gene_variant 0 transcript YAL068C;Dbxref=SGRP:s01-109;Reference_seq=G\n" +
-      "I\tSGRP\tSNV\t111\t111\t.\t+\t.\tID=3;Variant_seq=T;Variant_effect=upstream_gene_variant 0 transcript YAL067W-A,upstream_gene_variant 0 transcript YAL069W,upstream_gene_variant 0 transcript YAL068W-A,downstream_gene_variant 0 transcript YAL068C;Dbxref=SGRP:s01-111;Reference_seq=C\n" +
-      "I\tSGRP\tSNV\t114\t114\t.\t+\t.\tID=4;Variant_seq=C;Variant_effect=upstream_gene_variant 0 transcript YAL067W-A,upstream_gene_variant 0 transcript YAL068W-A,upstream_gene_variant 0 transcript YAL069W,downstream_gene_variant 0 transcript YAL068C;Dbxref=SGRP:s01-114;Reference_seq=T\n" +
-      "I\tSGRP\tSNV\t115\t115\t.\t+\t.\tID=5;Variant_seq=G;Variant_effect=upstream_gene_variant 0 transcript YAL067W-A,upstream_gene_variant 0 transcript YAL068W-A,upstream_gene_variant 0 transcript YAL069W,downstream_gene_variant 0 transcript YAL068C;Dbxref=SGRP:s01-115;Reference_seq=C\n"
+
+      "##gff-version 3\n" +
+      "##gvf-version 1.06\n" +
+      "##species http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606\n" +
+      "##file-date 2012-11-29\n" +
+      "##genome-build NCBI NCBI36\n" +
+      "Chr1	DGVa	copy_number_loss	4320920	4323975	.	.	.	ID=1;Name=essv2585519;variant_call_so_id=SO:0001743;parent=esv275066;Start_range=4320920,4321865;End_range=4323946,4323975;submitter_variant_id=IgH3.4SSV1;samples=Unknown;var_origin=Not tested;Variant_seq=.\n"
     );
   } else if ($('#inputformat').val() == 'dbcls.catanns.json') {
     $('#metainput').val(
