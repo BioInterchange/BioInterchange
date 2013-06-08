@@ -20,6 +20,7 @@ Supported RDF output formats:
 Ontologies used in the RDF output:
 
 * [Comparative Data Analysis Ontology](http://sourceforge.net/apps/mediawiki/cdao/index.php?title=Main_Page) (CDAO)
+* [Friend of a Friend](http://xmlns.com/foaf/spec) (FOAF)
 * [Generic Feature Format Version 3 Ontology](http://www.biointerchange.org/ontologies.html) (GFF3O)
 * [Genome Variation Format Version 1 Ontology](http://www.biointerchange.org/ontologies.html) (GVF1O)
 * [Semanticscience Integrated Ontology](http://code.google.com/p/semanticscience/wiki/SIO) (SIO)
