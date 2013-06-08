@@ -17463,6 +17463,156 @@ public class SO {
     if (uri.equals(_namespace_SO("SEQUENCE_variant_of"))) {
       return true;
     }
+    if (uri.equals(_namespace_SO("adjacent_to"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("associated_with"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("complete_evidence_for_feature"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("connects_on"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("contained_by"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("contains"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("derives_from"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("disconnected_from"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("edited_from"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("edited_to"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("evidence_for_feature"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("exemplar_of"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("finished_by"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("finishes"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("gained"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("genome_of"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("guided_by"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("guides"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("has_integral_part"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("has_origin"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("has_part"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("has_quality"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("homologous_to"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("integral_part_of"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("is_consecutive_sequence_of"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("lost"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("maximally_overlaps"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("member_of"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("non_functional_homolog_of"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("orthologous_to"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("overlaps"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("paralogous_to"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("part_of"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("partial_evidence_for_feature"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("position_of"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("processed_from"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("processed_into"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("recombined_from"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("recombined_to"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("sequence_of"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("similar_to"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("started_by"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("starts"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("trans_spliced_from"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("trans_spliced_to"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("transcribed_from"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("transcribed_to"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("translates_to"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("translation_of"))) {
+      return true;
+    }
+    if (uri.equals(_namespace_SO("variant_of"))) {
+      return true;
+    }
     return false;
   }
 

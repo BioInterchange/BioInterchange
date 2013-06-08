@@ -15263,6 +15263,106 @@ class SO:
             return True
         if uri == cls._namespace_SO('SEQUENCE_variant_of'):
             return True
+        if uri == cls._namespace_SO('adjacent_to'):
+            return True
+        if uri == cls._namespace_SO('associated_with'):
+            return True
+        if uri == cls._namespace_SO('complete_evidence_for_feature'):
+            return True
+        if uri == cls._namespace_SO('connects_on'):
+            return True
+        if uri == cls._namespace_SO('contained_by'):
+            return True
+        if uri == cls._namespace_SO('contains'):
+            return True
+        if uri == cls._namespace_SO('derives_from'):
+            return True
+        if uri == cls._namespace_SO('disconnected_from'):
+            return True
+        if uri == cls._namespace_SO('edited_from'):
+            return True
+        if uri == cls._namespace_SO('edited_to'):
+            return True
+        if uri == cls._namespace_SO('evidence_for_feature'):
+            return True
+        if uri == cls._namespace_SO('exemplar_of'):
+            return True
+        if uri == cls._namespace_SO('finished_by'):
+            return True
+        if uri == cls._namespace_SO('finishes'):
+            return True
+        if uri == cls._namespace_SO('gained'):
+            return True
+        if uri == cls._namespace_SO('genome_of'):
+            return True
+        if uri == cls._namespace_SO('guided_by'):
+            return True
+        if uri == cls._namespace_SO('guides'):
+            return True
+        if uri == cls._namespace_SO('has_integral_part'):
+            return True
+        if uri == cls._namespace_SO('has_origin'):
+            return True
+        if uri == cls._namespace_SO('has_part'):
+            return True
+        if uri == cls._namespace_SO('has_quality'):
+            return True
+        if uri == cls._namespace_SO('homologous_to'):
+            return True
+        if uri == cls._namespace_SO('integral_part_of'):
+            return True
+        if uri == cls._namespace_SO('is_consecutive_sequence_of'):
+            return True
+        if uri == cls._namespace_SO('lost'):
+            return True
+        if uri == cls._namespace_SO('maximally_overlaps'):
+            return True
+        if uri == cls._namespace_SO('member_of'):
+            return True
+        if uri == cls._namespace_SO('non_functional_homolog_of'):
+            return True
+        if uri == cls._namespace_SO('orthologous_to'):
+            return True
+        if uri == cls._namespace_SO('overlaps'):
+            return True
+        if uri == cls._namespace_SO('paralogous_to'):
+            return True
+        if uri == cls._namespace_SO('part_of'):
+            return True
+        if uri == cls._namespace_SO('partial_evidence_for_feature'):
+            return True
+        if uri == cls._namespace_SO('position_of'):
+            return True
+        if uri == cls._namespace_SO('processed_from'):
+            return True
+        if uri == cls._namespace_SO('processed_into'):
+            return True
+        if uri == cls._namespace_SO('recombined_from'):
+            return True
+        if uri == cls._namespace_SO('recombined_to'):
+            return True
+        if uri == cls._namespace_SO('sequence_of'):
+            return True
+        if uri == cls._namespace_SO('similar_to'):
+            return True
+        if uri == cls._namespace_SO('started_by'):
+            return True
+        if uri == cls._namespace_SO('starts'):
+            return True
+        if uri == cls._namespace_SO('trans_spliced_from'):
+            return True
+        if uri == cls._namespace_SO('trans_spliced_to'):
+            return True
+        if uri == cls._namespace_SO('transcribed_from'):
+            return True
+        if uri == cls._namespace_SO('transcribed_to'):
+            return True
+        if uri == cls._namespace_SO('translates_to'):
+            return True
+        if uri == cls._namespace_SO('translation_of'):
+            return True
+        if uri == cls._namespace_SO('variant_of'):
+            return True
         return False
 
     @classmethod

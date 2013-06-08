@@ -66,10 +66,10 @@ include BioInterchange
 
 def print_resource(resource)
   puts "    #{resource}"
-    puts "        Ontology class:             #{GFF3O.is_class?(resource)}"
-      puts "        Ontology object property:   #{GFF3O.is_object_property?(resource)}"
-        puts "        Ontology datatype property: #{GFF3O.is_datatype_property?(resource)}"
-        end
+  puts "        Ontology class:             #{GFF3O.is_class?(resource)}"
+  puts "        Ontology object property:   #{GFF3O.is_object_property?(resource)}"
+  puts "        Ontology datatype property: #{GFF3O.is_datatype_property?(resource)}"
+end
 
 # Get the URI of an ontology term by label:
 puts "'seqid' property:"
@@ -105,7 +105,7 @@ GFF3O.with_parent(GFF3O.start(), feature_properties[0]).each { |feature_property
 <pre>
 git clone git://github.com/BioInterchange/BioInterchange.git
 cd BioInterchange
-git checkout v0.2.2
+git checkout v1.0.0
 ruby examples/vocabulary.rb
 </pre>
             <h4>RDFization Framework</h4>
@@ -257,7 +257,7 @@ protected
             <p>Vocabulary wrappers in Python are available as an egg, that can be installed via <a href="http://pypi.python.org/pypi/setuptools">easy_install</a>:</p>
 <pre>
 sudo easy_install rdflib
-sudo easy_install http://www.biointerchange.org/eggs/biointerchange-0.2.2-py2.7.egg
+sudo easy_install http://www.biointerchange.org/eggs/biointerchange-1.0.0-py2.7.egg
 </pre>
             <p>Usage example (see also <a href="https://github.com/BioInterchange/BioInterchange/blob/master/supplemental/python/example.py">example.py</a>):</p>
 <pre>
@@ -302,7 +302,7 @@ for feature_property in GFF3O.with_parent(GFF3O.start(), feature_properties[0]):
 <pre>
 git clone git://github.com/BioInterchange/BioInterchange.git
 cd BioInterchange
-git checkout v0.2.2
+git checkout v1.0.0
 cd supplemental/python
 python example.py
 </pre>
@@ -321,7 +321,7 @@ python example.py
   &lt;dependency&gt;
     &lt;groupId&gt;org.biointerchange&lt;/groupId&gt;
     &lt;artifactId&gt;vocabularies&lt;/artifactId&gt;
-    &lt;version&gt;0.2.2&lt;/version&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
   &lt;/dependency&gt;
 &lt;/dependencies&gt;
 </pre>
@@ -391,7 +391,7 @@ public class App
 <pre>
 git clone git://github.com/BioInterchange/BioInterchange.git
 cd BioInterchange
-git checkout v0.2.2
+git checkout v1.0.0
 cd supplemental/java/biointerchange
 mvn compile
 mvn exec:java -Dexec.mainClass="org.biointerchange.App"

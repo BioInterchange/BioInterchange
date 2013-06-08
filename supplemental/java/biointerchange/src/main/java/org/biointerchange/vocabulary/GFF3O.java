@@ -618,8 +618,6 @@ public class GFF3O {
    * @param parent Parent URI.
    */
   public static boolean hasParent(Resource uri, Resource parent) {
-  puts "URI: #{uri}";
-  puts "PAR: #{parent}";
     if (__parent_properties.containsKey(uri)) {
       if (__parent_properties.get(uri).equals(parent)) {
         return true;

@@ -507,8 +507,6 @@ class GFF3O:
         uri -- URI that is tested for whether it has the given parent URI.
         parent -- Parent URI.
         """
-    puts "URI: #{uri}"
-    puts "PAR: #{parent}"
         if cls.__parent_properties.has_key(uri):
             if cls.__parent_properties[uri] == parent:
                 return True
