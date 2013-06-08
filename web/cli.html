@@ -63,12 +63,14 @@ gem install biointerchange
 biointerchange --input biointerchange.gvf --rdf rdf.biointerchange.gvf --batchsize 100 --file examples/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf
 biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.10096561.json --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
 biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007-8-3-R40.xml --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
+biointerchange --input phylotastic.newick --rdf rdf.phylotastic.newick --file examples/tree2.new --annotate_date '1 June 2006'
 </pre>
             Input formats:
             <ul>
               <li><code>biointerchange.gff3</code>: <a href="http://www.sequenceontology.org/resources/gff3.html">Generic Feature Format Version 3</a></li>
               <li><code>biointerchange.gvf</code>: <a href="http://www.sequenceontology.org/resources/gvf.html">Genome Variation Format</a></li>
               <li><code>dbcls.catanns.json</code>: <a href="http://pubannotation.dbcls.jp">PubAnnotation categorical annotations</a></li>
+              <li><code>phylotastic.newick</code>: <a href="http://evolution.genetics.washington.edu/phylip/newicktree.html">Newick tree file format</a></li>
               <li><code>uk.ac.man.pdfx</code>: <a href=http://pdfx.cs.man.ac.uk">PDFx</a></li>
             </ul>
             Output formats:
@@ -76,11 +78,12 @@ biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007
               <li><code>rdf.biointerchange.gff3</code>: RDFization of <code>biointerchange.gff3</code></li>
               <li><code>rdf.biointerchange.gvf</code>: RDFization of <code>biointerchange.gvf</code></li>
               <li><code>rdf.bh12.sio</code>: RDFization of <code>dbcls.catanns.json</code> or <code>uk.ac.man.pdfx</code></li>
+              <li><code>rdf.phylotastic.newick</code>: RDFization of <code>phylotastic.newick</code></li>
             </ul>
           </p>
           <h4>Using a Triple Store</h4>
           <p>
-            RDF data produced by BioInterchange can be directly loaded into a triple store. The following gives an example about loading and querying RDF data using <a href="http://www.openrdf.org">Sesame</a>]; the commands are entered via Sesame's <code>bin/console.sh</code>:
+            RDF data produced by BioInterchange can be directly loaded into a triple store. The following gives an example about loading and querying RDF data using <a href="http://www.openrdf.org">Sesame</a>; the commands are entered via Sesame's <code>bin/console.sh</code>:
 <pre>
 &gt; create memory.
 Please specify values for the following variables:
@@ -111,6 +114,7 @@ java -d64 -Xmx4G -jar HermiT.jar -k -v merged.xml
           <p>
             The following list provides information on the origin of the example-data files in the <code>examples</code> directory:
             <ul>
+              <li><code>bininda_emonds_mammals.new</code>: Newick formatted Bininda-Emonds mammals tree (see <a href="http://www.ncbi.nlm.nih.gov/pubmed/17392779">The delayed rise of present-day mammals</a>). Downloaded from <a href="https://github.com/bendmorris/rdf-treestore/blob/master/trees/bininda_emonds_mammals.new">https://github.com/bendmorris/rdf-treestore/blob/master/trees/bininda_emonds_mammals.new</a></li>
               <li><code>BovineGenomeChrX.gff3.gz</code>: Gzipped GFF3 file describing a Bos taurus chromosome X. Downloaded from <a href="http://bovinegenome.org/?q=download_chromosome_gff3">http://bovinegenome.org/?q=download_chromosome_gff3</a></li>
               <li><code>chromosome_BF.gff</code>: GFF3 file of floating contigs from the Baylor Sequencing Centre. Downloaded from <a href="http://dictybase.org/Downloads">http://dictybase.org/Downloads</a></li>
               <li><code>estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf</code>: GVF file of EBI's <a href="http://www.ebi.ac.uk/dgva/database-genomic-variants-archive">DGVa</a>. Downloaded from <a href="ftp://ftp.ebi.ac.uk/pub/databases/dgva/estd176_Banerjee_et_al_2011/gvf/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf">ftp://ftp.ebi.ac.uk/pub/databases/dgva/estd176_Banerjee_et_al_2011/gvf/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf</a></li>

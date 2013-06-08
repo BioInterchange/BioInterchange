@@ -3,6 +3,7 @@ require 'rdf/ntriples'
 
 module BioInterchange::Phylogenetics
 
+# Serialized phylogenetic tree models based on BioRuby's phylogenetic tree implementation.
 class CDAORDFWriter < BioInterchange::Writer
 
   # Register writers:
@@ -10,14 +11,20 @@ class CDAORDFWriter < BioInterchange::Writer
     'rdf.phylotastic.newick',
     CDAORDFWriter,
     [ 'phylotastic.newick' ],
-    false,
+    true,
     'Comparative Data Analysis Ontology (CDAO) based RDFization'
   )
 
+  # Creates a new instance of a CDAORDFWriter that will use the provided output stream to serialize RDF.
+  #
+  # +ostream+:: instance of an IO class or derivative that is used for RDF serialization
   def initialize(ostream)
     @ostream = ostream
   end
 
+  # Serialize a model as RDF.
+  #
+  # +model+:: a generic representation of input data that is an instance of BioInterchange::Phylogenetics::TreeSet
   def serialize(model)
     model.contents.each { |tree|
       serialize_model(model, tree)
@@ -30,6 +37,9 @@ protected
     graph = RDF::Graph.new
     graph.fast_ostream(@ostream) if BioInterchange::skip_rdf_graph
     tree_uri = RDF::URI.new(model.uri)
+    if model.date then
+      graph.insert(RDF::Statement.new(tree_uri, RDF::DC.date, RDF::Literal.new(model.date)))
+    end
     serialize_tree(graph, tree, tree_uri, tree.root, true)
     RDF::NTriples::Writer.dump(graph, @ostream)
   end

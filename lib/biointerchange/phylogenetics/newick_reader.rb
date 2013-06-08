@@ -1,4 +1,5 @@
 require 'bio'
+require 'date'
 
 module BioInterchange::Phylogenetics
 
@@ -8,23 +9,32 @@ class NewickReader < BioInterchange::Reader
   BioInterchange::Registry.register_reader(
     'phylotastic.newick',
     NewickReader,
-    [ 'name', 'name_uri', 'date' ],
+    [ 'date' ],
     true,
     'Newick Tree File Format reader',
     [
-      [ 'date <date>', 'date when the Newick file was created (optional)' ],
-      [ 'name <name>', 'name of the Newick file creator (optional)' ],
-      [ 'name_id <id>', 'email address of the Newick file creator (optional)' ]
+      [ 'date <date>', 'date when the Newick file was created (optional)' ]
     ]
   )
 
-  def initialize(name = nil, name_uri = nil, date = nil, batch_size = nil)
-    @name = name
-    @name_uri = name_uri
+  # Creates a new instance of a Newick file format reader.
+  #
+  # The reader supports batch processing.
+  #
+  # +date+:: Optional date of when the Newick file was produced, annotated, etc.
+  # +batch_size+:: Optional integer that determines that number of features that
+  # should be processed in one go.
+  def initialize(date = nil, batch_size = nil)
     @date = date
     @batch_size = batch_size
   end
 
+  # Reads a Newick file from the input stream and returns an associated model.
+  #
+  # If this method is called when +postponed?+ returns true, then the reading will
+  # continue from where it has been interrupted beforehand.
+  #
+  # +inputstream+:: an instance of class IO or String that holds the contents of a Newick file
   def deserialize(inputstream)
     if inputstream.kind_of?(IO)
       create_model(inputstream)
@@ -48,6 +58,7 @@ protected
       @trees.prune
     else
       @trees = BioInterchange::Phylogenetics::TreeSet.new()
+      @trees.set_date(Date.parse(@date)) if @date
     end
 
     tree_io = Bio::FlatFile.open(Bio::Newick, newick)

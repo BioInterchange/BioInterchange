@@ -55,9 +55,8 @@
 <pre>
 sudo gem install biointerchange
 </pre>
-            <h4>The BioInterchange Framework</h4>
-              <em>TODO... sorry.</em>
             <h4>Vocabulary Wrappers</h4>
+              <p>Ruby classes are provided for the ontologies that is used for serializing RDF. Each ontology is represented by its own Ruby class. The classes provide access to the ontology terms and additional methods for resolving OWL classes, datatype properties and object properties.</p>
               <p>Usage example (see also <a href="https://github.com/BioInterchange/BioInterchange/blob/master/examples/vocabulary.rb">vocabulary.rb</a>):</p>
 <pre>
 require 'rubygems'
@@ -80,6 +79,151 @@ feature_properties = GFF3O.feature_properties().select { |uri| GFF3O.is_datatype
 
 # Use build-in method "with_parent" to pick properties based on their context:
 GFF3O.with_parent(GFF3O.start(), feature_properties)
+</pre>
+            <h4>RDFization Framework</h4>
+              <p>Usage example (see also <a href="https://github.com/BioInterchange/BioInterchange/blob/master/examples/rdfization.rb">rdfization.rb</a>):</p>
+<pre>
+require 'rubygems'
+require 'biointerchange'
+
+include BioInterchange::Phylogenetics
+
+# Create a reader that reads phylogenetic trees in Newick format:
+reader = NewickReader.new()
+
+# Create a model from a single example tree:
+# (Note: the `deserialize` method also takes streams as parameter -- not just strings.)
+model = reader.deserialize('((B:0.2,(C:0.3,D:0.4)E:0.5)F:0.1)A;')
+
+# Serialize the model as RDF N-Triples to STDOUT:
+CDAORDFWriter.new(STDOUT).serialize(model)
+</pre>
+            <h4>Implementing New Readers, Models and Writers</h4>
+              <p>New readers, models and writers are best adopted from or build upon the existing implementations. The phylogenetic trinity of Newick file format reader, <a href="http://bioruby.org">BioRuby</a> based tree model, and <a href="http://sourceforge.net/apps/mediawiki/cdao/index.php?title=Main_Page">CDAO</a> RDF writer is used here as a guidline due to its simplicity.</p>
+              <h5>Reader: Creating an Object Model</h5>
+              <p>The quintessential Newick tree reader is depicted below. Its class is placed in a Ruby module that encapsulates all phylogenetic related source code. The <code>NewickReader</code> class inherits from the BioInterchange framework class <code>Reader</code> that provides method stubs which need to be overwritten. Using the central registry <code>BioInterchange::Registry</code>, the reader informs the framework of its: unique identifier (<code>phylotastic.newick</code>), Ruby class (<code>NewickReader</code>), command line parameters that it accepts (<code>date</code>, which becomes <code>--annotate_date</code>), whether the reader can operate without reading the complete input all at once (<code>true</code>), a descriptive name of the reader (<code>Newick Tree [...]</code>), and an array with descriptions for each parameter stated above.</p>
+              <p>Deserialization of Newick trees is done using the <code>deserialize</code> method, which must take both strings and input streams as valid arguments. If this contraint is not satisfied, then an <code>ImplementationReaderError</code> is thrown that is caught by the framework and handled appropriately.</p>
+              <p>Finally, the <code>postponed?</code> method keeps track of deferred input processing. If the batch size was reached and the model was passed on for serialization to a writer, then this method will have to return <code>true</code>.</p>
+<pre>
+require 'bio'
+
+module BioInterchange::Phylogenetics
+
+class NewickReader &lt; BioInterchange::Reader
+
+  # Register reader:
+  BioInterchange::Registry.register_reader(
+    'phylotastic.newick',
+    NewickReader,
+    [ 'date' ],
+    true,
+    'Newick Tree File Format reader',
+    [
+      [ 'date <date>', 'date when the Newick file was created (optional)' ]
+    ]
+  )
+
+  # Creates a new instance of a Newick file format reader.
+  #
+  # The reader supports batch processing.
+  #
+  # +date+:: Optional date of when the Newick file was produced, annotated, etc.
+  # +batch_size+:: Optional integer that determines that number of features that
+  # should be processed in one go.
+  def initialize(date = nil, batch_size = nil)
+    @date = date
+    @batch_size = batch_size
+  end
+
+  # Reads a Newick file from the input stream and returns an associated model.
+  #
+  # If this method is called when +postponed?+ returns true, then the reading will
+  # continue from where it has been interrupted beforehand.
+  #
+  # +inputstream+:: an instance of class IO or String that holds the contents of a Newick file
+  def deserialize(inputstream)
+    if inputstream.kind_of?(IO)
+      create_model(inputstream)
+    elsif inputstream.kind_of?(String) then
+      create_model(StringIO.new(inputstream))
+    else
+      raise BioInterchange::Exceptions::ImplementationReaderError, 'The provided input stream needs to be either of type IO or String.'
+    end
+  end
+
+  # Returns true if the reading of the input was postponed due to a full batch.
+  def postponed?
+    @postponed
+  end
+
+protected
+
+# ...concrete implementation omitted.
+</pre>
+              <h5>Tree Model</h5>
+              <p>A model is created by a reader and it is subsequently consumed by a writer. The phylogenetic tree model inherits <code>BioInterchange::Model</code> which defines the <code>prune</code> method. If batch operation is in place, i.e. the input is not completely read into memory, then the <code>prune</code> method will be called to instruct the model to drop all information that has not to be kept in memory anymore. In a sense, this can be seen as a form of garbage collection, where data that has been serialized is purged from memory.</p>
+<pre>
+module BioInterchange::Phylogenetics
+
+# A phylogenetic tree set that can contain multiple phylogenetic trees.
+class TreeSet &lt; BioInterchange::Model
+
+  # Create a new instance of a tree set. A tree set can contain multiple phylogenetic trees.
+  def initialize
+    # Trees are stored as the keys of a hash map to increase performance:
+    @set = {}
+  end
+
+  # ...omitted internal data structure handling.
+
+  # Removes all features from the set, but keeps additional data (e.g., the date).
+  def prune
+    @set.clear
+  end
+
+end
+
+end
+</pre>
+              <h5>Writer: From Object Model to RDF</h5>
+              <p>The writer takes an object model and serializes it via the <code>BioInterchange::Writer</code> derived <code>serialize</code> method. A writer uses <code>BioInterchange::Registry</code> to make itself known to the BioInterchange framework, where it signs up using the following arguments: a unique identifier (<code>rdf.phylotastic.newick</code>), its implementing class (<code>CDAORDFWriter</code>), a list of readers that it is compatible with (<code>phylotastic.newick</code>), whether the writer supports batch processing where only parts of the input need to be kept in memory (<code>true</code>), and a descriptive name for the writer.</p>
+<pre>
+require 'rdf'
+require 'rdf/ntriples'
+
+module BioInterchange::Phylogenetics
+
+# Serialized phylogenetic tree models based on BioRuby's phylogenetic tree implementation.
+class CDAORDFWriter &lt; BioInterchange::Writer
+
+  # Register writers:
+  BioInterchange::Registry.register_writer(
+    'rdf.phylotastic.newick',
+    CDAORDFWriter,
+    [ 'phylotastic.newick' ],
+    true,
+    'Comparative Data Analysis Ontology (CDAO) based RDFization'
+  )
+
+  # Creates a new instance of a CDAORDFWriter that will use the provided output stream to serialize RDF.
+  #
+  # +ostream+:: instance of an IO class or derivative that is used for RDF serialization
+  def initialize(ostream)
+    @ostream = ostream
+  end
+
+  # Serialize a model as RDF.
+  #
+  # +model+:: a generic representation of input data that is an instance of BioInterchange::Phylogenetics::TreeSet
+  def serialize(model)
+    model.contents.each { |tree|
+      serialize_model(model, tree)
+    }
+  end
+
+protected
+
+# ...omitted actual serialization implementation.
 </pre>
           <h3>Python API</h3>
             <p>Vocabulary wrappers in Python are available as an egg, that can be installed via <a href="http://pypi.python.org/pypi/setuptools">easy_install</a>:</p>

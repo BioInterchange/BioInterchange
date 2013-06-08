@@ -51,12 +51,14 @@ Examples:
     biointerchange --input biointerchange.gvf --rdf rdf.biointerchange.gvf --batchsize 100 --file examples/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf
     biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.10096561.json --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
     biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007-8-3-R40.xml --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
+    biointerchange --input phylotastic.newick --rdf rdf.phylotastic.newick --file examples/tree2.new --annotate_date '1 June 2006'
 
 Input formats:
 
 *  `biointerchange.gff3`
 *  `biointerchange.gvf`
 *  `dbcls.catanns.json`
+*  `phylotastic.newick`
 *  `uk.ac.man.pdfx`
 
 Output formats:
@@ -64,6 +66,7 @@ Output formats:
 *  `rdf.biointerchange.gff3`
 *  `rdf.biointerchange.gvf`
 *  `rdf.bh12.sio`
+*  `rdf.phylotastic.newick`
 
 #### Using a Triple Store
 
@@ -97,6 +100,7 @@ Another approach is to load the data and its related GFF3O/GVF1O ontology into [
 
 The following list provides information on the origin of the example-data files in the `examples` directory:
 
+*  `bininda_emonds_mammals.new`: Newick formatted Bininda-Emonds mammals tree (see [The delayed rise of present-day mammals](http://www.ncbi.nlm.nih.gov/pubmed/17392779)). Downloaded from [https://github.com/bendmorris/rdf-treestore/blob/master/trees/bininda_emonds_mammals.new](https://github.com/bendmorris/rdf-treestore/blob/master/trees/bininda_emonds_mammals.new)
 *  `BovineGenomeChrX.gff3.gz`: Gzipped GFF3 file describing a Bos taurus chromosome X. Downloaded from [http://bovinegenome.org/?q=download_chromosome_gff3](http://bovinegenome.org/?q=download_chromosome_gff3)
 *  `chromosome_BF.gff`: GFF3 file of floating contigs from the Baylor Sequencing Centre. Downloaded from [http://dictybase.org/Downloads](http://dictybase.org/Downloads)
 *  `estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf`: GVF file of EBI's [DGVa](http://www.ebi.ac.uk/dgva/database-genomic-variants-archive). Downloaded from [ftp://ftp.ebi.ac.uk/pub/databases/dgva/estd176_Banerjee_et_al_2011/gvf/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf](ftp://ftp.ebi.ac.uk/pub/databases/dgva/estd176_Banerjee_et_al_2011/gvf/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf)
@@ -107,13 +111,192 @@ The following list provides information on the origin of the example-data files 
 
 #### Ruby
 
-The Ruby gem is under active development, so the following may or may not work out of the box.
+BioInterchange is available as Ruby gem that can be installed as follows:
 
-    gem install biointerchange
+    sudo gem install biointerchange
 
-To use BioInterchange in your Ruby projects, include the following line in your code:
+The API provides vocabulary wrappers to ontologies that are used within the BioInterchange framework as well as access to RDFization implementations. 
 
+##### Using Vocabulary Wrappers
+
+Ruby classes are provided for the ontologies that is used for serializing RDF. Each ontology is represented by its own Ruby class. The classes provide access to the ontology terms and additional methods for resolving OWL classes, datatype properties and object properties.
+
+Usage example (see also [vocabulary.rb](https://github.com/BioInterchange/BioInterchange/blob/master/examples/vocabulary.rb)):
+
+    require 'rubygems'
     require 'biointerchange'
+    
+    include BioInterchange
+    
+    # Get the URI of an ontology term by label:
+    GFF3O.seqid()
+    
+    # Ambiguous labels will return an array of URIs:
+    # "start" can refer to a sub-property of "feature_properties" or "target_properties"
+    GFF3O.start()
+    # "feature_properties" can be either a datatype or object property
+    GFF3O.feature_properties()
+    
+    # Use build-in method "is_datatype_property" to resolve ambiguity:
+    # (Note: there is exactly one item in the result set, so the selection of the first item is acceptable.)
+    feature_properties = GFF3O.feature_properties().select { |uri| GFF3O.is_datatype_property(uri) }[0]
+    
+    # Use build-in method "with_parent" to pick properties based on their context:
+    GFF3O.with_parent(GFF3O.start(), feature_properties)
+
+##### RDFization Framework
+
+Usage example (see also [rdfization.rb](https://github.com/BioInterchange/BioInterchange/blob/master/examples/rdfization.rb)):
+
+    require 'rubygems'
+    require 'biointerchange'
+    
+    include BioInterchange::Phylogenetics
+    
+    # Create a reader that reads phylogenetic trees in Newick format:
+    reader = NewickReader.new()
+    
+    # Create a model from a single example tree:
+    # (Note: the `deserialize` method also takes streams as parameter -- not just strings.)
+    model = reader.deserialize('((B:0.2,(C:0.3,D:0.4)E:0.5)F:0.1)A;')
+    
+    # Serialize the model as RDF N-Triples to STDOUT:
+    CDAORDFWriter.new(STDOUT).serialize(model)
+
+##### Implementing New Readers, Models and Writers
+
+New readers, models and writers are best adopted from or build upon the existing implementations. The phylogenetic trinity of Newick file format reader, [BioRuby](http://bioruby.org) based tree model, and [CDAO](http://sourceforge.net/apps/mediawiki/cdao/index.php?title=Main_Page) RDF writer is used here as a guidline due to its simplicity.
+
+###### Reader: Creating an Object Model
+
+The quintessential Newick tree reader is depicted below. Its class is placed in a Ruby module that encapsulates all phylogenetic related source code. The `NewickReader` class inherits from the BioInterchange framework class `Reader` that provides method stubs which need to be overwritten. Using the central registry `BioInterchange::Registry`, the reader informs the framework of its: unique identifier (`phylotastic.newick`), Ruby class (`NewickReader`), command line parameters that it accepts (`date`, which becomes `--annotate_date`), whether the reader can operate without reading the complete input all at once (`true`), a descriptive name of the reader (`Newick Tree [...]`), and an array with descriptions for each parameter stated above.
+
+Deserialization of Newick trees is done using the `deserialize` method, which must take both strings and input streams as valid arguments. If this contraint is not satisfied, then an `ImplementationReaderError` is thrown that is caught by the framework and handled appropriately.
+
+Finally, the `postponed?` method keeps track of deferred input processing. If the batch size was reached and the model was passed on for serialization to a writer, then this method will have to return `true`.
+
+    require 'bio'
+    require 'date'
+    
+    module BioInterchange::Phylogenetics
+    
+    class NewickReader < BioInterchange::Reader
+    
+      # Register reader:
+      BioInterchange::Registry.register_reader(
+        'phylotastic.newick',
+        NewickReader,
+        [ 'date' ],
+        true,
+        'Newick Tree File Format reader',
+        [
+          [ 'date <date>', 'date when the Newick file was created (optional)' ]
+        ]
+      )
+    
+      # Creates a new instance of a Newick file format reader.
+      #
+      # The reader supports batch processing.
+      #
+      # +date+:: Optional date of when the Newick file was produced, annotated, etc.
+      # +batch_size+:: Optional integer that determines that number of features that
+      # should be processed in one go.
+      def initialize(date = nil, batch_size = nil)
+        @date = date
+        @batch_size = batch_size
+      end
+    
+      # Reads a Newick file from the input stream and returns an associated model.
+      #
+      # If this method is called when +postponed?+ returns true, then the reading will
+      # continue from where it has been interrupted beforehand.
+      #
+      # +inputstream+:: an instance of class IO or String that holds the contents of a Newick file
+      def deserialize(inputstream)
+        if inputstream.kind_of?(IO)
+          create_model(inputstream)
+        elsif inputstream.kind_of?(String) then
+          create_model(StringIO.new(inputstream))
+        else
+          raise BioInterchange::Exceptions::ImplementationReaderError, 'The provided input stream needs to be either of type IO or String.'
+        end
+      end
+    
+      # Returns true if the reading of the input was postponed due to a full batch.
+      def postponed?
+        @postponed
+      end
+    
+    protected
+    
+    # ...concrete implementation omitted.
+
+###### Tree Model
+
+A model is created by a reader and it is subsequently consumed by a writer. The phylogenetic tree model inherits `BioInterchange::Model` which defines the `prune` method. If batch operation is in place, i.e. the input is not completely read into memory, then the `prune` method will be called to instruct the model to drop all information that has not to be kept in memory anymore. In a sense, this can be seen as a form of garbage collection, where data that has been serialized is purged from memory.
+
+    module BioInterchange::Phylogenetics
+    
+    # A phylogenetic tree set that can contain multiple phylogenetic trees.
+    class TreeSet < BioInterchange::Model
+    
+      # Create a new instance of a tree set. A tree set can contain multiple phylogenetic trees.
+      def initialize
+        # Trees are stored as the keys of a hash map to increase performance:
+        @set = {}
+      end
+    
+      # ...omitted internal data structure handling.
+    
+      # Removes all features from the set, but keeps additional data (e.g., the date).
+      def prune
+        @set.clear
+      end
+    
+    end
+    
+    end
+
+###### Writer: From Object Model to RDF
+
+The writer takes an object model and serializes it via the `BioInterchange::Writer` derived `serialize` method. A writer uses `BioInterchange::Registry` to make itself known to the BioInterchange framework, where it signs up using the following arguments: a unique identifier (`rdf.phylotastic.newick`), its implementing class (`CDAORDFWriter`), a list of readers that it is compatible with (`phylotastic.newick`), whether the writer supports batch processing where only parts of the input need to be kept in memory (`true`), and a descriptive name for the writer.
+
+    require 'rdf'
+    require 'rdf/ntriples'
+    
+    module BioInterchange::Phylogenetics
+    
+    # Serialized phylogenetic tree models based on BioRuby's phylogenetic tree implementation.
+    class CDAORDFWriter < BioInterchange::Writer
+    
+      # Register writers:
+      BioInterchange::Registry.register_writer(
+        'rdf.phylotastic.newick',
+        CDAORDFWriter,
+        [ 'phylotastic.newick' ],
+        true,
+        'Comparative Data Analysis Ontology (CDAO) based RDFization'
+      )
+    
+      # Creates a new instance of a CDAORDFWriter that will use the provided output stream to serialize RDF.
+      #
+      # +ostream+:: instance of an IO class or derivative that is used for RDF serialization
+      def initialize(ostream)
+        @ostream = ostream
+      end
+    
+      # Serialize a model as RDF.
+      #
+      # +model+:: a generic representation of input data that is an instance of BioInterchange::Phylogenetics::TreeSet
+      def serialize(model)
+        model.contents.each { |tree|
+          serialize_model(model, tree)
+        }
+      end
+    
+    protected
+    
+    # ...omitted actual serialization implementation.
 
 #### Python
 
