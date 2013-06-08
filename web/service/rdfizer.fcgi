@@ -57,18 +57,16 @@ FCGI.each { |fcgi|
     data = URI.decode(request['data'])
 
     raise ArgumentError, 'An input format must be given in the meta-data using the key "input".' unless parameters['input']
-    raise ArgumentError, "Unknown input format \"#{parameters['input']}\"." unless input_formats[parameters['input']]
     raise ArgumentError, 'An output format must be given in the meta-data using the key "output".' unless parameters['output']
-    raise ArgumentError, "Unknown output format \"#{parameters['output']}\"." unless output_formats[parameters['output']]
 
-    reader_class, *args = Registry.reader(parameters['input'])
+    reader_class, *args = BioInterchange::Registry.reader(parameters['input'])
     reader = reader_class.new(*BioInterchange::get_parameters(parameters, args))
     istream, ostream = IO.pipe
     ostream.print(data)
     ostream.close
     model = reader.deserialize(istream)
     istream, ostream = IO.pipe
-    Registry.writer(parameters['output']).new(ostream).serialize(model)
+    BioInterchange::Registry.writer(parameters['output']).new(ostream).serialize(model)
     ostream.close
     fcgi.out.print(istream.read)
   rescue => e
