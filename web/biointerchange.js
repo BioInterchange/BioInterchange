@@ -5,7 +5,7 @@
  * '#output': text field to which the RDF output is appended to
  */
 function generateRDF() {
-  if ($('#inputformat').val() == 'biointerchange.gff3' || $('#inputformat').val() == 'biointerchange.gvf' || $('#inputformat').val() == 'dbcls.catanns.json' || $('#inputformat').val() == 'uk.ac.man.pdfx') {
+  if ($('#inputformat').val() == 'biointerchange.gff3' || $('#inputformat').val() == 'biointerchange.gvf' || $('#inputformat').val() == 'dbcls.catanns.json' || $('#inputformat').val() == 'phylotastic.newick' || $('#inputformat').val() == 'uk.ac.man.pdfx') {
     request = '{ "parameters" : "' + escape($('#metainput').val()) + '", "data" : "' + escape($('#maininput').val()) + '" }'
     $.ajax({
       type: 'POST',
@@ -48,6 +48,14 @@ function selectDbclsCatannsJson() {
       }
     } else if ($('#inputformat').val() == 'dbcls.catanns.json') {
       if (outputFormats[i].value == 'rdf.bh12.sio') {
+        outputFormats[i].selected = true;
+        outputFormats[i].disabled = false;
+      } else {
+        outputFormats[i].selected = false;
+        outputFormats[i].disabled = true;
+      }
+    } else if ($('#inputformat').val() == 'phylotastic.newick') {
+      if (outputFormats[i].value == 'rdf.phylotastic.newick') {
         outputFormats[i].selected = true;
         outputFormats[i].disabled = false;
       } else {
@@ -143,6 +151,18 @@ function pasteExample() {
       "    }\n" +
       "  ]\n" +
       "}\n"
+    );
+  } else if ($('#inputformat').val() == 'phylotastic.newick') {
+    $('#metainput').val(
+      "{\n" +
+      "  \"input\" : \"phylotastic.newick\",\n" +
+      "  \"output\" : \"rdf.phylotastic.newick\",\n" +
+      "  \"date\" : \"2012-07-19\"\n" +
+      "}\n"
+    );
+    $('#maininput').val(
+      "(A:0.1,B:0.2,(C:0.3,D:0.4):0.5);\n" +
+      "((B:0.2,(C:0.3,D:0.4)E:0.5)F:0.1)A;\n"
     );
   } else if ($('#inputformat').val() == 'uk.ac.man.pdfx') {
     $('#metainput').val(
