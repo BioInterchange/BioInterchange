@@ -18,7 +18,7 @@ public class FALDO {
    * (http://biohackathon.org/resource/faldo#InBetweenPosition)
    */
   public static Resource In_between_positions() {
-    return _namespace_FALDO("http://biohackathon.org/resource/faldo#InBetweenPosition");
+    return _namespace_FALDO("InBetweenPosition");
   }
 
   /**
@@ -26,7 +26,7 @@ public class FALDO {
    * (http://biohackathon.org/resource/faldo#Position)
    */
   public static Resource Position() {
-    return _namespace_FALDO("http://biohackathon.org/resource/faldo#Position");
+    return _namespace_FALDO("Position");
   }
 
   /**
@@ -34,7 +34,7 @@ public class FALDO {
    * (http://biohackathon.org/resource/faldo#ExactPosition)
    */
   public static Resource Exact_position() {
-    return _namespace_FALDO("http://biohackathon.org/resource/faldo#ExactPosition");
+    return _namespace_FALDO("ExactPosition");
   }
 
   /**
@@ -42,7 +42,7 @@ public class FALDO {
    * (http://biohackathon.org/resource/faldo#OneOfPosition)
    */
   public static Resource One_of_positions() {
-    return _namespace_FALDO("http://biohackathon.org/resource/faldo#OneOfPosition");
+    return _namespace_FALDO("OneOfPosition");
   }
 
   /**
@@ -50,7 +50,7 @@ public class FALDO {
    * (http://biohackathon.org/resource/faldo#InRangePosition)
    */
   public static Resource Indeterminate_position_within_a_range() {
-    return _namespace_FALDO("http://biohackathon.org/resource/faldo#InRangePosition");
+    return _namespace_FALDO("InRangePosition");
   }
 
   /**
@@ -58,7 +58,7 @@ public class FALDO {
    * (http://biohackathon.org/resource/faldo#StrandedPosition)
    */
   public static Resource Stranded_position() {
-    return _namespace_FALDO("http://biohackathon.org/resource/faldo#StrandedPosition");
+    return _namespace_FALDO("StrandedPosition");
   }
 
   /**
@@ -66,7 +66,7 @@ public class FALDO {
    * (http://biohackathon.org/resource/faldo#FuzzyPosition)
    */
   public static Resource Fuzzy_position() {
-    return _namespace_FALDO("http://biohackathon.org/resource/faldo#FuzzyPosition");
+    return _namespace_FALDO("FuzzyPosition");
   }
 
   /**
@@ -74,7 +74,7 @@ public class FALDO {
    * (http://biohackathon.org/resource/faldo#ForwardStrandPosition)
    */
   public static Resource Positive_strand() {
-    return _namespace_FALDO("http://biohackathon.org/resource/faldo#ForwardStrandPosition");
+    return _namespace_FALDO("ForwardStrandPosition");
   }
 
   /**
@@ -82,7 +82,7 @@ public class FALDO {
    * (http://biohackathon.org/resource/faldo#BothStrandsPosition)
    */
   public static Resource Both_strands() {
-    return _namespace_FALDO("http://biohackathon.org/resource/faldo#BothStrandsPosition");
+    return _namespace_FALDO("BothStrandsPosition");
   }
 
   /**
@@ -90,7 +90,7 @@ public class FALDO {
    * (http://biohackathon.org/resource/faldo#ReverseStrandPosition)
    */
   public static Resource Negative_strand() {
-    return _namespace_FALDO("http://biohackathon.org/resource/faldo#ReverseStrandPosition");
+    return _namespace_FALDO("ReverseStrandPosition");
   }
 
   /**
@@ -98,7 +98,7 @@ public class FALDO {
    * (http://biohackathon.org/resource/faldo#Region)
    */
   public static Resource Region() {
-    return _namespace_FALDO("http://biohackathon.org/resource/faldo#Region");
+    return _namespace_FALDO("Region");
   }
 
   /**
@@ -125,37 +125,37 @@ public class FALDO {
    * @param uri URI that is tested for being a class
    */
   public static boolean isClass(Resource uri) {
-    if (uri == _namespace_FALDO("http://biohackathon.org/resource/faldo#InBetweenPosition")) {
+    if (uri.equals(_namespace_FALDO("InBetweenPosition"))) {
       return true;
     }
-    if (uri == _namespace_FALDO("http://biohackathon.org/resource/faldo#Position")) {
+    if (uri.equals(_namespace_FALDO("Position"))) {
       return true;
     }
-    if (uri == _namespace_FALDO("http://biohackathon.org/resource/faldo#ExactPosition")) {
+    if (uri.equals(_namespace_FALDO("ExactPosition"))) {
       return true;
     }
-    if (uri == _namespace_FALDO("http://biohackathon.org/resource/faldo#OneOfPosition")) {
+    if (uri.equals(_namespace_FALDO("OneOfPosition"))) {
       return true;
     }
-    if (uri == _namespace_FALDO("http://biohackathon.org/resource/faldo#InRangePosition")) {
+    if (uri.equals(_namespace_FALDO("InRangePosition"))) {
       return true;
     }
-    if (uri == _namespace_FALDO("http://biohackathon.org/resource/faldo#StrandedPosition")) {
+    if (uri.equals(_namespace_FALDO("StrandedPosition"))) {
       return true;
     }
-    if (uri == _namespace_FALDO("http://biohackathon.org/resource/faldo#FuzzyPosition")) {
+    if (uri.equals(_namespace_FALDO("FuzzyPosition"))) {
       return true;
     }
-    if (uri == _namespace_FALDO("http://biohackathon.org/resource/faldo#ForwardStrandPosition")) {
+    if (uri.equals(_namespace_FALDO("ForwardStrandPosition"))) {
       return true;
     }
-    if (uri == _namespace_FALDO("http://biohackathon.org/resource/faldo#BothStrandsPosition")) {
+    if (uri.equals(_namespace_FALDO("BothStrandsPosition"))) {
       return true;
     }
-    if (uri == _namespace_FALDO("http://biohackathon.org/resource/faldo#ReverseStrandPosition")) {
+    if (uri.equals(_namespace_FALDO("ReverseStrandPosition"))) {
       return true;
     }
-    if (uri == _namespace_FALDO("http://biohackathon.org/resource/faldo#Region")) {
+    if (uri.equals(_namespace_FALDO("Region"))) {
       return true;
     }
     return false;
@@ -188,7 +188,7 @@ public class FALDO {
    */
   public static boolean hasParent(Resource uri, Resource parent) {
     if (__parent_properties.containsKey(uri)) {
-      if (__parent_properties.get(uri) == parent) {
+      if (__parent_properties.get(uri).equals(parent)) {
         return true;
       }
       return hasParent((Resource)__parent_properties.get(uri), parent);
@@ -197,11 +197,7 @@ public class FALDO {
   }
 
   private static Resource _namespace_FALDO(String accession) {
-    if (isClass(ResourceFactory.createResource("http://biohackathon.org/resource/faldo#" + accession))) {
-      return ResourceFactory.createResource("http://biohackathon.org/resource/faldo#" + accession);
-    } else {
-      return ResourceFactory.createProperty("http://biohackathon.org/resource/faldo#" + accession);
-    }
+    return ResourceFactory.createResource("http://biohackathon.org/resource/faldo#" + accession);
   }
 
 
@@ -210,6 +206,12 @@ public class FALDO {
   private static Map<Resource, Resource> _init___parent_properties() {
     Map<Resource, Resource> map = new HashMap<Resource, Resource>();
 
+    map.put(ResourceFactory.createResource("http://biohackathon.org/resource/faldo#OneOfPosition"), ResourceFactory.createResource("http://biohackathon.org/resource/faldo#FuzzyPosition"));
+    map.put(ResourceFactory.createResource("http://biohackathon.org/resource/faldo#StrandedPosition"), ResourceFactory.createResource("http://biohackathon.org/resource/faldo#Position"));
+    map.put(ResourceFactory.createResource("http://biohackathon.org/resource/faldo#FuzzyPosition"), ResourceFactory.createResource("http://biohackathon.org/resource/faldo#Position"));
+    map.put(ResourceFactory.createResource("http://biohackathon.org/resource/faldo#ForwardStrandPosition"), ResourceFactory.createResource("http://biohackathon.org/resource/faldo#StrandedPosition"));
+    map.put(ResourceFactory.createResource("http://biohackathon.org/resource/faldo#BothStrandsPosition"), ResourceFactory.createResource("http://biohackathon.org/resource/faldo#StrandedPosition"));
+    map.put(ResourceFactory.createResource("http://biohackathon.org/resource/faldo#ReverseStrandPosition"), ResourceFactory.createResource("http://biohackathon.org/resource/faldo#StrandedPosition"));
 
     return map;
   }

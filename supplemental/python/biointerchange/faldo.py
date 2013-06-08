@@ -8,79 +8,79 @@ class FALDO:
     @classmethod
     def In_between_positions(cls):
         """This denotes that a feature is in between two other positions that are both known exactly and next to eaxh other. An example is an restriction enzyme cutting site. The cut is after one nucleotide and before the next i.e. in between
-        (cls, InBetweenPosition)
+        (cls, http://biohackathon.org/resource/faldo#InBetweenPosition)
         """
-        return _namespace_FALDO('InBetweenPosition')
+        return cls._namespace_FALDO('InBetweenPosition')
 
     @classmethod
     def Position(cls):
         """Superclass to group the general concept of a position on a sequence. The sequence is designated via the reference predicate.
-        (cls, Position)
+        (cls, http://biohackathon.org/resource/faldo#Position)
         """
-        return _namespace_FALDO('Position')
+        return cls._namespace_FALDO('Position')
 
     @classmethod
     def Exact_position(cls):
         """Use when you exactly know the position.
-        (cls, ExactPosition)
+        (cls, http://biohackathon.org/resource/faldo#ExactPosition)
         """
-        return _namespace_FALDO('ExactPosition')
+        return cls._namespace_FALDO('ExactPosition')
 
     @classmethod
     def One_of_positions(cls):
         """The position must be one of the more detailed Positions listed by the location predicate.
-        (cls, OneOfPosition)
+        (cls, http://biohackathon.org/resource/faldo#OneOfPosition)
         """
-        return _namespace_FALDO('OneOfPosition')
+        return cls._namespace_FALDO('OneOfPosition')
 
     @classmethod
     def Indeterminate_position_within_a_range(cls):
         """Use when you have an idea of the range in which you can find the position but can not be sure.
-        (cls, InRangePosition)
+        (cls, http://biohackathon.org/resource/faldo#InRangePosition)
         """
-        return _namespace_FALDO('InRangePosition')
+        return cls._namespace_FALDO('InRangePosition')
 
     @classmethod
     def Stranded_position(cls):
         """Part of the coordinate system is on which strand the feature can be found. If you do not yet know which stand the feature is on you should tag the position with just this class. If you know more you should use one of the subclasses. This means a region descibred with a '.' in GFF3. An GFF3 Unstranded position does not have this type in FALDO those are just a Position.
-        (cls, StrandedPosition)
+        (cls, http://biohackathon.org/resource/faldo#StrandedPosition)
         """
-        return _namespace_FALDO('StrandedPosition')
+        return cls._namespace_FALDO('StrandedPosition')
 
     @classmethod
     def Fuzzy_position(cls):
         """Use this class to indicate that you lack exact position data.
-        (cls, FuzzyPosition)
+        (cls, http://biohackathon.org/resource/faldo#FuzzyPosition)
         """
-        return _namespace_FALDO('FuzzyPosition')
+        return cls._namespace_FALDO('FuzzyPosition')
 
     @classmethod
     def Positive_strand(cls):
         """The position is on the forward (cls, positive) strand. Shown as a '+' in GFF3 and GTF
-        (ForwardStrandPosition)
+        (http://biohackathon.org/resource/faldo#ForwardStrandPosition)
         """
-        return _namespace_FALDO('ForwardStrandPosition')
+        return cls._namespace_FALDO('ForwardStrandPosition')
 
     @classmethod
     def Both_strands(cls):
         """The both strands position mean that the region spans both strands instead of one. In GGF3 displayed as 0. This does not mean that the position is one or the other strand but is best described as being on both.
-        (cls, BothStrandsPosition)
+        (cls, http://biohackathon.org/resource/faldo#BothStrandsPosition)
         """
-        return _namespace_FALDO('BothStrandsPosition')
+        return cls._namespace_FALDO('BothStrandsPosition')
 
     @classmethod
     def Negative_strand(cls):
         """The position is on the reverse (cls, complement) strand of the sequence. Shown as '-' in GTF and GFF3
-        (ReverseStrandPosition)
+        (http://biohackathon.org/resource/faldo#ReverseStrandPosition)
         """
-        return _namespace_FALDO('ReverseStrandPosition')
+        return cls._namespace_FALDO('ReverseStrandPosition')
 
     @classmethod
     def Region(cls):
         """A region describes an length of sequence with a start and end position that represents a feature on a Sequence. i.e. a gene
-        (cls, Region)
+        (cls, http://biohackathon.org/resource/faldo#Region)
         """
-        return _namespace_FALDO('Region')
+        return cls._namespace_FALDO('Region')
 
     @classmethod
     def is_object_property(cls, uri):
@@ -104,27 +104,27 @@ class FALDO:
         
         uri -- URI that is tested for being a class
         """
-        if uri == _namespace_FALDO('InBetweenPosition'):
+        if uri == cls._namespace_FALDO('InBetweenPosition'):
             return True
-        if uri == _namespace_FALDO('Position'):
+        if uri == cls._namespace_FALDO('Position'):
             return True
-        if uri == _namespace_FALDO('ExactPosition'):
+        if uri == cls._namespace_FALDO('ExactPosition'):
             return True
-        if uri == _namespace_FALDO('OneOfPosition'):
+        if uri == cls._namespace_FALDO('OneOfPosition'):
             return True
-        if uri == _namespace_FALDO('InRangePosition'):
+        if uri == cls._namespace_FALDO('InRangePosition'):
             return True
-        if uri == _namespace_FALDO('StrandedPosition'):
+        if uri == cls._namespace_FALDO('StrandedPosition'):
             return True
-        if uri == _namespace_FALDO('FuzzyPosition'):
+        if uri == cls._namespace_FALDO('FuzzyPosition'):
             return True
-        if uri == _namespace_FALDO('ForwardStrandPosition'):
+        if uri == cls._namespace_FALDO('ForwardStrandPosition'):
             return True
-        if uri == _namespace_FALDO('BothStrandsPosition'):
+        if uri == cls._namespace_FALDO('BothStrandsPosition'):
             return True
-        if uri == _namespace_FALDO('ReverseStrandPosition'):
+        if uri == cls._namespace_FALDO('ReverseStrandPosition'):
             return True
-        if uri == _namespace_FALDO('Region'):
+        if uri == cls._namespace_FALDO('Region'):
             return True
         return False
 
@@ -158,11 +158,10 @@ class FALDO:
             return cls.has_parent(cls.__parent_properties[uri], parent)
         return False
 
-__namespace_FALDO = Namespace('http://biohackathon.org/resource/faldo#')
+    @classmethod
+    def _namespace_FALDO(cls, accession):
+        return Namespace('http://biohackathon.org/resource/faldo#')[accession]
 
-def _namespace_FALDO(accession):
-    return __namespace_FALDO[accession]
-
-    __parent_properties = { _namespace_FALDO('OneOfPosition') : _namespace_FALDO('FuzzyPosition') , _namespace_FALDO('StrandedPosition') : _namespace_FALDO('Position') , _namespace_FALDO('FuzzyPosition') : _namespace_FALDO('Position') , _namespace_FALDO('ForwardStrandPosition') : _namespace_FALDO('StrandedPosition') , _namespace_FALDO('BothStrandsPosition') : _namespace_FALDO('StrandedPosition') , _namespace_FALDO('ReverseStrandPosition') : _namespace_FALDO('StrandedPosition') }
+    __parent_properties = { Namespace('http://biohackathon.org/resource/faldo#OneOfPosition') : Namespace('http://biohackathon.org/resource/faldo#FuzzyPosition') , Namespace('http://biohackathon.org/resource/faldo#StrandedPosition') : Namespace('http://biohackathon.org/resource/faldo#Position') , Namespace('http://biohackathon.org/resource/faldo#FuzzyPosition') : Namespace('http://biohackathon.org/resource/faldo#Position') , Namespace('http://biohackathon.org/resource/faldo#ForwardStrandPosition') : Namespace('http://biohackathon.org/resource/faldo#StrandedPosition') , Namespace('http://biohackathon.org/resource/faldo#BothStrandsPosition') : Namespace('http://biohackathon.org/resource/faldo#StrandedPosition') , Namespace('http://biohackathon.org/resource/faldo#ReverseStrandPosition') : Namespace('http://biohackathon.org/resource/faldo#StrandedPosition') }
 
 

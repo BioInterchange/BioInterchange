@@ -14,75 +14,75 @@ import org.apache.commons.collections.Predicate;
 public class SOFA {
 
   public static Resource adjacent_to() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:adjacent_to");
+    return _namespace_SOFA("http_//purl.org/obo/owl:adjacent_to");
   }
 
   public static Resource complete_evidence_for_feature() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:complete_evidence_for_feature");
+    return _namespace_SOFA("http_//purl.org/obo/owl:complete_evidence_for_feature");
   }
 
   public static Resource contained_by() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:contained_by");
+    return _namespace_SOFA("http_//purl.org/obo/owl:contained_by");
   }
 
   public static Resource contains() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:contains");
+    return _namespace_SOFA("http_//purl.org/obo/owl:contains");
   }
 
   public static Resource derives_from() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:derives_from");
+    return _namespace_SOFA("http_//purl.org/obo/owl:derives_from");
   }
 
   public static Resource evidence_for_feature() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:evidence_for_feature");
+    return _namespace_SOFA("http_//purl.org/obo/owl:evidence_for_feature");
   }
 
   public static Resource has_integral_part() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:has_integral_part");
+    return _namespace_SOFA("http_//purl.org/obo/owl:has_integral_part");
   }
 
   public static Resource has_part() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:has_part");
+    return _namespace_SOFA("http_//purl.org/obo/owl:has_part");
   }
 
   public static Resource homologous_to() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:homologous_to");
+    return _namespace_SOFA("http_//purl.org/obo/owl:homologous_to");
   }
 
   public static Resource integral_part_of() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:integral_part_of");
+    return _namespace_SOFA("http_//purl.org/obo/owl:integral_part_of");
   }
 
   public static Resource member_of() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:member_of");
+    return _namespace_SOFA("http_//purl.org/obo/owl:member_of");
   }
 
   public static Resource non_functional_homolog_of() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:non_functional_homolog_of");
+    return _namespace_SOFA("http_//purl.org/obo/owl:non_functional_homolog_of");
   }
 
   public static Resource orthologous_to() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:orthologous_to");
+    return _namespace_SOFA("http_//purl.org/obo/owl:orthologous_to");
   }
 
   public static Resource paralogous_to() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:paralogous_to");
+    return _namespace_SOFA("http_//purl.org/obo/owl:paralogous_to");
   }
 
   public static Resource part_of() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:part_of");
+    return _namespace_SOFA("http_//purl.org/obo/owl:part_of");
   }
 
   public static Resource partial_evidence_for_feature() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:partial_evidence_for_feature");
+    return _namespace_SOFA("http_//purl.org/obo/owl:partial_evidence_for_feature");
   }
 
   public static Resource similar_to() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:similar_to");
+    return _namespace_SOFA("http_//purl.org/obo/owl:similar_to");
   }
 
   public static Resource Sequence_Ontology() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000000");
+    return _namespace_SOFA("SO_0000000");
   }
 
   /**
@@ -90,11 +90,11 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000001)
    */
   public static Resource region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000001");
+    return _namespace_SOFA("SO_0000001");
   }
 
   public static Resource interior_coding_exon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000004");
+    return _namespace_SOFA("SO_0000004");
   }
 
   /**
@@ -102,7 +102,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000005)
    */
   public static Resource satellite_DNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000005");
+    return _namespace_SOFA("SO_0000005");
   }
 
   /**
@@ -110,7 +110,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000006)
    */
   public static Resource PCR_product() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000006");
+    return _namespace_SOFA("SO_0000006");
   }
 
   /**
@@ -118,7 +118,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000007)
    */
   public static Resource read_pair() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000007");
+    return _namespace_SOFA("SO_0000007");
   }
 
   /**
@@ -126,7 +126,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000013)
    */
   public static Resource scRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000013");
+    return _namespace_SOFA("SO_0000013");
   }
 
   /**
@@ -134,7 +134,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000038)
    */
   public static Resource match_set() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000038");
+    return _namespace_SOFA("SO_0000038");
   }
 
   /**
@@ -142,7 +142,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000039)
    */
   public static Resource match_part() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000039");
+    return _namespace_SOFA("SO_0000039");
   }
 
   /**
@@ -150,7 +150,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000050)
    */
   public static Resource gene_part() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000050");
+    return _namespace_SOFA("SO_0000050");
   }
 
   /**
@@ -158,7 +158,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000057)
    */
   public static Resource operator() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000057");
+    return _namespace_SOFA("SO_0000057");
   }
 
   /**
@@ -166,7 +166,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000059)
    */
   public static Resource nuclease_binding_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000059");
+    return _namespace_SOFA("SO_0000059");
   }
 
   /**
@@ -174,7 +174,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000101)
    */
   public static Resource transposable_element() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000101");
+    return _namespace_SOFA("SO_0000101");
   }
 
   /**
@@ -182,7 +182,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000102)
    */
   public static Resource expressed_sequence_match() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000102");
+    return _namespace_SOFA("SO_0000102");
   }
 
   /**
@@ -190,7 +190,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000103)
    */
   public static Resource clone_insert_end() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000103");
+    return _namespace_SOFA("SO_0000103");
   }
 
   /**
@@ -198,7 +198,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000104)
    */
   public static Resource polypeptide() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000104");
+    return _namespace_SOFA("SO_0000104");
   }
 
   /**
@@ -206,7 +206,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000109)
    */
   public static Resource sequence_variant_obs() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000109");
+    return _namespace_SOFA("SO_0000109");
   }
 
   /**
@@ -214,7 +214,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000110)
    */
   public static Resource sequence_feature() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000110");
+    return _namespace_SOFA("SO_0000110");
   }
 
   /**
@@ -222,7 +222,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000112)
    */
   public static Resource primer() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000112");
+    return _namespace_SOFA("SO_0000112");
   }
 
   /**
@@ -230,7 +230,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000113)
    */
   public static Resource proviral_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000113");
+    return _namespace_SOFA("SO_0000113");
   }
 
   /**
@@ -238,7 +238,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000114)
    */
   public static Resource methylated_C() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000114");
+    return _namespace_SOFA("SO_0000114");
   }
 
   /**
@@ -246,7 +246,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000120)
    */
   public static Resource protein_coding_primary_transcript() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000120");
+    return _namespace_SOFA("SO_0000120");
   }
 
   /**
@@ -254,7 +254,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000139)
    */
   public static Resource ribosome_entry_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000139");
+    return _namespace_SOFA("SO_0000139");
   }
 
   /**
@@ -262,7 +262,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000140)
    */
   public static Resource attenuator() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000140");
+    return _namespace_SOFA("SO_0000140");
   }
 
   /**
@@ -270,7 +270,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000141)
    */
   public static Resource terminator() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000141");
+    return _namespace_SOFA("SO_0000141");
   }
 
   /**
@@ -278,7 +278,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000143)
    */
   public static Resource assembly_component() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000143");
+    return _namespace_SOFA("SO_0000143");
   }
 
   /**
@@ -286,7 +286,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000147)
    */
   public static Resource exon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000147");
+    return _namespace_SOFA("SO_0000147");
   }
 
   /**
@@ -294,7 +294,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000148)
    */
   public static Resource supercontig() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000148");
+    return _namespace_SOFA("SO_0000148");
   }
 
   /**
@@ -302,7 +302,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000149)
    */
   public static Resource contig() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000149");
+    return _namespace_SOFA("SO_0000149");
   }
 
   /**
@@ -310,7 +310,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000150)
    */
   public static Resource read() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000150");
+    return _namespace_SOFA("SO_0000150");
   }
 
   /**
@@ -318,7 +318,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000151)
    */
   public static Resource _clone_() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000151");
+    return _namespace_SOFA("SO_0000151");
   }
 
   /**
@@ -326,7 +326,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000159)
    */
   public static Resource deletion() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000159");
+    return _namespace_SOFA("SO_0000159");
   }
 
   /**
@@ -334,7 +334,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000161)
    */
   public static Resource methylated_A() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000161");
+    return _namespace_SOFA("SO_0000161");
   }
 
   /**
@@ -342,7 +342,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000162)
    */
   public static Resource splice_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000162");
+    return _namespace_SOFA("SO_0000162");
   }
 
   /**
@@ -350,7 +350,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000163)
    */
   public static Resource five_prime_cis_splice_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000163");
+    return _namespace_SOFA("SO_0000163");
   }
 
   /**
@@ -358,7 +358,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000164)
    */
   public static Resource three_prime_cis_splice_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000164");
+    return _namespace_SOFA("SO_0000164");
   }
 
   /**
@@ -366,7 +366,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000165)
    */
   public static Resource enhancer() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000165");
+    return _namespace_SOFA("SO_0000165");
   }
 
   /**
@@ -374,7 +374,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000167)
    */
   public static Resource promoter() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000167");
+    return _namespace_SOFA("SO_0000167");
   }
 
   /**
@@ -382,7 +382,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000177)
    */
   public static Resource cross_genome_match() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000177");
+    return _namespace_SOFA("SO_0000177");
   }
 
   /**
@@ -390,7 +390,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000178)
    */
   public static Resource operon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000178");
+    return _namespace_SOFA("SO_0000178");
   }
 
   /**
@@ -398,7 +398,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000179)
    */
   public static Resource clone_insert_start() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000179");
+    return _namespace_SOFA("SO_0000179");
   }
 
   /**
@@ -406,7 +406,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000181)
    */
   public static Resource translated_nucleotide_match() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000181");
+    return _namespace_SOFA("SO_0000181");
   }
 
   /**
@@ -414,7 +414,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000183)
    */
   public static Resource non_transcribed_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000183");
+    return _namespace_SOFA("SO_0000183");
   }
 
   /**
@@ -422,7 +422,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000185)
    */
   public static Resource primary_transcript() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000185");
+    return _namespace_SOFA("SO_0000185");
   }
 
   /**
@@ -430,7 +430,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000187)
    */
   public static Resource repeat_family() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000187");
+    return _namespace_SOFA("SO_0000187");
   }
 
   /**
@@ -438,7 +438,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000188)
    */
   public static Resource intron() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000188");
+    return _namespace_SOFA("SO_0000188");
   }
 
   /**
@@ -446,7 +446,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000193)
    */
   public static Resource RFLP_fragment() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000193");
+    return _namespace_SOFA("SO_0000193");
   }
 
   /**
@@ -454,7 +454,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000195)
    */
   public static Resource coding_exon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000195");
+    return _namespace_SOFA("SO_0000195");
   }
 
   /**
@@ -462,7 +462,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000196)
    */
   public static Resource five_prime_coding_exon_coding_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000196");
+    return _namespace_SOFA("SO_0000196");
   }
 
   /**
@@ -470,7 +470,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000197)
    */
   public static Resource three_prime_coding_exon_coding_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000197");
+    return _namespace_SOFA("SO_0000197");
   }
 
   /**
@@ -478,7 +478,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000198)
    */
   public static Resource noncoding_exon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000198");
+    return _namespace_SOFA("SO_0000198");
   }
 
   /**
@@ -486,7 +486,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000200)
    */
   public static Resource five_prime_coding_exon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000200");
+    return _namespace_SOFA("SO_0000200");
   }
 
   /**
@@ -494,7 +494,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000203)
    */
   public static Resource UTR() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000203");
+    return _namespace_SOFA("SO_0000203");
   }
 
   /**
@@ -502,7 +502,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000204)
    */
   public static Resource five_prime_UTR() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000204");
+    return _namespace_SOFA("SO_0000204");
   }
 
   /**
@@ -510,7 +510,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000205)
    */
   public static Resource three_prime_UTR() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000205");
+    return _namespace_SOFA("SO_0000205");
   }
 
   /**
@@ -518,7 +518,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000209)
    */
   public static Resource rRNA_primary_transcript() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000209");
+    return _namespace_SOFA("SO_0000209");
   }
 
   /**
@@ -526,7 +526,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000233)
    */
   public static Resource mature_transcript() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000233");
+    return _namespace_SOFA("SO_0000233");
   }
 
   /**
@@ -534,7 +534,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000234)
    */
   public static Resource mRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000234");
+    return _namespace_SOFA("SO_0000234");
   }
 
   /**
@@ -542,7 +542,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000235)
    */
   public static Resource TF_binding_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000235");
+    return _namespace_SOFA("SO_0000235");
   }
 
   /**
@@ -550,7 +550,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000236)
    */
   public static Resource ORF() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000236");
+    return _namespace_SOFA("SO_0000236");
   }
 
   /**
@@ -558,7 +558,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000239)
    */
   public static Resource flanking_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000239");
+    return _namespace_SOFA("SO_0000239");
   }
 
   /**
@@ -566,7 +566,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000252)
    */
   public static Resource rRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000252");
+    return _namespace_SOFA("SO_0000252");
   }
 
   /**
@@ -574,7 +574,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000253)
    */
   public static Resource tRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000253");
+    return _namespace_SOFA("SO_0000253");
   }
 
   /**
@@ -582,7 +582,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000274)
    */
   public static Resource snRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000274");
+    return _namespace_SOFA("SO_0000274");
   }
 
   /**
@@ -590,7 +590,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000275)
    */
   public static Resource snoRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000275");
+    return _namespace_SOFA("SO_0000275");
   }
 
   /**
@@ -598,7 +598,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000276)
    */
   public static Resource miRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000276");
+    return _namespace_SOFA("SO_0000276");
   }
 
   /**
@@ -606,7 +606,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000289)
    */
   public static Resource microsatellite() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000289");
+    return _namespace_SOFA("SO_0000289");
   }
 
   /**
@@ -614,7 +614,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000294)
    */
   public static Resource inverted_repeat() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000294");
+    return _namespace_SOFA("SO_0000294");
   }
 
   /**
@@ -622,7 +622,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000296)
    */
   public static Resource origin_of_replication() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000296");
+    return _namespace_SOFA("SO_0000296");
   }
 
   /**
@@ -630,7 +630,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000303)
    */
   public static Resource clip() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000303");
+    return _namespace_SOFA("SO_0000303");
   }
 
   /**
@@ -638,7 +638,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000305)
    */
   public static Resource modified_base() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000305");
+    return _namespace_SOFA("SO_0000305");
   }
 
   /**
@@ -646,7 +646,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000306)
    */
   public static Resource methylated_base_feature() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000306");
+    return _namespace_SOFA("SO_0000306");
   }
 
   /**
@@ -654,7 +654,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000307)
    */
   public static Resource CpG_island() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000307");
+    return _namespace_SOFA("SO_0000307");
   }
 
   /**
@@ -662,7 +662,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000314)
    */
   public static Resource direct_repeat() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000314");
+    return _namespace_SOFA("SO_0000314");
   }
 
   /**
@@ -670,7 +670,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000315)
    */
   public static Resource TSS() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000315");
+    return _namespace_SOFA("SO_0000315");
   }
 
   /**
@@ -678,7 +678,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000316)
    */
   public static Resource CDS() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000316");
+    return _namespace_SOFA("SO_0000316");
   }
 
   /**
@@ -686,7 +686,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000318)
    */
   public static Resource start_codon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000318");
+    return _namespace_SOFA("SO_0000318");
   }
 
   /**
@@ -694,7 +694,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000319)
    */
   public static Resource stop_codon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000319");
+    return _namespace_SOFA("SO_0000319");
   }
 
   /**
@@ -702,7 +702,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000324)
    */
   public static Resource tag() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000324");
+    return _namespace_SOFA("SO_0000324");
   }
 
   /**
@@ -710,7 +710,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000325)
    */
   public static Resource rRNA_large_subunit_primary_transcript() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000325");
+    return _namespace_SOFA("SO_0000325");
   }
 
   /**
@@ -718,7 +718,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000326)
    */
   public static Resource SAGE_tag() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000326");
+    return _namespace_SOFA("SO_0000326");
   }
 
   /**
@@ -726,7 +726,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000330)
    */
   public static Resource conserved_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000330");
+    return _namespace_SOFA("SO_0000330");
   }
 
   /**
@@ -734,7 +734,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000331)
    */
   public static Resource STS() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000331");
+    return _namespace_SOFA("SO_0000331");
   }
 
   /**
@@ -742,7 +742,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000332)
    */
   public static Resource coding_conserved_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000332");
+    return _namespace_SOFA("SO_0000332");
   }
 
   /**
@@ -750,7 +750,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000333)
    */
   public static Resource exon_junction() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000333");
+    return _namespace_SOFA("SO_0000333");
   }
 
   /**
@@ -758,7 +758,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000334)
    */
   public static Resource nc_conserved_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000334");
+    return _namespace_SOFA("SO_0000334");
   }
 
   /**
@@ -766,7 +766,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000336)
    */
   public static Resource pseudogene() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000336");
+    return _namespace_SOFA("SO_0000336");
   }
 
   /**
@@ -774,7 +774,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000337)
    */
   public static Resource RNAi_reagent() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000337");
+    return _namespace_SOFA("SO_0000337");
   }
 
   /**
@@ -782,7 +782,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000340)
    */
   public static Resource chromosome() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000340");
+    return _namespace_SOFA("SO_0000340");
   }
 
   /**
@@ -790,7 +790,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000341)
    */
   public static Resource chromosome_band() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000341");
+    return _namespace_SOFA("SO_0000341");
   }
 
   /**
@@ -798,7 +798,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000343)
    */
   public static Resource match() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000343");
+    return _namespace_SOFA("SO_0000343");
   }
 
   /**
@@ -806,7 +806,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000344)
    */
   public static Resource splice_enhancer() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000344");
+    return _namespace_SOFA("SO_0000344");
   }
 
   /**
@@ -814,7 +814,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000345)
    */
   public static Resource EST() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000345");
+    return _namespace_SOFA("SO_0000345");
   }
 
   /**
@@ -822,7 +822,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000347)
    */
   public static Resource nucleotide_match() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000347");
+    return _namespace_SOFA("SO_0000347");
   }
 
   /**
@@ -830,7 +830,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000349)
    */
   public static Resource protein_match() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000349");
+    return _namespace_SOFA("SO_0000349");
   }
 
   /**
@@ -838,7 +838,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000353)
    */
   public static Resource sequence_assembly() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000353");
+    return _namespace_SOFA("SO_0000353");
   }
 
   /**
@@ -846,7 +846,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000360)
    */
   public static Resource codon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000360");
+    return _namespace_SOFA("SO_0000360");
   }
 
   /**
@@ -854,7 +854,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000366)
    */
   public static Resource insertion_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000366");
+    return _namespace_SOFA("SO_0000366");
   }
 
   /**
@@ -862,7 +862,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000368)
    */
   public static Resource transposable_element_insertion_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000368");
+    return _namespace_SOFA("SO_0000368");
   }
 
   /**
@@ -870,7 +870,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000370)
    */
   public static Resource small_regulatory_ncRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000370");
+    return _namespace_SOFA("SO_0000370");
   }
 
   /**
@@ -878,7 +878,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000372)
    */
   public static Resource enzymatic_RNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000372");
+    return _namespace_SOFA("SO_0000372");
   }
 
   /**
@@ -886,7 +886,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000374)
    */
   public static Resource ribozyme() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000374");
+    return _namespace_SOFA("SO_0000374");
   }
 
   /**
@@ -894,7 +894,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000375)
    */
   public static Resource rRNA_5_8S() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000375");
+    return _namespace_SOFA("SO_0000375");
   }
 
   /**
@@ -902,7 +902,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000380)
    */
   public static Resource hammerhead_ribozyme() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000380");
+    return _namespace_SOFA("SO_0000380");
   }
 
   /**
@@ -910,7 +910,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000385)
    */
   public static Resource RNase_MRP_RNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000385");
+    return _namespace_SOFA("SO_0000385");
   }
 
   /**
@@ -918,7 +918,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000386)
    */
   public static Resource RNase_P_RNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000386");
+    return _namespace_SOFA("SO_0000386");
   }
 
   /**
@@ -926,7 +926,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000390)
    */
   public static Resource telomerase_RNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000390");
+    return _namespace_SOFA("SO_0000390");
   }
 
   /**
@@ -934,7 +934,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000391)
    */
   public static Resource U1_snRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000391");
+    return _namespace_SOFA("SO_0000391");
   }
 
   /**
@@ -942,7 +942,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000392)
    */
   public static Resource U2_snRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000392");
+    return _namespace_SOFA("SO_0000392");
   }
 
   /**
@@ -950,7 +950,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000393)
    */
   public static Resource U4_snRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000393");
+    return _namespace_SOFA("SO_0000393");
   }
 
   /**
@@ -958,7 +958,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000394)
    */
   public static Resource U4atac_snRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000394");
+    return _namespace_SOFA("SO_0000394");
   }
 
   /**
@@ -966,7 +966,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000395)
    */
   public static Resource U5_snRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000395");
+    return _namespace_SOFA("SO_0000395");
   }
 
   /**
@@ -974,7 +974,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000396)
    */
   public static Resource U6_snRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000396");
+    return _namespace_SOFA("SO_0000396");
   }
 
   /**
@@ -982,7 +982,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000397)
    */
   public static Resource U6atac_snRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000397");
+    return _namespace_SOFA("SO_0000397");
   }
 
   /**
@@ -990,7 +990,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000398)
    */
   public static Resource U11_snRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000398");
+    return _namespace_SOFA("SO_0000398");
   }
 
   /**
@@ -998,7 +998,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000399)
    */
   public static Resource U12_snRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000399");
+    return _namespace_SOFA("SO_0000399");
   }
 
   /**
@@ -1006,7 +1006,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000403)
    */
   public static Resource U14_snoRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000403");
+    return _namespace_SOFA("SO_0000403");
   }
 
   /**
@@ -1014,7 +1014,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000404)
    */
   public static Resource vault_RNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000404");
+    return _namespace_SOFA("SO_0000404");
   }
 
   /**
@@ -1022,7 +1022,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000405)
    */
   public static Resource Y_RNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000405");
+    return _namespace_SOFA("SO_0000405");
   }
 
   /**
@@ -1030,7 +1030,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000407)
    */
   public static Resource rRNA_18S() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000407");
+    return _namespace_SOFA("SO_0000407");
   }
 
   /**
@@ -1038,7 +1038,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000409)
    */
   public static Resource binding_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000409");
+    return _namespace_SOFA("SO_0000409");
   }
 
   /**
@@ -1046,7 +1046,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000410)
    */
   public static Resource protein_binding_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000410");
+    return _namespace_SOFA("SO_0000410");
   }
 
   /**
@@ -1054,7 +1054,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000412)
    */
   public static Resource restriction_fragment() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000412");
+    return _namespace_SOFA("SO_0000412");
   }
 
   /**
@@ -1062,7 +1062,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000413)
    */
   public static Resource sequence_difference() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000413");
+    return _namespace_SOFA("SO_0000413");
   }
 
   /**
@@ -1070,7 +1070,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000418)
    */
   public static Resource signal_peptide() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000418");
+    return _namespace_SOFA("SO_0000418");
   }
 
   /**
@@ -1078,7 +1078,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000419)
    */
   public static Resource mature_protein_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000419");
+    return _namespace_SOFA("SO_0000419");
   }
 
   /**
@@ -1086,7 +1086,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000436)
    */
   public static Resource ARS() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000436");
+    return _namespace_SOFA("SO_0000436");
   }
 
   /**
@@ -1094,7 +1094,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000441)
    */
   public static Resource ss_oligo() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000441");
+    return _namespace_SOFA("SO_0000441");
   }
 
   /**
@@ -1102,7 +1102,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000442)
    */
   public static Resource ds_oligo() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000442");
+    return _namespace_SOFA("SO_0000442");
   }
 
   /**
@@ -1110,7 +1110,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000454)
    */
   public static Resource rasiRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000454");
+    return _namespace_SOFA("SO_0000454");
   }
 
   /**
@@ -1118,7 +1118,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000462)
    */
   public static Resource pseudogenic_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000462");
+    return _namespace_SOFA("SO_0000462");
   }
 
   /**
@@ -1126,7 +1126,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000464)
    */
   public static Resource decayed_exon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000464");
+    return _namespace_SOFA("SO_0000464");
   }
 
   /**
@@ -1134,7 +1134,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000468)
    */
   public static Resource golden_path_fragment() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000468");
+    return _namespace_SOFA("SO_0000468");
   }
 
   /**
@@ -1142,7 +1142,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000472)
    */
   public static Resource tiling_path() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000472");
+    return _namespace_SOFA("SO_0000472");
   }
 
   /**
@@ -1150,7 +1150,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000474)
    */
   public static Resource tiling_path_fragment() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000474");
+    return _namespace_SOFA("SO_0000474");
   }
 
   /**
@@ -1158,7 +1158,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000483)
    */
   public static Resource nc_primary_transcript() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000483");
+    return _namespace_SOFA("SO_0000483");
   }
 
   /**
@@ -1166,7 +1166,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000484)
    */
   public static Resource three_prime_coding_exon_noncoding_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000484");
+    return _namespace_SOFA("SO_0000484");
   }
 
   /**
@@ -1174,7 +1174,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000486)
    */
   public static Resource five_prime_coding_exon_noncoding_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000486");
+    return _namespace_SOFA("SO_0000486");
   }
 
   /**
@@ -1182,7 +1182,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000499)
    */
   public static Resource virtual_sequence() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000499");
+    return _namespace_SOFA("SO_0000499");
   }
 
   /**
@@ -1190,7 +1190,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000502)
    */
   public static Resource transcribed_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000502");
+    return _namespace_SOFA("SO_0000502");
   }
 
   /**
@@ -1198,7 +1198,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000551)
    */
   public static Resource polyA_signal_sequence() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000551");
+    return _namespace_SOFA("SO_0000551");
   }
 
   /**
@@ -1206,7 +1206,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000553)
    */
   public static Resource polyA_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000553");
+    return _namespace_SOFA("SO_0000553");
   }
 
   /**
@@ -1214,7 +1214,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000577)
    */
   public static Resource centromere() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000577");
+    return _namespace_SOFA("SO_0000577");
   }
 
   /**
@@ -1222,7 +1222,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000581)
    */
   public static Resource cap() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000581");
+    return _namespace_SOFA("SO_0000581");
   }
 
   /**
@@ -1230,7 +1230,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000587)
    */
   public static Resource group_I_intron() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000587");
+    return _namespace_SOFA("SO_0000587");
   }
 
   /**
@@ -1238,7 +1238,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000588)
    */
   public static Resource autocatalytically_spliced_intron() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000588");
+    return _namespace_SOFA("SO_0000588");
   }
 
   /**
@@ -1246,7 +1246,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000590)
    */
   public static Resource SRP_RNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000590");
+    return _namespace_SOFA("SO_0000590");
   }
 
   /**
@@ -1254,7 +1254,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000593)
    */
   public static Resource C_D_box_snoRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000593");
+    return _namespace_SOFA("SO_0000593");
   }
 
   /**
@@ -1262,7 +1262,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000602)
    */
   public static Resource guide_RNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000602");
+    return _namespace_SOFA("SO_0000602");
   }
 
   /**
@@ -1270,7 +1270,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000603)
    */
   public static Resource group_II_intron() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000603");
+    return _namespace_SOFA("SO_0000603");
   }
 
   /**
@@ -1278,7 +1278,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000605)
    */
   public static Resource intergenic_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000605");
+    return _namespace_SOFA("SO_0000605");
   }
 
   /**
@@ -1286,7 +1286,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000610)
    */
   public static Resource polyA_sequence() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000610");
+    return _namespace_SOFA("SO_0000610");
   }
 
   /**
@@ -1294,7 +1294,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000611)
    */
   public static Resource branch_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000611");
+    return _namespace_SOFA("SO_0000611");
   }
 
   /**
@@ -1302,7 +1302,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000612)
    */
   public static Resource polypyrimidine_tract() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000612");
+    return _namespace_SOFA("SO_0000612");
   }
 
   /**
@@ -1310,7 +1310,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000616)
    */
   public static Resource transcription_end_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000616");
+    return _namespace_SOFA("SO_0000616");
   }
 
   /**
@@ -1318,7 +1318,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000624)
    */
   public static Resource telomere() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000624");
+    return _namespace_SOFA("SO_0000624");
   }
 
   /**
@@ -1326,7 +1326,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000625)
    */
   public static Resource silencer() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000625");
+    return _namespace_SOFA("SO_0000625");
   }
 
   /**
@@ -1334,11 +1334,11 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000627)
    */
   public static Resource insulator() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000627");
+    return _namespace_SOFA("SO_0000627");
   }
 
   public static Resource chromosomal_structural_element() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000628");
+    return _namespace_SOFA("SO_0000628");
   }
 
   /**
@@ -1346,7 +1346,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000643)
    */
   public static Resource minisatellite() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000643");
+    return _namespace_SOFA("SO_0000643");
   }
 
   /**
@@ -1354,7 +1354,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000644)
    */
   public static Resource antisense_RNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000644");
+    return _namespace_SOFA("SO_0000644");
   }
 
   /**
@@ -1362,7 +1362,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000645)
    */
   public static Resource antisense_primary_transcript() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000645");
+    return _namespace_SOFA("SO_0000645");
   }
 
   /**
@@ -1370,7 +1370,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000646)
    */
   public static Resource siRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000646");
+    return _namespace_SOFA("SO_0000646");
   }
 
   /**
@@ -1378,7 +1378,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000649)
    */
   public static Resource stRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000649");
+    return _namespace_SOFA("SO_0000649");
   }
 
   /**
@@ -1386,7 +1386,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000650)
    */
   public static Resource small_subunit_rRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000650");
+    return _namespace_SOFA("SO_0000650");
   }
 
   /**
@@ -1394,7 +1394,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000651)
    */
   public static Resource large_subunit_rRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000651");
+    return _namespace_SOFA("SO_0000651");
   }
 
   /**
@@ -1402,7 +1402,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000652)
    */
   public static Resource rRNA_5S() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000652");
+    return _namespace_SOFA("SO_0000652");
   }
 
   /**
@@ -1410,7 +1410,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000653)
    */
   public static Resource rRNA_28S() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000653");
+    return _namespace_SOFA("SO_0000653");
   }
 
   /**
@@ -1418,7 +1418,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000655)
    */
   public static Resource ncRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000655");
+    return _namespace_SOFA("SO_0000655");
   }
 
   /**
@@ -1426,7 +1426,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000657)
    */
   public static Resource repeat_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000657");
+    return _namespace_SOFA("SO_0000657");
   }
 
   /**
@@ -1434,7 +1434,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000658)
    */
   public static Resource dispersed_repeat() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000658");
+    return _namespace_SOFA("SO_0000658");
   }
 
   /**
@@ -1442,7 +1442,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000662)
    */
   public static Resource spliceosomal_intron() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000662");
+    return _namespace_SOFA("SO_0000662");
   }
 
   /**
@@ -1450,7 +1450,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000667)
    */
   public static Resource insertion() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000667");
+    return _namespace_SOFA("SO_0000667");
   }
 
   /**
@@ -1458,7 +1458,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000668)
    */
   public static Resource EST_match() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000668");
+    return _namespace_SOFA("SO_0000668");
   }
 
   /**
@@ -1466,7 +1466,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000673)
    */
   public static Resource transcript() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000673");
+    return _namespace_SOFA("SO_0000673");
   }
 
   /**
@@ -1474,7 +1474,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000684)
    */
   public static Resource nuclease_sensitive_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000684");
+    return _namespace_SOFA("SO_0000684");
   }
 
   /**
@@ -1482,7 +1482,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000687)
    */
   public static Resource deletion_junction() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000687");
+    return _namespace_SOFA("SO_0000687");
   }
 
   /**
@@ -1490,7 +1490,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000688)
    */
   public static Resource golden_path() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000688");
+    return _namespace_SOFA("SO_0000688");
   }
 
   /**
@@ -1498,7 +1498,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000689)
    */
   public static Resource cDNA_match() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000689");
+    return _namespace_SOFA("SO_0000689");
   }
 
   /**
@@ -1506,7 +1506,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000694)
    */
   public static Resource SNP() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000694");
+    return _namespace_SOFA("SO_0000694");
   }
 
   /**
@@ -1514,7 +1514,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000695)
    */
   public static Resource reagent() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000695");
+    return _namespace_SOFA("SO_0000695");
   }
 
   /**
@@ -1522,7 +1522,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000696)
    */
   public static Resource oligo() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000696");
+    return _namespace_SOFA("SO_0000696");
   }
 
   /**
@@ -1530,7 +1530,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000699)
    */
   public static Resource junction() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000699");
+    return _namespace_SOFA("SO_0000699");
   }
 
   /**
@@ -1538,7 +1538,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000700)
    */
   public static Resource remark() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000700");
+    return _namespace_SOFA("SO_0000700");
   }
 
   /**
@@ -1546,7 +1546,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000701)
    */
   public static Resource possible_base_call_error() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000701");
+    return _namespace_SOFA("SO_0000701");
   }
 
   /**
@@ -1554,7 +1554,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000702)
    */
   public static Resource possible_assembly_error() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000702");
+    return _namespace_SOFA("SO_0000702");
   }
 
   /**
@@ -1562,7 +1562,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000703)
    */
   public static Resource experimental_result_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000703");
+    return _namespace_SOFA("SO_0000703");
   }
 
   /**
@@ -1570,7 +1570,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000704)
    */
   public static Resource gene() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000704");
+    return _namespace_SOFA("SO_0000704");
   }
 
   /**
@@ -1578,7 +1578,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000705)
    */
   public static Resource tandem_repeat() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000705");
+    return _namespace_SOFA("SO_0000705");
   }
 
   /**
@@ -1586,7 +1586,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000706)
    */
   public static Resource trans_splice_acceptor_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000706");
+    return _namespace_SOFA("SO_0000706");
   }
 
   /**
@@ -1594,7 +1594,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000714)
    */
   public static Resource nucleotide_motif() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000714");
+    return _namespace_SOFA("SO_0000714");
   }
 
   /**
@@ -1602,7 +1602,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000715)
    */
   public static Resource RNA_motif() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000715");
+    return _namespace_SOFA("SO_0000715");
   }
 
   /**
@@ -1610,7 +1610,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000717)
    */
   public static Resource reading_frame() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000717");
+    return _namespace_SOFA("SO_0000717");
   }
 
   /**
@@ -1618,7 +1618,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000719)
    */
   public static Resource ultracontig() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000719");
+    return _namespace_SOFA("SO_0000719");
   }
 
   /**
@@ -1626,7 +1626,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000724)
    */
   public static Resource oriT() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000724");
+    return _namespace_SOFA("SO_0000724");
   }
 
   /**
@@ -1634,7 +1634,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000725)
    */
   public static Resource transit_peptide() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000725");
+    return _namespace_SOFA("SO_0000725");
   }
 
   /**
@@ -1642,7 +1642,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000727)
    */
   public static Resource CRM() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000727");
+    return _namespace_SOFA("SO_0000727");
   }
 
   /**
@@ -1650,11 +1650,11 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000730)
    */
   public static Resource gap() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000730");
+    return _namespace_SOFA("SO_0000730");
   }
 
   public static Resource gene_group_regulatory_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000752");
+    return _namespace_SOFA("SO_0000752");
   }
 
   /**
@@ -1662,7 +1662,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000753)
    */
   public static Resource clone_insert() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000753");
+    return _namespace_SOFA("SO_0000753");
   }
 
   /**
@@ -1670,7 +1670,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000777)
    */
   public static Resource pseudogenic_rRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000777");
+    return _namespace_SOFA("SO_0000777");
   }
 
   /**
@@ -1678,7 +1678,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000778)
    */
   public static Resource pseudogenic_tRNA() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000778");
+    return _namespace_SOFA("SO_0000778");
   }
 
   /**
@@ -1686,7 +1686,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000830)
    */
   public static Resource chromosome_part() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000830");
+    return _namespace_SOFA("SO_0000830");
   }
 
   /**
@@ -1694,7 +1694,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000831)
    */
   public static Resource gene_member_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000831");
+    return _namespace_SOFA("SO_0000831");
   }
 
   /**
@@ -1702,7 +1702,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000833)
    */
   public static Resource transcript_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000833");
+    return _namespace_SOFA("SO_0000833");
   }
 
   /**
@@ -1710,7 +1710,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000834)
    */
   public static Resource mature_transcript_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000834");
+    return _namespace_SOFA("SO_0000834");
   }
 
   /**
@@ -1718,7 +1718,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000835)
    */
   public static Resource primary_transcript_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000835");
+    return _namespace_SOFA("SO_0000835");
   }
 
   /**
@@ -1726,7 +1726,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000836)
    */
   public static Resource mRNA_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000836");
+    return _namespace_SOFA("SO_0000836");
   }
 
   /**
@@ -1734,7 +1734,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000837)
    */
   public static Resource UTR_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000837");
+    return _namespace_SOFA("SO_0000837");
   }
 
   /**
@@ -1742,7 +1742,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000839)
    */
   public static Resource polypeptide_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000839");
+    return _namespace_SOFA("SO_0000839");
   }
 
   /**
@@ -1750,11 +1750,11 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000841)
    */
   public static Resource spliceosomal_intron_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000841");
+    return _namespace_SOFA("SO_0000841");
   }
 
   public static Resource gene_component_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000842");
+    return _namespace_SOFA("SO_0000842");
   }
 
   /**
@@ -1762,7 +1762,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000851)
    */
   public static Resource CDS_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000851");
+    return _namespace_SOFA("SO_0000851");
   }
 
   /**
@@ -1770,7 +1770,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0000852)
    */
   public static Resource exon_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000852");
+    return _namespace_SOFA("SO_0000852");
   }
 
   /**
@@ -1778,7 +1778,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001000)
    */
   public static Resource rRNA_16S() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001000");
+    return _namespace_SOFA("SO_0001000");
   }
 
   /**
@@ -1786,7 +1786,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001001)
    */
   public static Resource rRNA_23S() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001001");
+    return _namespace_SOFA("SO_0001001");
   }
 
   /**
@@ -1794,7 +1794,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001002)
    */
   public static Resource rRNA_25S() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001002");
+    return _namespace_SOFA("SO_0001002");
   }
 
   /**
@@ -1802,7 +1802,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001019)
    */
   public static Resource copy_number_variation() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001019");
+    return _namespace_SOFA("SO_0001019");
   }
 
   /**
@@ -1810,7 +1810,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001037)
    */
   public static Resource mobile_genetic_element() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001037");
+    return _namespace_SOFA("SO_0001037");
   }
 
   /**
@@ -1818,7 +1818,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001039)
    */
   public static Resource integrated_mobile_genetic_element() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001039");
+    return _namespace_SOFA("SO_0001039");
   }
 
   /**
@@ -1826,7 +1826,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001055)
    */
   public static Resource transcriptional_cis_regulatory_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001055");
+    return _namespace_SOFA("SO_0001055");
   }
 
   /**
@@ -1834,7 +1834,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001056)
    */
   public static Resource splicing_regulatory_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001056");
+    return _namespace_SOFA("SO_0001056");
   }
 
   /**
@@ -1842,7 +1842,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001059)
    */
   public static Resource sequence_alteration() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001059");
+    return _namespace_SOFA("SO_0001059");
   }
 
   /**
@@ -1850,7 +1850,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001063)
    */
   public static Resource immature_peptide_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001063");
+    return _namespace_SOFA("SO_0001063");
   }
 
   /**
@@ -1858,7 +1858,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001214)
    */
   public static Resource noncoding_region_of_exon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001214");
+    return _namespace_SOFA("SO_0001214");
   }
 
   /**
@@ -1866,7 +1866,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001215)
    */
   public static Resource coding_region_of_exon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001215");
+    return _namespace_SOFA("SO_0001215");
   }
 
   /**
@@ -1874,7 +1874,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001235)
    */
   public static Resource replicon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001235");
+    return _namespace_SOFA("SO_0001235");
   }
 
   /**
@@ -1882,7 +1882,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001236)
    */
   public static Resource base() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001236");
+    return _namespace_SOFA("SO_0001236");
   }
 
   /**
@@ -1890,7 +1890,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001248)
    */
   public static Resource assembly() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001248");
+    return _namespace_SOFA("SO_0001248");
   }
 
   /**
@@ -1898,7 +1898,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001409)
    */
   public static Resource biomaterial_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001409");
+    return _namespace_SOFA("SO_0001409");
   }
 
   /**
@@ -1906,7 +1906,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001410)
    */
   public static Resource experimental_feature() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001410");
+    return _namespace_SOFA("SO_0001410");
   }
 
   /**
@@ -1914,7 +1914,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001411)
    */
   public static Resource biological_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001411");
+    return _namespace_SOFA("SO_0001411");
   }
 
   /**
@@ -1922,7 +1922,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001412)
    */
   public static Resource topologically_defined_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001412");
+    return _namespace_SOFA("SO_0001412");
   }
 
   /**
@@ -1930,7 +1930,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001419)
    */
   public static Resource cis_splice_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001419");
+    return _namespace_SOFA("SO_0001419");
   }
 
   /**
@@ -1938,7 +1938,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001420)
    */
   public static Resource trans_splice_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001420");
+    return _namespace_SOFA("SO_0001420");
   }
 
   /**
@@ -1946,7 +1946,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001483)
    */
   public static Resource SNV() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001483");
+    return _namespace_SOFA("SO_0001483");
   }
 
   /**
@@ -1954,7 +1954,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001527)
    */
   public static Resource peptide_localization_signal() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001527");
+    return _namespace_SOFA("SO_0001527");
   }
 
   /**
@@ -1962,7 +1962,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001647)
    */
   public static Resource kozak_sequence() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001647");
+    return _namespace_SOFA("SO_0001647");
   }
 
   /**
@@ -1970,7 +1970,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001654)
    */
   public static Resource nucleotide_to_protein_binding_site() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001654");
+    return _namespace_SOFA("SO_0001654");
   }
 
   /**
@@ -1978,7 +1978,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001679)
    */
   public static Resource transcription_regulatory_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001679");
+    return _namespace_SOFA("SO_0001679");
   }
 
   /**
@@ -1986,7 +1986,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001683)
    */
   public static Resource sequence_motif() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001683");
+    return _namespace_SOFA("SO_0001683");
   }
 
   /**
@@ -1994,7 +1994,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001720)
    */
   public static Resource epigenetically_modified_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001720");
+    return _namespace_SOFA("SO_0001720");
   }
 
   /**
@@ -2002,7 +2002,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0001790)
    */
   public static Resource paired_end_fragment() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001790");
+    return _namespace_SOFA("SO_0001790");
   }
 
   /**
@@ -2010,7 +2010,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0005836)
    */
   public static Resource regulatory_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0005836");
+    return _namespace_SOFA("SO_0005836");
   }
 
   /**
@@ -2018,7 +2018,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0005855)
    */
   public static Resource gene_group() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0005855");
+    return _namespace_SOFA("SO_0005855");
   }
 
   /**
@@ -2026,7 +2026,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_0100011)
    */
   public static Resource cleaved_peptide_region() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0100011");
+    return _namespace_SOFA("SO_0100011");
   }
 
   /**
@@ -2034,7 +2034,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_1000002)
    */
   public static Resource substitution() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_1000002");
+    return _namespace_SOFA("SO_1000002");
   }
 
   /**
@@ -2042,7 +2042,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_1000005)
    */
   public static Resource complex_substitution() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_1000005");
+    return _namespace_SOFA("SO_1000005");
   }
 
   /**
@@ -2050,7 +2050,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_1000008)
    */
   public static Resource point_mutation() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_1000008");
+    return _namespace_SOFA("SO_1000008");
   }
 
   /**
@@ -2058,7 +2058,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_1000036)
    */
   public static Resource inversion() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_1000036");
+    return _namespace_SOFA("SO_1000036");
   }
 
   /**
@@ -2066,7 +2066,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_1001284)
    */
   public static Resource regulon() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_1001284");
+    return _namespace_SOFA("SO_1001284");
   }
 
   /**
@@ -2074,7 +2074,7 @@ public class SOFA {
    * (http://purl.obolibrary.org/obo/SO_2000061)
    */
   public static Resource databank_entry() {
-    return _namespace_SOFA("http://purl.obolibrary.org/obo/SO_2000061");
+    return _namespace_SOFA("SO_2000061");
   }
 
   /**
@@ -2083,55 +2083,55 @@ public class SOFA {
    * @param uri URI that is tested for being an object property
    */
   public static boolean isObjectProperty(Resource uri) {
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:adjacent_to")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:adjacent_to"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:complete_evidence_for_feature")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:complete_evidence_for_feature"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:contained_by")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:contained_by"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:contains")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:contains"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:derives_from")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:derives_from"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:evidence_for_feature")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:evidence_for_feature"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:has_integral_part")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:has_integral_part"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:has_part")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:has_part"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:homologous_to")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:homologous_to"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:integral_part_of")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:integral_part_of"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:member_of")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:member_of"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:non_functional_homolog_of")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:non_functional_homolog_of"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:orthologous_to")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:orthologous_to"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:paralogous_to")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:paralogous_to"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:part_of")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:part_of"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:partial_evidence_for_feature")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:partial_evidence_for_feature"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/http_//purl.org/obo/owl:similar_to")) {
+    if (uri.equals(_namespace_SOFA("http_//purl.org/obo/owl:similar_to"))) {
       return true;
     }
     return false;
@@ -2152,760 +2152,760 @@ public class SOFA {
    * @param uri URI that is tested for being a class
    */
   public static boolean isClass(Resource uri) {
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000000")) {
+    if (uri.equals(_namespace_SOFA("SO_0000000"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000001")) {
+    if (uri.equals(_namespace_SOFA("SO_0000001"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000004")) {
+    if (uri.equals(_namespace_SOFA("SO_0000004"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000005")) {
+    if (uri.equals(_namespace_SOFA("SO_0000005"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000006")) {
+    if (uri.equals(_namespace_SOFA("SO_0000006"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000007")) {
+    if (uri.equals(_namespace_SOFA("SO_0000007"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000013")) {
+    if (uri.equals(_namespace_SOFA("SO_0000013"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000038")) {
+    if (uri.equals(_namespace_SOFA("SO_0000038"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000039")) {
+    if (uri.equals(_namespace_SOFA("SO_0000039"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000050")) {
+    if (uri.equals(_namespace_SOFA("SO_0000050"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000057")) {
+    if (uri.equals(_namespace_SOFA("SO_0000057"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000059")) {
+    if (uri.equals(_namespace_SOFA("SO_0000059"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000101")) {
+    if (uri.equals(_namespace_SOFA("SO_0000101"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000102")) {
+    if (uri.equals(_namespace_SOFA("SO_0000102"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000103")) {
+    if (uri.equals(_namespace_SOFA("SO_0000103"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000104")) {
+    if (uri.equals(_namespace_SOFA("SO_0000104"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000109")) {
+    if (uri.equals(_namespace_SOFA("SO_0000109"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000110")) {
+    if (uri.equals(_namespace_SOFA("SO_0000110"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000112")) {
+    if (uri.equals(_namespace_SOFA("SO_0000112"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000113")) {
+    if (uri.equals(_namespace_SOFA("SO_0000113"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000114")) {
+    if (uri.equals(_namespace_SOFA("SO_0000114"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000120")) {
+    if (uri.equals(_namespace_SOFA("SO_0000120"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000139")) {
+    if (uri.equals(_namespace_SOFA("SO_0000139"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000140")) {
+    if (uri.equals(_namespace_SOFA("SO_0000140"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000141")) {
+    if (uri.equals(_namespace_SOFA("SO_0000141"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000143")) {
+    if (uri.equals(_namespace_SOFA("SO_0000143"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000147")) {
+    if (uri.equals(_namespace_SOFA("SO_0000147"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000148")) {
+    if (uri.equals(_namespace_SOFA("SO_0000148"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000149")) {
+    if (uri.equals(_namespace_SOFA("SO_0000149"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000150")) {
+    if (uri.equals(_namespace_SOFA("SO_0000150"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000151")) {
+    if (uri.equals(_namespace_SOFA("SO_0000151"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000159")) {
+    if (uri.equals(_namespace_SOFA("SO_0000159"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000161")) {
+    if (uri.equals(_namespace_SOFA("SO_0000161"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000162")) {
+    if (uri.equals(_namespace_SOFA("SO_0000162"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000163")) {
+    if (uri.equals(_namespace_SOFA("SO_0000163"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000164")) {
+    if (uri.equals(_namespace_SOFA("SO_0000164"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000165")) {
+    if (uri.equals(_namespace_SOFA("SO_0000165"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000167")) {
+    if (uri.equals(_namespace_SOFA("SO_0000167"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000177")) {
+    if (uri.equals(_namespace_SOFA("SO_0000177"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000178")) {
+    if (uri.equals(_namespace_SOFA("SO_0000178"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000179")) {
+    if (uri.equals(_namespace_SOFA("SO_0000179"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000181")) {
+    if (uri.equals(_namespace_SOFA("SO_0000181"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000183")) {
+    if (uri.equals(_namespace_SOFA("SO_0000183"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000185")) {
+    if (uri.equals(_namespace_SOFA("SO_0000185"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000187")) {
+    if (uri.equals(_namespace_SOFA("SO_0000187"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000188")) {
+    if (uri.equals(_namespace_SOFA("SO_0000188"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000193")) {
+    if (uri.equals(_namespace_SOFA("SO_0000193"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000195")) {
+    if (uri.equals(_namespace_SOFA("SO_0000195"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000196")) {
+    if (uri.equals(_namespace_SOFA("SO_0000196"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000197")) {
+    if (uri.equals(_namespace_SOFA("SO_0000197"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000198")) {
+    if (uri.equals(_namespace_SOFA("SO_0000198"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000200")) {
+    if (uri.equals(_namespace_SOFA("SO_0000200"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000203")) {
+    if (uri.equals(_namespace_SOFA("SO_0000203"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000204")) {
+    if (uri.equals(_namespace_SOFA("SO_0000204"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000205")) {
+    if (uri.equals(_namespace_SOFA("SO_0000205"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000209")) {
+    if (uri.equals(_namespace_SOFA("SO_0000209"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000233")) {
+    if (uri.equals(_namespace_SOFA("SO_0000233"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000234")) {
+    if (uri.equals(_namespace_SOFA("SO_0000234"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000235")) {
+    if (uri.equals(_namespace_SOFA("SO_0000235"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000236")) {
+    if (uri.equals(_namespace_SOFA("SO_0000236"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000239")) {
+    if (uri.equals(_namespace_SOFA("SO_0000239"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000252")) {
+    if (uri.equals(_namespace_SOFA("SO_0000252"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000253")) {
+    if (uri.equals(_namespace_SOFA("SO_0000253"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000274")) {
+    if (uri.equals(_namespace_SOFA("SO_0000274"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000275")) {
+    if (uri.equals(_namespace_SOFA("SO_0000275"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000276")) {
+    if (uri.equals(_namespace_SOFA("SO_0000276"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000289")) {
+    if (uri.equals(_namespace_SOFA("SO_0000289"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000294")) {
+    if (uri.equals(_namespace_SOFA("SO_0000294"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000296")) {
+    if (uri.equals(_namespace_SOFA("SO_0000296"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000303")) {
+    if (uri.equals(_namespace_SOFA("SO_0000303"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000305")) {
+    if (uri.equals(_namespace_SOFA("SO_0000305"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000306")) {
+    if (uri.equals(_namespace_SOFA("SO_0000306"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000307")) {
+    if (uri.equals(_namespace_SOFA("SO_0000307"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000314")) {
+    if (uri.equals(_namespace_SOFA("SO_0000314"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000315")) {
+    if (uri.equals(_namespace_SOFA("SO_0000315"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000316")) {
+    if (uri.equals(_namespace_SOFA("SO_0000316"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000318")) {
+    if (uri.equals(_namespace_SOFA("SO_0000318"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000319")) {
+    if (uri.equals(_namespace_SOFA("SO_0000319"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000324")) {
+    if (uri.equals(_namespace_SOFA("SO_0000324"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000325")) {
+    if (uri.equals(_namespace_SOFA("SO_0000325"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000326")) {
+    if (uri.equals(_namespace_SOFA("SO_0000326"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000330")) {
+    if (uri.equals(_namespace_SOFA("SO_0000330"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000331")) {
+    if (uri.equals(_namespace_SOFA("SO_0000331"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000332")) {
+    if (uri.equals(_namespace_SOFA("SO_0000332"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000333")) {
+    if (uri.equals(_namespace_SOFA("SO_0000333"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000334")) {
+    if (uri.equals(_namespace_SOFA("SO_0000334"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000336")) {
+    if (uri.equals(_namespace_SOFA("SO_0000336"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000337")) {
+    if (uri.equals(_namespace_SOFA("SO_0000337"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000340")) {
+    if (uri.equals(_namespace_SOFA("SO_0000340"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000341")) {
+    if (uri.equals(_namespace_SOFA("SO_0000341"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000343")) {
+    if (uri.equals(_namespace_SOFA("SO_0000343"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000344")) {
+    if (uri.equals(_namespace_SOFA("SO_0000344"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000345")) {
+    if (uri.equals(_namespace_SOFA("SO_0000345"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000347")) {
+    if (uri.equals(_namespace_SOFA("SO_0000347"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000349")) {
+    if (uri.equals(_namespace_SOFA("SO_0000349"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000353")) {
+    if (uri.equals(_namespace_SOFA("SO_0000353"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000360")) {
+    if (uri.equals(_namespace_SOFA("SO_0000360"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000366")) {
+    if (uri.equals(_namespace_SOFA("SO_0000366"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000368")) {
+    if (uri.equals(_namespace_SOFA("SO_0000368"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000370")) {
+    if (uri.equals(_namespace_SOFA("SO_0000370"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000372")) {
+    if (uri.equals(_namespace_SOFA("SO_0000372"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000374")) {
+    if (uri.equals(_namespace_SOFA("SO_0000374"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000375")) {
+    if (uri.equals(_namespace_SOFA("SO_0000375"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000380")) {
+    if (uri.equals(_namespace_SOFA("SO_0000380"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000385")) {
+    if (uri.equals(_namespace_SOFA("SO_0000385"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000386")) {
+    if (uri.equals(_namespace_SOFA("SO_0000386"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000390")) {
+    if (uri.equals(_namespace_SOFA("SO_0000390"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000391")) {
+    if (uri.equals(_namespace_SOFA("SO_0000391"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000392")) {
+    if (uri.equals(_namespace_SOFA("SO_0000392"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000393")) {
+    if (uri.equals(_namespace_SOFA("SO_0000393"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000394")) {
+    if (uri.equals(_namespace_SOFA("SO_0000394"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000395")) {
+    if (uri.equals(_namespace_SOFA("SO_0000395"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000396")) {
+    if (uri.equals(_namespace_SOFA("SO_0000396"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000397")) {
+    if (uri.equals(_namespace_SOFA("SO_0000397"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000398")) {
+    if (uri.equals(_namespace_SOFA("SO_0000398"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000399")) {
+    if (uri.equals(_namespace_SOFA("SO_0000399"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000403")) {
+    if (uri.equals(_namespace_SOFA("SO_0000403"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000404")) {
+    if (uri.equals(_namespace_SOFA("SO_0000404"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000405")) {
+    if (uri.equals(_namespace_SOFA("SO_0000405"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000407")) {
+    if (uri.equals(_namespace_SOFA("SO_0000407"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000409")) {
+    if (uri.equals(_namespace_SOFA("SO_0000409"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000410")) {
+    if (uri.equals(_namespace_SOFA("SO_0000410"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000412")) {
+    if (uri.equals(_namespace_SOFA("SO_0000412"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000413")) {
+    if (uri.equals(_namespace_SOFA("SO_0000413"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000418")) {
+    if (uri.equals(_namespace_SOFA("SO_0000418"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000419")) {
+    if (uri.equals(_namespace_SOFA("SO_0000419"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000436")) {
+    if (uri.equals(_namespace_SOFA("SO_0000436"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000441")) {
+    if (uri.equals(_namespace_SOFA("SO_0000441"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000442")) {
+    if (uri.equals(_namespace_SOFA("SO_0000442"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000454")) {
+    if (uri.equals(_namespace_SOFA("SO_0000454"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000462")) {
+    if (uri.equals(_namespace_SOFA("SO_0000462"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000464")) {
+    if (uri.equals(_namespace_SOFA("SO_0000464"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000468")) {
+    if (uri.equals(_namespace_SOFA("SO_0000468"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000472")) {
+    if (uri.equals(_namespace_SOFA("SO_0000472"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000474")) {
+    if (uri.equals(_namespace_SOFA("SO_0000474"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000483")) {
+    if (uri.equals(_namespace_SOFA("SO_0000483"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000484")) {
+    if (uri.equals(_namespace_SOFA("SO_0000484"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000486")) {
+    if (uri.equals(_namespace_SOFA("SO_0000486"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000499")) {
+    if (uri.equals(_namespace_SOFA("SO_0000499"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000502")) {
+    if (uri.equals(_namespace_SOFA("SO_0000502"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000551")) {
+    if (uri.equals(_namespace_SOFA("SO_0000551"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000553")) {
+    if (uri.equals(_namespace_SOFA("SO_0000553"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000577")) {
+    if (uri.equals(_namespace_SOFA("SO_0000577"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000581")) {
+    if (uri.equals(_namespace_SOFA("SO_0000581"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000587")) {
+    if (uri.equals(_namespace_SOFA("SO_0000587"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000588")) {
+    if (uri.equals(_namespace_SOFA("SO_0000588"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000590")) {
+    if (uri.equals(_namespace_SOFA("SO_0000590"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000593")) {
+    if (uri.equals(_namespace_SOFA("SO_0000593"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000602")) {
+    if (uri.equals(_namespace_SOFA("SO_0000602"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000603")) {
+    if (uri.equals(_namespace_SOFA("SO_0000603"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000605")) {
+    if (uri.equals(_namespace_SOFA("SO_0000605"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000610")) {
+    if (uri.equals(_namespace_SOFA("SO_0000610"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000611")) {
+    if (uri.equals(_namespace_SOFA("SO_0000611"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000612")) {
+    if (uri.equals(_namespace_SOFA("SO_0000612"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000616")) {
+    if (uri.equals(_namespace_SOFA("SO_0000616"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000624")) {
+    if (uri.equals(_namespace_SOFA("SO_0000624"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000625")) {
+    if (uri.equals(_namespace_SOFA("SO_0000625"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000627")) {
+    if (uri.equals(_namespace_SOFA("SO_0000627"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000628")) {
+    if (uri.equals(_namespace_SOFA("SO_0000628"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000643")) {
+    if (uri.equals(_namespace_SOFA("SO_0000643"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000644")) {
+    if (uri.equals(_namespace_SOFA("SO_0000644"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000645")) {
+    if (uri.equals(_namespace_SOFA("SO_0000645"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000646")) {
+    if (uri.equals(_namespace_SOFA("SO_0000646"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000649")) {
+    if (uri.equals(_namespace_SOFA("SO_0000649"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000650")) {
+    if (uri.equals(_namespace_SOFA("SO_0000650"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000651")) {
+    if (uri.equals(_namespace_SOFA("SO_0000651"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000652")) {
+    if (uri.equals(_namespace_SOFA("SO_0000652"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000653")) {
+    if (uri.equals(_namespace_SOFA("SO_0000653"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000655")) {
+    if (uri.equals(_namespace_SOFA("SO_0000655"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000657")) {
+    if (uri.equals(_namespace_SOFA("SO_0000657"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000658")) {
+    if (uri.equals(_namespace_SOFA("SO_0000658"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000662")) {
+    if (uri.equals(_namespace_SOFA("SO_0000662"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000667")) {
+    if (uri.equals(_namespace_SOFA("SO_0000667"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000668")) {
+    if (uri.equals(_namespace_SOFA("SO_0000668"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000673")) {
+    if (uri.equals(_namespace_SOFA("SO_0000673"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000684")) {
+    if (uri.equals(_namespace_SOFA("SO_0000684"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000687")) {
+    if (uri.equals(_namespace_SOFA("SO_0000687"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000688")) {
+    if (uri.equals(_namespace_SOFA("SO_0000688"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000689")) {
+    if (uri.equals(_namespace_SOFA("SO_0000689"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000694")) {
+    if (uri.equals(_namespace_SOFA("SO_0000694"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000695")) {
+    if (uri.equals(_namespace_SOFA("SO_0000695"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000696")) {
+    if (uri.equals(_namespace_SOFA("SO_0000696"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000699")) {
+    if (uri.equals(_namespace_SOFA("SO_0000699"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000700")) {
+    if (uri.equals(_namespace_SOFA("SO_0000700"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000701")) {
+    if (uri.equals(_namespace_SOFA("SO_0000701"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000702")) {
+    if (uri.equals(_namespace_SOFA("SO_0000702"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000703")) {
+    if (uri.equals(_namespace_SOFA("SO_0000703"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000704")) {
+    if (uri.equals(_namespace_SOFA("SO_0000704"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000705")) {
+    if (uri.equals(_namespace_SOFA("SO_0000705"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000706")) {
+    if (uri.equals(_namespace_SOFA("SO_0000706"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000714")) {
+    if (uri.equals(_namespace_SOFA("SO_0000714"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000715")) {
+    if (uri.equals(_namespace_SOFA("SO_0000715"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000717")) {
+    if (uri.equals(_namespace_SOFA("SO_0000717"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000719")) {
+    if (uri.equals(_namespace_SOFA("SO_0000719"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000724")) {
+    if (uri.equals(_namespace_SOFA("SO_0000724"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000725")) {
+    if (uri.equals(_namespace_SOFA("SO_0000725"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000727")) {
+    if (uri.equals(_namespace_SOFA("SO_0000727"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000730")) {
+    if (uri.equals(_namespace_SOFA("SO_0000730"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000752")) {
+    if (uri.equals(_namespace_SOFA("SO_0000752"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000753")) {
+    if (uri.equals(_namespace_SOFA("SO_0000753"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000777")) {
+    if (uri.equals(_namespace_SOFA("SO_0000777"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000778")) {
+    if (uri.equals(_namespace_SOFA("SO_0000778"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000830")) {
+    if (uri.equals(_namespace_SOFA("SO_0000830"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000831")) {
+    if (uri.equals(_namespace_SOFA("SO_0000831"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000833")) {
+    if (uri.equals(_namespace_SOFA("SO_0000833"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000834")) {
+    if (uri.equals(_namespace_SOFA("SO_0000834"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000835")) {
+    if (uri.equals(_namespace_SOFA("SO_0000835"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000836")) {
+    if (uri.equals(_namespace_SOFA("SO_0000836"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000837")) {
+    if (uri.equals(_namespace_SOFA("SO_0000837"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000839")) {
+    if (uri.equals(_namespace_SOFA("SO_0000839"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000841")) {
+    if (uri.equals(_namespace_SOFA("SO_0000841"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000842")) {
+    if (uri.equals(_namespace_SOFA("SO_0000842"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000851")) {
+    if (uri.equals(_namespace_SOFA("SO_0000851"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0000852")) {
+    if (uri.equals(_namespace_SOFA("SO_0000852"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001000")) {
+    if (uri.equals(_namespace_SOFA("SO_0001000"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001001")) {
+    if (uri.equals(_namespace_SOFA("SO_0001001"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001002")) {
+    if (uri.equals(_namespace_SOFA("SO_0001002"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001019")) {
+    if (uri.equals(_namespace_SOFA("SO_0001019"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001037")) {
+    if (uri.equals(_namespace_SOFA("SO_0001037"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001039")) {
+    if (uri.equals(_namespace_SOFA("SO_0001039"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001055")) {
+    if (uri.equals(_namespace_SOFA("SO_0001055"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001056")) {
+    if (uri.equals(_namespace_SOFA("SO_0001056"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001059")) {
+    if (uri.equals(_namespace_SOFA("SO_0001059"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001063")) {
+    if (uri.equals(_namespace_SOFA("SO_0001063"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001214")) {
+    if (uri.equals(_namespace_SOFA("SO_0001214"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001215")) {
+    if (uri.equals(_namespace_SOFA("SO_0001215"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001235")) {
+    if (uri.equals(_namespace_SOFA("SO_0001235"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001236")) {
+    if (uri.equals(_namespace_SOFA("SO_0001236"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001248")) {
+    if (uri.equals(_namespace_SOFA("SO_0001248"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001409")) {
+    if (uri.equals(_namespace_SOFA("SO_0001409"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001410")) {
+    if (uri.equals(_namespace_SOFA("SO_0001410"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001411")) {
+    if (uri.equals(_namespace_SOFA("SO_0001411"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001412")) {
+    if (uri.equals(_namespace_SOFA("SO_0001412"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001419")) {
+    if (uri.equals(_namespace_SOFA("SO_0001419"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001420")) {
+    if (uri.equals(_namespace_SOFA("SO_0001420"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001483")) {
+    if (uri.equals(_namespace_SOFA("SO_0001483"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001527")) {
+    if (uri.equals(_namespace_SOFA("SO_0001527"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001647")) {
+    if (uri.equals(_namespace_SOFA("SO_0001647"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001654")) {
+    if (uri.equals(_namespace_SOFA("SO_0001654"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001679")) {
+    if (uri.equals(_namespace_SOFA("SO_0001679"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001683")) {
+    if (uri.equals(_namespace_SOFA("SO_0001683"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001720")) {
+    if (uri.equals(_namespace_SOFA("SO_0001720"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0001790")) {
+    if (uri.equals(_namespace_SOFA("SO_0001790"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0005836")) {
+    if (uri.equals(_namespace_SOFA("SO_0005836"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0005855")) {
+    if (uri.equals(_namespace_SOFA("SO_0005855"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_0100011")) {
+    if (uri.equals(_namespace_SOFA("SO_0100011"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_1000002")) {
+    if (uri.equals(_namespace_SOFA("SO_1000002"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_1000005")) {
+    if (uri.equals(_namespace_SOFA("SO_1000005"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_1000008")) {
+    if (uri.equals(_namespace_SOFA("SO_1000008"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_1000036")) {
+    if (uri.equals(_namespace_SOFA("SO_1000036"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_1001284")) {
+    if (uri.equals(_namespace_SOFA("SO_1001284"))) {
       return true;
     }
-    if (uri == _namespace_SOFA("http://purl.obolibrary.org/obo/SO_2000061")) {
+    if (uri.equals(_namespace_SOFA("SO_2000061"))) {
       return true;
     }
     return false;
@@ -2938,7 +2938,7 @@ public class SOFA {
    */
   public static boolean hasParent(Resource uri, Resource parent) {
     if (__parent_properties.containsKey(uri)) {
-      if (__parent_properties.get(uri) == parent) {
+      if (__parent_properties.get(uri).equals(parent)) {
         return true;
       }
       return hasParent((Resource)__parent_properties.get(uri), parent);
@@ -2947,11 +2947,7 @@ public class SOFA {
   }
 
   private static Resource _namespace_SOFA(String accession) {
-    if (isClass(ResourceFactory.createResource("http://purl.obolibrary.org/obo/" + accession))) {
-      return ResourceFactory.createResource("http://purl.obolibrary.org/obo/" + accession);
-    } else {
-      return ResourceFactory.createProperty("http://purl.obolibrary.org/obo/" + accession);
-    }
+    return ResourceFactory.createResource("http://purl.obolibrary.org/obo/" + accession);
   }
 
 
@@ -2960,6 +2956,199 @@ public class SOFA {
   private static Map<Resource, Resource> _init___parent_properties() {
     Map<Resource, Resource> map = new HashMap<Resource, Resource>();
 
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000001"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000110"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000004"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000195"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000005"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000705"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000006"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000695"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000057"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000752"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000059"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001654"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000101"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001039"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000102"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000347"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000112"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000441"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000113"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001039"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000114"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000306"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000120"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000185"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000139"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000836"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000143"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001410"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000147"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000833"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000151"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000695"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000159"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000161"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000306"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000162"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000835"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000163"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001419"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000164"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001419"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000165"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000727"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000167"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001055"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000177"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000347"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000178"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0005855"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000181"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000347"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000183"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000842"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000185"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000673"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000188"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000835"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000193"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000412"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000195"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000147"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000198"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000147"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000200"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000195"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000203"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000836"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000204"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000203"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000205"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000203"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000209"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000483"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000234"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000233"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000235"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001679"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000236"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000717"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000239"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001412"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000289"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000005"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000294"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000657"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000303"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000835"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000305"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001720"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000306"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000305"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000307"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000314"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000657"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000315"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000835"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000316"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000836"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000318"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000360"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000319"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000360"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000324"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000696"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000325"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000209"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000326"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000324"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000330"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001410"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000331"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000324"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000332"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000330"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000334"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000330"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000337"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000442"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000340"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001235"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000341"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000830"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000343"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001410"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000344"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001056"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000347"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000343"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000349"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000343"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000353"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001248"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000360"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000851"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000366"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000699"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000368"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000366"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000370"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000655"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000372"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000673"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000374"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000372"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000375"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000651"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000380"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000715"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000385"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000655"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000386"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000655"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000390"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000655"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000391"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000274"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000392"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000274"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000393"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000274"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000394"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000274"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000395"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000274"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000396"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000274"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000397"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000274"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000398"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000274"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000399"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000274"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000403"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000593"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000404"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000655"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000405"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000655"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000407"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000650"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000409"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000410"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000409"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000412"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000143"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000413"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000700"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000436"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000296"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000441"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000696"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000442"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000696"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000454"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000655"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000462"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000472"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000353"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000483"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000185"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000499"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000353"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000551"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001679"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000577"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000628"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000581"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000587"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000588"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000588"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000188"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000593"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000275"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000602"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000655"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000603"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000588"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000605"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000611"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000841"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000612"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000841"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000616"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000835"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000624"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000628"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000625"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000727"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000627"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001055"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000628"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000830"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000643"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000005"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000645"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000185"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000646"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000655"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000649"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000655"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000650"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000252"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000652"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000651"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000653"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000651"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000655"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000233"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000658"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000657"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000662"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000188"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000667"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000668"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000102"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000673"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000831"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000684"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000059"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000687"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000699"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000688"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000353"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000689"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000102"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000694"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001483"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000695"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001409"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000696"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000695"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000699"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000110"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000700"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001410"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000701"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000413"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000702"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000413"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000703"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000700"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000705"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000657"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000706"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001420"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000714"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001683"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000715"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000714"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000717"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001410"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000719"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000353"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000724"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000296"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000725"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001527"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000777"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000462"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000778"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000462"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000834"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000833"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000837"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000836"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001000"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000650"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001001"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000651"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001002"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000651"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001019"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001059"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001037"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001039"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001037"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001055"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001679"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001056"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001679"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001059"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000110"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001063"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000839"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001214"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000852"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001215"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000852"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001235"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001236"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001248"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001410"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001409"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000001"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001410"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000001"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000001"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001412"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000001"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001419"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000162"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001420"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000162"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001483"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_1000002"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001527"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000839"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001647"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000139"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001654"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000410"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001679"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0005836"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001683"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001720"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001790"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000143"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0005836"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000831"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0005855"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_1000002"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_1000005"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_1000002"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_1000008"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001483"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_1000036"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0001411"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_1001284"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0005855"));
+    map.put(ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_2000061"), ResourceFactory.createResource("http://purl.obolibrary.org/obo/SO_0000695"));
 
     return map;
   }

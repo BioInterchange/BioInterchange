@@ -13114,6 +13114,156 @@ class SO
     if uri == RDF::URI.new('http://purl.obolibrary.org/obo/SEQUENCE_variant_of') then
       return true
     end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/adjacent_to') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/associated_with') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/complete_evidence_for_feature') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/connects_on') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/contained_by') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/contains') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/derives_from') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/disconnected_from') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/edited_from') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/edited_to') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/evidence_for_feature') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/exemplar_of') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/finished_by') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/finishes') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/gained') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/genome_of') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/guided_by') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/guides') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/has_integral_part') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/has_origin') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/has_part') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/has_quality') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/homologous_to') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/integral_part_of') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/is_consecutive_sequence_of') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/lost') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/maximally_overlaps') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/member_of') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/non_functional_homolog_of') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/orthologous_to') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/overlaps') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/paralogous_to') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/part_of') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/partial_evidence_for_feature') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/position_of') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/processed_from') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/processed_into') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/recombined_from') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/recombined_to') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/sequence_of') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/similar_to') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/started_by') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/starts') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/trans_spliced_from') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/trans_spliced_to') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/transcribed_from') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/transcribed_to') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/translates_to') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/translation_of') then
+      return true
+    end
+    if uri == RDF::URI.new('http://purl.obolibrary.org/obo/variant_of') then
+      return true
+    end
     return false
   end
 

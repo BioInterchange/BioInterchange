@@ -28,15 +28,16 @@ EOS
 
     next if line.start_with?('module ') or line.start_with?('require ')
 
-    if line.match('http://') then
-      if line.match(/http:\/\/[^'")]+#[^'")]+/) then
-        namespace = line.scan(/http:\/\/[^'")]+/)[0].sub(/(#).*$/, '\1') unless namespace
-      else
-        namespace = line.scan(/http:\/\/[^'")]+/)[0].sub(/\/[^\/]+$/, '/') unless namespace
+    if line.match('https?://') and not line.strip.start_with?('#') then
+      unless namespace then
+        namespace = line.scan(/https?:\/\/[^']+/)[0].sub(/(\/[^\/#]+)'.*$/, '')
+        if namespace.include?('#') then
+          namespace.sub!(/(#).*$/, '\1')
+        else
+          namespace.sub!(/(\/)[^\/]*$/, '\1')
+        end
       end
-      if line.match("#{namespace}\w+") then
-        line.gsub!(namespace, '') unless line.strip.start_with?('#')
-      end
+      line.gsub!(namespace, '')
     end
 
     if line.start_with?('class') then
@@ -94,11 +95,8 @@ EOS
       end
     elsif line.strip.start_with?('if ') or line.strip.start_with?('elsif') then
       transduction = "#{line.sub(/ then$/, '').sub('elsif', 'else if').gsub('@@', '__').gsub(/RDF::URI\.new\(([^)]+)\)/, "_namespace_#{java_class}(\\1)").gsub(/(\w)\?\(/, '\1(')}".gsub(/\.has_key\(([^)]+)\)/, '.containsKey(\1)').gsub(/\[([^\]]+)\]/, '.get(\1)')
-      if transduction.match(/if ([^=]+|_namespace_[^=]+) ?== ?([^_].*|_namespace_.*)/)
-        transduction.sub!(/if ([^= ]+) ?== ?(\S+)\s+$/, 'if \1.equals(\2)')
-        transduction.sub!(/_namespace_\w+\('(\w+)'\)/, "\"#{namespace}\\1\"")
-      end
-      transduction.sub!(/\.equals\(("[^"]+")\)/, '.equals(ResourceFactory.createResource(\1))')
+      transduction.sub!(/\s*==\s*(_namespace_\w+\([^)]+\))/, '.equals(\1)')
+      transduction.sub!(/\s*==\s*(\w+)/, '.equals(\1)')
       transduction.sub!(/if /, 'if (')
       transduction.sub!(/$/, ') {')
     elsif line.strip.start_with?('return [') then
@@ -107,11 +105,7 @@ EOS
       private_scope = true
       namespace_wrapper_generated = true
       transduction = "  private static Resource _namespace_#{java_class}(String accession) {\n"
-      transduction << "    if (isClass(ResourceFactory.createResource(\"#{namespace}\" + accession))) {\n"
-      transduction << "      return ResourceFactory.createResource(\"#{namespace}\" + accession);\n"
-      transduction << "    } else {\n"
-      transduction << "      return ResourceFactory.createProperty(\"#{namespace}\" + accession);\n"
-      transduction << "    }\n"
+      transduction << "    return ResourceFactory.createResource(\"#{namespace}\" + accession);\n"
       transduction << "  }\n\n"
     else
       transduction = line.gsub('@@', '__').gsub(/RDF::URI\.new\(([^)]+)\)/, "_namespace_#{java_class}(\\1)").gsub(/(\w+)\.select ?\{ ?\|(\w+)\| ?(.*[^ ]) ?\}/, 'new HashSet<Resource>(CollectionUtils.select(\1, new Predicate() { public boolean evaluate(Object \2) { return \3; } }))').gsub(/(\w)\?\(/, '\1(').gsub('has_parent(', 'hasParent((Resource)').gsub(/\[([^\]]+)\]/, '.get(\1)')

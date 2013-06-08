@@ -4,6 +4,8 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import org.biointerchange.vocabulary.*;
+
 /**
  * Unit test for simple App.
  */
@@ -33,6 +35,6 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+        assertTrue( CDAO.has_Character() != null );
     }
 }
