@@ -17,7 +17,7 @@ chrI	SGD	gene	1807	2169	.	-	.	ID=YAL068C;Name=YAL068C;gene=PAU8;Alias=PAU8;Ontol
 chrI	SGD	CDS	1807	2169	.	-	0	Parent=YAL068C;Name=YAL068C;gene=PAU8;
 chrI	SGD	gene	2480	2707	.	+	.	ID=YAL067W-A;Name=YAL067W-A;Ontology_term=GO:0008150,GO:0003674,GO:0005575;Note=Putative%20protein%20of%20unknown%20function%3B%20identified%20by%20gene-trapping%2C%20microarray-based%20expression%20analysis%2C%20and%20genome-wide%20homology%20searching;dbxref=SGD:S000028593;orf_classification=Uncharacterized
 chrI	SGD	CDS	2480	2707	.	+	0	Parent=YAL067W-A;Name=YAL067W-A;
-
+   
 chrII	SGD	gene	805345	807099	.	+	.	ID=YBR299W;Name=YBR299W;gene=MAL32;Alias=MAL32,MALS,MAL3S;Ontology_term=GO:0000025,GO:0004558,GO:0005575;Note=Maltase%20(alpha-D-glucosidase)%2C%20inducible%20protein%20involved%20in%20maltose%20catabolism%3B%20encoded%20in%20the%20MAL3%20complex%20locus%3B%20functional%20in%20genomic%20reference%20strain%20S288C;dbxref=SGD:S000000503;orf_classification=Verified
 chrII	SGD	CDS	805345	807099	.	+	0	Parent=YBR299W;Name=YBR299W;gene=MAL32;
 chrII	SGD	gene	808594	809091	.	-	.	ID=YBR300C;Name=YBR300C;Ontology_term=GO:0008150,GO:0003674,GO:0005575;Note=Dubious%20open%20reading%20frame%20unlikely%20to%20encode%20a%20protein%2C%20based%20on%20available%20experimental%20and%20comparative%20sequence%20data%3B%20partially%20overlaps%20the%20verified%20gene%20YBR301W%3B%20YBR300C%20is%20not%20an%20essential%20gene;dbxref=SGD:S000000504;orf_classification=Dubious
