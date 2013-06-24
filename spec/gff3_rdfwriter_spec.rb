@@ -78,5 +78,17 @@ describe BioInterchange::Genomics::RDFWriter do
       feature_no.should be == 3
     end
   end
+
+  describe 'GFF3 file conversion' do
+    it 'works on yeast test' do
+      istream = File.new('examples/yeast_sample.gff3','r')
+      outstr = ''
+      ostream = StringIO.new(outstr,'w')
+      reader = BioInterchange::Genomics::GFF3Reader.new()
+      BioInterchange::Genomics::RDFWriter.new( ostream ).serialize( reader.deserialize( istream ) )
+      istream.eof?.should eq( true )
+      outstr.length.should be == 114271
+    end
+  end
 end
 
