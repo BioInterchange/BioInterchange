@@ -35,7 +35,7 @@ class RDFWriter < BioInterchange::Writer
   #
   # +ostream+:: instance of an IO class or derivative that is used for RDF serialization
   def initialize(ostream)
-    raise BioInterchange::Exceptions::ImplementationWriterError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO)
+    raise BioInterchange::Exceptions::ImplementationWriterError, 'The output stream is not an instance of IO, StringIO, or their subclasses.' unless ostream.kind_of?(IO) || ostream.kind_of?(StringIO)
     @ostream = ostream
   end
 
