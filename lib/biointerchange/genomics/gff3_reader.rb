@@ -73,9 +73,9 @@ protected
     # Note: there is a `while true` statement at the end of this block!
     begin
       line = gff3.readline
-      line.chomp!
+      line.sub!(/\s+$/,'')
 
-      next if line.start_with?('#') and not line.start_with?('##')
+      next if line.empty? or line.start_with?('#') and not line.start_with?('##')
 
       # Ignore sequences for now.
       break if line.start_with?('##FASTA')
