@@ -126,7 +126,6 @@ module BioInterchange
           opts |= [ [ "--annotate_#{option.sub(/\s.*$/, '')}", Getopt::OPTIONAL ] ]
         }
       }
-      puts "#{opts}"
       opt = Getopt::Long.getopts(*opts)
       
       if opt['help'] or not (opt['input'] and opt['rdf'] or opt['version']) then
