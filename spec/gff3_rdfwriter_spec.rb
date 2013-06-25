@@ -87,7 +87,8 @@ describe BioInterchange::Genomics::RDFWriter do
       reader = BioInterchange::Genomics::GFF3Reader.new()
       BioInterchange::Genomics::RDFWriter.new( ostream ).serialize( reader.deserialize( istream ) )
       istream.eof?.should eq( true )
-      outstr.length.should be == 114271
+      outstr.include?('Telomeric region on the left arm of Chromosome I; composed of an X element core sequence, X element combinator').should eq( true )
+      #print outstr
     end
   end
 end
