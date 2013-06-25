@@ -107,21 +107,27 @@ module BioInterchange
 
   def self.cli
     begin
-      opt = Getopt::Long.getopts(
+      opts = [
         ["--help", "-h", Getopt::BOOLEAN],
         ["--debug", "-d", Getopt::BOOLEAN],                     # set debug mode => print stack traces
         ["--no_rdf_graph_optimization", "-n", Getopt::BOOLEAN], # set self.skip_rdf_graph to false
         ["--batchsize", "-b", Getopt::OPTIONAL],                # batchsize for readers/writers that support +postpone?+
         ["--input", "-i", Getopt::REQUIRED],                    # input file format
         ["--rdf", "-r", Getopt::REQUIRED],                      # output file format
-        ["--annotate_name", Getopt::OPTIONAL],                  # name of resource/tool/person
-        ["--annotate_name_id", Getopt::OPTIONAL],               # uri of resource/tool/person
-        ["--annotate_date", Getopt::OPTIONAL],                  # date of processing/annotation
-        ["--annotate_version", Getopt::OPTIONAL],               # version number of resource
         ["--file", "-f", Getopt::OPTIONAL],                     # file to read, will read from STDIN if not supplied
         ["--out", "-o", Getopt::OPTIONAL],                      # output file, will out to STDOUT if not supplied
         ["--version", "-v", Getopt::BOOLEAN]                    # output the version number of the gem and exit
-      )
+      ]
+      reader_writer_pairs = Registry.reader_writer_pairs
+      reader_writer_pairs.each_index { |reader_writer_pair_index|
+        reader_id, writer_id = reader_writer_pairs[reader_writer_pair_index]
+        Registry.options_help(reader_id).each { |option_description|
+          option, description = option_description
+          opts |= [ [ "--annotate_#{option.sub(/\s.*$/, '')}", Getopt::OPTIONAL ] ]
+        }
+      }
+      puts "#{opts}"
+      opt = Getopt::Long.getopts(*opts)
       
       if opt['help'] or not (opt['input'] and opt['rdf'] or opt['version']) then
         puts "Usage: ruby #{$0} -i <format> -r <format> [options]"
@@ -148,7 +154,6 @@ module BioInterchange
         puts '  -h  --help                         : this message'
         puts ''
         puts 'Input-/RDF-format specific options:'
-        reader_writer_pairs = Registry.reader_writer_pairs
         reader_writer_pairs.each_index { |reader_writer_pair_index|
           reader_id, writer_id = reader_writer_pairs[reader_writer_pair_index]
           puts "  Input format  : #{reader_id}"
