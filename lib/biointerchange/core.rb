@@ -23,6 +23,7 @@ module BioInterchange
   require 'biointerchange/cdao'
   require 'biointerchange/faldo'
   require 'biointerchange/gff3o'
+  require 'biointerchange/gfvo'
   require 'biointerchange/goxref'
   require 'biointerchange/gvf1o'
   require 'biointerchange/sio'
@@ -60,6 +61,9 @@ module BioInterchange
   #
 
   ### GFF3 ###
+
+  # Helper class for dealing with genomic locations
+  require 'biointerchange/genomics/locations'
 
   # Reader
   require 'biointerchange/genomics/gff3_reader'
