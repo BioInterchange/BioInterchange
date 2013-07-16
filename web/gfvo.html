@@ -30,19 +30,6 @@
 
     <!-- Le fav and touch icons -->
     <!-- <link rel="shortcut icon" href="../assets/ico/favicon.ico"> -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-34612976-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </head>
 
   <body>
@@ -72,6 +59,7 @@
 
           <h3>Examples</h3>
           <h4>Example 1: Loci and Basic Genomic Feature Annotations</h4>
+          <p>Encoding loci and basic genomic feature annotations. The example covers lines 0-3 of the example gene description given in the <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3 specification</a>.</p>
 <pre style="font-size: 10px; line-height: 13px;">
 @prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
 @prefix dc: &lt;http://purl.org/dc/terms/&gt; .
@@ -161,6 +149,7 @@
 </pre>
 
           <h4>Example 2: Encoding of a Sequence Alignment</h4>
+          <p>Encoding of a sequence alignment. This is part of the <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3 specification</a>, denoting the alignment between the reference sequence "chr3" and the target sequence "EST23".</p>
 <pre style="font-size: 10px; line-height: 13px;">
 @prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
 @prefix dc: &lt;http://purl.org/dc/terms/&gt; .
@@ -310,7 +299,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classTechnologicalAnnotation">TechnologicalAnnotation</a></div>
   <div><i>Label:</i> Data Source</div>
-  <div><i>Comment:</i> Provides information about the source of the data. For example, it can link out to actual sequences associated with the Feature individuals in a Set.</div>
+  <div><i>Comment:</i> Provides information about the source of the data. For example, it can link out to actual sequences associated with <a href="#classFeature">Feature</a> individuals in a <a href="#classSet">Set</a>.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -320,7 +309,7 @@
   <div><i>Subclass of:</i> <a href="#classTechnologicalEnumeration">TechnologicalEnumeration</a></div>
   <div><i>Individuals:</i> <a href="#namedIndividualArrayComparativeGenomicHybridization">ArrayComparativeGenomicHybridization</a>, <a href="#namedIndividualDNAMicroarray">DNAMicroarray</a>, <a href="#namedIndividualDNASequence">DNASequence</a>, <a href="#namedIndividualRNASequence">RNASequence</a></div>
   <div><i>Label:</i> Data Type</div>
-  <div><i>Comment:</i> Determines the datatype of a variant sequence.</div>
+  <div><i>Comment:</i> Determines the physical type of data behind a variant sequence. For example, <a href="#namedIndividualRNASequence">RNA Sequence</a>. The data type enumeration is used by the <a href="#classDataSource">Data Source</a> class.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -373,7 +362,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classEnumeration">Enumeration</a></div>
   <div><i>Label:</i> Genomic Enumeration</div>
-  <div><i>Comment:</i> A genomic enumeration provides a finite choice between OWL individuals that are denoting instances of genomic concepts. For example, zygosity.</div>
+  <div><i>Comment:</i> A genomic enumeration provides a finite choice between OWL individuals that are denoting instances of genomic concepts. For example, <a href="#classZygosity">Zygosity</a>.</div>
   <div></div>
   </div>
 </p>
@@ -429,7 +418,7 @@
   <div><i>Subclass of:</i> <a href="#classTechnologicalEnumeration">TechnologicalEnumeration</a></div>
   <div><i>Individuals:</i> <a href="#namedIndividualFragment">Fragment</a>, <a href="#namedIndividualPair">Pair</a></div>
   <div><i>Label:</i> Read Type</div>
-  <div><i>Comment:</i> Type of reads obtained for a given technology platform.</div>
+  <div><i>Comment:</i> Type of reads obtained for a given technology platform. Reads can be either <a href="#namedIndividualFragment">Fragment</a> or <a href="#namedIndividualPair">Pair</a> by this enumeration.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -464,7 +453,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classEnumeration">Enumeration</a></div>
   <div><i>Label:</i> Sequenced Individual Enumeration</div>
-  <div><i>Comment:</i> A sequenced individual enumeration provides a finite choice between OWL individuals that are denoting instances that are related to human individuals, patients, donors, etc. For example, human sex is an enumeration related to sequenced individuals.</div>
+  <div><i>Comment:</i> A sequenced individual enumeration provides a finite choice between OWL individuals that are denoting instances that are related to human individuals, patients, donors, etc. For example, <a href="#classSex">Sex</a> is an enumeration related to the sex of sequenced individuals.</div>
   <div></div>
   </div>
 </p>
@@ -489,7 +478,7 @@
   <h5 id="classSex">Class gfvo:Sex</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classSequencedIndividualEnumeration">SequencedIndividualEnumeration</a></div>
-  <div><i>Individuals:</i> <a href="#namedIndividualFemale">Female</a>, <a href="#namedIndividualMale">Male</a></div>
+  <div><i>Individuals:</i> <a href="#namedIndividualFemale">Female</a>, <a href="#namedIndividualHermaphrodite">Hermaphrodite</a>, <a href="#namedIndividualMale">Male</a></div>
   <div><i>Label:</i> Sex</div>
   <div><i>Comment:</i> For single individual sets, the <a href="#classSex">Sex</a> class enumeration instances can be used to specify the sex of a sequenced (real-life) individual.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
@@ -571,7 +560,7 @@
   <h5 id="namedIndividualArrayComparativeGenomicHybridization">Named Individual gfvo:ArrayComparativeGenomicHybridization</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classDataType">DataType</a></div>
-  <div><i>Label:</i> ArrayComparativeGenomicHybridization</div>
+  <div><i>Label:</i> Array Comparative Genomic Hybridization</div>
   <div><i>Comment:</i> Denotes an array-comparative genomic hybridization.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
@@ -580,7 +569,7 @@
   <h5 id="namedIndividualDNAMicroarray">Named Individual gfvo:DNAMicroarray</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classDataType">DataType</a></div>
-  <div><i>Label:</i> DNAMicroarray</div>
+  <div><i>Label:</i> DNA Microarray</div>
   <div><i>Comment:</i> Denotes a DNA microarray probe.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
@@ -589,7 +578,7 @@
   <h5 id="namedIndividualDNASequence">Named Individual gfvo:DNASequence</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classDataType">DataType</a></div>
-  <div><i>Label:</i> DNASequence</div>
+  <div><i>Label:</i> DNA Sequence</div>
   <div><i>Comment:</i> Denotes a DNA sequence.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
@@ -599,7 +588,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classSex">Sex</a></div>
   <div><i>Label:</i> Female</div>
-  <div><i>Comment:</i> Denotes that a Set contains features of a female.</div>
+  <div><i>Comment:</i> Denotes that a <a href="#classSet">Set</a> contains genomic features or variants of a female. Females are defined as individuals producing ova.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -607,7 +596,8 @@
   <h5 id="namedIndividualForwardReferenceSequenceFrameshift">Named Individual gfvo:ForwardReferenceSequenceFrameshift</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classAlignment">Alignment</a></div>
-  <div><i>Label:</i> </div>
+  <div><i>Label:</i> Forward Reference Sequence Frameshift</div>
+  <div><i>Comment:</i> Denotes a frameshift forward in the reference sequence. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
   <div></div>
   </div>
 </p>
@@ -625,7 +615,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classGenomicSource">GenomicSource</a></div>
   <div><i>Label:</i> Germline</div>
-  <div><i>Comment:</i> Denotes that a set contains features of germline cells.</div>
+  <div><i>Comment:</i> Denotes that a <a href="#classSet">Set</a> contains features of germline cells.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -636,6 +626,15 @@
   <div><i>Label:</i> Hemizygous</div>
   <div><i>Comment:</i> Denotes hemizygous alleles.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="namedIndividualHermaphrodite">Named Individual gfvo:Hermaphrodite</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Type:</i> <a href="#classSex">Sex</a></div>
+  <div><i>Label:</i> Hermaphrodite</div>
+  <div><i>Comment:</i> Denotes that a <a href="#classSet">Set</a> contains features of an individual that contains both male and female gemetes.</div>
+  <div></div>
   </div>
 </p>
 <p>
@@ -661,7 +660,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classSex">Sex</a></div>
   <div><i>Label:</i> Male</div>
-  <div><i>Comment:</i> Denotes that a Set contains features of a male.</div>
+  <div><i>Comment:</i> Denotes that a <a href="#classSet">Set</a> contains genomic features or variants of a male. Males are defined as the individuals producing spermatozoa.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -669,7 +668,8 @@
   <h5 id="namedIndividualMatch">Named Individual gfvo:Match</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classAlignment">Alignment</a></div>
-  <div><i>Label:</i> </div>
+  <div><i>Label:</i> Match</div>
+  <div><i>Comment:</i> Denotes a match between the reference sequence and target sequence. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
   <div></div>
   </div>
 </p>
@@ -695,7 +695,7 @@
   <h5 id="namedIndividualRNASequence">Named Individual gfvo:RNASequence</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classDataType">DataType</a></div>
-  <div><i>Label:</i> RNASequence</div>
+  <div><i>Label:</i> RNA Sequence</div>
   <div><i>Comment:</i> Denotes an RNA sequence.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
@@ -704,7 +704,8 @@
   <h5 id="namedIndividualReferenceSequenceGap">Named Individual gfvo:ReferenceSequenceGap</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classAlignment">Alignment</a></div>
-  <div><i>Label:</i> </div>
+  <div><i>Label:</i> Reference Sequence Gap</div>
+  <div><i>Comment:</i> Denotes a gap in the reference sequence for an alignment. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
   <div></div>
   </div>
 </p>
@@ -712,7 +713,8 @@
   <h5 id="namedIndividualReverseReferenceSequenceFrameshift">Named Individual gfvo:ReverseReferenceSequenceFrameshift</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classAlignment">Alignment</a></div>
-  <div><i>Label:</i> </div>
+  <div><i>Label:</i> Reverse Reference Sequence Frameshift</div>
+  <div><i>Comment:</i> Denotes a frameshift backwards (reverse) in the reference sequence. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
   <div></div>
   </div>
 </p>
@@ -721,7 +723,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classGenomicSource">GenomicSource</a></div>
   <div><i>Label:</i> Somatic</div>
-  <div><i>Comment:</i> Denotes that a set contains features of somatic cells.</div>
+  <div><i>Comment:</i> Denotes that a <a href="#classSet">Set</a> contains features of somatic cells.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -729,7 +731,8 @@
   <h5 id="namedIndividualTargetSequenceGap">Named Individual gfvo:TargetSequenceGap</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Type:</i> <a href="#classAlignment">Alignment</a></div>
-  <div><i>Label:</i> </div>
+  <div><i>Label:</i> Target Sequence Gap</div>
+  <div><i>Comment:</i> Denotes a gap in the target sequence for an alignment. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
   <div></div>
   </div>
 </p>
@@ -841,7 +844,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Range:</i> <a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></div>
   <div><i>Label:</i> dbxref</div>
-  <div><i>Comment:</i> A database cross-reference to associate a feature or its structured pragma metadata to a representation in another database.</div>
+  <div><i>Comment:</i> A database cross-reference to associate a feature or its structured pragma metadata in GVF to a representation in another database.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-info">GTF</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span><span style="margin-right: 4px;" class="badge badge-warning">VCF</span></div>
   </div>
 </p>
@@ -948,7 +951,7 @@
   <h5 id="objectPropertyontologyTerm">Object Property gfvo:ontologyTerm</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> ontology term</div>
-  <div><i>Comment:</i> A cross-reference to an ontology term that is associated with a feature.</div>
+  <div><i>Comment:</i> A cross-reference to an ontology term that is associated with a feature. For instances of the <a href="#classVariant">Variant</a> class, the associated ontology term must be a Variant Ontology term (VariO; http://purl.obolibrary.org/obo/VariO_0001 or subclasses thereof).</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-info">GTF</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span><span style="margin-right: 4px;" class="badge badge-warning">VCF</span></div>
   </div>
 </p>
@@ -1251,7 +1254,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> amino acid</div>
-  <div><i>Comment:</i> Amino acid in the reference genome that overlaps with a variant&apos;s genome coordinates. Amino acid that overlaps with the variant.</div>
+  <div><i>Comment:</i> Amino acid in the reference genome that overlaps with a variant&apos;s genome coordinates.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span><span style="margin-right: 4px;" class="badge badge-warning">VCF</span></div>
   </div>
 </p>
@@ -1262,7 +1265,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#int">http://www.w3.org/2001/XMLSchema#int</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> average coverage</div>
-  <div><i>Comment:</i> Undocumented in GVF specification.</div>
+  <div><i>Comment:</i> Undocumented in GVF specification. Even though the property&apos;s semantics are undocumented, it is still included in the ontology in order to reflect the data values that might be encoded in GVF files.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1273,7 +1276,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> build</div>
-  <div><i>Comment:</i> Name of a genome assembly build that denotes the provenance of features in a feature set. For example, &apos;NCBI 36&apos; or &apos;FlyBase r4.1&apos;.</div>
+  <div><i>Comment:</i> Name of a genome assembly build that denotes the provenance of genomic features and variants in a <a href="#classSet">Set</a>. For example, &apos;GRCh37&apos;, &apos;NCBI 36&apos;, &apos;FlyBase r4.1&apos;, or &apos;hg19&apos;. If possible, the patch level of the assembly build should be included, such as &apos;GRCh37.p7&apos;.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1283,7 +1286,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> codon</div>
-  <div><i>Comment:</i> Describes the codon from the reference sequence whose coordinates overlap with this variant. Describes the codon that overlaps this variant.</div>
+  <div><i>Comment:</i> Describes the codon from the reference sequence whose coordinates overlap with this variant.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1342,6 +1345,7 @@
   <h5 id="datatypePropertyfileDatatypeProperty">Datatype Property gfvo:fileDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> file datatype property</div>
+  <div><i>Comment:</i> Datatype properties related to <a href="#classFile">File</a> class instances. Subclasses of this property are used for denoting data that is specific to files only and which is only preserved as a means to encode for all data items defined by the GFF3, GTF, GVF and VCF specifications. These properties cannot be carried over into the result of set operations (s.a. union) between <a href="#classFile">File</a>/<a href="#classSet">Set</a> class instances. Keeping these properties in the result set between set operations may result in wrong annotations or contradictions (e.g., mutliple assignment of different versions or dates).</div>
   <div></div>
   </div>
 </p>
@@ -1351,7 +1355,7 @@
   <div><i>Domain:</i> <a href="#classFile">File</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#dateTime">http://www.w3.org/2001/XMLSchema#dateTime</a></div>
   <div><i>Label:</i> file date</div>
-  <div><i>Comment:</i> Creation date of the file that this set stems from.</div>
+  <div><i>Comment:</i> Creation date of the data file whose genomic data is captured by the associated <a href="#classFile">File</a> instance.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1362,7 +1366,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> file version</div>
-  <div><i>Comment:</i> Version of the GVF file that this set stems from.</div>
+  <div><i>Comment:</i> Proprietary version of the file or its contents whose genomic data is associated with a <a href="#classFile">File</a> instance.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1372,7 +1376,7 @@
   <div><i>Domain:</i> <a href="#classVariant">Variant</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#float">http://www.w3.org/2001/XMLSchema#float</a></div>
   <div><i>Label:</i> frequency</div>
-  <div><i>Comment:</i> Frequency of a variant in a population.</div>
+  <div><i>Comment:</i> Frequency of a variant in a population. The population is determined by the <a href="#classSet">Set</a> in which the <a href="#classVariant">Variant</a> resides.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1383,7 +1387,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#float">http://www.w3.org/2001/XMLSchema#float</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> gff version</div>
-  <div><i>Comment:</i> Version of the GFF specification that defines the feature set contents apart from GVF related definitions.</div>
+  <div><i>Comment:</i> Version of the GFF3 specification that defines the contents captured by the <a href="#classFile">File</a> class instance. The version number should be greater or equal than 3.0, but less than 4.0. For GFF2/GTF version number assignment, see the <a href="#datatypePropertygtfVersion">gtf version</a> datatype property.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1394,7 +1398,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#float">http://www.w3.org/2001/XMLSchema#float</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> gtf version</div>
-  <div><i>Comment:</i> Version of the GTF specification that defines the feature set contents.</div>
+  <div><i>Comment:</i> Version of the GTF specification that defines the contents captured by the <a href="#classFile">File</a> class instance. The version number should be greater or equal than 2.0, but less than 3.0. This number derives from the fact that GTF files are equivalent to GFF2 files. GTF/GFF2 files are incompatible with the GFF3 specification. For GFF3 version number assignment, see the <a href="#datatypePropertygffVersion">gff version</a> datatype property.</div>
   <div><span style="margin-right: 4px;" class="badge badge-info">GTF</span></div>
   </div>
 </p>
@@ -1405,7 +1409,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#float">http://www.w3.org/2001/XMLSchema#float</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> gvf version</div>
-  <div><i>Comment:</i> Version of the GVF specification that defines the feature set contents.</div>
+  <div><i>Comment:</i> Version of the GVF specification that defines the contents captured by the <a href="#classFile">File</a> class instance. The version number should be greater or equal than 1.0, but less than 2.0. GVF files usually make a statement about their underlying GFF3 specification that they rely on too, which should be encoded using the <a href="#datatypePropertygffVersion">gff version</a> datatype property.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1415,7 +1419,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> id</div>
-  <div><i>Comment:</i> A unique identifier for the feature within the feature set (<a href="#classSet">Set</a>/<a href="#classFile">File</a> class instance).</div>
+  <div><i>Comment:</i> A unique identifier for the feature within the feature set (a <a href="#classSet">Set</a>/<a href="#classFile">File</a> class instance). The unique identifier is important when dealing with GFF3, GTF, GVF or VCF files as a stand in object that makes the aggregation and separation of genomic feature and variant information possible. In RDF, the URI of subject should be used primarily, provided that its URI can be considered stable.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-info">GTF</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span><span style="margin-right: 4px;" class="badge badge-warning">VCF</span></div>
   </div>
 </p>
@@ -1425,7 +1429,7 @@
   <div><i>Domain:</i> <a href="#classFeature">Feature</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></div>
   <div><i>Label:</i> </div>
-  <div><i>Comment:</i> Truth value describing whether the feature is circular or not.</div>
+  <div><i>Comment:</i> Truth value describing whether the feature is circular or not. This can be used to describe, for example, circular DNA as being found in bacteria or viruses. It can also be applied to mitochondrial DNA or plastid DNA, where applicable.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1482,7 +1486,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#int">http://www.w3.org/2001/XMLSchema#int</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> phase</div>
-  <div><i>Comment:</i> Phase of the feature, if it is a CDS. Called &quot;frame&quot; in GTF. A feature&apos;s phase ca n be either 0, 1, or 2.</div>
+  <div><i>Comment:</i> Phase of the feature, if it is a CDS. Called &quot;frame&quot; in GTF. A feature&apos;s phase can be either 0, 1, or 2.</div>
   <div><span style="margin-right: 4px;" class="badge badge-info">GTF</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1502,7 +1506,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> platform class</div>
-  <div><i>Comment:</i> Type of technology used to gather the variant data. Unrestricted range due to open specification.</div>
+  <div><i>Comment:</i> Type of technology used to gather the variant data. The GVF specification&apos;s list of available classes is naturally incomplete. The range of this property is therefore unrestricted due to its open specification.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1513,7 +1517,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> platform name</div>
-  <div><i>Comment:</i> Sequencer or other machine used to collect the variant data. Unrestricted range due to open specification.</div>
+  <div><i>Comment:</i> Sequencer or other machine used to collect the variant data. The GVF specification&apos;s list of available platforms is naturally incomplete. The range of this property is therefore unrestricted due to its open specification.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1524,7 +1528,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#int">http://www.w3.org/2001/XMLSchema#int</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> read length</div>
-  <div><i>Comment:</i> Undocumented in GVF specification.</div>
+  <div><i>Comment:</i> Undocumented in GVF specification. Even though the property&apos;s semantics are undocumented, it is still included in the ontology in order to reflect the data values that might be encoded in GVF files.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1535,7 +1539,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#int">http://www.w3.org/2001/XMLSchema#int</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> read pair span</div>
-  <div><i>Comment:</i> Undocumented in GVF specification.</div>
+  <div><i>Comment:</i> Undocumented in GVF specification. Even though the property&apos;s semantics are undocumented, it is still included in the ontology in order to reflect the data values that might be encoded in GVF files.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1546,7 +1550,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#int">http://www.w3.org/2001/XMLSchema#int</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> reads</div>
-  <div><i>Comment:</i> Number of reads that are supporting a variant.</div>
+  <div><i>Comment:</i> Number of reads that are supporting a variant. Valid values are integers greater or equal than zero.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1618,7 +1622,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#int">http://www.w3.org/2001/XMLSchema#int</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> span</div>
-  <div><i>Comment:</i> A span denotes the number of continuous nucleotides or amino acids an <a href="#classAlignmentOperation">Alignment Operation</a> is annotating.</div>
+  <div><i>Comment:</i> A span denotes the number of continuous nucleotides or amino acids an <a href="#classAlignmentOperation">Alignment Operation</a> is annotating. A span can be of length zero or greater.</div>
   <div></div>
   </div>
 </p>
@@ -1628,7 +1632,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> tag</div>
-  <div><i>Comment:</i> Tag name of a feature attribute.</div>
+  <div><i>Comment:</i> Tag name of a feature attribute. <a href="#classAttribute">Attribute</a> and <a href="#classStructuredAttribute">Structured Attribute</a> instances are key/value(s) pairs, The key in that assignment is referred to as the <a href="#datatypePropertytag">tag</a>. Custom annotations, i.e. attributes that are not defined by the file format specifications, should use lowercase tags. Future extensions of the specifications might introduce new attributes though, which can be encoded using custom annotations by RDFization tools. The tag should therefore not be treated as strictly lowercase when dealing with custom annotations.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-info">GTF</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span><span style="margin-right: 4px;" class="badge badge-warning">VCF</span></div>
   </div>
 </p>
@@ -1662,7 +1666,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#int">http://www.w3.org/2001/XMLSchema#int</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> total reads</div>
-  <div><i>Comment:</i> Total number of reads.</div>
+  <div><i>Comment:</i> Total number of reads for a <a href="#classSequencedIndividual">Sequenced Individual</a>. When merging <a href="#classSet">Set</a>/<a href="#classFile">File</a> class instances, it should be noted whether the total number of reads needs to be updated based on the identity of sequenced individuals in the involved sets.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1688,7 +1692,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#float">http://www.w3.org/2001/XMLSchema#float</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> vcf version</div>
-  <div><i>Comment:</i> Version of the VCF specification that defines the feature set contents.</div>
+  <div><i>Comment:</i> Version of the VCF specification that defines the contents captured by the <a href="#classFile">File</a> class instance. The version number should be greater or equal than 4.0, but less than 5.0.</div>
   <div><span style="margin-right: 4px;" class="badge badge-warning">VCF</span></div>
   </div>
 </p>
