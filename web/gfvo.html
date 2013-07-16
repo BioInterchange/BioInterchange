@@ -757,6 +757,7 @@
 <p>
   <h5 id="objectPropertyattributeMethod">Object Property gfvo:attributeMethod</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classAttribute">Attribute</a>, <a href="#classBreakpoint">Breakpoint</a>, <a href="#classEffect">Effect</a>, <a href="#classVariant">Variant</a></div>
   <div><i>Range:</i> <a href="#classMethod">Method</a></div>
   <div><i>Label:</i> attribute method</div>
   <div><i>Comment:</i> Further information about the associated attribute(s).</div>
@@ -842,6 +843,7 @@
 <p>
   <h5 id="objectPropertydbxref">Object Property gfvo:dbxref</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classDataSource">DataSource</a>, <a href="#classFeature">Feature</a>, <a href="#classMethod">Method</a>, <a href="#classPhenotypeDescription">PhenotypeDescription</a>, <a href="#classTechnologyPlatform">TechnologyPlatform</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></div>
   <div><i>Label:</i> dbxref</div>
   <div><i>Comment:</i> A database cross-reference to associate a feature or its structured pragma metadata in GVF to a representation in another database.</div>
@@ -934,9 +936,10 @@
 <p>
   <h5 id="objectPropertylocus">Object Property gfvo:locus</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classBreakpoint">Breakpoint</a>, <a href="#classEffect">Effect</a>, <a href="#classFeature">Feature</a>, <a href="#classLandmark">Landmark</a>, <a href="#classTarget">Target</a></div>
   <div><i>Range:</i> <a href="http://biohackathon.org/resource/faldo#Region">http://biohackathon.org/resource/faldo#Region</a></div>
   <div><i>Label:</i> locus</div>
-  <div><i>Comment:</i> FALDO &quot;Region&quot; instance replacement for a feature&apos;s start, stop, strand properties.</div>
+  <div><i>Comment:</i> The locus determines the genomic position of an genomic object. The FALDO &quot;Region&quot; class can denote genomic feature&apos;s start, stop, and strand properties, it can express fuzzy genomic ranges if exact genomic coordinates are unknown. For <a href="#classLandmark">Landmark</a> class instances, the locus provides the start and end coordinates of the landmark.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-info">GTF</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span><span style="margin-right: 4px;" class="badge badge-warning">VCF</span></div>
   </div>
 </p>
@@ -950,6 +953,7 @@
 <p>
   <h5 id="objectPropertyontologyTerm">Object Property gfvo:ontologyTerm</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classFeature">Feature</a>, <a href="#classVariant">Variant</a></div>
   <div><i>Label:</i> ontology term</div>
   <div><i>Comment:</i> A cross-reference to an ontology term that is associated with a feature. For instances of the <a href="#classVariant">Variant</a> class, the associated ontology term must be a Variant Ontology term (VariO; http://purl.obolibrary.org/obo/VariO_0001 or subclasses thereof).</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-info">GTF</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span><span style="margin-right: 4px;" class="badge badge-warning">VCF</span></div>
@@ -1031,9 +1035,10 @@
 <p>
   <h5 id="objectPropertyseqid">Object Property gfvo:seqid</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classBreakpoint">Breakpoint</a>, <a href="#classFeature">Feature</a></div>
   <div><i>Range:</i> <a href="#classLandmark">Landmark</a></div>
   <div><i>Label:</i> seqid</div>
-  <div><i>Comment:</i> Establishes the landmark (e.g. a chromosome, scaffold or contig) on which the feature or breakpoint is located.</div>
+  <div><i>Comment:</i> Establishes the landmark on which the feature or breakpoint is located. A landmark is typically a chromosome, scaffold or contig, but can be any other genomic object (DNA, RNA, protein) in principle.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-info">GTF</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span><span style="margin-right: 4px;" class="badge badge-warning">VCF</span></div>
   </div>
 </p>
@@ -1251,6 +1256,7 @@
 <p>
   <h5 id="datatypePropertyaminoAcid">Datatype Property gfvo:aminoAcid</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classReference">Reference</a>, <a href="#classVariant">Variant</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> amino acid</div>
@@ -1283,6 +1289,7 @@
 <p>
   <h5 id="datatypePropertycodon">Datatype Property gfvo:codon</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classReference">Reference</a>, <a href="#classVariant">Variant</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> codon</div>
@@ -1293,6 +1300,7 @@
 <p>
   <h5 id="datatypePropertycomment">Datatype Property gfvo:comment</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classDataSource">DataSource</a>, <a href="#classMethod">Method</a>, <a href="#classPhenotypeDescription">PhenotypeDescription</a>, <a href="#classTechnologyPlatform">TechnologyPlatform</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> comment</div>
@@ -1416,6 +1424,7 @@
 <p>
   <h5 id="datatypePropertyid">Datatype Property gfvo:id</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classFeature">Feature</a>, <a href="#classLandmark">Landmark</a>, <a href="#classTarget">Target</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> id</div>
@@ -1436,6 +1445,7 @@
 <p>
   <h5 id="datatypePropertyisPhased">Datatype Property gfvo:isPhased</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classFeature">Feature</a>, <a href="#classVariant">Variant</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></div>
   <div><i>Label:</i> is phased</div>
   <div><i>Comment:</i> Indicates whether this particular feature is phased. Used to encode &quot;##phased-genotypes&quot; statements in GFF3, but can be appropriated freely. It is also a property of GVF variants, even though the GVF specification is unclear on its exact usage details.</div>
@@ -1493,6 +1503,7 @@
 <p>
   <h5 id="datatypePropertyphredScore">Datatype Property gfvo:phredScore</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classReference">Reference</a>, <a href="#classVariant">Variant</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#double">http://www.w3.org/2001/XMLSchema#double</a></div>
   <div><i>Label:</i> phred score</div>
   <div><i>Comment:</i> A phred-scaled quality score for the reference seuence; -10log_10 prob(no variant). A phred-scaled quality score for a variant sequence; -10log_10 prob(variant call is wrong). High scores indicate high confidence calls. This is a property associated with VCF data. E-values and P-values of features should be expressed using the <a href="#datatypePropertyscore">score</a> datatype property.</div>
@@ -1581,6 +1592,7 @@
 <p>
   <h5 id="datatypePropertysequence">Datatype Property gfvo:sequence</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classFeature">Feature</a>, <a href="#classLandmark">Landmark</a>, <a href="#classReference">Reference</a>, <a href="#classVariant">Variant</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> sequence</div>
@@ -1629,6 +1641,7 @@
 <p>
   <h5 id="datatypePropertytag">Datatype Property gfvo:tag</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classAttribute">Attribute</a>, <a href="#classStructuredAttribute">StructuredAttribute</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> tag</div>
