@@ -507,6 +507,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classFeatureAnnotation">FeatureAnnotation</a></div>
   <div><i>Label:</i> Technological Annotation</div>
+  <div><i>Comment:</i> A technological annotation provides meta-data about the means that led to a genomic feature or variant discovery. This can be a provenance annotation, such as <a href="#classDataSource">Data Source</a>, it can be describing a <a href="#classMethod">Method</a>, or it can be information about the <a href="#classTechnologyPlatform">Technology Platform</a> used.</div>
   <div></div>
   </div>
 </p>
@@ -542,6 +543,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classFeatureAnnotation">FeatureAnnotation</a></div>
   <div><i>Label:</i> Variation Annotation</div>
+  <div><i>Comment:</i> A variant annotation captures information about a genomic <a href="#classVariant">Variant</a>. A possible effect of a variant is encoded using <a href="#classEffect">Effect</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -751,6 +753,7 @@
   <h5 id="objectPropertyalignmentOperationObjectProperty">Object Property gfvo:alignmentOperationObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> alignment operation object property</div>
+  <div><i>Comment:</i> Property that is directly associated with <a href="#classAlignmentOperation">Alignment Operation</a> instances.</div>
   <div></div>
   </div>
 </p>
@@ -760,7 +763,7 @@
   <div><i>Domain:</i> <a href="#classAttribute">Attribute</a>, <a href="#classBreakpoint">Breakpoint</a>, <a href="#classEffect">Effect</a>, <a href="#classVariant">Variant</a></div>
   <div><i>Range:</i> <a href="#classMethod">Method</a></div>
   <div><i>Label:</i> attribute method</div>
-  <div><i>Comment:</i> Further information about the associated attribute(s).</div>
+  <div><i>Comment:</i> Further information about the <a href="#classMethod">Method</a> that is related to an attribute.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -788,7 +791,7 @@
   <h5 id="objectPropertybreakpointObjectProperty">Object Property gfvo:breakpointObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> breakpoint object property</div>
-  <div><i>Comment:</i> Properties that are directly associated with Breakpoint class instances.</div>
+  <div><i>Comment:</i> A properties that is directly associated with <a href="#classBreakpoint">Breakpoint</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -836,7 +839,7 @@
   <h5 id="objectPropertydatasourceObjectProperty">Object Property gfvo:datasourceObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> datasource object property</div>
-  <div><i>Comment:</i> Properties that are directly associated with DataSource class instances.</div>
+  <div><i>Comment:</i> A property that is directly associated with <a href="#classDataSource">Data Source</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -864,7 +867,7 @@
   <h5 id="objectPropertyeffectObjectProperty">Object Property gfvo:effectObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> effect object property</div>
-  <div><i>Comment:</i> Properties that are directly associated with Effect class instances.</div>
+  <div><i>Comment:</i> Properties that are directly associated with <a href="#classEffect">Effect</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -872,6 +875,7 @@
   <h5 id="objectPropertyfeatureAnnotationObjectProperty">Object Property gfvo:featureAnnotationObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> feature annotation object property</div>
+  <div><i>Comment:</i> Property of one of the genomic annotation classes, such as <a href="#classBreakpoint">Breakpoint</a>, <a href="#classReference">Reference</a>, <a href="#classVariant">Variant</a>. For properties related to the core genomic data class <a href="#classFeature">Feature</a>, see <a href="#datatypePropertyfeatureDatatypeProperty">feature datatype property</a> or <a href="#objectPropertyfeatureObjectProperty">feature object property</a>.</div>
   <div></div>
   </div>
 </p>
@@ -879,7 +883,7 @@
   <h5 id="objectPropertyfeatureObjectProperty">Object Property gfvo:featureObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> feature object property</div>
-  <div><i>Comment:</i> Properties that are directly associated with Feature class instances.</div>
+  <div><i>Comment:</i> Properties that are directly associated with <a href="#classFeature">Feature</a> class instances. For properties related to <a href="#classReference">Reference</a>, <a href="#classVariant">Variant</a>, or other genomic annotation classes, see <a href="#datatypePropertyfeatureAnnotationDatatypeProperty">feature annotation datatype property</a> or <a href="#objectPropertyfeatureAnnotationObjectProperty">feature annotation object property</a>.</div>
   <div></div>
   </div>
 </p>
@@ -947,6 +951,7 @@
   <h5 id="objectPropertylocusAnnotationObjectProperty">Object Property gfvo:locusAnnotationObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> locus annotation object property</div>
+  <div><i>Comment:</i> A property related to genomic coordinates. This can be a <a href="#objectPropertylocus">locus</a> description that uses FALDO to denote Regions (with exact or probabilistic/fuzzy boundaries; <a href="#classBreakpoint">Breakpoint</a> locations) or an <a href="#objectPropertyoperation">operation</a> of a list of <a href="#classAlignmentOperation">Alignment Operation</a> instances that encode a CIGAR line.</div>
   <div></div>
   </div>
 </p>
@@ -965,6 +970,7 @@
   <div><i>Domain:</i> <a href="#classAlignmentOperation">AlignmentOperation</a></div>
   <div><i>Range:</i> <a href="#classAlignment">Alignment</a></div>
   <div><i>Label:</i> operation</div>
+  <div><i>Comment:</i> Determines the operation (match, frameshift, etc.) of an <a href="#classAlignmentOperation">Alignment Operation</a> composite class instance. Valid values are individuals (class instances) of the <a href="#classAlignment">Alignment</a> enumeration class.</div>
   <div></div>
   </div>
 </p>
@@ -992,6 +998,7 @@
   <h5 id="objectPropertyphenotypeDescriptionObjectProperty">Object Property gfvo:phenotypeDescriptionObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> phenotype description object property</div>
+  <div><i>Comment:</i> An object property directly associated with <a href="#classPhenotypeDescription">Phenotype Description</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -1001,7 +1008,7 @@
   <div><i>Domain:</i> <a href="#classTechnologyPlatform">TechnologyPlatform</a></div>
   <div><i>Range:</i> <a href="#classReadType">ReadType</a></div>
   <div><i>Label:</i> read type</div>
-  <div><i>Comment:</i> Types of reads produced by the platform.</div>
+  <div><i>Comment:</i> Types of reads produced by the platform. Valid values are individuals (class instance) of the <a href="#classReadType">Read Type</a> enumeration class.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1009,6 +1016,7 @@
   <h5 id="objectPropertyrecordObjectProperty">Object Property gfvo:recordObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> record object property</div>
+  <div><i>Comment:</i> A record object property is directly related to describing genomic feature or variant data. Classes that make use of record object properties are <a href="#classFeature">Feature</a>, <a href="#classVariant">Variant</a>, and so on. For container classes, such as <a href="#classSet">Set</a> and <a href="#classFile">File</a>, see <a href="#objectPropertysetObjectProperty">set object property</a>.</div>
   <div></div>
   </div>
 </p>
@@ -1028,7 +1036,7 @@
   <div><i>Domain:</i> <a href="#classFeature">Feature</a></div>
   <div><i>Range:</i> <a href="#classMethod">Method</a></div>
   <div><i>Label:</i> score method</div>
-  <div><i>Comment:</i> Used scoring method.</div>
+  <div><i>Comment:</i> Used scoring method, which is described in more detail by a <a href="#classMethod">Method</a> class instance.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1056,7 +1064,7 @@
   <h5 id="objectPropertysequencedIndividualObjectProperty">Object Property gfvo:sequencedIndividualObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> sequenced individual object property</div>
-  <div><i>Comment:</i> Properties that are directly associated with SequencedIndividual class instances.</div>
+  <div><i>Comment:</i> A property that is directly associated with <a href="#classSequencedIndividual">Sequenced Individual</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -1064,6 +1072,7 @@
   <h5 id="objectPropertysetAnnotationObjectProperty">Object Property gfvo:setAnnotationObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> set annotation object property</div>
+  <div><i>Comment:</i> A property related to the annotation of <a href="#classSet">Set</a> class instances or its sub-classes, s.a. <a href="#classPhenotypeDescription">Phenotype Description</a>.</div>
   <div></div>
   </div>
 </p>
@@ -1071,7 +1080,7 @@
   <h5 id="objectPropertysetObjectProperty">Object Property gfvo:setObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> set object property</div>
-  <div><i>Comment:</i> A property that is directly associated with the <a href="#classSet">Set</a> class. Immediate sub-properties of this property are independent to specific specifications such as GFF3, GTF, GVF or VCF. Not all sub-properties can be preserved when carrying out operations between multiple <a href="#classSet">Set</a> class instances. For example, the <a href="#objectPropertysex">sex</a> property applies to single individual sets and can only be kept in a set union between multiple <a href="#classSet">Set</a> class instances if all involved instances agree on this property.</div>
+  <div><i>Comment:</i> A property that is directly associated with the <a href="#classSet">Set</a> class. Immediate sub-properties of this property are independent to specific specifications such as GFF3, GTF, GVF or VCF. Not all sub-properties can be preserved when carrying out operations between multiple <a href="#classSet">Set</a> class instances. For example, the <a href="#objectPropertysex">sex</a> property applies to single individual sets and can only be kept in a set union between multiple <a href="#classSet">Set</a> class instances if all involved instances agree on this property. For genomic feature and variant related properties, see <a href="#objectPropertyrecordObjectProperty">record object property</a> and <a href="#datatypePropertyrecordDatatypeProperty">record datatype property</a>.</div>
   <div></div>
   </div>
 </p>
@@ -1138,7 +1147,7 @@
   <h5 id="objectPropertytargetProperty">Object Property gfvo:targetProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> target property</div>
-  <div><i>Comment:</i> Properties that are directly associated with Target class instances.</div>
+  <div><i>Comment:</i> A properties that is directly associated with <a href="#classTarget">Target</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -1146,6 +1155,7 @@
   <h5 id="objectPropertytechnologicalAnnotationObjectProperty">Object Property gfvo:technologicalAnnotationObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> technological annotation object property</div>
+  <div><i>Comment:</i> An object property associated with annotations that are related to technological aspects regarding a genomic feature or variant. For example, a property of a <a href="#classTechnologyPlatform">Technology Platform</a> or <a href="#classDataSource">Data Source</a>.</div>
   <div></div>
   </div>
 </p>
@@ -1163,7 +1173,7 @@
   <h5 id="objectPropertytechnologyPlatformProperty">Object Property gfvo:technologyPlatformProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> technology platform property</div>
-  <div><i>Comment:</i> Properties that are directly associated with TechnologyPlatform class instances.</div>
+  <div><i>Comment:</i> A property that is directly associated with <a href="#classTechnologyPlatform">Technology Platform</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -1191,7 +1201,7 @@
   <h5 id="objectPropertyvariantObjectProperty">Object Property gfvo:variantObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> variant object property</div>
-  <div><i>Comment:</i> Properties that are directly associated with Variant class instances.</div>
+  <div><i>Comment:</i> Properties that are directly associated with <a href="#classVariant">Variant</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -1199,6 +1209,7 @@
   <h5 id="objectPropertyvariationAnnotationObjectProperty">Object Property gfvo:variationAnnotationObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> variation annotation object property</div>
+  <div><i>Comment:</i> A variation annotation object property is describing an object property of a <a href="#classVariant">Variant</a> or <a href="#classEffect">Effect</a> class instance.</div>
   <div></div>
   </div>
 </p>
@@ -1220,7 +1231,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> 3&apos; context</div>
-  <div><i>Comment:</i> Sequence context of a feature on the positive strand (forward strand) on the 3&apos; end.</div>
+  <div><i>Comment:</i> Sequence context of a feature on the positive strand (forward strand) on the 3&apos; end. A valid sequence context is denoted by a string of one or more concatenated letters A, C, G, or T.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1231,7 +1242,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> 5&apos; context</div>
-  <div><i>Comment:</i> Sequence context of a feature on the positive strand (forward strand) on the 5&apos; end.</div>
+  <div><i>Comment:</i> Sequence context of a feature on the positive strand (forward strand) on the 5&apos; end. A valid sequence context is denoted by a string of one or more concatenated letters A, C, G, or T.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1250,6 +1261,7 @@
   <h5 id="datatypePropertyalignmentOperationDatatypeProperty">Datatype Property gfvo:alignmentOperationDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> alignment operation datatype property</div>
+  <div><i>Comment:</i> Property that is directly associated with <a href="#classAlignmentOperation">Alignment Operation</a> instances.</div>
   <div></div>
   </div>
 </p>
@@ -1293,7 +1305,7 @@
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> codon</div>
-  <div><i>Comment:</i> Describes the codon from the reference sequence whose coordinates overlap with this variant.</div>
+  <div><i>Comment:</i> Describes the codon from the reference sequence whose coordinates overlap with this variant. A valid codon description is a string of three -- or multiples thereof -- concatenated letters A, C, G, or T.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -1312,6 +1324,7 @@
   <h5 id="datatypePropertycustomAnnotationDatatypeProperty">Datatype Property gfvo:customAnnotationDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> custom annotation datatype property</div>
+  <div><i>Comment:</i> Datatype property of an <a href="#classAttribute">Attribute</a> or <a href="#classStructuredAttribute">Structured Attribute</a> class instance. <a href="#classAttribute">Attribute</a> and <a href="#classStructuredAttribute">Structured Attribute</a> class instances are used to capture genomic feature and variation data assignments that may appear in a GFF3, GTF, GVF or VCF file, but which are not covered by their respective specifications.</div>
   <div></div>
   </div>
 </p>
@@ -1319,7 +1332,7 @@
   <h5 id="datatypePropertyeffectDatatypeProperty">Datatype Property gfvo:effectDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> effect datatype property</div>
-  <div><i>Comment:</i> Properties that are directly associated with Effect class instances.</div>
+  <div><i>Comment:</i> A datatype property that are directly associated with <a href="#classEffect">Effect</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -1338,6 +1351,7 @@
   <h5 id="datatypePropertyfeatureAnnotationDatatypeProperty">Datatype Property gfvo:featureAnnotationDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> feature annotation datatype property</div>
+  <div><i>Comment:</i> Property of one of the genomic annotation classes, such as <a href="#classBreakpoint">Breakpoint</a>, <a href="#classReference">Reference</a>, <a href="#classVariant">Variant</a>. For properties related to the core genomic data class <a href="#classFeature">Feature</a>, see <a href="#datatypePropertyfeatureDatatypeProperty">feature datatype property</a> or <a href="#objectPropertyfeatureObjectProperty">feature object property</a>.</div>
   <div></div>
   </div>
 </p>
@@ -1345,7 +1359,7 @@
   <h5 id="datatypePropertyfeatureDatatypeProperty">Datatype Property gfvo:featureDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> feature datatype property</div>
-  <div><i>Comment:</i> Properties that are directly associated with Feature class instances.</div>
+  <div><i>Comment:</i> Property that is directly associated with a <a href="#classFeature">Feature</a> class instance. For properties related to <a href="#classReference">Reference</a>, <a href="#classVariant">Variant</a>, or other genomic annotation classes, see <a href="#datatypePropertyfeatureAnnotationDatatypeProperty">feature annotation datatype property</a> or <a href="#objectPropertyfeatureAnnotationObjectProperty">feature annotation object property</a>.</div>
   <div></div>
   </div>
 </p>
@@ -1456,7 +1470,7 @@
   <h5 id="datatypePropertylandmarkDatatypeProperty">Datatype Property gfvo:landmarkDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> landmark datatype property</div>
-  <div><i>Comment:</i> Properties that are directly associated with Landmark class instances.</div>
+  <div><i>Comment:</i> Property that is directly associated with <a href="#classLandmark">Landmark</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -1464,6 +1478,7 @@
   <h5 id="datatypePropertylocusAnnotationDatatypeProperty">Datatype Property gfvo:locusAnnotationDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> locus annotation datatype property</div>
+  <div><i>Comment:</i> A property related to, or associated with, genomic coordinates. This can be a genomic <a href="#datatypePropertysequence">sequence</a> description, the <a href="#datatypePropertyfrequency">frequency</a> of a <a href="#classVariant">Variant</a>, <a href="#datatypePropertyphredScore">phred score</a> of either <a href="#classVariant">Variant</a> or <a href="#classReference">Reference</a>, etc.</div>
   <div></div>
   </div>
 </p>
@@ -1569,6 +1584,7 @@
   <h5 id="datatypePropertyrecordDatatypeProperty">Datatype Property gfvo:recordDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> record datatype property</div>
+  <div><i>Comment:</i> A record datatype property is directly related to describing genomic feature or variant data. Classes that make use of record datatype properties are <a href="#classFeature">Feature</a>, <a href="#classVariant">Variant</a>, and so on. For container classes, such as <a href="#classSet">Set</a> and <a href="#classFile">File</a>, see <a href="#datatypePropertysetDatatypeProperty">set datatype property</a>.</div>
   <div></div>
   </div>
 </p>
@@ -1576,6 +1592,7 @@
   <h5 id="datatypePropertyreferenceAnnotationDatatypeProperty">Datatype Property gfvo:referenceAnnotationDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> reference annotation datatype property</div>
+  <div><i>Comment:</i> Property that is related to a <a href="#classReference">Reference</a> class instance. This property can also be applied to <a href="#classVariant">Variant</a> class instances, which share the same datatype description, but differ in their semantic interpretation of a genomic feature.</div>
   <div></div>
   </div>
 </p>
@@ -1604,7 +1621,7 @@
   <h5 id="datatypePropertysequencedIndividualDatatypeProperty">Datatype Property gfvo:sequencedIndividualDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> sequenced individual datatype property</div>
-  <div><i>Comment:</i> Properties that are directly associated with SequencedIndividual class instances.</div>
+  <div><i>Comment:</i> Property that is directly associated with <a href="#classSequencedIndividual">Sequenced Individual</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -1612,7 +1629,7 @@
   <h5 id="datatypePropertysetDatatypeProperty">Datatype Property gfvo:setDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> set datatype property</div>
-  <div><i>Comment:</i> Properties that are directly associated with Set class instances.</div>
+  <div><i>Comment:</i> A property that is directly associated with the <a href="#classSet">Set</a> class. Immediate sub-properties of this property are independent to specific specifications such as GFF3, GTF, GVF or VCF. Not all sub-properties can be preserved when carrying out operations between multiple <a href="#classSet">Set</a> class instances. For example, the <a href="#datatypePropertybuild">build</a> property can only be kept in a set union between multiple <a href="#classSet">Set</a> class instances if all involved instances agree on this property. For genomic feature and variant related properties, see <a href="#objectPropertyrecordObjectProperty">record object property</a> and <a href="#datatypePropertyrecordDatatypeProperty">record datatype property</a>.</div>
   <div></div>
   </div>
 </p>
@@ -1653,7 +1670,7 @@
   <h5 id="datatypePropertytargetDatatypeProperty">Datatype Property gfvo:targetDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> target datatype property</div>
-  <div><i>Comment:</i> Properties that are directly associated with Target class instances.</div>
+  <div><i>Comment:</i> Property that is directly associated with <a href="#classTarget">Target</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -1661,6 +1678,7 @@
   <h5 id="datatypePropertytechnologicalAnnotationDatatypeProperty">Datatype Property gfvo:technologicalAnnotationDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> technological annotation datatype property</div>
+  <div><i>Comment:</i> A datatype property associated with annotations that are related to technological aspects regarding a genomic feature or variant. For example, a property of a <a href="#classTechnologyPlatform">Technology Platform</a> class instance.</div>
   <div></div>
   </div>
 </p>
@@ -1668,7 +1686,7 @@
   <h5 id="datatypePropertytechnologyPlatformDatatypeProperty">Datatype Property gfvo:technologyPlatformDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> technology platform datatype property</div>
-  <div><i>Comment:</i> Properties that are directly associated with TechnologyPlatform class instances.</div>
+  <div><i>Comment:</i> Property that is directly associated with <a href="#classTechnologyPlatform">Technology Platform</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -1687,7 +1705,7 @@
   <h5 id="datatypePropertyvariant_datatype_property">Datatype Property gfvo:variant_datatype_property</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> variant datatype property</div>
-  <div><i>Comment:</i> Properties that are directly associated with Variant class instances.</div>
+  <div><i>Comment:</i> A datatype property that is directly associated with <a href="#classVariant">Variant</a> class instances.</div>
   <div></div>
   </div>
 </p>
@@ -1695,6 +1713,7 @@
   <h5 id="datatypePropertyvariationAnnotationDatatypeProperty">Datatype Property gfvo:variationAnnotationDatatypeProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> variation annotation datatype property</div>
+  <div><i>Comment:</i> A variation annotation datatype property is describing a datatype property of a <a href="#classVariant">Variant</a> or <a href="#classEffect">Effect</a> class instance.</div>
   <div></div>
   </div>
 </p>
