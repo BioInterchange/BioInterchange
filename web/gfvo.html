@@ -54,11 +54,36 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="span12">
-          <h2>Genomic Feature and Variation Ontology &mdash; GFVO</h2>
-          <p>Detailed description to follow soon... GFVO makes use of FALDO and VariO.</p>
-
-          <h3>Examples</h3>
-          <h4>Example 1: Loci and Basic Genomic Feature Annotations</h4>
+          <h2>Overview</h2>
+          <p>BioInterchange makes use of several external ontologies, i.e. ontologies that were developed outside the scope of the BioInterchange project. We are always happy to hear about ontologies that we should consider incorporating into BioInterchange and we welcome contributions of ontologies that permit including more file formats for RDF conversion.</p>
+          <p>External ontologies used in BioInterchange:
+            <ul>
+              <li><a href="http://sourceforge.net/apps/mediawiki/cdao/index.php?title=Main_Page">Comparative Data Analysis Ontology</a> (CDAO)</li>
+              <li><a href="https://github.com/JervenBolleman/FALDO">Feature Annotation Location Description Ontology</a> (FALDO)</li>
+              <li><a href="http://xmlns.com/foaf/spec">Friend of a Friend</a> (FOAF)</li>
+              <li><a href="http://code.google.com/p/semanticscience/wiki/SIO">Semanticscience Integrated Ontology</a> (SIO)</li>
+            </ul>
+          </p>
+          <p>One particular ontology &mdash; the Genomic Feature and Variation Ontology &mdash; that we will be using in the next release of BioInterchange for converting <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3</a>, <a href="http://www.sequenceontology.org/resources/gvf.html">GVF</a>, <a href="http://www.ensembl.org/info/website/upload/gff.html">GTF</a>, and <a href="http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41">VCF</a> file formats into RDF is described below. The current version of BioInterchange makes use of <a href="https://github.com/BioInterchange/Ontologies">GFF3O</a> and <a href="https://github.com/BioInterchange/Ontologies">GVF1O</a>, which were merged into GFVO.
+          <p>The <b>BioInterchange vocabulary wrappers</b> that are available for Ruby, Python and Java, are described as part of the <a href="api.html">API</a> documentation.</p>
+          <h2>Genomic Feature and Variation Ontology (GFVO)</h2>
+          <p>The Genomic Feature and Variation Ontology (GFVO) enables the RDFization of genomic feature and variation data. It particularly addresses the representation of data in <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3</a>, <a href="http://www.sequenceontology.org/resources/gvf.html">GVF</a>, <a href="http://www.ensembl.org/info/website/upload/gff.html">GTF</a>, and <a href="http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41">VCF</a> formats (the latter two representation are still in development).</p>
+          <ol>
+            <li><a href="#external">External Ontologies and Linked Data</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <ol style="list-style-type: lower-alpha;">
+              <li><a href="#example1">Example 1: Loci and Basic Genomic Feature Annotations</a></li>
+              <li><a href="#example1">Example 2: Encoding of a Sequence Alignment</a></li>
+            </ol>
+          </ol>
+          <div class="alert alert-info"><p><b>Note: </b> <span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-info">GTF</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span>and <span style="margin-right: 4px;" class="badge badge-warning">VCF</span> badges indicate a particular class or property definition's origin. The application of the class or property is not restricted to those file formats though.</p></div>
+          <p>GFVO is being developed as the joint work of <a href="http://joachimbaran.wordpress.com">Joachim Baran</a>, <a href="http://utah.academia.edu/BDurgahee">Begum Durgahee</a>, <a href="http://medicine.utah.edu/faculty/mddetail.php?facultyID=u0514925">Karen Eilbeck</a>, <a href="http://ntnu-no.academia.edu/ErickAntezana">Erick Antezana</a>, <a href="http://leechuck.de">Robert Hoehndorf</a>, and <a href="http://dumontierlab.com">Michel Dumontier</a>.</p>
+          <p>Feedback on the ontology has been provided by <a href="http://www.linkedin.com/in/raoulbonnal">Raoul Bonnal</a>, <a href="http://www.linkedin.com/in/francescostrozzi">Francesco Strozzi</a>, and <a href="http://www.linkedin.com/in/toshiakikatayama">Toshiaki Katayama</a>.</p>
+          <h3 id="external">External Ontologies and Linked Data</h3>
+          <p>GFVO makes use of the <a href="https://github.com/JervenBolleman/FALDO">Feature Annotation Location Description Ontology</a> (<a href="https://github.com/JervenBolleman/FALDO">FALDO</a>) for describing genomic locations such as genomic features, breakpoints, and coordinate ranges for fuzzy/probabilistic coordinate ranges. We also integrate the <a href="http://variationontology.org">Variation Ontology</a> (<a href="http://variationontology.org">VariO</a>) for describing variants, their effects and conseuences.</p>
+          <p>Species are represented as linked data by URIs to NCBI's <a href="http://www.ncbi.nlm.nih.gov/taxonomy">species taxonomy</a>. We encourage the use of <a href="http://identifiers.org">identifiers.org</a> URIs for other entities, which will be automatically be supported in the BioInterchange's RDF output with its next release.</p>
+          <h3 id="examples">Examples</h3>
+          <h4 id="example1">Example 1: Loci and Basic Genomic Feature Annotations</h4>
           <p>Encoding loci and basic genomic feature annotations. The example covers lines 0-3 of the example gene description given in the <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3 specification</a>.</p>
 <pre style="font-size: 10px; line-height: 13px;">
 @prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
@@ -148,7 +173,7 @@
                        faldo:position "9000" .
 </pre>
 
-          <h4>Example 2: Encoding of a Sequence Alignment</h4>
+          <h4 id="example2">Example 2: Encoding of a Sequence Alignment</h4>
           <p>Encoding of a sequence alignment. This is part of the <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3 specification</a>, denoting the alignment between the reference sequence "chr3" and the target sequence "EST23".</p>
 <pre style="font-size: 10px; line-height: 13px;">
 @prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
@@ -232,7 +257,7 @@
                        :first :ExampleSet2AlignmentOperation5 .
 </pre>
 
-<h3>Ontology Reference</h3>
+<h3 id="ontologyReference">Ontology Reference</h3>
 <!-- SNIP 1446L -->
 
 <p>
