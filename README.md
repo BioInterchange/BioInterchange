@@ -23,9 +23,12 @@ Ontologies used in the RDF output:
 * [Friend of a Friend](http://xmlns.com/foaf/spec) (FOAF)
 * [Generic Feature Format Version 3 Ontology](http://www.biointerchange.org/ontologies.html) (GFF3O)
 * [Genome Variation Format Version 1 Ontology](http://www.biointerchange.org/ontologies.html) (GVF1O)
+* [Genomic Feature and Variation Ontology](http://www.biointerchange.org/ontologies.html) (GFVO)
 * [Semanticscience Integrated Ontology](http://code.google.com/p/semanticscience/wiki/SIO) (SIO)
 * [Sequence Ontology](http://www.sequenceontology.org/index.html) (SO)
 * [Sequence Ontology Feature Annotation](http://www.sequenceontology.org/index.html) (SOFA)
+
+*Note:* GFF3O and GVF1O will be replaced by GFVO with the next release of BioInterchange.
 
 #### Contributing
 
