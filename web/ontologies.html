@@ -259,29 +259,28 @@
 </pre>
 
 <h3 id="ontologyReference">Ontology Reference</h3>
-<!-- SNIP 1446L -->
+<!-- Imported via :r!~/src/Ontologies/scripts/xml2htmldocs.rb < ~/src/Ontologies/gfvo.xml -->
 
 <p>
   Ontology namespace "gfvo": http://www.biointerchange.org/gfvo#
 </p>
 <h4>Classes</h4>
 <p>
-  <h5 id="classAlignment">Class gfvo:Alignment</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Subclass of:</i> <a href="#classGenomicEnumeration">GenomicEnumeration</a></div>
-  <div><i>Individuals:</i> <a href="#namedIndividualForwardReferenceSequenceFrameshift">ForwardReferenceSequenceFrameshift</a>, <a href="#namedIndividualMatch">Match</a>, <a href="#namedIndividualReferenceSequenceGap">ReferenceSequenceGap</a>, <a href="#namedIndividualReverseReferenceSequenceFrameshift">ReverseReferenceSequenceFrameshift</a>, <a href="#namedIndividualTargetSequenceGap">TargetSequenceGap</a></div>
-  <div><i>Label:</i> Alignment</div>
-  <div><i>Comment:</i> An alignment captures the matches, gaps or frameshifts between a reference sequence and a target sequence (see &quot;The Gap Attribute&quot;, http://sequenceontology.org/resources/gff3.html). The reference is typically a <a href="#classFeature">Feature</a> class instance that is linked to a target sequence via a <a href="#classTarget">Target</a> class instance.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
   <h5 id="classAlignmentOperation">Class gfvo:AlignmentOperation</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classLocusAnnotation">LocusAnnotation</a></div>
   <div><i>Label:</i> Alignment Operation</div>
-  <div><i>Comment:</i> An alignment operation captures the type of alignment (see <a href="#classAlignment">Alignment</a> enumeration class) and alignment length between a reference sequence and target sequence. This relationship is typically expressed between a <a href="#classFeature">Feature</a> class instance and a <a href="#classTarget">Target</a> class instance. Note that an <a href="#classAlignmentOperation">Alignment Operation</a> is a list, where the order of the alignment operations is of significance.</div>
+  <div><i>Comment:</i> An alignment operation captures the type of alignment (see &quot;Alignment&quot; enumeration class) and alignment length between a reference sequence and target sequence. This relationship is typically expressed between a <a href="#classFeature">Feature</a> class instance and a <a href="#classTarget">Target</a> class instance. Note that an <a href="#classAlignmentOperation">Alignment Operation</a> is a list, where the order of the alignment operations is of significance.</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classArrayComparativeGenomicHybridization">Class gfvo:ArrayComparativeGenomicHybridization</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classDataSource">DataSource</a></div>
+  <div><i>Label:</i> Array Comparative Genomic Hybridization</div>
+  <div><i>Comment:</i> A <a href="#classDataSource">Data Source</a> based on array-comparative genomic hybridization.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
 <p>
@@ -321,21 +320,29 @@
   </div>
 </p>
 <p>
+  <h5 id="classDNAMicroarray">Class gfvo:DNAMicroarray</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classDataSource">DataSource</a></div>
+  <div><i>Label:</i> DNA Microarray</div>
+  <div><i>Comment:</i> A <a href="#classDataSource">Data Source</a> based on DNA microarray probes.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classDNASequence">Class gfvo:DNASequence</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classDataSource">DataSource</a></div>
+  <div><i>Label:</i> DNA Sequence</div>
+  <div><i>Comment:</i> A <a href="#classDataSource">Data Source</a> based on DNA sequences.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
   <h5 id="classDataSource">Class gfvo:DataSource</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classTechnologicalAnnotation">TechnologicalAnnotation</a></div>
   <div><i>Label:</i> Data Source</div>
   <div><i>Comment:</i> Provides information about the source of the data. For example, it can link out to actual sequences associated with <a href="#classFeature">Feature</a> individuals in a <a href="#classSet">Set</a>.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="classDataType">Class gfvo:DataType</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Subclass of:</i> <a href="#classTechnologicalEnumeration">TechnologicalEnumeration</a></div>
-  <div><i>Individuals:</i> <a href="#namedIndividualArrayComparativeGenomicHybridization">ArrayComparativeGenomicHybridization</a>, <a href="#namedIndividualDNAMicroarray">DNAMicroarray</a>, <a href="#namedIndividualDNASequence">DNASequence</a>, <a href="#namedIndividualRNASequence">RNASequence</a></div>
-  <div><i>Label:</i> Data Type</div>
-  <div><i>Comment:</i> Determines the physical type of data behind a variant sequence. For example, <a href="#namedIndividualRNASequence">RNA Sequence</a>. The data type enumeration is used by the <a href="#classDataSource">Data Source</a> class.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -346,14 +353,6 @@
   <div><i>Label:</i> Effect</div>
   <div><i>Comment:</i> Describing the effect of a feature variant.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="classEnumeration">Class gfvo:Enumeration</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> Enumeration</div>
-  <div><i>Comment:</i> The enumeration class is providing a finite and complete set of values (OWL individuals). This class has no immediate individuals associated with it, but instead indicates that its children (<a href="#classGenomicEnumeration">Genomic Enumeration</a>, <a href="#classSequencedIndividualEnumeration">Sequenced Individual Enumeration</a> and <a href="#classTechnologicalEnumeration">Technological Enumeration</a>) are enumerations as described in more detail in the Protege OWL Tutorial (http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/resources/ProtegeOWLTutorialP4_v1_1.pdf).</div>
-  <div></div>
   </div>
 </p>
 <p>
@@ -384,21 +383,56 @@
   </div>
 </p>
 <p>
-  <h5 id="classGenomicEnumeration">Class gfvo:GenomicEnumeration</h5>
+  <h5 id="classForwardReferenceSequenceFrameshift">Class gfvo:ForwardReferenceSequenceFrameshift</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Subclass of:</i> <a href="#classEnumeration">Enumeration</a></div>
-  <div><i>Label:</i> Genomic Enumeration</div>
-  <div><i>Comment:</i> A genomic enumeration provides a finite choice between OWL individuals that are denoting instances of genomic concepts. For example, <a href="#classZygosity">Zygosity</a>.</div>
-  <div></div>
+  <div><i>Subclass of:</i> <a href="#classAlignmentOperation">AlignmentOperation</a></div>
+  <div><i>Label:</i> Forward Reference Sequence Frameshift</div>
+  <div><i>Comment:</i> Denotes a frameshift forward in the reference sequence. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
 <p>
-  <h5 id="classGenomicSource">Class gfvo:GenomicSource</h5>
+  <h5 id="classFragmentReadPlatform">Class gfvo:FragmentReadPlatform</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Subclass of:</i> <a href="#classGenomicEnumeration">GenomicEnumeration</a></div>
-  <div><i>Individuals:</i> <a href="#namedIndividualGermline">Germline</a>, <a href="#namedIndividualPrenatal">Prenatal</a>, <a href="#namedIndividualSomatic">Somatic</a></div>
-  <div><i>Label:</i> Genomic Source</div>
-  <div><i>Comment:</i> An enumerated class for determining the genomic source (cell type) of sequenced data.</div>
+  <div><i>Subclass of:</i> <a href="#classTechnologyPlatform">TechnologyPlatform</a></div>
+  <div><i>Label:</i> Fragment Read Platform</div>
+  <div><i>Comment:</i> Details about the fragment-read sequencing technology used to gather the data in a set.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classGermlineFeature">Class gfvo:GermlineFeature</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classFeature">Feature</a></div>
+  <div><i>Label:</i> Germline Feature</div>
+  <div><i>Comment:</i> The germline feature class captures information about genomic sequence features arising from germline cells.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classHemizygousVariant">Class gfvo:HemizygousVariant</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classVariant">Variant</a></div>
+  <div><i>Label:</i> Hemizygous Variant</div>
+  <div><i>Comment:</i> A sequence alteration with hemizygous alleles.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classHeterozygousVariant">Class gfvo:HeterozygousVariant</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classVariant">Variant</a></div>
+  <div><i>Label:</i> Heterozygous Variant</div>
+  <div><i>Comment:</i> A sequence alteration with heterozygous alleles.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classHomozygousVariant">Class gfvo:HomozygousVariant</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classVariant">Variant</a></div>
+  <div><i>Label:</i> Homozygous Variant</div>
+  <div><i>Comment:</i> A sequence alteration with homozygous alleles.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -421,11 +455,29 @@
   </div>
 </p>
 <p>
+  <h5 id="classMatch">Class gfvo:Match</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classAlignmentOperation">AlignmentOperation</a></div>
+  <div><i>Label:</i> Match</div>
+  <div><i>Comment:</i> Denotes a match between the reference sequence and target sequence. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
   <h5 id="classMethod">Class gfvo:Method</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classTechnologicalAnnotation">TechnologicalAnnotation</a></div>
   <div><i>Label:</i> Method</div>
   <div><i>Comment:</i> Information about the used scoring algorithm or method.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classPairedReadPlatform">Class gfvo:PairedReadPlatform</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classTechnologyPlatform">TechnologyPlatform</a></div>
+  <div><i>Label:</i> Paired Read Platform</div>
+  <div><i>Comment:</i> Details about the paired-read sequencing technology used to gather the data in a set.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -439,12 +491,20 @@
   </div>
 </p>
 <p>
-  <h5 id="classReadType">Class gfvo:ReadType</h5>
+  <h5 id="classPrenatalFeature">Class gfvo:PrenatalFeature</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Subclass of:</i> <a href="#classTechnologicalEnumeration">TechnologicalEnumeration</a></div>
-  <div><i>Individuals:</i> <a href="#namedIndividualFragment">Fragment</a>, <a href="#namedIndividualPair">Pair</a></div>
-  <div><i>Label:</i> Read Type</div>
-  <div><i>Comment:</i> Type of reads obtained for a given technology platform. Reads can be either <a href="#namedIndividualFragment">Fragment</a> or <a href="#namedIndividualPair">Pair</a> by this enumeration.</div>
+  <div><i>Subclass of:</i> <a href="#classFeature">Feature</a></div>
+  <div><i>Label:</i> Prenatal Feature</div>
+  <div><i>Comment:</i> A prenatal feature is purportedly associated with prenatal cells; the GVF specification declares this feature type under the prama directive &quot;##genomic-source&quot;, but does not describe its semantics and the referenced Logical Observation Identifiers Names and Codes (LOINC, http://loinc.org), do not define the meaning or intended usage of the term &quot;prenatal&quot; either.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classRNASequence">Class gfvo:RNASequence</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classDataSource">DataSource</a></div>
+  <div><i>Label:</i> RNA Sequence</div>
+  <div><i>Comment:</i> A <a href="#classDataSource">Data Source</a> based on RNA sequences.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -466,21 +526,57 @@
   </div>
 </p>
 <p>
-  <h5 id="classSequencedIndividual">Class gfvo:SequencedIndividual</h5>
+  <h5 id="classReferenceSequenceGap">Class gfvo:ReferenceSequenceGap</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Subclass of:</i> <a href="#classFeatureAnnotation">FeatureAnnotation</a></div>
-  <div><i>Label:</i> Sequenced Individual</div>
-  <div><i>Comment:</i> Aggregated sequencing information for a particular individual.</div>
+  <div><i>Subclass of:</i> <a href="#classAlignmentOperation">AlignmentOperation</a></div>
+  <div><i>Label:</i> Reference Sequence Gap</div>
+  <div><i>Comment:</i> Denotes a gap in the reference sequence for an alignment. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classReverseReferenceSequenceFrameshift">Class gfvo:ReverseReferenceSequenceFrameshift</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classAlignmentOperation">AlignmentOperation</a></div>
+  <div><i>Label:</i> Reverse Reference Sequence Frameshift</div>
+  <div><i>Comment:</i> Denotes a frameshift backwards (reverse) in the reference sequence. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classSequencedFemale">Class gfvo:SequencedFemale</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classSequencedIndividual">SequencedIndividual</a></div>
+  <div><i>Label:</i> Sequenced Female</div>
+  <div><i>Comment:</i> Aggregated sequencing information for a particular female individual. A female is defined as an individual producing ova.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
 <p>
-  <h5 id="classSequencedIndividualEnumeration">Class gfvo:SequencedIndividualEnumeration</h5>
+  <h5 id="classSequencedHermaphrodite">Class gfvo:SequencedHermaphrodite</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Subclass of:</i> <a href="#classEnumeration">Enumeration</a></div>
-  <div><i>Label:</i> Sequenced Individual Enumeration</div>
-  <div><i>Comment:</i> A sequenced individual enumeration provides a finite choice between OWL individuals that are denoting instances that are related to human individuals, patients, donors, etc. For example, <a href="#classSex">Sex</a> is an enumeration related to the sex of sequenced individuals.</div>
+  <div><i>Subclass of:</i> <a href="#classSequencedIndividual">SequencedIndividual</a></div>
+  <div><i>Label:</i> Sequenced Hermaphrodite</div>
+  <div><i>Comment:</i> Aggregated sequencing information for a particular individual that contains both male and female gemetes.</div>
   <div></div>
+  </div>
+</p>
+<p>
+  <h5 id="classSequencedIndividual">Class gfvo:SequencedIndividual</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classFeatureAnnotation">FeatureAnnotation</a></div>
+  <div><i>Label:</i> Sequenced Individual</div>
+  <div><i>Comment:</i> Aggregated sequencing information for a particular individual. Unless a sub-type of this class is used as instance type, s.a. <a href="#classSequencedFemale">Sequenced Female</a>, the sex of the individual is considered to be undetermined.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classSequencedMale">Class gfvo:SequencedMale</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classSequencedIndividual">SequencedIndividual</a></div>
+  <div><i>Label:</i> Sequenced Male</div>
+  <div><i>Comment:</i> Aggregated sequencing information for a particular male individual. A male is defined as an individual producing spermatozoa.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
 <p>
@@ -501,12 +597,11 @@
   </div>
 </p>
 <p>
-  <h5 id="classSex">Class gfvo:Sex</h5>
+  <h5 id="classSomaticFeature">Class gfvo:SomaticFeature</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Subclass of:</i> <a href="#classSequencedIndividualEnumeration">SequencedIndividualEnumeration</a></div>
-  <div><i>Individuals:</i> <a href="#namedIndividualFemale">Female</a>, <a href="#namedIndividualHermaphrodite">Hermaphrodite</a>, <a href="#namedIndividualMale">Male</a></div>
-  <div><i>Label:</i> Sex</div>
-  <div><i>Comment:</i> For single individual sets, the <a href="#classSex">Sex</a> class enumeration instances can be used to specify the sex of a sequenced (real-life) individual.</div>
+  <div><i>Subclass of:</i> <a href="#classFeature">Feature</a></div>
+  <div><i>Label:</i> Somatic Feature</div>
+  <div><i>Comment:</i> The somatic feature class captures information about genomic sequence features arising from somatic cells.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -529,20 +624,20 @@
   </div>
 </p>
 <p>
+  <h5 id="classTargetSequenceGap">Class gfvo:TargetSequenceGap</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classAlignmentOperation">AlignmentOperation</a></div>
+  <div><i>Label:</i> Target Sequence Gap</div>
+  <div><i>Comment:</i> Denotes a gap in the target sequence for an alignment. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
   <h5 id="classTechnologicalAnnotation">Class gfvo:TechnologicalAnnotation</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classFeatureAnnotation">FeatureAnnotation</a></div>
   <div><i>Label:</i> Technological Annotation</div>
   <div><i>Comment:</i> A technological annotation provides meta-data about the means that led to a genomic feature or variant discovery. This can be a provenance annotation, such as <a href="#classDataSource">Data Source</a>, it can be describing a <a href="#classMethod">Method</a>, or it can be information about the <a href="#classTechnologyPlatform">Technology Platform</a> used.</div>
-  <div></div>
-  </div>
-</p>
-<p>
-  <h5 id="classTechnologicalEnumeration">Class gfvo:TechnologicalEnumeration</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Subclass of:</i> <a href="#classEnumeration">Enumeration</a></div>
-  <div><i>Label:</i> Technological Enumeration</div>
-  <div><i>Comment:</i> A technical enumeration provides a finite choice between OWL individuals that are denoting instances related to technical aspects of genome sequencing.</div>
   <div></div>
   </div>
 </p>
@@ -573,197 +668,6 @@
   <div></div>
   </div>
 </p>
-<p>
-  <h5 id="classZygosity">Class gfvo:Zygosity</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Subclass of:</i> <a href="#classGenomicEnumeration">GenomicEnumeration</a></div>
-  <div><i>Individuals:</i> <a href="#namedIndividualHemizygous">Hemizygous</a>, <a href="#namedIndividualHeterozygous">Heterozygous</a>, <a href="#namedIndividualHomozygous">Homozygous</a></div>
-  <div><i>Label:</i> Zygosity</div>
-  <div><i>Comment:</i> Denotes the zygosity of alleles.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<h4>Named Individuals (Constants, Enumerations)</h4>
-<p>
-  <h5 id="namedIndividualArrayComparativeGenomicHybridization">Named Individual gfvo:ArrayComparativeGenomicHybridization</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classDataType">DataType</a></div>
-  <div><i>Label:</i> Array Comparative Genomic Hybridization</div>
-  <div><i>Comment:</i> Denotes an array-comparative genomic hybridization.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualDNAMicroarray">Named Individual gfvo:DNAMicroarray</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classDataType">DataType</a></div>
-  <div><i>Label:</i> DNA Microarray</div>
-  <div><i>Comment:</i> Denotes a DNA microarray probe.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualDNASequence">Named Individual gfvo:DNASequence</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classDataType">DataType</a></div>
-  <div><i>Label:</i> DNA Sequence</div>
-  <div><i>Comment:</i> Denotes a DNA sequence.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualFemale">Named Individual gfvo:Female</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classSex">Sex</a></div>
-  <div><i>Label:</i> Female</div>
-  <div><i>Comment:</i> Denotes that a <a href="#classSet">Set</a> contains genomic features or variants of a female. Females are defined as individuals producing ova.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualForwardReferenceSequenceFrameshift">Named Individual gfvo:ForwardReferenceSequenceFrameshift</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classAlignment">Alignment</a></div>
-  <div><i>Label:</i> Forward Reference Sequence Frameshift</div>
-  <div><i>Comment:</i> Denotes a frameshift forward in the reference sequence. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
-  <div></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualFragment">Named Individual gfvo:Fragment</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classReadType">ReadType</a></div>
-  <div><i>Label:</i> Fragment</div>
-  <div><i>Comment:</i> Denotes reads that are fragments.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualGermline">Named Individual gfvo:Germline</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classGenomicSource">GenomicSource</a></div>
-  <div><i>Label:</i> Germline</div>
-  <div><i>Comment:</i> Denotes that a <a href="#classSet">Set</a> contains features of germline cells.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualHemizygous">Named Individual gfvo:Hemizygous</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classZygosity">Zygosity</a></div>
-  <div><i>Label:</i> Hemizygous</div>
-  <div><i>Comment:</i> Denotes hemizygous alleles.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualHermaphrodite">Named Individual gfvo:Hermaphrodite</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classSex">Sex</a></div>
-  <div><i>Label:</i> Hermaphrodite</div>
-  <div><i>Comment:</i> Denotes that a <a href="#classSet">Set</a> contains features of an individual that contains both male and female gemetes.</div>
-  <div></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualHeterozygous">Named Individual gfvo:Heterozygous</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classZygosity">Zygosity</a></div>
-  <div><i>Label:</i> Heterozygous</div>
-  <div><i>Comment:</i> Denotes heterozygous alleles.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualHomozygous">Named Individual gfvo:Homozygous</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classZygosity">Zygosity</a></div>
-  <div><i>Label:</i> Homozygous</div>
-  <div><i>Comment:</i> Denotes homozygous alleles.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualMale">Named Individual gfvo:Male</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classSex">Sex</a></div>
-  <div><i>Label:</i> Male</div>
-  <div><i>Comment:</i> Denotes that a <a href="#classSet">Set</a> contains genomic features or variants of a male. Males are defined as the individuals producing spermatozoa.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualMatch">Named Individual gfvo:Match</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classAlignment">Alignment</a></div>
-  <div><i>Label:</i> Match</div>
-  <div><i>Comment:</i> Denotes a match between the reference sequence and target sequence. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
-  <div></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualPair">Named Individual gfvo:Pair</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classReadType">ReadType</a></div>
-  <div><i>Label:</i> Pair</div>
-  <div><i>Comment:</i> Denotes reads that are pairs.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualPrenatal">Named Individual gfvo:Prenatal</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classGenomicSource">GenomicSource</a></div>
-  <div><i>Label:</i> Prenatal</div>
-  <div><i>Comment:</i> Denotes that a set contains features of prenatal cells.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualRNASequence">Named Individual gfvo:RNASequence</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classDataType">DataType</a></div>
-  <div><i>Label:</i> RNA Sequence</div>
-  <div><i>Comment:</i> Denotes an RNA sequence.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualReferenceSequenceGap">Named Individual gfvo:ReferenceSequenceGap</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classAlignment">Alignment</a></div>
-  <div><i>Label:</i> Reference Sequence Gap</div>
-  <div><i>Comment:</i> Denotes a gap in the reference sequence for an alignment. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
-  <div></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualReverseReferenceSequenceFrameshift">Named Individual gfvo:ReverseReferenceSequenceFrameshift</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classAlignment">Alignment</a></div>
-  <div><i>Label:</i> Reverse Reference Sequence Frameshift</div>
-  <div><i>Comment:</i> Denotes a frameshift backwards (reverse) in the reference sequence. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
-  <div></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualSomatic">Named Individual gfvo:Somatic</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classGenomicSource">GenomicSource</a></div>
-  <div><i>Label:</i> Somatic</div>
-  <div><i>Comment:</i> Denotes that a <a href="#classSet">Set</a> contains features of somatic cells.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="namedIndividualTargetSequenceGap">Named Individual gfvo:TargetSequenceGap</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Type:</i> <a href="#classAlignment">Alignment</a></div>
-  <div><i>Label:</i> Target Sequence Gap</div>
-  <div><i>Comment:</i> Denotes a gap in the target sequence for an alignment. The reference sequence is denoted by a <a href="#classLandmark">Landmark</a> whilst the aligned target sequence is an instance of the <a href="#classTarget">Target</a> class.</div>
-  <div></div>
-  </div>
-</p>
 <h4>Object Properties (Referencing other Class Instances)</h4>
 <p>
   <h5 id="objectPropertyalignment">Object Property gfvo:alignment</h5>
@@ -773,14 +677,6 @@
   <div><i>Label:</i> alignment</div>
   <div><i>Comment:</i> An alignment is a sequence alignment between a <a href="#classFeature">Feature</a> class instance and a <a href="#classTarget">Target</a> class instance. The alignment is a list of one or more <a href="#classAlignmentOperation">Alignment Operation</a> instances that capture alignment matches, gaps and frameshifts (see &quot;The Gap Attribute&quot;, http://sequenceontology.org/resources/gff3.html).</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="objectPropertyalignmentOperationObjectProperty">Object Property gfvo:alignmentOperationObjectProperty</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> alignment operation object property</div>
-  <div><i>Comment:</i> Property that is directly associated with <a href="#classAlignmentOperation">Alignment Operation</a> instances.</div>
-  <div></div>
   </div>
 </p>
 <p>
@@ -852,24 +748,6 @@
   </div>
 </p>
 <p>
-  <h5 id="objectPropertydataType">Object Property gfvo:dataType</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Domain:</i> <a href="#classDataSource">DataSource</a></div>
-  <div><i>Range:</i> <a href="#classDataType">DataType</a></div>
-  <div><i>Label:</i> data type</div>
-  <div><i>Comment:</i> Datatype of this data source.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="objectPropertydatasourceObjectProperty">Object Property gfvo:datasourceObjectProperty</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> datasource object property</div>
-  <div><i>Comment:</i> A property that is directly associated with <a href="#classDataSource">Data Source</a> class instances.</div>
-  <div></div>
-  </div>
-</p>
-<p>
   <h5 id="objectPropertydbxref">Object Property gfvo:dbxref</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Domain:</i> <a href="#classDataSource">DataSource</a>, <a href="#classFeature">Feature</a>, <a href="#classMethod">Method</a>, <a href="#classPhenotypeDescription">PhenotypeDescription</a>, <a href="#classTechnologyPlatform">TechnologyPlatform</a></div>
@@ -937,9 +815,9 @@
   <h5 id="objectPropertygenomicSource">Object Property gfvo:genomicSource</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Domain:</i> <a href="#classSet">Set</a></div>
-  <div><i>Range:</i> <a href="#classGenomicSource">GenomicSource</a></div>
+  <div><i>Range:</i> <a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></div>
   <div><i>Label:</i> genomic source</div>
-  <div><i>Comment:</i> Denotes the source of genomic data (on a cell-type level). Valid object assignments are individuals of the <a href="#classGenomicSource">Genomic Source</a> enumeration class.</div>
+  <div><i>Comment:</i> Denotes the source of genomic data (on a cell-type level). Valid object assignments are individuals of the &quot;Genomic Source&quot; enumeration class.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
@@ -977,7 +855,7 @@
   <h5 id="objectPropertylocusAnnotationObjectProperty">Object Property gfvo:locusAnnotationObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> locus annotation object property</div>
-  <div><i>Comment:</i> A property related to genomic coordinates. This can be a <a href="#objectPropertylocus">locus</a> description that uses FALDO to denote Regions (with exact or probabilistic/fuzzy boundaries; <a href="#classBreakpoint">Breakpoint</a> locations) or an <a href="#objectPropertyoperation">operation</a> of a list of <a href="#classAlignmentOperation">Alignment Operation</a> instances that encode a CIGAR line.</div>
+  <div><i>Comment:</i> A property related to genomic coordinates. This can be a <a href="#objectPropertylocus">locus</a> description that uses FALDO to denote Regions (with exact or probabilistic/fuzzy boundaries; <a href="#classBreakpoint">Breakpoint</a> locations) or an &quot;operation&quot; of a list of <a href="#classAlignmentOperation">Alignment Operation</a> instances that encode a CIGAR line.</div>
   <div></div>
   </div>
 </p>
@@ -985,19 +863,10 @@
   <h5 id="objectPropertyontologyTerm">Object Property gfvo:ontologyTerm</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Domain:</i> <a href="#classFeature">Feature</a>, <a href="#classVariant">Variant</a></div>
+  <div><i>Range:</i> <a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a></div>
   <div><i>Label:</i> ontology term</div>
   <div><i>Comment:</i> A cross-reference to an ontology term that is associated with a feature. For instances of the <a href="#classVariant">Variant</a> class, the associated ontology term must be a Variant Ontology term (VariO; http://purl.obolibrary.org/obo/VariO_0001 or subclasses thereof).</div>
   <div><span style="margin-right: 4px;" class="badge badge-important">GFF3</span><span style="margin-right: 4px;" class="badge badge-info">GTF</span><span style="margin-right: 4px;" class="badge badge-success">GVF</span><span style="margin-right: 4px;" class="badge badge-warning">VCF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="objectPropertyoperation">Object Property gfvo:operation</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Domain:</i> <a href="#classAlignmentOperation">AlignmentOperation</a></div>
-  <div><i>Range:</i> <a href="#classAlignment">Alignment</a></div>
-  <div><i>Label:</i> operation</div>
-  <div><i>Comment:</i> Determines the operation (match, frameshift, etc.) of an <a href="#classAlignmentOperation">Alignment Operation</a> composite class instance. Valid values are individuals (class instances) of the <a href="#classAlignment">Alignment</a> enumeration class.</div>
-  <div></div>
   </div>
 </p>
 <p>
@@ -1026,16 +895,6 @@
   <div><i>Label:</i> phenotype description object property</div>
   <div><i>Comment:</i> An object property directly associated with <a href="#classPhenotypeDescription">Phenotype Description</a> class instances.</div>
   <div></div>
-  </div>
-</p>
-<p>
-  <h5 id="objectPropertyreadType">Object Property gfvo:readType</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Domain:</i> <a href="#classTechnologyPlatform">TechnologyPlatform</a></div>
-  <div><i>Range:</i> <a href="#classReadType">ReadType</a></div>
-  <div><i>Label:</i> read type</div>
-  <div><i>Comment:</i> Types of reads produced by the platform. Valid values are individuals (class instance) of the <a href="#classReadType">Read Type</a> enumeration class.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
 <p>
@@ -1106,18 +965,8 @@
   <h5 id="objectPropertysetObjectProperty">Object Property gfvo:setObjectProperty</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> set object property</div>
-  <div><i>Comment:</i> A property that is directly associated with the <a href="#classSet">Set</a> class. Immediate sub-properties of this property are independent to specific specifications such as GFF3, GTF, GVF or VCF. Not all sub-properties can be preserved when carrying out operations between multiple <a href="#classSet">Set</a> class instances. For example, the <a href="#objectPropertysex">sex</a> property applies to single individual sets and can only be kept in a set union between multiple <a href="#classSet">Set</a> class instances if all involved instances agree on this property. For genomic feature and variant related properties, see <a href="#objectPropertyrecordObjectProperty">record object property</a> and <a href="#datatypePropertyrecordDatatypeProperty">record datatype property</a>.</div>
+  <div><i>Comment:</i> A property that is directly associated with the <a href="#classSet">Set</a> class. Immediate sub-properties of this property are independent to specific specifications such as GFF3, GTF, GVF or VCF. Not all sub-properties can be preserved when carrying out operations between multiple <a href="#classSet">Set</a> class instances. For example, the &quot;sex&quot; property applies to single individual sets and can only be kept in a set union between multiple <a href="#classSet">Set</a> class instances if all involved instances agree on this property. For genomic feature and variant related properties, see <a href="#objectPropertyrecordObjectProperty">record object property</a> and <a href="#datatypePropertyrecordDatatypeProperty">record datatype property</a>.</div>
   <div></div>
-  </div>
-</p>
-<p>
-  <h5 id="objectPropertysex">Object Property gfvo:sex</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Domain:</i> <a href="#classSet">Set</a></div>
-  <div><i>Range:</i> <a href="#classSex">Sex</a></div>
-  <div><i>Label:</i> sex</div>
-  <div><i>Comment:</i> Denotes the sex of the sequenced individual for single-individual sets. Valid object assignments are individuals of the <a href="#classSex">Sex</a> enumeration class.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
 </p>
 <p>
@@ -1196,14 +1045,6 @@
   </div>
 </p>
 <p>
-  <h5 id="objectPropertytechnologyPlatformProperty">Object Property gfvo:technologyPlatformProperty</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> technology platform property</div>
-  <div><i>Comment:</i> A property that is directly associated with <a href="#classTechnologyPlatform">Technology Platform</a> class instances.</div>
-  <div></div>
-  </div>
-</p>
-<p>
   <h5 id="objectPropertytype">Object Property gfvo:type</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Domain:</i> <a href="#classFile">File</a></div>
@@ -1237,16 +1078,6 @@
   <div><i>Label:</i> variation annotation object property</div>
   <div><i>Comment:</i> A variation annotation object property is describing an object property of a <a href="#classVariant">Variant</a> or <a href="#classEffect">Effect</a> class instance.</div>
   <div></div>
-  </div>
-</p>
-<p>
-  <h5 id="objectPropertyzygosity">Object Property gfvo:zygosity</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Domain:</i> <a href="#classVariant">Variant</a></div>
-  <div><i>Range:</i> <a href="#classZygosity">Zygosity</a></div>
-  <div><i>Label:</i> zygosity</div>
-  <div><i>Comment:</i> Zygosity of a variant.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span><span style="margin-right: 4px;" class="badge badge-warning">VCF</span></div>
   </div>
 </p>
 <h4>Datatype Properties (Strings, Numbers, Dates, etc.)</h4>
@@ -1574,23 +1405,23 @@
   </div>
 </p>
 <p>
+  <h5 id="datatypePropertyreadIPairSpan">Datatype Property gfvo:readIPairSpan</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Domain:</i> <a href="#classTechnologyPlatform">TechnologyPlatform</a></div>
+  <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#int">http://www.w3.org/2001/XMLSchema#int</a></div>
+  <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
+  <div><i>Label:</i> read pair span</div>
+  <div><i>Comment:</i> Undocumented in GVF specification. Even though the property&apos;s semantics are undocumented, it is still included in the ontology in order to reflect the data values that might be encoded in GVF files.</div>
+  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
+  </div>
+</p>
+<p>
   <h5 id="datatypePropertyreadLength">Datatype Property gfvo:readLength</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Domain:</i> <a href="#classTechnologyPlatform">TechnologyPlatform</a></div>
   <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#int">http://www.w3.org/2001/XMLSchema#int</a></div>
   <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
   <div><i>Label:</i> read length</div>
-  <div><i>Comment:</i> Undocumented in GVF specification. Even though the property&apos;s semantics are undocumented, it is still included in the ontology in order to reflect the data values that might be encoded in GVF files.</div>
-  <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
-  </div>
-</p>
-<p>
-  <h5 id="datatypePropertyreadPairSpan">Datatype Property gfvo:readPairSpan</h5>
-  <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Domain:</i> <a href="#classTechnologyPlatform">TechnologyPlatform</a></div>
-  <div><i>Range:</i> <a href="http://www.w3.org/2001/XMLSchema#int">http://www.w3.org/2001/XMLSchema#int</a></div>
-  <div>The data range has restrictions imposed on it. Please refer to the <a href="http://www.biointerchange.org/gfvo">OWL file</a> for further details.</div>
-  <div><i>Label:</i> read pair span</div>
   <div><i>Comment:</i> Undocumented in GVF specification. Even though the property&apos;s semantics are undocumented, it is still included in the ontology in order to reflect the data values that might be encoded in GVF files.</div>
   <div><span style="margin-right: 4px;" class="badge badge-success">GVF</span></div>
   </div>
