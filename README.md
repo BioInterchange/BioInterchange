@@ -571,12 +571,9 @@ Building a new version of the Ruby vocabulary classes for CDAO, FALDO, GFF3O, GV
     ruby generators/rdfxml.rb faldo.xml.tmp FALDO >> lib/biointerchange/faldo.rb
     rm -f faldo.xml.tmp
     echo -e "\nend" >> lib/biointerchange/faldo.rb
-    echo -e "require 'rdf'\nmodule BioInterchange\n" > lib/biointerchange/gff3o.rb
-    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gff3o> GFF3O >> lib/biointerchange/gff3o.rb
-    echo -e "\nend" >> lib/biointerchange/gff3o.rb
-    echo -e "module BioInterchange\n" > lib/biointerchange/gvf1o.rb
-    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gvf1o> GVF1O >> lib/biointerchange/gvf1o.rb
-    echo -e "\nend" >> lib/biointerchange/gvf1o.rb
+    echo -e "require 'rdf'\nmodule BioInterchange\n" > lib/biointerchange/gfvo.rb
+    ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-gfvo> GFVO >> lib/biointerchange/gfvo.rb
+    echo -e "\nend" >> lib/biointerchange/gfvo.rb
     echo -e "module BioInterchange\n" > lib/biointerchange/sio.rb
     ruby generators/rdfxml.rb <path-to-rdf/xml-version-of-sio> SIO >> lib/biointerchange/sio.rb
     echo -e "\nend" >> lib/biointerchange/sio.rb
