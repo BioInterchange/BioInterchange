@@ -7,7 +7,7 @@ require 'rspec'
 # is true, but they are only "re-initialized" with the very same values.
 v, $VERBOSE = $VERBOSE, nil
 load 'lib/biointerchange/core.rb'
-load 'lib/biointerchange/gff3o.rb'
+load 'lib/biointerchange/gfvo.rb'
 load 'lib/biointerchange/sofa.rb'
 load 'lib/biointerchange/reader.rb'
 load 'lib/biointerchange/model.rb'
@@ -72,9 +72,9 @@ describe BioInterchange::Genomics::RDFWriter do
       lines.each { |line|
         subject, predicate, object = line.chomp.split(/\s/, 3)
         object.sub!(/\s+\.$/, '')
-        feature_no += 1 if predicate == "<#{RDF.type}>" and object == "<#{BioInterchange::GFF3O.Feature}>"
+        feature_no += 1 if predicate == "<#{RDF.type}>" and object == "<#{BioInterchange::GFVO.Feature}>"
       }
-      lines.count.should be == 37
+      lines.count.should be == 55
       feature_no.should be == 3
     end
   end
