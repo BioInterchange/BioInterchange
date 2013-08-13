@@ -34,7 +34,7 @@ class Writer
     if @format == :turtle then
       subject_uri_prefix = uri_prefix(subject_uri)
       if subject_uri_prefix then
-        subject_uri.sub!(subject_uri_prefix, @@prefixes[subject_uri_prefix])
+        subject_uri.sub!(subject_uri_prefix, @prefixes[subject_uri_prefix])
       else
         subject_uri = "<#{subject_uri}>"
       end
@@ -47,7 +47,7 @@ class Writer
     if @format == :turtle then
       predicate_uri_prefix = uri_prefix(predicate_uri)
       if predicate_uri_prefix then
-        predicate_uri.sub!(predicate_uri_prefix, @@prefixes[predicate_uri_prefix])
+        predicate_uri.sub!(predicate_uri_prefix, @prefixes[predicate_uri_prefix])
       else
         predicate_uri = "<#{predicate_uri}>"
       end
@@ -63,7 +63,7 @@ class Writer
       if @format == :turtle then
         object_uri_prefix = uri_prefix(object_uri)
         if object_uri_prefix then
-          object_representation = object_uri.sub(object_uri_prefix, @@prefixes[object_uri_prefix])
+          object_representation = object_uri.sub(object_uri_prefix, @prefixes[object_uri_prefix])
         else
           object_representation = "<#{object_uri}>"
         end
@@ -89,10 +89,17 @@ class Writer
     end
   end
 
+  # Finishes serializing triples.
+  def close
+    if @format == :turtle then
+      # TODO
+    end
+  end
+
 private
 
   #
-  @@prefixes = {
+  @prefixes = {
     'http://biohackathon.org/resource/faldo#'     => 'faldo:',
     'http://purl.obolibrary.org/obo/'             => 'obo:',
     'http://purl.org/dc/terms/'                   => 'dc:',
@@ -105,10 +112,14 @@ private
 
   #
   def uri_prefix(uri)
-    @@prefixes.keys.each { |prefix|
+    @prefixes.keys.each { |prefix|
       return prefix if uri.start_with?(prefix)
     }
     nil
+  end
+
+  # Returns a Turtle line for the previous triple that is serialized (not the current triple).
+  def serialize_turtle
   end
 
 end
