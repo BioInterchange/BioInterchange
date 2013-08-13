@@ -18,7 +18,7 @@ class Writer
   #
   # +model+:: an object model instance
   def serialize(model)
-    raise BioInterchange::Exceptions::ImplementationWriterError, 'You must implement this method, which takes an object model and serializes it into the previously provided output stream.'
+    raise BioInterchange::Exceptions::ImplementationWriterError, 'You must implement this method, which takes an object model and serializes it into the output stream provided as constructor (\'initialize\') argument.'
   end
 
   # Creates a new triple and serializes it.
@@ -28,18 +28,31 @@ class Writer
   # +object+::
   # +type+::
   def create_triple(subject, predicate, object, datatype = nil)
-    subject_uri = subject.to_s
-    subject_uri_prefix = uri_prefix(subject_uri)
-    if subject_uri_prefix then
-      subject_uri.sub!(subject_uri_prefix, @@prefixes[subject_uri_prefix])
+    @format = :turtle
+    subject_uri = subject
+    subject_uri = subject_uri.to_s unless subject_uri.instance_of?(String)
+    if @format == :turtle then
+      subject_uri_prefix = uri_prefix(subject_uri)
+      if subject_uri_prefix then
+        subject_uri.sub!(subject_uri_prefix, @@prefixes[subject_uri_prefix])
+      else
+        subject_uri = "<#{subject_uri}>"
+      end
     else
       subject_uri = "<#{subject_uri}>"
     end
 
-    predicate_uri = predicate.to_s
-    predicate_uri_prefix = uri_prefix(predicate_uri)
-    if predicate_uri_prefix then
-      predicate_uri.sub!(predicate_uri_prefix, @@prefixes[predicate_uri_prefix])
+    predicate_uri = predicate
+    predicate_uri = predicate_uri.to_s unless predicate_uri.instance_of?(String)
+    if @format == :turtle then
+      predicate_uri_prefix = uri_prefix(predicate_uri)
+      if predicate_uri_prefix then
+        predicate_uri.sub!(predicate_uri_prefix, @@prefixes[predicate_uri_prefix])
+      else
+        predicate_uri = "<#{predicate_uri}>"
+      end
+      # In Turtle, 'rdf:type' can also be written as 'a':
+      predicate_uri = 'a' if predicate_uri == 'rdf:type'
     else
       predicate_uri = "<#{predicate_uri}>"
     end
@@ -47,9 +60,13 @@ class Writer
     object_representation = nil
     if object.kind_of?(RDF::URI) then
       object_uri = object.to_s
-      object_uri_prefix = uri_prefix(object_uri)
-      if object_uri_prefix then
-        object_representation = object_uri.sub(object_uri_prefix, @@prefixes[object_uri_prefix])
+      if @format == :turtle then
+        object_uri_prefix = uri_prefix(object_uri)
+        if object_uri_prefix then
+          object_representation = object_uri.sub(object_uri_prefix, @@prefixes[object_uri_prefix])
+        else
+          object_representation = "<#{object_uri}>"
+        end
       else
         object_representation = "<#{object_uri}>"
       end
@@ -76,15 +93,22 @@ private
 
   #
   @@prefixes = {
-    'http://www.w3.org/2000/01/rdf-schema#' => 'rdfs:'
+    'http://biohackathon.org/resource/faldo#'     => 'faldo:',
+    'http://purl.obolibrary.org/obo/'             => 'obo:',
+    'http://purl.org/dc/terms/'                   => 'dc:',
+    'http://www.biointerchange.org/gfvo#'         => 'gfvo:',
+    'http://www.w3.org/1999/02/22-rdf-syntax-ns#' => 'rdf:',
+    'http://www.w3.org/2000/01/rdf-schema#'       => 'rdfs:',
+    'http://www.w3.org/2001/XMLSchema#'           => 'xsd:',
+    'http://www.w3.org/2002/07/owl#'              => 'owl:'
   }
 
   #
   def uri_prefix(uri)
-    uri_chunks = uri.split('#', 2)
-    return nil if uri_chunks.length != 2
-    return nil unless @@prefixes.has_key?(uri_chunks[0])
-    "#{uri_chunks[0]}#"
+    @@prefixes.keys.each { |prefix|
+      return prefix if uri.start_with?(prefix)
+    }
+    nil
   end
 
 end
