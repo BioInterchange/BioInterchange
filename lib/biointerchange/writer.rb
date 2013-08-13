@@ -28,7 +28,7 @@ class Writer
   # +object+::
   # +type+::
   def create_triple(subject, predicate, object, datatype = nil)
-    @format = :turtle
+    @format = :ntriple
     subject_uri = subject
     subject_uri = subject_uri.to_s unless subject_uri.instance_of?(String)
     if @format == :turtle then
