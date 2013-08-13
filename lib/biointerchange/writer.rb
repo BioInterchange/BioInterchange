@@ -44,6 +44,7 @@ class Writer
       predicate_uri = "<#{predicate_uri}>"
     end
 
+    object_representation = nil
     if object.kind_of?(RDF::URI) then
       object_uri = object.to_s
       object_uri_prefix = uri_prefix(object_uri)
@@ -55,13 +56,20 @@ class Writer
     else
       if datatype then
         # TODO Append type.
-        object_representation = "\"#{object_uri}\""
+        object_representation = "\"#{object.to_s}\"^^<#{datatype.to_s}>"
       else
-        object_representation = "\"#{object_uri}\""
+        object_representation = "\"#{object.to_s}\""
       end
     end
 
-    @ostream.puts("#{subject_uri} #{predicate_uri} #{object_representation} .")
+    begin
+      @ostream.puts("#{subject_uri} #{predicate_uri} #{object_representation} .")
+    rescue Errno::EPIPE
+      # Whenever an output pipe disappears, then the user may be happy with what he/she
+      # has seen and hit Ctrl-C, or, piped the output through a UNIX command line tool
+      # such as "head".
+      exit 0
+    end
   end
 
 private
