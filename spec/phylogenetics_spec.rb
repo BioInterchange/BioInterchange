@@ -72,7 +72,7 @@ describe BioInterchange::Phylogenetics::CDAORDFWriter do
       model = BioInterchange::Phylogenetics::NewickReader.new().deserialize('(A,B,(C,D,E)F)G;')
       BioInterchange::Phylogenetics::CDAORDFWriter.new(ostream).serialize(model)
       ostream.close
-      istream.read.lines.count.should eq(151)
+      istream.read.lines.count.should eq(103)
     end
   end
 end

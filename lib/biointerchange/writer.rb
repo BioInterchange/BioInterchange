@@ -28,7 +28,6 @@ class Writer
   # +object+::
   # +type+::
   def create_triple(subject, predicate, object, datatype = nil)
-    @format = :ntriples
     subject_uri = subject
     subject_uri = subject_uri.to_s unless subject_uri.instance_of?(String)
     subject_uri = "<#{subject_uri}>"
@@ -51,7 +50,7 @@ class Writer
     end
 
     begin
-      if @format == :turtle then
+      if BioInterchange::format == :turtle then
         serialize_turtle(subject_uri, predicate_uri, object_representation)
       else
         @ostream.puts("#{subject_uri} #{predicate_uri} #{object_representation}")
@@ -66,7 +65,7 @@ class Writer
 
   # Finishes serializing triples.
   def close
-    if @format == :turtle then
+    if BioInterchange::format == :turtle then
       serialize_turtle()
     end
   end

@@ -7,13 +7,21 @@ module BioInterchange
 
   ### Global behaviour settings, which can be altered programmatically or via the CLI:
 
-  # If true, then RDF::Graph's "insert" function will be overwritten so that it
-  # immediately outputs N-Triples. This reduces memory requirements (since no RDF
-  # graph is kept in memory) and performance (since no looping through an RDF graph
-  # is necessary).
-  @@skip_rdf_graph = true
-  def self.skip_rdf_graph
-    @@skip_rdf_graph
+  # If true, then RDF::Graph's & co will be used. Should only be applied for
+  # performance comparisons between the "standard" Ruby gem implementation and
+  # BioInterchange's optimized RDF handling.
+  @@evaluation = false
+  def self.evaluation
+    @@evaluation
+  end
+
+  # BioInterchange can output RDF in two formats: Turtle (default) and N-Triples.
+  # The two corresponding Ruby constants for these two output formats are:
+  #   Turtle:    `:turtle`
+  #   N-Triples: `:ntriples`
+  @@format = :turtle
+  def self.format
+    @@format
   end
 
   # Custom Exceptions and Errors
@@ -114,8 +122,8 @@ module BioInterchange
       opts = [
         ["--help", "-h", Getopt::BOOLEAN],
         ["--debug", "-d", Getopt::BOOLEAN],                     # set debug mode => print stack traces
-        ["--no_rdf_graph_optimization", "-n", Getopt::BOOLEAN], # set self.skip_rdf_graph to false
-        ["--batchsize", "-b", Getopt::OPTIONAL],                # batchsize for readers/writers that support +postpone?+
+        ["--ntriples", "-n", Getopt::BOOLEAN],                  # produce N-Triples instead of Turtle
+        ["--evaluation", "-z", Getopt::BOOLEAN],                # use RDF gem implementation for mem/speed comparison
         ["--input", "-i", Getopt::REQUIRED],                    # input file format
         ["--rdf", "-r", Getopt::REQUIRED],                      # output file format
         ["--file", "-f", Getopt::OPTIONAL],                     # file to read, will read from STDIN if not supplied
@@ -146,14 +154,15 @@ module BioInterchange
         }
         puts ''
         puts 'I/O options:'
-        puts '  -b <size>/--batchsize <size>       : process input in batches of the given size'
-        puts '                                      (if supported, see below for valid input/rdf pairs)'
-        puts '  -f <file>/--file <file>            : file to read; STDIN used if not supplied'
-        puts '  -o <file>/--out <file>             : output file; STDOUT used if not supplied'
+        puts '  -f <file> / --file <file>          : file to read; STDIN used if not supplied'
+        puts '  -o <file> / --out <file>           : output file; STDOUT used if not supplied'
+        puts '  -n / --ntriples                    : output RDF N-Triples (instead of RDF Turtle)'
         puts ''
         puts 'Other options:'
         puts '  -v / --version                     : print the Gem\'s version number and exit'
         puts '  -d / --debug                       : turn on debugging output (for stacktraces)'
+        puts '  -z / --evaluation                  : use \'RDF\' gem implementation (slow & memory intensive,'
+        puts '                                       only included for performance evaluation comparisons)'
         puts '  -h  --help                         : this message'
         puts ''
         puts 'Input-/RDF-format specific options:'
@@ -179,22 +188,19 @@ module BioInterchange
 
       # Turn off optimization, if requested. This will generate an RDF graph in memory and
       # at least double memory requirements and runtime.
-      @@skip_rdf_graph = false if opt['no_rdf_graph_optimization']
+      @@evaluation = true if opt['evaluation']
+
+      # Switch to N-Triples output:
+      @@format = :ntriples if opt['ntriples']
 
       # Check if the input/rdf options are supported:
       unsupported_combination unless Registry.is_supported?(opt['input'], opt['rdf'])
       
-      if opt['batchsize'] then
-        batching_not_supported unless Registry.is_supporting_batch_processing?(opt['input'], opt['rdf'])
-        wrong_type('batchsize', 'a positive integer') unless opt['batchsize'].match(/^[1-9][0-9]*$/)
-      end
-
       # Create a parameter map that can be passed along to Reader implementations:
       map = {
         'input'  => opt['input'],
         'output' => opt['output']
       }
-      map['batchsize'] = opt['batchsize'].to_i if opt['batchsize']
       opt.each_key { |key|
         map[key.sub(/^annotate_/, '')] = opt[key] if key.start_with?('annotate_')
       }
@@ -225,6 +231,9 @@ module BioInterchange
         writer.serialize(model)
       end while reader.postponed?
 
+    rescue Interrupt
+      # The user hit Ctrl-C, which is okay and does not need error reporting.
+      exit 0
     rescue ArgumentError => e
       $stderr.puts e.message
       $stderr.puts e.backtrace if opt['debug']
@@ -267,10 +276,6 @@ module BioInterchange
 
 private
 
-  def self.batching_not_supported
-    raise ArgumentError, 'Batching is not supported for this input/output format combination.'
-  end
-
   def self.unsupported_combination
     raise ArgumentError, 'This input/output format combination is not supported.'
   end
@@ -278,39 +283,6 @@ private
   def self.wrong_type(parameter, expected_type)
     raise ArgumentError, "The parameter '#{parameter}' needs to be #{expected_type}."
   end
-
-end
-
-# Overwrite RDF::Graph implementation, in case we do not want to keep
-# the complete graph in memory. If the implementing writer does not
-# set an output stream via +fast_ostream+, then fall back to the original
-# implementation.
-module RDF
-
-class Graph
-  # DO NOT keep old insert implementation due to infinite recursion caused by module loading dependencies!
-  # alias_method :graph_building_insert, :insert
-
-  # Set an output stream for writing in +insert+.
-  #
-  # +ostream+:: Output stream that is populated by +insert+, if optimization can be carried out.
-  def fast_ostream(ostream)
-    @ostream = ostream
-  end
-
-  # Alternative implementation to +insert+, which can immediately output N-Triples instead
-  # of building an in-memory graph first.
-  #
-  # +statement+:: RDF statement that should be serialized.
-  def insert(statement)
-    if BioInterchange::skip_rdf_graph and @ostream then
-      @ostream.puts(statement.to_ntriples)
-    else
-      insert_statement(statement)
-    end
-  end
-
-end
 
 end
 

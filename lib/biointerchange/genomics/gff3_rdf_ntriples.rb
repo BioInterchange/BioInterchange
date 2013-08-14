@@ -69,9 +69,6 @@ protected
     # Record written variants in order to avoid writing out RDF.type multiple times.
     @variants = {}
 
-    graph = RDF::Graph.new
-    graph.fast_ostream(@ostream) if BioInterchange::skip_rdf_graph
-
     # Create a URI prefix that applies to the set, all features in the set, and all the features' annotations.
     # Then register the prefix with the writer to have a concise Turtle output.
     set_uri = RDF::URI.new(model.uri)
@@ -79,10 +76,10 @@ protected
 
     create_triple(set_uri, RDF.type, @base.Set)
     model.pragmas.each { |pragma_name|
-      serialize_pragma(graph, set_uri, model.pragma(pragma_name))
+      serialize_pragma(set_uri, model.pragma(pragma_name))
     }
     model.contents.each { |feature|
-      serialize_feature(graph, set_uri, feature)
+      serialize_feature(set_uri, feature)
     }
     close
     #RDF::NTriples::Writer.dump(graph, @ostream)
@@ -94,20 +91,19 @@ protected
 
   # Serializes pragmas for a given feature set URI.
   #
-  # +graph+:: RDF graph to which the pragmas are added
   # +set_uri+:: the feature set URI to which the pragmas belong to
   # +pragma+:: an object representing a pragma statement
-  def serialize_pragma(graph, set_uri, pragma)
+  def serialize_pragma(set_uri, pragma)
     if pragma.kind_of?(Hash) then
       if (pragma.has_key?('attribute-method') or pragma.has_key?('data-source') or pragma.has_key?('score-method') or pragma.has_key?('source-method') or pragma.has_key?('technology-platform')) then
-        serialize_structured_attribute(graph, set_uri, pragma)
+        serialize_structured_attribute(set_uri, pragma)
       elsif pragma.has_key?('gff-version') then
         create_triple(set_uri, @base.gff_version, pragma['gff-version'], RDF::XSD.float)
       elsif pragma.has_key?('gvf-version') then
         create_triple(set_uri, @base.gvf_version, pragma['gvf-version'], RDF::XSD.float)
       elsif pragma.has_key?('sequence-region') then
         pragma['sequence-region'].keys.each { |seqid|
-          serialize_landmark(graph, set_uri, pragma['sequence-region'][seqid])
+          serialize_landmark(set_uri, pragma['sequence-region'][seqid])
         }
       elsif pragma.has_key?('species') then
         create_triple(set_uri, @base.species, RDF::URI.new(pragma['species']))
@@ -119,26 +115,25 @@ protected
 
   # Serializes a +GFF3Feature+ object for a given feature set URI.
   #
-  # +graph+:: RDF graph to which the feature is added
   # +set_uri+:: the feature set URI to which the feature belongs to
   # +feature+:: a +GFF3Feature+ instance
-  def serialize_feature(graph, set_uri, feature)
+  def serialize_feature(set_uri, feature)
     # TODO Make sure there is only one value in the 'ID' list.
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{feature.source},#{feature.type.to_s.sub(/^[^:]+:\/\//, '')},#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}") unless feature.attributes.has_key?('ID')
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.attributes['ID'][0]}") if feature.attributes.has_key?('ID')
     create_triple(set_uri, @base.contains, feature_uri)
     create_triple(feature_uri, RDF.type, @base.Feature)
-    serialize_landmark(graph, set_uri, GFF3Landmark.new(feature.sequence_id)) unless @landmarks.has_key?(feature.sequence_id)
+    serialize_landmark(set_uri, GFF3Landmark.new(feature.sequence_id)) unless @landmarks.has_key?(feature.sequence_id)
     create_triple(feature_uri, @base.seqid, @landmarks[feature.sequence_id])
     create_triple(feature_uri, @base.source, feature.source)
     create_triple(feature_uri, @base.type, feature.type)
     create_triple(feature_uri, @base.phase, feature.phase) if feature.phase
 
-    serialize_coordinate(graph, set_uri, feature_uri, feature)
-    serialize_attributes(graph, set_uri, feature_uri, feature.attributes) unless feature.attributes.keys.empty?
+    serialize_coordinate(set_uri, feature_uri, feature)
+    serialize_attributes(set_uri, feature_uri, feature.attributes) unless feature.attributes.keys.empty?
   end
 
-  def serialize_coordinate(graph, set_uri, feature_uri, feature)
+  def serialize_coordinate(set_uri, feature_uri, feature)
     region_uri = RDF::URI.new("#{feature_uri.to_s}/region")
     start_position_uri = RDF::URI.new("#{feature_uri.to_s}/region/start")
     end_position_uri = RDF::URI.new("#{feature_uri.to_s}/region/end")
@@ -176,10 +171,9 @@ protected
 
   # Serializes a genomic feature landmark ("seqid").
   #
-  # +graph+:: RDF graph to which the landmark is added
   # +set_uri+:: the feature set URI to which the landmark belongs to
   # +landmark+:: encapsuled landmark data
-  def serialize_landmark(graph, set_uri, landmark)
+  def serialize_landmark(set_uri, landmark)
     return if @landmarks.has_key?(landmark.seqid)
     landmark_uri = RDF::URI.new("#{set_uri.to_s}/landmark/#{landmark.seqid}")
     region_uri = RDF::URI.new("#{landmark_uri.to_s}/region")
@@ -201,11 +195,10 @@ protected
 
   # Serializes the attributes of a feature.
   #
-  # +graph+:: RDF graph to which the feature is added
   # +set_uri+:: URI of the set these attributes belong to (implicit due to feature)
   # +feature_uri+:: the feature URI to which the attributes belong to
   # +attribtues+:: a map of tag/value pairs
-  def serialize_attributes(graph, set_uri, feature_uri, attributes)
+  def serialize_attributes(set_uri, feature_uri, attributes)
     attributes.each_pair { |tag, list|
       # Check for defined tags (in alphabetical order), if not matched, serialize as generic Attribute:
       if tag == 'Alias' then
@@ -301,9 +294,9 @@ protected
         create_triple(start_position_uri, BioInterchange::FALDO.start, start_coordinate)
         create_triple(end_position_uri, BioInterchange::FALDO.end, end_coordinate)
       elsif tag == 'Variant_effect' then
-        serialize_variant_effects(graph, set_uri, feature_uri, list)
+        serialize_variant_effects(set_uri, feature_uri, list)
       elsif tag == 'Variant_seq' then
-        serialize_variant_seqs(graph, set_uri, feature_uri, list)
+        serialize_variant_seqs(set_uri, feature_uri, list)
       else
         # TODO Report unknown upper case letters here? That would be a spec. validation...
         #      Well, or it would show that this implementation is incomplete. Could be either.
@@ -323,10 +316,9 @@ protected
   # Serializes a structured attribute (given as a pragma statement), which later
   # can be referred to from feature instances.
   #
-  # +graph+:: RDF graph to which the structured attribute is added
   # +set_uri+:: the feature set URI to which the structured attribute belongs to
   # +pragma+:: a map that encapsulates the structured attribute data
-  def serialize_structured_attribute(graph, set_uri, pragma)
+  def serialize_structured_attribute(set_uri, pragma)
     attribute_uri = RDF::URI.new("#{set_uri.to_s}/structured_attribute/#{pragma.object_id}")
     attributes = nil
     class_type = nil
@@ -406,17 +398,16 @@ protected
 
   # Serializes a list of variant effects.
   #
-  # +graph+:: RDF graph to which the structured attribute is added
   # +set_uri+:: the feature set URI to which the feature belongs to
   # +feature_uri+:: the feature URI to the feature that is annotated with variant data
   # +list+:: list of variant values
-  def serialize_variant_effects(graph, set_uri, feature_uri, list)
+  def serialize_variant_effects(set_uri, feature_uri, list)
     list.each_index { |index|
       effect = list[index]
       sequence_variant, variant_index, feature_type, feature_ids = effect.split(' ', 4)
       feature_ids = feature_ids.split(' ')
       effect_uri = RDF::URI.new("#{feature_uri.to_s}/variant/#{variant_index}/effect/#{index}")
-      serialize_variant_triple(graph, feature_uri, RDF::URI.new("#{feature_uri.to_s}/variant/#{variant_index}"), @base.effect, effect_uri)
+      serialize_variant_triple(feature_uri, RDF::URI.new("#{feature_uri.to_s}/variant/#{variant_index}"), @base.effect, effect_uri)
       create_triple(effect_uri, RDF.type, @base.Effect)
       create_triple(effect_uri, @base.sequenceVariant, BioInterchange::SO.send(BioInterchange.make_safe_label(sequence_variant)))
       create_triple(effect_uri, @base.featureType, BioInterchange::SO.send(BioInterchange.make_safe_label(feature_type)))
@@ -428,26 +419,24 @@ protected
 
   # Serializes a list of variant sequences.
   #
-  # +graph+:: RDF graph to which the structured attribute is added
   # +set_uri+:: the feature set URI to which the feature belongs to
   # +feature_uri+:: the feature URI to the feature that is annotated with variant data
   # +list+:: list of variant values
-  def serialize_variant_seqs(graph, set_uri, feature_uri, list)
+  def serialize_variant_seqs(set_uri, feature_uri, list)
     list.each_index { |index|
       value = list[index]
       variant_uri = RDF::URI.new("#{feature_uri.to_s}/variant/#{index}")
-      serialize_variant_triple(graph, feature_uri, variant_uri, @base.sequence, RDF::Literal.new(value))
+      serialize_variant_triple(feature_uri, variant_uri, @base.sequence, RDF::Literal.new(value))
     }
   end
 
   # Adds a variant to the graph; tracks the variant's URI that RDF.type is only written out once.
   #
-  # +graph+:: RDF graph to which the variant is added
   # +feature_uri+:: the feature URI to the feature that is annotated with variant data
   # +variant_uri+:: URI that identifies the feature in question ("subject", if you like)
   # +predicate+:: predicate that describes the data being serialized
   # +object+:: data to be serialized
-  def serialize_variant_triple(graph, feature_uri, variant_uri, predicate, object)
+  def serialize_variant_triple(feature_uri, variant_uri, predicate, object)
     unless @variants.has_key?(variant_uri.to_s) then
       create_triple(feature_uri, @base.sequence_annotation, variant_uri)
       create_triple(variant_uri, RDF.type, @base.Variant)

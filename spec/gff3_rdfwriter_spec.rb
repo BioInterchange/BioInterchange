@@ -23,7 +23,7 @@ describe BioInterchange::Genomics::RDFWriter do
       istream, ostream = IO.pipe
       BioInterchange::Genomics::RDFWriter.new(ostream).serialize(BioInterchange::Genomics::GFF3FeatureSet.new())
       ostream.close
-      istream.read.lines.count.should eq(1)
+      istream.read.lines.count.should eq(10)
     end
 
     it 'model with three features' do
@@ -70,11 +70,9 @@ describe BioInterchange::Genomics::RDFWriter do
       lines = istream.read.lines
       feature_no = 0
       lines.each { |line|
-        subject, predicate, object = line.chomp.split(/\s/, 3)
-        object.sub!(/\s+\.$/, '')
-        feature_no += 1 if predicate == "<#{RDF.type}>" and object == "<#{BioInterchange::GFVO.Feature}>"
+        feature_no += 1 if line.match(/\sa\s+gfvo:Feature\s+[.,;]$/)
       }
-      lines.count.should be == 55
+      lines.count.should be == 64
       feature_no.should be == 3
     end
   end

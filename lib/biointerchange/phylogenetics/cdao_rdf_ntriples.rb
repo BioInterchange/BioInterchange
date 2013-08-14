@@ -35,7 +35,6 @@ protected
 
   def serialize_model(model, tree)
     graph = RDF::Graph.new
-    graph.fast_ostream(@ostream) if BioInterchange::skip_rdf_graph
     tree_uri = RDF::URI.new(model.uri)
     if model.date then
       graph.insert(RDF::Statement.new(tree_uri, RDF::DC.date, RDF::Literal.new(model.date)))
