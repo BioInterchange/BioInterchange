@@ -71,7 +71,12 @@ protected
 
     graph = RDF::Graph.new
     graph.fast_ostream(@ostream) if BioInterchange::skip_rdf_graph
+
+    # Create a URI prefix that applies to the set, all features in the set, and all the features' annotations.
+    # Then register the prefix with the writer to have a concise Turtle output.
     set_uri = RDF::URI.new(model.uri)
+    set_base(set_uri + '/')
+
     create_triple(set_uri, RDF.type, @base.Set)
     model.pragmas.each { |pragma_name|
       serialize_pragma(graph, set_uri, model.pragma(pragma_name))
@@ -79,7 +84,8 @@ protected
     model.contents.each { |feature|
       serialize_feature(graph, set_uri, feature)
     }
-    RDF::NTriples::Writer.dump(graph, @ostream)
+    close
+    #RDF::NTriples::Writer.dump(graph, @ostream)
     # TODO Figure out why the following is very slow. Use with 'rdf-raptor'.
     #      Having said that, Jena's rdfcat is very good for converting formats
     #      anyway, so perhaps it is not worth investigating the following.
