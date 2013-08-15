@@ -24,6 +24,10 @@ module BioInterchange
     @@format
   end
 
+  # If input/rdf options permit batching, but no batchsize has been provided by
+  # the user, then use this default batch size.
+  @@default_batch_size = 100
+
   # Custom Exceptions and Errors
   require 'biointerchange/exceptions'
 
@@ -122,6 +126,7 @@ module BioInterchange
       opts = [
         ["--help", "-h", Getopt::BOOLEAN],
         ["--debug", "-d", Getopt::BOOLEAN],                     # set debug mode => print stack traces
+        ["--batchsize", "-b", Getopt::OPTIONAL],                # batchsize for readers/writers that support +postpone?+
         ["--ntriples", "-n", Getopt::BOOLEAN],                  # produce N-Triples instead of Turtle
         ["--evaluation", "-z", Getopt::BOOLEAN],                # use RDF gem implementation for mem/speed comparison
         ["--input", "-i", Getopt::REQUIRED],                    # input file format
@@ -157,6 +162,9 @@ module BioInterchange
         puts '  -f <file> / --file <file>          : file to read; STDIN used if not supplied'
         puts '  -o <file> / --out <file>           : output file; STDOUT used if not supplied'
         puts '  -n / --ntriples                    : output RDF N-Triples (instead of RDF Turtle)'
+        puts '  -b <size>/--batchsize <size>       : process input in batches of the given size'
+        puts '                                      (if supported, see below for valid input/rdf pairs;'
+        puts "                                       if supported, but not set, default value is #{@@default_batch_size})"
         puts ''
         puts 'Other options:'
         puts '  -v / --version                     : print the Gem\'s version number and exit'
@@ -196,11 +204,21 @@ module BioInterchange
       # Check if the input/rdf options are supported:
       unsupported_combination unless Registry.is_supported?(opt['input'], opt['rdf'])
       
+      # If a batchsize is given, then use it. Otherwise, check if the input/rdf combination
+      # supports batching and set a default batch value.
+      if opt['batchsize'] then
+        batching_not_supported unless Registry.is_supporting_batch_processing?(opt['input'], opt['rdf'])
+        wrong_type('batchsize', 'a positive integer') unless opt['batchsize'].match(/^[1-9][0-9]*$/)
+      elsif Registry.is_supporting_batch_processing?(opt['input'], opt['rdf']) then
+        opt['batchsize'] = @@default_batch_size
+      end
+
       # Create a parameter map that can be passed along to Reader implementations:
       map = {
         'input'  => opt['input'],
         'output' => opt['output']
       }
+      map['batchsize'] = opt['batchsize'].to_i if opt['batchsize']
       opt.each_key { |key|
         map[key.sub(/^annotate_/, '')] = opt[key] if key.start_with?('annotate_')
       }

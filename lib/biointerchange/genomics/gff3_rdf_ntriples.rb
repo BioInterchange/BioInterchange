@@ -221,7 +221,13 @@ protected
             # Second, and finally: add a triple to the graph in the right representative format depending on the ontology used
             create_triple(feature_uri, @base.dbxref, linkout)
           rescue NoMethodError
-            raise BioInterchange::Exceptions::InputFormatError, 'Attribute Dbxref link-out is not resolvable, i.e. the name cannot be turned into an URL.'
+            # Preserve the Dbxref as a Literal:
+            @dbxref = 0 if @dbxref == nil
+            literal_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/dbxref/#{@dbxref}")
+            @dbxref += 1
+            create_triple(feature_uri, @base.dbxref, literal_uri)
+            create_triple(literal_uri, RDF.type, RDF::RDFS.Literal)
+            create_triple(literal_uri, RDF.value, value)
           end
         }
       elsif tag == 'Derives_from' then
@@ -269,8 +275,6 @@ protected
         }
       elsif tag == 'Target' then
         target_id, start_coordinate, end_coordinate, strand = list.join(',').split(/\s+/, 4)
-        target_datatype_properties = @base.target_properties.select { |uri| @base.is_datatype_property?(uri) }[0]
-        target_object_properties = @base.target_properties.select { |uri| @base.is_object_property?(uri) }[0]
         target_uri = RDF::URI.new("#{feature_uri.to_s}/target/#{target_id}")
         create_triple(feature_uri, @base.target, target_uri)
         create_triple(target_uri, RDF.type, @base.Target)
@@ -291,8 +295,8 @@ protected
           create_triple(start_position_uri, RDF.type, BioInterchange::FALDO.Position)
           create_triple(end_position_uri, RDF.type, BioInterchange::FALDO.Position)
         end
-        create_triple(start_position_uri, BioInterchange::FALDO.start, start_coordinate)
-        create_triple(end_position_uri, BioInterchange::FALDO.end, end_coordinate)
+        create_triple(start_position_uri, BioInterchange::FALDO.position, start_coordinate)
+        create_triple(end_position_uri, BioInterchange::FALDO.position, end_coordinate)
       elsif tag == 'Variant_effect' then
         serialize_variant_effects(set_uri, feature_uri, list)
       elsif tag == 'Variant_seq' then
