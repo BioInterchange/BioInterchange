@@ -41,7 +41,8 @@ class RDFWriter < BioInterchange::Writer
   # Serialize a model as RDF.
   #
   # +model+:: a generic representation of input data that is derived from BioInterchange::Genomics::GFF3FeatureSet
-  def serialize(model)
+  # +uri_prefix+:: optional URI prefix that replaces the default URI prefix for all set/feature/annotation URIs
+  def serialize(model, uri_prefix = nil)
     if model.instance_of?(BioInterchange::Genomics::GFF3FeatureSet) then
       @format = :gff3
     elsif model.instance_of?(BioInterchange::Genomics::GVFFeatureSet) then
@@ -52,7 +53,7 @@ class RDFWriter < BioInterchange::Writer
                            'BioInterchange::Genomics::GVFFeatureSet.'
     end
     @base = BioInterchange::GFVO
-    serialize_model(model)
+    serialize_model(model, uri_prefix)
   end
 
 protected
@@ -60,7 +61,8 @@ protected
   # Serializes RDF for a feature set representation.
   #
   # +model+:: an instance of +BioInterchange::Genomics::GFF3FeatureSet+
-  def serialize_model(model)
+  # +set_uri+:: optional URI prefix that should be used for a set instance (and hence, all its dependents -- features, annotations, etc.)
+  def serialize_model(model, set_uri)
     # We record landmarks, because they can either be written when their "##sequence-region"
     # pragma statement appears, or otherwise, when the first feature with said landmark is
     # being serialized.
@@ -71,7 +73,8 @@ protected
 
     # Create a URI prefix that applies to the set, all features in the set, and all the features' annotations.
     # Then register the prefix with the writer to have a concise Turtle output.
-    set_uri = RDF::URI.new(model.uri)
+    set_uri = set_uri[0..-2] if set_uri and set_uri.end_with?('/')
+    set_uri = RDF::URI.new(model.uri) unless set_uri
     set_base(set_uri + '/')
 
     create_triple(set_uri, RDF.type, @base.Set)
@@ -79,7 +82,11 @@ protected
       serialize_pragma(set_uri, model.pragma(pragma_name))
     }
     model.contents.each { |feature|
-      serialize_feature(set_uri, feature)
+      if feature.instance_of?(BioInterchange::Genomics::GFF3FeatureSequence) then
+        serialize_feature_sequence(set_uri, feature)
+      else
+        serialize_feature(set_uri, feature)
+      end
     }
     close
     #RDF::NTriples::Writer.dump(graph, @ostream)
@@ -235,18 +242,20 @@ protected
           create_triple(feature_uri, @base.derivesFrom, RDF::URI.new("#{set_uri.to_s}/feature/#{value}"))
         }
       elsif tag == 'Gap' then
-        # TODO
-        # graph.insert(RDF::Statement.new(feature_uri, @base.gap, RDF::Literal.new(list.join(','))))
-        # create_triple(feature_uri, @base.gap, ...)
+        # Handled by 'Target', because 'Gap' requires 'Target' to be present.
       elsif tag == 'ID' then
         list.each { |value|
           create_triple(feature_uri, @base.id, value)
         }
       elsif tag == 'Is_circular' then
         value = list.join(',')
-        create_triple(feature_uri, @base.isCircular, true) if value == 'true'
-        create_triple(feature_uri, @base.isCircular, false) if value == 'false'
-        # TODO Report invalid value.
+        if value == 'true' then
+          create_triple(feature_uri, @base.isCircular, true) if value == 'true'
+        elsif value == 'false' then
+          create_triple(feature_uri, @base.isCircular, false) if value == 'false'
+        else
+          create_triple(feature_uri, RDF::RDFS.comment, "Is_circular non-truth value: #{value}")
+        end
       elsif tag == 'Name' then
         list.each { |value|
           create_triple(feature_uri, @base.name, value)
@@ -288,15 +297,57 @@ protected
         if strand == '+' then
           create_triple(start_position_uri, RDF.type, BioInterchange::FALDO.Positive_strand)
           create_triple(end_position_uri, RDF.type, BioInterchange::FALDO.Positive_strand)
+          create_triple(start_position_uri, BioInterchange::FALDO.position, start_coordinate)
+          create_triple(end_position_uri, BioInterchange::FALDO.position, end_coordinate)
         elsif strand == '-' then
           create_triple(start_position_uri, RDF.type, BioInterchange::FALDO.Negative_strand)
           create_triple(end_position_uri, RDF.type, BioInterchange::FALDO.Negative_strand)
+          # Reverse start/end coordinates on the negative strand; FALDO requirement:
+          create_triple(start_position_uri, BioInterchange::FALDO.position, end_coordinate)
+          create_triple(end_position_uri, BioInterchange::FALDO.position, start_coordinate)
         else
           create_triple(start_position_uri, RDF.type, BioInterchange::FALDO.Position)
           create_triple(end_position_uri, RDF.type, BioInterchange::FALDO.Position)
+          create_triple(start_position_uri, BioInterchange::FALDO.position, start_coordinate)
+          create_triple(end_position_uri, BioInterchange::FALDO.position, end_coordinate)
         end
-        create_triple(start_position_uri, BioInterchange::FALDO.position, start_coordinate)
-        create_triple(end_position_uri, BioInterchange::FALDO.position, end_coordinate)
+
+        # Describe a possible alignment between the feature and target:
+        if attributes.has_key?('Gap') then
+          attributes['Gap'].each_index { |gap_no|
+            cigar_line = attributes['Gap'][gap_no].split(/\s+/)
+            cigar_line.each_index { |alignment_no|
+              alignment_uri = RDF::URI.new("#{feature_uri.to_s}/alignment/#{gap_no}/#{alignment_no}")
+              create_triple(feature_uri, @base.alignment, alignment_uri) if alignment_no == 0
+              operation = cigar_line[alignment_no].gsub(/[^MIDFR]/, '')
+              operation = nil unless operation.length == 1
+              span = cigar_line[alignment_no].gsub(/[^0-9]/, '')
+              span = nil unless span.length > 0
+              if operation == 'M' then
+                create_triple(alignment_uri, RDF.type, @base.Match)
+              elsif operation == 'I' then
+                create_triple(alignment_uri, RDF.type, @base.Reference_Sequence_Gap)
+              elsif operation == 'D' then
+                create_triple(alignment_uri, RDF.type, @base.Target_Sequence_Gap)
+              elsif operation == 'F' then
+                create_triple(alignment_uri, RDF.type, @base.Forward_Reference_Sequence_Frameshift)
+              elsif operation == 'R' then
+                create_triple(alignment_uri, RDF.type, @base.Reverse_Reference_Sequence_Frameshift)
+              else
+                # Fallback: operation is outside of the specification
+                create_triple(alignment_uri, RDF.type, @base.Alignment_Operation)
+                create_triple(alignment_uri, RDF::RDFS.comment, "Alignment operation: #{operation}") if operation and not operation.empty?
+              end
+              create_triple(alignment_uri, @base.span, span.to_i) if span
+              create_triple(alignment_uri, RDF.first, alignment_uri)
+              if alignment_no + 1 < cigar_line.length then
+                create_triple(alignment_uri, RDF.rest, RDF::URI.new("#{feature_uri.to_s}/alignment/#{gap_no}/#{alignment_no + 1}"))
+              else
+                create_triple(alignment_uri, RDF.rest, RDF.nil)
+              end
+            }
+          }
+        end
       elsif tag == 'Variant_effect' then
         serialize_variant_effects(set_uri, feature_uri, list)
       elsif tag == 'Variant_seq' then
@@ -432,6 +483,14 @@ protected
       variant_uri = RDF::URI.new("#{feature_uri.to_s}/variant/#{index}")
       serialize_variant_triple(feature_uri, variant_uri, @base.sequence, RDF::Literal.new(value))
     }
+
+    # Return the variant type based on the present sequence(s):
+    return @base.Variant if list.length != 2
+    if list[0].match(/a-zA-Z/) and list[1].match(/a-zA-Z/) then
+      return @base.HomozygousVariant if list[0] == list[1]
+      return @base.HeterozygousVariant
+    end
+    return @base.Variant
   end
 
   # Adds a variant to the graph; tracks the variant's URI that RDF.type is only written out once.
@@ -448,6 +507,20 @@ protected
     @variants[variant_uri.to_s] = true
     create_triple(variant_uri, predicate, object)
   end
+
+  # Serializes a +GFF3FeatureSequence+ object that contains the sequence for a feature object.
+  #
+  # +set_uri+:: the feature set URI to which the feature belongs to
+  # +feature_sequence+:: a +GFF3FeatureSequence+ instance
+  def serialize_feature_sequence(set_uri, feature_sequence)
+    feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature_sequence.feature_id}")
+    annotation_uri = RDF::URI.new("#{feature_uri.to_s}/sequence")
+    create_triple(feature_uri, @base.sequence_annotation, annotation_uri)
+    create_triple(annotation_uri, RDF.type, @base.Sequence_Annotation)
+    create_triple(annotation_uri, RDF::RDFS.comment, feature_sequence.comment) if feature_sequence.comment
+    create_triple(annotation_uri, @base.sequence, feature_sequence.sequence)
+  end
+
 end
 
 end

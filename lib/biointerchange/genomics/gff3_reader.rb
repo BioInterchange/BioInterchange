@@ -71,14 +71,32 @@ protected
     feature_no = 0
 
     # Note: there is a `while true` statement at the end of this block!
+    fasta_block = false
+    fasta_id = nil
+    fasta_comment = nil
+    fasta_sequence = nil
     begin
       line = gff3.readline
       line.chomp!
 
       next if line.start_with?('#') and not line.start_with?('##')
 
-      # Ignore sequences for now.
-      break if line.start_with?('##FASTA')
+      if line.start_with?('##FASTA') then
+        fasta_block = true
+        next
+      end
+
+      if fasta_block then
+        if line.start_with?('>') and line.length > 1 then
+          @feature_set.add(BioInterchange::Genomics::GFF3FeatureSequence.new(fasta_id, fasta_sequence, fasta_comment)) if fasta_id and not fasta_sequence.empty?()
+          fasta_id = line[1..-1].strip
+          fasta_id, fasta_comment = fasta_id.split(' ', 2)
+          fasta_sequence = ''
+        else
+          fasta_sequence << line.strip
+        end
+        next
+      end
 
       unless line.start_with?('##') then
         add_feature(@feature_set, line)
@@ -93,6 +111,7 @@ protected
       end
     rescue EOFError
       # Expected. Do nothing, since just the end of the file/input has been reached.
+      @feature_set.add(BioInterchange::Genomics::GFF3FeatureSequence.new(fasta_id, fasta_sequence, fasta_comment)) if fasta_id and not fasta_sequence.empty?()
       break
     end while true
 
@@ -186,7 +205,7 @@ protected
   # +attribute_string+:: key/value string (column 9) as seen in a GFF3/GVF file
   def split_attributes(attribute_string)
     attributes = {}
-    attribute_string.split(';').map { |assignment| match = assignment.match(/([^=]+)=(.+)/) ; { match[1].strip => match[2].split(',').map { |value| value.strip } } }.map { |hash| hash.each_pair { |tag,list| attributes[tag] = list } }
+    attribute_string.split(';').map { |assignment| match = assignment.match(/([^=]+)=(.+)/) ; { match[1].strip => match[2].split(',').map { |value| URI.decode(value.strip) } } }.map { |hash| hash.each_pair { |tag,list| attributes[tag] = list } }
     attributes
   end
 

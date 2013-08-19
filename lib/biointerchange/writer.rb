@@ -17,29 +17,30 @@ class Writer
   # Serializes an object model instance.
   #
   # +model+:: an object model instance
-  def serialize(model)
+  # +uri_prefix+:: optional URI prefix that should be used in the RDFization of individuals/class instances
+  def serialize(model, uri_prefix = nil)
     raise BioInterchange::Exceptions::ImplementationWriterError, 'You must implement this method, which takes an object model and serializes it into the output stream provided as constructor (\'initialize\') argument.'
   end
 
   # Creates a new triple and serializes it.
   #
-  # +subject+::
-  # +predicate+::
-  # +object+::
-  # +type+::
+  # +subject+:: a string or RDF::URI instance denoting the subject of the triple
+  # +predicate+:: a string or RDF::URI instance denoting the predicate of the triple
+  # +object+:: RDF::URI instance for URIs or other Ruby class for literals
+  # +datatype+:: optional datatype describing literal types
   def create_triple(subject, predicate, object, datatype = nil)
     subject_uri = subject
     subject_uri = subject_uri.to_s unless subject_uri.instance_of?(String)
-    subject_uri = "<#{subject_uri}>"
+    subject_uri = "<#{subject_uri}>".sub(/\s/, '%20')
 
     predicate_uri = predicate
     predicate_uri = predicate_uri.to_s unless predicate_uri.instance_of?(String)
-    predicate_uri = "<#{predicate_uri}>"
+    predicate_uri = "<#{predicate_uri}>".sub(/\s/, '%20')
 
     object_representation = nil
     if object.kind_of?(RDF::URI) then
       object_uri = object.to_s
-      object_representation = "<#{object_uri}>"
+      object_representation = "<#{object_uri}>".sub(/\s/, '%20')
     else
       if datatype then
         # TODO Append type.
@@ -70,12 +71,13 @@ class Writer
     end
   end
 
+  # Sets the base URI prefix that is output/used when serializing triples in Turtle.
   def set_base(uri_prefix)
     uri_prefix(nil)
     @prefixes["<#{uri_prefix}"] = '<'
   end
 
-  #
+  # Adds a URI prefix that should be abbreviated when serializing triples in Turtle.
   def add_prefix(uri_prefix, abbreviation_prefix)
     uri_prefix(nil)
     @prefixes["<#{uri_prefix}"] = "#{abbreviation_prefix}:"
@@ -83,9 +85,10 @@ class Writer
 
 private
 
+  # Abbreviates a given URI or returns `nil` when the URI cannot be shortened.
   #
+  # +uri+:: URI that should be shortened
   def uri_prefix(uri)
-    #
     @prefixes = {
       '<http://biohackathon.org/resource/faldo#'     => 'faldo:',
       '<http://purl.obolibrary.org/obo/'             => 'obo:',

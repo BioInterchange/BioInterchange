@@ -24,6 +24,9 @@ module BioInterchange
     @@format
   end
 
+  # Default URI prefix that is used when RDFizing data:
+  @@default_uri_prefix = ''
+
   # If input/rdf options permit batching, but no batchsize has been provided by
   # the user, then use this default batch size.
   @@default_batch_size = 100
@@ -84,6 +87,7 @@ module BioInterchange
   require 'biointerchange/genomics/gff3_pragmas'
   require 'biointerchange/genomics/gff3_feature_set'
   require 'biointerchange/genomics/gff3_feature'
+  require 'biointerchange/genomics/gff3_feature_sequence.rb'
 
   # Writer
   require 'biointerchange/genomics/gff3_rdf_ntriples'
@@ -129,6 +133,7 @@ module BioInterchange
         ["--batchsize", "-b", Getopt::OPTIONAL],                # batchsize for readers/writers that support +postpone?+
         ["--ntriples", "-n", Getopt::BOOLEAN],                  # produce N-Triples instead of Turtle
         ["--evaluation", "-z", Getopt::BOOLEAN],                # use RDF gem implementation for mem/speed comparison
+        ["--uri", "-u", Getopt::OPTIONAL],                      # URI prefix to use when serializing RDF
         ["--input", "-i", Getopt::REQUIRED],                    # input file format
         ["--rdf", "-r", Getopt::REQUIRED],                      # output file format
         ["--file", "-f", Getopt::OPTIONAL],                     # file to read, will read from STDIN if not supplied
@@ -162,6 +167,8 @@ module BioInterchange
         puts '  -f <file> / --file <file>          : file to read; STDIN used if not supplied'
         puts '  -o <file> / --out <file>           : output file; STDOUT used if not supplied'
         puts '  -n / --ntriples                    : output RDF N-Triples (instead of RDF Turtle)'
+        puts '  -u <uri> / --uri <prefix>          : URI prefix to use'
+        puts "                                       (default: #{@@default_uri_prefix})"
         puts '  -b <size>/--batchsize <size>       : process input in batches of the given size'
         puts '                                      (if supported, see below for valid input/rdf pairs;'
         puts "                                       if supported, but not set, default value is #{@@default_batch_size})"
@@ -173,7 +180,7 @@ module BioInterchange
         puts '                                       only included for performance evaluation comparisons)'
         puts '  -h  --help                         : this message'
         puts ''
-        puts 'Input-/RDF-format specific options:'
+        puts 'Input-/output-format specific options:'
         reader_writer_pairs.each_index { |reader_writer_pair_index|
           reader_id, writer_id = reader_writer_pairs[reader_writer_pair_index]
           puts "  Input format  : #{reader_id}"
@@ -246,7 +253,7 @@ module BioInterchange
       
       begin
         model = reader.deserialize(input_source)
-        writer.serialize(model)
+        writer.serialize(model, opt['uri'])
       end while reader.postponed?
 
     rescue Interrupt

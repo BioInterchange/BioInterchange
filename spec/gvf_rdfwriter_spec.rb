@@ -18,6 +18,7 @@ load 'lib/biointerchange/genomics/gvf_feature.rb'
 load 'lib/biointerchange/genomics/gff3_rdf_ntriples.rb'
 load 'lib/biointerchange/genomics/gff3_feature_set.rb'
 load 'lib/biointerchange/genomics/gff3_feature.rb'
+load 'lib/biointerchange/genomics/gff3_feature_sequence.rb'
 $VERBOSE = v
 
 describe BioInterchange::Genomics::RDFWriter do
