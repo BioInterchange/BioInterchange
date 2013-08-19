@@ -21,14 +21,12 @@ Ontologies used in the RDF output:
 
 * [Comparative Data Analysis Ontology](http://sourceforge.net/apps/mediawiki/cdao/index.php?title=Main_Page) (CDAO)
 * [Friend of a Friend](http://xmlns.com/foaf/spec) (FOAF)
-* [Generic Feature Format Version 3 Ontology](http://www.biointerchange.org/ontologies.html) (GFF3O)
-* [Genome Variation Format Version 1 Ontology](http://www.biointerchange.org/ontologies.html) (GVF1O)
 * [Genomic Feature and Variation Ontology](http://www.biointerchange.org/ontologies.html) (GFVO)
 * [Semanticscience Integrated Ontology](http://code.google.com/p/semanticscience/wiki/SIO) (SIO)
 * [Sequence Ontology](http://www.sequenceontology.org/index.html) (SO)
 * [Sequence Ontology Feature Annotation](http://www.sequenceontology.org/index.html) (SOFA)
 
-*Note:* GFF3O and GVF1O will be replaced by GFVO with the next release of BioInterchange.
+*Note:* GFVO replaces the [Generic Feature Format Version 3 Ontology](http://www.biointerchange.org/ontologies.html) (GFF3O) and [Genome Variation Format Version 1 Ontology](http://www.biointerchange.org/ontologies.html) (GVF1O).
 
 #### Contributing
 
@@ -54,7 +52,7 @@ BioInterchange's command-line tool `biointerchange` can be installed as a comman
 
 Examples:
 
-    biointerchange --input biointerchange.gvf --rdf rdf.biointerchange.gvf --batchsize 100 --file examples/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf
+    biointerchange --input biointerchange.gvf --rdf rdf.biointerchange.gfvo --file examples/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf
     biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.10096561.json --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
     biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007-8-3-R40.xml --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
     biointerchange --input phylotastic.newick --rdf rdf.phylotastic.newick --file examples/tree2.new --annotate_date '1 June 2006'
@@ -69,8 +67,7 @@ Input formats:
 
 Output formats:
 
-*  `rdf.biointerchange.gff3`
-*  `rdf.biointerchange.gvf`
+*  `rdf.biointerchange.gfvo`
 *  `rdf.bh12.sio`
 *  `rdf.phylotastic.newick`
 
@@ -322,9 +319,10 @@ The writer takes an object model and serializes it via the `BioInterchange::Writ
       # Serialize a model as RDF.
       #
       # +model+:: a generic representation of input data that is an instance of BioInterchange::Phylogenetics::TreeSet
-      def serialize(model)
+      # +uri_prefix+:: optional URI prefix that should be used in the RDFization of individuals/class instances
+      def serialize(model, uri_prefix = nil)
         model.contents.each { |tree|
-          serialize_model(model, tree)
+          serialize_model(model, tree, uri_prefix)
         }
       end
     
@@ -501,8 +499,7 @@ RDFization parameters and data are send as a single HTTP POST requests containin
    *  `phylotastic.newick`: [Newick](http://evolution.genetics.washington.edu/phylip/newicktree.html)
    *  `uk.ac.man.pdfx`: [PDFx](http://pdfx.cs.man.ac.uk) XML
 *  `OUTPUT_METHOD`: determines the RDFization method that should be used, output will always be RDF N-Triples; available output formats are
-   *  `rdf.biointerchange.gff3`: RDFization of `biointerchange.gff3`
-   *  `rdf.biointerchange.gvf`: RDFization of `biointerchange.gvf`
+   *  `rdf.biointerchange.gfvo`: RDFization of `biointerchange.gff3` or `biointerchange.gvf`
    *  `rdf.bh12.sio`: RDFization of `dbcls.catanns.json` or `uk.ac.man.pdfx`
    *  `rdf.phylotastic.newick`: RDFization of `phylotastic.newick`
 *  `URL_ENCODED_DATA`: data for RDFization as [URL encoded](http://en.wikipedia.org/wiki/Percent-encoding) string
