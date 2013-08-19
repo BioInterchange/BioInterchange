@@ -26,9 +26,10 @@ class RDFWriter < BioInterchange::Writer
   # Serializes a model as RDF.
   #
   # +model+:: a generic representation of input data that is derived from BioInterchange::TextMining::Document
-  def serialize(model)
+  # +uri_prefix+:: optional URI prefix that should be used in the RDFization of individuals/class instances
+  def serialize(model, uri_prefix = nil)
     if model.instance_of?(BioInterchange::TextMining::Document) then
-      serialize_document(model)
+      serialize_document(model, uri_prefix)
     else
       raise BioInterchange::Exceptions::ImplementationWriterError, 'The provided model cannot be serialized at the moment. ' +
                            'Supported classes are BioInterchange::TextMining::Document (and that\'s it for now).'
@@ -97,9 +98,11 @@ private
   # (http://code.google.com/p/semanticscience/wiki/SIO).
   #
   # +model+:: an instance of +BioInterchange::TextMining::Document+
-  def serialize_document(model)
+  # +uri_prefix+:: optional URI prefix that should be used in the RDFization of individuals/class instances
+  def serialize_document(model, uri_prefix)
     graph = RDF::Graph.new
-    document_uri = RDF::URI.new(model.uri)
+    document_uri = RDF::URI.new(uri_prefix) if uri_prefix
+    document_uri = RDF::URI.new(model.uri) unless document_uri
     graph.insert(RDF::Statement.new(document_uri, RDF.type, BioInterchange::SIO.document))
     model.contents.each { |content|
       if content.kind_of?(BioInterchange::TextMining::Content)

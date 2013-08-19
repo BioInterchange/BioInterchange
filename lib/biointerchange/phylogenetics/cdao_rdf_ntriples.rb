@@ -25,17 +25,19 @@ class CDAORDFWriter < BioInterchange::Writer
   # Serialize a model as RDF.
   #
   # +model+:: a generic representation of input data that is an instance of BioInterchange::Phylogenetics::TreeSet
-  def serialize(model)
+  # +uri_prefix+:: optional URI prefix that should be used in the RDFization of individuals/class instances
+  def serialize(model, uri_prefix = nil)
     model.contents.each { |tree|
-      serialize_model(model, tree)
+      serialize_model(model, tree, uri_prefix)
     }
   end
 
 protected
 
-  def serialize_model(model, tree)
+  def serialize_model(model, tree, uri_prefix = nil)
     graph = RDF::Graph.new
-    tree_uri = RDF::URI.new(model.uri)
+    tree_uri = RDF::URI.new(uri_prefix) if uri_prefix
+    tree_uri = RDF::URI.new(model.uri) unless tree_uri
     if model.date then
       graph.insert(RDF::Statement.new(tree_uri, RDF::DC.date, RDF::Literal.new(model.date)))
     end
