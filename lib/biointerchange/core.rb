@@ -105,6 +105,18 @@ module BioInterchange
   # Writer
   # ...same GFF3 writer
 
+  ### VCF ###
+
+  # Reader
+  require 'biointerchange/genomics/vcf_reader'
+
+  # Feature base model
+  require 'biointerchange/genomics/vcf_feature_set'
+  require 'biointerchange/genomics/vcf_feature'
+
+  # Writer
+  # ...same GFF3 writer
+
   #
   # PHYLOGENETICS
   #

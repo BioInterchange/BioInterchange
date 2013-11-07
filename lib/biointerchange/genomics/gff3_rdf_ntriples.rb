@@ -29,6 +29,13 @@ class RDFWriter < BioInterchange::Writer
     true,
     'Genomic Feature and Variation Ontology (GFVO) based RDFization'
   )
+  BioInterchange::Registry.register_writer(
+    'rdf.biointerchange.gfvo',
+    BioInterchange::Genomics::RDFWriter,
+    [ 'biointerchange.vcf' ],
+    true,
+    'Genomic Feature and Variation Ontology (GFVO) based RDFization'
+  )
 
   # Creates a new instance of a RDFWriter that will use the provided output stream to serialize RDF.
   #
@@ -47,10 +54,12 @@ class RDFWriter < BioInterchange::Writer
       @format = :gff3
     elsif model.instance_of?(BioInterchange::Genomics::GVFFeatureSet) then
       @format = :gvf
+    elsif model.instance_of?(BioInterchange::Genomics::VCFFeatureSet) then
+      @format = :vcf
     else
       raise BioInterchange::Exceptions::ImplementationWriterError, 'The provided model cannot be serialized. ' +
-                           'This writer supports serialization for BioInterchange::Genomics::GFF3FeatureSet and '
-                           'BioInterchange::Genomics::GVFFeatureSet.'
+                           'This writer supports serialization for BioInterchange::Genomics::GFF3FeatureSet, ' +
+                           'BioInterchange::Genomics::GVFFeatureSet and BioInterchange::Genomics::VCFFeatureSet.'
     end
     @base = BioInterchange::GFVO
     serialize_model(model, uri_prefix)
@@ -108,6 +117,8 @@ protected
         create_triple(set_uri, @base.gff_version, pragma['gff-version'], RDF::XSD.float)
       elsif pragma.has_key?('gvf-version') then
         create_triple(set_uri, @base.gvf_version, pragma['gvf-version'], RDF::XSD.float)
+      elsif pragma.has_key?('fileformat') then
+        create_triple(set_uri, @base.vcf_version, pragma['fileformat'], RDF::XSD.float)
       elsif pragma.has_key?('sequence-region') then
         pragma['sequence-region'].keys.each { |seqid|
           serialize_landmark(set_uri, pragma['sequence-region'][seqid])
