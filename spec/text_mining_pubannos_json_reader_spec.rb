@@ -2,6 +2,8 @@
 require 'rubygems'
 require 'rspec'
 
+require 'biointerchange'
+
 describe BioInterchange::TextMining::PubAnnosJSONReader do
   describe 'deserialization of pubannos json text-mining documents' do
   

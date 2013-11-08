@@ -3,6 +3,8 @@ require 'rubygems'
 require 'rspec'
 require 'bio'
 
+require 'biointerchange'
+
 describe BioInterchange::Phylogenetics::NewickReader do
   describe 'deserialization of Newick trees' do
     it 'empty document' do

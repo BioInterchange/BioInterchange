@@ -2,6 +2,8 @@
 require 'rubygems'
 require 'rspec'
 
+require 'biointerchange'
+
 describe BioInterchange::TextMining::PDFxXMLReader do
   describe 'deserialization of pdfx text-mining documents' do
   

@@ -2,6 +2,8 @@
 require 'rubygems'
 require 'rspec'
 
+require 'biointerchange'
+
 describe BioInterchange::TextMining::RDFWriter do
   describe 'serialization of text-mining documents' do
     it 'empty document' do

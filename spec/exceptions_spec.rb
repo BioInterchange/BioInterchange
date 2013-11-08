@@ -2,6 +2,8 @@
 require 'rubygems'
 require 'rspec'
 
+require 'biointerchange'
+
 describe BioInterchange::Exceptions do
   describe 'error and exception creation tests' do
     it 'raising of InputFormatError' do

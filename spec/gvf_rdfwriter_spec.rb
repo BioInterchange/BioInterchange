@@ -2,6 +2,8 @@
 require 'rubygems'
 require 'rspec'
 
+require 'biointerchange'
+
 describe BioInterchange::Genomics::RDFWriter do
   describe 'serialization of GVF models' do
     it 'empty document' do
