@@ -2,22 +2,6 @@
 require 'rubygems'
 require 'rspec'
 
-# Turn off verbose reporting here, since class definitions may be loaded multiple
-# times here. That reports that constants have been already been initialized, which
-# is true, but they are only "re-initialized" with the very same values.
-v, $VERBOSE = $VERBOSE, nil
-load 'lib/biointerchange/core.rb'
-load 'lib/biointerchange/gfvo.rb'
-load 'lib/biointerchange/sofa.rb'
-load 'lib/biointerchange/reader.rb'
-load 'lib/biointerchange/model.rb'
-load 'lib/biointerchange/writer.rb'
-load 'lib/biointerchange/genomics/gff3_rdf_ntriples.rb'
-load 'lib/biointerchange/genomics/gff3_feature_set.rb'
-load 'lib/biointerchange/genomics/gff3_feature.rb'
-load 'lib/biointerchange/genomics/gff3_feature_sequence.rb'
-$VERBOSE = v
-
 describe BioInterchange::Genomics::RDFWriter do
   describe 'serialization of GFF3 models' do
     it 'empty document' do
