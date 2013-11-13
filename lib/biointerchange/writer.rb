@@ -12,6 +12,13 @@ class Writer
   def initialize(ostream)
     raise BioInterchange::Exceptions::ImplementationWriterError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO)
     @ostream = ostream
+    @prefixes = {
+      '<http://purl.org/dc/terms/'                   => 'dc:',
+      '<http://www.w3.org/1999/02/22-rdf-syntax-ns#' => 'rdf:',
+      '<http://www.w3.org/2000/01/rdf-schema#'       => 'rdfs:',
+      '<http://www.w3.org/2002/07/owl#'              => 'owl:',
+      '<http://www.w3.org/2001/XMLSchema#'           => 'xsd:'
+    }
   end
 
   # Serializes an object model instance.
@@ -62,6 +69,8 @@ class Writer
       # such as "head".
       exit 0
     end
+
+    subject
   end
 
   # Finishes serializing triples.
@@ -73,13 +82,11 @@ class Writer
 
   # Sets the base URI prefix that is output/used when serializing triples in Turtle.
   def set_base(uri_prefix)
-    uri_prefix(nil)
     @prefixes["<#{uri_prefix}"] = '<'
   end
 
   # Adds a URI prefix that should be abbreviated when serializing triples in Turtle.
   def add_prefix(uri_prefix, abbreviation_prefix)
-    uri_prefix(nil)
     @prefixes["<#{uri_prefix}"] = "#{abbreviation_prefix}:"
   end
 
@@ -89,21 +96,10 @@ private
   #
   # +uri+:: URI that should be shortened
   def uri_prefix(uri)
-    @prefixes = {
-      '<http://biohackathon.org/resource/faldo#'     => 'faldo:',
-      '<http://purl.obolibrary.org/obo/'             => 'obo:',
-      '<http://purl.org/dc/terms/'                   => 'dc:',
-      '<http://www.biointerchange.org/gfvo#'         => 'gfvo:',
-      '<http://www.w3.org/1999/02/22-rdf-syntax-ns#' => 'rdf:',
-      '<http://www.w3.org/2000/01/rdf-schema#'       => 'rdfs:',
-      '<http://www.w3.org/2001/XMLSchema#'           => 'xsd:',
-      '<http://www.w3.org/2002/07/owl#'              => 'owl:'
-    } unless @prefixes
-
     return nil unless uri
 
     @prefixes.keys.each { |prefix|
-      return prefix if uri.start_with?(prefix)
+      return prefix if uri.start_with?(prefix) and not "#{prefix}>" == uri
     }
     nil
   end

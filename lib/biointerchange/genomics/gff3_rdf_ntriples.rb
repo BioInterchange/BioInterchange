@@ -41,8 +41,7 @@ class RDFWriter < BioInterchange::Writer
   #
   # +ostream+:: instance of an IO class or derivative that is used for RDF serialization
   def initialize(ostream)
-    raise BioInterchange::Exceptions::ImplementationWriterError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO)
-    @ostream = ostream
+    super(ostream)
   end
 
   # Serialize a model as RDF.
@@ -85,6 +84,10 @@ protected
     set_uri = set_uri[0..-2] if set_uri and set_uri.end_with?('/')
     set_uri = RDF::URI.new(model.uri) unless set_uri
     set_base(set_uri + '/')
+
+    add_prefix('http://biohackathon.org/resource/faldo#', 'faldo')
+    add_prefix('http://www.biointerchange.org/gfvo#', 'gfvo')
+    add_prefix('http://semanticscience.org/resource/', 'sio')
 
     create_triple(set_uri, RDF.type, @base.Set)
     model.pragmas.each { |pragma_name|

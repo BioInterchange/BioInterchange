@@ -19,8 +19,7 @@ class RDFWriter < BioInterchange::Writer
   #
   # +ostream+:: instance of an IO class or derivative that is used for RDF serialization
   def initialize(ostream)
-    raise BioInterchange::Exceptions::ImplementationWriterError, 'The output stream is not an instance of IO or its subclasses.' unless ostream.kind_of?(IO) || ostream.kind_of?(StringIO)
-    @ostream = ostream
+    super(ostream)
   end
 
   # Serializes a model as RDF.
@@ -103,7 +102,9 @@ private
     graph = RDF::Graph.new
     document_uri = RDF::URI.new(uri_prefix) if uri_prefix
     document_uri = RDF::URI.new(model.uri) unless document_uri
-    graph.insert(RDF::Statement.new(document_uri, RDF.type, BioInterchange::SIO.document))
+    set_base(document_uri)
+    add_prefix('http://semanticscience.org/resource/', 'sio')
+    create_triple(document_uri, RDF.type, BioInterchange::SIO.document)
     model.contents.each { |content|
       if content.kind_of?(BioInterchange::TextMining::Content)
         serialize_content(graph, document_uri, content)
@@ -113,7 +114,7 @@ private
         raise BioInterchange::Exceptions::ImplementationWriterError, "Can only serialize Content and ContentConnection from a Document."
       end
     }
-    RDF::NTriples::Writer.dump(graph, @ostream)
+    close
   end
 
 
@@ -124,7 +125,7 @@ private
   # +content+:: an instance that describes the content
   def serialize_content(graph, document_uri, content)
     content_uri = RDF::URI.new(content.uri)
-    graph.insert(RDF::Statement.new(document_uri, BioInterchange::SIO.has_attribute, content_uri))
+    create_triple(document_uri, BioInterchange::SIO.has_attribute, content_uri)
     serialize_process(graph, document_uri, content_uri, content.process) if content.process
     
     sio_url = BioInterchange::SIO.language_entity
@@ -155,11 +156,10 @@ private
       sio_url = BioInterchange::SIO.character
     end
     
-    graph.insert(RDF::Statement.new(content_uri, RDF.type, sio_url))
+    create_triple(content_uri, RDF.type, sio_url)
     
-    graph.insert(RDF::Statement.new(content_uri, BioInterchange::SIO.has_attribute, serialize_content_start(graph, document_uri, content_uri, content)))
-    graph.insert(RDF::Statement.new(content_uri, BioInterchange::SIO.has_attribute, serialize_content_stop(graph, document_uri, content_uri, content)))
-  
+    create_triple(content_uri, BioInterchange::SIO.has_attribute, serialize_content_start(graph, document_uri, content_uri, content))
+    create_triple(content_uri, BioInterchange::SIO.has_attribute, serialize_content_stop(graph, document_uri, content_uri, content))
   end
 
   # Serializes a ContentConnection object for a given document URI.
@@ -169,31 +169,29 @@ private
   # +content+:: an instance that describes the content
   def serialize_contentconnection(graph, document_uri, contentcon)
     contentcon_uri = RDF::URI.new(contentcon.uri)
-    graph.insert(RDF::Statement.new(document_uri, BioInterchange::SIO.has_attribute, contentcon_uri))
+    create_triple(document_uri, BioInterchange::SIO.has_attribute, contentcon_uri)
     serialize_process(graph, document_uri, contentcon_uri, contentcon.process) if contentcon.process
     
-
     #TODO these sio tags need confirming - there are here as a initial proof of concept
     #next issue, some of these are relations and some are labels, need to separate out which
     #I seem to recall that the only relationship types that should be used are "has_attribute" and "RDF::type", in which case these need adjusting for that.
     #I presume this'd mean making a "has_attribute" link between the content1 and the contentconnection relationship in some way.
     case contentcon.type
     when ContentConnection::UNSPECIFIED
-      graph.insert(RDF::Statement.new(contentcon.content1.uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.language_entity))
+      create_triple(contentcon.content1.uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.language_entity)
     when ContentConnection::EQUIVALENCE
-      graph.insert(RDF::Statement.new(contentcon.content1.uri, BioInterchange::SIO.is_equal_to, contentcon.content2.uri))
+      create_triple(contentcon.content1.uri, BioInterchange::SIO.is_equal_to, contentcon.content2.uri)
     when ContentConnection::SUBCLASS
       #TODO this class needs more information, the relationship is between a contentcon.content, and 'something'... I've yet to work out what
-      graph.insert(RDF::Statement.new(contentcon.content2.uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.in_relation_to))
+      create_triple(contentcon.content2.uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.in_relation_to)
     when ContentConnection::THEME
       #TODO there are other more specific options for this that need investigating as options. 
-      graph.insert(RDF::Statement.new(contentcon.content1.uri, BioInterchange::SIO.has_target, contentcon.content2.uri))
+      create_triple(contentcon.content1.uri, BioInterchange::SIO.has_target, contentcon.content2.uri)
     when ContentConnection::SPECULATION
-      graph.insert(RDF::Statement.new(contentcon.content1.uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.speculation))
+      create_triple(contentcon.content1.uri, BioInterchange::SIO.has_attribute, BioInterchange::SIO.speculation)
     when ContentConnection::NEGATION
-      graph.insert(RDF::Statement.new(contentcon.content1.uri, BioInterchange::SIO.denotes, BioInterchange::SIO.negative_regulation))
+      create_triple(contentcon.content1.uri, BioInterchange::SIO.denotes, BioInterchange::SIO.negative_regulation)
     end
-  
   end
 
   # Serializes a process object for a specific document uri
@@ -201,17 +199,17 @@ private
   #
   def serialize_process(graph, document_uri, content_uri, process)
     process_uri = process_uri(process, :process)
-    graph.insert(RDF::Statement.new(content_uri, BioInterchange::SIO.is_direct_part_of, process_uri))
+    create_triple(content_uri, BioInterchange::SIO.is_direct_part_of, process_uri)
     # If this is an email address, then create a FOAF representation, otherwise, do something else:
     if process.type == BioInterchange::TextMining::Process::MANUAL then
-      graph.insert(RDF::Statement.new(process_uri, RDF.type, RDF::FOAF.Person))
-      graph.insert(RDF::Statement.new(process_uri, RDF::FOAF.name, RDF::Literal.new(process.name)))
-      graph.insert(RDF::Statement.new(process_uri, RDF::FOAF.name, RDF::URI.new(process.uri)))
+      create_triple(process_uri, RDF.type, RDF::FOAF.Person)
+      create_triple(process_uri, RDF::FOAF.name, RDF::Literal.new(process.name))
+      create_triple(process_uri, RDF::FOAF.name, RDF::URI.new(process.uri))
     else
-      graph.insert(RDF::Statement.new(process_uri, RDF.type, BioInterchange::SIO.process))
-      graph.insert(RDF::Statement.new(process_uri, BioInterchange::SIO.has_attribute, serialize_process_name(graph, document_uri, content_uri, process_uri, process)))
-      graph.insert(RDF::Statement.new(process_uri, BioInterchange::SIO.has_attribute, serialize_process_uri(graph, document_uri, content_uri, process_uri, process)))
-      graph.insert(RDF::Statement.new(process_uri, BioInterchange::SIO.has_attribute, serialize_process_date(graph, document_uri, content_uri, process_uri, process))) if process.date
+      create_triple(process_uri, RDF.type, BioInterchange::SIO.process)
+      create_triple(process_uri, BioInterchange::SIO.has_attribute, serialize_process_name(graph, document_uri, content_uri, process_uri, process))
+      create_triple(process_uri, BioInterchange::SIO.has_attribute, serialize_process_uri(graph, document_uri, content_uri, process_uri, process))
+      create_triple(process_uri, BioInterchange::SIO.has_attribute, serialize_process_date(graph, document_uri, content_uri, process_uri, process)) if process.date
     end
   end
 
@@ -220,8 +218,8 @@ private
   #
   def serialize_process_name(graph, document_uri, content_uri, process_uri, process)
     kind_uri = process_uri(process, :name)
-    graph.insert(RDF::Statement.new(kind_uri, RDF.type, BioInterchange::SIO.name))
-    graph.insert(RDF::Statement.new(kind_uri, BioInterchange::SIO.has_attribute, RDF::Literal.new("#{process.name}")))
+    create_triple(kind_uri, RDF.type, BioInterchange::SIO.name)
+    create_triple(kind_uri, BioInterchange::SIO.has_attribute, RDF::Literal.new("#{process.name}"))
   end
 
   #
@@ -229,8 +227,8 @@ private
   #
   def serialize_process_uri(graph, document_uri, content_uri, process_uri, process)
     kind_uri = process_uri(process, :uri)
-    graph.insert(RDF::Statement.new(kind_uri, RDF.type, BioInterchange::SIO.software_entity))
-    graph.insert(RDF::Statement.new(kind_uri, BioInterchange::SIO.has_attribute, RDF::URI.new(process.uri)))
+    create_triple(kind_uri, RDF.type, BioInterchange::SIO.software_entity)
+    create_triple(kind_uri, BioInterchange::SIO.has_attribute, RDF::URI.new(process.uri))
   end
 
   #
@@ -238,7 +236,7 @@ private
   #
   def serialize_process_date(graph, document_uri, content_uri, process_uri, process)
     kind_uri = process_uri(process, :date)
-    graph.insert(RDF::Statement.new(kind_uri, RDF::DC.date, RDF::Literal.new(Date.parse(process.date))))
+    create_triple(kind_uri, RDF::DC.date, RDF::Literal.new(Date.parse(process.date)))
   end
 
   #
@@ -246,8 +244,8 @@ private
   #
   def serialize_content_start(graph, document_uri, content_uri, content)
     kind_uri = content_uri(content, :start)
-    graph.insert(RDF::Statement.new(kind_uri, RDF::type, BioInterchange::SIO.start_position))
-    graph.insert(RDF::Statement.new(kind_uri, BioInterchange::SIO.has_attribute, RDF::Literal.new(content.offset)))
+    create_triple(kind_uri, RDF::type, BioInterchange::SIO.start_position)
+    create_triple(kind_uri, BioInterchange::SIO.has_attribute, RDF::Literal.new(content.offset))
   end
   
   #
@@ -255,8 +253,8 @@ private
   #
   def serialize_content_stop(graph, document_uri, content_uri, content)
     kind_uri = content_uri(content, :stop)
-    graph.insert(RDF::Statement.new(kind_uri, RDF::type, BioInterchange::SIO.stop_position))
-    graph.insert(RDF::Statement.new(kind_uri, BioInterchange::SIO.has_attribute, RDF::Literal.new((content.offset+content.length).to_s)))
+    create_triple(kind_uri, RDF::type, BioInterchange::SIO.stop_position)
+    create_triple(kind_uri, BioInterchange::SIO.has_attribute, RDF::Literal.new((content.offset+content.length).to_s))
   end
 
 end

@@ -1,6 +1,7 @@
 
 require 'rubygems'
 require 'rspec'
+require 'tempfile'
 
 require 'biointerchange'
 
@@ -10,7 +11,7 @@ describe BioInterchange::TextMining::RDFWriter do
       istream, ostream = IO.pipe
       BioInterchange::TextMining::RDFWriter.new(ostream).serialize(BioInterchange::TextMining::Document.new('http://example.org'))
       ostream.close
-      istream.read.lines.count.should eq(1)
+      istream.read.lines.count.should eq(8)
     end
 
     it 'document with two entities' do
@@ -48,14 +49,15 @@ describe BioInterchange::TextMining::RDFWriter do
     end
 
     it 'full advanced json document' do
-      ostream = StringIO.new
+      ofile = Tempfile.new('full_advanced_json_document.ttl')
       reader = BioInterchange::TextMining::PubAnnosJSONReader.new("Test", "http://test.com", "2012-12-09", BioInterchange::TextMining::Process::UNSPECIFIED, "0.0")
         
       model = reader.deserialize(File.new('examples/pubannotation.2626671.json'))
       
-      BioInterchange::TextMining::RDFWriter.new(ostream).serialize(model)
-      ostream.close_write
-      ostream.string.lines.count.should > 100
+      BioInterchange::TextMining::RDFWriter.new(File.new(ofile, 'w')).serialize(model)
+      ofile.close
+      IO.readlines(ofile.path).count.should be > 100
+      ofile.unlink
     end
   end
 end
