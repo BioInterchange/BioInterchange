@@ -99,7 +99,12 @@ protected
       end
 
       unless line.start_with?('##') then
-        add_feature(@feature_set, line)
+        begin
+          add_feature(@feature_set, line)
+        rescue ArgumentError => e
+          # Potentially a string encoding issue (input not UTF-8). Try ISO-8859-1 and retry:
+          add_feature(@feature_set, line.force_encoding('ISO-8859-1'))
+        end
         feature_no += 1
 
         if @batch_size and feature_no >= @batch_size then

@@ -39,14 +39,48 @@ protected
     value.strip!
 
     # Interpret pragmas, and if not known, delegate to GFF3Reader (in alphabetical order):
-    if name == 'attribute-method' or name == 'data-source' or name == 'score-method' or name == 'source-method' or name == 'technology-platform' then
-      attributes = split_attributes(value)
-      structured_attributes = feature_set.pragma(name)
-      structured_attributes = { name => [] } unless structured_attributes
-      structured_attributes[name] << attributes
-      feature_set.set_pragma(name, structured_attributes)
+    if name == 'assembly' then
+      # attributes = split_attributes(value)
+      # structured_attributes = feature_set.pragma(name)
+      # structured_attributes = { name => [] } unless structured_attributes
+      # structured_attributes[name] << attributes
+      # feature_set.set_pragma(name, structured_attributes)
+    elsif name == 'center' then
+      #
+    elsif name == 'Description' then
+      #
+    elsif name == 'fileDate' then
+      #
     elsif name == 'fileformat' then
       feature_set.set_pragma(name, { name => value.sub(/^VCFv/, '').to_f })
+    elsif name == 'FILTER' then
+      #
+    elsif name == 'FORMAT' then
+      #
+    elsif name == 'geneAnno' then
+      #
+    elsif name == 'ID' then
+      #
+    elsif name == 'INDIVIDUAL' then
+      #
+    elsif name == 'INFO' then
+      #
+    elsif name == 'Number' then
+      #
+    elsif name == 'PREDIGREE' then
+      #
+    elsif name == 'phasing' then
+      #
+    elsif name == 'reference' then
+      #
+    elsif name == 'SAMPLE' then
+      #
+    elsif name == 'tcgaversion' then
+      #
+    elsif name == 'Type' then
+      #
+    elsif name == 'vcfProcessLog' then
+      #
     else
       # Cannot be passed to super class, because GFF3 has inherently different pragma statements.
       feature_set.set_pragma(name, { name => value })

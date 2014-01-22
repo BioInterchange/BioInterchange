@@ -18,21 +18,7 @@ class RDFWriter < BioInterchange::Writer
   BioInterchange::Registry.register_writer(
     'rdf.biointerchange.gfvo',
     BioInterchange::Genomics::RDFWriter,
-    [ 'biointerchange.gff3' ],
-    true,
-    'Genomic Feature and Variation Ontology (GFVO) based RDFization'
-  )
-  BioInterchange::Registry.register_writer(
-    'rdf.biointerchange.gfvo',
-    BioInterchange::Genomics::RDFWriter,
-    [ 'biointerchange.gvf' ],
-    true,
-    'Genomic Feature and Variation Ontology (GFVO) based RDFization'
-  )
-  BioInterchange::Registry.register_writer(
-    'rdf.biointerchange.gfvo',
-    BioInterchange::Genomics::RDFWriter,
-    [ 'biointerchange.vcf' ],
+    [ 'biointerchange.gff3', 'biointerchange.gvf', 'biointerchange.vcf' ],
     true,
     'Genomic Feature and Variation Ontology (GFVO) based RDFization'
   )

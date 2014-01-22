@@ -37,10 +37,8 @@ module BioInterchange
   # Ontologies (besides the ones from the 'rdf' gem)
   require 'biointerchange/cdao'
   require 'biointerchange/faldo'
-  require 'biointerchange/gff3o'
   require 'biointerchange/gfvo'
   require 'biointerchange/goxref'
-  require 'biointerchange/gvf1o'
   require 'biointerchange/sio'
   require 'biointerchange/so'
   require 'biointerchange/sofa'
