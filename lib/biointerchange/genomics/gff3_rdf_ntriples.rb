@@ -4,11 +4,12 @@ require 'date'
 
 module BioInterchange::Genomics
 
-# Serializes GFF3 and GVF models.
+# Serializes GFF3, GVF and VCF models.
 #
 # Inputs:
 # - biointerchange.gff3
 # - biointerchange.gvf
+# - biointerchange.vcf
 #
 # Outputs:
 # - rdf.biointerchange.gfvo
