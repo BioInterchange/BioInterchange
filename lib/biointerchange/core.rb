@@ -306,7 +306,7 @@ module BioInterchange
   #
   # +label+:: string that should be converted into a "safe" string that can be used as a Ruby method name
   def self.make_safe_label(label)
-    label.gsub(/[ '-.<>\/]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/, "a_#{$1}").gsub(/^_+|_+$/, '').gsub(/_+/, '_')
+    label.gsub(/[ '-.<>\/]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/){ "a_#{$1}" }.gsub(/^_+|_+$/, '').gsub(/_+/, '_').gsub(/_([A-Z])+/x){ "#{$1}" }
   end
 
 private

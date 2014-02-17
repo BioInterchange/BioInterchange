@@ -197,8 +197,14 @@ class GFVO
 
   # Sequence context of a feature on the positive strand (forward strand) on the 3' end. A valid sequence context is denoted by a string of one or more concatenated letters A, C, G, or T.
   # (http://www.biointerchange.org/gfvo#3primeContext)
-  def self.a_context
+  def self.a_3_context
     return RDF::URI.new('http://www.biointerchange.org/gfvo#3primeContext')
+  end
+
+  # Sequence context of a feature on the positive strand (forward strand) on the 5' end. A valid sequence context is denoted by a string of one or more concatenated letters A, C, G, or T.
+  # (http://www.biointerchange.org/gfvo#5primeContext)
+  def self.a_5_context
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#5primeContext')
   end
 
   # Secondary name of a feature besides the primary feature ID. The secondary name can be a HGVS/ISCN nomenclature name, but not a cross-reference to a database (e.g. dbSNP, OMIM). Cross-references should be made using the "dbxref" property.
@@ -419,13 +425,13 @@ class GFVO
 
   # An alignment operation captures the type of alignment (see "Alignment" enumeration class) and alignment length between a reference sequence and target sequence. This relationship is typically expressed between a "Feature" class instance and a "Target" class instance. Note that an "Alignment Operation" is a list, where the order of the alignment operations is of significance.
   # (http://www.biointerchange.org/gfvo#AlignmentOperation)
-  def self.Alignment_Operation
+  def self.AlignmentOperation
     return RDF::URI.new('http://www.biointerchange.org/gfvo#AlignmentOperation')
   end
 
   # Denotes an ancestral allele of a feature. Reference sequences and genomic variants are expressed by the "Reference" and "Variant" classes respectively.
   # (http://www.biointerchange.org/gfvo#AncestralAllele)
-  def self.Ancestral_Allele
+  def self.AncestralAllele
     return RDF::URI.new('http://www.biointerchange.org/gfvo#AncestralAllele')
   end
 
@@ -437,7 +443,7 @@ class GFVO
 
   # A "Data Source" based on array-comparative genomic hybridization.
   # (http://www.biointerchange.org/gfvo#ArrayComparativeGenomicHybridization)
-  def self.Array_Comparative_Genomic_Hybridization
+  def self.ArrayComparativeGenomicHybridization
     return RDF::URI.new('http://www.biointerchange.org/gfvo#ArrayComparativeGenomicHybridization')
   end
 
@@ -461,19 +467,19 @@ class GFVO
 
   # A "Data Source" based on DNA microarray probes.
   # (http://www.biointerchange.org/gfvo#DNAMicroarray)
-  def self.DNA_Microarray
+  def self.DNAMicroarray
     return RDF::URI.new('http://www.biointerchange.org/gfvo#DNAMicroarray')
   end
 
   # A "Data Source" based on DNA sequences.
   # (http://www.biointerchange.org/gfvo#DNASequence)
-  def self.DNA_Sequence
+  def self.DNASequence
     return RDF::URI.new('http://www.biointerchange.org/gfvo#DNASequence')
   end
 
   # Provides information about the source of the data. For example, it can link out to actual sequences associated with "Feature" individuals in a "Set".
   # (http://www.biointerchange.org/gfvo#DataSource)
-  def self.Data_Source
+  def self.DataSource
     return RDF::URI.new('http://www.biointerchange.org/gfvo#DataSource')
   end
 
@@ -497,37 +503,37 @@ class GFVO
 
   # Denotes a frameshift forward in the reference sequence. The reference sequence is denoted by a "Landmark" whilst the aligned target sequence is an instance of the "Target" class.
   # (http://www.biointerchange.org/gfvo#ForwardReferenceSequenceFrameshift)
-  def self.Forward_Reference_Sequence_Frameshift
+  def self.ForwardReferenceSequenceFrameshift
     return RDF::URI.new('http://www.biointerchange.org/gfvo#ForwardReferenceSequenceFrameshift')
   end
 
   # Details about the fragment-read (single-end read) sequencing technology used to gather the data in a set.
   # (http://www.biointerchange.org/gfvo#FragmentReadPlatform)
-  def self.Fragment_Read_Platform
+  def self.FragmentReadPlatform
     return RDF::URI.new('http://www.biointerchange.org/gfvo#FragmentReadPlatform')
   end
 
   # The germline feature class captures information about genomic sequence features arising from germline cells.
   # (http://www.biointerchange.org/gfvo#GermlineFeature)
-  def self.Germline_Feature
+  def self.GermlineFeature
     return RDF::URI.new('http://www.biointerchange.org/gfvo#GermlineFeature')
   end
 
   # A sequence alteration with hemizygous alleles.
   # (http://www.biointerchange.org/gfvo#HemizygousVariant)
-  def self.Hemizygous_Variant
+  def self.HemizygousVariant
     return RDF::URI.new('http://www.biointerchange.org/gfvo#HemizygousVariant')
   end
 
   # A sequence alteration with heterozygous alleles.
   # (http://www.biointerchange.org/gfvo#HeterozygousVariant)
-  def self.Heterozygous_Variant
+  def self.HeterozygousVariant
     return RDF::URI.new('http://www.biointerchange.org/gfvo#HeterozygousVariant')
   end
 
   # A sequence alteration with homozygous alleles.
   # (http://www.biointerchange.org/gfvo#HomozygousVariant)
-  def self.Homozygous_Variant
+  def self.HomozygousVariant
     return RDF::URI.new('http://www.biointerchange.org/gfvo#HomozygousVariant')
   end
 
@@ -545,7 +551,7 @@ class GFVO
 
   # A chromosome is an abstract representation of an unnamed chromosome to represent ploidy within a data set. A "Paternal Chromosome" instance is used for denoting the locus of phased genotypes on a chromosome inherited from the mother. For placing genomic features ("Feature" class instances) on a chromosome, contig, scaffold, etc., please see the "Landmark" class.
   # (http://www.biointerchange.org/gfvo#MaternalChromosome)
-  def self.Maternal_Chromosome
+  def self.MaternalChromosome
     return RDF::URI.new('http://www.biointerchange.org/gfvo#MaternalChromosome')
   end
 
@@ -557,31 +563,31 @@ class GFVO
 
   # Details about the paired-end read sequencing technology used to gather the data in a set.
   # (http://www.biointerchange.org/gfvo#PairedEndReadPlatform)
-  def self.Paired_End_Read_Platform
+  def self.PairedEndReadPlatform
     return RDF::URI.new('http://www.biointerchange.org/gfvo#PairedEndReadPlatform')
   end
 
   # A chromosome is an abstract representation of an unnamed chromosome to represent ploidy within a data set. A "Paternal Chromosome" instance is used for denoting the locus of phased genotypes on a chromosome inherited from the father. For placing genomic features ("Feature" class instances) on a chromosome, contig, scaffold, etc., please see the "Landmark" class.
   # (http://www.biointerchange.org/gfvo#PaternalChromosome)
-  def self.Paternal_Chromosome
+  def self.PaternalChromosome
     return RDF::URI.new('http://www.biointerchange.org/gfvo#PaternalChromosome')
   end
 
   # A phenotype description represents additional information about a sequenced individual's phenotype. A sequenced individual is represented by instances of the "Sequenced Individual" or its decendants (e.g., "Sequenced Female").
   # (http://www.biointerchange.org/gfvo#PhenotypeDescription)
-  def self.Phenotype_Description
+  def self.PhenotypeDescription
     return RDF::URI.new('http://www.biointerchange.org/gfvo#PhenotypeDescription')
   end
 
   # A prenatal feature is purportedly associated with prenatal cells; the GVF specification declares this feature type under the prama directive "##genomic-source", but does not describe its semantics and the referenced Logical Observation Identifiers Names and Codes (LOINC, http://loinc.org), do not define the meaning or intended usage of the term "prenatal" either.
   # (http://www.biointerchange.org/gfvo#PrenatalFeature)
-  def self.Prenatal_Feature
+  def self.PrenatalFeature
     return RDF::URI.new('http://www.biointerchange.org/gfvo#PrenatalFeature')
   end
 
   # A "Data Source" based on RNA sequences.
   # (http://www.biointerchange.org/gfvo#RNASequence)
-  def self.RNA_Sequence
+  def self.RNASequence
     return RDF::URI.new('http://www.biointerchange.org/gfvo#RNASequence')
   end
 
@@ -593,43 +599,43 @@ class GFVO
 
   # Denotes a gap in the reference sequence for an alignment. The reference sequence is denoted by a "Landmark" whilst the aligned target sequence is an instance of the "Target" class.
   # (http://www.biointerchange.org/gfvo#ReferenceSequenceGap)
-  def self.Reference_Sequence_Gap
+  def self.ReferenceSequenceGap
     return RDF::URI.new('http://www.biointerchange.org/gfvo#ReferenceSequenceGap')
   end
 
   # Denotes a frameshift backwards (reverse) in the reference sequence. The reference sequence is denoted by a "Landmark" whilst the aligned target sequence is an instance of the "Target" class.
   # (http://www.biointerchange.org/gfvo#ReverseReferenceSequenceFrameshift)
-  def self.Reverse_Reference_Sequence_Frameshift
+  def self.ReverseReferenceSequenceFrameshift
     return RDF::URI.new('http://www.biointerchange.org/gfvo#ReverseReferenceSequenceFrameshift')
   end
 
   # A sequence annotation provides information on sequences associated with a "Feature" class instance or its descendants (s.a. "Germline Feature" or "Somatic Feature"). Specialized sub-classes are provided to denote reference sequences represented by "Reference" class instances, variants represented by "Variant" class instances, and "Ancestral Allele" class instances.
   # (http://www.biointerchange.org/gfvo#SequenceAnnotation)
-  def self.Sequence_Annotation
+  def self.SequenceAnnotation
     return RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAnnotation')
   end
 
   # Aggregated sequencing information for a particular female individual. A female is defined as an individual producing ova.
   # (http://www.biointerchange.org/gfvo#SequencedFemale)
-  def self.Sequenced_Female
+  def self.SequencedFemale
     return RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedFemale')
   end
 
   # Aggregated sequencing information for a particular individual that contains both male and female gemetes.
   # (http://www.biointerchange.org/gfvo#SequencedHermaphrodite)
-  def self.Sequenced_Hermaphrodite
+  def self.SequencedHermaphrodite
     return RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedHermaphrodite')
   end
 
   # Aggregated sequencing information for a particular individual. Unless a sub-type of this class is used as instance type, s.a. "Sequenced Female", the sex of the individual is considered to be undetermined.
   # (http://www.biointerchange.org/gfvo#SequencedIndividual)
-  def self.Sequenced_Individual
+  def self.SequencedIndividual
     return RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedIndividual')
   end
 
   # Aggregated sequencing information for a particular male individual. A male is defined as an individual producing spermatozoa.
   # (http://www.biointerchange.org/gfvo#SequencedMale)
-  def self.Sequenced_Male
+  def self.SequencedMale
     return RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedMale')
   end
 
@@ -641,13 +647,13 @@ class GFVO
 
   # The somatic feature class captures information about genomic sequence features arising from somatic cells.
   # (http://www.biointerchange.org/gfvo#SomaticFeature)
-  def self.Somatic_Feature
+  def self.SomaticFeature
     return RDF::URI.new('http://www.biointerchange.org/gfvo#SomaticFeature')
   end
 
   # A structured attribute denotes a tag/value pair where the value is a composite, but which is not defined in the GVF specification. The GVF specification does not explicitly permit user-defined structured attributes (see "Structured Pragmas" in http://sequenceontology.org/resources/gvf.html), but it is conceivable that an RDFization tool might support this use case. For some loosly defined structured data in GVF, the "Structured Attribute" class is used as well to capture the non-exhaustive list of possible data assignments of the GVF specification.
   # (http://www.biointerchange.org/gfvo#StructuredAttribute)
-  def self.Structured_Attribute
+  def self.StructuredAttribute
     return RDF::URI.new('http://www.biointerchange.org/gfvo#StructuredAttribute')
   end
 
@@ -659,13 +665,13 @@ class GFVO
 
   # Denotes a gap in the target sequence for an alignment. The reference sequence is denoted by a "Landmark" whilst the aligned target sequence is an instance of the "Target" class.
   # (http://www.biointerchange.org/gfvo#TargetSequenceGap)
-  def self.Target_Sequence_Gap
+  def self.TargetSequenceGap
     return RDF::URI.new('http://www.biointerchange.org/gfvo#TargetSequenceGap')
   end
 
   # Details about the sequencing/microarray technology used to gather the data in a set.
   # (http://www.biointerchange.org/gfvo#TechnologyPlatform)
-  def self.Technology_Platform
+  def self.TechnologyPlatform
     return RDF::URI.new('http://www.biointerchange.org/gfvo#TechnologyPlatform')
   end
 
