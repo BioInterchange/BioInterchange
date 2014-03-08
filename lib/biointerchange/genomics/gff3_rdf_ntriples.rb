@@ -216,20 +216,10 @@ protected
       elsif tag == 'Dbxref' then
         list.each { |value|
           begin
-            linkout = nil
-            # First: determine the Dbxref linkout URI as string
-            if value.match(/^dbSNP(_\d+)?:rs\d+$/) then
-              linkout = "http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=#{value.split(/:/)[1].sub(/^rs/, '')}"
-            elsif value.match(/^COSMIC(_\d+)?:COSM\d+$/) then
-              linkout = "http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=#{value.split(/:/)[1].sub(/^COSM/, '')}"
-            else
-              abbreviation, id = value.split(':', 2)
-              linkout = BioInterchange::GOXRef.send(BioInterchange.make_safe_label(abbreviation)).to_s + id
-            end
-            # Second, and finally: add a triple to the graph in the right representative format depending on the ontology used
-            create_triple(feature_uri, @base.dbxref, linkout)
+            # Try to link the external database reference to a well-established URI:
+            serialize_dbxref(feature_uri, value)
           rescue NoMethodError
-            # Preserve the Dbxref as a Literal:
+            # Not clear where to link to? Preserve the Dbxref as a Literal:
             @dbxref = 0 if @dbxref == nil
             literal_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/dbxref/#{@dbxref}")
             @dbxref += 1
@@ -465,8 +455,8 @@ protected
       effect_uri = RDF::URI.new("#{feature_uri.to_s}/variant/#{variant_index}/effect/#{index}")
       serialize_variant_triple(feature_uri, RDF::URI.new("#{feature_uri.to_s}/variant/#{variant_index}"), @base.effect, effect_uri)
       create_triple(effect_uri, RDF.type, @base.Effect)
-      create_triple(effect_uri, @base.sequenceVariant, BioInterchange::SO.send(BioInterchange.make_safe_label(sequence_variant)))
-      create_triple(effect_uri, @base.featureType, BioInterchange::SO.send(BioInterchange.make_safe_label(feature_type)))
+      create_triple(effect_uri, @base.sequence_variant, BioInterchange::SO.send(BioInterchange.make_safe_label(sequence_variant)))
+      create_triple(effect_uri, @base.feature_type, BioInterchange::SO.send(BioInterchange.make_safe_label(feature_type)))
       feature_ids.each { |feature_id|
         create_triple(effect_uri, @base.feature, feature_id)
       }
@@ -521,6 +511,26 @@ protected
     create_triple(annotation_uri, RDF::RDFS.comment, feature_sequence.comment) if feature_sequence.comment
     create_triple(annotation_uri, @base.sequence, feature_sequence.sequence)
   end
+
+  # Serializes an external database reference.
+  #
+  # +feature_uri+:: URI of the feature that the external database references is referring to
+  # +dbxref_composite+:: composite term of the external database reference (e.g. ""dbSNP_127:rs123456)
+  def serialize_dbxref(feature_uri, dbxref_composite)
+    abbreviation, accession = dbxref_composite.split(':', 2)
+    dbxref_uri = RDF::URI.new("#{feature_uri.to_s}/dbxref/#{BioInterchange.make_safe_label(abbreviation)}")
+    create_triple(feature_uri, @base.dbxref, dbxref_uri)
+
+    if dbxref_composite.match(/^dbSNP(_\d+)?:rs\d+$/) then
+      # linkout = "http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=#{dbxref_composite.split(/:/)[1].sub(/^rs/, '')}"
+      create_triple(dbxref_uri, @base.database, RDF::URI.new("#{BioInterchange::Bio2RDF.dbSNP}#{accession}"))
+      create_triple(dbxref_uri, @base.version, abbreviation[6..-1])
+    elsif dbxref_composite.match(/^COSMIC(_\d+)?:COSM\d+$/) then
+      linkout = "http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=#{accession.sub(/^COSM/, '')}"
+    else
+      BioInterchange::GOXRef.send(BioInterchange.make_safe_label(abbreviation)).to_s + accession
+    end
+  end 
 
 end
 
