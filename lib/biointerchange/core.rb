@@ -34,7 +34,9 @@ module BioInterchange
   # Custom Exceptions and Errors
   require 'biointerchange/exceptions'
 
-  # Ontologies (besides the ones from the 'rdf' gem)
+  # Ontologies (besides the ones from the 'rdf' gem), vocabularies and
+  # other mappings (e.g., database abbreviations to URIs):
+  require 'biointerchange/bio2rdf'
   require 'biointerchange/cdao'
   require 'biointerchange/faldo'
   require 'biointerchange/gfvo'

@@ -2,11 +2,11 @@ module BioInterchange
 
 class Bio2RDF
 
-  def dbSNP
+  def self.dbSNP
     "http://identifiers.org/dbsnp/"
   end
 
-  def COSMIC
+  def self.COSMIC
     "http://cancer.sanger.ac.uk/cosmic/mutation/overview?id="
   end
 

@@ -21,7 +21,7 @@ puts ''
 STDIN.each { |line|
   key, value = line.chomp.split("\t")
 
-  puts "  def #{BioInterchange.make_safe_label(key)}"
+  puts "  def self.#{BioInterchange.make_safe_label(key)}"
   puts "    \"#{value}\""
   puts '  end'
   puts ''

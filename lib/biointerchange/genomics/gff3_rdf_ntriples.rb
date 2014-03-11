@@ -523,7 +523,7 @@ protected
 
     if dbxref_composite.match(/^dbSNP(_\d+)?:rs\d+$/) then
       # linkout = "http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=#{dbxref_composite.split(/:/)[1].sub(/^rs/, '')}"
-      create_triple(dbxref_uri, @base.database, RDF::URI.new("#{BioInterchange::Bio2RDF.dbSNP}#{accession}"))
+      create_triple(dbxref_uri, @base.reference, RDF::URI.new("#{BioInterchange::Bio2RDF.dbSNP}#{accession}"))
       create_triple(dbxref_uri, @base.version, abbreviation[6..-1])
     elsif dbxref_composite.match(/^COSMIC(_\d+)?:COSM\d+$/) then
       linkout = "http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=#{accession.sub(/^COSM/, '')}"
