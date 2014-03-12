@@ -36,7 +36,7 @@ module BioInterchange
 
   # Ontologies (besides the ones from the 'rdf' gem), vocabularies and
   # other mappings (e.g., database abbreviations to URIs):
-  require 'biointerchange/bio2rdf'
+  require 'biointerchange/life_science_registry'
   require 'biointerchange/cdao'
   require 'biointerchange/faldo'
   require 'biointerchange/gfvo'

@@ -588,11 +588,12 @@ A Geno Ontology external reference (GOxref) vocabulary can be created by directl
     curl ftp://ftp.geneontology.org/pub/go/doc/GO.xrf_abbs | ruby generators/GOxrefify.rb
     echo -e "\nend" >> lib/biointerchange/goxref.rb
 
-Building an external reference vocabulary based on Bio2RDF external database abbreviations:
+Building an external reference vocabulary based on Life Science Registry external database abbreviations (based on download of the
+Life Science registry spreadsheet as TSV file):
 
-    echo -e "module BioInterchange\n" > lib/biointerchange/bio2rdf.rb
-    ruby generators/tsv2rubyclass.rb Bio2RDF < <path-to-2-column-tsv-file-with-abbreviations> >> lib/biointerchange/bio2rdf.rb
-    echo -e "\nend" >> lib/biointerchange/bio2rdf.rb
+    echo -e "module BioInterchange\n" > lib/biointerchange/life_science_registry.rb
+    cut -f 1,25 <path-to-registry-tsv-file> | grep -E 'https?://.*\$id' | ruby generators/tsv2rubyclass.rb LifeScienceRegistry >> lib/biointerchange/life_science_registry.rb
+    echo -e "\nend" >> lib/biointerchange/life_science_registry.rb
 
 #### Python Vocabulary Classes
 
