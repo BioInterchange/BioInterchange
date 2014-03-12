@@ -521,15 +521,22 @@ protected
     dbxref_uri = RDF::URI.new("#{feature_uri.to_s}/dbxref/#{BioInterchange.make_safe_label(abbreviation)}")
     create_triple(feature_uri, @base.dbxref, dbxref_uri)
 
-    if dbxref_composite.match(/^dbSNP(_\d+)?:rs\d+$/) then
-      # linkout = "http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=#{dbxref_composite.split(/:/)[1].sub(/^rs/, '')}"
-      create_triple(dbxref_uri, @base.reference, RDF::URI.new("#{BioInterchange::Bio2RDF.dbSNP}#{accession}"))
+    if dbxref_composite.match(/^.+_.+:.+$/) then
+      # Entry with version information.
+      create_triple(dbxref_uri, @base.reference, BioInterchange::LifeScienceRegistry.send(dbxref_composite.split('_', 2)[0].downcase).sub('$id', accession))
       create_triple(dbxref_uri, @base.version, abbreviation[6..-1])
-    elsif dbxref_composite.match(/^COSMIC(_\d+)?:COSM\d+$/) then
-      linkout = "http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=#{accession.sub(/^COSM/, '')}"
     else
-      BioInterchange::GOXRef.send(BioInterchange.make_safe_label(abbreviation)).to_s + accession
+      # No version information provided.
+      create_triple(dbxref_uri, @base.reference, BioInterchange::LifeScienceRegistry.send(dbxref_composite.split(':', 2)[0].downcase).sub('$id', accession))
     end
+
+    #if dbxref_composite.match(/^dbSNP(_\d+)?:rs\d+$/) then
+    #  # linkout = "http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=#{dbxref_composite.split(/:/)[1].sub(/^rs/, '')}"
+    #elsif dbxref_composite.match(/^COSMIC(_\d+)?:COSM\d+$/) then
+    #  linkout = "http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=#{accession.sub(/^COSM/, '')}"
+    #else
+    #  BioInterchange::GOXRef.send(BioInterchange.make_safe_label(abbreviation)).to_s + accession
+    #end
   end 
 
 end
