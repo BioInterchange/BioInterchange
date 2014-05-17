@@ -9,13 +9,13 @@
 
     <!-- Le styles -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrapi-theme.min.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
       }
     </style>
-    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <script src="bootstrap/js/jquery-1.8.1.min.js"></script>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -29,26 +29,24 @@
 
   <body>
     <a href="https://github.com/BioInterchange/BioInterchange"><img style="z-index: 5000; position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="index.html">BioInterchange</a>
-          <ul class="nav">
-            <li><a href="cli.html">Shell Tool</a></li>
-            <li class="active"><a href="webservices.html">Web-Services</a></li>
-            <li><a href="api.html">API</a></li>
-            <li><a href="ontologies.html">Ontologies</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">BioInterchange</a>
+        <ul class="nav navbar-nav">
+          <li><a href="cli.html">Shell Tool</a></li>
+          <li class="active"><a href="webservices.html">Web-Services</a></li>
+          <li><a href="api.html">API</a></li>
+          <li><a href="ontologies.html">Ontologies</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
       </div>
     </div>
-
     <div class="container">
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="span12">
+        <div class="col-md-12">
           <h1>Web-Services</h1>
           <p>Two query points to access BioInterchange are provided on the internet:
             <ol>

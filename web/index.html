@@ -9,13 +9,13 @@
 
     <!-- Le styles -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrapi-theme.min.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
       }
     </style>
-    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -28,25 +28,24 @@
 
   <body>
     <a href="https://github.com/BioInterchange/BioInterchange"><img style="z-index: 5000; position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="index.html">BioInterchange</a>
-          <ul class="nav">
-            <li><a href="cli.html">Shell Tool</a></li>
-            <li><a href="webservices.html">Web-Services</a></li>
-            <li><a href="api.html">API</a></li>
-            <li><a href="ontologies.html">Ontologies</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">BioInterchange</a>
+        <ul class="nav navbar-nav">
+          <li><a href="cli.html">Shell Tool</a></li>
+          <li><a href="webservices.html">Web-Services</a></li>
+          <li><a href="api.html">API</a></li>
+          <li><a href="ontologies.html">Ontologies</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
       </div>
     </div>
 
     <div class="container">
 
-      <div class="hero-unit">
-        <div style="float: left; margin-right: 24px;"><a href="http://www.biointerchange.org"><img width=150 height=150 src="images/BioInterchange300.png" /></a></div>
+      <div style="margin-top: 32px;" class="jumbotron">
+        <div style="float: left; margin-right: 24px; margin-top: 48px;"><a href="http://www.biointerchange.org"><img width=150 height=150 src="images/BioInterchange300.png" /></a></div>
         <h1>BioInterchange</h1>
         <p>Interchange data using the Resource Description Framework (RDF) and let BioInterchange automagically create RDF triples from your TSV, XML, GFF3, GVF, Newick and other files. BioInterchange helps you transform your data sets into linked data for sharing and data integration via command line, web-service, or API.<div class="alert alert-info" style="text-align: center;"><a class="icon-warning-sign"></a><i>&nbsp;We are currently moving over to <a href="ontologies.html" style="font-weight: bold;">GFVO</a> for converting GFF3, GTF, GVF and VCF files to RDF.</i></div></p>
         <!-- <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p> -->
@@ -57,13 +56,13 @@
       </div>
 
       <div class="row">
-        <div class="span6" style="text-align: justify;">
+        <div class="col-md-6" style="text-align: justify;">
           <h2>Shell Tool</h2>
           <p>Create RDF files from large data sets using the BioInterchange shell tool. It is installed as a Ruby gem that works with Mac OS X, Linux and Windows.</p>
           <p>Check out how the shell tool turns data into RDF using a single command line call, how the data can be loaded into a triple store, and how to use a semantic reasoner to verify your data consistency!</p>
           <p><a class="btn" href="cli.html">View details &raquo;</a></p>
         </div>
-        <div class="span6" style="text-align: justify;">
+        <div class="col-md-6" style="text-align: justify;">
           <h2>Web-Services</h2>
           <p>Quickly RDFize small data snippets with BioInterchange's web-service. Either copy/paste your data into an interactive web-site, or use the RESTful web-service.</p>
           <p>Example data is provided for every input format that BioInterchange can turn into RDF. Turn it into RDF with a click of a button!</p>
@@ -71,14 +70,14 @@
        </div>
       </div>
       <div class="row">
-        <div class="span6" style="text-align: justify;">
+        <div class="col-md-6" style="text-align: justify;">
           <h2>API</h2>
           <p>Integrate BioInterchange into your Ruby programs as a gem. The small footprint API makes it possible to create RDF from simple data structures in a few lines.</p>
           <p>See how the BioInterchange API framework can be used with Ruby, Python and Java; learn how to implement your own RDF transformation algorithms!</p>
           <p><a class="btn" href="api.html">View details &raquo;</a></p>
           <p><a class="btn" href="../doc/BioInterchange.html">View Ruby docs &raquo;</a></p>
         </div>
-        <div class="span6" style="text-align: justify;">
+        <div class="col-md-6" style="text-align: justify;">
           <h2>Ontologies</h2>
           <p>Reuse ontologies that we specifically developed to tackle some RDFizations. External ontologies that are used by BioInterchange are listed here too.</p>
           <p>Incorporate the ontologies into your own projects and get easy programmatic access to them using the BioInterchange vocabulary wrappers!</p>

@@ -9,13 +9,13 @@
 
     <!-- Le styles -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrapi-theme.min.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
       }
     </style>
-    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -29,17 +29,15 @@
   <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="index.html">BioInterchange</a>
-          <ul class="nav">
-            <li><a href="cli.html">Shell Tool</a></li>
-            <li><a href="webservices.html">Web-Services</a></li>
-            <li><a href="api.html">API</a></li>
-            <li><a href="ontologies.html">Ontologies</a></li>
-            <li class="active"><a href="about.html">About</a></li>
-          </ul>
-        </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">BioInterchange</a>
+        <ul class="nav navbar-nav">
+          <li><a href="cli.html">Shell Tool</a></li>
+          <li><a href="webservices.html">Web-Services</a></li>
+          <li><a href="api.html">API</a></li>
+          <li><a href="ontologies.html">Ontologies</a></li>
+          <li class="active"><a href="about.html">About</a></li>
+        </ul>
       </div>
     </div>
 
@@ -47,7 +45,7 @@
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="span12">
+        <div class="col-md-12">
           <h2>About BioInterchange</h2>
           <p>BioInterchange was conceived and designed during <a href="http://biosciencedbc.jp">NBDC</a>/<a href="http://dbcls.rois.ac.jp">DBCLS</a>'s <a href="http://2012.biohackathon.org">BioHackathon 2012</a>. Architecture and RDF serialization implementations were provided by <a href="http://joachimbaran.wordpress.com">Joachim Baran</a>, <a href="http://www.cs.man.ac.uk/~duckg">Geraint Duck</a> provided JSON and XML deserialization implementations and contributed to architecture decisions, guidance on ontology use and applications were given by <a href="http://compbio.ucdenver.edu/Hunter_lab/Cohen/index.shtml">Kevin B. Cohen</a> and <a href="http://dumontierlab.com">Michel Dumontier</a>, where Michel brought forward and extended the <a href="http://code.google.com/p/semanticscience/wiki/SIO">Semanticscience Integrated Ontology</a> (SIO). <a href="http://dbcls.rois.ac.jp/~jdkim">Jin-Dong Kim</a> helped to define ontology relationships for RDFizing DBCLS' PubAnnotation category annotations.</p>
           <p><b>Contributors: </b><a href="http://joachimbaran.wordpress.com">Joachim Baran</a>, <a href="http://compbio.ucdenver.edu/Hunter_lab/Cohen/index.shtml">Kevin B. Cohen</a>, <a href="http://www.cs.man.ac.uk/~duckg">Geraint Duck</a>, <a href="http://dumontierlab.com">Michel Dumontier</a>, <a href="http://utah.academia.edu/BDurgahee">Begum Durgahee</a>, and <a href="http://dbcls.rois.ac.jp/~jdkim">Jin-Dong Kim</a></p>
