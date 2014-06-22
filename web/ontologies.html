@@ -70,7 +70,7 @@
             </ol>
           </ol>
           <div class="alert"><p><b>Note: </b> <span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span>and <span style="margin-right: 4px;" class="badge alert-warning">VCF</span> badges indicate a particular class or property definition's origin. The application of the ontology is not restricted to those file formats though.</p></div>
-          <p>GFVO is being developed as the joint work of <a href="http://joachimbaran.wordpress.com">Joachim Baran</a> (<i>corresponding author</i>, <i>joachim.baran</i><b>&#64;</b><i>gmail.com</i>), <a href="http://ntnu-no.academia.edu/ErickAntezana">Erick Antezana</a>, <a href="http://www.linkedin.com/in/raoulbonnal">Raoul Bonnal</a>, <a href="http://utah.academia.edu/BDurgahee">Begum Durgahee</a>, <a href="http://medicine.utah.edu/faculty/mddetail.php?facultyID=u0514925">Karen Eilbeck</a>, <a href="http://leechuck.de">Robert Hoehndorf</a>, <a href="http://www.linkedin.com/in/toshiakikatayama">Toshiaki Katayama</a>, <a href="http://www.linkedin.com/in/francescostrozzi">Francesco Strozzi</a>, <a href="TODO">Takatomo Fujisawa</a>, and <a href="http://dumontierlab.com">Michel Dumontier</a>.</p>
+          <p>GFVO is being developed as the joint work of <a href="http://joachimbaran.wordpress.com">Joachim Baran</a> (<i>corresponding author</i>, <i>joachim.baran</i><b>&#64;</b><i>gmail.com</i>), <a href="http://ntnu-no.academia.edu/ErickAntezana">Erick Antezana</a>, <a href="http://www.linkedin.com/in/raoulbonnal">Raoul Bonnal</a>, <a href="http://utah.academia.edu/BDurgahee">Begum Durgahee</a>, <a href="http://medicine.utah.edu/faculty/mddetail.php?facultyID=u0514925">Karen Eilbeck</a>, <a href="http://leechuck.de">Robert Hoehndorf</a>, <a href="http://www.linkedin.com/in/toshiakikatayama">Toshiaki Katayama</a>, <a href="http://www.linkedin.com/in/francescostrozzi">Francesco Strozzi</a>, <a href="https://www.linkedin.com/in/takatomofujisawa">Takatomo Fujisawa</a>, and <a href="http://dumontierlab.com">Michel Dumontier</a>.</p>
           <p>Feedback on the ontology has been provided by <a href="http://berkeleybop.org/person/chris-mungall">Chris Mungall</a>.</p>
           <h3 id="bestpractices">Best Practices</h3>
           <p>The ontology design adheres to the following best practices:
@@ -86,6 +86,28 @@
           <p>GFVO makes use of the <a href="https://github.com/JervenBolleman/FALDO">Feature Annotation Location Description Ontology</a> (<a href="https://github.com/JervenBolleman/FALDO">FALDO</a>) for describing genomic locations such as genomic features, breakpoints, and coordinate ranges for fuzzy/probabilistic coordinate ranges. We also integrate the <a href="http://variationontology.org">Variation Ontology</a> (<a href="http://variationontology.org">VariO</a>) for describing variants, their effects and consequences.</p>
           <p>Species are represented as linked data by URIs to NCBI's <a href="http://www.ncbi.nlm.nih.gov/taxonomy">species taxonomy</a>. We encourage the use of <a href="http://identifiers.org">identifiers.org</a> URIs for other entities, which will be automatically be supported in the BioInterchange's RDF output with its next release.</p>
           <p>The design patterns of GFVO follow the <a href="http://code.google.com/p/semanticscience/wiki/SIO">SIO</a> and equivalence mappings are provided for GFVO's classes, object- and datatype-properties where applicable.</p>
+          <h3>Statistics</h3>
+          <p>Summary statistics about the number of classes and properties of GFVO are provided in the following table. The breakdown of the classes based on their modeling origin does not sum up to the total number of classes, because some modeled classes appear in multiple specifications (e.g., "DNA Sequence" appears in all four specifications).</p>
+          <table class="table table-striped table-bordered" style="margin-left: 15px; margin-right: 15px;">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Total Number</th>
+              <th>Number of Equivalences to SIO</th>
+            </tr>
+          </thead>
+          <tbody>
+<!-- Imported via :r!~/src/Ontologies/scripts/stats.rb < ~/src/Ontologies/gfvo.xml -->
+<tr><td>Classes</td><td>90</td><td>39</td></tr>
+<tr><td>&hellip;modeled from GFF3</td><td>27</td><td></td></tr>
+<tr><td>&hellip;modeled from GTF</td><td>17</td><td></td></tr>
+<tr><td>&hellip;modeled from GVF</td><td>55</td><td></td></tr>
+<tr><td>&hellip;modeled from VCF</td><td>23</td><td></td></tr>
+<tr><td>&hellip;with Wikipedia reference</td><td>47</td><td></td></tr>
+<tr><td>Datatype properties</td><td>1</td><td>1</td></tr>
+<tr><td>Object properties</td><td>30</td><td>29</td></tr>
+          </tbody>
+          </table>
 <!--
           <h3 id="hierarchy">Hierarchy Overview</h3>
           <div class="row">
@@ -104,6 +126,7 @@
           </div>
 -->
           <h3 id="examples">Examples</h3>
+          <p>Examples are provided in Turtle syntax. All examples are archived and downloadable as the file &quot;<a href="https://github.com/BioInterchange/Ontologies">gfvo_examples.ttl</a>&quot; of the ontologies' GitHub repository.</p>
           <h4 id="example1">Example 1: Loci and Basic Genomic Feature Annotations</h4>
           <p>Encoding loci and basic genomic feature annotations. The example covers lines 0-3 of the example gene description given in the <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3 specification</a>.</p>
 <pre style="font-size: 10px; line-height: 13px;">
@@ -233,6 +256,15 @@
 
 :ExampleSet1Feature2Identifier a :Identifier ;
                                :hasValue &quot;tfbs00001&quot; .
+</pre>
+          <h4 id="example2">Example 2: </h4>
+          <p>Encoding of a sequence alignment. This is part of the <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3 specification</a>, denoting the alignment between the reference sequence &quot;chr3&quot; and the target sequence &quot;EST23&quot;.</p>
+<pre style="font-size: 10px; line-height: 13px;">
+@prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix faldo: &lt;http://biohackathon.org/resource/faldo#&gt; .
+@prefix so: &lt;http://purl.bioontology.org/ontology/SO/SO&gt; .
 
 #################################################################
 #
@@ -332,6 +364,15 @@
 
 :ExampleSet2AlignmentOperation5Span a :Span ;
                                     :hasValue &quot;6&quot; .
+</pre>
+          <h4 id="example3">Example 3: </h4>
+          <p>Encoding of a sequence variant. This is part of the GVF specification, denoting two variants for two separate sequenced individuals: &quot;Variant_seq=A,T;Genotype=0:1,1:1&quot;. See &quot;Genotype&quot; in the <a href="http://www.sequenceontology.org/resources/gvf.html">GVF specification</a>.</p>
+<pre style="font-size: 10px; line-height: 13px;">
+@prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix faldo: &lt;http://biohackathon.org/resource/faldo#&gt; .
+@prefix so: &lt;http://purl.bioontology.org/ontology/SO/SO&gt; .
 
 #################################################################
 #
@@ -394,10 +435,21 @@
 
 <h3 id="ontologyReference">Ontology Reference</h3>
 <!-- Imported via :r!~/src/Ontologies/scripts/xml2htmldocs.rb < ~/src/Ontologies/gfvo.xml -->
+<!-- lines 1179 -->
 <p>
   Ontology namespace "gfvo": http://www.biointerchange.org/gfvo#
 </p>
 <h4>Classes</h4>
+<p>
+  <h5 id="classAlias">Class "Alias"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#className">Name</a></div>
+  <div><i>Label:</i> Alias</div>
+  <div><i>Comment:</i> An alias is an alternative name whose use is mostly non-primary.</div>
+  <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Pseudonym">http://en.wikipedia.org/wiki/Pseudonym</a></div>
+  <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
+  </div>
+</p>
 <p>
   <h5 id="classAlleleFrequency">Class "AlleleFrequency"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
@@ -451,7 +503,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classCoverage">Coverage</a></div>
   <div><i>Label:</i> Average Coverage</div>
-  <div><i>Comment:</i> Average coverage depth for a genomic locus (a region or single base pair).</div>
+  <div><i>Comment:</i> Average coverage depth for a genomic locus (a region or single base pair), i.e. the average number of reads representing a given nucleotide in the reconstructed sequence.</div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Shotgun_sequencing#Coverage">http://en.wikipedia.org/wiki/Shotgun_sequencing#Coverage</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
@@ -528,6 +580,15 @@
   </div>
 </p>
 <p>
+  <h5 id="classCircularHelix">Class "CircularHelix"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classHelixStructure">HelixStructure</a></div>
+  <div><i>Label:</i> Circular Helix</div>
+  <div><i>Comment:</i> A circular helix structure.</div>
+  <div></div>
+  </div>
+</p>
+<p>
   <h5 id="classCodingFrameOffset">Class "CodingFrameOffset"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classQuality">Quality</a></div>
@@ -562,7 +623,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classInformationContentEntity">InformationContentEntity</a></div>
   <div><i>Label:</i> Comment</div>
-  <div><i>Comment:</i> A comment is a remark about a piece of information, an observation or statement. In the context of GFF3, GVF, etc., genomic feature and variation descriptions, <a href="#objectPropertyisAfter">isAfter</a> and <a href="#objectPropertyisBefore">isBefore</a> relationships should be used to indicate where a comment is situated between pragma or feature statements of GFF3, GTF, GVF or VCF files.</div>
+  <div><i>Comment:</i> A comment is a remark about a piece of information, an observation or statement. In the context of GFF3, GVF, etc., genomic feature and variation descriptions, &quot;isAfter&quot; and &quot;isBefore&quot; relationships should be used to indicate where a comment is situated between pragma or feature statements of GFF3, GTF, GVF or VCF files.</div>
   <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001167">SIO_001167</a></div>
   <div></div>
   </div>
@@ -624,7 +685,7 @@
   <div><i>Label:</i> Experimental Method</div>
   <div><i>Comment:</i> An experimental method is a procedure that yields an experimental outcome (result). Experimental methods can be in vivo, in vitro or in silico procedures that are well described and can be referenced.</div>
   <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000999">SIO_000999</a></div>
-  <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
+  <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
 <p>
@@ -748,13 +809,23 @@
   </div>
 </p>
 <p>
-  <h5 id="classGermline">Class "Germline"</h5>
+  <h5 id="classGermlineCell">Class "GermlineCell"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classCell">Cell</a></div>
-  <div><i>Label:</i> Germline</div>
+  <div><i>Label:</i> Germline Cell</div>
   <div><i>Comment:</i> The germline feature class captures information about genomic sequence features arising from germline cells.</div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Germline">http://en.wikipedia.org/wiki/Germline</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classHelixStructure">Class "HelixStructure"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classQuality">Quality</a></div>
+  <div><i>Label:</i> Helix Structure</div>
+  <div><i>Comment:</i> Helix structure denotes the physical shape of biopolymers.</div>
+  <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/DNA_helix">http://en.wikipedia.org/wiki/DNA_helix</a></div>
+  <div></div>
   </div>
 </p>
 <p>
@@ -772,7 +843,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classQuality">Quality</a></div>
   <div><i>Label:</i> Heritage</div>
-  <div><i>Comment:</i> Heritage denotes the passing of traints from parents to ancestors. Passed traits may not be visible as a phenotype, but instead, might only manifest as genetic inheritance.</div>
+  <div><i>Comment:</i> Heritage denotes the passing of traits from parents or ancestors. Passed traits may not be visible as a phenotype, but instead, might only manifest as genetic inheritance.</div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Heredity">http://en.wikipedia.org/wiki/Heredity</a></div>
   <div></div>
   </div>
@@ -782,7 +853,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classSex">Sex</a></div>
   <div><i>Label:</i> Hermaphrodite</div>
-  <div><i>Comment:</i> Denoting sex of an individual that contains both male and female gemetes.</div>
+  <div><i>Comment:</i> Denoting sex of an individual that contains both male and female gametes.</div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Hermaphrodite">http://en.wikipedia.org/wiki/Hermaphrodite</a></div>
   <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000784">SIO_000784</a></div>
   <div></div>
@@ -900,10 +971,10 @@
   </div>
 </p>
 <p>
-  <h5 id="classMaternal">Class "Maternal"</h5>
+  <h5 id="classMaternalHeritage">Class "MaternalHeritage"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classHeritage">Heritage</a></div>
-  <div><i>Label:</i> Maternal</div>
+  <div><i>Label:</i> Maternal Heritage</div>
   <div><i>Comment:</i> Maternal heritage is the passing of traits from a female to her ancestors.</div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Maternal_effect">http://en.wikipedia.org/wiki/Maternal_effect</a></div>
   <div></div>
@@ -923,9 +994,19 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classLabel">Label</a></div>
   <div><i>Label:</i> Name</div>
-  <div><i>Comment:</i> A name assigns an entity a non-formal term (or multiples thereof) that can provide information about the entities identity..</div>
+  <div><i>Comment:</i> A name assigns an entity a non-formal term (or multiples thereof) that can provide information about the entities identity.</div>
   <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000116">SIO_000116</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classNote">Class "Note"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classInformationContentEntity">InformationContentEntity</a></div>
+  <div><i>Label:</i> </div>
+  <div><i>Comment:</i> A note is a short textual description.</div>
+  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000152">SIO_000152</a></div>
+  <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
 <p>
@@ -956,10 +1037,10 @@
   </div>
 </p>
 <p>
-  <h5 id="classPaternal">Class "Paternal"</h5>
+  <h5 id="classPaternalHeritage">Class "PaternalHeritage"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classHeritage">Heritage</a></div>
-  <div><i>Label:</i> Paternal</div>
+  <div><i>Label:</i> Paternal Heritage</div>
   <div><i>Comment:</i> Paternal heritage is the passing of traits from a male to his ancestors.</div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Maternal_effect#Paternal_effect_genes">http://en.wikipedia.org/wiki/Maternal_effect#Paternal_effect_genes</a></div>
   <div></div>
@@ -993,14 +1074,14 @@
   <div><i>Label:</i> Phred Score</div>
   <div><i>Comment:</i> The Phred score can be used to assign quality scores to base calls of DNA sequences.</div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Phred_score">http://en.wikipedia.org/wiki/Phred_score</a></div>
-  <div></div>
+  <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
 <p>
-  <h5 id="classPrenatal">Class "Prenatal"</h5>
+  <h5 id="classPrenatalCell">Class "PrenatalCell"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classCell">Cell</a></div>
-  <div><i>Label:</i> Prenatal</div>
+  <div><i>Label:</i> Prenatal Cell</div>
   <div><i>Comment:</i> A prenatal feature is purportedly associated with prenatal cells; the GVF specification declares this feature type under the prama directive &quot;##genomic-source&quot;, but does not describe its semantics and the referenced Logical Observation Identifiers Names and Codes (LOINC, http://loinc.org), do not define the meaning or intended usage of the term &quot;prenatal&quot; either.</div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Prenatal">http://en.wikipedia.org/wiki/Prenatal</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
@@ -1031,7 +1112,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classAttribute">Attribute</a></div>
   <div><i>Label:</i> Quality</div>
-  <div><i>Comment:</i> Quality is a specific attribute that is strongly associated with an entity, but whose values are varying and disjunct. Qualities are finite enumerations, such as sex (<a href="#classFemale">Female</a>, <a href="#classMale">Male</a>, <a href="#classHermaphrodite">Hermaphrodite</a>), heritage (<a href="#classMaternal">Maternal</a>, <a href="#classPaternal">Paternal</a>), but they also make use of the <a href="#datatypePropertyhasValue">hasValue</a> datatype property such as <a href="#classCodingFrameOffset">Coding Frame Offset</a> (either &quot;0&quot;, &quot;1&quot; or &quot;2&quot;).</div>
+  <div><i>Comment:</i> Quality is a specific attribute that is strongly associated with an entity, but whose values are varying and disjunct. Qualities are finite enumerations, such as sex (<a href="#classFemale">Female</a>, <a href="#classMale">Male</a>, <a href="#classHermaphrodite">Hermaphrodite</a>), heritage (&quot;Maternal&quot;, &quot;Paternal&quot;), but they also make use of the &quot;hasValue&quot; datatype property such as <a href="#classCodingFrameOffset">Coding Frame Offset</a> (either &quot;0&quot;, &quot;1&quot; or &quot;2&quot;).</div>
   <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000005">SIO_000005</a></div>
   <div></div>
   </div>
@@ -1041,7 +1122,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classObject">Object</a></div>
   <div><i>Label:</i> Quantity</div>
-  <div><i>Comment:</i> A quantity denotes the magnitude of a property. This class is typically not directly instantiated, but instead, its subclasses <a href="#classAlleleFrequency">Allele Frequency</a>, <a href="#classAverageCoverage">Average Coverage</a>, etc. are used.</div>
+  <div><i>Comment:</i> A property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed by means of a number and a reference. This class is typically not directly instantiated, but instead, its subclasses <a href="#classAlleleFrequency">Allele Frequency</a>, <a href="#classAverageCoverage">Average Coverage</a>, etc. are used.</div>
   <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000052">SIO_000052</a></div>
   <div></div>
   </div>
@@ -1101,7 +1182,7 @@
   <div><i>Label:</i> Score</div>
   <div><i>Comment:</i> A measure that permits the ranking of entities.</div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Score_(statistics)">http://en.wikipedia.org/wiki/Score_(statistics)</a></div>
-  <div></div>
+  <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
 <p>
@@ -1176,10 +1257,10 @@
   </div>
 </p>
 <p>
-  <h5 id="classSomatic">Class "Somatic"</h5>
+  <h5 id="classSomaticCell">Class "SomaticCell"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classCell">Cell</a></div>
-  <div><i>Label:</i> Somatic</div>
+  <div><i>Label:</i> Somatic Cell</div>
   <div><i>Comment:</i> The somatic feature class captures information about genomic sequence features arising from somatic cells.</div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Somatic">http://en.wikipedia.org/wiki/Somatic</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
@@ -1234,6 +1315,16 @@
   </div>
 </p>
 <p>
+  <h5 id="classWatsonCrickHelix">Class "WatsonCrickHelix"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classHelixStructure">HelixStructure</a></div>
+  <div><i>Label:</i> Watson-Crick Helix</div>
+  <div><i>Comment:</i> Helical structure as first proposed by Watson and Crick.</div>
+  <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Non-helical_models_of_DNA_structure#Proposal_of_Watson.E2.80.93Crick_helical_structure">http://en.wikipedia.org/wiki/Non-helical_models_of_DNA_structure#Proposal_of_Watson.E2.80.93Crick_helical_structure</a></div>
+  <div></div>
+  </div>
+</p>
+<p>
   <h5 id="classZygosity">Class "Zygosity"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classQuality">Quality</a></div>
@@ -1256,7 +1347,7 @@
 <p>
   <h5 id="objectPropertyhasAnnotation">Object Property "hasAnnotation"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasAnnotation</div>
+  <div><i>Label:</i> has annotation</div>
   <div><i>Comment:</i> Links to additional annotations about an entity.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000255</div>
   <div></div>
@@ -1265,7 +1356,7 @@
 <p>
   <h5 id="objectPropertyhasAttribute">Object Property "hasAttribute"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasAttribute</div>
+  <div><i>Label:</i> has attribute</div>
   <div><i>Comment:</i> Links out to aggregate information for an entity.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000008</div>
   <div></div>
@@ -1274,7 +1365,7 @@
 <p>
   <h5 id="objectPropertyhasEvidence">Object Property "hasEvidence"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasEvidence</div>
+  <div><i>Label:</i> has evidence</div>
   <div><i>Comment:</i> References an entity or resource that provides supporting evidence.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000772</div>
   <div></div>
@@ -1283,7 +1374,7 @@
 <p>
   <h5 id="objectPropertyhasFirstPart">Object Property "hasFirstPart"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasFirstPart</div>
+  <div><i>Label:</i> has first part</div>
   <div><i>Comment:</i> Denotes the first entity of an ordered part relationship.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000971</div>
   <div></div>
@@ -1292,7 +1383,7 @@
 <p>
   <h5 id="objectPropertyhasIdentifier">Object Property "hasIdentifier"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasIdentifier</div>
+  <div><i>Label:</i> has identifier</div>
   <div><i>Comment:</i> Links out to an identifier.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000671</div>
   <div></div>
@@ -1301,7 +1392,7 @@
 <p>
   <h5 id="objectPropertyhasInput">Object Property "hasInput"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasInput</div>
+  <div><i>Label:</i> has input</div>
   <div><i>Comment:</i> Links out to an entity that is the input of a <a href="#classProcess">Process</a> subclass.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000230</div>
   <div></div>
@@ -1310,7 +1401,7 @@
 <p>
   <h5 id="objectPropertyhasLastPart">Object Property "hasLastPart"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasLastPart</div>
+  <div><i>Label:</i> has last part</div>
   <div><i>Comment:</i> Denotes the last entity of an ordered part relationship.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000972</div>
   <div></div>
@@ -1319,7 +1410,7 @@
 <p>
   <h5 id="objectPropertyhasMember">Object Property "hasMember"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasMember</div>
+  <div><i>Label:</i> has member</div>
   <div><i>Comment:</i> Denotes membership for <a href="#classCollection">Collection</a>, <a href="#classCatalog">Catalog</a> and <a href="#classFile">File</a> instances.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000059</div>
   <div></div>
@@ -1328,16 +1419,25 @@
 <p>
   <h5 id="objectPropertyhasOrderedPart">Object Property "hasOrderedPart"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasOrderedPart</div>
+  <div><i>Label:</i> has ordered part</div>
   <div><i>Comment:</i> Denotes a compositional relationship to other entities, where the ordering of the composition of entities carries meaning.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000974</div>
   <div></div>
   </div>
 </p>
 <p>
+  <h5 id="objectPropertyhasOutput">Object Property "hasOutput"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Label:</i> has output</div>
+  <div><i>Comment:</i> Links out to an entity that is the output of a <a href="#classProcess">Process</a> subclass.</div>
+  <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000229</div>
+  <div></div>
+  </div>
+</p>
+<p>
   <h5 id="objectPropertyhasPart">Object Property "hasPart"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasPart</div>
+  <div><i>Label:</i> has part</div>
   <div><i>Comment:</i> Denotes a compositional relationship to other entities.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000028</div>
   <div></div>
@@ -1346,7 +1446,7 @@
 <p>
   <h5 id="objectPropertyhasParticipant">Object Property "hasParticipant"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasParticipant</div>
+  <div><i>Label:</i> has participant</div>
   <div><i>Comment:</i> Denotes the participation of other entities in processes.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000132</div>
   <div></div>
@@ -1355,7 +1455,7 @@
 <p>
   <h5 id="objectPropertyhasQuality">Object Property "hasQuality"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasQuality</div>
+  <div><i>Label:</i> has quality</div>
   <div><i>Comment:</i> Links out to an entity that provides qualitative information.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000217</div>
   <div></div>
@@ -1364,32 +1464,71 @@
 <p>
   <h5 id="objectPropertyhasSource">Object Property "hasSource"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasSource</div>
+  <div><i>Label:</i> has source</div>
   <div><i>Comment:</i> Denotes information origin.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000253</div>
   <div></div>
   </div>
 </p>
 <p>
+  <h5 id="objectPropertyisAbout">Object Property "isAbout"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Label:</i> is about</div>
+  <div><i>Comment:</i> References an entity about which information is provided for.</div>
+  <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000332</div>
+  <div></div>
+  </div>
+</p>
+<p>
+  <h5 id="objectPropertyisAffectedBy">Object Property "isAffectedBy"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Label:</i> is affected by</div>
+  <div><i>Comment:</i> Denotes that an entity is affected by another entity.</div>
+  <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_001159</div>
+  <div></div>
+  </div>
+</p>
+<p>
   <h5 id="objectPropertyisAfter">Object Property "isAfter"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> isAfter</div>
+  <div><i>Label:</i> is after</div>
+  <div><i>Comment:</i> Denotes the trailing occurrence or succession of the subject in regards to the object.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000211</div>
+  <div></div>
+  </div>
+</p>
+<p>
+  <h5 id="objectPropertyisAttributeOf">Object Property "isAttributeOf"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Label:</i> is attribute of</div>
+  <div><i>Comment:</i> Denotes that an entity is an attribute of the entity that this property links out to.</div>
+  <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000011</div>
   <div></div>
   </div>
 </p>
 <p>
   <h5 id="objectPropertyisBefore">Object Property "isBefore"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> isBefore</div>
+  <div><i>Label:</i> is before</div>
+  <div><i>Comment:</i> Denotes the leading occurrence or precedence of the subject in regards to the object.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000240</div>
+  <div></div>
+  </div>
+</p>
+<p>
+  <h5 id="objectPropertyisCreatedBy">Object Property "isCreatedBy"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Label:</i> is created by</div>
+  <div><i>Comment:</i> Denotes the process or method that created an entity.</div>
+  <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000365</div>
   <div></div>
   </div>
 </p>
 <p>
   <h5 id="objectPropertyisDescribedBy">Object Property "isDescribedBy"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> isDescribedBy</div>
+  <div><i>Label:</i> is described by</div>
+  <div><i>Comment:</i> Provides a description of the subject via reference to an object that provides further information on the subject.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000557</div>
   <div></div>
   </div>
@@ -1397,26 +1536,54 @@
 <p>
   <h5 id="objectPropertyisLocatedOn">Object Property "isLocatedOn"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> isLocatedOn</div>
+  <div><i>Label:</i> is located on</div>
   <div><i>Comment:</i> Denotes the location of genomic feature on a landmark.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000061</div>
   <div></div>
   </div>
 </p>
 <p>
+  <h5 id="objectPropertyisPartOf">Object Property "isPartOf"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Label:</i> is part of</div>
+  <div><i>Comment:</i> Denotes that an entity is an intrinsic component of an encapsulating entity.</div>
+  <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000068</div>
+  <div></div>
+  </div>
+</p>
+<p>
   <h5 id="objectPropertyisParticipantIn">Object Property "isParticipantIn"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> isParticipantIn</div>
+  <div><i>Label:</i> is participant in</div>
+  <div><i>Comment:</i> Denotes participation with another entity.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000062</div>
+  <div></div>
+  </div>
+</p>
+<p>
+  <h5 id="objectPropertyisSourceOf">Object Property "isSourceOf"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Label:</i> is source of</div>
+  <div><i>Comment:</i> Denotes that an entity is the source of the entity that this property links out to.</div>
+  <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000219</div>
   <div></div>
   </div>
 </p>
 <p>
   <h5 id="objectPropertyisSpatiotemporallyRelatedTo">Object Property "isSpatiotemporallyRelatedTo"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> isSpatiotemporallyRelatedTo</div>
+  <div><i>Label:</i> is spatiotemporally related to</div>
   <div><i>Comment:</i> Denotes spatio-temporal relations to other entities.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000322</div>
+  <div></div>
+  </div>
+</p>
+<p>
+  <h5 id="objectPropertyisTemporarilyPartOf">Object Property "isTemporarilyPartOf"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Label:</i> is temporarily part of</div>
+  <div><i>Comment:</i> Denotes a temporarily constraint &quot;isPartOf&quot; relationship. The temporal restriction expresses that the relationship is not universally true.</div>
+  <div><i>Semanticscience Integrated Ontology property equivalence:</i> </div>
   <div></div>
   </div>
 </p>
@@ -1429,12 +1596,21 @@
   <div></div>
   </div>
 </p>
+<p>
+  <h5 id="objectPropertyrefersTo">Object Property "refersTo"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Label:</i> refers to</div>
+  <div><i>Comment:</i> References an entity, where additional information is provided to augment the reference.</div>
+  <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000628</div>
+  <div></div>
+  </div>
+</p>
 <h4>Datatype Properties</h4>
 <p>
   <h5 id="datatypePropertyhasValue">Datatype Property "hasValue"</h5>
   <div style="margin-left: 16px; margin-bottom: 16px">
-  <div><i>Label:</i> hasValue</div>
-  <div><i>Comment:</i> Representation of any literal that is associated with a GFVO class instance. Domain restrictions might apply. For example, <a href="#classCodonSequence">Codon Sequence</a> entities restrict <a href="#datatypePropertyhasValue">hasValue</a> to be a non-empty string consisting of A, C, G, or T letters, and whose length is a multiple of 3.</div>
+  <div><i>Label:</i> has value</div>
+  <div><i>Comment:</i> Representation of any literal that is associated with a GFVO class instance. Domain restrictions might apply. For example, <a href="#classCodonSequence">Codon Sequence</a> entities restrict <a href="#datatypePropertyhasValue">has value</a> to be a non-empty string consisting of A, C, G, or T letters, and whose length is a multiple of 3.</div>
   <div><i>Semanticscience Integrated Ontology property equivalence:</i> SIO_000300</div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
