@@ -70,12 +70,22 @@
             </ol>
           </ol>
           <div class="alert"><p><b>Note: </b> <span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span>and <span style="margin-right: 4px;" class="badge alert-warning">VCF</span> badges indicate a particular class or property definition's origin. The application of the ontology is not restricted to those file formats though.</p></div>
-          <p>GFVO is being developed as the joint work of <a href="http://joachimbaran.wordpress.com">Joachim Baran</a> (<i>corresponding author</i>, <i>joachim.baran</i><b>&#64;</b><i>gmail.com</i>), <a href="http://ntnu-no.academia.edu/ErickAntezana">Erick Antezana</a>, <a href="http://www.linkedin.com/in/raoulbonnal">Raoul Bonnal</a>, <a href="http://utah.academia.edu/BDurgahee">Begum Durgahee</a>, <a href="http://medicine.utah.edu/faculty/mddetail.php?facultyID=u0514925">Karen Eilbeck</a>, <a href="http://leechuck.de">Robert Hoehndorf</a>, <a href="http://www.linkedin.com/in/toshiakikatayama">Toshiaki Katayama</a>, <a href="http://www.linkedin.com/in/francescostrozzi">Francesco Strozzi</a>, and <a href="http://dumontierlab.com">Michel Dumontier</a>.</p>
-          <p>Feedback on the ontology has been provided by <a href="http://berkeleybop.org/person/chris-mungall">Chris Mungall</a></p>
+          <p>GFVO is being developed as the joint work of <a href="http://joachimbaran.wordpress.com">Joachim Baran</a> (<i>corresponding author</i>, <i>joachim.baran</i><b>&#64;</b><i>gmail.com</i>), <a href="http://ntnu-no.academia.edu/ErickAntezana">Erick Antezana</a>, <a href="http://www.linkedin.com/in/raoulbonnal">Raoul Bonnal</a>, <a href="http://utah.academia.edu/BDurgahee">Begum Durgahee</a>, <a href="http://medicine.utah.edu/faculty/mddetail.php?facultyID=u0514925">Karen Eilbeck</a>, <a href="http://leechuck.de">Robert Hoehndorf</a>, <a href="http://www.linkedin.com/in/toshiakikatayama">Toshiaki Katayama</a>, <a href="http://www.linkedin.com/in/francescostrozzi">Francesco Strozzi</a>, <a href="TODO">Takatomo Fujisawa</a>, and <a href="http://dumontierlab.com">Michel Dumontier</a>.</p>
+          <p>Feedback on the ontology has been provided by <a href="http://berkeleybop.org/person/chris-mungall">Chris Mungall</a>.</p>
+          <h3 id="bestpractices">Best Practices</h3>
+          <p>The ontology design adheres to the following best practices:
+            <ol>
+              <li>The class hierarchy, object- and datatype-property hierarchies are modeled to match <a href="http://code.google.com/p/semanticscience/wiki/SIO">Semanticscience Integrated Ontology</a> (SIO) hierarchies.</li>
+              <li>Every class and property has a label (rdfs:label) as well as a description (rdfs:comment). The description may contain an example of how a class/property is being applied.</li>
+              <li>Classes that are directly related to either GFF3, GTF, GVF or VCF specification have a link-out to the specification&apos;s document as provenance indicator (via rdfs:isDefinedBy).</li>
+              <li>Link-outs to Wikipedia are provided for classes whereever possible.</li>
+              <li>Ontology terms are encoded in the URIs using camel case, i.e. letters following a white space in an ontology term are capitalized followed by the removal of the white space.</li>
+            </ol>
+          </p>
           <h3 id="external">External Ontologies and Linked Data</h3>
           <p>GFVO makes use of the <a href="https://github.com/JervenBolleman/FALDO">Feature Annotation Location Description Ontology</a> (<a href="https://github.com/JervenBolleman/FALDO">FALDO</a>) for describing genomic locations such as genomic features, breakpoints, and coordinate ranges for fuzzy/probabilistic coordinate ranges. We also integrate the <a href="http://variationontology.org">Variation Ontology</a> (<a href="http://variationontology.org">VariO</a>) for describing variants, their effects and consequences.</p>
           <p>Species are represented as linked data by URIs to NCBI's <a href="http://www.ncbi.nlm.nih.gov/taxonomy">species taxonomy</a>. We encourage the use of <a href="http://identifiers.org">identifiers.org</a> URIs for other entities, which will be automatically be supported in the BioInterchange's RDF output with its next release.</p>
-          <p>The design patterns of GFVO follow the <a href="http://code.google.com/p/semanticscience/wiki/SIO">Semanticscience Integrated Ontology</a> (SIO) and equivalence mappings are provided for GFVO's classes, object- and datatype-properties where applicable.</p>
+          <p>The design patterns of GFVO follow the <a href="http://code.google.com/p/semanticscience/wiki/SIO">SIO</a> and equivalence mappings are provided for GFVO's classes, object- and datatype-properties where applicable.</p>
 <!--
           <h3 id="hierarchy">Hierarchy Overview</h3>
           <div class="row">
