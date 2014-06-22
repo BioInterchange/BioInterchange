@@ -635,14 +635,21 @@ The following Java packages will automatically install alongside BioInterchange'
 
 ### Gem Bundling/Installing
 
+Mac OS X prerequisites and `bundle install` difference:
+
+    sudo port install libxml2 libxslt
+    sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future bundle install
+
+Actual gem bundling:
+
     bundle exec rake gemspec
     bundle exec gem build biointerchange.gemspec
-    sudo bundle exec gem install biointerchange
+    sudo bundle exec gem install biointerchange-`cat VERSION`.gem
 
 If you encounter problems with gem dependencies, then you can try to explictly use Ruby 1.9:
 
     bundle exec gem1.9 build biointerchange.gemspec
-    sudo bundle exec gem1.9 install biointerchange
+    sudo bundle exec gem1.9 install biointerchange-`cat VERSION`.gem
 
 ### Unit Testing
 
