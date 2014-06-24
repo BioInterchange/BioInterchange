@@ -3,466 +3,248 @@ module BioInterchange
 
 class GFVO
 
-  # An alignment is a sequence alignment between a "Feature" class instance and a "Target" class instance. The alignment is a list of one or more "Alignment Operation" instances that capture alignment matches, gaps and frameshifts (see "The Gap Attribute", http://sequenceontology.org/resources/gff3.html).
-  # (http://www.biointerchange.org/gfvo#alignment)
-  def self.alignment
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#alignment')
+  # Links to an entity for which supportive information is being provided.
+  # (http://www.biointerchange.org/gfvo#describes)
+  def self.describes
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#describes')
   end
 
-  # Annotation object properties associated with instances of the class hierarchy with root class "Annotation". For properties related to the core genomic data class "Feature", see "feature datatype property" or "feature object property".
-  # (http://www.biointerchange.org/gfvo#annotationObjectProperty)
-  def self.annotation_object_property
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty')
+  # Links to additional annotations about an entity.
+  # (http://www.biointerchange.org/gfvo#hasAnnotation)
+  def self.has_annotation
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasAnnotation')
   end
 
-  # Tag name/value pair attributes of a feature.
-  # (http://www.biointerchange.org/gfvo#attribute)
-  def self.attribute
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#attribute')
+  # Links out to aggregate information for an entity.
+  # (http://www.biointerchange.org/gfvo#hasAttribute)
+  def self.has_attribute
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasAttribute')
   end
 
-  # Further information about the "Method" that is related to an attribute.
-  # (http://www.biointerchange.org/gfvo#attributeMethod)
-  def self.attribute_method
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#attributeMethod')
+  # References an entity or resource that provides supporting evidence.
+  # (http://www.biointerchange.org/gfvo#hasEvidence)
+  def self.has_evidence
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasEvidence')
   end
 
-  # Denotes abstract chromosome representations for capturing variants that appear on the same chromosome of a polyploid organism.
-  # (http://www.biointerchange.org/gfvo#chromosome)
-  def self.chromosome
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#chromosome')
+  # Denotes the first entity of an ordered part relationship.
+  # (http://www.biointerchange.org/gfvo#hasFirstPart)
+  def self.has_first_part
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasFirstPart')
   end
 
-  # Relationship that describes which features belong to a feature set.
-  # (http://www.biointerchange.org/gfvo#contains)
-  def self.contains
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#contains')
+  # Links out to an identifier.
+  # (http://www.biointerchange.org/gfvo#hasIdentifier)
+  def self.has_identifier
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasIdentifier')
   end
 
-  # Data source origin of the feature.
-  # (http://www.biointerchange.org/gfvo#dataSource)
-  def self.data_source
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#dataSource')
+  # Links out to an entity that is the input of a "Process" subclass.
+  # (http://www.biointerchange.org/gfvo#hasInput)
+  def self.has_input
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasInput')
   end
 
-  # A database cross-reference to associate a feature or its structured pragma metadata in GVF to a representation in another database.
-  # (http://www.biointerchange.org/gfvo#dbxref)
-  def self.dbxref
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#dbxref')
+  # Denotes the last entity of an ordered part relationship.
+  # (http://www.biointerchange.org/gfvo#hasLastPart)
+  def self.has_last_part
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasLastPart')
   end
 
-  # Denotes a temporal relationship between "Feature" class instances. This property can be used to describe multiple open reading frames of polycistronic genes.
-  # (http://www.biointerchange.org/gfvo#derivesFrom)
-  def self.derives_from
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#derivesFrom')
+  # Denotes membership for "Collection", "Catalog" and "File" instances.
+  # (http://www.biointerchange.org/gfvo#hasMember)
+  def self.has_member
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasMember')
   end
 
-  # An effect of a particular feature variant.
-  # (http://www.biointerchange.org/gfvo#effect)
-  def self.effect
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#effect')
+  # Denotes a compositional relationship to other entities, where the ordering of the composition of entities carries meaning.
+  # (http://www.biointerchange.org/gfvo#hasOrderedPart)
+  def self.has_ordered_part
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasOrderedPart')
   end
 
-  # Properties that are directly associated with "Feature" class instances. For properties related to "Reference", "Variant", or other genomic annotation classes, see "feature annotation datatype property" or "feature annotation object property".
-  # (http://www.biointerchange.org/gfvo#featureObjectProperty)
-  def self.feature_object_property
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty')
+  # Links out to an entity that is the output of a "Process" subclass.
+  # (http://www.biointerchange.org/gfvo#hasOutput)
+  def self.has_output
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasOutput')
   end
 
-  # Explicit link-out to one or more ontologies that have been used for describing features. This is a meta comment about the URIs that link out to SO/SOFA or other ontologies.
-  # (http://www.biointerchange.org/gfvo#featureOntology)
-  def self.feature_ontology
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#featureOntology')
+  # Denotes a compositional relationship to other entities.
+  # (http://www.biointerchange.org/gfvo#hasPart)
+  def self.has_part
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasPart')
   end
 
-  # A term that is describing the sequence feature that is being affected.
-  # (http://www.biointerchange.org/gfvo#featureType)
-  def self.feature_type
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#featureType')
+  # Denotes the participation of other entities in processes.
+  # (http://www.biointerchange.org/gfvo#hasParticipant)
+  def self.has_participant
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasParticipant')
   end
 
-  # Denotes the source of genomic data (on a cell-type level). Valid object assignments are individuals of the "Genomic Source" enumeration class.
-  # (http://www.biointerchange.org/gfvo#genomicSource)
-  def self.genomic_source
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#genomicSource')
+  # Links out to an entity that provides qualitative information.
+  # (http://www.biointerchange.org/gfvo#hasQuality)
+  def self.has_quality
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasQuality')
   end
 
-  # Determines the genotype as observed in an individual.
-  # (http://www.biointerchange.org/gfvo#genotype)
-  def self.genotype
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#genotype')
+  # Denotes information origin.
+  # (http://www.biointerchange.org/gfvo#hasSource)
+  def self.has_source
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasSource')
   end
 
-  # Links to information about an individual.
-  # (http://www.biointerchange.org/gfvo#individual)
-  def self.individual
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#individual')
+  # References an entity about which information is provided for.
+  # (http://www.biointerchange.org/gfvo#isAbout)
+  def self.is_about
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isAbout')
   end
 
-  # The locus determines the genomic position of an genomic object. The FALDO "Region" class can denote genomic feature's start, stop, and strand properties, it can express fuzzy genomic ranges if exact genomic coordinates are unknown. For "Landmark" class instances, the locus provides the start and end coordinates of the landmark.
-  # (http://www.biointerchange.org/gfvo#locus)
-  def self.locus
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#locus')
+  # Denotes that an entity is affected by another entity.
+  # (http://www.biointerchange.org/gfvo#isAffectedBy)
+  def self.is_affected_by
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isAffectedBy')
   end
 
-  # A cross-reference to an ontology term that is associated with a feature. For instances of the "Variant" class, the associated ontology term must be a Variant Ontology term (VariO; http://purl.obolibrary.org/obo/VariO_0001 or subclasses thereof).
-  # (http://www.biointerchange.org/gfvo#ontologyTerm)
-  def self.ontology_term
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#ontologyTerm')
+  # Denotes the trailing occurrence or succession of the subject in regards to the object.
+  # (http://www.biointerchange.org/gfvo#isAfter)
+  def self.is_after
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isAfter')
   end
 
-  # Link out to a parent feature.
-  # (http://www.biointerchange.org/gfvo#parent)
-  def self.parent
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#parent')
+  # Denotes that an entity is an attribute of the entity that this property links out to.
+  # (http://www.biointerchange.org/gfvo#isAttributeOf)
+  def self.is_attribute_of
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isAttributeOf')
   end
 
-  # Further information about an individual's phenotype. Applies only to single individual sets.
-  # (http://www.biointerchange.org/gfvo#phenotypeDescription)
-  def self.phenotype_description
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#phenotypeDescription')
+  # Denotes the leading occurrence or precedence of the subject in regards to the object.
+  # (http://www.biointerchange.org/gfvo#isBefore)
+  def self.is_before
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isBefore')
   end
 
-  # Link-out to a external reference's dataset URI.
-  # (http://www.biointerchange.org/gfvo#reference)
-  def self.reference
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#reference')
+  # Denotes the process or method that created an entity.
+  # (http://www.biointerchange.org/gfvo#isCreatedBy)
+  def self.is_created_by
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isCreatedBy')
   end
 
-  # Used scoring method, which is described in more detail by a "Method" class instance.
-  # (http://www.biointerchange.org/gfvo#scoreMethod)
-  def self.score_method
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#scoreMethod')
+  # Provides a description of the subject via reference to an object that provides further information on the subject.
+  # (http://www.biointerchange.org/gfvo#isDescribedBy)
+  def self.is_described_by
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isDescribedBy')
   end
 
-  # Establishes the landmark on which the feature or breakpoint is located. A landmark is typically a chromosome, scaffold or contig, but can be any other genomic object (DNA, RNA, protein) in principle.
-  # (http://www.biointerchange.org/gfvo#seqid)
-  def self.seqid
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#seqid')
+  # Denotes the location of genomic feature on a landmark.
+  # (http://www.biointerchange.org/gfvo#isLocatedOn)
+  def self.is_located_on
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isLocatedOn')
   end
 
-  # Referene to a "Sequence Annotation" that describes either the sequence identified by a feature, or if particular sub-classes of "Sequence Annotation" are used, it describes a reference sequence, variant or anchestral allele (see "Reference", "Variant", "Ancestral Allele").
-  # (http://www.biointerchange.org/gfvo#sequenceAnnotation)
-  def self.sequence_annotation
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#sequenceAnnotation')
+  # Denotes that an entity is an intrinsic component of an encapsulating entity.
+  # (http://www.biointerchange.org/gfvo#isPartOf)
+  def self.is_part_of
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isPartOf')
   end
 
-  # Effect of a sequence alteration on a sequence feature.
-  # (http://www.biointerchange.org/gfvo#sequenceVariant)
-  def self.sequence_variant
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#sequenceVariant')
+  # Denotes participation with another entity.
+  # (http://www.biointerchange.org/gfvo#isParticipantIn)
+  def self.is_participant_in
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isParticipantIn')
   end
 
-  # A property that is directly associated with the "Set" class. Immediate sub-properties of this property are independent to specific specifications such as GFF3, GTF, GVF or VCF. Not all sub-properties can be preserved when carrying out operations between multiple "Set" class instances. For example, the "sex" property applies to single individual sets and can only be kept in a set union between multiple "Set" class instances if all involved instances agree on this property. For genomic feature and variant related properties, see "record object property" and "record datatype property".
-  # (http://www.biointerchange.org/gfvo#setObjectProperty)
-  def self.set_object_property
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#setObjectProperty')
+  # Denotes that an entity is the source of the entity that this property links out to.
+  # (http://www.biointerchange.org/gfvo#isSourceOf)
+  def self.is_source_of
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isSourceOf')
   end
 
-  # Further information about the algorithm/methodologies used.
-  # (http://www.biointerchange.org/gfvo#sourceMethod)
-  def self.source_method
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#sourceMethod')
+  # Denotes spatio-temporal relations to other entities.
+  # (http://www.biointerchange.org/gfvo#isSpatiotemporallyRelatedTo)
+  def self.is_spatiotemporally_related_to
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isSpatiotemporallyRelatedTo')
   end
 
-  # NCBI Taxonomy Ontology "NCBITaxon_1" (or sub-classes) instance that denotes the species for a feature set.
-  # (http://www.biointerchange.org/gfvo#species)
-  def self.species
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#species')
+  # Denotes a temporarily constraint "isPartOf" relationship. The temporal restriction expresses that the relationship is not universally true.
+  # 
+  # This property can be used to express "Derives_from" relations in GFF3.
+  # (http://www.biointerchange.org/gfvo#isTemporarilyPartOf)
+  def self.is_temporarily_part_of
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#isTemporarilyPartOf')
   end
 
-  # Tag name/value pair attributes that are not captured by the GVF specification.
-  # (http://www.biointerchange.org/gfvo#structuredAttributes)
-  def self.structured_attributes
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#structuredAttributes')
+  # References another entity or resource.
+  # (http://www.biointerchange.org/gfvo#references)
+  def self.references
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#references')
   end
 
-  # Identifies the target that the features aligns to.
-  # (http://www.biointerchange.org/gfvo#target)
-  def self.target
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#target')
+  # References an entity, where additional information is provided to augment the reference.
+  # (http://www.biointerchange.org/gfvo#refersTo)
+  def self.refers_to
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#refersTo')
   end
 
-  # Further information about the associated attribute(s).
-  # (http://www.biointerchange.org/gfvo#targetAttributeMethod)
-  def self.target_attribute_method
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#targetAttributeMethod')
+  # Representation of any literal that is associated with a GFVO class instance. Domain restrictions might apply. For example, "Codon Sequence" entities restrict "has value" to be a non-empty string consisting of A, C, G, or T letters, and whose length is a multiple of 3.
+  # (http://www.biointerchange.org/gfvo#hasValue)
+  def self.has_value
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#hasValue')
   end
 
-  # Technology platform that was used to derive the feature.
-  # (http://www.biointerchange.org/gfvo#technologyPlatform)
-  def self.technology_platform
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#technologyPlatform')
+  # An alias is an alternative name whose use is mostly non-primary.
+  # (http://www.biointerchange.org/gfvo#Alias)
+  def self.Alias
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Alias')
   end
 
-  # Type of the feature, which is a child entry of sequence_feature (SO:0000110) of the full Sequence Ontology (SO).
-  # (http://www.biointerchange.org/gfvo#type)
-  def self.type
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#type')
+  # Proportion of a particular gene allele in a gene pool.
+  # (http://www.biointerchange.org/gfvo#AlleleFrequency)
+  def self.AlleleFrequency
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#AlleleFrequency')
   end
 
-  # Sequence context of a feature on the positive strand (forward strand) on the 3' end. A valid sequence context is denoted by a string of one or more concatenated letters A, C, G, or T.
-  # (http://www.biointerchange.org/gfvo#threePrimeContext)
-  def self.a_3_context
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#threePrimeContext')
+  # -- No comment or description provided. --
+  # (http://www.biointerchange.org/gfvo#AminoAcid)
+  def self.AminoAcid
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#AminoAcid')
   end
 
-  # Sequence context of a feature on the positive strand (forward strand) on the 5' end. A valid sequence context is denoted by a string of one or more concatenated letters A, C, G, or T.
-  # (http://www.biointerchange.org/gfvo#fivePrimeContext)
-  def self.a_5_context
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#fivePrimeContext')
+  # Denotes an ancestral allele of a feature. May be used to denote the 'ancestral allele' of VCF formatted files.
+  # (http://www.biointerchange.org/gfvo#AncestralSequence)
+  def self.AncestralSequence
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#AncestralSequence')
   end
 
-  # Secondary name of a feature besides the primary feature ID. The secondary name can be a HGVS/ISCN nomenclature name, but not a cross-reference to a database (e.g. dbSNP, OMIM). Cross-references should be made using the "dbxref" property.
-  # (http://www.biointerchange.org/gfvo#alias)
-  def self.alias
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#alias')
-  end
-
-  # Amino acid in the reference genome that overlaps with a variant's genome coordinates.
-  # (http://www.biointerchange.org/gfvo#aminoAcid)
-  def self.amino_acid
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#aminoAcid')
-  end
-
-  # Annotation datatype properties associated with instances of the class hierarchy with root class "Annotation". For properties related to the core genomic data class "Feature", see "feature datatype property" or "feature object property".
-  # (http://www.biointerchange.org/gfvo#annotationDatatypeProperty)
-  def self.annotation_datatype_property
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty')
-  end
-
-  # Undocumented in GVF specification. Even though the property's semantics are undocumented, it is still included in the ontology in order to reflect the data values that might be encoded in GVF files.
-  # (http://www.biointerchange.org/gfvo#averageCoverage)
-  def self.average_coverage
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#averageCoverage')
-  end
-
-  # Name of a genome assembly build that denotes the provenance of genomic features and variants in a "Set". For example, 'GRCh37', 'NCBI 36', 'FlyBase r4.1', or 'hg19'. If possible, the patch level of the assembly build should be included, such as 'GRCh37.p7'.
-  # (http://www.biointerchange.org/gfvo#build)
-  def self.build
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#build')
-  end
-
-  # Describes the codon from the reference sequence whose coordinates overlap with this variant. A valid codon description is a string of three -- or multiples thereof -- concatenated letters A, C, G, or T.
-  # (http://www.biointerchange.org/gfvo#codon)
-  def self.codon
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#codon')
-  end
-
-  # Comments should be made using "http://www.w3.org/2000/01/rdf-schema#comment".This datatype property only exists to redirect the focus to RDF Schema for commenting, since it might be expected that comments are modeled similar to other datatype properties involving "Data Source", "Method", "Phenotype Description" or "Technology Platform".
-  # (http://www.biointerchange.org/gfvo#comment)
-  def self.comment
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#comment')
-  end
-
-  # Features that are affected by this sequence alteration effect. This can be an external feature identifier, such as an Ensembl gene/transcript identifier.
-  # (http://www.biointerchange.org/gfvo#feature)
-  def self.feature
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#feature')
-  end
-
-  # Property that is directly associated with a "Feature" class instance. For properties related to "Reference", "Variant", or other genomic annotation classes, see "feature annotation datatype property" or "feature annotation object property".
-  # (http://www.biointerchange.org/gfvo#featureDatatypeProperty)
-  def self.feature_datatype_property
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty')
-  end
-
-  # Datatype properties related to "File" class instances. Subclasses of this property are used for denoting data that is specific to files only and which is only preserved as a means to encode for all data items defined by the GFF3, GTF, GVF and VCF specifications. These properties cannot be carried over into the result of set operations (s.a. union) between "File"/"Set" class instances. Keeping these properties in the result set between set operations may result in wrong annotations or contradictions (e.g., mutliple assignment of different versions or dates).
-  # (http://www.biointerchange.org/gfvo#fileDatatypeProperty)
-  def self.file_datatype_property
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#fileDatatypeProperty')
-  end
-
-  # Creation date of the data file whose genomic data is captured by the associated "File" instance.
-  # (http://www.biointerchange.org/gfvo#fileDate)
-  def self.file_date
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#fileDate')
-  end
-
-  # Proprietary version of the file or its contents whose genomic data is associated with a "File" instance.
-  # (http://www.biointerchange.org/gfvo#fileVersion)
-  def self.file_version
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#fileVersion')
-  end
-
-  # Frequency of a variant in a population. The population is determined by the "Set" in which the "Variant" resides.
-  # (http://www.biointerchange.org/gfvo#frequency)
-  def self.frequency
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#frequency')
-  end
-
-  # Version of the GFF3 specification that defines the contents captured by the "File" class instance. The version number should be greater or equal than 3.0, but less than 4.0. For GFF2/GTF version number assignment, see the "gtf version" datatype property.
-  # (http://www.biointerchange.org/gfvo#gffVersion)
-  def self.gff_version
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#gffVersion')
-  end
-
-  # Version of the GTF specification that defines the contents captured by the "File" class instance. The version number should be greater or equal than 2.0, but less than 3.0. This number derives from the fact that GTF files are equivalent to GFF2 files. GTF/GFF2 files are incompatible with the GFF3 specification. For GFF3 version number assignment, see the "gff version" datatype property.
-  # (http://www.biointerchange.org/gfvo#gtfVersion)
-  def self.gtf_version
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#gtfVersion')
-  end
-
-  # Version of the GVF specification that defines the contents captured by the "File" class instance. The version number should be greater or equal than 1.0, but less than 2.0. GVF files usually make a statement about their underlying GFF3 specification that they rely on too, which should be encoded using the "gff version" datatype property.
-  # (http://www.biointerchange.org/gfvo#gvfVersion)
-  def self.gvf_version
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#gvfVersion')
-  end
-
-  # A unique identifier for the feature within the feature set (a "Set"/"File" class instance). The unique identifier is important when dealing with GFF3, GTF, GVF or VCF files as a stand in object that makes the aggregation and separation of genomic feature and variant information possible. In RDF, the URI of subject should be used primarily, provided that its URI can be considered stable.
-  # (http://www.biointerchange.org/gfvo#id)
-  def self.id
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#id')
-  end
-
-  # Truth value describing whether the feature is circular or not. This can be used to describe, for example, circular DNA as being found in bacteria or viruses. It can also be applied to mitochondrial DNA or plastid DNA, where applicable.
-  # (http://www.biointerchange.org/gfvo#isCircular)
-  def self.is_circular
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#isCircular')
-  end
-
-  # Indicates whether this particular feature is phased. Used to encode "##phased-genotypes" statements in GFF3, but can be appropriated freely. It is also a property of GVF variants, even though the GVF specification is unclear on its exact usage details.
-  # (http://www.biointerchange.org/gfvo#isPhased)
-  def self.is_phased
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#isPhased')
-  end
-
-  # Name of a feature, which can be used for display purposes. The name is not a unique property among features in a "Set".
-  # (http://www.biointerchange.org/gfvo#name)
-  def self.name
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#name')
-  end
-
-  # Free text notes should be made using "http://www.w3.org/2000/01/rdf-schema#comment".This datatype property only exists to redirect the focus to RDF Schema for annotating features with notes, since it might be expected that a note is similarly modeled to other datatype properties of the "Feature" class.
-  # (http://www.biointerchange.org/gfvo#note)
-  def self.note
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#note')
-  end
-
-  # Phase of the feature, if it is a CDS. Called "frame" in GTF. A feature's phase can be either 0, 1, or 2.
-  # (http://www.biointerchange.org/gfvo#phase)
-  def self.phase
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#phase')
-  end
-
-  # A phred-scaled quality score for the reference seuence; -10log_10 prob(no variant). A phred-scaled quality score for a variant sequence; -10log_10 prob(variant call is wrong). High scores indicate high confidence calls. This is a property associated with VCF data. E-values and P-values of features should be expressed using the "score" datatype property.
-  # (http://www.biointerchange.org/gfvo#phredScore)
-  def self.phred_score
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#phredScore')
-  end
-
-  # Type of technology used to gather the variant data. The GVF specification's list of available classes is naturally incomplete. The range of this property is therefore unrestricted due to its open specification.
-  # (http://www.biointerchange.org/gfvo#platformClass)
-  def self.platform_class
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#platformClass')
-  end
-
-  # Sequencer or other machine used to collect the variant data. The GVF specification's list of available platforms is naturally incomplete. The range of this property is therefore unrestricted due to its open specification.
-  # (http://www.biointerchange.org/gfvo#platformName)
-  def self.platform_name
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#platformName')
-  end
-
-  # Undocumented in GVF specification. Even though the property's semantics are undocumented, it is still included in the ontology in order to reflect the data values that might be encoded in GVF files.
-  # (http://www.biointerchange.org/gfvo#readIPairSpan)
-  def self.read_pair_span
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#readIPairSpan')
-  end
-
-  # Undocumented in GVF specification. Even though the property's semantics are undocumented, it is still included in the ontology in order to reflect the data values that might be encoded in GVF files.
-  # (http://www.biointerchange.org/gfvo#readLength)
-  def self.read_length
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#readLength')
-  end
-
-  # Number of reads that are supporting a variant. Valid values are integers greater or equal than zero.
-  # (http://www.biointerchange.org/gfvo#reads)
-  def self.reads
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#reads')
-  end
-
-  # Score of the feature. For example, an E-value for sequence similarity features or a P-value for ab initio gene prediction features. Phred scores that are associated with reference- or variant-sequences should be encoded using the "phred score" datatype property.
-  # (http://www.biointerchange.org/gfvo#score)
-  def self.score
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#score')
-  end
-
-  # All sequence variations at a locus -- including the reference sequence when appropriate (for example, when the locus is heterozygous). If the feature is on the minus strand, then the sequence is the reverse-compliment of the reference genome for these coordinates.
-  # (http://www.biointerchange.org/gfvo#sequence)
-  def self.sequence
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#sequence')
-  end
-
-  # A property that is directly associated with the "Set" class. Immediate sub-properties of this property are independent to specific specifications such as GFF3, GTF, GVF or VCF. Not all sub-properties can be preserved when carrying out operations between multiple "Set" class instances. For example, the "build" property can only be kept in a set union between multiple "Set" class instances if all involved instances agree on this property. For genomic feature and variant related properties, see "record object property" and "record datatype property".
-  # (http://www.biointerchange.org/gfvo#setDatatypeProperty)
-  def self.set_datatype_property
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#setDatatypeProperty')
-  end
-
-  # A free text qualifier that describes the algorithm or operating procedure that generated this feature.  For example, the name of the software that generated this feature or a database name.
-  # (http://www.biointerchange.org/gfvo#source)
-  def self.source
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#source')
-  end
-
-  # A span denotes the number of continuous nucleotides or amino acids an "Alignment Operation" is annotating. A span can be of length zero or greater.
-  # (http://www.biointerchange.org/gfvo#span)
-  def self.span
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#span')
-  end
-
-  # Tag name of a feature attribute. "Attribute" and "Structured Attribute" instances are key/value(s) pairs, The key in that assignment is referred to as the "tag". Custom annotations, i.e. attributes that are not defined by the file format specifications, should use lowercase tags. Future extensions of the specifications might introduce new attributes though, which can be encoded using custom annotations by RDFization tools. The tag should therefore not be treated as strictly lowercase when dealing with custom annotations.
-  # (http://www.biointerchange.org/gfvo#tag)
-  def self.tag
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#tag')
-  end
-
-  # Total number of reads for a "Sequenced Individual". When merging "Set"/"File" class instances, it should be noted whether the total number of reads needs to be updated based on the identity of sequenced individuals in the involved sets.
-  # (http://www.biointerchange.org/gfvo#totalReads)
-  def self.total_reads
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#totalReads')
-  end
-
-  # Version of the VCF specification that defines the contents captured by the "File" class instance. The version number should be greater or equal than 4.0, but less than 5.0.
-  # (http://www.biointerchange.org/gfvo#vcfVersion)
-  def self.vcf_version
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#vcfVersion')
-  end
-
-  # Version information for a particular external database reference (via an instance of class 'External Reference').
-  # (http://www.biointerchange.org/gfvo#version)
-  def self.version
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#version')
-  end
-
-  # An alignment operation captures the type of alignment (see "Alignment" enumeration class) and alignment length between a reference sequence and target sequence. This relationship is typically expressed between a "Feature" class instance and a "Target" class instance. Note that an "Alignment Operation" is a list, where the order of the alignment operations is of significance.
-  # (http://www.biointerchange.org/gfvo#AlignmentOperation)
-  def self.AlignmentOperation
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#AlignmentOperation')
-  end
-
-  # Denotes an ancestral allele of a feature. Reference sequences and genomic variants are expressed by the "Reference" and "Variant" classes respectively.
-  # (http://www.biointerchange.org/gfvo#AncestralAllele)
-  def self.AncestralAllele
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#AncestralAllele')
-  end
-
-  # A feature annotation is a class whose instances are used as composites in conjunction with "Feature" class instances. The "Feature Annotation" class is typically not used as type annotation. It rather denotes that its subclasses are to be used for extending genomic features with additional information.
-  # (http://www.biointerchange.org/gfvo#Annotation)
-  def self.Annotation
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation')
-  end
-
-  # A "Data Source" based on array-comparative genomic hybridization.
+  # Feature provenance is based on array-comparative genomic hybridization.
   # (http://www.biointerchange.org/gfvo#ArrayComparativeGenomicHybridization)
   def self.ArrayComparativeGenomicHybridization
     return RDF::URI.new('http://www.biointerchange.org/gfvo#ArrayComparativeGenomicHybridization')
   end
 
-  # An attribute represents a tag/value pair that is not covered by either GFF3, GTF, GVF or VCF specification. For example, lowercase tags in GFF3 are permitted to allow data providers to provide additional information about a genomic feature, variant, or its meta-data. Tag/value pair attributes that are within the aforementioned specifications are expressed using classes such as "Variant", "Breakpoint" or "Technology Platform". Attributes whose value is a composite type are expressed by the specialization "Structured Attribute",
+  # An attribute denotes characteristics of an entity. At this stage, "Quality" is the only direct subclass of "Attribute", whose subclasses denote qualitative properties such as sex ("Female", "Male", "Mermaphrodite"), zygosity ("Hemizygous", "Heterozygous", "Homozygous"), etc.
+  # 
+  # The object property "hasQuality" (or subproperties thereof) should be utilized to express qualities of entities. The "hasAttribute" object property should be used to denote relationships to "Object" or "Process" instances, unless there is a better object property suitable to represent the relationship between the involved entities..
   # (http://www.biointerchange.org/gfvo#Attribute)
   def self.Attribute
     return RDF::URI.new('http://www.biointerchange.org/gfvo#Attribute')
+  end
+
+  # Average coverage depth for a genomic locus (a region or single base pair), i.e. the average number of reads representing a given nucleotide in the reconstructed sequence.
+  # (http://www.biointerchange.org/gfvo#AverageCoverage)
+  def self.AverageCoverage
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#AverageCoverage')
+  end
+
+  # A biological entity an entity that contains genomic material or utilizes genomic material during its existance. Genomic material itself is represented as sub-classes of Chemical Entity.
+  # (http://www.biointerchange.org/gfvo#BiologicalEntity)
+  def self.BiologicalEntity
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#BiologicalEntity')
+  end
+
+  # Information about features and variants is based on biopolymer sequencing.
+  # (http://www.biointerchange.org/gfvo#BiopolymerSequencing)
+  def self.BiopolymerSequencing
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#BiopolymerSequencing')
   end
 
   # A breakpoint describes the source or destination of a zero-length sequence alteration. These alterations are typically insertions, deletions or translocations according to the GVF specification (see "Breakpoint_detail" in http://sequenceontology.org/resources/gvf.html).
@@ -471,55 +253,123 @@ class GFVO
     return RDF::URI.new('http://www.biointerchange.org/gfvo#Breakpoint')
   end
 
+  # A catalog is a specialization of a "Collection", where all its contents are of the same type.
+  # (http://www.biointerchange.org/gfvo#Catalog)
+  def self.Catalog
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Catalog')
+  end
+
+  # A cell is a biological unit that in itself forms a living organism or is part of a larger organism that is composed of many other cells.
+  # (http://www.biointerchange.org/gfvo#Cell)
+  def self.Cell
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Cell')
+  end
+
+  # A chemical entity is an entity related to chemistry. This class is typically not instantiated, but instead, its subclasses "Amino Acid", "Chromosome", "Peptide Sequence", etc., are used to represent specific chemical entities.
+  # (http://www.biointerchange.org/gfvo#ChemicalEntity)
+  def self.ChemicalEntity
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#ChemicalEntity')
+  end
+
   # A chromosome is an abstract representation of an unnamed chromosome to represent ploidy within a data set. A "Chromosome" instance is used for for denoting the locus of phased genotypes. For placing genomic features ("Feature" class instances) on a chromosome, contig, scaffold, etc., please see the "Landmark" class.
   # (http://www.biointerchange.org/gfvo#Chromosome)
   def self.Chromosome
     return RDF::URI.new('http://www.biointerchange.org/gfvo#Chromosome')
   end
 
-  # A "Data Source" based on DNA microarray probes.
+  # A circular helix structure.
+  # 
+  # Can be used to indicate a true "Is_circular" attribute in GFF3 and GVF.
+  # (http://www.biointerchange.org/gfvo#CircularHelix)
+  def self.CircularHelix
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#CircularHelix')
+  end
+
+  # Coding frame offset of the feature, if it is a coding sequence or feature that contributes to transcription and translation. It is referred to as "frame" in GTF, but called "phase" in GFF3 and GVF. A feature's coding frame offset can be either 0, 1, or 2.
+  # (http://www.biointerchange.org/gfvo#CodingFrameOffset)
+  def self.CodingFrameOffset
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#CodingFrameOffset')
+  end
+
+  # A codon sequence is a nucleotide sequence underlying a potential amino acid sequence. Codon sequences are three bases of length or multiples thereof.
+  # (http://www.biointerchange.org/gfvo#CodonSequence)
+  def self.CodonSequence
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#CodonSequence')
+  end
+
+  # A collection is a container for genomic data. A collection may contain information about genomic data including -- but not limited to -- contents of GFF3, GTF, GVF and VCF files. The latter are better represented by "File" class instances, whereas the result of unions or intersections between different "File" class instances should be captured within this format-independent "Collection" class. When importing data whose provenance is not a GFF3, GTF, GVF or VCF file, instances of "Collection" should be utilized too, or the more restrictive "Catalog" class should be used.
+  # (http://www.biointerchange.org/gfvo#Collection)
+  def self.Collection
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Collection')
+  end
+
+  # A comment is a remark about a piece of information, an observation or statement. In the context of GFF3, GVF, etc., genomic feature and variation descriptions, "isAfter" and "isBefore" relationships should be used to indicate where a comment is situated between pragma or feature statements of GFF3, GTF, GVF or VCF files.
+  # (http://www.biointerchange.org/gfvo#Comment)
+  def self.Comment
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Comment')
+  end
+
+  # A contig is a contiguous DNA sequence that has been assembled from shorter overlapping DNA segments.
+  # (http://www.biointerchange.org/gfvo#Contig)
+  def self.Contig
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Contig')
+  end
+
+  # Number of nucleic acid sequence reads for a particular genomic locus (a region or single base pair).
+  # (http://www.biointerchange.org/gfvo#Coverage)
+  def self.Coverage
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Coverage')
+  end
+
+  # Feature information is based on DNA microarray probes.
   # (http://www.biointerchange.org/gfvo#DNAMicroarray)
   def self.DNAMicroarray
     return RDF::URI.new('http://www.biointerchange.org/gfvo#DNAMicroarray')
   end
 
-  # A "Data Source" based on DNA sequences.
+  # -- No comment or description provided. --
   # (http://www.biointerchange.org/gfvo#DNASequence)
   def self.DNASequence
     return RDF::URI.new('http://www.biointerchange.org/gfvo#DNASequence')
   end
 
-  # Provides information about the source of the data. For example, it can link out to actual sequences associated with "Feature" individuals in a "Set".
-  # (http://www.biointerchange.org/gfvo#DataSource)
-  def self.DataSource
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#DataSource')
+  # Information about features and variants is based on DNA sequencing.
+  # (http://www.biointerchange.org/gfvo#DNASequencing)
+  def self.DNASequencing
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#DNASequencing')
   end
 
-  # Describing the effect of a feature "Variant" class instance.
-  # (http://www.biointerchange.org/gfvo#Effect)
-  def self.Effect
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#Effect')
+  # An experimental method is a procedure that yields an experimental outcome (result). Experimental methods can be in vivo, in vitro or in silico procedures that are well described and can be referenced.
+  # (http://www.biointerchange.org/gfvo#ExperimentalMethod)
+  def self.ExperimentalMethod
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#ExperimentalMethod')
   end
 
-  # A cross-reference to associate a feature -- or its structured pragma metadata in GVF -- to a representation in another database.
+  # A cross-reference to associate an entity to a representation in another database.
   # (http://www.biointerchange.org/gfvo#ExternalReference)
   def self.ExternalReference
     return RDF::URI.new('http://www.biointerchange.org/gfvo#ExternalReference')
   end
 
-  # The feature class captures information about genomic sequence features. A genomic feature can be a large object, such as a chromosome or contig, down to single base-pair reference or variant alleles. A feature class instance is a composite of further information that is encoded using Attribute, Reference, Variation and other sub-classes of Feature Annotation.
+  # The feature class captures information about genomic sequence features and variations. A genomic feature can be a large object, such as a chromosome or contig, down to single base-pair reference or variant alleles.
   # (http://www.biointerchange.org/gfvo#Feature)
   def self.Feature
     return RDF::URI.new('http://www.biointerchange.org/gfvo#Feature')
   end
 
-  # A file represents the contents of a GFF3, GTF, GVF or VCF file. It can capture genomic meta-data that is specific to any of these file formats. The result of unions, intersections or other operations between File class instances should be capture with the generic Set class, which is format independent.
+  # Denoting sex of a female individual. A female is defined as an individual producing ova.
+  # (http://www.biointerchange.org/gfvo#Female)
+  def self.Female
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Female')
+  end
+
+  # A file represents the contents of a GFF3, GTF, GVF or VCF file. It can capture genomic meta-data that is specific to any of these file formats. The result of unions, intersections or other operations between "File" class instances should be capture with the generic "Collection" class, which is format independent, or the more restrictive "Catalog" class should be used.
   # (http://www.biointerchange.org/gfvo#File)
   def self.File
     return RDF::URI.new('http://www.biointerchange.org/gfvo#File')
   end
 
-  # Denotes a frameshift forward in the reference sequence. The reference sequence is denoted by a Landmark whilst the aligned target sequence is an instance of the Target class.
+  # Denotes a frameshift forward in the reference sequence.
   # (http://www.biointerchange.org/gfvo#ForwardReferenceSequenceFrameshift)
   def self.ForwardReferenceSequenceFrameshift
     return RDF::URI.new('http://www.biointerchange.org/gfvo#ForwardReferenceSequenceFrameshift')
@@ -531,52 +381,172 @@ class GFVO
     return RDF::URI.new('http://www.biointerchange.org/gfvo#FragmentReadPlatform')
   end
 
+  # A functional specification of bioinformatics data, i.e. the specification of genomic material that potentially has biological function.
+  # (http://www.biointerchange.org/gfvo#FunctionalSpecification)
+  def self.FunctionalSpecification
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#FunctionalSpecification')
+  end
+
+  # Denotes the presence of information that required capturing the gametic phase. For diploid organisms, that means that information is available about which chromosome of a chromosome pair contributed data.
+  # (http://www.biointerchange.org/gfvo#GameticPhase)
+  def self.GameticPhase
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#GameticPhase')
+  end
+
+  # Representation of a genome. Genomic features that constitute the genome may be linked via one or more "Collection", "Catalog", "Contig", "Scaffold" or "File" instances.
+  # (http://www.biointerchange.org/gfvo#Genome)
+  def self.Genome
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Genome')
+  end
+
+  # A genome analysis denotes the type of procedure that was carried out to derive information from a genome assembly.
+  # (http://www.biointerchange.org/gfvo#GenomeAnalysis)
+  def self.GenomeAnalysis
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#GenomeAnalysis')
+  end
+
+  # Provides information about the source of the data.
+  # (http://www.biointerchange.org/gfvo#GenomicAscertainingMethod)
+  def self.GenomicAscertainingMethod
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#GenomicAscertainingMethod')
+  end
+
+  # The genotype is the genetic information captured in a particular genome. It can also refer to one or more populations, if statistical distributions are provided that assign genetic codes to groups of individuals.
+  # (http://www.biointerchange.org/gfvo#Genotype)
+  def self.Genotype
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Genotype')
+  end
+
   # The germline feature class captures information about genomic sequence features arising from germline cells.
-  # (http://www.biointerchange.org/gfvo#GermlineFeature)
-  def self.GermlineFeature
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#GermlineFeature')
+  # (http://www.biointerchange.org/gfvo#GermlineCell)
+  def self.GermlineCell
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#GermlineCell')
+  end
+
+  # Helix structure denotes the physical shape of biopolymers.
+  # (http://www.biointerchange.org/gfvo#HelixStructure)
+  def self.HelixStructure
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#HelixStructure')
   end
 
   # A sequence alteration with hemizygous alleles.
-  # (http://www.biointerchange.org/gfvo#HemizygousVariant)
-  def self.HemizygousVariant
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#HemizygousVariant')
+  # (http://www.biointerchange.org/gfvo#Hemizygous)
+  def self.Hemizygous
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Hemizygous')
+  end
+
+  # Heritage denotes the passing of traits from parents or ancestors. Passed traits may not be visible as a phenotype, but instead, might only manifest as genetic inheritance.
+  # (http://www.biointerchange.org/gfvo#Heritage)
+  def self.Heritage
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Heritage')
+  end
+
+  # Denoting sex of an individual that contains both male and female gametes.
+  # (http://www.biointerchange.org/gfvo#Hermaphrodite)
+  def self.Hermaphrodite
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Hermaphrodite')
   end
 
   # A sequence alteration with heterozygous alleles.
-  # (http://www.biointerchange.org/gfvo#HeterozygousVariant)
-  def self.HeterozygousVariant
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#HeterozygousVariant')
+  # (http://www.biointerchange.org/gfvo#Heterozygous)
+  def self.Heterozygous
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Heterozygous')
   end
 
   # A sequence alteration with homozygous alleles.
-  # (http://www.biointerchange.org/gfvo#HomozygousVariant)
-  def self.HomozygousVariant
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#HomozygousVariant')
+  # (http://www.biointerchange.org/gfvo#Homozygous)
+  def self.Homozygous
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Homozygous')
   end
 
-  # A landmark establishes a coordinate system for features. Landmarks can be chromosomes, contigs, scaffolds or other constructs that can harbor Feature class instances. For expressing ploidy within a data set, please refer to the Chromosome class.
+  # An identifier labels an entity with a single term that is interpreted as an accession. An accession labels entities that are part of a collection of similar type.
+  # (http://www.biointerchange.org/gfvo#Identifier)
+  def self.Identifier
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Identifier')
+  end
+
+  # An information content entity requires background information or specific domain knowledge to be interpreted correctly.
+  # (http://www.biointerchange.org/gfvo#InformationContentEntity)
+  def self.InformationContentEntity
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#InformationContentEntity')
+  end
+
+  # Describing interaction between features, such as the effect of a feature variant on another feature.
+  # (http://www.biointerchange.org/gfvo#Interaction)
+  def self.Interaction
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Interaction')
+  end
+
+  # A label is a term or short list of terms that name an entity for the purpose of lexicographically distinguishing the entity from entities of similar type.
+  # (http://www.biointerchange.org/gfvo#Label)
+  def self.Label
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Label')
+  end
+
+  # A landmark establishes a coordinate system for features. Landmarks can be chromosomes, contigs, scaffolds or other constructs that can harbor "Feature" class instances. For expressing ploidy within a data set, please refer to the "Chromosome" class.
   # (http://www.biointerchange.org/gfvo#Landmark)
   def self.Landmark
     return RDF::URI.new('http://www.biointerchange.org/gfvo#Landmark')
   end
 
-  # Denotes a match between the reference sequence and target sequence. The reference sequence is denoted by a Landmark whilst the aligned target sequence is an instance of the Target class.
+  # A locus refers to a position (possibly multi-dimensional) within a genome or proteome.
+  # (http://www.biointerchange.org/gfvo#Locus)
+  def self.Locus
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Locus')
+  end
+
+  # Denoting sex of a male individual. A male is defined as an individual producing spermatozoa.
+  # (http://www.biointerchange.org/gfvo#Male)
+  def self.Male
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Male')
+  end
+
+  # Denotes a match between the reference sequence and target sequence.
   # (http://www.biointerchange.org/gfvo#Match)
   def self.Match
     return RDF::URI.new('http://www.biointerchange.org/gfvo#Match')
   end
 
-  # A chromosome is an abstract representation of an unnamed chromosome to represent ploidy within a data set. A Paternal Chromosome instance is used for denoting the locus of phased genotypes on a chromosome inherited from the mother. For placing genomic features (Feature class instances) on a chromosome, contig, scaffold, etc., please see the Landmark class.
-  # (http://www.biointerchange.org/gfvo#MaternalChromosome)
-  def self.MaternalChromosome
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#MaternalChromosome')
+  # A material entity represents a physical object. In the context of genomic features and variations, material entities are cells, organisms, sequences, chromosomes, etc.
+  # (http://www.biointerchange.org/gfvo#MaterialEntity)
+  def self.MaterialEntity
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#MaterialEntity')
   end
 
-  # Information about the used scoring algorithm or method.
-  # (http://www.biointerchange.org/gfvo#Method)
-  def self.Method
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#Method')
+  # Maternal heritage is the passing of traits from a female to her ancestors.
+  # (http://www.biointerchange.org/gfvo#MaternalHeritage)
+  def self.MaternalHeritage
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#MaternalHeritage')
+  end
+
+  # Insertion or deletion of a mobile element. The exact modification is determined by a type of the Variation Ontology.
+  # (http://www.biointerchange.org/gfvo#MobileElementSequenceVariant)
+  def self.MobileElementSequenceVariant
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#MobileElementSequenceVariant')
+  end
+
+  # A name assigns an entity a non-formal term (or multiples thereof) that can provide information about the entities identity.
+  # (http://www.biointerchange.org/gfvo#Name)
+  def self.Name
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Name')
+  end
+
+  # A note is a short textual description.
+  # (http://www.biointerchange.org/gfvo#Note)
+  def self.Note
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Note')
+  end
+
+  # Number of reads supporting a particular feature or variant.
+  # (http://www.biointerchange.org/gfvo#NumberOfReads)
+  def self.Number_ofReads
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#NumberOfReads')
+  end
+
+  # An object is a concrete entity that realizes a concept and encapsulates data associated with said concept. Objects are typically representing tangible entities, such as "Chromosome", "DNA Sequence", but also objects such as "Identifier", "Average Coverage" or other computational or mathematical entities.
+  # (http://www.biointerchange.org/gfvo#Object)
+  def self.Object
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Object')
   end
 
   # Details about the paired-end read sequencing technology used to gather the data in a set.
@@ -585,221 +555,281 @@ class GFVO
     return RDF::URI.new('http://www.biointerchange.org/gfvo#PairedEndReadPlatform')
   end
 
-  # A chromosome is an abstract representation of an unnamed chromosome to represent ploidy within a data set. A Paternal Chromosome instance is used for denoting the locus of phased genotypes on a chromosome inherited from the father. For placing genomic features (Feature class instances) on a chromosome, contig, scaffold, etc., please see the Landmark class.
-  # (http://www.biointerchange.org/gfvo#PaternalChromosome)
-  def self.PaternalChromosome
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#PaternalChromosome')
+  # Paternal heritage is the passing of traits from a male to his ancestors.
+  # (http://www.biointerchange.org/gfvo#PaternalHeritage)
+  def self.PaternalHeritage
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#PaternalHeritage')
   end
 
-  # A phenotype description represents additional information about a sequenced individuals phenotype. A sequenced individual is represented by instances of the Sequenced Individual or its decendants (e.g., Sequenced Female).
-  # (http://www.biointerchange.org/gfvo#PhenotypeDescription)
-  def self.PhenotypeDescription
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#PhenotypeDescription')
+  # A peptide sequence is an ordered sequence of amino acid residues, but which may not necessarily be a protein sequence. For encoding sequences of proteins, the subclass "Protein Sequence" should be used.
+  # (http://www.biointerchange.org/gfvo#PeptideSequence)
+  def self.PeptideSequence
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#PeptideSequence')
   end
 
-  # A prenatal feature is purportedly associated with prenatal cells; the GVF specification declares this feature type under the prama directive ##genomic-source, but does not describe its semantics and the referenced Logical Observation Identifiers Names and Codes (LOINC, http://loinc.org), do not define the meaning or intended usage of the term prenatal either.
-  # (http://www.biointerchange.org/gfvo#PrenatalFeature)
-  def self.PrenatalFeature
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#PrenatalFeature')
+  # A phenotype description represents additional information about a sequenced individual's phenotype. A sequenced individual is represented by instances of the "Sequenced Individual" class.
+  # (http://www.biointerchange.org/gfvo#Phenotype)
+  def self.Phenotype
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Phenotype')
   end
 
-  # A Data Source based on RNA sequences.
-  # (http://www.biointerchange.org/gfvo#RNASequence)
-  def self.RNASequence
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#RNASequence')
+  # The Phred score can be used to assign quality scores to base calls of DNA sequences.
+  # (http://www.biointerchange.org/gfvo#PhredScore)
+  def self.PhredScore
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#PhredScore')
   end
 
-  # Denotes the reference sequence of a feature. The reference sequence is of importance when dealing with genomic variation data, which is expressed by the Variant class.
-  # (http://www.biointerchange.org/gfvo#Reference)
-  def self.Reference
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#Reference')
+  # A prenatal feature is purportedly associated with prenatal cells; the GVF specification declares this feature type under the prama directive "##genomic-source", but does not describe its semantics and the referenced Logical Observation Identifiers Names and Codes (LOINC, http://loinc.org), do not define the meaning or intended usage of the term "prenatal" either.
+  # (http://www.biointerchange.org/gfvo#PrenatalCell)
+  def self.PrenatalCell
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#PrenatalCell')
   end
 
-  # Denotes a gap in the reference sequence for an alignment. The reference sequence is denoted by a Landmark whilst the aligned target sequence is an instance of the Target class.
+  # A process denotes a temporally dependent entity. It can be thought of as a function, where input data is transformed by an algorithm to produce certain output data.
+  # (http://www.biointerchange.org/gfvo#Process)
+  def self.Process
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Process')
+  end
+
+  # A protein sequence is a peptide sequence which represents the primary structure of a protein.
+  # (http://www.biointerchange.org/gfvo#ProteinSequence)
+  def self.ProteinSequence
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#ProteinSequence')
+  end
+
+  # Quality is a specific attribute that is strongly associated with an entity, but whose values are varying and disjunct. Qualities are finite enumerations, such as sex ("Female", "Male", "Hermaphrodite"), heritage ("Maternal", "Paternal"), but they also make use of the "hasValue" datatype property such as "Coding Frame Offset" (either "0", "1" or "2").
+  # (http://www.biointerchange.org/gfvo#Quality)
+  def self.Quality
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Quality')
+  end
+
+  # A property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed by means of a number and a reference. This class is typically not directly instantiated, but instead, its subclasses "Allele Frequency", "Average Coverage", etc. are used.
+  # (http://www.biointerchange.org/gfvo#Quantity)
+  def self.Quantity
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Quantity')
+  end
+
+  # Information about features and variants is based on RNA sequencing.
+  # (http://www.biointerchange.org/gfvo#RNASequencing)
+  def self.RNASequencing
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#RNASequencing')
+  end
+
+  # Denotes the reference sequence of a feature. The reference sequence is of importance when dealing with genomic variation data, which is expressed by the "Variant" class.
+  # (http://www.biointerchange.org/gfvo#ReferenceSequence)
+  def self.ReferenceSequence
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#ReferenceSequence')
+  end
+
+  # Denotes a gap in the reference sequence for an alignment.
   # (http://www.biointerchange.org/gfvo#ReferenceSequenceGap)
   def self.ReferenceSequenceGap
     return RDF::URI.new('http://www.biointerchange.org/gfvo#ReferenceSequenceGap')
   end
 
-  # Denotes a frameshift backwards (reverse) in the reference sequence. The reference sequence is denoted by a Landmark whilst the aligned target sequence is an instance of the Target class.
+  # Denotes a frameshift backwards (reverse) in the reference sequence.
   # (http://www.biointerchange.org/gfvo#ReverseReferenceSequenceFrameshift)
   def self.ReverseReferenceSequenceFrameshift
     return RDF::URI.new('http://www.biointerchange.org/gfvo#ReverseReferenceSequenceFrameshift')
   end
 
-  # A sequence annotation provides information on sequences associated with a Feature class instance or its descendants (s.a. Germline Feature or Somatic Feature). Specialized sub-classes are provided to denote reference sequences represented by Reference class instances, variants represented by Variant class instances, and Ancestral Allele class instances.
-  # (http://www.biointerchange.org/gfvo#SequenceAnnotation)
-  def self.SequenceAnnotation
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAnnotation')
+  # A scaffold is the aggregation of multiple contigs to form a larger continuous sequencing region.
+  # (http://www.biointerchange.org/gfvo#Scaffold)
+  def self.Scaffold
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Scaffold')
   end
 
-  # Aggregated sequencing information for a particular female individual. A female is defined as an individual producing ova.
-  # (http://www.biointerchange.org/gfvo#SequencedFemale)
-  def self.SequencedFemale
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedFemale')
+  # A measure that permits the ranking of entities.
+  # (http://www.biointerchange.org/gfvo#Score)
+  def self.Score
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Score')
   end
 
-  # Aggregated sequencing information for a particular individual that contains both male and female gemetes.
-  # (http://www.biointerchange.org/gfvo#SequencedHermaphrodite)
-  def self.SequencedHermaphrodite
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedHermaphrodite')
+  # A sequence provides information about any biopolymer sequences. Specialized subclasses are provided to denote specialized instances of sequences, such as "Codon Sequence", "Reference Sequence", "Protein Sequence", etc.
+  # (http://www.biointerchange.org/gfvo#Sequence)
+  def self.Sequence
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Sequence')
   end
 
-  # Aggregated sequencing information for a particular individual. Unless a sub-type of this class is used as instance type, s.a. Sequenced Female, the sex of the individual is considered to be undetermined.
+  # A sequence alignment denotes the congruence of two sequences.
+  # In GFF3, a sequence alignment can be a nucleotide-to-nucleotide or protein-to-nucleotide alignment (see "The Gap Attribute", http://sequenceontology.org/resources/gff3.html). "Alignment Operation" class instances denote the actual steps that the constitute the sequence alignment.
+  # (http://www.biointerchange.org/gfvo#SequenceAlignment)
+  def self.SequenceAlignment
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAlignment')
+  end
+
+  # A sequence alignment operation captures the type of alignment (see "Sequence Alignment") between a reference sequence and target sequence. Note that an "Alignment Operation" is situated in a linked list, where the order of the alignment operations is of significance.
+  # (http://www.biointerchange.org/gfvo#SequenceAlignmentOperation)
+  def self.SequenceAlignmentOperation
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAlignmentOperation')
+  end
+
+  # Describing specific sequence alterations of a genomic feature. A variant is related to "Reference" class instances, which denote the sequence that serves as a basis for sequence alteration comparisons.
+  # (http://www.biointerchange.org/gfvo#SequenceVariant)
+  def self.SequenceVariant
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceVariant')
+  end
+
+  # Aggregated sequencing information for a particular individual.
   # (http://www.biointerchange.org/gfvo#SequencedIndividual)
   def self.SequencedIndividual
     return RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedIndividual')
   end
 
-  # Aggregated sequencing information for a particular male individual. A male is defined as an individual producing spermatozoa.
-  # (http://www.biointerchange.org/gfvo#SequencedMale)
-  def self.SequencedMale
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedMale')
+  # Details about the sequencing/microarray technology used to gather the data in a set.
+  # (http://www.biointerchange.org/gfvo#SequencingTechnologyPlatform)
+  def self.SequencingTechnologyPlatform
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#SequencingTechnologyPlatform')
   end
 
-  # A set is a container for genomic sequence features and related information that is independent of data provenance. A set may contain information about any genomic features including -- but not limited to -- contents of GFF3, GTF, GVF and VCF files. The latter are better represented by File class instances, whereas the result of unions or intersections between different File class instances should be captured within this format-independent Set class.
-  # (http://www.biointerchange.org/gfvo#Set)
-  def self.Set
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#Set')
+  # Biological sex of an individual.
+  # (http://www.biointerchange.org/gfvo#Sex)
+  def self.Sex
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Sex')
   end
 
   # The somatic feature class captures information about genomic sequence features arising from somatic cells.
-  # (http://www.biointerchange.org/gfvo#SomaticFeature)
-  def self.SomaticFeature
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#SomaticFeature')
+  # (http://www.biointerchange.org/gfvo#SomaticCell)
+  def self.SomaticCell
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#SomaticCell')
   end
 
-  # A structured attribute denotes a tag/value pair where the value is a composite, but which is not defined in the GVF specification. The GVF specification does not explicitly permit user-defined structured attributes (see Structured Pragmas in http://sequenceontology.org/resources/gvf.html), but it is conceivable that an RDFization tool might support this use case. For some loosly defined structured data in GVF, the Structured Attribute class is used as well to capture the non-exhaustive list of possible data assignments of the GVF specification.
-  # (http://www.biointerchange.org/gfvo#StructuredAttribute)
-  def self.StructuredAttribute
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#StructuredAttribute')
+  # A span is an attribute denoting the number of nucleotides or peptides that an entity covers. This is directly used in conjunction with "Sequence Alignment Operation" subclasses, e.g. to express the number of nucleotides a sequence alignment match ranges over.
+  # (http://www.biointerchange.org/gfvo#Span)
+  def self.Span
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Span')
   end
 
-  # A target expresses the relationship between a Feature instance and an alignment. In GFF3, the alignment can be a nucleotide-to-nucleotide or protein-to-nucleotide (see The Gap Attribute, http://sequenceontology.org/resources/gff3.html), but this restriction is not enforced here. Note that the object property alignment links out to a list of Alignment Operation class instances, where only the first operation in that list is referenced via the alignment property. The remainder of operations can be accessed by stepping through the list.
-  # (http://www.biointerchange.org/gfvo#Target)
-  def self.Target
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#Target')
-  end
-
-  # Denotes a gap in the target sequence for an alignment. The reference sequence is denoted by a Landmark whilst the aligned target sequence is an instance of the Target class.
+  # Denotes a gap in the target sequence for an alignment.
   # (http://www.biointerchange.org/gfvo#TargetSequenceGap)
   def self.TargetSequenceGap
     return RDF::URI.new('http://www.biointerchange.org/gfvo#TargetSequenceGap')
   end
 
-  # Details about the sequencing/microarray technology used to gather the data in a set.
-  # (http://www.biointerchange.org/gfvo#TechnologyPlatform)
-  def self.TechnologyPlatform
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#TechnologyPlatform')
+  # Total number of reads covering a feature or variant.
+  # (http://www.biointerchange.org/gfvo#TotalNumberOfReads)
+  def self.TotalNumber_ofReads
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#TotalNumberOfReads')
   end
 
-  # Describing specific sequence alterations of a genomic feature. A variant is related to Reference class instances, which denote the sequence that serves as a basis for sequence alteration comparisons.
-  # (http://www.biointerchange.org/gfvo#Variant)
-  def self.Variant
-    return RDF::URI.new('http://www.biointerchange.org/gfvo#Variant')
+  # Denotes the technique of calling genomic feature variants in a genome assembly.
+  # (http://www.biointerchange.org/gfvo#VariantCalling)
+  def self.VariantCalling
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#VariantCalling')
+  end
+
+  # A version names a release of a software, dataset, or other resource. A versioned resource is not necessarily public.
+  # (http://www.biointerchange.org/gfvo#Version)
+  def self.Version
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Version')
+  end
+
+  # Helical structure as first proposed by Watson and Crick.
+  # 
+  # Can be used to indicate a false "Is_circular" attribute in GFF3 and GVF.
+  # (http://www.biointerchange.org/gfvo#WatsonCrickHelix)
+  def self.WatsonCrickHelix
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#WatsonCrickHelix')
+  end
+
+  # Zygosity denotes the similarities of a specific allele in the genome of an organism.
+  # (http://www.biointerchange.org/gfvo#Zygosity)
+  def self.Zygosity
+    return RDF::URI.new('http://www.biointerchange.org/gfvo#Zygosity')
   end
 
   # Determines whether the given URI is an object property.
   #
   # +uri+:: URI that is tested for being an object property
   def self.is_object_property?(uri)
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#alignment') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#describes') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasAnnotation') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#attribute') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasAttribute') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#attributeMethod') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasEvidence') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#chromosome') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasFirstPart') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#contains') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasIdentifier') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#dataSource') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasInput') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#dbxref') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasLastPart') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#derivesFrom') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasMember') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#effect') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasOrderedPart') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasOutput') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#featureOntology') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasPart') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#featureType') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasParticipant') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#genomicSource') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasQuality') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#genotype') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasSource') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#individual') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isAbout') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#locus') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isAffectedBy') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#ontologyTerm') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isAfter') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#parent') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isAttributeOf') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#phenotypeDescription') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isBefore') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#reference') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isCreatedBy') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#scoreMethod') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isDescribedBy') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#seqid') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isLocatedOn') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#sequenceAnnotation') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isPartOf') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#sequenceVariant') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isParticipantIn') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#setObjectProperty') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isSourceOf') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#sourceMethod') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isSpatiotemporallyRelatedTo') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#species') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isTemporarilyPartOf') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#structuredAttributes') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#references') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#target') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#targetAttributeMethod') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#technologyPlatform') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#type') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#refersTo') then
       return true
     end
     return false
@@ -809,121 +839,7 @@ class GFVO
   #
   # +uri+:: URI that is tested for being a datatype property
   def self.is_datatype_property?(uri)
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#threePrimeContext') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#fivePrimeContext') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#alias') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#aminoAcid') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#averageCoverage') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#build') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#codon') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#comment') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#feature') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#fileDatatypeProperty') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#fileDate') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#fileVersion') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#frequency') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#gffVersion') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#gtfVersion') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#gvfVersion') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#id') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isCircular') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#isPhased') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#name') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#note') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#phase') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#phredScore') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#platformClass') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#platformName') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#readIPairSpan') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#readLength') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#reads') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#score') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#sequence') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#setDatatypeProperty') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#source') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#span') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#tag') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#totalReads') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#vcfVersion') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#version') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#hasValue') then
       return true
     end
     return false
@@ -933,13 +849,16 @@ class GFVO
   #
   # +uri+:: URI that is tested for being a class
   def self.is_class?(uri)
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#AlignmentOperation') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Alias') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#AncestralAllele') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#AlleleFrequency') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#AminoAcid') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#AncestralSequence') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#ArrayComparativeGenomicHybridization') then
@@ -948,10 +867,49 @@ class GFVO
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Attribute') then
       return true
     end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#AverageCoverage') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#BiologicalEntity') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#BiopolymerSequencing') then
+      return true
+    end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Breakpoint') then
       return true
     end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Catalog') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Cell') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#ChemicalEntity') then
+      return true
+    end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Chromosome') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#CircularHelix') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#CodingFrameOffset') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#CodonSequence') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Collection') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Comment') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Contig') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Coverage') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#DNAMicroarray') then
@@ -960,16 +918,19 @@ class GFVO
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#DNASequence') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#DataSource') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#DNASequencing') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Effect') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#ExperimentalMethod') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#ExternalReference') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Feature') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Female') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#File') then
@@ -981,46 +942,124 @@ class GFVO
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#FragmentReadPlatform') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#GermlineFeature') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#FunctionalSpecification') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#HemizygousVariant') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#GameticPhase') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#HeterozygousVariant') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Genome') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#HomozygousVariant') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#GenomeAnalysis') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#GenomicAscertainingMethod') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Genotype') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#GermlineCell') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#HelixStructure') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Hemizygous') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Heritage') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Hermaphrodite') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Heterozygous') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Homozygous') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Identifier') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#InformationContentEntity') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Interaction') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Label') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Landmark') then
       return true
     end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Locus') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Male') then
+      return true
+    end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Match') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#MaternalChromosome') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#MaterialEntity') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Method') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#MaternalHeritage') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#MobileElementSequenceVariant') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Name') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Note') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#NumberOfReads') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Object') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#PairedEndReadPlatform') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#PaternalChromosome') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#PaternalHeritage') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#PhenotypeDescription') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#PeptideSequence') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#PrenatalFeature') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Phenotype') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#RNASequence') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#PhredScore') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Reference') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#PrenatalCell') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Process') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#ProteinSequence') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Quality') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Quantity') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#RNASequencing') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#ReferenceSequence') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#ReferenceSequenceGap') then
@@ -1029,40 +1068,55 @@ class GFVO
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#ReverseReferenceSequenceFrameshift') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAnnotation') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Scaffold') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedFemale') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Score') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedHermaphrodite') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Sequence') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAlignment') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAlignmentOperation') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceVariant') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedIndividual') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedMale') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#SequencingTechnologyPlatform') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Set') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Sex') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#SomaticFeature') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#SomaticCell') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#StructuredAttribute') then
-      return true
-    end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Target') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Span') then
       return true
     end
     if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#TargetSequenceGap') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#TechnologyPlatform') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#TotalNumberOfReads') then
       return true
     end
-    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Variant') then
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#VariantCalling') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Version') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#WatsonCrickHelix') then
+      return true
+    end
+    if uri == RDF::URI.new('http://www.biointerchange.org/gfvo#Zygosity') then
       return true
     end
     return false
@@ -1098,7 +1152,7 @@ class GFVO
   end
 
 private
-  @@parent_properties = { RDF::URI.new('http://www.biointerchange.org/gfvo#alignment') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') => RDF::URI.new('http://www.w3.org/2002/07/owl#topObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#attribute') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#attributeMethod') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#chromosome') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#contains') => RDF::URI.new('http://www.biointerchange.org/gfvo#setObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#dataSource') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#dbxref') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#derivesFrom') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#effect') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') => RDF::URI.new('http://www.w3.org/2002/07/owl#topObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#featureOntology') => RDF::URI.new('http://www.biointerchange.org/gfvo#setObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#featureType') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#genomicSource') => RDF::URI.new('http://www.biointerchange.org/gfvo#setObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#genotype') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#individual') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#locus') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#ontologyTerm') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#parent') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#phenotypeDescription') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#reference') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#scoreMethod') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#seqid') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#sequenceAnnotation') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#sequenceVariant') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#sourceMethod') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#species') => RDF::URI.new('http://www.biointerchange.org/gfvo#setObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#structuredAttributes') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#target') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#targetAttributeMethod') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#technologyPlatform') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#type') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureObjectProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#threePrimeContext') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#fivePrimeContext') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#alias') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#aminoAcid') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') => RDF::URI.new('http://www.w3.org/2002/07/owl#topDataProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#averageCoverage') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#build') => RDF::URI.new('http://www.biointerchange.org/gfvo#setDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#codon') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#comment') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#feature') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') => RDF::URI.new('http://www.w3.org/2002/07/owl#topDataProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#fileDatatypeProperty') => RDF::URI.new('http://www.biointerchange.org/gfvo#setDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#fileDate') => RDF::URI.new('http://www.biointerchange.org/gfvo#fileDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#fileVersion') => RDF::URI.new('http://www.biointerchange.org/gfvo#fileDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#frequency') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#gffVersion') => RDF::URI.new('http://www.biointerchange.org/gfvo#fileDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#gtfVersion') => RDF::URI.new('http://www.biointerchange.org/gfvo#fileDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#gvfVersion') => RDF::URI.new('http://www.biointerchange.org/gfvo#fileDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#id') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#isCircular') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#isPhased') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#name') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#note') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#phase') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#phredScore') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#platformClass') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#platformName') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#readIPairSpan') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#readLength') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#reads') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#score') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#sequence') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#setDatatypeProperty') => RDF::URI.new('http://www.w3.org/2002/07/owl#topDataProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#source') => RDF::URI.new('http://www.biointerchange.org/gfvo#featureDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#span') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#tag') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#totalReads') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#vcfVersion') => RDF::URI.new('http://www.biointerchange.org/gfvo#fileDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#version') => RDF::URI.new('http://www.biointerchange.org/gfvo#annotationDatatypeProperty') , RDF::URI.new('http://www.biointerchange.org/gfvo#AlignmentOperation') => RDF::URI.new('http://www.w3.org/1999/02/22-rdf-syntax-ns#List') , RDF::URI.new('http://www.biointerchange.org/gfvo#AncestralAllele') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAnnotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#ArrayComparativeGenomicHybridization') => RDF::URI.new('http://www.biointerchange.org/gfvo#DataSource') , RDF::URI.new('http://www.biointerchange.org/gfvo#Attribute') => RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#Breakpoint') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAnnotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#Chromosome') => RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#DNAMicroarray') => RDF::URI.new('http://www.biointerchange.org/gfvo#DataSource') , RDF::URI.new('http://www.biointerchange.org/gfvo#DNASequence') => RDF::URI.new('http://www.biointerchange.org/gfvo#DataSource') , RDF::URI.new('http://www.biointerchange.org/gfvo#DataSource') => RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#Effect') => RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#ExternalReference') => RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#File') => RDF::URI.new('http://www.biointerchange.org/gfvo#Set') , RDF::URI.new('http://www.biointerchange.org/gfvo#ForwardReferenceSequenceFrameshift') => RDF::URI.new('http://www.biointerchange.org/gfvo#AlignmentOperation') , RDF::URI.new('http://www.biointerchange.org/gfvo#FragmentReadPlatform') => RDF::URI.new('http://www.biointerchange.org/gfvo#TechnologyPlatform') , RDF::URI.new('http://www.biointerchange.org/gfvo#GermlineFeature') => RDF::URI.new('http://www.biointerchange.org/gfvo#Feature') , RDF::URI.new('http://www.biointerchange.org/gfvo#HemizygousVariant') => RDF::URI.new('http://www.biointerchange.org/gfvo#Variant') , RDF::URI.new('http://www.biointerchange.org/gfvo#HeterozygousVariant') => RDF::URI.new('http://www.biointerchange.org/gfvo#Variant') , RDF::URI.new('http://www.biointerchange.org/gfvo#HomozygousVariant') => RDF::URI.new('http://www.biointerchange.org/gfvo#Variant') , RDF::URI.new('http://www.biointerchange.org/gfvo#Landmark') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAnnotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#Match') => RDF::URI.new('http://www.biointerchange.org/gfvo#AlignmentOperation') , RDF::URI.new('http://www.biointerchange.org/gfvo#MaternalChromosome') => RDF::URI.new('http://www.biointerchange.org/gfvo#Chromosome') , RDF::URI.new('http://www.biointerchange.org/gfvo#Method') => RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#PairedEndReadPlatform') => RDF::URI.new('http://www.biointerchange.org/gfvo#TechnologyPlatform') , RDF::URI.new('http://www.biointerchange.org/gfvo#PaternalChromosome') => RDF::URI.new('http://www.biointerchange.org/gfvo#Chromosome') , RDF::URI.new('http://www.biointerchange.org/gfvo#PhenotypeDescription') => RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#PrenatalFeature') => RDF::URI.new('http://www.biointerchange.org/gfvo#Feature') , RDF::URI.new('http://www.biointerchange.org/gfvo#RNASequence') => RDF::URI.new('http://www.biointerchange.org/gfvo#DataSource') , RDF::URI.new('http://www.biointerchange.org/gfvo#Reference') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAnnotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#ReferenceSequenceGap') => RDF::URI.new('http://www.biointerchange.org/gfvo#AlignmentOperation') , RDF::URI.new('http://www.biointerchange.org/gfvo#ReverseReferenceSequenceFrameshift') => RDF::URI.new('http://www.biointerchange.org/gfvo#AlignmentOperation') , RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAnnotation') => RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedFemale') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedIndividual') , RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedHermaphrodite') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedIndividual') , RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedIndividual') => RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation') , RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedMale') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedIndividual') , RDF::URI.new('http://www.biointerchange.org/gfvo#SomaticFeature') => RDF::URI.new('http://www.biointerchange.org/gfvo#Feature') , RDF::URI.new('http://www.biointerchange.org/gfvo#StructuredAttribute') => RDF::URI.new('http://www.biointerchange.org/gfvo#Attribute') , RDF::URI.new('http://www.biointerchange.org/gfvo#TargetSequenceGap') => RDF::URI.new('http://www.biointerchange.org/gfvo#AlignmentOperation') , RDF::URI.new('http://www.biointerchange.org/gfvo#TechnologyPlatform') => RDF::URI.new('http://www.biointerchange.org/gfvo#Annotation') }
+  @@parent_properties = { RDF::URI.new('http://www.biointerchange.org/gfvo#hasAnnotation') => RDF::URI.new('http://www.biointerchange.org/gfvo#hasAttribute') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasEvidence') => RDF::URI.new('http://www.biointerchange.org/gfvo#references') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasFirstPart') => RDF::URI.new('http://www.biointerchange.org/gfvo#hasOrderedPart') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasIdentifier') => RDF::URI.new('http://www.biointerchange.org/gfvo#hasAttribute') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasInput') => RDF::URI.new('http://www.biointerchange.org/gfvo#isSpatiotemporallyRelatedTo') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasLastPart') => RDF::URI.new('http://www.biointerchange.org/gfvo#hasOrderedPart') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasMember') => RDF::URI.new('http://www.biointerchange.org/gfvo#hasAttribute') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasOrderedPart') => RDF::URI.new('http://www.biointerchange.org/gfvo#hasPart') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasOutput') => RDF::URI.new('http://www.biointerchange.org/gfvo#isSpatiotemporallyRelatedTo') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasPart') => RDF::URI.new('http://www.biointerchange.org/gfvo#isSpatiotemporallyRelatedTo') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasParticipant') => RDF::URI.new('http://www.biointerchange.org/gfvo#isSpatiotemporallyRelatedTo') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasQuality') => RDF::URI.new('http://www.biointerchange.org/gfvo#hasAttribute') , RDF::URI.new('http://www.biointerchange.org/gfvo#hasSource') => RDF::URI.new('http://www.biointerchange.org/gfvo#hasAttribute') , RDF::URI.new('http://www.biointerchange.org/gfvo#isAbout') => RDF::URI.new('http://www.biointerchange.org/gfvo#describes') , RDF::URI.new('http://www.biointerchange.org/gfvo#isAffectedBy') => RDF::URI.new('http://www.biointerchange.org/gfvo#isParticipantIn') , RDF::URI.new('http://www.biointerchange.org/gfvo#isLocatedOn') => RDF::URI.new('http://www.biointerchange.org/gfvo#isSpatiotemporallyRelatedTo') , RDF::URI.new('http://www.biointerchange.org/gfvo#isPartOf') => RDF::URI.new('http://www.biointerchange.org/gfvo#isLocatedOn') , RDF::URI.new('http://www.biointerchange.org/gfvo#isParticipantIn') => RDF::URI.new('http://www.biointerchange.org/gfvo#isSpatiotemporallyRelatedTo') , RDF::URI.new('http://www.biointerchange.org/gfvo#isSourceOf') => RDF::URI.new('http://www.biointerchange.org/gfvo#isAttributeOf') , RDF::URI.new('http://www.biointerchange.org/gfvo#isTemporarilyPartOf') => RDF::URI.new('http://www.biointerchange.org/gfvo#isPartOf') , RDF::URI.new('http://www.biointerchange.org/gfvo#references') => RDF::URI.new('http://www.biointerchange.org/gfvo#refersTo') , RDF::URI.new('http://www.biointerchange.org/gfvo#Alias') => RDF::URI.new('http://www.biointerchange.org/gfvo#Name') , RDF::URI.new('http://www.biointerchange.org/gfvo#AncestralSequence') => RDF::URI.new('http://www.biointerchange.org/gfvo#ReferenceSequence') , RDF::URI.new('http://www.biointerchange.org/gfvo#ArrayComparativeGenomicHybridization') => RDF::URI.new('http://www.biointerchange.org/gfvo#GenomicAscertainingMethod') , RDF::URI.new('http://www.biointerchange.org/gfvo#AverageCoverage') => RDF::URI.new('http://www.biointerchange.org/gfvo#Coverage') , RDF::URI.new('http://www.biointerchange.org/gfvo#BiologicalEntity') => RDF::URI.new('http://www.biointerchange.org/gfvo#MaterialEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#BiopolymerSequencing') => RDF::URI.new('http://www.biointerchange.org/gfvo#GenomicAscertainingMethod') , RDF::URI.new('http://www.biointerchange.org/gfvo#Breakpoint') => RDF::URI.new('http://www.biointerchange.org/gfvo#Locus') , RDF::URI.new('http://www.biointerchange.org/gfvo#Catalog') => RDF::URI.new('http://www.biointerchange.org/gfvo#Collection') , RDF::URI.new('http://www.biointerchange.org/gfvo#Cell') => RDF::URI.new('http://www.biointerchange.org/gfvo#BiologicalEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#ChemicalEntity') => RDF::URI.new('http://www.biointerchange.org/gfvo#MaterialEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#Chromosome') => RDF::URI.new('http://www.biointerchange.org/gfvo#ChemicalEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#CircularHelix') => RDF::URI.new('http://www.biointerchange.org/gfvo#HelixStructure') , RDF::URI.new('http://www.biointerchange.org/gfvo#Collection') => RDF::URI.new('http://www.biointerchange.org/gfvo#InformationContentEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#Comment') => RDF::URI.new('http://www.biointerchange.org/gfvo#InformationContentEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#Contig') => RDF::URI.new('http://www.biointerchange.org/gfvo#Catalog') , RDF::URI.new('http://www.biointerchange.org/gfvo#DNAMicroarray') => RDF::URI.new('http://www.biointerchange.org/gfvo#GenomicAscertainingMethod') , RDF::URI.new('http://www.biointerchange.org/gfvo#DNASequencing') => RDF::URI.new('http://www.biointerchange.org/gfvo#BiopolymerSequencing') , RDF::URI.new('http://www.biointerchange.org/gfvo#ExperimentalMethod') => RDF::URI.new('http://www.biointerchange.org/gfvo#Process') , RDF::URI.new('http://www.biointerchange.org/gfvo#ExternalReference') => RDF::URI.new('http://www.biointerchange.org/gfvo#InformationContentEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#Feature') => RDF::URI.new('http://www.biointerchange.org/gfvo#InformationContentEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#Female') => RDF::URI.new('http://www.biointerchange.org/gfvo#Sex') , RDF::URI.new('http://www.biointerchange.org/gfvo#File') => RDF::URI.new('http://www.biointerchange.org/gfvo#Collection') , RDF::URI.new('http://www.biointerchange.org/gfvo#ForwardReferenceSequenceFrameshift') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAlignmentOperation') , RDF::URI.new('http://www.biointerchange.org/gfvo#FragmentReadPlatform') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequencingTechnologyPlatform') , RDF::URI.new('http://www.biointerchange.org/gfvo#FunctionalSpecification') => RDF::URI.new('http://www.biointerchange.org/gfvo#InformationContentEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#GameticPhase') => RDF::URI.new('http://www.biointerchange.org/gfvo#Quality') , RDF::URI.new('http://www.biointerchange.org/gfvo#Genome') => RDF::URI.new('http://www.biointerchange.org/gfvo#MaterialEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#GenomeAnalysis') => RDF::URI.new('http://www.biointerchange.org/gfvo#ExperimentalMethod') , RDF::URI.new('http://www.biointerchange.org/gfvo#GenomicAscertainingMethod') => RDF::URI.new('http://www.biointerchange.org/gfvo#ExperimentalMethod') , RDF::URI.new('http://www.biointerchange.org/gfvo#Genotype') => RDF::URI.new('http://www.biointerchange.org/gfvo#FunctionalSpecification') , RDF::URI.new('http://www.biointerchange.org/gfvo#GermlineCell') => RDF::URI.new('http://www.biointerchange.org/gfvo#Cell') , RDF::URI.new('http://www.biointerchange.org/gfvo#HelixStructure') => RDF::URI.new('http://www.biointerchange.org/gfvo#Quality') , RDF::URI.new('http://www.biointerchange.org/gfvo#Hemizygous') => RDF::URI.new('http://www.biointerchange.org/gfvo#Zygosity') , RDF::URI.new('http://www.biointerchange.org/gfvo#Heritage') => RDF::URI.new('http://www.biointerchange.org/gfvo#Quality') , RDF::URI.new('http://www.biointerchange.org/gfvo#Hermaphrodite') => RDF::URI.new('http://www.biointerchange.org/gfvo#Sex') , RDF::URI.new('http://www.biointerchange.org/gfvo#Heterozygous') => RDF::URI.new('http://www.biointerchange.org/gfvo#Zygosity') , RDF::URI.new('http://www.biointerchange.org/gfvo#Homozygous') => RDF::URI.new('http://www.biointerchange.org/gfvo#Zygosity') , RDF::URI.new('http://www.biointerchange.org/gfvo#Identifier') => RDF::URI.new('http://www.biointerchange.org/gfvo#Label') , RDF::URI.new('http://www.biointerchange.org/gfvo#InformationContentEntity') => RDF::URI.new('http://www.biointerchange.org/gfvo#Object') , RDF::URI.new('http://www.biointerchange.org/gfvo#Interaction') => RDF::URI.new('http://www.biointerchange.org/gfvo#Process') , RDF::URI.new('http://www.biointerchange.org/gfvo#Label') => RDF::URI.new('http://www.biointerchange.org/gfvo#InformationContentEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#Landmark') => RDF::URI.new('http://www.biointerchange.org/gfvo#Identifier') , RDF::URI.new('http://www.biointerchange.org/gfvo#Locus') => RDF::URI.new('http://www.biointerchange.org/gfvo#InformationContentEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#Male') => RDF::URI.new('http://www.biointerchange.org/gfvo#Sex') , RDF::URI.new('http://www.biointerchange.org/gfvo#Match') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAlignmentOperation') , RDF::URI.new('http://www.biointerchange.org/gfvo#MaterialEntity') => RDF::URI.new('http://www.biointerchange.org/gfvo#Object') , RDF::URI.new('http://www.biointerchange.org/gfvo#MaternalHeritage') => RDF::URI.new('http://www.biointerchange.org/gfvo#Heritage') , RDF::URI.new('http://www.biointerchange.org/gfvo#MobileElementSequenceVariant') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceVariant') , RDF::URI.new('http://www.biointerchange.org/gfvo#Name') => RDF::URI.new('http://www.biointerchange.org/gfvo#Label') , RDF::URI.new('http://www.biointerchange.org/gfvo#Note') => RDF::URI.new('http://www.biointerchange.org/gfvo#InformationContentEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#PairedEndReadPlatform') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequencingTechnologyPlatform') , RDF::URI.new('http://www.biointerchange.org/gfvo#PaternalHeritage') => RDF::URI.new('http://www.biointerchange.org/gfvo#Heritage') , RDF::URI.new('http://www.biointerchange.org/gfvo#Phenotype') => RDF::URI.new('http://www.biointerchange.org/gfvo#Quality') , RDF::URI.new('http://www.biointerchange.org/gfvo#PrenatalCell') => RDF::URI.new('http://www.biointerchange.org/gfvo#Cell') , RDF::URI.new('http://www.biointerchange.org/gfvo#ProteinSequence') => RDF::URI.new('http://www.biointerchange.org/gfvo#PeptideSequence') , RDF::URI.new('http://www.biointerchange.org/gfvo#Quality') => RDF::URI.new('http://www.biointerchange.org/gfvo#Attribute') , RDF::URI.new('http://www.biointerchange.org/gfvo#Quantity') => RDF::URI.new('http://www.biointerchange.org/gfvo#Object') , RDF::URI.new('http://www.biointerchange.org/gfvo#RNASequencing') => RDF::URI.new('http://www.biointerchange.org/gfvo#BiopolymerSequencing') , RDF::URI.new('http://www.biointerchange.org/gfvo#ReferenceSequence') => RDF::URI.new('http://www.biointerchange.org/gfvo#DNASequence') , RDF::URI.new('http://www.biointerchange.org/gfvo#ReferenceSequenceGap') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAlignmentOperation') , RDF::URI.new('http://www.biointerchange.org/gfvo#ReverseReferenceSequenceFrameshift') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAlignmentOperation') , RDF::URI.new('http://www.biointerchange.org/gfvo#Scaffold') => RDF::URI.new('http://www.biointerchange.org/gfvo#Catalog') , RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceVariant') => RDF::URI.new('http://www.biointerchange.org/gfvo#DNASequence') , RDF::URI.new('http://www.biointerchange.org/gfvo#SequencedIndividual') => RDF::URI.new('http://www.biointerchange.org/gfvo#BiologicalEntity') , RDF::URI.new('http://www.biointerchange.org/gfvo#SequencingTechnologyPlatform') => RDF::URI.new('http://www.biointerchange.org/gfvo#GenomicAscertainingMethod') , RDF::URI.new('http://www.biointerchange.org/gfvo#Sex') => RDF::URI.new('http://www.biointerchange.org/gfvo#Quality') , RDF::URI.new('http://www.biointerchange.org/gfvo#SomaticCell') => RDF::URI.new('http://www.biointerchange.org/gfvo#Cell') , RDF::URI.new('http://www.biointerchange.org/gfvo#TargetSequenceGap') => RDF::URI.new('http://www.biointerchange.org/gfvo#SequenceAlignmentOperation') , RDF::URI.new('http://www.biointerchange.org/gfvo#TotalNumberOfReads') => RDF::URI.new('http://www.biointerchange.org/gfvo#NumberOfReads') , RDF::URI.new('http://www.biointerchange.org/gfvo#VariantCalling') => RDF::URI.new('http://www.biointerchange.org/gfvo#GenomeAnalysis') , RDF::URI.new('http://www.biointerchange.org/gfvo#Version') => RDF::URI.new('http://www.biointerchange.org/gfvo#Identifier') , RDF::URI.new('http://www.biointerchange.org/gfvo#WatsonCrickHelix') => RDF::URI.new('http://www.biointerchange.org/gfvo#HelixStructure') , RDF::URI.new('http://www.biointerchange.org/gfvo#Zygosity') => RDF::URI.new('http://www.biointerchange.org/gfvo#Quality') }
 
 end
 

@@ -50,7 +50,6 @@ class Writer
       object_representation = "<#{object_uri}>".sub(/\s/, '%20')
     else
       if datatype then
-        # TODO Append type.
         object_representation = "\"#{object.to_s}\"^^<#{datatype.to_s}>"
       else
         object_representation = "\"#{object.to_s}\""
