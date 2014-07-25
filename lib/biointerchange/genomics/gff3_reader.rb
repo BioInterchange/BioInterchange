@@ -75,11 +75,15 @@ protected
     fasta_id = nil
     fasta_comment = nil
     fasta_sequence = nil
+    @comments = [] # TODO Add comments to feature objects; add 'before' in serialization.
     begin
       line = gff3.readline
       line.chomp!
 
-      next if line.start_with?('#') and not line.start_with?('##')
+      if line.start_with?('#') and not line.start_with?('##') then
+        add_comment(@feature_set, line[1..-1].strip)
+        next
+      end
 
       if line.start_with?('##FASTA') then
         fasta_block = true
@@ -168,6 +172,10 @@ protected
     attributes = split_attributes(attributes)
 
     feature_set.add(BioInterchange::Genomics::GFF3Feature.new(seqid, source, type, start_coordinate, end_coordinate, score, strand, phase, attributes))
+  end
+
+  def add_comment(feature_set, comment)
+    @comments << comment
   end
 
   def add_pragma(feature_set, line)

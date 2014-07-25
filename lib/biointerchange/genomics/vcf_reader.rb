@@ -1,5 +1,7 @@
 module BioInterchange::Genomics
 
+require 'date'
+
 class VCFReader < GFF3Reader
 
   # Register reader:
@@ -34,7 +36,6 @@ protected
 
   def add_pragma(feature_set, line)
     line.chomp!
-    puts line
     name, value = line[2..-1].split(/=/, 2)
     value.strip!
 
@@ -47,24 +48,22 @@ protected
       # feature_set.set_pragma(name, structured_attributes)
     elsif name == 'center' then
       #
-    elsif name == 'Description' then
-      #
+    elsif name == 'contig' then
+      feature_set.set_pragma(name, vcf_mapping(value))
     elsif name == 'fileDate' then
-      #
+      feature_set.set_pragma(name, { name => Date.parse(value) })
     elsif name == 'fileformat' then
       feature_set.set_pragma(name, { name => value.sub(/^VCFv/, '').to_f })
     elsif name == 'FILTER' then
-      #
+      feature_set.set_pragma(name, vcf_mapping(value))
     elsif name == 'FORMAT' then
-      #
+      feature_set.set_pragma(name, vcf_mapping(value))
     elsif name == 'geneAnno' then
       #
     elsif name == 'ID' then
       #
-    elsif name == 'INDIVIDUAL' then
-      #
     elsif name == 'INFO' then
-      #
+      feature_set.set_pragma(name, vcf_mapping(value))
     elsif name == 'Number' then
       #
     elsif name == 'PREDIGREE' then
@@ -81,15 +80,89 @@ protected
       #
     elsif name == 'vcfProcessLog' then
       #
+    elsif name == 'reference' then
+      # 'reference' is not specified in VCF 4.1, but used in examples and real-world
+      # VCF files nevertheless.
+      # TODO What if reference already set?
+      feature_set.set_pragma(name, value)
     else
       # Cannot be passed to super class, because GFF3 has inherently different pragma statements.
       feature_set.set_pragma(name, { name => value })
     end
   end
 
+  def add_comment(feature_set, comment)
+    if comment.start_with?("CHROM\tPOS\tID\tREF\tALT") then
+      columns = comment.split("\t")
+      @samples = columns[9..-1]
+      @samples = [] unless @samples
+    else
+      @comment << comment
+    end
+  end
+
   def add_feature(feature_set, line)
     line.chomp!
     chrom, pos, id, ref, alt, qual, filter, info, format, samples = line.split("\t")
+  end
+
+private
+
+  # Takes a VCF meta-information string and returns a key-value mapping.
+  #
+  # +value+:: value of a meta-information assignment in VCF (key/value mappings of the form "<ID=value,...>")
+  def vcf_mapping(value)
+    value = value[1..-2]
+
+    mapping = {}
+    identifier = ''
+    assignment = ''
+    state = :id
+    value.each_char { |character|
+      if state == :value then
+        if character == '"' then
+          state = :quoted
+          next
+        else
+          state = :plain
+        end
+      end
+
+      state = :separator if state == :plain and character == ','
+
+      if state == :id then
+        if character == '=' then
+          state = :value
+          assignment = ''
+        else
+          identifier << character
+        end
+      elsif state == :separator then
+        if character == ',' then
+          state = :id
+          mapping[identifier] = assignment
+          identifier = ''
+        else
+          # TODO Format error.
+        end
+      elsif state == :quoted then
+        if character == '"' then
+          state = :separator
+          mapping[identifier] = assignment
+          identifier = ''
+        else
+          assignment << character
+        end
+      elsif state == :plain then
+        assignment << character
+      else
+        # TODO Whoops. Report error.
+      end
+    }
+
+    mapping[identifier] = assignment unless identifier.empty?
+
+    mapping
   end
 
 end
