@@ -8,7 +8,7 @@ class GFF3Reader < BioInterchange::Reader
   BioInterchange::Registry.register_reader(
     'biointerchange.gff3',
     GFF3Reader,
-    [ 'name', 'name_uri', 'date' ],
+    [ 'name', 'name_uri', 'date', 'batch_size' ],
     true,
     'Generic Feature Format Version 3 (GFF3) reader',
     [

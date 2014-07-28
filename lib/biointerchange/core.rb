@@ -237,7 +237,7 @@ module BioInterchange
         'input'  => opt['input'],
         'output' => opt['output']
       }
-      map['batchsize'] = opt['batchsize'].to_i if opt['batchsize']
+      map['batch_size'] = opt['batchsize'].to_i if opt['batchsize']
       opt.each_key { |key|
         map[key.sub(/^annotate_/, '')] = opt[key] if key.start_with?('annotate_')
       }

@@ -8,7 +8,7 @@ class VCFReader < GFF3Reader
   BioInterchange::Registry.register_reader(
     'biointerchange.vcf',
     VCFReader,
-    [ 'name', 'name_uri', 'date' ],
+    [ 'name', 'name_uri', 'date', 'batch_size' ],
     true,
     'Variant Call Format (VCF) version 4.1 reader',
     [
@@ -104,6 +104,8 @@ protected
   def add_feature(feature_set, line)
     line.chomp!
     chrom, pos, id, ref, alt, qual, filter, info, format, samples = line.split("\t")
+
+    feature_set.add(BioInterchange::Genomics::VCFFeature.new(chrom, pos, id, ref, alt, qual, filter, info = {}))
   end
 
 private

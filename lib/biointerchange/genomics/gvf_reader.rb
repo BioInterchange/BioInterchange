@@ -6,7 +6,7 @@ class GVFReader < GFF3Reader
   BioInterchange::Registry.register_reader(
     'biointerchange.gvf',
     GVFReader,
-    [ 'name', 'name_uri', 'date' ],
+    [ 'name', 'name_uri', 'date', 'batch_size' ],
     true,
     'Genome Variation Format Version 1 (GVF) reader',
     [
