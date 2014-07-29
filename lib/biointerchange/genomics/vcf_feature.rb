@@ -30,12 +30,12 @@ class VCFFeature < GFF3Feature
     # Parameters that do not map directly to super's parameters are placed in `info`
     # with a space as prefix. For example, `reference_bases` becomes the key
     # ` reference_bases` in `info`.
-    info[' id'] = id
-    info[' reference_bases'] = reference_bases
-    info[' alternative_alleles'] = alternative_alleles
-    info[' filters'] = filters
+    info[' id'] = [ id ]
+    info[' reference_bases'] = [ reference_bases ]
+    info[' alternative_alleles'] = [ alternative_alleles ]
+    info[' filters'] = [ filters ]
 
-    super(chromosome, nil, nil, position, position, quality_score, nil, nil, info)
+    super(chromosome, nil, nil, position, position, quality_score, BioInterchange::Genomics::GFF3Feature::POSITIVE, nil, info)
   end
 
 end
