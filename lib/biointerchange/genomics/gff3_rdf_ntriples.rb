@@ -171,7 +171,7 @@ protected
     source = ''
     source = "#{feature.source}," if feature.source
     type = ''
-    type = "#{feature_type.to_s.sub(/^[^:]+:\/\//, '')}," if feature.type
+    type = "#{feature.type.to_s.sub(/^[^:]+:\/\//, '')}," if feature.type
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{source}#{type}#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}") unless feature.attributes.has_key?('ID')
 
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.attributes['ID'][0]}") if feature.attributes.has_key?('ID')
