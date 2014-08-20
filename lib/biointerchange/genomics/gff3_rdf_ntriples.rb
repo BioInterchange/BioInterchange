@@ -169,7 +169,7 @@ protected
     # TODO Make sure there is only one value in the 'ID' list.
     # TODO Ponder about whether it would be possible to get the same URI for two distinct features (bad thing).
     source = ''
-    source = "#{feature_source}," if feature.source
+    source = "#{feature.source}," if feature.source
     type = ''
     type = "#{feature_type.to_s.sub(/^[^:]+:\/\//, '')}," if feature.type
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{source}#{type}#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}") unless feature.attributes.has_key?('ID')
