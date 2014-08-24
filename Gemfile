@@ -5,7 +5,7 @@ source "http://rubygems.org"
 gem "rdf", ">= 0.3.4.1"
 gem "json", ">= 1.6.4"
 gem "getopt", ">= 1.4.1"
-gem "addressable", ">= 2.3.2"
+gem "addressable", ">= 2.3.6"
 gem "bio", ">= 1.4.2"
 
 # Add dependencies to develop your gem here.

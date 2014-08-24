@@ -60,7 +60,7 @@ class Writer
       if BioInterchange::format == :turtle then
         serialize_turtle(subject_uri, predicate_uri, object_representation)
       else
-        @ostream.puts("#{subject_uri} #{predicate_uri} #{object_representation}")
+        @ostream.puts("#{subject_uri} #{predicate_uri} #{object_representation} .")
       end
     rescue Errno::EPIPE
       # Whenever an output pipe disappears, then the user may be happy with what he/she

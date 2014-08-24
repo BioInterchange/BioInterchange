@@ -74,7 +74,7 @@ protected
     # Create a URI prefix that applies to the set, all features in the set, and all the features' annotations.
     # Then register the prefix with the writer to have a concise Turtle output.
     set_uri = set_uri[0..-2] if set_uri and set_uri.end_with?('/')
-    set_uri = RDF::URI.new(model.uri) unless set_uri
+    set_uri = BioInterchange::SURI.new(model.uri) unless set_uri
     set_base(set_uri + '/')
 
     add_prefix('http://biohackathon.org/resource/faldo#', 'faldo')
@@ -104,7 +104,7 @@ protected
       if (pragma.has_key?('attribute-method') or pragma.has_key?('data-source') or pragma.has_key?('score-method') or pragma.has_key?('source-method') or pragma.has_key?('technology-platform')) then
         serialize_structured_attribute(set_uri, pragma)
       elsif pragma.has_key?('gff-version') then
-        create_triple(set_uri.to_s, @base.has_identifier, RDF::URI.new("#{set_uri}/version"))
+        create_triple(set_uri.to_s, @base.has_identifier, BioInterchange::SURI.new("#{set_uri}/version"))
         create_triple("#{set_uri}/version", RDF.type, @base.Version)
         create_triple("#{set_uri}/version", @base.has_value, "gff-version #{pragma['gff-version']}")
       elsif pragma.has_key?('gvf-version') then
@@ -118,7 +118,7 @@ protected
           serialize_landmark(set_uri, pragma['sequence-region'][seqid])
         }
       elsif pragma.has_key?('species') then
-        create_triple(set_uri, @base.is_about, RDF::URI.new(pragma['species']))
+        create_triple(set_uri, @base.is_about, BioInterchange::SURI.new(pragma['species']))
       end
     else
       # TODO
@@ -157,7 +157,7 @@ protected
       }
 
       # If there is a match, then add linkout.
-      create_triple(feature_uri, @base.has_source, RDF::URI.new(linkout))
+      create_triple(feature_uri, @base.has_source, BioInterchange::SURI.new(linkout))
     }
   end
 
@@ -172,43 +172,43 @@ protected
     source = "#{feature.source}," if feature.source
     type = ''
     type = "#{feature.type.to_s.sub(/^[^:]+:\/\//, '')}," if feature.type
-    feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{source}#{type}#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}") unless feature.attributes.has_key?('ID')
+    feature_uri = BioInterchange::SURI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{source}#{type}#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}") unless feature.attributes.has_key?('ID')
 
-    feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.attributes['ID'][0]}") if feature.attributes.has_key?('ID')
+    feature_uri = BioInterchange::SURI.new("#{set_uri.to_s}/feature/#{feature.attributes['ID'][0]}") if feature.attributes.has_key?('ID')
     create_triple(set_uri, @base.has_member, feature_uri)
     create_triple(feature_uri, RDF.type, @base.Feature)
     create_triple(feature_uri, RDF.type, feature.type)
     match_feature(feature, feature_uri)
     serialize_landmark(set_uri, GFF3Landmark.new(feature.sequence_id)) unless @landmarks.has_key?(feature.sequence_id)
-    create_triple(feature_uri, @base.is_located_on, RDF::URI.new(@landmarks[feature.sequence_id]))
-    create_triple(feature_uri, @base.is_created_by, RDF::URI.new("#{feature_uri}/source"))
+    create_triple(feature_uri, @base.is_located_on, BioInterchange::SURI.new(@landmarks[feature.sequence_id]))
+    create_triple(feature_uri, @base.is_created_by, BioInterchange::SURI.new("#{feature_uri}/source"))
     create_triple("#{feature_uri}/source", RDF.type, @base.ExperimentalMethod)
     create_triple("#{feature_uri}/source", @base.has_value, feature.source)
     if feature.phase then
-      create_triple(feature_uri, @base.has_quality, RDF::URI.new("#{feature_uri}/phase"))
+      create_triple(feature_uri, @base.has_quality, BioInterchange::SURI.new("#{feature_uri}/phase"))
       create_triple("#{feature_uri}/phase", RDF.type, @base.CodingFrameOffset)
       create_triple("#{feature_uri}/phase", @base.has_value, feature.phase)
     end
 
-    create_triple(feature_uri, @base.has_part, RDF::URI.new("#{feature_uri}/locus"))
+    create_triple(feature_uri, @base.has_part, BioInterchange::SURI.new("#{feature_uri}/locus"))
     create_triple("#{feature_uri}/locus", RDF.type, @base.Locus)
-    create_triple("#{feature_uri}/locus", @base.has_attribute, RDF::URI.new("#{feature_uri}/locus/region"))
+    create_triple("#{feature_uri}/locus", @base.has_attribute, BioInterchange::SURI.new("#{feature_uri}/locus/region"))
     serialize_coordinate(set_uri, "#{feature_uri}/locus", feature)
     serialize_attributes(set_uri, feature_uri, feature.attributes) unless feature.attributes.keys.empty?
   end
 
   def serialize_coordinate(set_uri, feature_uri, feature)
-    region_uri = RDF::URI.new("#{feature_uri.to_s}/region")
-    start_position_uri = RDF::URI.new("#{feature_uri.to_s}/region/start")
-    end_position_uri = RDF::URI.new("#{feature_uri.to_s}/region/end")
+    region_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/region")
+    start_position_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/region/start")
+    end_position_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/region/end")
     #feature_object_properties = @base.feature_properties.select { |uri| @base.is_object_property?(uri) }[0]
-    ##graph.insert(RDF::Statement.new(feature_uri, @base.with_parent([ @base.region ].flatten, feature_object_properties), region_uri))
+    ##graph.insert(BioInterchange::Statement.new(feature_uri, @base.with_parent([ @base.region ].flatten, feature_object_properties), region_uri))
     create_triple(feature_uri, @base.is_located_on, region_uri)
     create_triple(region_uri, RDF.type, BioInterchange::FALDO.Region)
     # BIN STUFF
     if false then
-      bin_uri = RDF::URI.new("bin://#{feature.sequence_id}/#{BioInterchange::Genomics::Locations.reg2bin(feature.start_coordinate, feature.end_coordinate)}")
-      create_triple(bin_uri, RDF::URI.new('bin://contains'), feature_uri)
+      bin_uri = BioInterchange::SURI.new("bin://#{feature.sequence_id}/#{BioInterchange::Genomics::Locations.reg2bin(feature.start_coordinate, feature.end_coordinate)}")
+      create_triple(bin_uri, BioInterchange::SURI.new('bin://contains'), feature_uri)
     end
     create_triple(region_uri, BioInterchange::FALDO.begin, start_position_uri)
     create_triple(region_uri, BioInterchange::FALDO.end, end_position_uri)
@@ -231,7 +231,7 @@ protected
     create_triple(start_position_uri, BioInterchange::FALDO.position, feature.start_coordinate)
     create_triple(end_position_uri, BioInterchange::FALDO.position, feature.end_coordinate)
     if feature.score then
-      create_triple(feature_uri, @base.has_attribute, RDF::URI.new("#{feature_uri}/score"))
+      create_triple(feature_uri, @base.has_attribute, BioInterchange::SURI.new("#{feature_uri}/score"))
       if @format == :gvf or @format == :vcf then
         create_triple("#{feature_uri}/score", RDF.type, @base.PhredScore)
       else
@@ -256,19 +256,19 @@ protected
   def serialize_landmark(set_uri, landmark)
     return if @landmarks.has_key?(landmark.seqid)
     landmark_uri = landmark_uri(set_uri, landmark.seqid)
-    region_uri = RDF::URI.new("#{landmark_uri.to_s}/region")
+    region_uri = BioInterchange::SURI.new("#{landmark_uri.to_s}/region")
     @landmarks[landmark.seqid] = landmark_uri
     create_triple(landmark_uri, RDF.type, @base.Landmark)
-    create_triple(landmark_uri, @base.has_identifier, RDF::URI.new("#{landmark_uri}/id"))
+    create_triple(landmark_uri, @base.has_identifier, BioInterchange::SURI.new("#{landmark_uri}/id"))
     create_triple("#{landmark_uri}/id", @base.has_value, landmark.seqid)
     create_triple(landmark_uri, @base.has_attribute, region_uri)
     if landmark.start_coordinate then
-      start_position_uri = RDF::URI.new("#{landmark_uri.to_s}/region/start")
+      start_position_uri = BioInterchange::SURI.new("#{landmark_uri.to_s}/region/start")
       create_triple(region_uri, BioInterchange::FALDO.begin, start_position_uri)
       create_triple(start_position_uri, BioInterchange::FALDO.position, landmark.start_coordinate)
     end
     if landmark.start_coordinate then
-      end_position_uri = RDF::URI.new("#{landmark_uri.to_s}/region/end")
+      end_position_uri = BioInterchange::SURI.new("#{landmark_uri.to_s}/region/end")
       create_triple(region_uri, BioInterchange::FALDO.end, end_position_uri)
       create_triple(end_position_uri, BioInterchange::FALDO.position, landmark.end_coordinate)
     end
@@ -284,7 +284,7 @@ protected
       # Check for defined tags (in alphabetical order), if not matched, serialize as generic Attribute:
       if tag == 'Alias' then
         list.each_index { |index|
-          create_triple(feature_uri, @base.has_attribute, RDF::URI.new("#{feature_uri}/alias/#{index}"))
+          create_triple(feature_uri, @base.has_attribute, BioInterchange::SURI.new("#{feature_uri}/alias/#{index}"))
           create_triple("#{feature_uri}/alias/#{index}", RDF.type, @base.Alias)
           create_triple("#{feature_uri}/alias/#{index}", @base.has_value, list[index])
         }
@@ -296,7 +296,7 @@ protected
           rescue NoMethodError
             # Not clear where to link to? Preserve the Dbxref as a Literal:
             @dbxref = 0 if @dbxref == nil
-            literal_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/dbxref/#{@dbxref}")
+            literal_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/attribute/dbxref/#{@dbxref}")
             @dbxref += 1
             create_triple(feature_uri, @base.references, literal_uri)
             create_triple(literal_uri, RDF.type, @base.ExternalReference)
@@ -305,13 +305,13 @@ protected
         }
       elsif tag == 'Derives_from' then
         list.each { |value|
-          create_triple(feature_uri, @base.is_temporarily_part_of, RDF::URI.new("#{set_uri.to_s}/feature/#{value}"))
+          create_triple(feature_uri, @base.is_temporarily_part_of, BioInterchange::SURI.new("#{set_uri.to_s}/feature/#{value}"))
         }
       elsif tag == 'Gap' then
         # Handled by 'Target', because 'Gap' requires 'Target' to be present.
       elsif tag == 'ID' then
         list.each { |value|
-          create_triple(feature_uri, @base.has_identifier, RDF::URI.new("#{feature_uri}/id"))
+          create_triple(feature_uri, @base.has_identifier, BioInterchange::SURI.new("#{feature_uri}/id"))
           create_triple("#{feature_uri}/id", RDF.type, @base.Identifier)
           create_triple("#{feature_uri}/id", @base.has_value, value)
         }
@@ -322,17 +322,17 @@ protected
         elsif value == 'false' then
           create_triple(feature_uri, @base.is_circular, @base.WatsonCrickHelix) if value == 'false'
         else
-          create_triple(feature_uri, RDF::RDFS.comment, "Is_circular non-truth value: #{value}")
+          create_triple(feature_uri, BioInterchange::RDFS.comment, "Is_circular non-truth value: #{value}")
         end
       elsif tag == 'Name' then
         list.each { |value|
-          create_triple(feature_uri, @base.has_attribute, RDF::URI.new("#{feature_uri}/name"))
+          create_triple(feature_uri, @base.has_attribute, BioInterchange::SURI.new("#{feature_uri}/name"))
           create_triple("#{feature_uri}/name", RDF.type, @base.Name)
           create_triple("#{feature_uri}/name", @base.has_value, value)
         }
       elsif tag == 'Note' then
         list.each_index { |index|
-          create_triple(feature_uri, @base.has_annotation, RDF::URI.new("#{feature_uri}/note/#{index}"))
+          create_triple(feature_uri, @base.has_annotation, BioInterchange::SURI.new("#{feature_uri}/note/#{index}"))
           create_triple("#{feature_uri}/note/#{index}", RDF.type, @base.Note)
           create_triple("#{feature_uri}/note/#{index}", @base.has_value, list[index])
         }
@@ -345,11 +345,11 @@ protected
         }
       elsif tag == 'Parent' then
         list.each { |parent_id|
-          create_triple(feature_uri, @base.has_source, RDF::URI.new("#{set_uri.to_s}/feature/#{parent_id}"))
+          create_triple(feature_uri, @base.has_source, BioInterchange::SURI.new("#{set_uri.to_s}/feature/#{parent_id}"))
         }
       elsif tag == 'Reference_seq' then
         list.each { |value|
-          reference_uri = RDF::URI.new("#{feature_uri.to_s}/reference/#{value}")
+          reference_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/reference/#{value}")
           create_triple(feature_uri, @base.has_attribute, reference_uri)
           create_triple(reference_uri, RDF.type, @base.ReferenceSequence)
           create_triple(reference_uri, @base.has_value, value)
@@ -358,13 +358,13 @@ protected
         # GFF3 spec is unclear on this point, but I assume that a target ID
         # is referencing a feature ID within the same file.
         target_id, start_coordinate, end_coordinate, strand = list.join(',').split(/\s+/, 4)
-        target_uri = RDF::URI.new("#{feature_uri.to_s}/target/#{target_id}")
+        target_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/target/#{target_id}")
         create_triple(target_uri, RDF.type, @base.SequenceAlignment)
         create_triple(target_uri, @base.has_source, feature_uri)
         create_triple(target_uri, @base.has_input, target_id)
-        region_uri = RDF::URI.new("#{target_uri.to_s}/region")
-        start_position_uri = RDF::URI.new("#{region_uri.to_s}/start")
-        end_position_uri = RDF::URI.new("#{region_uri.to_s}/end")
+        region_uri = BioInterchange::SURI.new("#{target_uri.to_s}/region")
+        start_position_uri = BioInterchange::SURI.new("#{region_uri.to_s}/start")
+        end_position_uri = BioInterchange::SURI.new("#{region_uri.to_s}/end")
         create_triple(target_uri, @base.has_attribute, region_uri)
         create_triple(region_uri, RDF.type, BioInterchange::FALDO.Region)
         create_triple(region_uri, BioInterchange::FALDO.begin, start_position_uri)
@@ -392,7 +392,7 @@ protected
           attributes['Gap'].each_index { |gap_no|
             cigar_line = attributes['Gap'][gap_no].split(/\s+/)
             cigar_line.each_index { |alignment_no|
-              alignment_uri = RDF::URI.new("#{feature_uri.to_s}/alignment/#{gap_no}/#{alignment_no}")
+              alignment_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/alignment/#{gap_no}/#{alignment_no}")
               if alignment_no == 0 then
                 create_triple(target_uri, @base.has_first_part, alignment_uri)
               else
@@ -418,13 +418,13 @@ protected
               else
                 # Fallback: operation is outside of the specification
                 create_triple(alignment_uri, RDF.type, @base.SequenceAlignmentOperation)
-                create_triple(alignment_uri, RDF::RDFS.comment, "Alignment operation: #{operation}") if operation and not operation.empty?
+                create_triple(alignment_uri, BioInterchange::RDFS.comment, "Alignment operation: #{operation}") if operation and not operation.empty?
               end
               if alignment_no + 1 < cigar_line.length then
-                create_triple(alignment_uri, @base.is_before, RDF::URI.new("#{feature_uri.to_s}/alignment/#{gap_no}/#{alignment_no + 1}"))
+                create_triple(alignment_uri, @base.is_before, BioInterchange::SURI.new("#{feature_uri.to_s}/alignment/#{gap_no}/#{alignment_no + 1}"))
               end
               if span then
-                create_triple(alignment_uri, @base.has_attribute, RDF::URI.new("#{alignment_uri}/span"))
+                create_triple(alignment_uri, @base.has_attribute, BioInterchange::SURI.new("#{alignment_uri}/span"))
                 create_triple("#{alignment_uri}/span", RDF.type, @base.Span)
                 create_triple("#{alignment_uri}/span", @base.has_value, span.to_i)
               end
@@ -440,11 +440,11 @@ protected
         #      Well, or it would show that this implementation is incomplete. Could be either.
         list.each_index { |index|
           value = list[index]
-          attribute_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/#{tag}") if list.size == 1
-          attribute_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/#{tag}-#{index + 1}") unless list.size == 1
+          attribute_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/attribute/#{tag}") if list.size == 1
+          attribute_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/attribute/#{tag}-#{index + 1}") unless list.size == 1
           create_triple(feature_uri, @base.has_attribute, attribute_uri)
           create_triple(attribute_uri, RDF.type, @base.InformationContentEntity)
-          create_triple(attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri}/tag/#{tag}"))
+          create_triple(attribute_uri, @base.has_attribute, BioInterchange::SURI.new("#{attribute_uri}/tag/#{tag}"))
           create_triple(attribute_uri, @base.has_value, value)
           create_triple("#{attribute_uri}/tag/#{tag}", RDF.type, @base.Label)
           create_triple("#{attribute_uri}/tag/#{tag}", @base.has_value, tag)
@@ -459,7 +459,7 @@ protected
   # +set_uri+:: the feature set URI to which the structured attribute belongs to
   # +pragma+:: a map that encapsulates the structured attribute data
   def serialize_structured_attribute(set_uri, pragma)
-    attribute_uri = RDF::URI.new("#{set_uri.to_s}/structured_attribute/#{pragma.object_id}")
+    attribute_uri = BioInterchange::SURI.new("#{set_uri.to_s}/structured_attribute/#{pragma.object_id}")
     attributes = nil
     class_type = nil
     if pragma.has_key?('attribute-method') then
@@ -510,12 +510,12 @@ protected
        class_type == @base.FragmentReadPlatform or
        class_type == @base.PairedEndReadPlatform then
       if attributes.has_key?('Average_coverage') then
-        create_triple(attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri}/averagecoverage"))
+        create_triple(attribute_uri, @base.has_attribute, BioInterchange::SURI.new("#{attribute_uri}/averagecoverage"))
         create_triple("#{attribute_uri}/averagecoverage", RDF.type, @base.AverageCoverage)
         create_triple("#{attribute_uri}/averagecoverage", @base.has_value, attributes['Average_coverage'][0].to_i)
       end
       if attributes.has_key?('Platform_class') then
-        create_triple(attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri}/platformclass"))
+        create_triple(attribute_uri, @base.has_attribute, BioInterchange::SURI.new("#{attribute_uri}/platformclass"))
         #create_triple(attribute_uri, @base.platformClass, attributes['Platform_class'][0])
       end
       if attributes.has_key?('Platform_name') then
@@ -530,10 +530,10 @@ protected
     end
     attributes.keys.each { |tag|
       if tag.match(/^[a-z]/) then
-        custom_attribute_uri = RDF::URI.new("#{attribute_uri.to_s}/attribute/#{tag}")
+        custom_attribute_uri = BioInterchange::SURI.new("#{attribute_uri.to_s}/attribute/#{tag}")
         create_triple(attribute_uri, @base.has_attribute, custom_attribute_uri)
         create_triple(custom_attribute_uri, RDF.type, @base.InformationContentEntity)
-        create_triple(custom_attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri.to_s}/attribute/#{tag}/name"))
+        create_triple(custom_attribute_uri, @base.has_attribute, BioInterchange::SURI.new("#{attribute_uri.to_s}/attribute/#{tag}/name"))
         attributes[tag].each { |value|
           create_triple(custom_attribute_uri, @base.has_value, value)
         }
@@ -566,9 +566,9 @@ protected
       effect = list[index]
       sequence_variant, variant_index, feature_type, feature_ids = effect.split(' ', 4)
       feature_ids = feature_ids.split(' ')
-      effect_uri = RDF::URI.new("#{feature_uri.to_s}/variant/#{variant_index}/effect/#{index}")
+      effect_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/variant/#{variant_index}/effect/#{index}")
       # TODO
-      #serialize_variant_triple(feature_uri, RDF::URI.new("#{feature_uri.to_s}/variant/#{variant_index}"), @base.effect, effect_uri)
+      #serialize_variant_triple(feature_uri, BioInterchange::SURI.new("#{feature_uri.to_s}/variant/#{variant_index}"), @base.effect, effect_uri)
       # Type is a SO sequence_variant or descendent:
       create_triple(effect_uri, RDF.type, BioInterchange::SO.send(BioInterchange.make_safe_label(sequence_variant)))
       # The feature type should be already apparent from the targeted feature. Do no sanity
@@ -588,8 +588,8 @@ protected
   def serialize_variant_seqs(set_uri, feature_uri, list)
     list.each_index { |index|
       value = list[index]
-      variant_uri = RDF::URI.new("#{feature_uri.to_s}/variant/#{index}")
-      serialize_variant_triple(feature_uri, variant_uri, @base.has_attribute, RDF::URI.new("#{variant_uri}/sequence"))
+      variant_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/variant/#{index}")
+      serialize_variant_triple(feature_uri, variant_uri, @base.has_attribute, BioInterchange::SURI.new("#{variant_uri}/sequence"))
       create_triple("#{variant_uri}/sequence", @base.has_value, value)
     }
 
@@ -624,11 +624,11 @@ protected
   # +set_uri+:: the feature set URI to which the feature belongs to
   # +feature_sequence+:: a +GFF3FeatureSequence+ instance
   def serialize_feature_sequence(set_uri, feature_sequence)
-    feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature_sequence.feature_id}")
-    annotation_uri = RDF::URI.new("#{feature_uri.to_s}/sequence")
+    feature_uri = BioInterchange::SURI.new("#{set_uri.to_s}/feature/#{feature_sequence.feature_id}")
+    annotation_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/sequence")
     create_triple(feature_uri, @base.has_attribute, annotation_uri)
     create_triple(annotation_uri, RDF.type, @base.Sequence)
-    create_triple(annotation_uri, RDF::RDFS.comment, feature_sequence.comment) if feature_sequence.comment
+    create_triple(annotation_uri, BioInterchange::RDFS.comment, feature_sequence.comment) if feature_sequence.comment
     create_triple(annotation_uri, @base.has_value, feature_sequence.sequence)
   end
 
@@ -638,14 +638,14 @@ protected
   # +dbxref_composite+:: composite term of the external database reference (e.g. ""dbSNP_127:rs123456)
   def serialize_dbxref(feature_uri, dbxref_composite)
     abbreviation, accession = dbxref_composite.split(':', 2)
-    dbxref_uri = RDF::URI.new("#{feature_uri.to_s}/dbxref/#{BioInterchange.make_safe_label(abbreviation)}")
+    dbxref_uri = BioInterchange::SURI.new("#{feature_uri.to_s}/dbxref/#{BioInterchange.make_safe_label(abbreviation)}")
     create_triple(feature_uri, @base.references, dbxref_uri)
 
     create_triple(dbxref_uri, RDF.type, @base.ExternalReference)
     create_triple(dbxref_uri, @base.refers_to, BioInterchange::LifeScienceRegistry.send(dbxref_composite.split('_', 2)[0].downcase).sub('$id', accession))
     if dbxref_composite.match(/^.+_.+:.+$/) then
       # Entry with version information.
-      create_triple(dbxref_uri, @base.has_identifier, RDF::URI.new("#{dbxref_uri}/version"))
+      create_triple(dbxref_uri, @base.has_identifier, BioInterchange::SURI.new("#{dbxref_uri}/version"))
       create_triple("#{dbxref_uri}/version", @base.has_value, abbreviation[6..-1])
     end
 

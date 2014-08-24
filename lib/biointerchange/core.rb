@@ -31,6 +31,9 @@ module BioInterchange
   # the user, then use this default batch size.
   @@default_batch_size = 100
 
+  # Custom URI implementation; replaces broken RDF::URI
+  require 'biointerchange/uri'
+
   # Custom Exceptions and Errors
   require 'biointerchange/exceptions'
 
