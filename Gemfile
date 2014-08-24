@@ -2,7 +2,7 @@ source "http://rubygems.org"
 # Add dependencies required to use your gem here.
 # Example:
 #   gem "activesupport", ">= 2.3.5"
-gem "rdf", ">= 0.3.4.1"
+gem "rdf", ">= 1.1.4.3"
 gem "json", ">= 1.6.4"
 gem "getopt", ">= 1.4.1"
 gem "addressable", ">= 2.3.6"
