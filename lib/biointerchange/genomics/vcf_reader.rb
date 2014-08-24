@@ -91,6 +91,11 @@ protected
     end
   end
 
+  # Adds a comment to the feature set; ignores the header line that preceds VCF features.
+  # Comments are added on a line-by-line basis.
+  #
+  # +feature_set+:: VCF feature set to which the comment line is being added
+  # +comment+:: comment line in the VCF file
   def add_comment(feature_set, comment)
     if comment.start_with?("CHROM\tPOS\tID\tREF\tALT") then
       columns = comment.split("\t")
@@ -101,11 +106,28 @@ protected
     end
   end
 
+  # Adds a VCF feature to a VCF feature set.
+  #
+  # +feature_set+:: feature set to which the feature should be added to
+  # +line+:: line from the VCF that describes the feature
   def add_feature(feature_set, line)
     line.chomp!
     chrom, pos, id, ref, alt, qual, filter, info, format, samples = line.split("\t")
 
-    feature_set.add(BioInterchange::Genomics::VCFFeature.new(chrom, pos, id, ref, alt, qual, filter, info = {}))
+    # Split composite fields
+    alt = alt.split(',')
+    info = info.split(';')
+    info = info.map { |key_value_pair| key, values = key_value_pair.split('=', 2) }
+    info = Hash[info]
+    info = info.each_pair { |key, value|
+      if value then
+        [ key, value.split(',') ]
+      else
+        [ key, true ]
+      end
+    }
+
+    feature_set.add(BioInterchange::Genomics::VCFFeature.new(chrom, pos, id, ref, alt, qual, filter, info))
   end
 
 private

@@ -177,13 +177,13 @@ protected
     feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.attributes['ID'][0]}") if feature.attributes.has_key?('ID')
     create_triple(set_uri, @base.has_member, feature_uri)
     create_triple(feature_uri, RDF.type, @base.Feature)
-    create_triple(feature_uri, RDF.type, feature.type)
+    create_triple(feature_uri, RDF.type, feature.type) if feature.type
     match_feature(feature, feature_uri)
     serialize_landmark(set_uri, GFF3Landmark.new(feature.sequence_id)) unless @landmarks.has_key?(feature.sequence_id)
     create_triple(feature_uri, @base.is_located_on, RDF::URI.new(@landmarks[feature.sequence_id]))
     create_triple(feature_uri, @base.is_created_by, RDF::URI.new("#{feature_uri}/source"))
     create_triple("#{feature_uri}/source", RDF.type, @base.ExperimentalMethod)
-    create_triple("#{feature_uri}/source", @base.has_value, feature.source)
+    create_triple("#{feature_uri}/source", @base.has_value, feature.source) if feature.source
     if feature.phase then
       create_triple(feature_uri, @base.has_quality, RDF::URI.new("#{feature_uri}/phase"))
       create_triple("#{feature_uri}/phase", RDF.type, @base.CodingFrameOffset)
