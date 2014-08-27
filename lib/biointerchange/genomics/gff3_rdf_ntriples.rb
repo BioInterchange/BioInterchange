@@ -172,9 +172,14 @@ protected
     source = "#{feature.source}," if feature.source
     type = ''
     type = "#{feature.type.to_s.sub(/^[^:]+:\/\//, '')}," if feature.type
-    feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{source}#{type}#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}") unless feature.attributes.has_key?('ID')
+    if feature.attributes.has_key?('ID') or feature.attributes.has_key?(' id') then
+      feature_id = 'ID'
+      feature_id = ' id' if feature.attributes.has_key?(' id')
+      feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.attributes[feature_id][0]}")
+    else
+      feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{source}#{type}#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}")
+    end
 
-    feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.attributes['ID'][0]}") if feature.attributes.has_key?('ID')
     create_triple(set_uri, @base.has_member, feature_uri)
     create_triple(feature_uri, RDF.type, @base.Feature)
     create_triple(feature_uri, RDF.type, feature.type) if feature.type
@@ -435,6 +440,19 @@ protected
         serialize_variant_effects(set_uri, feature_uri, list)
       elsif tag == 'Variant_seq' then
         serialize_variant_seqs(set_uri, feature_uri, list)
+      elsif tag == ' samples' then
+        list.each_index { |sample|
+          list[sample].each_pair { |key, values|
+            serialize_vcf_sample(feature_uri, sample, key, values)
+          }
+        }
+      elsif list == true then
+        # Attribute is a flag. Tag itself carries meaning and has no value associated with it.
+        attribute_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/#{tag}")
+        create_triple(feature_uri, @base.has_attribute, attribute_uri)
+        create_triple(attribute_uri, RDF.type, @base.InformationContentEntity)
+        create_triple(attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri}/tag/#{tag}"))
+        create_triple("#{attribute_uri}/tag/#{tag}", RDF.type, @base.Label)
       else
         # TODO Report unknown upper case letters here? That would be a spec. validation...
         #      Well, or it would show that this implementation is incomplete. Could be either.
@@ -444,13 +462,113 @@ protected
           attribute_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/#{tag}-#{index + 1}") unless list.size == 1
           create_triple(feature_uri, @base.has_attribute, attribute_uri)
           create_triple(attribute_uri, RDF.type, @base.InformationContentEntity)
-          create_triple(attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri}/tag/#{tag}"))
+          # TODO Figure out why the following line was there. Seems wrong. 
+          #create_triple(attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri}/tag/#{tag}"))
           create_triple(attribute_uri, @base.has_value, value)
           create_triple("#{attribute_uri}/tag/#{tag}", RDF.type, @base.Label)
           create_triple("#{attribute_uri}/tag/#{tag}", @base.has_value, tag)
         }
       end
     }
+  end
+
+  # Serializes VCF sample data (VCF columns 9 and above).
+  #
+  # +feature_uri+:: URI of the feature that the sample data relates to
+  # +sample+:: number of the sample that is being addressed (sample column number)
+  # +key+:: key of the described sample values
+  # +values+:: values of the sample (possible composite type, e.g. comma separated list)
+  def serialize_vcf_sample(feature_uri, sample, key, values)
+    if key == 'DP' then
+      values = values.split(',')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'GT' then
+      values = values.split(/\/|\|/)
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'FT' then
+      values = values.split(';')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'GL' then
+      values = values.split(',')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'GLE' then
+      values = values.split(',')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'PL' then
+      values = values.split(',')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'GP' then
+      values = values.split(',')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'GQ' then
+      values = values.split(',')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'HQ' then
+      values = values.split(',')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'PS' then
+      values = values.split(',')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'PQ' then
+      values = values.split(',')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'EC' then
+      values = values.split(',')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    elsif key == 'MQ' then
+      values = values.split(',')
+      values.each_index { |index|
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+      }
+    else
+      # Unknown keys. Should that be possible at all?
+      serialize_vcf_sample_attribute(feature_uri, sample, key, values, 0, false, @base.InformationContentEntity)
+    end
+  end
+
+  # Serializes a VCF sample attribute/value pair. Used by serialize_vcf_sample.
+  #
+  # Returns URI of the serialized attribute/value pair.
+  #
+  # +feature_uri+:: URI of the feature that the sample data relates to
+  # +sample+:: number of the sample that is being addressed (sample column number)
+  # +key+:: key of the described sample values
+  # +value+:: value that is associated with the key/sample
+  # +index+:: index of the value (in case value is part of an array of size > 1)
+  # +multivalue+:: true if this value is taken from an array of values of size > 1
+  # +attribute_type+:: type of the attribute entity that represents the value
+  # +value_type+:: type of the actual value
+  def serialize_vcf_sample_attribute(feature_uri, sample, key, value, index, multivalue, attribute_type, value_type = nil)
+    value_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/sample/#{sample}/#{key}") unless multivalue
+    value_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/sample/#{sample}/#{key}-#{index + 1}") if multivalue
+    create_triple(feature_uri, @base.has_attribute, value_uri)
+    create_triple(value_uri, RDF.type, @base.InformationContentEntity) # TODO
+    create_triple(value_uri, @base.has_value, value)
+    value_uri
   end
 
   # Serializes a structured attribute (given as a pragma statement), which later

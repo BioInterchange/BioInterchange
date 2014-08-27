@@ -13,7 +13,8 @@ class VCFFeature < GFF3Feature
   # +quality_score+:: phred-scaled quality score for the assertions concerning reference-/alternative-alleles
   # +filters+:: list of VCF filters that a feature has failed
   # +info+:: a map of additional attributes associated with the feature
-  def initialize(chromosome, position, id, reference_bases, alternative_alleles, quality_score, filters, info = {})
+  # +samples+:: sample information specific to the described feature
+  def initialize(chromosome, position, id, reference_bases, alternative_alleles, quality_score, filters, info = {}, samples = [])
     # Fill in phase, which is always omitted in GVF features (after 'strand', before 'attributes'):
     # Translations to somewhat fit the existing GFF3/GVF model (GFF3/GVF left, VCF right):
     #
@@ -34,6 +35,7 @@ class VCFFeature < GFF3Feature
     info[' reference_bases'] = [ reference_bases ]
     info[' alternative_alleles'] = [ alternative_alleles ]
     info[' filters'] = [ filters ]
+    info[' samples'] = samples
 
     super(chromosome, nil, nil, position, position, quality_score, BioInterchange::Genomics::GFF3Feature::POSITIVE, nil, info)
   end

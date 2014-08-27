@@ -114,20 +114,40 @@ protected
     line.chomp!
     chrom, pos, id, ref, alt, qual, filter, info, format, samples = line.split("\t")
 
+    #
     # Split composite fields
+    #
+
+    # Alternative alleles:
     alt = alt.split(',')
+
+    # Feature information:
     info = info.split(';')
     info = info.map { |key_value_pair| key, values = key_value_pair.split('=', 2) }
     info = Hash[info]
-    info = info.each_pair { |key, value|
+    info = Hash[info.map { |key, value|
       if value then
         [ key, value.split(',') ]
       else
         [ key, true ]
       end
+    }]
+
+    # Format for following sample columns:
+    format = format.split(':')
+
+    # Sample columns (need to be further split in the writer -- depends on format):
+    samples = samples.split("\t").map { |value|
+      # Dot: not data provided for the sample
+      if value == '.' then
+        {}
+      else
+        values = value.split(':')
+        Hash[format.zip(values)]
+      end
     }
 
-    feature_set.add(BioInterchange::Genomics::VCFFeature.new(chrom, pos, id, ref, alt, qual, filter, info))
+    feature_set.add(BioInterchange::Genomics::VCFFeature.new(chrom, pos, id, ref, alt, qual, filter, info, samples))
   end
 
 private
