@@ -128,6 +128,9 @@ protected
   # Goes through "matchers" and links the feature if its attributes are present
   # and equal to a "matcher's" data.
   #
+  # (TODO: Update description of this method, because it is absolutely unclear
+  #  what it actually does right now. Sorry.)
+  #
   # +feature+:: the feature that provides attributes for matching
   # +feature_uri+:: URI of the feature that is linked out to, if the feature's attributes match
   def match_feature(feature, feature_uri)
@@ -172,12 +175,13 @@ protected
     source = "#{feature.source}," if feature.source
     type = ''
     type = "#{feature.type.to_s.sub(/^[^:]+:\/\//, '')}," if feature.type
+    phase = ",#{feature.phase}" if feature.phase
     if feature.attributes.has_key?('ID') or feature.attributes.has_key?(' id') then
       feature_id = 'ID'
       feature_id = ' id' if feature.attributes.has_key?(' id')
       feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.attributes[feature_id][0]}")
     else
-      feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{source}#{type}#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand},#{feature.phase}")
+      feature_uri = RDF::URI.new("#{set_uri.to_s}/feature/#{feature.sequence_id},#{source}#{type}#{feature.start_coordinate},#{feature.end_coordinate},#{feature.strand}#{phase}")
     end
 
     create_triple(set_uri, @base.has_member, feature_uri)
@@ -202,6 +206,11 @@ protected
     serialize_attributes(set_uri, feature_uri, feature.attributes) unless feature.attributes.keys.empty?
   end
 
+  # Serialize a feature's coordinates using FALDO.
+  #
+  # +set_uri+:: URI of the feature set that the feature belongs to
+  # +feature_uri+:: URI prefix of the feature
+  # +feature+:: object representation of the feature, which contains the locus that is described by this method
   def serialize_coordinate(set_uri, feature_uri, feature)
     region_uri = RDF::URI.new("#{feature_uri.to_s}/region")
     start_position_uri = RDF::URI.new("#{feature_uri.to_s}/region/start")
@@ -453,6 +462,7 @@ protected
         create_triple(attribute_uri, RDF.type, @base.InformationContentEntity)
         create_triple(attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri}/tag/#{tag}"))
         create_triple("#{attribute_uri}/tag/#{tag}", RDF.type, @base.Label)
+        create_triple("#{attribute_uri}/tag/#{tag}", @base.has_value, tag)
       else
         # TODO Report unknown upper case letters here? That would be a spec. validation...
         #      Well, or it would show that this implementation is incomplete. Could be either.
@@ -482,7 +492,7 @@ protected
     if key == 'DP' then
       values = values.split(',')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index].to_i, index, values.size > 1, @base.Number_ofReads, RDF::XSD.integer)
       }
     elsif key == 'GT' then
       values = values.split(/\/|\|/)
@@ -566,8 +576,11 @@ protected
     value_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/sample/#{sample}/#{key}") unless multivalue
     value_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/sample/#{sample}/#{key}-#{index + 1}") if multivalue
     create_triple(feature_uri, @base.has_attribute, value_uri)
-    create_triple(value_uri, RDF.type, @base.InformationContentEntity) # TODO
-    create_triple(value_uri, @base.has_value, value)
+    create_triple(value_uri, RDF.type, attribute_type)
+    create_triple(value_uri, @base.has_value, value, value_type)
+    create_triple(value_uri, @base.has_attribute, RDF::URI.new("#{value_uri}/label"))
+    create_triple("#{value_uri}/label", RDF.type, @base.Label)
+    create_triple("#{value_uri}/label", @base.has_value, key)
     value_uri
   end
 

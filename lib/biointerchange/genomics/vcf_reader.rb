@@ -114,6 +114,9 @@ protected
     line.chomp!
     chrom, pos, id, ref, alt, qual, filter, info, format, samples = line.split("\t")
 
+    # Replace an unknown ID by nil, so that feature coordinates are used during serialization:
+    id = nil
+
     #
     # Split composite fields
     #
