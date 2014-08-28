@@ -56,7 +56,7 @@ describe BioInterchange::Genomics::RDFWriter do
       lines.each { |line|
         feature_no += 1 if line.match(/\sa\s+gfvo:Feature\s+[.,;]$/)
       }
-      lines.count.should be == 92
+      lines.count.should be == 91
       feature_no.should be == 3
     end
   end
