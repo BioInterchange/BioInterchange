@@ -33,7 +33,7 @@ class VCFFeature < GFF3Feature
     # ` reference_bases` in `info`.
     info[' id'] = [ id ] if id
     info[' reference_bases'] = [ reference_bases ]
-    info[' alternative_alleles'] = [ alternative_alleles ]
+    info[' alternative_alleles'] = alternative_alleles
     info[' filters'] = [ filters ]
     info[' samples'] = samples
 

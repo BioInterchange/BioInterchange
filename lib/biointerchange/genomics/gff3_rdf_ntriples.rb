@@ -452,7 +452,7 @@ protected
       elsif tag == ' samples' then
         list.each_index { |sample|
           list[sample].each_pair { |key, values|
-            serialize_vcf_sample(feature_uri, sample, key, values)
+            serialize_vcf_sample(feature_uri, sample, key, values, attributes)
           }
         }
       elsif list == true then
@@ -484,103 +484,199 @@ protected
 
   # Serializes VCF sample data (VCF columns 9 and above).
   #
+  # See also genotype serialization of non-VCF data in `serialize_variant_seqs`.
+  #
   # +feature_uri+:: URI of the feature that the sample data relates to
   # +sample+:: number of the sample that is being addressed (sample column number)
   # +key+:: key of the described sample values
   # +values+:: values of the sample (possible composite type, e.g. comma separated list)
-  def serialize_vcf_sample(feature_uri, sample, key, values)
+  # +attribtues+:: a map of tag/value pairs associated with the feature
+  def serialize_vcf_sample(feature_uri, sample, key, values, attributes)
     if key == 'DP' then
       values = values.split(',')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index].to_i, index, values.size > 1, @base.Number_ofReads, RDF::XSD.integer)
+        serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index].to_i, index, values.size > 1, @base.Number_ofReads, RDF::XSD.integer)
       }
     elsif key == 'GT' then
+      list_uri = "#{feature_uri}/attribute/#{key}"
+      serialize_attribute_with_label(feature_uri, list_uri, @base.Genotype, key)
+      phased = values.index('/') == nil
+      if phased then
+        create_triple(list_uri, @base.has_attribute, "#{list_uri}/phase")
+        create_triple("#{list_uri}/phase", RDF.type, @base.GameticPhase)
+      end
+      value_uris = []
       values = values.split(/\/|\|/)
+      # Only say something about zygosity if we deal with single bases and a diploid genome!
+      if values.length == 2 and values.map { |sequence| sequence.length }.uniq[0] == 1 then
+        if values.uniq.length == 1 then
+          create_triple(list_uri, @base.has_quality, @base.Homozygous)
+        else
+          create_triple(list_uri, @base.has_quality, @base.Heterozygous)
+        end
+      end
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        sequence = vcf_allele(values[index].to_i, attributes)
+        sequence_type = @base.SequenceVariant
+        sequence_type = @base.ReferenceSequence if values[index].to_i == 0
+        value_uris << value_uri = serialize_vcf_sample_attribute(feature_uri, sample, key, true, sequence, index, values.size > 1, sequence_type)
       }
+      serialize_list_array(list_uri, value_uris)
     elsif key == 'FT' then
+      # TODO How to code using GFVO?
       values = values.split(';')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'GL' then
+      list_uri = "#{feature_uri}/attribute/#{key}"
+      serialize_attribute_with_label(feature_uri, list_uri, @base.Score, key)
       values = values.split(',')
+      value_uris = []
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        value_uris << serialize_vcf_sample_attribute(feature_uri, sample, key, false, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
+      serialize_list_array(list_uri, value_uris)
     elsif key == 'GLE' then
+      # Example: 0:-75.22,1:-223.42,0/0:-323.03,1/0:-99.29,1/1:-802.53
       values = values.split(',')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        genotype, likelihood = values[index].split(':')
+        genotype = genotype.split('/').map { |allele| vcf_allele(allele.to_i, attributes) }
+        serialize_vcf_sample_attribute(feature_uri, sample, key, true, genotype, index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'PL' then
       values = values.split(',')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'GP' then
       values = values.split(',')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'GQ' then
       values = values.split(',')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'HQ' then
       values = values.split(',')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'PS' then
       values = values.split(',')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'PQ' then
       values = values.split(',')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'EC' then
       values = values.split(',')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'MQ' then
       values = values.split(',')
       values.each_index { |index|
-        serialize_vcf_sample_attribute(feature_uri, sample, key, values[index], index, values.size > 1, @base.InformationContentEntity)
+        serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     else
       # Unknown keys. Should that be possible at all?
-      serialize_vcf_sample_attribute(feature_uri, sample, key, values, 0, false, @base.InformationContentEntity)
+      serialize_vcf_sample_attribute(feature_uri, sample, key, true, values, 0, false, @base.InformationContentEntity)
     end
+  end
+
+  # Returns the allele based on VCF's genotype indexing specification.
+  # Reference allele is index zero, alternatives alleles are designated by one or above.
+  #
+  # +genotype_index+:: VCF genotype index
+  # +attributes+:: feature attribute hash that contains reference/alternative allele bases
+  def vcf_allele(genotype_index, attributes)
+    if genotype_index == 0 then
+      genotype = attributes[' reference_bases'][0]
+    else
+      genotype = attributes[' alternative_alleles'][genotype_index - 1]
+    end
+  end
+
+  # Serializes an ordered list; the list's URIs are given as an array.
+  #
+  # +list_uri+:: URI of the list object (ordered list items will be part of this instance via "has_first_part", "has_ordered_part, "has_last_part")
+  # +uris+:: URIs of the list to be serialized
+  def serialize_list_array(list_uri, uris)
+    uris.each_index { |index|
+      next_uri = nil
+      next_uri = uris[index + 1] if index + 1 < uris.length
+      serialize_list(uris, index, uris[index], next_uri, list_uri)
+    }
+  end
+
+  # Create an ordered list of things; this method serializes one item only and
+  # repeated calls to this method create the list.
+  #
+  # +values+:: array of the things that appear in the ordered list
+  # +index+:: index of the thing that is serialized by this method call
+  # +value_uri+:: URI that represents the current value that is being linked to
+  # +next_value_uri+:: URI of the next serialized value (ignored, if last index)
+  # +list_uri+:: URI of the list that contains the items
+  def serialize_list(values, index, value_uri, next_value_uri, list_uri)
+    if index == 0 then
+      create_triple(list_uri, @base.has_first_part, value_uri)
+    elsif index + 1 == values.length then
+      create_triple(list_uri, @base.has_last_part, value_uri)
+    else
+      create_triple(list_uri, @base.has_ordered_part, value_uri)
+    end
+    if index + 1 < values.length then
+      create_triple(value_uri, @base.is_before, next_value_uri)
+    end
+  end
+
+  # Serializes basic information for an object (a feature's attribtue) with label.
+  #
+  # Links the object to a feature, sets the objects type, assigns it a label.
+  #
+  # +feature_uri+:: URI of the feature that has the object as an attribute
+  # +object_uri+:: URI that represents the object
+  # +object_type+:: type of the object
+  # +label+:: label text to use
+  def serialize_attribute_with_label(feature_uri, object_uri, object_type, label)
+    create_triple(feature_uri, @base.has_attribute, object_uri)
+    create_triple(object_uri, RDF.type, object_type)
+    create_triple(object_uri, @base.has_attribute, RDF::URI.new("#{object_uri}/label"))
+    create_triple("#{object_uri}/label", RDF.type, @base.Label)
+    create_triple("#{object_uri}/label", @base.has_value, label)
   end
 
   # Serializes a VCF sample attribute/value pair. Used by serialize_vcf_sample.
   #
   # Returns URI of the serialized attribute/value pair.
   #
-  # +feature_uri+:: URI of the feature that the sample data relates to
+  # +base_uri+:: URI of the "thing" that the sample data relates to
   # +sample+:: number of the sample that is being addressed (sample column number)
   # +key+:: key of the described sample values
+  # +has_label+:: if true, then serialize label (value taken from key)
   # +value+:: value that is associated with the key/sample
   # +index+:: index of the value (in case value is part of an array of size > 1)
   # +multivalue+:: true if this value is taken from an array of values of size > 1
   # +attribute_type+:: type of the attribute entity that represents the value
   # +value_type+:: type of the actual value
-  def serialize_vcf_sample_attribute(feature_uri, sample, key, value, index, multivalue, attribute_type, value_type = nil)
-    value_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/sample/#{sample}/#{key}") unless multivalue
-    value_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/sample/#{sample}/#{key}-#{index + 1}") if multivalue
-    create_triple(feature_uri, @base.has_attribute, value_uri)
+  def serialize_vcf_sample_attribute(base_uri, sample, key, has_label, value, index, multivalue, attribute_type, value_type = nil)
+    value_uri = RDF::URI.new("#{base_uri.to_s}/sample/#{sample}/#{key}") unless multivalue
+    value_uri = RDF::URI.new("#{base_uri.to_s}/sample/#{sample}/#{key}-#{index + 1}") if multivalue
+    create_triple(base_uri, @base.has_attribute, value_uri)
     create_triple(value_uri, RDF.type, attribute_type)
     create_triple(value_uri, @base.has_value, value, value_type)
-    create_triple(value_uri, @base.has_attribute, RDF::URI.new("#{value_uri}/label"))
-    create_triple("#{value_uri}/label", RDF.type, @base.Label)
-    create_triple("#{value_uri}/label", @base.has_value, key)
+    if has_label then
+      create_triple(value_uri, @base.has_attribute, RDF::URI.new("#{value_uri}/label"))
+      create_triple("#{value_uri}/label", RDF.type, @base.Label)
+      create_triple("#{value_uri}/label", @base.has_value, key)
+    end
     value_uri
   end
 
@@ -712,6 +808,8 @@ protected
   end
 
   # Serializes a list of variant sequences.
+  #
+  # See also VCF genotype serialization ('GT' attribute) in `serialize_vcf_sample`.
   #
   # +set_uri+:: the feature set URI to which the feature belongs to
   # +feature_uri+:: the feature URI to the feature that is annotated with variant data
