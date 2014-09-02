@@ -103,11 +103,11 @@
           </thead>
           <tbody>
 <!-- Imported via :r!~/src/Ontologies/scripts/stats.rb < ~/src/Ontologies/gfvo.xml -->
-<tr><td>Classes</td><td>91</td><td>40</td></tr>
+<tr><td>Classes</td><td>92</td><td>41</td></tr>
 <tr><td>&hellip;modeled from GFF3</td><td>27</td><td></td></tr>
 <tr><td>&hellip;modeled from GTF</td><td>17</td><td></td></tr>
 <tr><td>&hellip;modeled from GVF</td><td>56</td><td></td></tr>
-<tr><td>&hellip;modeled from VCF</td><td>24</td><td></td></tr>
+<tr><td>&hellip;modeled from VCF</td><td>25</td><td></td></tr>
 <tr><td>&hellip;with Wikipedia reference</td><td>48</td><td></td></tr>
 <tr><td>Datatype properties</td><td>1</td><td>1</td></tr>
 <tr><td>Object properties</td><td>32</td><td>31</td></tr>
@@ -389,11 +389,13 @@
 #    (See &quot;Genotype&quot; in the GVF specification at
 #     http://www.sequenceontology.org/resources/gvf.html)
 #
+#    The example also addresses sequence variant encoding in
+#    VCF files.
+#
 #################################################################
 
-:ExampleSet3 rdf:type :Collection ;
-             :hasMember :ExampleSet3Feature1 ,
-                        :ExampleSet3Feature2 ;
+:ExampleSet3 a :Collection ;
+             :hasMember :ExampleSet3Feature1 ;
              rdfs:comment &quot;Encoding of a sequence variant. This example is part of the GVF specification, denoting two variants for two separate sequenced individuals (http://www.sequenceontology.org/resources/gvf.html).&quot;@en .
 
 # The individuals that were sequenced are represented by named, but otherwise
@@ -402,39 +404,49 @@
 :ExampleSet3SequencedIndividual1 rdf:type :SequencedIndividual .
 :ExampleSet3SequencedIndividual2 rdf:type :SequencedIndividual .
 
-# The example contains a phased genotype; two chromosome instances are used
-# to distinguish between them.
-:ExampleSet3ChromosomeA a :Chromosome .
-:ExampleSet3ChromosomeB a :Chromosome .
+# Genomic feature that captures the two described genotypes.
+:ExampleSet3Feature1 a :Feature ;
+                     :hasAttribute :ExampleSet3Genotype1 ,
+                                   :ExampleSet3Genotype2 .
 
-:ExampleSet3Feature1 rdf:type :Feature ;
-                     :hasParticipant :ExampleSet3SequencedIndividual1 ;
-                     :hasAttribute :ExampleSet3Variant1 ,
-                                   :ExampleSet3Variant2 .
+# Genotype for the first individual.
+#
+# The genotype's phased variants are linked via &quot;hasFirstPart&quot; and
+# &quot;hasLastPart&quot; only. The object property &quot;isBefore&quot; could be used
+# to explicitly denote the ordering of the variants, but it would then
+# be necessary to create variant instances per-genotype, since the
+# ordering is not uniform across all genotypes.
+:ExampleSet3Genotype1 a :Genotype ;
+                      :hasParticipant :ExampleSet3SequencedIndividual1 ;
+                      :hasQuality :Heterozygous ;
+                      :hasAttribute :ExampleSet3Phase ;
+                      :hasFirstPart :ExampleSet3Variant1 ;
+                      :hasLastPart :ExampleSet3Variant2 .
 
-:ExampleSet3Feature2 rdf:type :Feature ;
-                     :hasParticipant :ExampleSet3SequencedIndividual2 ;
-                     :hasAttribute :ExampleSet3Variant3 ,
-                                   :ExampleSet3Variant4 .
+# Genotype of the second individual.
+:ExampleSet3Genotype2 a :Genotype ;
+                      :hasParticipant :ExampleSet3SequencedIndividual2 ;
+                      :hasQuality :Homozygous ;
+                      :hasAttribute :ExampleSet3Phase ;
+                      :hasFirstPart :ExampleSet3Variant2 ;
+                      :hasLastPart :ExampleSet3Variant2 .
 
-:ExampleSet3Variant1 a :SequenceVariation ;
-                     :hasQuality :Heterozygous ;
-                     :isLocatedOn :ExampleSet3ChromosomeA ;
+# Having an instance to denote the presence of phase information
+# might appear redundant across data sets. On the other hand, it
+# permits data providers to enrich their own or other providers'
+# data set with additional information (annotations) about used
+# protocols/equipment/tools.
+:ExampleSet3Phase a :GameticPhase .
+
+# For VCF data, the type can also be &quot;ReferenceSequence&quot;, which
+# denotes that the sequence is located on a reference genome. This
+# would be indicated -- in a VCF file -- by a &quot;0&quot; in the GT field
+# (e.g., &quot;0/1&quot; to indicate a genotype whose first allele is on the
+# reference genome and the second allele is an alternative allele).
+:ExampleSet3Variant1 a :SequenceVariant ;
                      :hasValue &quot;A&quot; .
 
-:ExampleSet3Variant2 a :SequenceVariation ;
-                     :hasQuality :Heterozygous ;
-                     :isLocatedOn :ExampleSet3ChromosomeB ;
-                     :hasValue &quot;T&quot; .
-
-:ExampleSet3Variant3 a :SequenceVariation ;
-                     :hasQuality :Homozygous ;
-                     :isLocatedOn :ExampleSet3ChromosomeA ;
-                     :hasValue &quot;T&quot; .
-
-:ExampleSet3Variant4 a :SequenceVariation ;
-                     :hasQuality :Homozygous ;
-                     :isLocatedOn :ExampleSet3ChromosomeB ;
+:ExampleSet3Variant2 a :SequenceVariant ;
                      :hasValue &quot;T&quot; .
 </pre>
 
@@ -808,9 +820,8 @@
   <div><i>Subclass of:</i> <a href="#classFunctionalSpecification">FunctionalSpecification</a></div>
   <div><i>Label:</i> Genotype</div>
   <div><i>Comment:</i> The genotype is the genetic information captured in a particular genome. It can also refer to one or more populations, if statistical distributions are provided that assign genetic codes to groups of individuals.</div>
-  <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Genotype">http://en.wikipedia.org/wiki/Genotype</a></div>
   <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001079">SIO_001079</a></div>
-  <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
+  <div></div>
   </div>
 </p>
 <p>
@@ -932,6 +943,16 @@
   <div><i>Label:</i> Landmark</div>
   <div><i>Comment:</i> A landmark establishes a coordinate system for features. Landmarks can be chromosomes, contigs, scaffolds or other constructs that can harbor <a href="#classFeature">Feature</a> class instances. For expressing ploidy within a data set, please refer to the <a href="#classChromosome">Chromosome</a> class.</div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
+  </div>
+</p>
+<p>
+  <h5 id="classLikelihood">Class "Likelihood"</h5>
+  <div style="margin-left: 16px; margin-bottom: 16px">
+  <div><i>Subclass of:</i> <a href="#classQuantity">Quantity</a></div>
+  <div><i>Label:</i> Likelihood</div>
+  <div><i>Comment:</i> Likelihood is the hypothetical probability of the occurrence of a certain event.</div>
+  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001243">SIO_001243</a></div>
+  <div><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
 <p>
