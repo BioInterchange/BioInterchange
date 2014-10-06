@@ -649,6 +649,10 @@ If you encounter problems with gem dependencies, then you can try to explictly u
     bundle exec gem1.9 build biointerchange.gemspec
     sudo bundle exec gem1.9 install biointerchange-`cat VERSION`.gem
 
+Alternative build script, `make.sh`, which installs the gem without RDocs and ri pages (quicker when testing):
+
+    ./make.sh
+
 ### Unit Testing
 
 BioInterchange uses unit testing using [RSpec](http://rspec.info), where the unit tests are located in the `spec` directory.
