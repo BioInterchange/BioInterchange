@@ -686,6 +686,7 @@ protected
   # +set_uri+:: the feature set URI to which the structured attribute belongs to
   # +pragma+:: a map that encapsulates the structured attribute data
   def serialize_structured_attribute(set_uri, pragma)
+    # TODO Triple from set_uri to attribute_uri missing; should be isParticipantIn
     attribute_uri = RDF::URI.new("#{set_uri.to_s}/structured_attribute/#{pragma.object_id}")
     attributes = nil
     class_type = nil
@@ -714,9 +715,9 @@ protected
       elsif attributes['Data_type'] == 'DNA_microarray' then
         class_type = @base.DNAMicroarray
       elsif attributes['Data_type'] == 'DNA_sequence' then
-        class_type = @base.DNASequence
+        class_type = @base.DNASequencing
       elsif attributes['Data_type'] == 'RNA_sequence' then
-        class_type = @base.RNASequence
+        class_type = @base.RNASequencing
       else
         # TODO Error.
       end
