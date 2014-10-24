@@ -458,8 +458,9 @@
 # For VCF data, the type can also be &quot;ReferenceSequence&quot;, which
 # denotes that the sequence is located on a reference genome. This
 # would be indicated -- in a VCF file -- by a &quot;0&quot; in the GT field
-# (e.g., &quot;0/1&quot; to indicate a genotype whose first allele is on the
-# reference genome and the second allele is an alternative allele).
+# (e.g., &quot;0|1&quot; (phased) or &quot;0/1&quot; (unphased) to indicate a genotype
+# whose first allele is on the reference genome and the second allele
+# is an alternative allele).
 :ExampleSet3ReferenceA_AT a :ReferenceSequence ;
                           :hasValue &quot;A&quot; .
 
