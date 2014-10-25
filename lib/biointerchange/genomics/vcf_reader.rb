@@ -10,7 +10,7 @@ class VCFReader < GFF3Reader
     VCFReader,
     [ 'name', 'name_uri', 'date', 'batch_size' ],
     true,
-    'Variant Call Format (VCF) version 4.1 reader',
+    'Variant Call Format (VCF) version 4.1/4.2 reader',
     [
       [ 'date <date>', 'date when the GVF file was created (optional)' ],
       [ 'name <name>', 'name of the GVF file creator (optional)' ],

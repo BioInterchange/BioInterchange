@@ -83,7 +83,7 @@ protected
 
     create_triple(set_uri, RDF.type, @base.File)
     model.pragmas.each { |pragma_name|
-      serialize_pragma(set_uri, model.pragma(pragma_name))
+      serialize_pragma(set_uri, pragma_name, model.pragma(pragma_name))
     }
     model.contents.each { |feature|
       if feature.instance_of?(BioInterchange::Genomics::GFF3FeatureSequence) then
@@ -98,8 +98,9 @@ protected
   # Serializes pragmas for a given feature set URI.
   #
   # +set_uri+:: the feature set URI to which the pragmas belong to
+  # +name+:: name of the pragma statement
   # +pragma+:: an object representing a pragma statement
-  def serialize_pragma(set_uri, pragma)
+  def serialize_pragma(set_uri, name, pragma)
     if pragma.kind_of?(Hash) then
       if (pragma.has_key?('attribute-method') or pragma.has_key?('data-source') or pragma.has_key?('score-method') or pragma.has_key?('source-method') or pragma.has_key?('technology-platform')) then
         serialize_structured_attribute(set_uri, pragma)
@@ -119,6 +120,10 @@ protected
         }
       elsif pragma.has_key?('species') then
         create_triple(set_uri, @base.is_about, RDF::URI.new(pragma['species']))
+      # VCF section:
+      elsif name == 'FILTER' then
+        pragma_uri = serialize_vcf_pragma(set_uri, "filter/#{pragma['ID']}", @base.VariantCalling, { 'ID' => @base.Identifier }, pragma)
+        create_triple(set_uri, @base.is_participant_in, pragma_uri)
       end
     else
       # TODO
@@ -461,8 +466,8 @@ protected
         create_triple(feature_uri, @base.has_attribute, attribute_uri)
         create_triple(attribute_uri, RDF.type, @base.InformationContentEntity)
         create_triple(attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri}/tag/#{tag}"))
-        create_triple("#{attribute_uri}/tag/#{tag}", RDF.type, @base.Label)
-        create_triple("#{attribute_uri}/tag/#{tag}", @base.has_value, tag)
+        create_triple(RDF::URI.new("#{attribute_uri}/tag/#{tag}"), RDF.type, @base.Label)
+        create_triple(RDF::URI.new("#{attribute_uri}/tag/#{tag}"), @base.has_value, tag)
       else
         # TODO Report unknown upper case letters here? That would be a spec. validation...
         #      Well, or it would show that this implementation is incomplete. Could be either.
@@ -475,8 +480,8 @@ protected
           # TODO Figure out why the following line was there. Seems wrong. 
           #create_triple(attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri}/tag/#{tag}"))
           create_triple(attribute_uri, @base.has_value, value)
-          create_triple("#{attribute_uri}/tag/#{tag}", RDF.type, @base.Label)
-          create_triple("#{attribute_uri}/tag/#{tag}", @base.has_value, tag)
+          create_triple(RDF::URI.new("#{attribute_uri}/tag/#{tag}"), RDF.type, @base.Label)
+          create_triple(RDF::URI.new("#{attribute_uri}/tag/#{tag}"), @base.has_value, tag)
         }
       end
     }
@@ -493,11 +498,13 @@ protected
   # +attribtues+:: a map of tag/value pairs associated with the feature
   def serialize_vcf_sample(feature_uri, sample, key, values, attributes)
     if key == 'DP' then
+      # Depth across samples. An integer.
       values = values.split(',')
       values.each_index { |index|
         serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index].to_i, index, values.size > 1, @base.Number_ofReads, RDF::XSD.integer)
       }
     elsif key == 'GT' then
+      # Genotype
       list_uri = "#{feature_uri}/attribute/#{key}"
       serialize_attribute_with_label(feature_uri, list_uri, @base.Genotype, key)
       phased = values.index('/') == nil
@@ -523,12 +530,14 @@ protected
       }
       serialize_list_array(list_uri, value_uris)
     elsif key == 'FT' then
+      # Filter: passed does nothing; applied filter uses isRefutedBy.
       # TODO How to code using GFVO?
       values = values.split(';')
       values.each_index { |index|
         serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'GL' then
+      # Genotype likelihoods.
       list_uri = "#{feature_uri}/attribute/#{key}"
       serialize_attribute_with_label(feature_uri, list_uri, @base.Score, key)
       values = values.split(',')
@@ -538,6 +547,7 @@ protected
       }
       serialize_list_array(list_uri, value_uris)
     elsif key == 'GLE' then
+      # Genotype likelihoods of heterogenous ploidy.
       # Example: 0:-75.22,1:-223.42,0/0:-323.03,1/0:-99.29,1/1:-802.53
       values = values.split(',')
       values.each_index { |index|
@@ -546,41 +556,49 @@ protected
         serialize_vcf_sample_attribute(feature_uri, sample, key, true, genotype, index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'PL' then
+      # Phred scaled genotype likelihoods.
       values = values.split(',')
       values.each_index { |index|
         serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'GP' then
+      # Phred scaled genotype posterior probabilities.
       values = values.split(',')
       values.each_index { |index|
         serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'GQ' then
+      # Conditional genotype quality.
       values = values.split(',')
       values.each_index { |index|
         serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'HQ' then
+      # Haplotype qualities -- presumably Phred scaled.
       values = values.split(',')
       values.each_index { |index|
         serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'PS' then
+      # Phase set. It's complicated. See the VCF specification for details.
       values = values.split(',')
       values.each_index { |index|
         serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'PQ' then
+      # Phasing quality in Phred scale.
       values = values.split(',')
       values.each_index { |index|
         serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'EC' then
+      # Expected alternate allele counts.
       values = values.split(',')
       values.each_index { |index|
         serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
       }
     elsif key == 'MQ' then
+      # RMS mapping quality. An integer.
       values = values.split(',')
       values.each_index { |index|
         serialize_vcf_sample_attribute(feature_uri, sample, key, true, values[index], index, values.size > 1, @base.InformationContentEntity)
@@ -651,6 +669,32 @@ protected
     create_triple(object_uri, @base.has_attribute, RDF::URI.new("#{object_uri}/label"))
     create_triple("#{object_uri}/label", RDF.type, @base.Label)
     create_triple("#{object_uri}/label", @base.has_value, label)
+  end
+
+  # Serializes VCF meta-data (pragma equivalent) key/value pairs. Used by serialize_pragma.
+  #
+  # Returns URI of the serialized meta-data.
+  #
+  # +set_uri+:: URI of the set that the meta-data belongs to
+  # +uri_suffix+:: suffix that is appended to set_uri, which uniquely defines the meta-data (within the set_uri)
+  # +meta_type+:: type of the meta-data
+  # +key_type_mappings+:: mappings of keys to known types, everything else is considered an Object
+  # +attributes+:: key/value pairs that are the actual meta-data being described
+  def serialize_vcf_pragma(set_uri, uri_suffix, meta_type, key_type_mappings, attributes)
+    pragma_uri = RDF::URI.new("#{set_uri}/#{uri_suffix}")
+    create_triple(pragma_uri, RDF.type, meta_type)
+    attributes.each_pair { |key, value|
+      attribute_uri = RDF::URI.new("#{pragma_uri}/#{key}")
+      create_triple(pragma_uri, @base.has_attribute, attribute_uri)
+      if key_type_mappings.has_key?(key) then
+        create_triple(attribute_uri, RDF.type, key_type_mappings[key])
+        # TODO Check if type is integer/double here, then convert value accordingly.
+      else
+        create_triple(attribute_uri, RDF.type, @base.Object)
+      end
+      create_triple(attribute_uri, @base.has_value, value)
+    }
+    pragma_uri
   end
 
   # Serializes a VCF sample attribute/value pair. Used by serialize_vcf_sample.
@@ -758,6 +802,7 @@ protected
     end
     attributes.keys.each { |tag|
       if tag.match(/^[a-z]/) then
+        tag.strip!
         custom_attribute_uri = RDF::URI.new("#{attribute_uri.to_s}/attribute/#{tag}")
         create_triple(attribute_uri, @base.has_attribute, custom_attribute_uri)
         create_triple(custom_attribute_uri, RDF.type, @base.InformationContentEntity)
@@ -765,8 +810,8 @@ protected
         attributes[tag].each { |value|
           create_triple(custom_attribute_uri, @base.has_value, value)
         }
-        create_triple("#{attribute_uri.to_s}/attribute/#{tag}/name", RDF.type, @base.Name)
-        create_triple("#{attribute_uri.to_s}/attribute/#{tag}/name", @base.has_value, tag)
+        create_triple(RDF::URI.new("#{attribute_uri.to_s}/attribute/#{tag}/name"), RDF.type, @base.Name)
+        create_triple(RDF::URI.new("#{attribute_uri.to_s}/attribute/#{tag}/name"), @base.has_value, tag)
       else
         # TODO
         match_constraints = {}
