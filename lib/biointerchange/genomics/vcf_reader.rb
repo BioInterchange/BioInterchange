@@ -49,15 +49,15 @@ protected
     elsif name == 'center' then
       #
     elsif name == 'contig' then
-      feature_set.set_pragma(name, vcf_mapping(value))
+      self.add_vcf_pragma(feature_set, name, value)
     elsif name == 'fileDate' then
       feature_set.set_pragma(name, { name => Date.parse(value) })
     elsif name == 'fileformat' then
       feature_set.set_pragma(name, { name => value.sub(/^VCFv/, '').to_f })
     elsif name == 'FILTER' then
-      feature_set.set_pragma(name, vcf_mapping(value))
+      self.add_vcf_pragma(feature_set, name, value)
     elsif name == 'FORMAT' then
-      feature_set.set_pragma(name, vcf_mapping(value))
+      self.add_vcf_pragma(feature_set, name, value)
     elsif name == 'geneAnno' then
       #
     elsif name == 'ID' then
@@ -66,8 +66,8 @@ protected
       feature_set.set_pragma(name, vcf_mapping(value))
     elsif name == 'Number' then
       #
-    elsif name == 'PREDIGREE' then
-      #
+    elsif name == 'PEDIGREE' then
+      self.add_vcf_pragma(feature_set, name, value)
     elsif name == 'phasing' then
       #
     elsif name == 'reference' then
@@ -89,6 +89,23 @@ protected
       # Cannot be passed to super class, because GFF3 has inherently different pragma statements.
       feature_set.set_pragma(name, { name => value })
     end
+  end
+
+  # Adds pragma information where the pragma can appear multiple times
+  # in the input (application: VCF). Each pragma information is still a hash,
+  # which is stored in an array.
+  #
+  # +feature_set+:: feature set to which the pragma information is added
+  # +name+:: name of the pragma under which the information is being stored
+  # +value+:: hashmap of the actual pragma information (will be passed through vcf_mapping call)
+  def add_vcf_pragma(feature_set, name, value)
+    values = feature_set.pragma(name)
+    if values then
+      values << vcf_mapping(value)
+    else
+      values = [ vcf_mapping(value) ]
+    end
+    feature_set.set_pragma(name, values)
   end
 
   # Adds a comment to the feature set; ignores the header line that preceds VCF features.

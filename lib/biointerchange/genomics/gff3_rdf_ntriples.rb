@@ -121,9 +121,19 @@ protected
       elsif pragma.has_key?('species') then
         create_triple(set_uri, @base.is_about, RDF::URI.new(pragma['species']))
       # VCF section:
-      elsif name == 'FILTER' then
-        pragma_uri = serialize_vcf_pragma(set_uri, "filter/#{pragma['ID']}", @base.VariantCalling, { 'ID' => @base.Identifier }, pragma)
-        create_triple(set_uri, @base.is_participant_in, pragma_uri)
+      # ...TODO
+      # Everything else:
+      else
+      end
+    elsif pragma.kind_of?(Array) then
+      # VCF section:
+      if name == 'FILTER' then
+        pragma.each { |assignment|
+          pragma_uri = serialize_vcf_pragma(set_uri, "filter/#{assignment['ID']}", @base.VariantCalling, { 'ID' => @base.Identifier }, assignment)
+          create_triple(set_uri, @base.is_participant_in, pragma_uri)
+        }
+      else
+        # TODO
       end
     else
       # TODO
@@ -454,12 +464,18 @@ protected
         serialize_variant_effects(set_uri, feature_uri, list)
       elsif tag == 'Variant_seq' then
         serialize_variant_seqs(set_uri, feature_uri, list)
+      # VCF related attributes:
+      elsif tag == ' alternative_alleles' then
+        # TODO
+      elsif tag == ' filters' then
+        # Example: "Qual;MinAB;MinDP"
       elsif tag == ' samples' then
         list.each_index { |sample|
           list[sample].each_pair { |key, values|
             serialize_vcf_sample(feature_uri, sample, key, values, attributes)
           }
         }
+      # Everything else:
       elsif list == true then
         # Attribute is a flag. Tag itself carries meaning and has no value associated with it.
         attribute_uri = RDF::URI.new("#{feature_uri.to_s}/attribute/#{tag}")
@@ -505,7 +521,7 @@ protected
       }
     elsif key == 'GT' then
       # Genotype
-      list_uri = "#{feature_uri}/attribute/#{key}"
+      list_uri = RDF::URI.new("#{feature_uri}/attribute/#{key}")
       serialize_attribute_with_label(feature_uri, list_uri, @base.Genotype, key)
       phased = values.index('/') == nil
       if phased then
@@ -666,9 +682,10 @@ protected
   def serialize_attribute_with_label(feature_uri, object_uri, object_type, label)
     create_triple(feature_uri, @base.has_attribute, object_uri)
     create_triple(object_uri, RDF.type, object_type)
-    create_triple(object_uri, @base.has_attribute, RDF::URI.new("#{object_uri}/label"))
-    create_triple("#{object_uri}/label", RDF.type, @base.Label)
-    create_triple("#{object_uri}/label", @base.has_value, label)
+    label_uri = RDF::URI.new("#{object_uri}/label")
+    create_triple(object_uri, @base.has_attribute, label_uri)
+    create_triple(label_uri, RDF.type, @base.Label)
+    create_triple(label_uri, @base.has_value, label)
   end
 
   # Serializes VCF meta-data (pragma equivalent) key/value pairs. Used by serialize_pragma.
@@ -717,9 +734,10 @@ protected
     create_triple(value_uri, RDF.type, attribute_type)
     create_triple(value_uri, @base.has_value, value, value_type)
     if has_label then
-      create_triple(value_uri, @base.has_attribute, RDF::URI.new("#{value_uri}/label"))
-      create_triple("#{value_uri}/label", RDF.type, @base.Label)
-      create_triple("#{value_uri}/label", @base.has_value, key)
+      label_uri = RDF::URI.new("#{value_uri}/label")
+      create_triple(value_uri, @base.has_attribute, label_uri)
+      create_triple(label_uri, RDF.type, @base.Label)
+      create_triple(label_uri, @base.has_value, key)
     end
     value_uri
   end
@@ -782,9 +800,10 @@ protected
        class_type == @base.FragmentReadPlatform or
        class_type == @base.PairedEndReadPlatform then
       if attributes.has_key?('Average_coverage') then
-        create_triple(attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri}/averagecoverage"))
-        create_triple("#{attribute_uri}/averagecoverage", RDF.type, @base.AverageCoverage)
-        create_triple("#{attribute_uri}/averagecoverage", @base.has_value, attributes['Average_coverage'][0].to_i)
+        coverage_uri = RDF::URI.new("#{attribute_uri}/averagecoverage")
+        create_triple(attribute_uri, @base.has_attribute, coverage_uri)
+        create_triple(coverage_uri, RDF.type, @base.AverageCoverage)
+        create_triple(coverage_uri, @base.has_value, attributes['Average_coverage'][0].to_i)
       end
       if attributes.has_key?('Platform_class') then
         create_triple(attribute_uri, @base.has_attribute, RDF::URI.new("#{attribute_uri}/platformclass"))
@@ -861,18 +880,21 @@ protected
   # +feature_uri+:: the feature URI to the feature that is annotated with variant data
   # +list+:: list of variant values
   def serialize_variant_seqs(set_uri, feature_uri, list)
+    variant_uri = nil
+
     list.each_index { |index|
       value = list[index]
       variant_uri = RDF::URI.new("#{feature_uri.to_s}/variant/#{index}")
-      serialize_variant_triple(feature_uri, variant_uri, @base.has_attribute, RDF::URI.new("#{variant_uri}/sequence"))
-      create_triple("#{variant_uri}/sequence", @base.has_value, value)
+      sequence_uri = RDF::URI.new("#{variant_uri}/sequence")
+      serialize_variant_triple(feature_uri, variant_uri, @base.has_attribute, sequence_uri)
+      create_triple(sequence_uri, @base.has_value, value)
     }
 
     if list[0].match(/a-zA-Z/) and list[1].match(/a-zA-Z/) then
       if list[0] == list[1] then
-        create_triple("#{variant_uri}/sequence", @base.has_quality, @base.Homozygous)
+        create_triple(variant_uri, @base.has_quality, @base.Homozygous)
       else
-        create_triple("#{variant_uri}/sequence", @base.has_quality, @base.Heterozygous)
+        create_triple(variant_uri, @base.has_quality, @base.Heterozygous)
       end
     end
 
@@ -920,8 +942,9 @@ protected
     create_triple(dbxref_uri, @base.refers_to, BioInterchange::LifeScienceRegistry.send(dbxref_composite.split('_', 2)[0].downcase).sub('$id', accession))
     if dbxref_composite.match(/^.+_.+:.+$/) then
       # Entry with version information.
-      create_triple(dbxref_uri, @base.has_identifier, RDF::URI.new("#{dbxref_uri}/version"))
-      create_triple("#{dbxref_uri}/version", @base.has_value, abbreviation[6..-1])
+      version_uri = RDF::URI.new("#{dbxref_uri}/version")
+      create_triple(dbxref_uri, @base.has_identifier, version_uri)
+      create_triple(version_uri, @base.has_value, abbreviation[6..-1])
     end
 
     #if dbxref_composite.match(/^dbSNP(_\d+)?:rs\d+$/) then
