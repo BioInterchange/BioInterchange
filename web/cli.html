@@ -34,8 +34,6 @@
         <a class="navbar-brand" href="index.html">BioInterchange</a>
         <ul class="nav navbar-nav">
           <li class="active"><a href="cli.html">Shell Tool</a></li>
-          <li><a href="webservices.html">Web-Services</a></li>
-          <li><a href="api.html">API</a></li>
           <li><a href="ontologies.html">Ontologies</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
@@ -57,7 +55,7 @@ gem install biointerchange
           <p>
             Examples:
 <pre>
-biointerchange --input biointerchange.gvf --rdf rdf.biointerchange.gvf --batchsize 100 --file examples/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf
+biointerchange --input biointerchange.gvf --rdf rdf.biointerchange.gfvo --batchsize 100 --file examples/estd176_Banerjee_et_al_2011.2012-11-29.NCBI36.gvf
 biointerchange --input dbcls.catanns.json --rdf rdf.bh12.sio --file examples/pubannotation.10096561.json --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
 biointerchange --input uk.ac.man.pdfx --rdf rdf.bh12.sio --file examples/gb-2007-8-3-R40.xml --annotate_name 'Peter Smith' --annotate_name_id 'peter.smith@example.com'
 biointerchange --input phylotastic.newick --rdf rdf.phylotastic.newick --file examples/tree2.new --annotate_date '1 June 2006'
@@ -72,8 +70,8 @@ biointerchange --input phylotastic.newick --rdf rdf.phylotastic.newick --file ex
             </ul>
             Output formats:
             <ul>
-              <li><code>rdf.biointerchange.gff3</code>: RDFization of <code>biointerchange.gff3</code></li>
-              <li><code>rdf.biointerchange.gvf</code>: RDFization of <code>biointerchange.gvf</code></li>
+              <li><code>rdf.biointerchange.gfvo</code>: RDFization of <code>biointerchange.gff3</code></li>
+              <li><code>rdf.biointerchange.gfvo</code>: RDFization of <code>biointerchange.gvf</code></li>
               <li><code>rdf.bh12.sio</code>: RDFization of <code>dbcls.catanns.json</code> or <code>uk.ac.man.pdfx</code></li>
               <li><code>rdf.phylotastic.newick</code>: RDFization of <code>phylotastic.newick</code></li>
             </ul>
@@ -98,15 +96,6 @@ testrepo&gt; sparql select * where { ?s ?p ?o } .
 testrepo&gt; sparql select * where { ?s &lt;http://www.biointerchange.org/gvf1o#GVF1_0004&gt; ?o } .
 </pre>
           </p>
-          <h4>Data Consistency Verification</h4>
-          <p>
-            Data consistency is verifyable for the output formats <code>rdf.biointerchange.gff3</code> and <code>rdf.biointerchange.gvf</code> using the BioInterchange <a href="ontologies.html">ontologies</a> GFF3O and GVF1O. The following is an example of how <a href="http://jena.apache.org">Jena</a>'s command line tools and the <a href="http://hermit-reasoner.com">HermiT reasoner</a> can be used for conistency verification:
-<pre>
-rdfcat &lt;path-to-gff3o/gvf1o&gt; &lt;yourdata.n3&gt; &gt; merged.xml
-java -d64 -Xmx4G -jar HermiT.jar -k -v merged.xml
-</pre>
-            Another approach is to load the data and its related GFF3O/GVF1O ontology into <a href="http://protege.stanford.edu">Protege</a>, merge them, and then use the "Explain inconsistent ontology" menu item to inspect possible data inconsistencies.
-          </p>
           <h4>Example Data Provenance</h4>
           <p>
             The following list provides information on the origin of the example-data files in the <code>examples</code> directory:
@@ -125,7 +114,7 @@ java -d64 -Xmx4G -jar HermiT.jar -k -v merged.xml
       <hr>
 
       <footer>
-        <p>&copy; <a href="about.html">The BioInterchange Contributors</a> 2012&ndash;2013</p>
+        <p>&copy; <a href="about.html">The BioInterchange Contributors</a> 2012&ndash;2014</p>
       </footer>
 
     </div> <!-- /container -->
