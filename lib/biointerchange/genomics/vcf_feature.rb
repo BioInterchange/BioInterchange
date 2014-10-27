@@ -34,7 +34,7 @@ class VCFFeature < GFF3Feature
     info[' id'] = [ id ] if id
     info[' reference_bases'] = [ reference_bases ]
     info[' alternative_alleles'] = alternative_alleles
-    info[' filters'] = [ filters ]
+    info[' filters'] = filters
     info[' samples'] = samples
 
     super(chromosome, nil, nil, position, position, quality_score, BioInterchange::Genomics::GFF3Feature::POSITIVE, nil, info)

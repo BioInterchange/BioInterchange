@@ -127,10 +127,26 @@ protected
       end
     elsif pragma.kind_of?(Array) then
       # VCF section:
+      basic_vcf_mappings = {
+        'ID' => @base.Identifier,
+        'Description' => @base.Comment,
+        'Number' => @base.InformationContentEntity, # Note: not just an integer; can be also 'A', 'G', and '.'
+        'Type' => @base.InformationContentEntity  # Can be 'Integer', 'Float', 'Character', 'String'
+      }
       if name == 'FILTER' then
         pragma.each { |assignment|
-          pragma_uri = serialize_vcf_pragma(set_uri, "filter/#{assignment['ID']}", @base.VariantCalling, { 'ID' => @base.Identifier }, assignment)
+          pragma_uri = serialize_vcf_pragma(set_uri, "filter/#{assignment['ID']}", @base.VariantCalling, basic_vcf_mappings, assignment)
           create_triple(set_uri, @base.is_participant_in, pragma_uri)
+        }
+      elsif name == 'FORMAT' then
+        pragma.each { |assignment|
+          pragma_uri = serialize_vcf_pragma(set_uri, "format/#{assignment['ID']}", @base.InformationContentEntity, basic_vcf_mappings, assignment)
+          create_triple(set_uri, @base.references, pragma_uri)
+        }
+      elsif name == 'INFO' then
+        pragma.each { |assignment|
+          pragma_uri = serialize_vcf_pragma(set_uri, "info/#{assignment['ID']}", @base.InformationContentEntity, basic_vcf_mappings, assignment)
+          create_triple(set_uri, @base.references, pragma_uri)
         }
       else
         # TODO
@@ -468,7 +484,10 @@ protected
       elsif tag == ' alternative_alleles' then
         # TODO
       elsif tag == ' filters' then
-        # Example: "Qual;MinAB;MinDP"
+        # Example: "Qual;MinAB;MinDP" -- comes here as split list (split by ";")
+        list.each { |id|
+          create_triple(feature_uri, @base.is_refuted_by, RDF::URI.new("#{set_uri}/filter/#{id}"))
+        }
       elsif tag == ' samples' then
         list.each_index { |sample|
           list[sample].each_pair { |key, values|

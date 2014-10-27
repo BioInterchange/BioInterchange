@@ -141,6 +141,9 @@ protected
     # Alternative alleles:
     alt = alt.split(',')
 
+    # Filters:
+    filter = filter.split(';')
+
     # Feature information:
     info = info.split(';')
     info = info.map { |key_value_pair| key, values = key_value_pair.split('=', 2) }
