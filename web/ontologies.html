@@ -60,7 +60,9 @@
           <p>The ontology is available under the <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a> license, and therefore, de-facto within the public domain.</p>
           <p>GFVO can be loaded into <a href="http://protege.stanford.edu">Prot&eacute;g&eacute;</a> or <a href="http://www.topquadrant.com/products/TB_Composer.html">TopBraid Composer</a> via: <a href="http://www.biointerchange.org/gfvo">http://www.biointerchange.org/gfvo</a></p>
           <ol>
+            <li><a href="#bioportal">Overview</a></li>
             <li><a href="#external">External Ontologies and Linked Data</a></li>
+            <li><a href="#mappings">Data Structure Mappings between GFVO and Genomic Files</a></li>
             <li><a href="#examples">Examples</a></li>
             <ol style="list-style-type: lower-alpha;">
               <li><a href="#example1">Example 1: Loci and Basic Genomic Feature Annotation of a Gene and its Transcription Factor Binding Site</a></li>
@@ -68,6 +70,7 @@
               <li><a href="#example3">Example 3: Phased and Unphased Genotype and its Sequence Variants</a></li>
               <li><a href="#example4">Example 4: Encoding of a Phred Score</a></li>
             </ol>
+            <li><a href="#ontologyReference">Ontology Reference</a></li>
           </ol>
           <div class="alert"><p><b>Note: </b> <span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span>and <span style="margin-right: 4px;" class="badge alert-warning">VCF</span> badges indicate a particular class or property definition's origin. The application of the ontology is not restricted to those file formats though.</p></div>
           <p>GFVO is being developed as the joint work of <a href="http://joachimbaran.wordpress.com">Joachim Baran</a> (<i>corresponding author</i>, <i>joachim.baran</i><b>&#64;</b><i>gmail.com</i>), <a href="http://ntnu-no.academia.edu/ErickAntezana">Erick Antezana</a>, <a href="http://utah.academia.edu/BDurgahee">Begum Durgahee</a>, <a href="http://medicine.utah.edu/faculty/mddetail.php?facultyID=u0514925">Karen Eilbeck</a>, <a href="http://leechuck.de">Robert Hoehndorf</a>, and <a href="http://dumontierlab.com">Michel Dumontier</a>.</p>
@@ -77,16 +80,6 @@
           <div class="alert alert-info" style="text-align: center;"><a class="icon-warning-sign"></a><i>&nbsp;Due to technical limitations of BioPortal, GFVO in BioPortal does not import other ontologies nor does it contain SIO class- or property-equivalences.</i><br><br><i>It is necessary to use <a href="http://protege.stanford.edu/">Protege</a> or <a href="http://www.topquadrant.com/tools/ide-topbraid-composer-maestro-edition/">TopBraid Composer</a> for viewing the ontology properly (e.g., to see GFF3/GTF/GVF/VCF specification annotations, Wikipedia linkouts, class-/property-equivalences, etc.).</i><br><br><i>The BioPortal GFVO version is available at: <a href="http://www.biointerchange.org/gfvo_bioportal">http://www.biointerchange.org/gfvo_bioportal</a></i></div>
           </p>
           <object type="text/html" data="http://bioportal.bioontology.org/ontologies/GFVO/?p=classes&amp;conceptid=root" width="1200px" height="900px" style="overflow:auto;border:1px solid #333333"></object>
-          <h3 id="bestpractices">Best Practices</h3>
-          <p>The ontology design adheres to the following best practices:
-            <ol>
-              <li>The class hierarchy, object- and datatype-property hierarchies are modeled to match <a href="http://code.google.com/p/semanticscience/wiki/SIO">Semanticscience Integrated Ontology</a> (SIO) hierarchies.</li>
-              <li>Every class and property has a label (rdfs:label) as well as a description (rdfs:comment). The description may contain an example of how a class/property is being applied.</li>
-              <li>Classes that are directly related to either GFF3, GTF, GVF or VCF specification have a link-out to the specification&apos;s document as provenance indicator (via rdfs:isDefinedBy).</li>
-              <li>Link-outs to Wikipedia are provided for classes whereever possible.</li>
-              <li>Ontology terms are encoded in the URIs using camel case, i.e. letters following a white space in an ontology term are capitalized followed by the removal of the white space.</li>
-            </ol>
-          </p>
           <h3 id="external">External Ontologies and Linked Data</h3>
           <p>GFVO makes use of the <a href="http://www.sequenceontology.org">Sequence Ontology</a> for annotating genomic features and variants as well as the <a href="https://github.com/JervenBolleman/FALDO">Feature Annotation Location Description Ontology</a> (<a href="https://github.com/JervenBolleman/FALDO">FALDO</a>) for describing genomic locations such as genomic features, breakpoints, and coordinate ranges for fuzzy/probabilistic coordinate ranges. We also integrate the <a href="http://variationontology.org">Variation Ontology</a> (<a href="http://variationontology.org">VariO</a>) for describing variants, their effects and consequences.</p>
           <p>Species are represented as linked data by URIs to NCBI's <a href="http://www.ncbi.nlm.nih.gov/taxonomy">species taxonomy</a>. We encourage the use of <a href="http://identifiers.org">identifiers.org</a> URIs for other entities, which will be automatically be supported in the BioInterchange's RDF output with its next release.</p>
