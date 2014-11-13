@@ -31,7 +31,7 @@ describe BioInterchange::Genomics::RDFWriter do
       feature = BioInterchange::Genomics::GFF3Feature.new(
           'GRCh37.1',
           'NCBI',
-          BioInterchange::SOFA.modified_base,
+          BioInterchange::SOFA.modified_DNA_base,
           32890599,
           32890599,
           0.8,
@@ -43,7 +43,7 @@ describe BioInterchange::Genomics::RDFWriter do
       feature = BioInterchange::Genomics::GFF3Feature.new(
           'GRCh37.1',
           'NCBI',
-          BioInterchange::SOFA.modified_base,
+          BioInterchange::SOFA.modified_DNA_base,
           32890599,
           32890599,
           0.8,

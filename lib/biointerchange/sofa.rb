@@ -312,7 +312,7 @@ class SOFA
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000000)
-  def self.SequenceOntology
+  def self.Sequence_Ontology
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000000')
   end
 
@@ -330,7 +330,7 @@ class SOFA
 
   # The many tandem repeats (identical or related) of a short basic repeating unit; many have a base composition or other property different from the genome average that allows them to be separated from the bulk (main band) genomic DNA.
   # (http://purl.obolibrary.org/obo/SO_0000005)
-  def self.satelliteA
+  def self.satellite_DNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000005')
   end
 
@@ -630,13 +630,13 @@ class SOFA
 
   # A region at the 5' end of a mature transcript (preceding the initiation codon) that is not translated into a protein.
   # (http://purl.obolibrary.org/obo/SO_0000204)
-  def self.five_primeR
+  def self.five_prime_UTR
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000204')
   end
 
   # A region at the 3' end of a mature transcript (following the stop codon) that is not translated into a protein.
   # (http://purl.obolibrary.org/obo/SO_0000205)
-  def self.three_primeR
+  def self.three_prime_UTR
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000205')
   end
 
@@ -732,13 +732,13 @@ class SOFA
 
   # A modified nucleotide, i.e. a nucleotide other than A, T, C. G.
   # (http://purl.obolibrary.org/obo/SO_0000305)
-  def self.modifiedA_base
+  def self.modified_DNA_base
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000305')
   end
 
   # A nucleotide modified by methylation.
   # (http://purl.obolibrary.org/obo/SO_0000306)
-  def self.methylatedA_base_feature
+  def self.methylated_DNA_base_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000306')
   end
 
@@ -912,7 +912,7 @@ class SOFA
 
   # An RNA sequence that has catalytic activity with or without an associated ribonucleoprotein.
   # (http://purl.obolibrary.org/obo/SO_0000372)
-  def self.enzymaticA
+  def self.enzymatic_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000372')
   end
 
@@ -936,13 +936,19 @@ class SOFA
 
   # The RNA molecule essential for the catalytic activity of RNase MRP, an enzymatically active ribonucleoprotein with two distinct roles in eukaryotes. In mitochondria it plays a direct role in the initiation of mitochondrial DNA replication. In the nucleus it is involved in precursor rRNA processing, where it cleaves the internal transcribed spacer 1 between 18S and 5.8S rRNAs.
   # (http://purl.obolibrary.org/obo/SO_0000385)
-  def self.RNasePA
+  def self.RNase_MRP_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000385')
+  end
+
+  # The RNA component of Ribonuclease P (RNase P), a ubiquitous endoribonuclease, found in archaea, bacteria and eukarya as well as chloroplasts and mitochondria. Its best characterized activity is the generation of mature 5 prime ends of tRNAs by cleaving the 5 prime leader elements of precursor-tRNAs. Cellular RNase Ps are ribonucleoproteins. RNA from bacterial RNase Ps retains its catalytic activity in the absence of the protein subunit, i.e. it is a ribozyme. Isolated eukaryotic and archaeal RNase P RNA has not been shown to retain its catalytic function, but is still essential for the catalytic activity of the holoenzyme. Although the archaeal and eukaryotic holoenzymes have a much greater protein content than the bacterial ones, the RNA cores from all the three lineages are homologous. Helices corresponding to P1, P2, P3, P4, and P10/11 are common to all cellular RNase P RNAs. Yet, there is considerable sequence variation, particularly among the eukaryotic RNAs.
+  # (http://purl.obolibrary.org/obo/SO_0000386)
+  def self.RNase_P_RNA
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000386')
   end
 
   # The RNA component of telomerase, a reverse transcriptase that synthesizes telomeric DNA.
   # (http://purl.obolibrary.org/obo/SO_0000390)
-  def self.telomeraseA
+  def self.telomerase_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000390')
   end
 
@@ -1008,13 +1014,13 @@ class SOFA
 
   # A family of RNAs are found as part of the enigmatic vault ribonucleoprotein complex. The complex consists of a major vault protein (MVP), two minor vault proteins (VPARP and TEP1), and several small untranslated RNA molecules. It has been suggested that the vault complex is involved in drug resistance.
   # (http://purl.obolibrary.org/obo/SO_0000404)
-  def self.vaultA
+  def self.vault_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000404')
   end
 
   # Y RNAs are components of the Ro ribonucleoprotein particle (Ro RNP), in association with Ro60 and La proteins. The Y RNAs and Ro60 and La proteins are well conserved, but the function of the Ro RNP is not known. In humans the RNA component can be one of four small RNAs: hY1, hY3, hY4 and hY5. These small RNAs are predicted to fold into a conserved secondary structure containing three stem structures. The largest of the four, hY1, contains an additional hairpin.
   # (http://purl.obolibrary.org/obo/SO_0000405)
-  def self.YA
+  def self.Y_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000405')
   end
 
@@ -1170,7 +1176,7 @@ class SOFA
 
   # Group I catalytic introns are large self-splicing ribozymes. They catalyze their own excision from mRNA, tRNA and rRNA precursors in a wide range of organisms. The core secondary structure consists of 9 paired regions (P1-P9). These fold to essentially two domains, the P4-P6 domain (formed from the stacking of P5, P4, P6 and P6a helices) and the P3-P9 domain (formed from the P8, P3, P7 and P9 helices). Group I catalytic introns often have long ORFs inserted in loop regions.
   # (http://purl.obolibrary.org/obo/SO_0000587)
-  def self.groupI_intron
+  def self.group_I_intron
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000587')
   end
 
@@ -1182,20 +1188,26 @@ class SOFA
 
   # The signal recognition particle (SRP) is a universally conserved ribonucleoprotein. It is involved in the co-translational targeting of proteins to membranes. The eukaryotic SRP consists of a 300-nucleotide 7S RNA and six proteins: SRPs 72, 68, 54, 19, 14, and 9. Archaeal SRP consists of a 7S RNA and homologues of the eukaryotic SRP19 and SRP54 proteins. In most eubacteria, the SRP consists of a 4.5S RNA and the Ffh protein (a homologue of the eukaryotic SRP54 protein). Eukaryotic and archaeal 7S RNAs have very similar secondary structures, with eight helical elements. These fold into the Alu and S domains, separated by a long linker region. Eubacterial SRP is generally a simpler structure, with the M domain of Ffh bound to a region of the 4.5S RNA that corresponds to helix 8 of the eukaryotic and archaeal SRP S domain. Some Gram-positive bacteria (e.g. Bacillus subtilis), however, have a larger SRP RNA that also has an Alu domain. The Alu domain is thought to mediate the peptide chain elongation retardation function of the SRP. The universally conserved helix which interacts with the SRP54/Ffh M domain mediates signal sequence recognition. In eukaryotes and archaea, the SRP19-helix 6 complex is thought to be involved in SRP assembly and stabilizes helix 8 for SRP54 binding.
   # (http://purl.obolibrary.org/obo/SO_0000590)
-  def self.SRPA
+  def self.SRP_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000590')
   end
 
   # Most box C/D snoRNAs also contain long (>10 nt) sequences complementary to rRNA. Boxes C and D, as well as boxes C' and D', are usually located in close proximity, and form a structure known as the box C/D motif. This motif is important for snoRNA stability, processing, nucleolar targeting and function. A small number of box C/D snoRNAs are involved in rRNA processing; most, however, are known or predicted to serve as guide RNAs in ribose methylation of rRNA. Targeting involves direct base pairing of the snoRNA at the rRNA site to be modified and selection of a rRNA nucleotide a fixed distance from box D or D'.
   # (http://purl.obolibrary.org/obo/SO_0000593)
-  def self.CD_box_snoRNA
+  def self.C_D_box_snoRNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000593')
   end
 
   # A short 3'-uridylated RNA that can form a duplex (except for its post-transcriptionally added oligo_U tail (SO:0000609)) with a stretch of mature edited mRNA.
   # (http://purl.obolibrary.org/obo/SO_0000602)
-  def self.guideA
+  def self.guide_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000602')
+  end
+
+  # Group II introns are found in rRNA, tRNA and mRNA of organelles in fungi, plants and protists, and also in mRNA in bacteria. They are large self-splicing ribozymes and have 6 structural domains (usually designated dI to dVI). A subset of group II introns also encode essential splicing proteins in intronic ORFs. The length of these introns can therefore be up to 3kb. Splicing occurs in almost identical fashion to nuclear pre-mRNA splicing with two transesterification steps. The 2' hydroxyl of a bulged adenosine in domain VI attacks the 5' splice site, followed by nucleophilic attack on the 3' splice site by the 3' OH of the upstream exon. Protein machinery is required for splicing in vivo, and long range intron-intron and intron-exon interactions are important for splice site positioning. Group II introns are further sub-classified into groups IIA and IIB which differ in splice site consensus, distance of bulged A from 3' splice site, some tertiary interactions, and intronic ORF phylogeny.
+  # (http://purl.obolibrary.org/obo/SO_0000603)
+  def self.group_II_intron
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000603')
   end
 
   # A region containing or overlapping no genes that is bounded on either side by a gene, or bounded by a gene and the end of the chromosome.
@@ -1260,7 +1272,7 @@ class SOFA
 
   # Antisense RNA is RNA that is transcribed from the coding, rather than the template, strand of DNA. It is therefore complementary to mRNA.
   # (http://purl.obolibrary.org/obo/SO_0000644)
-  def self.antisenseA
+  def self.antisense_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000644')
   end
 

@@ -312,7 +312,7 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000000)
-  def self.SequenceOntology
+  def self.Sequence_Ontology
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000000')
   end
 
@@ -342,7 +342,7 @@ class SO
 
   # The many tandem repeats (identical or related) of a short basic repeating unit; many have a base composition or other property different from the genome average that allows them to be separated from the bulk (main band) genomic DNA.
   # (http://purl.obolibrary.org/obo/SO_0000005)
-  def self.satelliteA
+  def self.satellite_DNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000005')
   end
 
@@ -432,31 +432,31 @@ class SO
 
   # An internal RNA loop where one of the strands includes more bases than the corresponding region on the other strand.
   # (http://purl.obolibrary.org/obo/SO_0000021)
-  def self.asymmetricA_internal_loop
+  def self.asymmetric_RNA_internal_loop
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000021')
   end
 
   # A region forming a motif, composed of adenines, where the minor groove edges are inserted into the minor groove of another helix.
   # (http://purl.obolibrary.org/obo/SO_0000022)
-  def self.A_minorA_motif
+  def self.A_minor_RNA_motif
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000022')
   end
 
   # The kink turn (K-turn) is an RNA structural motif that creates a sharp (~120 degree) bend between two continuous helices.
   # (http://purl.obolibrary.org/obo/SO_0000023)
-  def self.K_turnA_motif
+  def self.K_turn_RNA_motif
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000023')
   end
 
   # A loop in ribosomal RNA containing the sites of attack for ricin and sarcin.
   # (http://purl.obolibrary.org/obo/SO_0000024)
-  def self.sarcin_likeA_motif
+  def self.sarcin_like_RNA_motif
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000024')
   end
 
   # An internal RNA loop where the extent of the loop on both stands is the same size.
   # (http://purl.obolibrary.org/obo/SO_0000025)
-  def self.symmetricA_internal_loop
+  def self.symmetric_RNA_internal_loop
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000025')
   end
 
@@ -1082,13 +1082,13 @@ class SO
 
   # A gene that is silenced by DNA modification.
   # (http://purl.obolibrary.org/obo/SO_0000128)
-  def self.gene_silenced_byA_modification
+  def self.gene_silenced_by_DNA_modification
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000128')
   end
 
   # A gene that is silenced by DNA methylation.
   # (http://purl.obolibrary.org/obo/SO_0000129)
-  def self.gene_silenced_byA_methylation
+  def self.gene_silenced_by_DNA_methylation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000129')
   end
 
@@ -1142,7 +1142,7 @@ class SO
 
   # An epigenetically modified gene, rearranged at the DNA level.
   # (http://purl.obolibrary.org/obo/SO_0000138)
-  def self.gene_rearranged_atA_level
+  def self.gene_rearranged_at_DNA_level
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000138')
   end
 
@@ -1328,8 +1328,20 @@ class SO
 
   # A DNA sequence in eukaryotic DNA to which RNA polymerase I binds, to begin transcription.
   # (http://purl.obolibrary.org/obo/SO_0000169)
-  def self.RNApolI_promoter
+  def self.RNApol_I_promoter
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000169')
+  end
+
+  # A DNA sequence in eukaryotic DNA to which RNA polymerase II binds, to begin transcription.
+  # (http://purl.obolibrary.org/obo/SO_0000170)
+  def self.RNApol_II_promoter
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000170')
+  end
+
+  # A DNA sequence in eukaryotic DNA to which RNA polymerase III binds, to begin transcription.
+  # (http://purl.obolibrary.org/obo/SO_0000171)
+  def self.RNApol_III_promoter
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000171')
   end
 
   # Part of a conserved sequence located about 75-bp upstream of the start point of eukaryotic transcription units which may be involved in RNA polymerase binding; consensus=GG(C|T)CAATCT.
@@ -1440,7 +1452,7 @@ class SO
 
   # A retrotransposon without long terminal repeat sequences.
   # (http://purl.obolibrary.org/obo/SO_0000189)
-  def self.nonR_retrotransposon
+  def self.non_LTR_retrotransposon
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000189')
   end
 
@@ -1530,13 +1542,13 @@ class SO
 
   # A region at the 5' end of a mature transcript (preceding the initiation codon) that is not translated into a protein.
   # (http://purl.obolibrary.org/obo/SO_0000204)
-  def self.five_primeR
+  def self.five_prime_UTR
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000204')
   end
 
   # A region at the 3' end of a mature transcript (following the stop codon) that is not translated into a protein.
   # (http://purl.obolibrary.org/obo/SO_0000205)
-  def self.three_primeR
+  def self.three_prime_UTR
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000205')
   end
 
@@ -1752,7 +1764,7 @@ class SO
 
   # A UTR bordered by the terminal and initial codons of two CDSs in a polycistronic transcript. Every UTR is either 5', 3' or internal.
   # (http://purl.obolibrary.org/obo/SO_0000241)
-  def self.internalR
+  def self.internal_UTR
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000241')
   end
 
@@ -1806,7 +1818,7 @@ class SO
 
   # A post_transcriptionally modified base.
   # (http://purl.obolibrary.org/obo/SO_0000250)
-  def self.modifiedA_base_feature
+  def self.modified_RNA_base_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000250')
   end
 
@@ -2010,7 +2022,7 @@ class SO
 
   # The recognition site is bipartite and interrupted.
   # (http://purl.obolibrary.org/obo/SO_0000284)
-  def self.typeI_enzyme_restriction_site
+  def self.type_I_enzyme_restriction_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000284')
   end
 
@@ -2128,15 +2140,21 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000303')
   end
 
+  # The recognition site is either palindromic, partially palindromic or an interrupted palindrome. Cleavage occurs within the recognition site.
+  # (http://purl.obolibrary.org/obo/SO_0000304)
+  def self.type_II_enzyme_restriction_site
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000304')
+  end
+
   # A modified nucleotide, i.e. a nucleotide other than A, T, C. G.
   # (http://purl.obolibrary.org/obo/SO_0000305)
-  def self.modifiedA_base
+  def self.modified_DNA_base
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000305')
   end
 
   # A nucleotide modified by methylation.
   # (http://purl.obolibrary.org/obo/SO_0000306)
-  def self.methylatedA_base_feature
+  def self.methylated_DNA_base_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000306')
   end
 
@@ -2526,7 +2544,7 @@ class SO
 
   # An RNA sequence that has catalytic activity with or without an associated ribonucleoprotein.
   # (http://purl.obolibrary.org/obo/SO_0000372)
-  def self.enzymaticA
+  def self.enzymatic_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000372')
   end
 
@@ -2556,19 +2574,19 @@ class SO
 
   # An enterobacterial RNA that binds the CsrA protein. The CsrB RNAs contain a conserved motif CAGGXXG that is found in up to 18 copies and has been suggested to bind CsrA. The Csr regulatory system has a strong negative regulatory effect on glycogen biosynthesis, glyconeogenesis and glycogen catabolism and a positive regulatory effect on glycolysis. In other bacteria such as Erwinia caratovara the RsmA protein has been shown to regulate the production of virulence determinants, such extracellular enzymes. RsmA binds to RsmB regulatory RNA which is also a member of this family.
   # (http://purl.obolibrary.org/obo/SO_0000377)
-  def self.CsrBRsmBA
+  def self.CsrB_RsmB_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000377')
   end
 
   # DsrA RNA regulates both transcription, by overcoming transcriptional silencing by the nucleoid-associated H-NS protein, and translation, by promoting efficient translation of the stress sigma factor, RpoS. These two activities of DsrA can be separated by mutation: the first of three stem-loops of the 85 nucleotide RNA is necessary for RpoS translation but not for anti-H-NS action, while the second stem-loop is essential for antisilencing and less critical for RpoS translation. The third stem-loop, which behaves as a transcription terminator, can be substituted by the trp transcription terminator without loss of either DsrA function. The sequence of the first stem-loop of DsrA is complementary with the upstream leader portion of RpoS messenger RNA, suggesting that pairing of DsrA with the RpoS message might be important for translational regulation.
   # (http://purl.obolibrary.org/obo/SO_0000378)
-  def self.DsrAA
+  def self.DsrA_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000378')
   end
 
   # A small untranslated RNA involved in expression of the dipeptide and oligopeptide transport systems in Escherichia coli.
   # (http://purl.obolibrary.org/obo/SO_0000379)
-  def self.GcvBA
+  def self.GcvB_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000379')
   end
 
@@ -2580,55 +2598,61 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000381)
-  def self.groupA_intron
+  def self.group_IIA_intron
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000381')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000382)
-  def self.groupB_intron
+  def self.group_IIB_intron
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000382')
   end
 
   # A non-translated 93 nt antisense RNA that binds its target ompF mRNA and regulates ompF expression by inhibiting translation and inducing degradation of the message.
   # (http://purl.obolibrary.org/obo/SO_0000383)
-  def self.MicFA
+  def self.MicF_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000383')
   end
 
   # A small untranslated RNA which is induced in response to oxidative stress in Escherichia coli. Acts as a global regulator to activate or repress the expression of as many as 40 genes, including the fhlA-encoded transcriptional activator and the rpoS-encoded sigma(s) subunit of RNA polymerase. OxyS is bound by the Hfq protein, that increases the OxyS RNA interaction with its target messages.
   # (http://purl.obolibrary.org/obo/SO_0000384)
-  def self.OxySA
+  def self.OxyS_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000384')
   end
 
   # The RNA molecule essential for the catalytic activity of RNase MRP, an enzymatically active ribonucleoprotein with two distinct roles in eukaryotes. In mitochondria it plays a direct role in the initiation of mitochondrial DNA replication. In the nucleus it is involved in precursor rRNA processing, where it cleaves the internal transcribed spacer 1 between 18S and 5.8S rRNAs.
   # (http://purl.obolibrary.org/obo/SO_0000385)
-  def self.RNasePA
+  def self.RNase_MRP_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000385')
+  end
+
+  # The RNA component of Ribonuclease P (RNase P), a ubiquitous endoribonuclease, found in archaea, bacteria and eukarya as well as chloroplasts and mitochondria. Its best characterized activity is the generation of mature 5 prime ends of tRNAs by cleaving the 5 prime leader elements of precursor-tRNAs. Cellular RNase Ps are ribonucleoproteins. RNA from bacterial RNase Ps retains its catalytic activity in the absence of the protein subunit, i.e. it is a ribozyme. Isolated eukaryotic and archaeal RNase P RNA has not been shown to retain its catalytic function, but is still essential for the catalytic activity of the holoenzyme. Although the archaeal and eukaryotic holoenzymes have a much greater protein content than the bacterial ones, the RNA cores from all the three lineages are homologous. Helices corresponding to P1, P2, P3, P4, and P10/11 are common to all cellular RNase P RNAs. Yet, there is considerable sequence variation, particularly among the eukaryotic RNAs.
+  # (http://purl.obolibrary.org/obo/SO_0000386)
+  def self.RNase_P_RNA
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000386')
   end
 
   # Translational regulation of the stationary phase sigma factor RpoS is mediated by the formation of a double-stranded RNA stem-loop structure in the upstream region of the rpoS messenger RNA, occluding the translation initiation site. Clones carrying rprA (RpoS regulator RNA) increased the translation of RpoS. The rprA gene encodes a 106 nucleotide regulatory RNA. As with DsrA Rfam:RF00014, RprA is predicted to form three stem-loops. Thus, at least two small RNAs, DsrA and RprA, participate in the positive regulation of RpoS translation. Unlike DsrA, RprA does not have an extensive region of complementarity to the RpoS leader, leaving its mechanism of action unclear. RprA is non-essential.
   # (http://purl.obolibrary.org/obo/SO_0000387)
-  def self.RprAA
+  def self.RprA_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000387')
   end
 
   # The Rev response element (RRE) is encoded within the HIV-env gene. Rev is an essential regulatory protein of HIV that binds an internal loop of the RRE leading, encouraging further Rev-RRE binding. This RNP complex is critical for mRNA export and hence for expression of the HIV structural proteins.
   # (http://purl.obolibrary.org/obo/SO_0000388)
-  def self.RREA
+  def self.RRE_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000388')
   end
 
   # A 109-nucleotide RNA of E. coli that seems to have a regulatory role on the galactose operon. Changes in Spot 42 levels are implicated in affecting DNA polymerase I levels.
   # (http://purl.obolibrary.org/obo/SO_0000389)
-  def self.spot_42A
+  def self.spot_42_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000389')
   end
 
   # The RNA component of telomerase, a reverse transcriptase that synthesizes telomeric DNA.
   # (http://purl.obolibrary.org/obo/SO_0000390)
-  def self.telomeraseA
+  def self.telomerase_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000390')
   end
 
@@ -2712,13 +2736,13 @@ class SO
 
   # A family of RNAs are found as part of the enigmatic vault ribonucleoprotein complex. The complex consists of a major vault protein (MVP), two minor vault proteins (VPARP and TEP1), and several small untranslated RNA molecules. It has been suggested that the vault complex is involved in drug resistance.
   # (http://purl.obolibrary.org/obo/SO_0000404)
-  def self.vaultA
+  def self.vault_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000404')
   end
 
   # Y RNAs are components of the Ro ribonucleoprotein particle (Ro RNP), in association with Ro60 and La proteins. The Y RNAs and Ro60 and La proteins are well conserved, but the function of the Ro RNP is not known. In humans the RNA component can be one of four small RNAs: hY1, hY3, hY4 and hY5. These small RNAs are predicted to fold into a conserved secondary structure containing three stem structures. The largest of the four, hY1, contains an additional hairpin.
   # (http://purl.obolibrary.org/obo/SO_0000405)
-  def self.YA
+  def self.Y_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000405')
   end
 
@@ -2820,61 +2844,73 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000422)
-  def self.U5R_region
+  def self.U5_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000422')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000423)
-  def self.RR_region
+  def self.R_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000423')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000424)
-  def self.U3R_region
+  def self.U3_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000424')
   end
 
   # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000425)
+  def self.five_prime_LTR
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000425')
+  end
+
+  # -- No comment or description provided. --
+  # (http://purl.obolibrary.org/obo/SO_0000426)
+  def self.three_prime_LTR
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000426')
+  end
+
+  # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000427)
-  def self.R_five_primeR_region
+  def self.R_five_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000427')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000428)
-  def self.U5_five_primeR_region
+  def self.U5_five_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000428')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000429)
-  def self.U3_five_primeR_region
+  def self.U3_five_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000429')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000430)
-  def self.R_three_primeR_region
+  def self.R_three_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000430')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000431)
-  def self.U3_three_primeR_region
+  def self.U3_three_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000431')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000432)
-  def self.U5_three_primeR_region
+  def self.U5_three_prime_LTR_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000432')
   end
 
   # A polymeric tract, such as poly(dA), within a non_LTR_retrotransposon.
   # (http://purl.obolibrary.org/obo/SO_0000433)
-  def self.nonR_retrotransposon_polymeric_tract
+  def self.non_LTR_retrotransposon_polymeric_tract
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000433')
   end
 
@@ -2962,13 +2998,13 @@ class SO
 
   # An intron located in the 5' UTR.
   # (http://purl.obolibrary.org/obo/SO_0000447)
-  def self.five_primeR_intron
+  def self.five_prime_UTR_intron
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000447')
   end
 
   # An intron located in the 3' UTR.
   # (http://purl.obolibrary.org/obo/SO_0000448)
-  def self.three_primeR_intron
+  def self.three_prime_UTR_intron
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000448')
   end
 
@@ -3040,7 +3076,7 @@ class SO
 
   # I am using the term segment instead of gene here to avoid confusion with the region 'gene'.
   # (http://purl.obolibrary.org/obo/SO_0000460)
-  def self.vertebrate_immunoglobulinT_cell_receptor_segment
+  def self.vertebrate_immunoglobulin_T_cell_receptor_segment
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000460')
   end
 
@@ -3172,7 +3208,7 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000482)
-  def self.vertebrate_immunoglobulinT_cell_receptor_gene_cluster
+  def self.vertebrate_immunoglobulin_T_cell_receptor_gene_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000482')
   end
 
@@ -3190,7 +3226,7 @@ class SO
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one DJ-gene, and one J-gene.
   # (http://purl.obolibrary.org/obo/SO_0000485)
-  def self.DJJ_cluster
+  def self.DJ_J_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000485')
   end
 
@@ -3202,31 +3238,31 @@ class SO
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one VDJ-gene, one J-gene and one C-gene.
   # (http://purl.obolibrary.org/obo/SO_0000487)
-  def self.VDJJC_cluster
+  def self.VDJ_J_C_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000487')
   end
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one VDJ-gene and one J-gene.
   # (http://purl.obolibrary.org/obo/SO_0000488)
-  def self.VDJJ_cluster
+  def self.VDJ_J_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000488')
   end
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one VJ-gene and one C-gene.
   # (http://purl.obolibrary.org/obo/SO_0000489)
-  def self.VJC_cluster
+  def self.VJ_C_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000489')
   end
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one VJ-gene, one J-gene and one C-gene.
   # (http://purl.obolibrary.org/obo/SO_0000490)
-  def self.VJJC_cluster
+  def self.VJ_J_C_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000490')
   end
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one VJ-gene and one J-gene.
   # (http://purl.obolibrary.org/obo/SO_0000491)
-  def self.VJJ_cluster
+  def self.VJ_J_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000491')
   end
 
@@ -3238,37 +3274,37 @@ class SO
 
   # 7 nucleotide recombination site like CACAGTG, part of a 3' D-recombination signal sequence of an immunoglobulin/T-cell receptor gene.
   # (http://purl.obolibrary.org/obo/SO_0000493)
-  def self.three_primeD_heptamer
+  def self.three_prime_D_heptamer
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000493')
   end
 
   # A 9 nucleotide recombination site (e.g. ACAAAAACC), part of a 3' D-recombination signal sequence of an immunoglobulin/T-cell receptor gene.
   # (http://purl.obolibrary.org/obo/SO_0000494)
-  def self.three_primeD_nonamer
+  def self.three_prime_D_nonamer
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000494')
   end
 
   # A 12 or 23 nucleotide spacer between the 3'D-HEPTAMER and 3'D-NONAMER of a 3'D-RS.
   # (http://purl.obolibrary.org/obo/SO_0000495)
-  def self.three_primeD_spacer
+  def self.three_prime_D_spacer
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000495')
   end
 
   # 7 nucleotide recombination site (e.g. CACTGTG), part of a 5' D-recombination signal sequence (SO:0000556) of an immunoglobulin/T-cell receptor gene.
   # (http://purl.obolibrary.org/obo/SO_0000496)
-  def self.five_primeD_heptamer
+  def self.five_prime_D_heptamer
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000496')
   end
 
   # 9 nucleotide recombination site (e.g. GGTTTTTGT), part of a five_prime_D-recombination signal sequence (SO:0000556) of an immunoglobulin/T-cell receptor gene.
   # (http://purl.obolibrary.org/obo/SO_0000497)
-  def self.five_primeD_nonamer
+  def self.five_prime_D_nonamer
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000497')
   end
 
   # 12 or 23 nucleotide spacer between the 5' D-heptamer (SO:0000496) and 5' D-nonamer (SO:0000497) of a 5' D-recombination signal sequence (SO:0000556) of an immunoglobulin/T-cell receptor gene.
   # (http://purl.obolibrary.org/obo/SO_0000498)
-  def self.five_primeD_spacer
+  def self.five_prime_D_spacer
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000498')
   end
 
@@ -3286,7 +3322,7 @@ class SO
 
   # A type of non-canonical base-pairing.
   # (http://purl.obolibrary.org/obo/SO_0000501)
-  def self.reverseHoogsteen_base_pair
+  def self.reverse_Hoogsteen_base_pair
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000501')
   end
 
@@ -3304,19 +3340,19 @@ class SO
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one D-gene, one DJ-gene and one C-gene.
   # (http://purl.obolibrary.org/obo/SO_0000504)
-  def self.DJC_cluster
+  def self.D_DJ_C_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000504')
   end
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one D-gene and one DJ-gene.
   # (http://purl.obolibrary.org/obo/SO_0000505)
-  def self.DJ_cluster
+  def self.D_DJ_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000505')
   end
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one D-gene, one DJ-gene, one J-gene and one C-gene.
   # (http://purl.obolibrary.org/obo/SO_0000506)
-  def self.DJJC_cluster
+  def self.D_DJ_J_C_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000506')
   end
 
@@ -3324,6 +3360,18 @@ class SO
   # (http://purl.obolibrary.org/obo/SO_0000507)
   def self.pseudogenic_exon
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000507')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one D-gene, one DJ-gene, and one J-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000508)
+  def self.D_DJ_J_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000508')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in germline configuration including at least one D-gene, one J-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000509)
+  def self.D_J_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000509')
   end
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in partially rearranged genomic DNA including L-part1, V-intron and V-D-exon, with the 5' UTR (SO:0000204) and 3' UTR (SO:0000205).
@@ -3334,7 +3382,7 @@ class SO
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in germline configuration including at least one J-gene and one C-gene.
   # (http://purl.obolibrary.org/obo/SO_0000511)
-  def self.JC_cluster
+  def self.J_C_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000511')
   end
 
@@ -3376,8 +3424,50 @@ class SO
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene and one DJ-gene.
   # (http://purl.obolibrary.org/obo/SO_0000518)
-  def self.VJ_cluster
+  def self.V_DJ_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000518')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one DJ-gene and one J-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000519)
+  def self.V_DJ_J_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000519')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one VDJ-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000520)
+  def self.V_VDJ_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000520')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene and one VDJ-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000521)
+  def self.V_VDJ_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000521')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one VDJ-gene and one J-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000522)
+  def self.V_VDJ_J_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000522')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one VJ-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000523)
+  def self.V_VJ_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000523')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene and one VJ-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000524)
+  def self.V_VJ_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000524')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one VJ-gene and one J-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000525)
+  def self.V_VJ_J_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000525')
   end
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in germline configuration including more than one V-gene.
@@ -3388,20 +3478,56 @@ class SO
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one D-gene, one DJ-gene and one C-gene.
   # (http://purl.obolibrary.org/obo/SO_0000527)
-  def self.VDJC_cluster
+  def self.V_D_DJ_C_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000527')
   end
 
   # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one D-gene, one DJ-gene.
   # (http://purl.obolibrary.org/obo/SO_0000528)
-  def self.VDJ_cluster
+  def self.V_D_DJ_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000528')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one D-gene, one DJ-gene, one J-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000529)
+  def self.V_D_DJ_J_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000529')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one D-gene, one DJ-gene and one J-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000530)
+  def self.V_D_DJ_J_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000530')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in germline configuration including at least one V-gene, one D-gene and one J-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000531)
+  def self.V_D_J_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000531')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in germline configuration including at least one V-gene, one D-gene and one J-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000532)
+  def self.V_D_J_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000532')
   end
 
   # 7 nucleotide recombination site (e.g. CACAGTG), part of V-gene recombination feature of an immunoglobulin/T-cell receptor gene.
   # (http://purl.obolibrary.org/obo/SO_0000533)
   def self.V_heptamer
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000533')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in germline configuration including at least one V-gene and one J-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000534)
+  def self.V_J_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000534')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in germline configuration including at least one V-gene, one J-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000535)
+  def self.V_J_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000535')
   end
 
   # 9 nucleotide recombination site (e.g. ACAAAAACC), part of V-gene recombination feature of an immunoglobulin/T-cell receptor gene.
@@ -3420,6 +3546,30 @@ class SO
   # (http://purl.obolibrary.org/obo/SO_0000538)
   def self.V_gene_recombination_feature
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000538')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one DJ-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000539)
+  def self.DJ_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000539')
+  end
+
+  # Genomic DNA in rearranged configuration including at least one D-J-GENE, one J-GENE and one C-GENE.
+  # (http://purl.obolibrary.org/obo/SO_0000540)
+  def self.DJ_J_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000540')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one VDJ-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000541)
+  def self.VDJ_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000541')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one DJ-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000542)
+  def self.V_DJ_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000542')
   end
 
   # -- No comment or description provided. --
@@ -3478,7 +3628,7 @@ class SO
 
   # A region in the 5' UTR that pairs with the 16S rRNA during formation of the preinitiation complex.
   # (http://purl.obolibrary.org/obo/SO_0000552)
-  def self.ShineDalgarno_sequence
+  def self.Shine_Dalgarno_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000552')
   end
 
@@ -3506,7 +3656,7 @@ class SO
 
   # Recombination signal of an immunoglobulin/T-cell receptor gene, including the 5' D-nonamer (SO:0000497), 5' D-spacer (SO:0000498), and 5' D-heptamer (SO:0000396) in 5' of the D-region of a D-gene, or in 5' of the D-region of DJ-gene.
   # (http://purl.obolibrary.org/obo/SO_0000556)
-  def self.five_primeD_recombination_signal_sequence
+  def self.five_prime_D_recombination_signal_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000556')
   end
 
@@ -3528,6 +3678,12 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000559')
   end
 
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in germline configuration including at least one D-gene and one J-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000560)
+  def self.D_J_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000560')
+  end
+
   # Seven nucleotide recombination site (e.g. CACAGTG), part of V-gene, D-gene or J-gene recombination feature of an immunoglobulin or T-cell receptor gene.
   # (http://purl.obolibrary.org/obo/SO_0000561)
   def self.heptamer_of_recombination_feature_of_vertebrate_immune_system_gene
@@ -3544,6 +3700,24 @@ class SO
   # (http://purl.obolibrary.org/obo/SO_0000563)
   def self.vertebrate_immune_system_gene_recombination_spacer
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000563')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one DJ-gene, one J-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000564)
+  def self.V_DJ_J_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000564')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one VDJ-gene, one J-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000565)
+  def self.V_VDJ_J_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000565')
+  end
+
+  # Genomic DNA of immunoglobulin/T-cell receptor gene in rearranged configuration including at least one V-gene, one VJ-gene, one J-gene and one C-gene.
+  # (http://purl.obolibrary.org/obo/SO_0000566)
+  def self.V_VJ_J_C_cluster
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000566')
   end
 
   # A chromosome may be generated by recombination between two inversions; presumed to have a deficiency or duplication at each end of the inversion.
@@ -3566,7 +3740,7 @@ class SO
 
   # Recombination signal of an immunoglobulin/T-cell receptor gene, including the 3' D-heptamer (SO:0000493), 3' D-spacer, and 3' D-nonamer (SO:0000494) in 3' of the D-region of a D-gene.
   # (http://purl.obolibrary.org/obo/SO_0000570)
-  def self.three_primeD_recombination_signal_sequence
+  def self.three_prime_D_recombination_signal_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000570')
   end
 
@@ -3656,7 +3830,7 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000585)
-  def self.CD_box_snoRNA_encoding
+  def self.C_D_box_snoRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000585')
   end
 
@@ -3668,7 +3842,7 @@ class SO
 
   # Group I catalytic introns are large self-splicing ribozymes. They catalyze their own excision from mRNA, tRNA and rRNA precursors in a wide range of organisms. The core secondary structure consists of 9 paired regions (P1-P9). These fold to essentially two domains, the P4-P6 domain (formed from the stacking of P5, P4, P6 and P6a helices) and the P3-P9 domain (formed from the P8, P3, P7 and P9 helices). Group I catalytic introns often have long ORFs inserted in loop regions.
   # (http://purl.obolibrary.org/obo/SO_0000587)
-  def self.groupI_intron
+  def self.group_I_intron
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000587')
   end
 
@@ -3680,13 +3854,13 @@ class SO
 
   # A primary transcript encoding a signal recognition particle RNA.
   # (http://purl.obolibrary.org/obo/SO_0000589)
-  def self.SRPA_primary_transcript
+  def self.SRP_RNA_primary_transcript
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000589')
   end
 
   # The signal recognition particle (SRP) is a universally conserved ribonucleoprotein. It is involved in the co-translational targeting of proteins to membranes. The eukaryotic SRP consists of a 300-nucleotide 7S RNA and six proteins: SRPs 72, 68, 54, 19, 14, and 9. Archaeal SRP consists of a 7S RNA and homologues of the eukaryotic SRP19 and SRP54 proteins. In most eubacteria, the SRP consists of a 4.5S RNA and the Ffh protein (a homologue of the eukaryotic SRP54 protein). Eukaryotic and archaeal 7S RNAs have very similar secondary structures, with eight helical elements. These fold into the Alu and S domains, separated by a long linker region. Eubacterial SRP is generally a simpler structure, with the M domain of Ffh bound to a region of the 4.5S RNA that corresponds to helix 8 of the eukaryotic and archaeal SRP S domain. Some Gram-positive bacteria (e.g. Bacillus subtilis), however, have a larger SRP RNA that also has an Alu domain. The Alu domain is thought to mediate the peptide chain elongation retardation function of the SRP. The universally conserved helix which interacts with the SRP54/Ffh M domain mediates signal sequence recognition. In eukaryotes and archaea, the SRP19-helix 6 complex is thought to be involved in SRP assembly and stabilizes helix 8 for SRP54 binding.
   # (http://purl.obolibrary.org/obo/SO_0000590)
-  def self.SRPA
+  def self.SRP_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000590')
   end
 
@@ -3704,62 +3878,68 @@ class SO
 
   # Most box C/D snoRNAs also contain long (>10 nt) sequences complementary to rRNA. Boxes C and D, as well as boxes C' and D', are usually located in close proximity, and form a structure known as the box C/D motif. This motif is important for snoRNA stability, processing, nucleolar targeting and function. A small number of box C/D snoRNAs are involved in rRNA processing; most, however, are known or predicted to serve as guide RNAs in ribose methylation of rRNA. Targeting involves direct base pairing of the snoRNA at the rRNA site to be modified and selection of a rRNA nucleotide a fixed distance from box D or D'.
   # (http://purl.obolibrary.org/obo/SO_0000593)
-  def self.CD_box_snoRNA
+  def self.C_D_box_snoRNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000593')
   end
 
   # Members of the box H/ACA family contain an ACA triplet, exactly 3 nt upstream from the 3' end and an H-box in a hinge region that links two structurally similar functional domains of the molecule. Both boxes are important for snoRNA biosynthesis and function. A few box H/ACA snoRNAs are involved in rRNA processing; most others are known or predicted to participate in selection of uridine nucleosides in rRNA to be converted to pseudouridines. Site selection is mediated by direct base pairing of the snoRNA with rRNA through one or both targeting domains.
   # (http://purl.obolibrary.org/obo/SO_0000594)
-  def self.HA_box_snoRNA
+  def self.H_ACA_box_snoRNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000594')
   end
 
   # A primary transcript encoding a small nucleolar RNA of the box C/D family.
   # (http://purl.obolibrary.org/obo/SO_0000595)
-  def self.CD_box_snoRNA_primary_transcript
+  def self.C_D_box_snoRNA_primary_transcript
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000595')
   end
 
   # A primary transcript encoding a small nucleolar RNA of the box H/ACA family.
   # (http://purl.obolibrary.org/obo/SO_0000596)
-  def self.HA_box_snoRNA_primary_transcript
+  def self.H_ACA_box_snoRNA_primary_transcript
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000596')
   end
 
   # The insertion and deletion of uridine (U) residues, usually within coding regions of mRNA transcripts of cryptogenes in the mitochondrial genome of kinetoplastid protozoa.
   # (http://purl.obolibrary.org/obo/SO_0000597)
-  def self.transcript_edited_byU_insertion_deletion
+  def self.transcript_edited_by_U_insertion_deletion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000597')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000598)
-  def self.edited_byC_insertion_and_dinucleotide_insertion
+  def self.edited_by_C_insertion_and_dinucleotide_insertion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000598')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000599)
-  def self.edited_byC_toU_substitution
+  def self.edited_by_C_to_U_substitution
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000599')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000600)
-  def self.edited_byA_toI_substitution
+  def self.edited_by_A_to_I_substitution
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000600')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000601)
-  def self.edited_byG_addition
+  def self.edited_by_G_addition
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000601')
   end
 
   # A short 3'-uridylated RNA that can form a duplex (except for its post-transcriptionally added oligo_U tail (SO:0000609)) with a stretch of mature edited mRNA.
   # (http://purl.obolibrary.org/obo/SO_0000602)
-  def self.guideA
+  def self.guide_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000602')
+  end
+
+  # Group II introns are found in rRNA, tRNA and mRNA of organelles in fungi, plants and protists, and also in mRNA in bacteria. They are large self-splicing ribozymes and have 6 structural domains (usually designated dI to dVI). A subset of group II introns also encode essential splicing proteins in intronic ORFs. The length of these introns can therefore be up to 3kb. Splicing occurs in almost identical fashion to nuclear pre-mRNA splicing with two transesterification steps. The 2' hydroxyl of a bulged adenosine in domain VI attacks the 5' splice site, followed by nucleophilic attack on the 3' splice site by the 3' OH of the upstream exon. Protein machinery is required for splicing in vivo, and long range intron-intron and intron-exon interactions are important for splice site positioning. Group II introns are further sub-classified into groups IIA and IIB which differ in splice site consensus, distance of bulged A from 3' splice site, some tertiary interactions, and intronic ORF phylogeny.
+  # (http://purl.obolibrary.org/obo/SO_0000603)
+  def self.group_II_intron
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000603')
   end
 
   # Edited mRNA sequence mediated by a single guide RNA (SO:0000602).
@@ -3788,13 +3968,13 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000608)
-  def self.HA_box_snoRNA_encoding
+  def self.H_ACA_box_snoRNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000608')
   end
 
   # The string of non-encoded U's at the 3' end of a guide RNA (SO:0000602).
   # (http://purl.obolibrary.org/obo/SO_0000609)
-  def self.oligoU_tail
+  def self.oligo_U_tail
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000609')
   end
 
@@ -3818,7 +3998,7 @@ class SO
 
   # A DNA sequence to which bacterial RNA polymerase binds, to begin transcription.
   # (http://purl.obolibrary.org/obo/SO_0000613)
-  def self.bacterialApol_promoter
+  def self.bacterial_RNApol_promoter
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000613')
   end
 
@@ -3830,7 +4010,7 @@ class SO
 
   # A terminator signal for RNA polymerase III transcription.
   # (http://purl.obolibrary.org/obo/SO_0000615)
-  def self.terminator_of_type_2ApolI_promoter
+  def self.terminator_of_type_2_RNApol_III_promoter
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000615')
   end
 
@@ -3842,13 +4022,13 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000617)
-  def self.RNApolI_promoter_type_1
+  def self.RNApol_III_promoter_type_1
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000617')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000618)
-  def self.RNApolI_promoter_type_2
+  def self.RNApol_III_promoter_type_2
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000618')
   end
 
@@ -3866,7 +4046,7 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000621)
-  def self.RNApolI_promoter_type_3
+  def self.RNApol_III_promoter_type_3
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000621')
   end
 
@@ -3920,7 +4100,7 @@ class SO
 
   # A start codon upstream of the ORF.
   # (http://purl.obolibrary.org/obo/SO_0000630)
-  def self.upstreamG_codon
+  def self.upstream_AUG_codon
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000630')
   end
 
@@ -3950,13 +4130,13 @@ class SO
 
   # A primary transcript that donates the spliced leader to other mRNA.
   # (http://purl.obolibrary.org/obo/SO_0000635)
-  def self.mini_exon_donorA
+  def self.mini_exon_donor_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000635')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000636)
-  def self.spliced_leaderA
+  def self.spliced_leader_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000636')
   end
 
@@ -3992,7 +4172,7 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000642)
-  def self.SRPA_encoding
+  def self.SRP_RNA_encoding
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000642')
   end
 
@@ -4004,7 +4184,7 @@ class SO
 
   # Antisense RNA is RNA that is transcribed from the coding, rather than the template, strand of DNA. It is therefore complementary to mRNA.
   # (http://purl.obolibrary.org/obo/SO_0000644)
-  def self.antisenseA
+  def self.antisense_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000644')
   end
 
@@ -4892,7 +5072,7 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000793)
-  def self.engineeredA
+  def self.engineered_DNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000793')
   end
 
@@ -5156,25 +5336,25 @@ class SO
 
   # A region which is part of a bacterial RNA polymerase promoter.
   # (http://purl.obolibrary.org/obo/SO_0000843)
-  def self.bacterialApol_promoter_region
+  def self.bacterial_RNApol_promoter_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000843')
   end
 
   # A region of sequence which is a promoter for RNA polymerase II.
   # (http://purl.obolibrary.org/obo/SO_0000844)
-  def self.RNApolI_promoter_region
+  def self.RNApol_II_promoter_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000844')
   end
 
   # A region of sequence which is a promoter for RNA polymerase III type 1.
   # (http://purl.obolibrary.org/obo/SO_0000845)
-  def self.RNApolI_promoter_type_1_region
+  def self.RNApol_III_promoter_type_1_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000845')
   end
 
   # A region of sequence which is a promoter for RNA polymerase III type 2.
   # (http://purl.obolibrary.org/obo/SO_0000846)
-  def self.RNApolI_promoter_type_2_region
+  def self.RNApol_III_promoter_type_2_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000846')
   end
 
@@ -5192,13 +5372,13 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000849)
-  def self.three_primeR_component
+  def self.three_prime_LTR_component
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000849')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000850)
-  def self.five_primeR_component
+  def self.five_prime_LTR_component
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000850')
   end
 
@@ -5342,7 +5522,7 @@ class SO
 
   # A transcript that has been edited by A to I substitution.
   # (http://purl.obolibrary.org/obo/SO_0000874)
-  def self.edited_transcript_byA_toI_substitution
+  def self.edited_transcript_by_A_to_I_substitution
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000874')
   end
 
@@ -5462,13 +5642,13 @@ class SO
 
   # An attribute describing an epigenetic process where a gene is inactivated by DNA modifications, resulting in repression of transcription.
   # (http://purl.obolibrary.org/obo/SO_0000894)
-  def self.silenced_byA_modification
+  def self.silenced_by_DNA_modification
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000894')
   end
 
   # An attribute describing an epigenetic process where a gene is inactivated by DNA methylation, resulting in repression of transcription.
   # (http://purl.obolibrary.org/obo/SO_0000895)
-  def self.silenced_byA_methylation
+  def self.silenced_by_DNA_methylation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000895')
   end
 
@@ -5522,7 +5702,7 @@ class SO
 
   # An attribute to describe the sequence of a feature, where the DNA is rearranged.
   # (http://purl.obolibrary.org/obo/SO_0000904)
-  def self.rearranged_atA_level
+  def self.rearranged_at_DNA_level
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000904')
   end
 
@@ -5552,7 +5732,7 @@ class SO
 
   # An attribute to describe a feature that has been predicted using sequence similarity to EST or cDNA data.
   # (http://purl.obolibrary.org/obo/SO_0000909)
-  def self.supported_byT_or_cDNA
+  def self.supported_by_EST_or_cDNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000909')
   end
 
@@ -5600,25 +5780,25 @@ class SO
 
   # An edit to insert a U.
   # (http://purl.obolibrary.org/obo/SO_0000917)
-  def self.insertU
+  def self.insert_U
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000917')
   end
 
   # An edit to delete a uridine.
   # (http://purl.obolibrary.org/obo/SO_0000918)
-  def self.deleteU
+  def self.delete_U
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000918')
   end
 
   # An edit to substitute an I for an A.
   # (http://purl.obolibrary.org/obo/SO_0000919)
-  def self.substituteA_toI
+  def self.substitute_A_to_I
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000919')
   end
 
   # An edit to insert a cytidine.
   # (http://purl.obolibrary.org/obo/SO_0000920)
-  def self.insertC
+  def self.insert_C
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000920')
   end
 
@@ -5630,19 +5810,43 @@ class SO
 
   # An edit to substitute an U for a C.
   # (http://purl.obolibrary.org/obo/SO_0000922)
-  def self.substituteC_toU
+  def self.substitute_C_to_U
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000922')
   end
 
   # An edit to insert a G.
   # (http://purl.obolibrary.org/obo/SO_0000923)
-  def self.insertG
+  def self.insert_G
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000923')
+  end
+
+  # An edit to insert a GC dinucleotide.
+  # (http://purl.obolibrary.org/obo/SO_0000924)
+  def self.insert_GC
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000924')
+  end
+
+  # An edit to insert a GU dinucleotide.
+  # (http://purl.obolibrary.org/obo/SO_0000925)
+  def self.insert_GU
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000925')
+  end
+
+  # An edit to insert a CU dinucleotide.
+  # (http://purl.obolibrary.org/obo/SO_0000926)
+  def self.insert_CU
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000926')
+  end
+
+  # An edit to insert a AU dinucleotide.
+  # (http://purl.obolibrary.org/obo/SO_0000927)
+  def self.insert_AU
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000927')
   end
 
   # An edit to insert a AA dinucleotide.
   # (http://purl.obolibrary.org/obo/SO_0000928)
-  def self.insertA
+  def self.insert_AA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000928')
   end
 
@@ -5654,7 +5858,7 @@ class SO
 
   # A region of guide RNA.
   # (http://purl.obolibrary.org/obo/SO_0000930)
-  def self.guideA_region
+  def self.guide_RNA_region
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000930')
   end
 
@@ -5684,13 +5888,13 @@ class SO
 
   # A CDS that is edited.
   # (http://purl.obolibrary.org/obo/SO_0000935)
-  def self.editedS
+  def self.edited_CDS
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000935')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000936)
-  def self.vertebrate_immunoglobulinT_cell_receptor_rearranged_segment
+  def self.vertebrate_immunoglobulin_T_cell_receptor_rearranged_segment
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000936')
   end
 
@@ -5702,7 +5906,7 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0000938)
-  def self.vertebrate_immunoglobulinT_cell_receptor_rearranged_gene_cluster
+  def self.vertebrate_immunoglobulin_T_cell_receptor_rearranged_gene_cluster
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000938')
   end
 
@@ -5804,37 +6008,37 @@ class SO
 
   # Structural unit composed of a self-replicating, double-stranded DNA molecule.
   # (http://purl.obolibrary.org/obo/SO_0000955)
-  def self.double_strandedA_chromosome
+  def self.double_stranded_DNA_chromosome
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000955')
   end
 
   # Structural unit composed of a self-replicating, single-stranded DNA molecule.
   # (http://purl.obolibrary.org/obo/SO_0000956)
-  def self.single_strandedA_chromosome
+  def self.single_stranded_DNA_chromosome
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000956')
   end
 
   # Structural unit composed of a self-replicating, double-stranded, linear DNA molecule.
   # (http://purl.obolibrary.org/obo/SO_0000957)
-  def self.linear_double_strandedA_chromosome
+  def self.linear_double_stranded_DNA_chromosome
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000957')
   end
 
   # Structural unit composed of a self-replicating, double-stranded, circular DNA molecule.
   # (http://purl.obolibrary.org/obo/SO_0000958)
-  def self.circular_double_strandedA_chromosome
+  def self.circular_double_stranded_DNA_chromosome
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000958')
   end
 
   # Structural unit composed of a self-replicating, single-stranded, linear DNA molecule.
   # (http://purl.obolibrary.org/obo/SO_0000959)
-  def self.linear_single_strandedA_chromosome
+  def self.linear_single_stranded_DNA_chromosome
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000959')
   end
 
   # Structural unit composed of a self-replicating, single-stranded, circular DNA molecule.
   # (http://purl.obolibrary.org/obo/SO_0000960)
-  def self.circular_single_strandedA_chromosome
+  def self.circular_single_stranded_DNA_chromosome
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000960')
   end
 
@@ -5842,6 +6046,42 @@ class SO
   # (http://purl.obolibrary.org/obo/SO_0000961)
   def self.RNA_chromosome
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000961')
+  end
+
+  # Structural unit composed of a self-replicating, single-stranded RNA molecule.
+  # (http://purl.obolibrary.org/obo/SO_0000962)
+  def self.single_stranded_RNA_chromosome
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000962')
+  end
+
+  # Structural unit composed of a self-replicating, single-stranded, linear RNA molecule.
+  # (http://purl.obolibrary.org/obo/SO_0000963)
+  def self.linear_single_stranded_RNA_chromosome
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000963')
+  end
+
+  # Structural unit composed of a self-replicating, double-stranded, linear RNA molecule.
+  # (http://purl.obolibrary.org/obo/SO_0000964)
+  def self.linear_double_stranded_RNA_chromosome
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000964')
+  end
+
+  # Structural unit composed of a self-replicating, double-stranded RNA molecule.
+  # (http://purl.obolibrary.org/obo/SO_0000965)
+  def self.double_stranded_RNA_chromosome
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000965')
+  end
+
+  # Structural unit composed of a self-replicating, single-stranded, circular DNA molecule.
+  # (http://purl.obolibrary.org/obo/SO_0000966)
+  def self.circular_single_stranded_RNA_chromosome
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000966')
+  end
+
+  # Structural unit composed of a self-replicating, double-stranded, circular RNA molecule.
+  # (http://purl.obolibrary.org/obo/SO_0000967)
+  def self.circular_double_stranded_RNA_chromosome
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000967')
   end
 
   # This has been obsoleted as it represents a process. replaced_by: GO:0034961.
@@ -5966,13 +6206,19 @@ class SO
 
   # Small non-coding RNA (59-60 nt long) containing 5' and 3' ends that are predicted to come together to form a stem structure. Identified in the social amoeba Dictyostelium discoideum and localized in the cytoplasm.
   # (http://purl.obolibrary.org/obo/SO_0000989)
-  def self.classIA
+  def self.class_II_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000989')
+  end
+
+  # Small non-coding RNA (55-65 nt long) containing highly conserved 5' and 3' ends (16 and 8 nt, respectively) that are predicted to come together to form a stem structure. Identified in the social amoeba Dictyostelium discoideum and localized in the cytoplasm.
+  # (http://purl.obolibrary.org/obo/SO_0000990)
+  def self.class_I_RNA
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000990')
   end
 
   # This term is mapped to MGED. Do not obsolete without consulting MGED ontology.
   # (http://purl.obolibrary.org/obo/SO_0000991)
-  def self.genomicA
+  def self.genomic_DNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0000991')
   end
 
@@ -6044,7 +6290,7 @@ class SO
 
   # A recombination product between the 2 LTR of the same element.
   # (http://purl.obolibrary.org/obo/SO_0001003)
-  def self.soloR
+  def self.solo_LTR
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001003')
   end
 
@@ -6218,13 +6464,13 @@ class SO
 
   # This terms is used by MO.
   # (http://purl.obolibrary.org/obo/SO_0001032)
-  def self.mitochondrialA
+  def self.mitochondrial_DNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001032')
   end
 
   # This term is used by MO.
   # (http://purl.obolibrary.org/obo/SO_0001033)
-  def self.chloroplastA
+  def self.chloroplast_DNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001033')
   end
 
@@ -7036,7 +7282,7 @@ class SO
 
   # A ds_RNA_viral_sequence is a viral_sequence that is the sequence of a virus that exists as double stranded RNA.
   # (http://purl.obolibrary.org/obo/SO_0001169)
-  def self.dsA_viral_sequence
+  def self.ds_RNA_viral_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001169')
   end
 
@@ -7186,31 +7432,37 @@ class SO
 
   # An attribute describing a GNA sequence in the (R)-GNA enantiomer.
   # (http://purl.obolibrary.org/obo/SO_0001194)
-  def self.RA
+  def self.R_GNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001194')
   end
 
   # An oligo composed of (R)-GNA residues.
   # (http://purl.obolibrary.org/obo/SO_0001195)
-  def self.RA_oligo
+  def self.R_GNA_oligo
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001195')
   end
 
   # An attribute describing a GNA sequence in the (S)-GNA enantiomer.
   # (http://purl.obolibrary.org/obo/SO_0001196)
-  def self.SA
+  def self.S_GNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001196')
   end
 
   # An oligo composed of (S)-GNA residues.
   # (http://purl.obolibrary.org/obo/SO_0001197)
-  def self.SA_oligo
+  def self.S_GNA_oligo
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001197')
+  end
+
+  # A ds_DNA_viral_sequence is a viral_sequence that is the sequence of a virus that exists as double stranded DNA.
+  # (http://purl.obolibrary.org/obo/SO_0001198)
+  def self.ds_DNA_viral_sequence
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001198')
   end
 
   # A ss_RNA_viral_sequence is a viral_sequence that is the sequence of a virus that exists as single stranded RNA.
   # (http://purl.obolibrary.org/obo/SO_0001199)
-  def self.ssA_viral_sequence
+  def self.ss_RNA_viral_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001199')
   end
 
@@ -7240,37 +7492,37 @@ class SO
 
   # A region (DNA) to which Bacteriophage RNA polymerase binds, to begin transcription.
   # (http://purl.obolibrary.org/obo/SO_0001204)
-  def self.PhageAPolymerasePromoter
+  def self.Phage_RNA_Polymerase_Promoter
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001204')
   end
 
   # A region (DNA) to which the SP6 RNA polymerase binds, to begin transcription.
   # (http://purl.obolibrary.org/obo/SO_0001205)
-  def self.SP6APolymerasePromoter
+  def self.SP6_RNA_Polymerase_Promoter
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001205')
   end
 
   # A DNA sequence to which the T3 RNA polymerase binds, to begin transcription.
   # (http://purl.obolibrary.org/obo/SO_0001206)
-  def self.T3APolymerasePromoter
+  def self.T3_RNA_Polymerase_Promoter
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001206')
   end
 
   # A region (DNA) to which the T7 RNA polymerase binds, to begin transcription.
   # (http://purl.obolibrary.org/obo/SO_0001207)
-  def self.T7APolymerasePromoter
+  def self.T7_RNA_Polymerase_Promoter
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001207')
   end
 
   # An EST read from the 5' end of a transcript that usually codes for a protein. These regions tend to be conserved across species and do not change much within a gene family.
   # (http://purl.obolibrary.org/obo/SO_0001208)
-  def self.five_primeT
+  def self.five_prime_EST
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001208')
   end
 
   # An EST read from the 3' end of a transcript. They are more likely to fall within non-coding, or untranslated regions(UTRs).
   # (http://purl.obolibrary.org/obo/SO_0001209)
-  def self.three_primeT
+  def self.three_prime_EST
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001209')
   end
 
@@ -7290,6 +7542,12 @@ class SO
   # (http://purl.obolibrary.org/obo/SO_0001212)
   def self.plus_2_translational_frameshift
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001212')
+  end
+
+  # Group III introns are introns found in the mRNA of the plastids of euglenoid protists. They are spliced by a two step transesterification with bulged adenosine as initiating nucleophile.
+  # (http://purl.obolibrary.org/obo/SO_0001213)
+  def self.group_III_intron
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001213')
   end
 
   # The maximal intersection of exon and UTR.
@@ -7330,7 +7588,7 @@ class SO
 
   # An attribute describing an epigenetic process where a gene is inactivated by RNA interference.
   # (http://purl.obolibrary.org/obo/SO_0001220)
-  def self.silenced_byA_interference
+  def self.silenced_by_RNA_interference
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001220')
   end
 
@@ -7354,7 +7612,7 @@ class SO
 
   # A gene that is silenced by RNA interference.
   # (http://purl.obolibrary.org/obo/SO_0001224)
-  def self.gene_silenced_byA_interference
+  def self.gene_silenced_by_RNA_interference
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001224')
   end
 
@@ -7438,13 +7696,13 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0001238)
-  def self.majorS
+  def self.major_TSS
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001238')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0001239)
-  def self.minorS
+  def self.minor_TSS
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001239')
   end
 
@@ -7576,7 +7834,7 @@ class SO
 
   # A continous experimental result region extending the length of multiple overlapping EST's.
   # (http://purl.obolibrary.org/obo/SO_0001262)
-  def self.overlappingT_set
+  def self.overlapping_EST_set
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001262')
   end
 
@@ -7618,7 +7876,7 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0001269)
-  def self.SRPA_gene
+  def self.SRP_RNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001269')
   end
 
@@ -7678,13 +7936,13 @@ class SO
 
   # 1,2'-O-dimethylinosine is a modified inosine.
   # (http://purl.obolibrary.org/obo/SO_0001279)
-  def self.one_two_primeO_dimethylinosine
+  def self.one_two_prime_O_dimethylinosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001279')
   end
 
   # 2'-O-methylinosine is a modified inosine.
   # (http://purl.obolibrary.org/obo/SO_0001280)
-  def self.two_primeO_methylinosine
+  def self.two_prime_O_methylinosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001280')
   end
 
@@ -7702,7 +7960,7 @@ class SO
 
   # 2'-O-methylcytidine is a modified cytidine.
   # (http://purl.obolibrary.org/obo/SO_0001283)
-  def self.two_primeO_methylcytidine
+  def self.two_prime_O_methylcytidine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001283')
   end
 
@@ -7726,13 +7984,13 @@ class SO
 
   # 5,2'-O-dimethylcytidine is a modified cytidine.
   # (http://purl.obolibrary.org/obo/SO_0001287)
-  def self.five_two_primeO_dimethylcytidine
+  def self.five_two_prime_O_dimethylcytidine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001287')
   end
 
   # N4-acetyl-2'-O-methylcytidine is a modified cytidine.
   # (http://purl.obolibrary.org/obo/SO_0001288)
-  def self.N4_acetyl_2_primeO_methylcytidine
+  def self.N4_acetyl_2_prime_O_methylcytidine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001288')
   end
 
@@ -7750,7 +8008,7 @@ class SO
 
   # N4,2'-O-dimethylcytidine is a modified cytidine.
   # (http://purl.obolibrary.org/obo/SO_0001291)
-  def self.N4_2_primeO_dimethylcytidine
+  def self.N4_2_prime_O_dimethylcytidine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001291')
   end
 
@@ -7762,13 +8020,13 @@ class SO
 
   # 5-formyl-2'-O-methylcytidine is a modified cytidine.
   # (http://purl.obolibrary.org/obo/SO_0001293)
-  def self.five_formyl_two_primeO_methylcytidine
+  def self.five_formyl_two_prime_O_methylcytidine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001293')
   end
 
   # N4_N4_2_prime_O_trimethylcytidine is a modified cytidine.
   # (http://purl.obolibrary.org/obo/SO_0001294)
-  def self.N4N4_2_primeO_trimethylcytidine
+  def self.N4_N4_2_prime_O_trimethylcytidine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001294')
   end
 
@@ -7792,13 +8050,13 @@ class SO
 
   # 2prime_O_methyladenosine is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001298)
-  def self.two_primeO_methyladenosine
+  def self.two_prime_O_methyladenosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001298')
   end
 
   # 2_methylthio_N6_methyladenosine is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001299)
-  def self.two_methylthioN6_methyladenosine
+  def self.two_methylthio_N6_methyladenosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001299')
   end
 
@@ -7810,7 +8068,7 @@ class SO
 
   # 2_methylthio_N6_isopentenyladenosine is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001301)
-  def self.two_methylthioN6_isopentenyladenosine
+  def self.two_methylthio_N6_isopentenyladenosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001301')
   end
 
@@ -7822,7 +8080,7 @@ class SO
 
   # 2_methylthio_N6_cis_hydroxyisopentenyl_adenosine is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001303)
-  def self.two_methylthioN6_cis_hydroxyisopentenyl_adenosine
+  def self.two_methylthio_N6_cis_hydroxyisopentenyl_adenosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001303')
   end
 
@@ -7840,13 +8098,13 @@ class SO
 
   # 2_methylthio_N6_threonyl_carbamoyladenosine is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001306)
-  def self.two_methylthioN6_threonyl_carbamoyladenosine
+  def self.two_methylthio_N6_threonyl_carbamoyladenosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001306')
   end
 
   # N6_methyl_N6_threonylcarbamoyladenosine is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001307)
-  def self.N6_methylN6_threonylcarbamoyladenosine
+  def self.N6_methyl_N6_threonylcarbamoyladenosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001307')
   end
 
@@ -7858,37 +8116,37 @@ class SO
 
   # 2_methylthio_N6_hydroxynorvalyl_carbamoyladenosine is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001309)
-  def self.two_methylthioN6_hydroxynorvalyl_carbamoyladenosine
+  def self.two_methylthio_N6_hydroxynorvalyl_carbamoyladenosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001309')
   end
 
   # 2prime_O_ribosyladenosine_phosphate is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001310)
-  def self.two_primeO_ribosyladenosine_phosphate
+  def self.two_prime_O_ribosyladenosine_phosphate
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001310')
   end
 
   # N6_N6_dimethyladenosine is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001311)
-  def self.N6N6_dimethyladenosine
+  def self.N6_N6_dimethyladenosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001311')
   end
 
   # N6_2prime_O_dimethyladenosine is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001312)
-  def self.N6_2_primeO_dimethyladenosine
+  def self.N6_2_prime_O_dimethyladenosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001312')
   end
 
   # N6_N6_2prime_O_trimethyladenosine is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001313)
-  def self.N6N6_2_primeO_trimethyladenosine
+  def self.N6_N6_2_prime_O_trimethyladenosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001313')
   end
 
   # 1,2'-O-dimethyladenosine is a modified adenosine.
   # (http://purl.obolibrary.org/obo/SO_0001314)
-  def self.one_two_primeO_dimethyladenosine
+  def self.one_two_prime_O_dimethyladenosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001314')
   end
 
@@ -7966,31 +8224,31 @@ class SO
 
   # 2prime_O_methylguanosine is a modified guanosine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001327)
-  def self.two_primeO_methylguanosine
+  def self.two_prime_O_methylguanosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001327')
   end
 
   # N2_N2_dimethylguanosine is a modified guanosine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001328)
-  def self.N2N2_dimethylguanosine
+  def self.N2_N2_dimethylguanosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001328')
   end
 
   # N2_2prime_O_dimethylguanosine is a modified guanosine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001329)
-  def self.N2_2_primeO_dimethylguanosine
+  def self.N2_2_prime_O_dimethylguanosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001329')
   end
 
   # N2_N2_2prime_O_trimethylguanosine is a modified guanosine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001330)
-  def self.N2N2_2_primeO_trimethylguanosine
+  def self.N2_N2_2_prime_O_trimethylguanosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001330')
   end
 
   # 2prime_O_ribosylguanosine_phosphate is a modified guanosine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001331)
-  def self.two_primeO_ribosylguanosine_phosphate
+  def self.two_prime_O_ribosylguanosine_phosphate
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001331')
   end
 
@@ -8038,13 +8296,13 @@ class SO
 
   # N2_N2_7_trimethylguanosine is a modified guanosine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001339)
-  def self.N2N2_7_trimethylguanosine
+  def self.N2_N2_7_trimethylguanosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001339')
   end
 
   # 1_2prime_O_dimethylguanosine is a modified guanosine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001340)
-  def self.one_two_primeO_dimethylguanosine
+  def self.one_two_prime_O_dimethylguanosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001340')
   end
 
@@ -8062,7 +8320,7 @@ class SO
 
   # N2_7_2prirme_O_trimethylguanosine is a modified guanosine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001343)
-  def self.N2_7_2prirmeO_trimethylguanosine
+  def self.N2_7_2prirme_O_trimethylguanosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001343')
   end
 
@@ -8074,13 +8332,13 @@ class SO
 
   # 2prime_O_methyluridine is a modified uridine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001345)
-  def self.two_primeO_methyluridine
+  def self.two_prime_O_methyluridine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001345')
   end
 
   # 5_2_prime_O_dimethyluridine is a modified uridine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001346)
-  def self.five_two_primeO_dimethyluridine
+  def self.five_two_prime_O_dimethyluridine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001346')
   end
 
@@ -8092,7 +8350,7 @@ class SO
 
   # 2prime_O_methylpseudouridine is a modified uridine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001348)
-  def self.two_primeO_methylpseudouridine
+  def self.two_prime_O_methylpseudouridine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001348')
   end
 
@@ -8116,7 +8374,7 @@ class SO
 
   # 2_thio_2prime_O_methyluridine is a modified uridine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001352)
-  def self.two_thio_two_primeO_methyluridine
+  def self.two_thio_two_prime_O_methyluridine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001352')
   end
 
@@ -8170,7 +8428,7 @@ class SO
 
   # Five_methoxycarbonylmethyl_2_prime_O_methyluridine is a modified uridine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001361)
-  def self.five_methoxycarbonylmethyl_two_primeO_methyluridine
+  def self.five_methoxycarbonylmethyl_two_prime_O_methyluridine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001361')
   end
 
@@ -8212,7 +8470,7 @@ class SO
 
   # 5_carbamoylmethyl_2_prime_O_methyluridine is a modified uridine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001368)
-  def self.five_carbamoylmethyl_two_primeO_methyluridine
+  def self.five_carbamoylmethyl_two_prime_O_methyluridine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001368')
   end
 
@@ -8224,7 +8482,7 @@ class SO
 
   # 5_carboxymethylaminomethyl_2_prime_O_methyluridine is a modified uridine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001370)
-  def self.five_carboxymethylaminomethyl_two_primeO_methyluridine
+  def self.five_carboxymethylaminomethyl_two_prime_O_methyluridine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001370')
   end
 
@@ -8254,7 +8512,7 @@ class SO
 
   # 3_2prime_O_dimethyluridine is a modified uridine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001375)
-  def self.three_two_primeO_dimethyluridine
+  def self.three_two_prime_O_dimethyluridine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001375')
   end
 
@@ -8296,7 +8554,7 @@ class SO
 
   # 5_isopentenylaminomethyl_2prime_O_methyluridine is a modified uridine base feature.
   # (http://purl.obolibrary.org/obo/SO_0001382)
-  def self.five_isopentenylaminomethyl_two_primeO_methyluridine
+  def self.five_isopentenylaminomethyl_two_prime_O_methyluridine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001382')
   end
 
@@ -8326,121 +8584,121 @@ class SO
 
   # A post translationally modified alanine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001387)
-  def self.modifiedL_alanine
+  def self.modified_L_alanine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001387')
   end
 
   # A post translationally modified asparagine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001388)
-  def self.modifiedL_asparagine
+  def self.modified_L_asparagine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001388')
   end
 
   # A post translationally modified aspartic acid amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001389)
-  def self.modifiedL_aspartic_acid
+  def self.modified_L_aspartic_acid
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001389')
   end
 
   # A post translationally modified cysteine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001390)
-  def self.modifiedL_cysteine
+  def self.modified_L_cysteine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001390')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0001391)
-  def self.modifiedL_glutamic_acid
+  def self.modified_L_glutamic_acid
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001391')
   end
 
   # A post translationally modified threonine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001392)
-  def self.modifiedL_threonine
+  def self.modified_L_threonine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001392')
   end
 
   # A post translationally modified tryptophan amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001393)
-  def self.modifiedL_tryptophan
+  def self.modified_L_tryptophan
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001393')
   end
 
   # A post translationally modified glutamine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001394)
-  def self.modifiedL_glutamine
+  def self.modified_L_glutamine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001394')
   end
 
   # A post translationally modified methionine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001395)
-  def self.modifiedL_methionine
+  def self.modified_L_methionine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001395')
   end
 
   # A post translationally modified isoleucine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001396)
-  def self.modifiedL_isoleucine
+  def self.modified_L_isoleucine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001396')
   end
 
   # A post translationally modified phenylalanine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001397)
-  def self.modifiedL_phenylalanine
+  def self.modified_L_phenylalanine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001397')
   end
 
   # A post translationally modified histidie amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001398)
-  def self.modifiedL_histidine
+  def self.modified_L_histidine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001398')
   end
 
   # A post translationally modified serine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001399)
-  def self.modifiedL_serine
+  def self.modified_L_serine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001399')
   end
 
   # A post translationally modified lysine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001400)
-  def self.modifiedL_lysine
+  def self.modified_L_lysine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001400')
   end
 
   # A post translationally modified leucine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001401)
-  def self.modifiedL_leucine
+  def self.modified_L_leucine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001401')
   end
 
   # A post translationally modified selenocysteine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001402)
-  def self.modifiedL_selenocysteine
+  def self.modified_L_selenocysteine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001402')
   end
 
   # A post translationally modified valine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001403)
-  def self.modifiedL_valine
+  def self.modified_L_valine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001403')
   end
 
   # A post translationally modified proline amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001404)
-  def self.modifiedL_proline
+  def self.modified_L_proline
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001404')
   end
 
   # A post translationally modified tyrosine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001405)
-  def self.modifiedL_tyrosine
+  def self.modified_L_tyrosine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001405')
   end
 
   # A post translationally modified arginine amino acid feature.
   # (http://purl.obolibrary.org/obo/SO_0001406)
-  def self.modifiedL_arginine
+  def self.modified_L_arginine
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001406')
   end
 
@@ -8596,7 +8854,7 @@ class SO
 
   # A three prime RACE (Rapid Amplification of cDNA Ends) clone is a cDNA clone copied from the 3' end of an mRNA (using a poly-dT primer to capture the polyA tail and a gene-specific or randomly primed 5' primer), and spliced into a vector for propagation in a suitable host.
   # (http://purl.obolibrary.org/obo/SO_0001433)
-  def self.three_primeE_clone
+  def self.three_prime_RACE_clone
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001433')
   end
 
@@ -8786,10 +9044,34 @@ class SO
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001464')
   end
 
+  # A UST located in the 3'UTR of a protein-coding transcript.
+  # (http://purl.obolibrary.org/obo/SO_0001465)
+  def self.three_prime_UST
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001465')
+  end
+
+  # An UST located in the 5'UTR of a protein-coding transcript.
+  # (http://purl.obolibrary.org/obo/SO_0001466)
+  def self.five_prime_UST
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001466')
+  end
+
   # A tag produced from a single sequencing read from a RACE product; typically a few hundred base pairs long.
   # (http://purl.obolibrary.org/obo/SO_0001467)
   def self.RST
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001467')
+  end
+
+  # A tag produced from a single sequencing read from a 3'-RACE product; typically a few hundred base pairs long.
+  # (http://purl.obolibrary.org/obo/SO_0001468)
+  def self.three_prime_RST
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001468')
+  end
+
+  # A tag produced from a single sequencing read from a 5'-RACE product; typically a few hundred base pairs long.
+  # (http://purl.obolibrary.org/obo/SO_0001469)
+  def self.five_prime_RST
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001469')
   end
 
   # A match against an UST sequence.
@@ -8932,8 +9214,20 @@ class SO
 
   # A centromere DNA Element I (CDEI) is a conserved region, part of the centromere, consisting of a consensus region composed of 8-11bp which enables binding by the centromere binding factor 1(Cbf1p).
   # (http://purl.obolibrary.org/obo/SO_0001493)
-  def self.centromereAElementI
+  def self.centromere_DNA_Element_I
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001493')
+  end
+
+  # A centromere DNA Element II (CDEII) is part a conserved region of the centromere, consisting of a consensus region that is AT-rich and ~ 75-100 bp in length.
+  # (http://purl.obolibrary.org/obo/SO_0001494)
+  def self.centromere_DNA_Element_II
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001494')
+  end
+
+  # A centromere DNA Element I (CDEI) is a conserved region, part of the centromere, consisting of a consensus region that consists of a 25-bp which enables binding by the centromere DNA binding factor 3 (CBF3) complex.
+  # (http://purl.obolibrary.org/obo/SO_0001495)
+  def self.centromere_DNA_Element_III
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001495')
   end
 
   # The telomeric repeat is a repeat region, part of the chromosome, which in yeast, is a G-rich terminal sequence of the form (TG(1-3))n or more precisely ((TG)(1-6)TG(2-3))n.
@@ -9604,37 +9898,37 @@ class SO
 
   # A sequence variant with in the CDS that causes elongation of the resulting polypeptide sequence at the C terminus.
   # (http://purl.obolibrary.org/obo/SO_0001610)
-  def self.elongated_polypeptideC_terminal
+  def self.elongated_polypeptide_C_terminal
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001610')
   end
 
   # A sequence variant with in the CDS that causes elongation of the resulting polypeptide sequence at the N terminus.
   # (http://purl.obolibrary.org/obo/SO_0001611)
-  def self.elongated_polypeptideN_terminal
+  def self.elongated_polypeptide_N_terminal
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001611')
   end
 
   # A sequence variant with in the CDS that causes in frame elongation of the resulting polypeptide sequence at the C terminus.
   # (http://purl.obolibrary.org/obo/SO_0001612)
-  def self.elongated_in_frame_polypeptideC_terminal
+  def self.elongated_in_frame_polypeptide_C_terminal
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001612')
   end
 
   # A sequence variant with in the CDS that causes out of frame elongation of the resulting polypeptide sequence at the C terminus.
   # (http://purl.obolibrary.org/obo/SO_0001613)
-  def self.elongated_out_of_frame_polypeptideC_terminal
+  def self.elongated_out_of_frame_polypeptide_C_terminal
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001613')
   end
 
   # A sequence variant with in the CDS that causes in frame elongation of the resulting polypeptide sequence at the N terminus.
   # (http://purl.obolibrary.org/obo/SO_0001614)
-  def self.elongated_in_frame_polypeptideN_terminal_elongation
+  def self.elongated_in_frame_polypeptide_N_terminal_elongation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001614')
   end
 
   # A sequence variant with in the CDS that causes out of frame elongation of the resulting polypeptide sequence at the N terminus.
   # (http://purl.obolibrary.org/obo/SO_0001615)
-  def self.elongated_out_of_frame_polypeptideN_terminal
+  def self.elongated_out_of_frame_polypeptide_N_terminal
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001615')
   end
 
@@ -9682,13 +9976,13 @@ class SO
 
   # A UTR variant of the 5' UTR.
   # (http://purl.obolibrary.org/obo/SO_0001623)
-  def self.a_5_primeR_variant
+  def self.a_5_prime_UTR_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001623')
   end
 
   # A UTR variant of the 3' UTR.
   # (http://purl.obolibrary.org/obo/SO_0001624)
-  def self.a_3_primeR_variant
+  def self.a_3_prime_UTR_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001624')
   end
 
@@ -9772,8 +10066,14 @@ class SO
 
   # A gene that encodes an RNase P RNA.
   # (http://purl.obolibrary.org/obo/SO_0001639)
-  def self.RNasePA_gene
+  def self.RNase_P_RNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001639')
+  end
+
+  # A gene that encodes a RNase_MRP_RNA.
+  # (http://purl.obolibrary.org/obo/SO_0001640)
+  def self.RNase_MRP_RNA_gene
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001640')
   end
 
   # A gene that encodes large intervening non-coding RNA.
@@ -9790,7 +10090,7 @@ class SO
 
   # A telomerase RNA gene is a non coding RNA gene the RNA product of which is a component of telomerase.
   # (http://purl.obolibrary.org/obo/SO_0001643)
-  def self.telomeraseA_gene
+  def self.telomerase_RNA_gene
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001643')
   end
 
@@ -9874,8 +10174,14 @@ class SO
 
   # A TATA box core promoter of a gene transcribed by RNA polymerase II.
   # (http://purl.obolibrary.org/obo/SO_0001661)
-  def self.RNA_polymeraseIA_box
+  def self.RNA_polymerase_II_TATA_box
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001661')
+  end
+
+  # A TATA box core promoter of a gene transcribed by RNA polymerase III.
+  # (http://purl.obolibrary.org/obo/SO_0001662)
+  def self.RNA_polymerase_III_TATA_box
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001662')
   end
 
   # A core TRNA polymerase II promoter element with consensus (G/A)T(T/G/A)(T/A)(G/T)(T/G)(T/G).
@@ -9892,8 +10198,20 @@ class SO
 
   # A sub element of the DCE core promoter element, with consensus sequence CTTC.
   # (http://purl.obolibrary.org/obo/SO_0001665)
-  def self.DCEI
+  def self.DCE_SI
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001665')
+  end
+
+  # A sub element of the DCE core promoter element with consensus sequence CTGT.
+  # (http://purl.obolibrary.org/obo/SO_0001666)
+  def self.DCE_SII
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001666')
+  end
+
+  # A sub element of the DCE core promoter element with consensus sequence AGC.
+  # (http://purl.obolibrary.org/obo/SO_0001667)
+  def self.DCE_SIII
+    return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001667')
   end
 
   # DNA segment that ranges from about -250 to -40 relative to +1 of RNA transcription start site, where sequence specific DNA-binding transcription factors binds, such as Sp1, CTF (CCAAT-binding transcription factor), and CBF (CCAAT-box binding factor).
@@ -9904,7 +10222,7 @@ class SO
 
   # The minimal portion of the promoter required to properly initiate transcription in RNA polymerase II transcribed genes.
   # (http://purl.obolibrary.org/obo/SO_0001669)
-  def self.RNApolI_core_promoter
+  def self.RNApol_II_core_promoter
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001669')
   end
 
@@ -9916,13 +10234,13 @@ class SO
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0001671)
-  def self.bacterialApol_promoter_sigma_70
+  def self.bacterial_RNApol_promoter_sigma_70
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001671')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_0001672)
-  def self.bacterialApol_promoter_sigma54
+  def self.bacterial_RNApol_promoter_sigma54
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001672')
   end
 
@@ -10330,7 +10648,7 @@ class SO
 
   # A gene with a translational start codon of CUG.
   # (http://purl.obolibrary.org/obo/SO_0001740)
-  def self.gene_with_start_codonG
+  def self.gene_with_start_codon_CUG
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001740')
   end
 
@@ -10852,7 +11170,7 @@ class SO
 
   # A sequencer read of a genomic DNA substrate.
   # (http://purl.obolibrary.org/obo/SO_0001828)
-  def self.genomicA_read
+  def self.genomic_DNA_read
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001828')
   end
 
@@ -10972,13 +11290,13 @@ class SO
 
   # A core promoter element that has the consensus sequence CAGTCACA (or its inverted form TGTGACTG), and plays the role of a TATA box in promoters that do not contain a canonical TATA sequence.
   # (http://purl.obolibrary.org/obo/SO_0001848)
-  def self.homolD_box
+  def self.homol_D_box
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001848')
   end
 
   # A core promoter element that has the consensus sequence ACCCTACCCT (or its inverted form AGGGTAGGGT), and is found near the homol D box in some promoters that use a homol D box instead of a canonical TATA sequence.
   # (http://purl.obolibrary.org/obo/SO_0001849)
-  def self.homolE_box
+  def self.homol_E_box
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001849')
   end
 
@@ -10990,13 +11308,13 @@ class SO
 
   # A GATA promoter element with consensus sequence WGATAA, found in promoters of genes repressed in the presence of iron.
   # (http://purl.obolibrary.org/obo/SO_0001851)
-  def self.iron_repressedA_element
+  def self.iron_repressed_GATA_element
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001851')
   end
 
   # A promoter element with consensus sequence ACAAT, found in promoters of mating type M-specific genes in fission yeast and bound by the transcription factor Mat1-Mc.
   # (http://purl.obolibrary.org/obo/SO_0001852)
-  def self.mating_typeM_box
+  def self.mating_type_M_box
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001852')
   end
 
@@ -11026,7 +11344,7 @@ class SO
 
   # A promoter element with consensus sequence CCAGCC, bound by the fungal transcription factor Ace2.
   # (http://purl.obolibrary.org/obo/SO_0001857)
-  def self.Ace2S
+  def self.Ace2_UAS
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001857')
   end
 
@@ -11146,7 +11464,7 @@ class SO
 
   # A non-coding RNA over 200nucleotides in length.
   # (http://purl.obolibrary.org/obo/SO_0001877)
-  def self.lncA
+  def self.lnc_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001877')
   end
 
@@ -11260,7 +11578,7 @@ class SO
 
   # A CDS that is part of a transposable element.
   # (http://purl.obolibrary.org/obo/SO_0001896)
-  def self.transposable_elementS
+  def self.transposable_element_CDS
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001896')
   end
 
@@ -11362,7 +11680,7 @@ class SO
 
   # A bacterial promoter with sigma ecf factor binding dependency. This is a type of bacterial promoters that requires a sigma ECF factor to bind to identified -10 and -35 sequence regions in order to mediate binding of the RNA polymerase to the promoter region as part of transcription initiation.
   # (http://purl.obolibrary.org/obo/SO_0001913)
-  def self.bacterialApol_promoter_sigma_ecf
+  def self.bacterial_RNApol_promoter_sigma_ecf
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001913')
   end
 
@@ -11440,7 +11758,7 @@ class SO
 
   # A non-coding RNA transcript, derived from the transcription of the telomere. These  transcripts are antisense of ARRET transcripts.
   # (http://purl.obolibrary.org/obo/SO_0001926)
-  def self.antiT
+  def self.anti_ARRET
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001926')
   end
 
@@ -11458,13 +11776,13 @@ class SO
 
   # A sequencer read of a mitochondrial DNA sample.
   # (http://purl.obolibrary.org/obo/SO_0001929)
-  def self.mitochondrialA_read
+  def self.mitochondrial_DNA_read
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001929')
   end
 
   # A sequencer read of a chloroplast DNA sample.
   # (http://purl.obolibrary.org/obo/SO_0001930)
-  def self.chloroplastA_read
+  def self.chloroplast_DNA_read
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001930')
   end
 
@@ -11780,7 +12098,7 @@ class SO
 
   # A 5' UTR variant where a premature start codon is introduced, moved or lost.
   # (http://purl.obolibrary.org/obo/SO_0001983)
-  def self.a_5_primeR_premature_start_codon_variant
+  def self.a_5_prime_UTR_premature_start_codon_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001983')
   end
 
@@ -11810,25 +12128,25 @@ class SO
 
   # A 5' UTR variant where a premature start codon is gained.
   # (http://purl.obolibrary.org/obo/SO_0001988)
-  def self.a_5_primeR_premature_start_codon_gain_variant
+  def self.a_5_prime_UTR_premature_start_codon_gain_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001988')
   end
 
   # A 5' UTR variant where a premature start codon is lost.
   # (http://purl.obolibrary.org/obo/SO_0001989)
-  def self.a_5_primeR_premature_start_codon_loss_variant
+  def self.a_5_prime_UTR_premature_start_codon_loss_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001989')
   end
 
   # A 5' UTR variant where a premature start codon is moved.
   # (http://purl.obolibrary.org/obo/SO_0001990)
-  def self.five_primeR_premature_start_codon_location_variant
+  def self.five_prime_UTR_premature_start_codon_location_variant
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001990')
   end
 
   # A consensus AFLP fragment is an AFLP sequence produced from any alignment algorithm which uses assembled multiple AFLP sequences as input.
   # (http://purl.obolibrary.org/obo/SO_0001991)
-  def self.consensusP_fragment
+  def self.consensus_AFLP_fragment
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0001991')
   end
 
@@ -11948,7 +12266,7 @@ class SO
 
   # An ncRNA that is part of a ribonucleoprotein that cleaves the primary pre-rRNA transcript in the process of producing mature rRNA molecules.
   # (http://purl.obolibrary.org/obo/SO_0005843)
-  def self.rRNA_cleavageA
+  def self.rRNA_cleavage_RNA
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0005843')
   end
 
@@ -12146,7 +12464,7 @@ class SO
 
   # A binding site that, in the polypeptide molecule, interacts selectively and non-covalently with DNA.
   # (http://purl.obolibrary.org/obo/SO_0100020)
-  def self.polypeptideA_contact
+  def self.polypeptide_DNA_contact
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_0100020')
   end
 
@@ -12188,19 +12506,19 @@ class SO
 
   # A transition of a cytidine to a thymine.
   # (http://purl.obolibrary.org/obo/SO_1000011)
-  def self.C_toT_transition
+  def self.C_to_T_transition
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000011')
   end
 
   # The transition of cytidine to thymine occurring at a pCpG site as a consequence of the spontaneous deamination of 5'-methylcytidine.
   # (http://purl.obolibrary.org/obo/SO_1000012)
-  def self.C_toT_transition_at_pCpG_site
+  def self.C_to_T_transition_at_pCpG_site
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000012')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_1000013)
-  def self.T_toC_transition
+  def self.T_to_C_transition
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000013')
   end
 
@@ -12212,13 +12530,13 @@ class SO
 
   # A transition of an adenine to a guanine.
   # (http://purl.obolibrary.org/obo/SO_1000015)
-  def self.A_toG_transition
+  def self.A_to_G_transition
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000015')
   end
 
   # A transition of a guanine to an adenine.
   # (http://purl.obolibrary.org/obo/SO_1000016)
-  def self.G_toA_transition
+  def self.G_to_A_transition
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000016')
   end
 
@@ -12236,25 +12554,25 @@ class SO
 
   # A transversion from cytidine to adenine.
   # (http://purl.obolibrary.org/obo/SO_1000019)
-  def self.C_toA_transversion
+  def self.C_to_A_transversion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000019')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_1000020)
-  def self.C_toG_transversion
+  def self.C_to_G_transversion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000020')
   end
 
   # A transversion from T to A.
   # (http://purl.obolibrary.org/obo/SO_1000021)
-  def self.T_toA_transversion
+  def self.T_to_A_transversion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000021')
   end
 
   # A transversion from T to G.
   # (http://purl.obolibrary.org/obo/SO_1000022)
-  def self.T_toG_transversion
+  def self.T_to_G_transversion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000022')
   end
 
@@ -12266,25 +12584,25 @@ class SO
 
   # A transversion from adenine to cytidine.
   # (http://purl.obolibrary.org/obo/SO_1000024)
-  def self.A_toC_transversion
+  def self.A_to_C_transversion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000024')
   end
 
   # A transversion from adenine to thymine.
   # (http://purl.obolibrary.org/obo/SO_1000025)
-  def self.A_toT_transversion
+  def self.A_to_T_transversion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000025')
   end
 
   # A transversion from guanine to cytidine.
   # (http://purl.obolibrary.org/obo/SO_1000026)
-  def self.G_toC_transversion
+  def self.G_to_C_transversion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000026')
   end
 
   # A transversion from guanine to thymine.
   # (http://purl.obolibrary.org/obo/SO_1000027)
-  def self.G_toT_transversion
+  def self.G_to_T_transversion
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000027')
   end
 
@@ -12674,13 +12992,13 @@ class SO
 
   # .
   # (http://purl.obolibrary.org/obo/SO_1000100)
-  def self.mutation_causing_polypeptideN_terminal_elongation
+  def self.mutation_causing_polypeptide_N_terminal_elongation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000100')
   end
 
   # .
   # (http://purl.obolibrary.org/obo/SO_1000101)
-  def self.mutation_causing_polypeptideC_terminal_elongation
+  def self.mutation_causing_polypeptide_C_terminal_elongation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000101')
   end
 
@@ -12710,25 +13028,25 @@ class SO
 
   # OBSOLETE: This term was deleted as it conflated more than one term. The alteration is separate from the effect.
   # (http://purl.obolibrary.org/obo/SO_1000106)
-  def self.mutation_causing_inframe_polypeptideN_terminal_elongation
+  def self.mutation_causing_inframe_polypeptide_N_terminal_elongation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000106')
   end
 
   # OBSOLETE: This term was deleted as it conflated more than one term. The alteration is separate from the effect.
   # (http://purl.obolibrary.org/obo/SO_1000107)
-  def self.mutation_causing_out_of_frame_polypeptideN_terminal_elongation
+  def self.mutation_causing_out_of_frame_polypeptide_N_terminal_elongation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000107')
   end
 
   # -- No comment or description provided. --
   # (http://purl.obolibrary.org/obo/SO_1000108)
-  def self.mutaton_causing_inframe_polypeptideC_terminal_elongation
+  def self.mutaton_causing_inframe_polypeptide_C_terminal_elongation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000108')
   end
 
   # OBSOLETE: This term was deleted as it conflated more than one term. The alteration is separate from the effect.
   # (http://purl.obolibrary.org/obo/SO_1000109)
-  def self.mutation_causing_out_of_frame_polypeptideC_terminal_elongation
+  def self.mutation_causing_out_of_frame_polypeptide_C_terminal_elongation
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1000109')
   end
 
@@ -13148,7 +13466,7 @@ class SO
 
   # A CDS whose predicted amino acid sequence is unsupported by any experimental evidence or by any match with any other known sequence.
   # (http://purl.obolibrary.org/obo/SO_1001247)
-  def self.orphanS
+  def self.orphan_CDS
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001247')
   end
 
@@ -13178,13 +13496,13 @@ class SO
 
   # A CDS that is supported by similarity to EST or cDNA data.
   # (http://purl.obolibrary.org/obo/SO_1001259)
-  def self.CDS_supported_byT_or_cDNA_data
+  def self.CDS_supported_by_EST_or_cDNA_data
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001259')
   end
 
   # A Shine-Dalgarno sequence that stimulates recoding through interactions with the anti-Shine-Dalgarno in the RNA of small ribosomal subunits of translating ribosomes. The signal is only operative in Bacteria.
   # (http://purl.obolibrary.org/obo/SO_1001260)
-  def self.internalShineDalgarno_sequence
+  def self.internal_Shine_Dalgarno_sequence
     return RDF::URI.new('http://purl.obolibrary.org/obo/SO_1001260')
   end
 

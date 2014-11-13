@@ -19,7 +19,9 @@ SIO_SYN = RDF::URI.new('http://semanticscience.org/resource/synonym')
 # This label conversion also appears in:
 #   +lib/biointerchange/core.rb+
 def make_safe_label(label)
-  label.gsub(/[ '-.<>\/]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/){ "a_#{$1}" }.gsub(/^_+|_+$/, '').gsub(/_+/, '_').gsub(/_([A-Z])+/x){ "#{$1}" }
+  label.gsub(/[ '-.<>\/]/, '_').gsub(/\([^\)]*?\)/, '').sub(/^(\d+)/){ "a_#{$1}" }.gsub(/^_+|_+$/, '').gsub(/_+/, '_')
+  # This additional call pulled together "whatever_ABC" to "whateverABC";
+  # not clear why: .gsub(/_([A-Z]+)/x){ "#{$1}" }
 end
 
 reader = RDF::RDFXML::Reader.open(ARGV[0])
