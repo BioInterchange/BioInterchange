@@ -48,6 +48,10 @@ class Writer
     if object.kind_of?(RDF::URI) then
       object_uri = object.to_s
       object_representation = "<#{object_uri}>".sub(/\s/, '%20')
+    elsif object.kind_of?(Integer) then
+      object_representation = object.to_s
+    elsif object.kind_of?(Float) then
+      object_representation = object.to_s
     else
       if datatype then
         object_representation = "\"#{object.to_s}\"^^<#{datatype.to_s}>"
