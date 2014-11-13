@@ -107,7 +107,7 @@ The following list provides information on the origin of the example-data files 
 
 The following lists data that has been used in testing BioInterchange's implementation, but was not included in the GitHub repository due to their size:
 
-*  `mgp.v3.indels.rsIDdbSNPv137.vcf.gz`: Gzipped VCF file of M. musculus indels by the Sanger Institute. Downloaded from [ftp://ftp-mouse.sanger.ac.uk/current_snps/mgp.v3.indels.rsIDdbSNPv137.vcf.gz](ftp://ftp-mouse.sanger.ac.uk/current_snps/mgp.v3.indels.rsIDdbSNPv137.vcf.gz)
+*  `mgp.v4.indels.dbSNP.vcf.gz`: Gzipped VCF file of M. musculus indels by the Sanger Institute. Downloaded from [ftp://ftp-mouse.sanger.ac.uk/REL-1410-SNPs_Indels/mgp.v4.indels.dbSNP.vcf.gz](ftp://ftp-mouse.sanger.ac.uk/REL-1410-SNPs_Indels/mgp.v4.indels.dbSNP.vcf.gz)
 
 ### Application Programming Interface
 
