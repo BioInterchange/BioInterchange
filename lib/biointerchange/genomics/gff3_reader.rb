@@ -141,7 +141,7 @@ protected
         type = BioInterchange::SO.send(BioInterchange.make_safe_label(type))
       end
     rescue NoMethodError
-      raise BioInterchange::Exceptions::InputFormatError, "Line #{@linenumber}. Type of feature is set to an unknown SOFA term: \"#{type}\""
+      raise BioInterchange::Exceptions::InputFormatError, "Line #{@linenumber}. Type of feature is set to an unknown SO/SOFA term: \"#{type}\""
     end
 
     # String to numeric value conversions:
