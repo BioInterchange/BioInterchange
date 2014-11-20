@@ -141,6 +141,8 @@ protected
         type = BioInterchange::SO.send(BioInterchange.make_safe_label(type))
       end
     rescue NoMethodError
+      # If neither a SO accession or a SO/SOFA term, then raise an error. The GFF3 specification
+      # is very clear about type being either one of the two.
       raise BioInterchange::Exceptions::InputFormatError, "Line #{@linenumber}. Type of feature is set to an unknown SO/SOFA term: \"#{type}\""
     end
 
