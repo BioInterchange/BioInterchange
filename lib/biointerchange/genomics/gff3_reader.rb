@@ -32,6 +32,7 @@ class GFF3Reader < BioInterchange::Reader
     @name_uri = name_uri
     @date = date
     @batch_size = batch_size
+    @linenumber = 0
   end 
 
   # Reads a GFF3 file from the input stream and returns an associated model.
@@ -79,6 +80,7 @@ protected
     begin
       line = gff3.readline
       line.chomp!
+      @linenumber += 1
 
       if line.start_with?('#') and not line.start_with?('##') then
         add_comment(@feature_set, line[1..-1].strip)
@@ -139,7 +141,7 @@ protected
         type = BioInterchange::SO.send(BioInterchange.make_safe_label(type))
       end
     rescue NoMethodError
-      raise BioInterchange::Exceptions::InputFormatError, "Type of feature is set to an unknown SOFA term: \"#{type}\""
+      raise BioInterchange::Exceptions::InputFormatError, "Line #{@linenumber}. Type of feature is set to an unknown SOFA term: \"#{type}\""
     end
 
     # String to numeric value conversions:
@@ -217,8 +219,17 @@ protected
   #
   # +attribute_string+:: key/value string (column 9) as seen in a GFF3/GVF file
   def split_attributes(attribute_string)
+    puts attribute_string
     attributes = {}
-    attribute_string.split(';').map { |assignment| match = assignment.match(/([^=]+)=(.+)/) ; { match[1].strip => match[2].split(',').map { |value| URI.decode(value.strip) } } }.map { |hash| hash.each_pair { |tag,list| attributes[tag] = list } }
+    hashes = attribute_string.split(';').map { |assignment|
+      match = assignment.match(/([^=]+)=(.+)/) ;
+      { match[1].strip => match[2].split(',').map { |value| URI.decode(value.strip) } }
+    }
+    hashes.map { |hash|
+      hash.each_pair { |tag,list|
+        attributes[tag] = list
+      }
+    }
     attributes
   end
 
