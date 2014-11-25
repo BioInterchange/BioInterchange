@@ -92,6 +92,9 @@ protected
         next
       end
 
+      # Empty lines. They happen. Mostly at the end of files.
+      next if line.strip.empty?
+
       if fasta_block then
         if line.start_with?('>') and line.length > 1 then
           @feature_set.add(BioInterchange::Genomics::GFF3FeatureSequence.new(fasta_id, fasta_sequence, fasta_comment)) if fasta_id and not fasta_sequence.empty?()
@@ -221,7 +224,6 @@ protected
   #
   # +attribute_string+:: key/value string (column 9) as seen in a GFF3/GVF file
   def split_attributes(attribute_string)
-    puts attribute_string
     attributes = {}
     hashes = attribute_string.split(';').map { |assignment|
       match = assignment.match(/([^=]+)=(.+)/) ;
