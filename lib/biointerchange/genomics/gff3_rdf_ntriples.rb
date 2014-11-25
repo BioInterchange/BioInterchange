@@ -255,26 +255,24 @@ protected
       bin_uri = RDF::URI.new("bin://#{feature.sequence_id}/#{BioInterchange::Genomics::Locations.reg2bin(feature.start_coordinate, feature.end_coordinate)}")
       create_triple(bin_uri, RDF::URI.new('bin://contains'), feature_uri)
     end
-    create_triple(region_uri, BioInterchange::FALDO.begin, start_position_uri)
-    create_triple(region_uri, BioInterchange::FALDO.end, end_position_uri)
-    case feature.strand
-    when BioInterchange::Genomics::GFF3Feature::NOT_STRANDED
-      create_triple(start_position_uri, RDF.type, BioInterchange::FALDO.Position)
-      create_triple(end_position_uri, RDF.type, BioInterchange::FALDO.Position)
-    when BioInterchange::Genomics::GFF3Feature::UNKNOWN
-      create_triple(start_position_uri, RDF.type, BioInterchange::FALDO.Position)
-      create_triple(end_position_uri, RDF.type, BioInterchange::FALDO.Position)
-    when BioInterchange::Genomics::GFF3Feature::POSITIVE
-      create_triple(start_position_uri, RDF.type, BioInterchange::FALDO.Positive_strand)
-      create_triple(end_position_uri, RDF.type, BioInterchange::FALDO.Positive_strand)
-    when BioInterchange::Genomics::GFF3Feature::NEGATIVE
-      create_triple(start_position_uri, RDF.type, BioInterchange::FALDO.Negative_strand)
-      create_triple(end_position_uri, RDF.type, BioInterchange::FALDO.Negative_strand)
-    else
-      raise BioInterchange::Exceptions::InputFormatError, 'Strand of feature is set to an unknown constant.'
-    end
-    create_triple(start_position_uri, BioInterchange::FALDO.position, feature.start_coordinate)
-    create_triple(end_position_uri, BioInterchange::FALDO.position, feature.end_coordinate)
+    [ [ start_position_uri, BioInterchange::FALDO.begin, feature.start_coordinate ],
+      [ end_position_uri, BioInterchange::FALDO.end, feature.end_coordinate ] ].each { |uri_relation_coordinate|
+      position_uri, faldo_relation, coordinate = uri_relation_coordinate
+      create_triple(region_uri, faldo_relation, position_uri)
+      case feature.strand
+      when BioInterchange::Genomics::GFF3Feature::NOT_STRANDED
+        create_triple(position_uri, RDF.type, BioInterchange::FALDO.Position)
+      when BioInterchange::Genomics::GFF3Feature::UNKNOWN
+        create_triple(position_uri, RDF.type, BioInterchange::FALDO.Position)
+      when BioInterchange::Genomics::GFF3Feature::POSITIVE
+        create_triple(position_uri, RDF.type, BioInterchange::FALDO.Positive_strand)
+      when BioInterchange::Genomics::GFF3Feature::NEGATIVE
+        create_triple(position_uri, RDF.type, BioInterchange::FALDO.Negative_strand)
+      else
+        raise BioInterchange::Exceptions::InputFormatError, 'Strand of feature is set to an unknown constant.'
+      end
+      create_triple(start_position_uri, BioInterchange::FALDO.position, coordinate)
+    }
     if feature.score then
       create_triple(feature_uri, @base.has_attribute, RDF::URI.new("#{feature_uri}/score"))
       if @format == :gvf or @format == :vcf then
