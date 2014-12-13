@@ -59,6 +59,8 @@
           <p>The Genomic Feature and Variation Ontology (GFVO) enables the RDFization of genomic feature and variation data. It particularly addresses the representation of data in <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3</a>, <a href="http://www.sequenceontology.org/resources/gvf.html">GVF</a>, <a href="http://www.ensembl.org/info/website/upload/gff.html">GTF</a>, and <a href="http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41">VCF</a> formats.</p>
           <p>The ontology is available under the <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a> license, and therefore, de-facto within the public domain.</p>
           <p>GFVO can be loaded into <a href="http://protege.stanford.edu">Prot&eacute;g&eacute;</a> or <a href="http://www.topquadrant.com/products/TB_Composer.html">TopBraid Composer</a> via: <a href="http://www.biointerchange.org/gfvo">http://www.biointerchange.org/gfvo</a></p>
+          <p>GFVO's development version can be found on GitHub: <a href="https://github.com/BioInterchange/Ontologies">https://github.com/BioInterchange/Ontologies</a></p>
+          <h3>Table of Contents</h3>
           <ol>
             <li><a href="#bioportal">Overview</a></li>
             <li><a href="#external">External Ontologies and Linked Data</a></li>
@@ -82,7 +84,7 @@
           <object type="text/html" data="http://bioportal.bioontology.org/ontologies/GFVO/?p=classes&amp;conceptid=root" width="1200px" height="900px" style="overflow:auto;border:1px solid #333333"></object>
           <h3 id="external">External Ontologies and Linked Data</h3>
           <p>GFVO makes use of the <a href="http://www.sequenceontology.org">Sequence Ontology</a> for annotating genomic features and variants as well as the <a href="https://github.com/JervenBolleman/FALDO">Feature Annotation Location Description Ontology</a> (<a href="https://github.com/JervenBolleman/FALDO">FALDO</a>) for describing genomic locations such as genomic features, breakpoints, and coordinate ranges for fuzzy/probabilistic coordinate ranges. We also integrate the <a href="http://variationontology.org">Variation Ontology</a> (<a href="http://variationontology.org">VariO</a>) for describing variants, their effects and consequences.</p>
-          <p>Species are represented as linked data by URIs to NCBI's <a href="http://www.ncbi.nlm.nih.gov/taxonomy">species taxonomy</a>. We encourage the use of <a href="http://identifiers.org">identifiers.org</a> URIs for other entities, which will be automatically be supported in the BioInterchange's RDF output with its next release.</p>
+          <p>Species are represented as linked data by URIs to NCBI's <a href="http://www.ncbi.nlm.nih.gov/taxonomy">species taxonomy</a>. We encourage the use of <a href="http://identifiers.org">identifiers.org</a> URIs for other entities, which eventually be automatically generated in a future release of BioInterchange.</p>
           <p>The design patterns of GFVO follow the <a href="http://code.google.com/p/semanticscience/wiki/SIO">SIO</a> and equivalence mappings are provided for GFVO's classes, object- and datatype-properties where applicable.</p>
           <h3>Statistics</h3>
           <p>Summary statistics about the number of classes and properties of GFVO are provided in the following table. The breakdown of the classes based on their modeling origin does not sum up to the total number of classes, because some modeled classes appear in multiple specifications (e.g., "DNA Sequence" appears in all four specifications).</p>
@@ -92,22 +94,23 @@
               <th></th>
               <th>Total Number</th>
               <th>Number of Equivalences to SIO</th>
+              <th>Number of Equivalences to SO</th>
             </tr>
           </thead>
           <tbody>
 <!-- Imported via :r!~/src/Ontologies/scripts/stats.rb < ~/src/Ontologies/gfvo.xml -->
-<tr><td>Classes</td><td>102</td><td>40</td></tr>
-<tr><td>&hellip;modeled from GFF3</td><td>23</td><td>11</td></tr>
-<tr><td>&hellip;modeled from GTF</td><td>13</td><td>11</td></tr>
-<tr><td>&hellip;modeled from GVF</td><td>62</td><td>23</td></tr>
-<tr><td>&hellip;modeled from VCF</td><td>42</td><td>15</td></tr>
-<tr><td>Class Metadata</td><td></td><td></td></tr>
-<tr><td>&hellip;Wikipedia references</td><td>53</td><td></td></tr>
-<tr><td>&hellip;pairwise disjoint axioms</td><td>6</td><td></td></tr>
-<tr><td>&hellip;disjoint collection axioms</td><td>13</td><td></td></tr>
-<tr><td>&hellip;with property restrictions</td><td>32</td><td></td></tr>
-<tr><td>Datatype properties</td><td>1</td><td>1</td></tr>
-<tr><td>Object properties</td><td>32</td><td>31</td></tr>
+<tr><td>Classes</td><td>102</td><td>40</td><td>13</td></tr>
+<tr><td>&hellip;modeled from GFF3</td><td>23</td><td>11</td><td>3</td></tr>
+<tr><td>&hellip;modeled from GTF</td><td>13</td><td>11</td><td>2</td></tr>
+<tr><td>&hellip;modeled from GVF</td><td>62</td><td>23</td><td>12</td></tr>
+<tr><td>&hellip;modeled from VCF</td><td>42</td><td>15</td><td>7</td></tr>
+<tr><td>Class Metadata</td><td></td><td></td><td></td></tr>
+<tr><td>&hellip;Wikipedia references</td><td>53</td><td>n/a</td><td>n/a</td></tr>
+<tr><td>&hellip;pairwise disjoint axioms</td><td>6</td><td>n/a</td><td>n/a</td></tr>
+<tr><td>&hellip;disjoint collection axioms</td><td>13</td><td>n/a</td><td>n/a</td></tr>
+<tr><td>&hellip;with property restrictions</td><td>32</td><td>n/a</td><td>n/a</td></tr>
+<tr><td>Datatype properties</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>Object properties</td><td>32</td><td>31</td><td>0</td></tr>
           </tbody>
           </table>
 <!--
@@ -651,7 +654,7 @@
   <div><i>Label:</i> Amino Acid</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;"><a href="#classAminoAcid">Amino Acid</a> encodes for the &quot;Variant_aa&quot; and &quot;Reference_aa&quot; attributes in GVF files. Linking an <a href="#classAminoAcid">Amino Acid</a> instance to a <a href="#classReferenceSequence">Reference Sequence</a> or <a href="#classSequenceVariant">Sequence Variant</a> instance denotes the genomic context of the amino acid.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Amino_acid">http://en.wikipedia.org/wiki/Amino_acid</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001224">SIO_001224</a></div>
+  <div><i>External class equivalences:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0001237">SO_0001237</a>,&nbsp;<a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010074">SIO_010074</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -679,7 +682,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> Attribute</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">An attribute denotes characteristics of an entity. At this stage, <a href="#classQuality">Quality</a> is the only direct subclass of <a href="#classAttribute">Attribute</a>, whose subclasses denote qualitative properties such as sex (<a href="#classFemale">Female</a>, <a href="#classMale">Male</a>, <a href="#classHermaphrodite">Hermaphrodite</a>), zygosity (<a href="#classHemizygous">Hemizygous</a>, <a href="#classHeterozygous">Heterozygous</a>, <a href="#classHomozygous">Homozygous</a>), etc.<br>The object property <a href="#objectPropertyhasQuality">has quality</a> (or subproperties thereof) should be utilized to express qualities of entities. The &quot;hasAttribute&quot; object property should be used to denote relationships to <a href="#classObject">Object</a> or <a href="#classProcess">Process</a> instances, unless there is a better object property suitable to represent the relationship between entities.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000614">SIO_000614</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000614">SIO_000614</a></div>
   <div></div>
   </div>
 </p>
@@ -708,7 +711,7 @@
   <div><i>Subclass of:</i> <a href="#classMaterialEntity">MaterialEntity</a></div>
   <div><i>Label:</i> Biological Entity</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A biological entity an entity that contains genomic material or utilizes genomic material during its existance. Genomic material itself is represented as subclasses of <a href="#classChemicalEntity">Chemical Entity</a>.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010046">SIO_010046</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010046">SIO_010046</a></div>
   <div></div>
   </div>
 </p>
@@ -728,6 +731,7 @@
   <div><i>Subclass of:</i> <a href="#classLocus">Locus</a></div>
   <div><i>Label:</i> Breakpoint</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A breakpoint describes the source or destination of a zero-length sequence alteration. These alterations are typically insertions, deletions or translocations according to the GVF specification (see &quot;Breakpoint_detail&quot; in http://sequenceontology.org/resources/gvf.html). Breakpoint coordinates should be provided using classes of the Feature Annotation Location Description Ontology.<br>The class encodes for the &quot;Breakpoint_detail&quot; and &quot;Breakpoint_range&quot; attributes in GVF.</div></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000699">SO_0000699</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -737,7 +741,7 @@
   <div><i>Subclass of:</i> <a href="#classCollection">Collection</a></div>
   <div><i>Label:</i> Catalog</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A catalog is a specialization of a <a href="#classCollection">Collection</a>, where all of its contents are of the same type. The requirement of same type cannot be enforced formally via this ontology; data providers need to verify this condition manually or programmatically, or alternatively, use the more generic <a href="#classCollection">Collection</a> class instead.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001241">SIO_001241</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001241">SIO_001241</a></div>
   <div></div>
   </div>
 </p>
@@ -748,7 +752,7 @@
   <div><i>Label:</i> Cell</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A cell is a biological unit that in itself forms a living organism or is part of a larger organism that is composed of many other cells. The subclasses <a href="#classGermlineCell">Germline Cell</a> and <a href="#classSomaticCell">Somatic Cell</a> can be used to denote the biological material that was used in an experiment.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Cell_(biology)">http://en.wikipedia.org/wiki/Cell_(biology)</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010001">SIO_010001</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010001">SIO_010001</a></div>
   <div></div>
   </div>
 </p>
@@ -758,7 +762,7 @@
   <div><i>Subclass of:</i> <a href="#classMaterialEntity">MaterialEntity</a></div>
   <div><i>Label:</i> Chemical Entity</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A chemical entity is an entity related to biochemistry. This class is typically not instantiated, but instead, its subclasses <a href="#classAminoAcid">Amino Acid</a>, <a href="#classChromosome">Chromosome</a>, <a href="#classPeptideSequence">Peptide Sequence</a>, etc., are used to represent specific chemical entities.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010004">SIO_010004</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010004">SIO_010004</a></div>
   <div></div>
   </div>
 </p>
@@ -769,7 +773,7 @@
   <div><i>Label:</i> Chromosome</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A chromosome can be used as an abstract representation of a (not necessarily named) chromosome to represent ploidy within a data set. The <a href="#classChromosome">Chromosome</a> instance is then used for for denoting the locus of phased genotypes.<br>For placing genomic features (<a href="#classFeature">Feature</a> class instances) on a chromosome, contig, scaffold, etc., please see the <a href="#classLandmark">Landmark</a> class. It is encouraged that Sequence Ontology terms are used to annotate a Landmark with a biological type (s.a. &quot;chromosome&quot;, &quot;contig&quot;, etc.).<br>Encodes for &quot;sequencing-scope&quot; pragma in GVF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Chromosome">http://en.wikipedia.org/wiki/Chromosome</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000899">SIO_000899</a></div>
+  <div><i>External class equivalences:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000340">SO_0000340</a>,&nbsp;<a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000899">SIO_000899</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -800,6 +804,7 @@
   <div><i>Label:</i> Codon Sequence</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A codon sequence is a nucleotide sequence underlying a potential amino acid sequence. Codon sequences are three bases of length or multiples thereof.<br>Encodes for &quot;Variant_codon&quot; and &quot;Reference_codon&quot; attributes in GVF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Codon">http://en.wikipedia.org/wiki/Codon</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000360">SO_0000360</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -809,7 +814,7 @@
   <div><i>Subclass of:</i> <a href="#classInformationContentEntity">InformationContentEntity</a></div>
   <div><i>Label:</i> Collection</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A collection is a container for genomic data. A collection may contain information about genomic data including -- but not limited to -- contents of GFF3, GTF, GVF and VCF files. The latter are better represented by <a href="#classFile">File</a> class instances, whereas the result of unions or intersections between different <a href="#classFile">File</a> class instances should be captured within this format-independent <a href="#classCollection">Collection</a> class. When importing data whose provenance is not file based, instances of <a href="#classCollection">Collection</a> should be utilized (e.g., database exports).</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000616">SIO_000616</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000616">SIO_000616</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -819,7 +824,7 @@
   <div><i>Subclass of:</i> <a href="#classInformationContentEntity">InformationContentEntity</a></div>
   <div><i>Label:</i> Comment</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A comment is a remark about a piece of information, an observation or statement. In the context of GFF3, GVF, etc., genomic feature and variation descriptions, &quot;isAfter&quot; and &quot;isBefore&quot; relationships should be used to indicate where a comment is situated between pragma or feature statements of GFF3, GTF, GVF or VCF files.<br>For specific descriptions or textual annotations of genomic features, the use of the &quot;Note&quot; class is encouraged.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001167">SIO_001167</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001167">SIO_001167</a></div>
   <div></div>
   </div>
 </p>
@@ -839,6 +844,7 @@
   <div><i>Label:</i> Contig</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A contig is a contiguous DNA sequence that has been assembled from shorter overlapping DNA segments. <a href="#classContig">Contig</a> is a specialization of a <a href="#classCollection">Collection</a> and should be used to aggregate features, but not for indicating that a <a href="#classLandmark">Landmark</a> is representing a contig. It is encouraged that the latter is annotated by a term of the Sequence Ontology.<br>Encodes for &quot;sequencing-scope&quot; in GVF and the &quot;contig&quot; information field in VCF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Contig">http://en.wikipedia.org/wiki/Contig</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000149">SO_0000149</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -858,7 +864,7 @@
   <div><i>Label:</i> DNA Microarray</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">Feature information is based on DNA microarray probes.<br>Used by the &quot;data-source&quot; structured pragma in GVF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/DNA_microarray_experiment">http://en.wikipedia.org/wiki/DNA_microarray_experiment</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001076">SIO_001076</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001076">SIO_001076</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -869,7 +875,7 @@
   <div><i>Label:</i> DNA Sequence</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A DNA sequence is a sequence of nucleic acids.<br>It can be used to describe &quot;FASTA&quot; annotations in both GFF3 and GVF files as well as short sequences in VCF files.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Dna_sequence">http://en.wikipedia.org/wiki/Dna_sequence</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010016">SIO_010016</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010016">SIO_010016</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -899,7 +905,7 @@
   <div><i>Subclass of:</i> <a href="#classProcess">Process</a></div>
   <div><i>Label:</i> Experimental Method</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">An experimental method is a procedure that yields an experimental outcome (result). Experimental methods can be in vivo, in vitro or in silico procedures that are well described and can be referenced.<br>Encodes for &quot;source&quot; column contents of GFF3, GTF, and GVF file formats as well as the &quot;CHROM&quot; column in VCF. Can be used to describe the &quot;capture-method&quot; pragma in GVF; it can describe &quot;VALIDATED&quot; additional information in VCF.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000999">SIO_000999</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000999">SIO_000999</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -909,7 +915,7 @@
   <div><i>Subclass of:</i> <a href="#classInformationContentEntity">InformationContentEntity</a></div>
   <div><i>Label:</i> External Reference</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A cross-reference to associate an entity to a representation in another database.<br>Encodes for the &quot;Dbxref&quot; attribute in GFF3 and GVF. Can be used to describe the contents of the &quot;source&quot; column in GTF files. Captures the &quot;genome-build&quot; pragma, &quot;source-method&quot;, &quot;attribute-method&quot;, &quot;phenotype-description&quot;, and &quot;phased-genotypes&quot; structured pragmas in GVF. Accounts for the &quot;assembly&quot; and &quot;pedigreeDB&quot; information fields, and &quot;DB&quot;, &quot;H2&quot;, &quot;H3&quot;, &quot;1000G&quot; additional information in VCF.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001171">SIO_001171</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001171">SIO_001171</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -919,7 +925,7 @@
   <div><i>Subclass of:</i> <a href="#classInformationContentEntity">InformationContentEntity</a></div>
   <div><i>Label:</i> Feature</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">The feature class captures information about genomic sequence features and variations. A genomic feature can be a large object, such as a chromosome or contig, down to single base-pair reference or variant alleles.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010065">SIO_010065</a></div>
+  <div><i>External class equivalences:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000110">SO_0000110</a>,&nbsp;<a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010065">SIO_010065</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -930,7 +936,7 @@
   <div><i>Label:</i> Female</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">Denoting sex of a female individual, who is defined as an individual producing ova.<br>This quality can be used to encode for the &quot;sex&quot; pragma in GVF files.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Female">http://en.wikipedia.org/wiki/Female</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010052">SIO_010052</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010052">SIO_010052</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -940,7 +946,7 @@
   <div><i>Subclass of:</i> <a href="#classCollection">Collection</a></div>
   <div><i>Label:</i> File</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A file represents the contents of a GFF3, GTF, GVF or VCF file. It can capture genomic meta-data that is specific to any of these file formats. The result of unions, intersections or other operations between <a href="#classFile">File</a> class instances should be capture with the generic <a href="#classCollection">Collection</a> class, which is format independent.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000396">SIO_000396</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000396">SIO_000396</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -968,7 +974,7 @@
   <div><i>Subclass of:</i> <a href="#classInformationContentEntity">InformationContentEntity</a></div>
   <div><i>Label:</i> Functional Specification</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A functional specification of bioinformatics data, i.e. the specification of genomic material that potentially has biological function. This class should not be directly instantiated, but instead, its subclass <a href="#classGenotype">Genotype</a> should be used.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000315">SIO_000315</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000315">SIO_000315</a></div>
   <div></div>
   </div>
 </p>
@@ -989,7 +995,7 @@
   <div><i>Label:</i> Genome</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">Representation of a genome. Genomic features that constitute the genome may be linked via one or more <a href="#classCollection">Collection</a>, <a href="#classCatalog">Catalog</a>, <a href="#classContig">Contig</a>, <a href="#classScaffold">Scaffold</a> or <a href="#classFile">File</a> instances.<br><a href="#classGenome">Genome</a> can be used for describing data contents of the &quot;genome-build&quot; and &quot;sequencing-scope&quot; pragmas in GVF files.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Genome">http://en.wikipedia.org/wiki/Genome</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000984">SIO_000984</a></div>
+  <div><i>External class equivalences:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0001026">SO_0001026</a>,&nbsp;<a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000984">SIO_000984</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -1019,7 +1025,7 @@
   <div><i>Label:</i> Genotype</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">The genotype is the genetic information captured in a particular genome. It can also refer to one or more populations, if statistical distributions are provided that assign genetic codes to groups of individuals.<br>A genotype is denoted by a string of slash-separated list of alleles (<a href="#datatypePropertyhasValue">has value</a> property). The length of the list is dependent on the ploidy of the studied species as well as sequencing technique used.<br>Example: &quot;A/G&quot; denotes a genotype with alleles &quot;A&quot; and &quot;G&quot;.<br>Encodes for the <a href="#classGenotype">Genotype</a> attribute in GVF and &quot;GT&quot; additional information in VCF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Genotype">http://en.wikipedia.org/wiki/Genotype</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001079">SIO_001079</a></div>
+  <div><i>External class equivalences:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0001027">SO_0001027</a>,&nbsp;<a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001079">SIO_001079</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -1050,6 +1056,7 @@
   <div><i>Label:</i> Haplotype</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A <a href="#classHaplotype">Haplotype</a> is a collection of <a href="#classGenotype">Genotype</a> or <a href="#classSequenceVariant">Sequence Variant</a> instances. It can imply that a set of genes is inherited as a group, or alternatively, that the set of genotypes or sequence variance has a biological function when acting together (e.g., there exists a disease association).<br>Haplotype instances should only catalog a single type, i.e. either <a href="#classGenotype">Genotype</a> or <a href="#classSequenceVariant">Sequence Variant</a> instances; they should not mix both types (see also <a href="#classCatalog">Catalog</a>).<br>Encodes for &quot;HQ&quot; additional information in VCF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Haplotype">http://en.wikipedia.org/wiki/Haplotype</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0001024">SO_0001024</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -1090,7 +1097,7 @@
   <div><i>Label:</i> Hermaphrodite</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">Denoting sex of an individual that contains both male and female gametes.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Hermaphrodite">http://en.wikipedia.org/wiki/Hermaphrodite</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000784">SIO_000784</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000784">SIO_000784</a></div>
   <div></div>
   </div>
 </p>
@@ -1121,7 +1128,7 @@
   <div><i>Label:</i> Identifier</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">An identifier labels an entity with preferably a single term that is interpreted as an accession. An accession labels entities that are part of a collection of similar type. More generic naming of entities can be achieved using the <a href="#classLabel">Label</a> class.<br>Encodes for the &quot;seqid&quot; column in GFF3 and GVF; encodes for the &quot;seqname&quot; column in GTF and &quot;CHROM&quot; column in VCF. Captures the &quot;ID&quot; attribute in GFF3 and GVF. Suitable for expression values of &quot;individual-id&quot; and &quot;technology-platform-machine-id&quot; pragmas in GVF. Encodes for the &quot;ID&quot; key/value property in VCF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Identifier">http://en.wikipedia.org/wiki/Identifier</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000115">SIO_000115</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000115">SIO_000115</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -1131,7 +1138,7 @@
   <div><i>Subclass of:</i> <a href="#classObject">Object</a></div>
   <div><i>Label:</i> Information Content Entity</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">An information content entity is a data structure or data type that requires background information or specific domain knowledge to be interpreted correctly. Information content entities can be of simple structure, such as <a href="#classLabel">Label</a> that only requires the application of <a href="#datatypePropertyhasValue">has value</a> to be meaningful, or, they can be of complex structure such as <a href="#classLocus">Locus</a> which becomes meaningful with multiple FALDO annotations.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000015">SIO_000015</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000015">SIO_000015</a></div>
   <div></div>
   </div>
 </p>
@@ -1141,7 +1148,7 @@
   <div><i>Subclass of:</i> <a href="#classInformationContentEntity">InformationContentEntity</a></div>
   <div><i>Label:</i> Label</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A label is a term or short list of terms that describe an entity for the purpose of distinguishing it from entities of similar type. It should be considered to utilize the <a href="#classIdentifier">Identifier</a> class, if labels of entities are sufficiently unique to actually identify them.<br>Encodes for the &quot;PEDIGREE&quot; information field in VCF.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000179">SIO_000179</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000179">SIO_000179</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -1160,7 +1167,7 @@
   <div><i>Subclass of:</i> <a href="#classQuantity">Quantity</a></div>
   <div><i>Label:</i> Likelihood</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A <a href="#classLikelihood">Likelihood</a> is a probability of a certain even occurring.<br>For use with &quot;GL&quot; and &quot;GP&quot; additional information in VCF files.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001243">SIO_001243</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001243">SIO_001243</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -1180,7 +1187,7 @@
   <div><i>Label:</i> Locus</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A locus refers to a position within a designated genomic landmark. Actual locus coordinates should be provided using classes of the Feature Annotation Location Description Ontology.<br>The class encodes for the &quot;start&quot;, &quot;end&quot; and &quot;strand&quot; columns in GFF3, GTF, and GVF and for the &quot;POS&quot; column in VCF. It also encodes the &quot;Start_range&quot; and &quot;End_range&quot; attributes in GVF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Locus_(genetics)">http://en.wikipedia.org/wiki/Locus_(genetics)</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000056">SIO_000056</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000056">SIO_000056</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -1191,7 +1198,7 @@
   <div><i>Label:</i> Male</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">Denoting sex of a male individual, who is defined as an individual producing spermatozoa.<br>This quality can be used to encode for the &quot;sex&quot; pragma in GVF files.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Male">http://en.wikipedia.org/wiki/Male</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010048">SIO_010048</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010048">SIO_010048</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -1219,7 +1226,7 @@
   <div><i>Subclass of:</i> <a href="#classObject">Object</a></div>
   <div><i>Label:</i> Material Entity</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A material entity represents a physical object. In the context of genomic features and variations, material entities are cells, organisms, sequences, chromosomes, etc.<br><a href="#classMaterialEntity">Material Entity</a> should not be instantiated as such, instead, it is suggested that its subclasses <a href="#classGenome">Genome</a>, <a href="#classDNASequence">DNA Sequence</a>, <a href="#classSampleCount">Sample Count</a>, etc. are appropriated.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000004">SIO_000004</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000004">SIO_000004</a></div>
   <div></div>
   </div>
 </p>
@@ -1239,7 +1246,7 @@
   <div><i>Subclass of:</i> <a href="#classLabel">Label</a></div>
   <div><i>Label:</i> Name</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A name assigns an entity a non-formal term (or multiples thereof) that can provide information about the entities identity. Unlike an <a href="#classIdentifier">Identifier</a>, a name should not be considered unique.<br>Encodes for the &quot;feature&quot; column in GTF. Captures the &quot;genome-build&quot; pragma in GFF3 and GVF. Captures the &quot;population&quot;, &quot;technology-platform-name&quot; pragmas in GVF.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000116">SIO_000116</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000116">SIO_000116</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -1249,7 +1256,7 @@
   <div><i>Subclass of:</i> <a href="#classInformationContentEntity">InformationContentEntity</a></div>
   <div><i>Label:</i> </div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A note is a short textual description about an entity. It provides a formal or semi-formal description of an entity, as opposed to a <a href="#classComment">Comment</a>.<br>Encodes for the &quot;sample-description&quot; pragma and <a href="#classComment">Comment</a> key/value pairs in structured attributes in GVF. Captures &quot;Description&quot; key/value pairs in information fields and &quot;SB&quot; information field in VCF.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000152">SIO_000152</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000152">SIO_000152</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -1267,7 +1274,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> Object</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">An object is a concrete entity that realizes a concept and encapsulates data associated with said concept. Objects are typically representing tangible entities, such as <a href="#classChromosome">Chromosome</a>, <a href="#classDNASequence">DNA Sequence</a>, but also objects such as <a href="#classIdentifier">Identifier</a>, <a href="#classAverageCoverage">Average Coverage</a> or other computational or mathematical entities.<br>Since an object describes a large body of entities, its use is discouraged. Where applicable, one of its subclasses should be used instead.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000776">SIO_000776</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000776">SIO_000776</a></div>
   <div></div>
   </div>
 </p>
@@ -1297,6 +1304,7 @@
   <div><i>Label:</i> Peptide Sequence</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A peptide sequence is an ordered sequence of amino acid residues, but which may not necessarily be a protein sequence. For encoding sequences of proteins, the subclass <a href="#classProteinSequence">Protein Sequence</a> should be used.<br>Encodes for &quot;FASTA&quot; annotation in GFF3 and GVF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Peptide_sequence">http://en.wikipedia.org/wiki/Peptide_sequence</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000104">SO_0000104</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -1307,7 +1315,7 @@
   <div><i>Label:</i> Phenotype</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A phenotype description represents additional information about a sequenced individual&apos;s phenotype. A sequenced individual is represented by instances of the <a href="#classSequencedIndividual">Sequenced Individual</a> class.<br>Encodes for the &quot;phenotype-description&quot; structured pragma in GVF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Phenotype">http://en.wikipedia.org/wiki/Phenotype</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010056">SIO_010056</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010056">SIO_010056</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -1316,7 +1324,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classScore">Score</a></div>
   <div><i>Label:</i> Phred Score</div>
-  <div><i>Comment:</i> <div style="margin-left: 50px;">The Phred score can be used to assign quality scores to base calls of DNA sequences.<br>GVF supports the use of Phred scores in the &quot;score&quot; column, but this information needs to be obtained/given by the data provider. In VCF files, the &quot;QUAL&quot; column and &quot;PL&quot;, &quot;HQ&quot;, and &quot;PQ&quot; additional information carries Phred scores that can be encoded as <a href="#classPhredScore">Phred Score</a>.</div></div>
+  <div><i>Comment:</i> <div style="margin-left: 50px;">The Phred score can be used to assign quality scores to base calls of DNA sequences.<br>GVF supports the use of Phred scores in the &quot;score&quot; column, but this information needs to be obtained/given by the data provider. In VCF files, the &quot;QUAL&quot; column and &quot;PL&quot;, &quot;HQ&quot;, and &quot;PQ&quot; additional information carries Phred scores that can be encoded as <a href="#classPhredScore">Phred Score</a>.<br>GFVO&apos;s <a href="#classScore">Score</a> and <a href="#classPhredScore">Phred Score</a> cannot be defined as equivalent to the Sequence Ontology terms &quot;score&quot; (SO:0001685) and &quot;quality_value&quot; (SO:0001686) due to differences in inheritance between the two ontology implementations. GFVO defines <a href="#classPhredScore">Phred Score</a> as a subclass of <a href="#classScore">Score</a>, but the Sequence Ontology defines &quot;score&quot; as a sibling of &quot;quality_value&quot;.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Phred_score">http://en.wikipedia.org/wiki/Phred_score</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
@@ -1336,7 +1344,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Label:</i> Process</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A process denotes a temporally dependent entity. It can be thought of as a function, where input data is transformed by an algorithm to produce certain output data.<br>Since a process describes a large number of entities, its direct use is discouraged. At least <a href="#classExperimentalMethod">Experimental Method</a> or one of its subclasses should be used instead.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000006">SIO_000006</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000006">SIO_000006</a></div>
   <div></div>
   </div>
 </p>
@@ -1347,7 +1355,7 @@
   <div><i>Label:</i> Protein Sequence</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A protein sequence is a peptide sequence which represents the primary structure of a protein.<br>Encodes for &quot;sequencing-scope&quot; pragma in GVF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Peptide_sequence">http://en.wikipedia.org/wiki/Peptide_sequence</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010015">SIO_010015</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010015">SIO_010015</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -1367,7 +1375,7 @@
   <div><i>Subclass of:</i> <a href="#classAttribute">Attribute</a></div>
   <div><i>Label:</i> Quality</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">Quality is a specific attribute that is strongly associated with an entity, but whose values are varying and disjunct. Qualities are finite enumerations, such as sex (<a href="#classFemale">Female</a>, <a href="#classMale">Male</a>, <a href="#classHermaphrodite">Hermaphrodite</a>), heritage (&quot;Maternal&quot;, &quot;Paternal&quot;), but they also make use of the <a href="#datatypePropertyhasValue">has value</a> datatype property such as <a href="#classCodingFrameOffset">Coding Frame Offset</a> (either &quot;0&quot;, &quot;1&quot; or &quot;2&quot;).<br>For encoding numerical qualities, see <a href="#classBaseQuality">Base Quality</a> and <a href="#classMappingQuality">Mapping Quality</a>, or, <a href="#classPhredScore">Phred Score</a> and <a href="#classConditionalGenotypeQuality">Conditional Genotype Quality</a>, which are sub-classes of <a href="#classScore">Score</a>.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000005">SIO_000005</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000005">SIO_000005</a></div>
   <div></div>
   </div>
 </p>
@@ -1377,7 +1385,7 @@
   <div><i>Subclass of:</i> <a href="#classObject">Object</a></div>
   <div><i>Label:</i> Quantity</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A property of a phenomenon, body, or substance, where the property has a value that can be expressed by means of a number. This class is typically not directly instantiated, but instead, its subclasses <a href="#classAlleleFrequency">Allele Frequency</a>, <a href="#classAverageCoverage">Average Coverage</a>, etc. are used.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000052">SIO_000052</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000052">SIO_000052</a></div>
   <div></div>
   </div>
 </p>
@@ -1426,7 +1434,7 @@
   <div><i>Label:</i> Sample</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A sample is a limited quantity of a chemical entity, which is typically used (destructively/non-desctructively) in a scientific analysis or test.<br>It can be applied to describe contents of the &quot;sample-description&quot; pragma in GVF files or the &quot;SAMPLE&quot; information field in VCF files.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Sample_(material)">http://en.wikipedia.org/wiki/Sample_(material)</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001050">SIO_001050</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_001050">SIO_001050</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -1456,6 +1464,7 @@
   <div><i>Label:</i> Scaffold</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A scaffold is the aggregation of multiple contigs to form a larger continuous sequencing region. <a href="#classScaffold">Scaffold</a> is a specialization of a <a href="#classCollection">Collection</a> and should be used to aggregate features, but not for indicating that a <a href="#classLandmark">Landmark</a> is representing a scaffold. It is encouraged that the latter is annotated by a term of the Sequence Ontology.<br>Encodes for &quot;sequencing-scope&quot; in GVF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Contig">http://en.wikipedia.org/wiki/Contig</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000148">SO_0000148</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -1464,7 +1473,7 @@
   <div style="margin-left: 16px; margin-bottom: 16px">
   <div><i>Subclass of:</i> <a href="#classObject">Object</a></div>
   <div><i>Label:</i> Score</div>
-  <div><i>Comment:</i> <div style="margin-left: 50px;">A measure that permits the ranking of entities.<br>Directly encodes for the &quot;score&quot; column in GFF3, GTF and GVF files; if the actual scoring algorithm is known, then <a href="#classPhredScore">Phred Score</a> might be used to encode for the values of the &quot;score&quot; column in GVF files. The class can encapsule information of the &quot;score-method&quot; pragma in GVF files. For VCF files, the subclasses <a href="#classPhredScore">Phred Score</a> and <a href="#classConditionalGenotypeQuality">Conditional Genotype Quality</a> should be used.</div></div>
+  <div><i>Comment:</i> <div style="margin-left: 50px;">A measure that permits the ranking of entities.<br>Directly encodes for the &quot;score&quot; column in GFF3, GTF and GVF files; if the actual scoring algorithm is known, then <a href="#classPhredScore">Phred Score</a> might be used to encode for the values of the &quot;score&quot; column in GVF files. The class can encapsule information of the &quot;score-method&quot; pragma in GVF files. For VCF files, the subclasses <a href="#classPhredScore">Phred Score</a> and <a href="#classConditionalGenotypeQuality">Conditional Genotype Quality</a> should be used.<br>GFVO&apos;s <a href="#classScore">Score</a> and <a href="#classPhredScore">Phred Score</a> cannot be defined as equivalent to the Sequence Ontology terms &quot;score&quot; (SO:0001685) and &quot;quality_value&quot; (SO:0001686) due to differences in inheritance between the two ontology implementations. GFVO defines <a href="#classPhredScore">Phred Score</a> as a subclass of <a href="#classScore">Score</a>, but the Sequence Ontology defines &quot;score&quot; as a sibling of &quot;quality_value&quot;.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Score_(statistics)">http://en.wikipedia.org/wiki/Score_(statistics)</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
@@ -1475,7 +1484,7 @@
   <div><i>Subclass of:</i> <a href="#classChemicalEntity">ChemicalEntity</a></div>
   <div><i>Label:</i> Sequence</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A sequence provides information about any biopolymer sequences. Specialized subclasses are provided to denote specialized instances of sequences, such as <a href="#classCodonSequence">Codon Sequence</a>, <a href="#classReferenceSequence">Reference Sequence</a>, <a href="#classProteinSequence">Protein Sequence</a>, etc.<br>Can be used to encode for the &quot;sequencing-scope&quot; pragma in GVF files. See subclasses for applications in both GFF3 and GVF files.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000030">SIO_000030</a></div>
+  <div><i>External class equivalences:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0000001">SO_0000001</a>,&nbsp;<a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000030">SIO_000030</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -1506,6 +1515,7 @@
   <div><i>Label:</i> Sequence Variant</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">Describing specific sequence alterations of a genomic feature. A variant is related to &quot;Reference&quot; class instances, which denote the sequence that serves as a basis for sequence alteration comparisons.<br>Encodes for the &quot;Variant_seq&quot; attribute in GVF. Captures the &quot;ALT&quot; column and &quot;ALT&quot; information field in VCF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Mutation">http://en.wikipedia.org/wiki/Mutation</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FSO_0001060">SO_0001060</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
@@ -1515,7 +1525,7 @@
   <div><i>Subclass of:</i> <a href="#classBiologicalEntity">BiologicalEntity</a></div>
   <div><i>Label:</i> Sequenced Individual</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">An abstract representation of a particular individual for representing aggregated sequencing information. <a href="#classSequencedIndividual">Sequenced Individual</a> can also be used to denote complex heritage relationships in genomic samples.<br>Encodes for the &quot;individual&quot; attribute and &quot;multi-individual&quot; pragma in GVF.</div></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010000">SIO_010000</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010000">SIO_010000</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-success">GVF</span></div>
   </div>
 </p>
@@ -1536,7 +1546,7 @@
   <div><i>Label:</i> Sex</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">Biological sex of a sequenced individual. Subclasses <a href="#classFemale">Female</a> and <a href="#classMale">Male</a> can be used to encode for the &quot;sex&quot; pragma in GVF files. The subclass <a href="#classHermaphrodite">Hermaphrodite</a> is included for potential future use cases.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Sex">http://en.wikipedia.org/wiki/Sex</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010029">SIO_010029</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_010029">SIO_010029</a></div>
   <div></div>
   </div>
 </p>
@@ -1603,7 +1613,7 @@
   <div><i>Label:</i> Version</div>
   <div><i>Comment:</i> <div style="margin-left: 50px;">A <a href="#classVersion">Version</a> names a release of a software, dataset, or other resource. Versions can follow the common &quot;major.minor.patch&quot; version format, but are not restricted in any way. The version can also incorporate the dataset name (e.g., &quot;HGNC19&quot;).<br>Encodes for the &quot;gff-version&quot; and &quot;gvf-version&quot; pragma statements in GFF3 and GVF, respectively. Encodes for the &quot;gff-version&quot; &quot;##&quot;-line type in GTF. Captures the &quot;fileformat&quot; meta-information line in VCF. Encodes for &quot;file-version&quot; and &quot;technology-platform-version&quot; pragmas in GVF.</div></div>
   <div><i>Wikipedia reference:</i> <a href="http://en.wikipedia.org/wiki/Versioning">http://en.wikipedia.org/wiki/Versioning</a></div>
-  <div><i>Semanticscience Integrated Ontology class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000653">SIO_000653</a></div>
+  <div><i>External class equivalence:</i> <a href="http://bioportal.bioontology.org/ontologies/SIO/?p=classes&conceptid=http%3A%2F%2Fsemanticscience.org%2Fresource%2FSIO_000653">SIO_000653</a></div>
   <div><span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span><span style="margin-right: 4px;" class="badge alert-warning">VCF</span></div>
   </div>
 </p>
