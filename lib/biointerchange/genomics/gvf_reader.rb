@@ -35,6 +35,11 @@ protected
   def add_pragma(feature_set, line)
     line.chomp!
     name, value = line[2..-1].split(/\s/, 2)
+
+    unless value then
+      raise BioInterchange::Exceptions::InputFormatError, "Line #{@linenumber}. Pragma statement is ill-formatted. Expected name/value separation by space, but reading \"#{line}\"."
+    end
+
     value.strip!
 
     # Interpret pragmas, and if not known, delegate to GFF3Reader (in alphabetical order):
