@@ -139,7 +139,7 @@ protected
     # The type might be a SO/SOFA term or SO/SOFA accession:
     begin
       if type.match(/^SO:\d{7}$/) then
-        type = RDF::URI.new("http://www.sequenceontology.org/miso/current_release/term/#{feature.type}")
+        type = RDF::URI.new("http://www.sequenceontology.org/miso/current_release/term/#{type}")
       else
         type = BioInterchange::SO.send(BioInterchange.make_safe_label(type))
       end
