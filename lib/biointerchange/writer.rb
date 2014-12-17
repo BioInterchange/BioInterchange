@@ -52,6 +52,8 @@ class Writer
       object_representation = object.to_s
     elsif object.kind_of?(Float) then
       object_representation = object.to_s
+    elsif object.instance_of?(TrueClass) or object.instance_of?(FalseClass) then
+      object_representation = object.to_s
     else
       if datatype then
         object_representation = "\"#{object.to_s}\"^^<#{datatype.to_s}>"

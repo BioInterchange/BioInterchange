@@ -124,6 +124,12 @@ protected
       # ...TODO
       # Everything else:
       else
+        pragma.each_pair { |key, value|
+          custom_uri = RDF::URI.new("#{set_uri}/custom-pragma/#{key}")
+          create_triple(set_uri, @base.has_attribute, custom_uri)
+          create_triple(custom_uri, RDF.type, @base.InformationContentEntity)
+          create_triple(custom_uri, @base.has_value, value)
+        }
       end
     elsif pragma.kind_of?(Array) then
       # VCF section:

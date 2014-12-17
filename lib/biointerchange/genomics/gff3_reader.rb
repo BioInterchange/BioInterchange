@@ -188,7 +188,12 @@ protected
   def add_pragma(feature_set, line)
     line.chomp!
     name, value = line[2..-1].split(/\s/, 2)
-    value.strip!
+
+    if value then
+      value.strip!
+    else
+      value = true
+    end
     
     # Interpret pragmas depending on their definition (sorted alphabetically):
     if name == 'feature-ontology' then
