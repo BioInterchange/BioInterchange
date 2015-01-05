@@ -109,9 +109,11 @@ protected
         create_triple("#{set_uri}/version", RDF.type, @base.Version)
         create_triple("#{set_uri}/version", @base.has_value, "gff-version #{pragma['gff-version']}")
       elsif pragma.has_key?('gvf-version') then
+        create_triple(set_uri.to_s, @base.has_identifier, RDF::URI.new("#{set_uri}/version"))
         create_triple("#{set_uri}/version", RDF.type, @base.Version)
         create_triple("#{set_uri}/version", @base.has_value, "gvf-version #{pragma['gvf-version']}")
       elsif pragma.has_key?('fileformat') then
+        create_triple(set_uri.to_s, @base.has_identifier, RDF::URI.new("#{set_uri}/version"))
         create_triple("#{set_uri}/version", RDF.type, @base.Version)
         create_triple("#{set_uri}/version", @base.has_value, "fileformat #{pragma['fileformat']}")
       elsif pragma.has_key?('sequence-region') then
