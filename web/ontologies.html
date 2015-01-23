@@ -71,6 +71,7 @@
               <li><a href="#example2">Example 2: Encoding of a Sequence Alignment</a></li>
               <li><a href="#example3">Example 3: Phased and Unphased Genotype and its Sequence Variants</a></li>
               <li><a href="#example4">Example 4: Encoding of a Phred Score</a></li>
+              <li><a href="#example5">Example 5: Encoding of Sequence Variants, Samples and Data Filters</a></li>
             </ol>
             <li><a href="#ontologyReference">Ontology Reference</a></li>
           </ol>
@@ -248,7 +249,6 @@
           <p>Encoding loci and basic genomic feature annotations. The example covers lines 0-3 of the example gene description given in the <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3 specification</a>.</p>
 <pre style="font-size: 10px; line-height: 13px;">
 @prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix faldo: &lt;http://biohackathon.org/resource/faldo#&gt; .
 @prefix so: &lt;http://purl.bioontology.org/ontology/SO/SO&gt; .
 
@@ -261,128 +261,114 @@
 #    given in the GFF3 specification.
 #           (http://www.sequenceontology.org/resources/gff3.html)
 #
-#    Please note that this seemingly verbose data representation
-#    is slighly misleading. The reuse of non-literals as well as
-#    binary RDF encodings such as RDF/HDT permits a more concise
-#    representation of the same data.
-#
-#    This example also avoids blank nodes, so that this file can
-#    be conveniently viewed using the Protege ontology editor.
-#    Using blank nodes, the line
-#
-#        :hasIdentifier :ExampleSet1Feature1Identifier ;
-#
-#    can be substituted with
-#
-#        :hasIdentifier [
-#            a :Identifier ;
-#            :hasValue &quot;gene00001&quot; ;
-#        ]
-#
 #################################################################
 
-# This example is representing the contents of a GFF3 file, version 3.
-:Example1Version a :Version ;
-                 :hasValue &quot;gff-version 3&quot; .
-
-# Two genomic features are described in the file, where an extra comment
-# was added to clarify the provenance of this example representation.
 :ExampleSet1 a :File ;
-             :hasIdentifier :Example1Version ;
+             :hasIdentifier
+               [
+                 a :Version ;
+                 :hasValue &quot;gff-version 3&quot; .
+               ] ;
              :hasMember :ExampleSet1Feature1 ,
-                        :ExampleSet1Feature2 ;
-             rdfs:comment &quot;A simple example of a hierarchical genomic feature dependency. This example is an excerpt of another example given in the GFF3 specification (http://sequenceontology.org/resources/gff3.html).&quot;@en .
+                        :ExampleSet1Feature2 .
 
-# Features in this example are placed on a single langmark, which has
+# Feature 1: a gene
+:ExampleSet1Feature1 a :Feature ,
+                     so:0000704 ;
+                     :isLocatedOn :ExampleSet1Landmark ;
+                     :hasPart
+                       [
+                         a :Locus ;
+                         :hasAttribute
+                           [
+                             a faldo:Region ;
+                             faldo:begin
+                               [
+                                 a faldo:ExactPosition ;
+                                 faldo:position 1000 .
+                               ] ;
+                             faldo:end
+                               [
+                                 a faldo:ExactPosition ;
+                                 faldo:position 9000 .
+                               ] .
+                           ] .
+                       ] ;
+                     :hasIdentifier
+                       [
+                         a :Identifier ;
+                         :hasValue &quot;gene00001&quot; .
+                       ] ;
+                     :hasAttribute
+                       [
+                         a :Name ;
+                         :hasValue &quot;EDEN&quot; ;
+                         :hasAttribute
+                           [
+                             a :Label ;
+                             :hasValue &quot;Name&quot; .
+                           ] .
+                       ] .
+
+# Feature 2: a transcription factor binding site
+:ExampleSet1Feature2 a :Feature ,
+                     so:0000235 ;
+                     :isLocatedOn :ExampleSet1Landmark ;
+                     :hasPart
+                       [
+                         a :Locus ;
+                         :hasAttribute
+                           [
+                             a faldo:Region ;
+                             faldo:begin
+                               [
+                                 a faldo:ExactPosition ;
+                                 faldo:position 1000 .
+                               ] ;
+                             faldo:end
+                               [
+                                 a faldo:ExactPosition ;
+                                 faldo:position 1012 .
+                               ] .
+                           ] .
+                       ] ;
+                     :hasIdentifier
+                       [
+                         a :Identifier ;
+                         :hasValue &quot;tfbs00001&quot; .
+                       ] ;
+                     :hasSource :ExampleSet1Feature1 .
+
+# Features in this example are placed on a single landmark, which has
 # an identifier associated with it (it cannot be anonymous in GFF3, even
 # though GFVO permits landmarks without explicit identifier), and it
 # has a range of sequence positions it covers (expressed by a separate
 # pragma statement in GFF3).
 :ExampleSet1Landmark a :Landmark ;
-                     :hasIdentifier :ExampleSet1LandmarkIdentifier ;
-                     :hasAttribute :ExampleSet1LandmarkRegion .
-
-:ExampleSet1LandmarkIdentifier a :Identifier ;
-                               :hasValue &quot;ctg123&quot; .
-
-:ExampleSet1LandmarkRegion a faldo:Region ;
-                           faldo:begin :ExampleSet1LandmarkStartPosition ;
-                           faldo:end :ExampleSet1LandmarkEndPosition .
-
-:ExampleSet1LandmarkStartPosition a faldo:ExactPosition ;
-                                  faldo:position &quot;1&quot; .
-
-:ExampleSet1LandmarkEndPosition a faldo:ExactPosition ;
-                                faldo:position &quot;1497228&quot; .
-
-# GFF3, GTF and GVF make use of named attributes. There are predefined (reserved)
-# names, but users can also freely contribute their own attributes. In this example,
-# only one labeled attribute is used, whose name we define upfront.
-#
-# Note: It might be a bit confusing that the label "Name" is applied to an attribute
-#       of type "Name". This is just an artifact of the chosen example and it is of
-#       course possible to label a "Name" attribute arbitrarily.
-:ExampleSet1AttributeName a :Label ;
-                          :hasValue &quot;Name&quot; .
-
-# First feature of the GFF3 file (line 2): a gene.
-:ExampleSet1Feature1 a :Feature ,
-                       so:0000704 ;
-                     :isLocatedOn :ExampleSet1Landmark ;
-                     :hasPart :ExampleSet1Feature1Locus ;
-                     :hasIdentifier :ExampleSet1Feature1Identifier ;
-                     :hasAttribute :ExampleSet1Feature1Name .
-
-:ExampleSet1Feature1Locus a :Locus ;
-                          :hasAttribute :ExampleSet1Feature1Region .
-
-:ExampleSet1Feature1Region a faldo:Region ;
-                           faldo:begin :ExampleSet1FeatureStartPosition ;
-                           faldo:end :ExampleSet1Feature1EndPosition .
-
-# The start coordinate of both features is the same in this example. So this
-# entity is used by both :ExampleSet1Feature1 and :ExampleSet1Feature2.
-:ExampleSet1FeatureStartPosition a faldo:ExactPosition ;
-                                 faldo:position &quot;1000&quot; .
-
-:ExampleSet1Feature1EndPosition a faldo:ExactPosition ;
-                                faldo:position &quot;9000&quot; .
-
-:ExampleSet1Feature1Identifier a :Identifier ;
-                               :hasValue &quot;gene00001&quot; .
-
-:ExampleSet1Feature1Name a :Name ;
-                         :hasAttribute :ExampleSet1AttributeName ;
-                         :hasValue &quot;EDEN&quot; .
-
-# Second feature of the GFF3 file (line 3): a transcription factor
-# binding site.
-# It references the first feature via a &quot;Parent&quot; attribute.
-:ExampleSet1Feature2 a :Feature ,
-                       so:0000235 ;
-                     :isLocatedOn :ExampleSet1Landmark ;
-                     :hasPart :ExampleSet1Feature2Locus ;
-                     :hasIdentifier :ExampleSet1Feature2Identifier ;
-                     :hasSource :ExampleSet1Feature1 .
-
-:ExampleSet1Feature2Locus a :Locus ;
-                          :hasAttribute :ExampleSet1Feature1Region .
-
-:ExampleSet1Feature2Region a faldo:Region ;
-                           faldo:begin :ExampleSet1FeatureStartPosition ;
-                           faldo:end :ExampleSet1Feature2EndPosition .
-
-:ExampleSet1Feature2EndPosition a faldo:ExactPosition ;
-                                faldo:position &quot;1012&quot; .
-
-:ExampleSet1Feature2Identifier a :Identifier ;
-                               :hasValue &quot;tfbs00001&quot; .
+                     :hasIdentifier
+                       [
+                         a :Identifier ;
+                         :hasValue &quot;ctg123&quot; .
+                       ] ;
+                     :hasAttribute
+                       [
+                         a faldo:Region ;
+                         faldo:begin
+                           [
+                             a faldo:ExactPosition ;
+                             faldo:position 1 .
+                           ] ;
+                         faldo:end
+                           [
+                             a faldo:ExactPosition ;
+                             faldo:position 1497228 .
+                           ] .
+                       ] .
 </pre>
           <h4 id="example2">Example 2: Encoding of a Sequence Alignment</h4>
           <p>Encoding of a sequence alignment. This is part of the <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3 specification</a>, denoting the alignment between the reference sequence &quot;chr3&quot; and the target sequence &quot;EST23&quot;.</p>
 <pre style="font-size: 10px; line-height: 13px;">
 @prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix faldo: &lt;http://biohackathon.org/resource/faldo#&gt; .
 @prefix so: &lt;http://purl.bioontology.org/ontology/SO/SO&gt; .
 
@@ -399,103 +385,112 @@
 
 :ExampleSet2 a :Collection ;
              :hasMember :ExampleSet2Feature1 ,
-                        :ExampleSet2Feature2 ;
-             rdfs:comment &quot;An example of a sequence alignment. This example is an excerpt of another example given in the GFF3 specification (http://sequenceontology.org/resources/gff3.html).&quot;@en .
+                        :ExampleSet2Feature2 .
 
 :ExampleSet2Landmark a :Landmark ;
-                     :hasIdentifier :ExampleSet2LandmarkIdentifier .
-
-:ExampleSet2LandmarkIdentifier a :Identifier ;
-                               :hasValue &quot;chr3&quot; .
+                     :hasIdentifier
+                       [
+                         a :Identifier ;
+                         :hasValue &quot;chr3&quot; .
+                       ] .
 
 # Reference sequence feature:
 :ExampleSet2Feature1 a :Feature ;
                      :isLocatedOn :ExampleSet2Landmark ;
-                     :hasIdentifier :ExampleSet2Feature1Identifier .
-
-:ExampleSet1Feature1Identifier a :Identifier ;
-                               :hasValue &quot;Match1&quot; .
+                     :hasIdentifier
+                       [
+                         a :Identifier ;
+                         :hasValue &quot;Match1&quot; .
+                       ] .
 
 # Target sequence feature:
-:ExampleSet2Feature2 a :Feature ;
+:ExampleSet2Feature2 a :Feature ,
                        so:0000343 ;
                      :isLocatedOn :ExampleSet2Landmark ;
-                     :hasIdentifier :ExampleSet2Feature2Identifier .
-
-:ExampleSet1Feature2Identifier a :Identifier ;
-                               :hasValue &quot;EST23&quot; .
+                     :hasIdentifier
+                       [
+                         a :Identifier ;
+                         :hasValue &quot;EST23&quot; .
+                       ] .
 
 # Description of the sequence alignment between :ExampleSet2Feature1
 # and :ExampleSet2Feature2 (features &quot;Match1&quot; and &quot;EST23&quot;).
-:ExampleSet2SequenceAlignment a :SequenceAlignment ;
-                              :hasAttribute :ExampleSet2AlignmentLocus ;
-                              :hasSource :ExampleSet2Feature1 ;
-                              :hasInput :ExampleSet2Feature2 ;
-                              :hasFirstPart :ExampleSet2AlignmentOperation1 ;
-                              :hasOrderedPart :ExampleSet2AlignmentOperation2 ,
-                                              :ExampleSet2AlignmentOperation3 ,
-                                              :ExampleSet2AlignmentOperation4 ;
-                              :hasLastPart :ExampleSet2AlignmentOperation5 .
+:ExampleSet2SeqAlignment a :SequenceAlignment ;
+                         :hasAttribute
+                           [
+                             a :Locus ;
+                             :hasAttribute
+                               [
+                                 a faldo:Region ;
+                                 faldo:begin
+                                   [
+                                     a faldo:ExactPosition ;
+                                     faldo:position 1 .
+                                   ] ;
+                                 faldo:end
+                                   [
+                                     a faldo:ExactPosition ;
+                                     faldo:position 21 .
+                                   ] .
+                               ] .
+                           ] ;
+                         :hasSource :ExampleSet2Feature1 ;
+                         :hasInput :ExampleSet2Feature2 ;
+                         :hasFirstPart :ExampleSet2AlignmentOp1 ;
+                         :hasOrderedPart :ExampleSet2AlignmentOp2 ,
+                                         :ExampleSet2AlignmentOp3 ,
+                                         :ExampleSet2AlignmentOp4 ;
+                         :hasLastPart :ExampleSet2AlignmentOp5 .
 
-# The locus describes the region over which the alignment operation
-# is being carried out.
-:ExampleSet2AlignmentLocus a :Locus ;
-                           :hasAttribute :ExampleSet2AlignmentRegion .
+# Details about the alignment operations: their type and sequence spans
 
-:ExampleSet2AlignmentRegion a faldo:Region ;
-                            faldo:begin :ExampleSet2AlignmentStartPosition ;
-                            faldo:end :ExampleSet2AlignmentEndPosition .
+:ExampleSet2AlignmentOp1 a :Match ;
+                         :hasAttribute
+                           [
+                             a :Span ;
+                             :hasValue 8 .
+                           ] ;
+                         :isBefore :ExampleSet2AlignmentOp2 .
 
-:ExampleSet2AlignmentStartPosition a faldo:ExactPosition ;
-                                   faldo:position &quot;1&quot; .
+:ExampleSet2AlignmentOp2 a :TargetSequenceGap ;
+                         :hasAttribute
+                           [
+                             a :Span ;
+                             :hasValue 3 .
+                           ] ;
+                         :isAfter :ExampleSet2AlignmentOp1 ;
+                         :isBefore :ExampleSet2AlignmentOp3 .
 
-:ExampleSet2AlignmentEndPosition a faldo:ExactPosition ;
-                                 faldo:position &quot;21&quot; .
+:ExampleSet2AlignmentOp3 a :Match ;
+                         :hasAttribute
+                           [
+                             a :Span ;
+                             :hasValue 6 .
+                           ] ;
+                         :isAfter :ExampleSet2AlignmentOp2 ;
+                         :isBefore :ExampleSet2AlignmentOp4 .
 
-# Description of an actual alignment operation.
-:ExampleSet2AlignmentOperation1 rdf:type :Match ;
-                                :hasAttribute ::ExampleSet2AlignmentOperation1Span ;
-                                :isBefore :ExampleSet2AlignmentOperation2 .
+:ExampleSet2AlignmentOp4 a :ReferenceSequenceGap ;
+                         :hasAttribute
+                           [
+                             a :Span ;
+                               :hasValue 1 .
+                           ] ;
+                         :isAfter :ExampleSet2AlignmentOp3 ;
+                         :isBefore :ExampleSet2AlignmentOp5 .
 
-:ExampleSet2AlignmentOperation1Span a :Span ;
-                                    :hasValue &quot;8&quot; .
-
-:ExampleSet2AlignmentOperation2 rdf:type :TargetSequenceGap ;
-                                :hasAttribute ::ExampleSet2AlignmentOperation2Span ;
-                                :isAfter :ExampleSet2AlignmentOperation1 ;
-                                :isBefore :ExampleSet2AlignmentOperation3 .
-
-:ExampleSet2AlignmentOperation2Span a :Span ;
-                                    :hasValue &quot;3&quot; .
-
-:ExampleSet2AlignmentOperation3 rdf:type :Match ;
-                                :hasAttribute ::ExampleSet2AlignmentOperation3Span ;
-                                :isAfter :ExampleSet2AlignmentOperation2 ;
-                                :isBefore :ExampleSet2AlignmentOperation4 .
-
-:ExampleSet2AlignmentOperation3Span a :Span ;
-                                    :hasValue &quot;6&quot; .
-
-:ExampleSet2AlignmentOperation4 rdf:type :ReferenceSequenceGap ;
-                                :hasAttribute ::ExampleSet2AlignmentOperation4Span ;
-                                :isAfter :ExampleSet2AlignmentOperation3 ;
-                                :isBefore :ExampleSet2AlignmentOperation5 .
-
-:ExampleSet2AlignmentOperation4Span a :Span ;
-                                    :hasValue &quot;1&quot; .
-
-:ExampleSet2AlignmentOperation5 rdf:type :Match ;
-                                :hasAttribute ::ExampleSet2AlignmentOperation5Span ;
-                                :isAfter :ExampleSet2AlignmentOperation4 .
-
-:ExampleSet2AlignmentOperation5Span a :Span ;
-                                    :hasValue &quot;6&quot; .
+:ExampleSet2AlignmentOp5 a :Match ;
+                         :hasAttribute
+                           [
+                             a :Span ;
+                             :hasValue 6 .
+                           ] ;
+                         :isAfter :ExampleSet2AlignmentOp4 .
 </pre>
           <h4 id="example3">Example 3: Phased and Unphased Genotype and its Sequence Variants</h4>
           <p>Encoding of a phased/unphased genotype and its sequence variants. This is part of the GVF specification, denoting two variants for two separate sequenced individuals: &quot;Variant_seq=A,T;Genotype=0:1,1:1&quot;. See &quot;Genotype&quot; in the <a href="http://www.sequenceontology.org/resources/gvf.html">GVF specification</a>.</p>
 <pre style="font-size: 10px; line-height: 13px;">
 @prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 
 #################################################################
 #
@@ -510,14 +505,14 @@
 #################################################################
 
 :ExampleSet3 a :Collection ;
-             :hasMember :ExampleSet3Feature1 ;
-             rdfs:comment &quot;Encoding of genotypes/sequence variants. This example is part of the GVF specification, denoting two variants for two separate sequenced individuals (http://www.sequenceontology.org/resources/gvf.html).&quot;@en .
+             :hasMember :ExampleSet3Feature1 .
 
-# The individuals that were sequenced are represented by named, but otherwise
-# unspecified, instances. This provides sufficient information to distinguish
-# between the individuals that were sequenced.
-:ExampleSet3SequencedIndividual1 rdf:type :SequencedIndividual .
-:ExampleSet3SequencedIndividual2 rdf:type :SequencedIndividual .
+# The individuals that were sequenced are represented by named,
+# but otherwise unspecified, instances. This provides sufficient
+# information to distinguish between the individuals that were
+# sequenced.
+:ExampleSet3SequencedIndividual1 a :SequencedIndividual .
+:ExampleSet3SequencedIndividual2 a :SequencedIndividual .
 
 # Genomic feature that captures the two described genotypes.
 :ExampleSet3Feature1 a :Feature ;
@@ -525,21 +520,16 @@
                                    :ExampleSet3Genotype2 .
 
 # Genotype for the first individual.
-#
-# The genotype's phased variants are linked via &quot;hasFirstPart&quot; and
-# &quot;hasLastPart&quot; here, which are descendants of &qout;hasOrderedPart&quot;.
-# The object properties &quot;isBefore&quot;/&quot;isAfter&quot; connect the phased variants.
-#
-# Note: for an unphased genotype, it is sufficient to use &quot;hasPart&quot; only.
 :ExampleSet3Genotype1 a :Genotype ;
                       :hasParticipant :ExampleSet3SequencedIndividual1 ;
-                      :hasQuality :Heterozygous ;
-                      :hasAttribute :ExampleSet3Phase ;
+                      :hasQuality :Heterozygous ,
+                                  :GameticPhase ;
                       :hasFirstPart :ExampleSet3ReferenceA_AT ;
                       :hasLastPart :ExampleSet3VariantT_AT .
 
 # Ordering of the variants permits the expression of phased genotypes.
-# It is recommended to use &quot;isBefore&quot;, but the use of &quot;isAfter&quot; is optional.
+# It is recommended to use &quot;isBefore&quot;, but the use of &quot;isAfter&quot; is
+# optional.
 :ExampleSet3ReferenceA_AT :isBefore :ExampleSet3VariantT_AT .
 :ExampleSet3VariantT_AT :isAfter :ExampleSet3ReferenceA_AT .
 
@@ -547,27 +537,22 @@
 :ExampleSet3Genotype2 a :Genotype ;
                       :hasParticipant :ExampleSet3SequencedIndividual2 ;
                       :hasQuality :Homozygous ;
-                      :hasAttribute :ExampleSet3Phase ;
+                      :hasAttribute
+                        [
+                          a :GameticPhase .
+                        ] ;
                       :hasFirstPart :ExampleSet3VariantT_TT ;
                       :hasLastPart :ExampleSet3VariantT_TT .
 
-# As above: variant ordering to phase the genotype.
+# As above: variant ordering to phase the genotype.        
 :ExampleSet3VariantT_TT :isBefore :ExampleSet3VariantT_TT ;
                         :isAfter :ExampleSet3VariantT_TT .
-
-# Having an instance to denote the presence of phase information
-# might appear redundant across data sets. On the other hand, it
-# permits data providers to enrich their own or other providers'
-# data set with additional information (annotations) about used
-# protocols/equipment/tools.
-:ExampleSet3Phase a :GameticPhase .
 
 # For VCF data, the type can also be &quot;ReferenceSequence&quot;, which
 # denotes that the sequence is located on a reference genome. This
 # would be indicated -- in a VCF file -- by a &quot;0&quot; in the GT field
-# (e.g., &quot;0|1&quot; (phased) or &quot;0/1&quot; (unphased) to indicate a genotype
-# whose first allele is on the reference genome and the second allele
-# is an alternative allele).
+# (e.g., &quot;0/1&quot; to indicate a genotype whose first allele is on the
+# reference genome and the second allele is an alternative allele).
 :ExampleSet3ReferenceA_AT a :ReferenceSequence ;
                           :hasValue &quot;A&quot; .
 
@@ -577,11 +562,36 @@
 :ExampleSet3VariantT_TT a :SequenceVariant ;
                         :hasValue &quot;T&quot; .
 </pre>
+          <p>In order to encode for an unphased genotype, the following can be used:</p>
+<pre style="font-size: 10px; line-height: 13px;">
+@prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
+
+:ExampleSet3a a :Collection ;
+              :hasMember :ExampleSet3aFeature1 .
+
+:ExampleSet3aSequencedIndividual1 a :SequencedIndividual .
+
+# Genomic feature that captures an unphased genotype.
+:ExampleSet3aFeature1 a :Feature ;
+                      :hasAttribute :ExampleSet3aGenotype1 .
+
+:ExampleSet3aGenotype1 a :Genotype ;
+                       :hasParticipant :ExampleSet3aSequencedIndividual1 ;
+                       :hasQuality :Heterozygous ;
+                       :hasPart
+                         [
+                           a :ReferenceSequence ;
+                           :hasValue &quot;A&quot; .
+                         ] ,
+                         [
+                           a :SequenceVariant ;
+                           :hasValue &quot;T&quot; .
+                         ] .
+</pre>
           <h4 id="example4">Example 4: Encoding of a Phred Score</h4>
           <p>Encoding of a Phred score, which is part of the GVF specification, but more widely utilized in the VCF specification.</p>
 <pre style="font-size: 10px; line-height: 13px;">
 @prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 
 #################################################################
 #                                                                
@@ -597,18 +607,576 @@
 #                                                                
 #################################################################
                                                                  
-:ExampleSet4 a :Collection ;                                     
-             :hasMember :ExampleSet4Feature1 ;                   
-             rdfs:comment &quot;Encoding of a Phred score. This example is motivated by the GVF specification, which encourages -- but does not enforce -- the use of Phred scores (http://www.sequenceontology.org/resources/gvf.html).&quot;@en .
-                                                                 
-# Interpreting &quot;score&quot; (column 6) of a GVF file as Phred score.  
-:ExampleSet4Feature1 a :Feature ;                                
-                     :hasAttribute :ExampleSet4Feature1Score .   
-                                                                 
-# Use of &quot;PhredScore&quot; instead of &quot;Score&quot; to denote the specific  
+:ExampleSet4 a :Collection ;
+             :hasMember :ExampleSet4Feature1 .
+
+# Interpreting &quot;score&quot; (column 6) of a GVF file as Phred score.
+# Uses &quot;PhredScore&quot; instead of &quot;Score&quot; to denote the specific
 # type of score being used.
-:ExampleSet4Feature1Score a :PhredScore ;                        
-                          :hasValue 38 .
+:ExampleSet4Feature1 a :Feature ;
+                     :hasAttribute
+                       [
+                         a :PhredScore ;
+                         :hasValue 38 .
+                       ] .
+</pre>
+          <h4 id="example5">Example 5: Encoding of Sequence Variants, Samples and Data Filters</h4>
+          <p>VCF files permit annotation of genomic features using data filters (pass/fail criteria). The following example is based on the example VCF contents given in the VCF 4.2 specification.</p>
+<pre style="font-size: 10px; line-height: 13px;">
+@prefix : &lt;http://www.biointerchange.org/gfvo#&gt; .
+@prefix faldo: &lt;http://biohackathon.org/resource/faldo#&gt; .
+@prefix so: &lt;http://purl.bioontology.org/ontology/SO/SO&gt; .
+
+#################################################################
+#                                                                
+#    Example 5                                                   
+#                                                                
+#    Encoding of VCF file sequence variants, their respective
+#    sample values, and the application of pass/fail filters.
+#    (See VCF 4.2 specification at
+#     http://samtools.github.io/hts-specs/VCFv4.2.pdf)
+#                                                                
+#################################################################
+                                                                 
+:ExampleSet5 a :File ;
+             :hasIdentifier
+               [
+                 a :Version ;
+                 :hasValue &quot;fileformat 4.2&quot; .
+               ] ;
+             :hasMember :ExampleSet5Feature1 ,
+                        :ExampleSet5Feature2 .
+
+#
+# INFO section.
+#
+# Note: &quot;Number&quot; and &quot;Type&quot; parameters are implicitly used in the
+#       conversion to RDF. For example, &quot;Float&quot; types are encoded
+#       as RDF floating point entities, whereas &quot;Integer&quot; types
+#       become RDF integer entities.
+#       &quot;ID&quot; assignments are encoded on a per-feature basis, which
+#       is in line with the representation chosen for GFF3/GTF/GVF
+#       file contents. The type of &quot;ID&quot; assignments is a GFVO Label,
+#       since the actual content type is not an identifier in the
+#       sense of GFVO/SIO.
+#
+
+:ExampleSet5Info1 a :Comment ;
+                  :hasValue &quot;Number of Samples With Data&quot; .
+
+:ExampleSet5Info2 a :Comment ;
+                  :hasValue &quot;Total Depth&quot; .
+
+:ExampleSet5Info3 a :Comment ;
+                  :hasValue &quot;Allele Frequency&quot; .
+
+:ExampleSet5Info4 a :Comment ;
+                  :hasValue &quot;HapMap2 membership&quot; .
+
+#
+# FILTER section.
+#
+# Note: Filters are GFVO processes, i.e. &quot;Process&quot; sub-class instances.
+#       As before, &quot;ID&quot; assignments are represented by GFVO &quot;Label&quot;
+#       instances.
+#
+
+:ExampleSet5Filter1 a :VariantCalling ;
+                    :hasAttribute
+                      [
+                        a :Label ;
+                        :hasValue &quot;q10&quot; .
+                      ] ,
+                      [
+                        a :Comment ;
+                        :hasValue &quot;Quality below 10&quot; .
+                      ] ,
+                      [
+                        a :Score ;
+                        xsd:restriction
+                          [
+                            xsd:maxExclusive 10 .
+                          ] .
+                      ] .
+
+:ExampleSet5Filter2 a :VariantCalling ;
+                    :hasAttribute
+                      [
+                        a :Label ;
+                        :hasValue &quot;s50&quot; .
+                      ] ,
+                      [
+                        a :Comment ;
+                        :hasValue &quot;Less than 50% of samples have data&quot; .
+                      ] .
+
+#
+# FORMAT section.
+#
+# Note: &quot;Number&quot; and &quot;Type&quot; parameters are implicitly used in the
+#       conversion to RDF. For example, &quot;String&quot; types are encoded
+#       as RDF string entities, whereas &quot;Integer&quot; types become
+#       RDF integer entities.
+#
+
+# The expression &quot;less than 50%&quot; cannot be expressed using XML Schema.
+# If a formal description is required, then it is suggested to use
+# an RDF representation of MathML for expressing &quot;less than 50%&quot;.
+:ExampleSet5Format1 a :Comment ;
+                    :hasValue &quot;Genotype&quot; ;
+                    :hasAttribute
+                      [
+                        a :Identifier ;
+                        :hasValue &quot;GT&quot; .
+                      ] .
+
+:ExampleSet5Format2 a :Comment ;
+                    :hasValue &quot;Genotype Quality&quot; ;
+                    :hasAttribute
+                      [
+                        a :Label ;
+                        :hasValue &quot;GQ&quot; .
+                      ] .
+
+:ExampleSet5Format3 a :Comment ;
+                    :hasValue &quot;Read Depth&quot; ;
+                    :hasAttribute
+                      [
+                        a :Label ;
+                        :hasValue &quot;DP&quot; .
+                      ] .
+
+:ExampleSet5Format4 a :Comment ;
+                    :hasValue &quot;Haplotype Quality&quot; ;
+                    :hasAttribute
+                      [
+                        a :Label ;
+                        :hasValue &quot;HQ&quot; .
+                      ] .
+
+#
+# Sample labels.
+#
+# Sample labels are taken from columns 10 and above of the &quot;#CHROM&quot; line.
+#
+
+:ExampleSet5Sample1 a :BiologicalEntity ;
+                    :hasAttribute
+                      [
+                        a :Identifier ;
+                        :hasValue &quot;NA00001&quot; .
+                      ] .
+
+:ExampleSet5Sample2 a :BiologicalEntity ;
+                    :hasAttribute
+                      [
+                        a :Identifier ;
+                        :hasValue &quot;NA00002&quot; .
+                      ] .
+
+:ExampleSet5Sample3 a :BiologicalEntity ;
+                    :hasAttribute
+                      [
+                        a :Identifier ;
+                        :hasValue &quot;NA00003&quot; .
+                      ] .
+
+#
+# &quot;contig&quot; line; definition of a genomic landmark.
+#
+:ExampleSet5Contig20 a :Landmark ,
+                       so:0000340 ;
+                     :isPartOf
+                       [
+                         a :Genome ;
+                         :hasValue &quot;B36&quot; .
+                       ] ;
+                     :hasAttribute
+                       [
+                         a :Identifier ;
+                         :hasValue &quot;20&quot; .
+                       ] ,
+                       [
+                         a faldo:Region ;
+                         faldo:begin
+                           [
+                             a faldo:ExactPosition ;
+                             faldo:position 1 .
+                           ] ;
+                         faldo:end
+                           [
+                             a faldo:ExactPosition ;
+                             faldo:position 62435964 .
+                           ] .
+                       ] ,
+                       [
+                         a :InformationContentEntity ;
+                         :hasValue &quot;f126cdf8a6e0c7f379d618ff66beb2da&quot; ;
+                         :hasAttribute
+                           [
+                             a :Label ;
+                             :hasValue &quot;md5&quot; .
+                           ] .
+                       ] ,
+                       [
+                         a :Reference ;
+                         :hasValue &quot;Homo sapiens&quot; ;
+                         :refersTo &lt;http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606&gt; ;
+                         :hasAttribute
+                           [
+                             a :Label ;
+                             :hasValue &quot;species&quot; .
+                           ] .
+                       ] .
+
+#
+# Genomic feature descriptions.
+#
+
+:ExampleSet5Feature1 a :Feature ;
+                     :isLocatedOn :ExampleSet5Contig20 ;
+                     :hasPart
+                       [
+                         a :Locus ;
+                         :hasAttribute
+                           [
+                             a faldo:ExactPosition ;
+                             faldo:position 14370 .
+                           ] .
+                       ] ;
+                     :hasIdentifier
+                       [
+                         a :Identifier ;
+                         :hasValue &quot;rs6054257&quot; .
+                       ] ;
+                     :hasAttribute
+                       [
+                         a :ReferenceSequence ;
+                         :hasValue &quot;G&quot; .
+                       ] ,
+                       [
+                         a :SequenceVariant ;
+                         :hasValue &quot;A&quot; ;
+                         :hasAttribute
+                           [
+                             a :PhredScore ;
+                             :hasValue 29 .
+                           ] .
+                       ] ,
+                       [
+                         a :SampleCount ;
+                         :hasValue 3 ;
+                         :hasAttribute
+                           [
+                             a :Name ;
+                             :hasValue &quot;NS&quot; .
+                           ] .
+                       ] ,
+                       [
+                         a :Coverage ;
+                         :hasValue 14 ;
+                         :hasAttribute
+                           [
+                             a :Name ;
+                             :hasValue &quot;DP&quot; .
+                           ] .
+                       ] ,
+                       [
+                         a :AlleleFrequency ;
+                         :hasValue 0.5 ;
+                         :hasAttribute
+                           [
+                             a :Name ;
+                             :hasValue &quot;AF&quot; .
+                           ] .
+                       ] ,
+                       [
+                         a :ExternalReference ;
+                         :refersTo &lt;http://www.ncbi.nlm.nih.gov/SNP&gt; ;
+                         :hasAttribute
+                           [
+                             a :Name ;
+                             :hasValue &quot;DB&quot; .
+                           ] .
+                       ] ,
+                       [
+                         a :ExternalReference ;
+                         :refersTo &lt;http://hapmap.ncbi.nlm.nih.gov&gt; ;
+                         :hasAttribute :ExampleSet5Info4 .
+                       ] ;
+                     :hasEvidence
+                       [
+                         :hasSource :ExampleSet5Sample1 ;
+                         :hasAttribute
+                           [
+                             a :Genotype ;
+                             :hasQuality :Homozygous ,
+                                         :GameticPhase ;
+                             :hasAttribute
+                               [
+                                 a :ConditionalGenotypeQuality ;
+                                 :hasValue 48 .
+                               ] ,
+                               [
+                                 a :Coverage ;
+                                 :hasValue 1 .
+                               ] ,
+                               [
+                                 a :Haplotype ;
+                                 :hasFirstPart
+                                   [
+                                     a :PhredScore ;
+                                     :hasValue 51 .
+                                   ] ;
+                                 :hasLastPart
+                                   [
+                                     a :PhredScore ;
+                                     :hasValue 51 .
+                                   ] .
+                               ] ;
+                             :hasFirstPart
+                               [
+                                 a :ReferenceSequence ;
+                                 :hasValue &quot;G&quot; .
+                               ] ;
+                             :hasLastPart
+                               [
+                                 a :ReferenceSequence ;
+                                 :hasValue &quot;G&quot; .
+                               ] .
+                           ] ;
+                       ] ,
+                       [
+                         :hasSource :ExampleSet5Sample2 ;
+                         :hasAttribute
+                           [
+                             a :Genotype ;
+                             :hasQuality :Heterozygous ,
+                                         :GameticPhase ;
+                             :hasAttribute
+                               [
+                                 a :ConditionalGenotypeQuality ;
+                                 :hasValue 48 .
+                               ] ,
+                               [
+                                 a :Coverage ;
+                                 :hasValue 8 .
+                               ] ,
+                               [
+                                 a :Haplotype ;
+                                 :hasFirstPart
+                                   [
+                                     a :PhredScore ;
+                                     :hasValue 51 .
+                                   ] ;
+                                 :hasLastPart
+                                   [
+                                     a :PhredScore ;
+                                     :hasValue 51 .
+                                   ] .
+                               ] ;
+                             :hasFirstPart
+                               [
+                                 a :SequenceVariant ;
+                                 :hasValue &quot;A&quot; .
+                               ] ;
+                             :hasLastPart
+                               [
+                                 a :ReferenceSequence ;
+                                 :hasValue &quot;G&quot; .
+                               ] .
+                           ] ;
+                       ] ,
+                       [
+                         :hasSource :ExampleSet5Sample3 ;
+                         :hasAttribute
+                           [
+                             a :Genotype ;
+                             :hasQuality :Homozygous ;
+                             :hasAttribute
+                               [
+                                 a :ConditionalGenotypeQuality ;
+                                 :hasValue 43 .
+                               ] ,
+                               [
+                                 a :Coverage ;
+                                 :hasValue 5 .
+                               ] ;
+                             :hasPart
+                               [
+                                 a :SequenceVariant ;
+                                 :hasValue &quot;A&quot; .
+                               ] ,
+                               [
+                                 a :SequenceVariant ;
+                                 :hasValue &quot;A&quot; .
+                               ] .
+                           ] .
+                       ] .
+
+:ExampleSet5Feature2 a :Feature ;
+                     :isLocatedOn :ExampleSet5Contig20 ;
+                     :hasPart
+                       [
+                         a :Locus ;
+                         :hasAttribute
+                           [
+                             a faldo:ExactPosition ;
+                             faldo:position 17330 .
+                           ] .
+                       ] ;
+                     :isRefutedBy :ExampleSet5Filter1 ;
+                     :hasAttribute
+                       [
+                         a :ReferenceSequence ;
+                         :hasValue &quot;T&quot; .
+                       ] ,
+                       [
+                         a :SequenceVariant ;
+                         :hasValue &quot;A&quot; ;
+                         :hasAttribute
+                           [
+                             a :PhredScore ;
+                             :hasValue 3 .
+                           ] .
+                       ] ,
+                       [
+                         a :SampleCount ;
+                         :hasValue 3 ;
+                         :hasAttribute
+                           [
+                             a :Name ;
+                             :hasValue &quot;NS&quot; .
+                           ] .
+                       ] ,
+                       [
+                         a :Coverage ;
+                         :hasValue 11 ;
+                         :hasAttribute
+                           [
+                             a :Name ;
+                             :hasValue &quot;DP&quot; .
+                           ] .
+                       ] ,
+                       [
+                         a :AlleleFrequency ;
+                         :hasValue 0.017 ;
+                         :hasAttribute
+                           [
+                             a :Name ;
+                             :hasValue &quot;AF&quot; .
+                           ] .
+                       ] ;
+                     :hasEvidence
+                       [
+                         :hasSource :ExampleSet5Sample1 ;
+                         :hasAttribute
+                           [
+                             a :Genotype ;
+                             :hasQuality :Homozygous ,
+                                         :GameticPhase ;
+                             :hasAttribute
+                               [
+                                 a :ConditionalGenotypeQuality ;
+                                 :hasValue 49 .
+                               ] ,
+                               [
+                                 a :Coverage ;
+                                 :hasValue 3 .
+                               ] ,
+                               [
+                                 a :Haplotype ;
+                                 :hasFirstPart
+                                   [
+                                     a :PhredScore ;
+                                     :hasValue 58 .
+                                   ] ;
+                                 :hasLastPart
+                                   [
+                                     a :PhredScore ;
+                                     :hasValue 50 .
+                                   ] .
+                               ] ;
+                             :hasFirstPart
+                               [
+                                 a :ReferenceSequence ;
+                                 :hasValue &quot;T&quot; .
+                               ] ;
+                             :hasLastPart
+                               [
+                                 a :ReferenceSequence ;
+                                 :hasValue &quot;T&quot; .
+                               ] .
+                           ] .
+                       ] ,
+                       [
+                         :hasSource :ExampleSet5Sample2 ;
+                         :hasAttribute
+                           [
+                             a :Genotype ;
+                             :hasQuality :Heterozygous ,
+                                         :GameticPhase ;
+                             :hasAttribute
+                               [
+                                 a :ConditionalGenotypeQuality ;
+                                 :hasValue 3 .
+                               ] ,
+                               [
+                                 a :Coverage ;
+                                 :hasValue 5 .
+                               ] ,
+                               [
+                                 a :Haplotype ;
+                                 :hasFirstPart
+                                   [
+                                     a :PhredScore ;
+                                     :hasValue 65 .
+                                   ] ;
+                                 :hasLastPart
+                                   [
+                                     a :PhredScore ;
+                                     :hasValue 3 .
+                                   ] .
+                               ] ;
+                             :hasFirstPart
+                               [
+                                 a :SequenceVariant ;
+                                 :hasValue &quot;T&quot; .
+                               ] ;
+                             :hasLastPart
+                               [
+                                 a :ReferenceSequence ;
+                                 :hasValue &quot;A&quot; .
+                               ] .
+                           ] .
+                       ] ,
+                       [
+                         :hasSource :ExampleSet5Sample3 ;
+                         :hasAttribute
+                           [
+                             a :Genotype ;
+                             :hasQuality :Homozygous ;
+                             :hasAttribute
+                               [
+                                 a :ConditionalGenotypeQuality ;
+                                 :hasValue 41 .
+                               ] ,
+                               [
+                                 a :Coverage ;
+                                 :hasValue 3 .
+                               ] ;
+                             :hasPart
+                               [
+                                 a :SequenceVariant ;
+                                 :hasValue &quot;T&quot; .
+                               ] ;
+                             :hasPart
+                               [
+                                 a :SequenceVariant ;
+                                 :hasValue &quot;T&quot; .
+                               ] .
+                           ] .
+                       ] .
 </pre>
 
 <h3 id="ontologyReference">Ontology Reference</h3>
