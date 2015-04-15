@@ -32,7 +32,6 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">BioInterchange</a>
         <ul class="nav navbar-nav">
-          <li><a href="cli.html">Shell Tool</a></li>
           <li class="active"><a href="ontologies.html">Ontologies</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
@@ -44,22 +43,13 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
-          <h2>Overview</h2>
-          <p>BioInterchange makes use of several external ontologies, i.e. ontologies that were developed outside the scope of the BioInterchange project. We are always happy to hear about ontologies that we should consider incorporating into BioInterchange and we welcome contributions of ontologies that permit including more file formats for RDF conversion.</p>
-          <p>External ontologies used in BioInterchange:
-            <ul>
-              <li><a href="http://sourceforge.net/apps/mediawiki/cdao/index.php?title=Main_Page">Comparative Data Analysis Ontology</a> (CDAO)</li>
-              <li><a href="https://github.com/JervenBolleman/FALDO">Feature Annotation Location Description Ontology</a> (FALDO)</li>
-              <li><a href="http://xmlns.com/foaf/spec">Friend of a Friend</a> (FOAF)</li>
-              <li><a href="http://code.google.com/p/semanticscience/wiki/SIO">Semanticscience Integrated Ontology</a> (SIO)</li>
-            </ul>
-          </p>
-          <p>One particular ontology &mdash; the Genomic Feature and Variation Ontology &mdash; is being used for converting <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3</a>, <a href="http://www.ensembl.org/info/website/upload/gff.html">GTF</a>, <a href="http://www.sequenceontology.org/resources/gvf.html">GVF</a>, and <a href="http://samtools.github.io/hts-specs/VCFv4.2.pdf">VCF</a> file formats into RDF as described below.
           <h2>Genomic Feature and Variation Ontology (GFVO)</h2>
-          <p>The Genomic Feature and Variation Ontology (GFVO) enables the RDFization of genomic feature and variation data. It particularly addresses the representation of data in <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3</a>, <a href="http://www.sequenceontology.org/resources/gvf.html">GVF</a>, <a href="http://www.ensembl.org/info/website/upload/gff.html">GTF</a>, and <a href="http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41">VCF</a> formats.</p>
-          <p>The ontology is available under the <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a> license, and therefore, de-facto within the public domain.</p>
-          <p>GFVO can be loaded into <a href="http://protege.stanford.edu">Prot&eacute;g&eacute;</a> or <a href="http://www.topquadrant.com/products/TB_Composer.html">TopBraid Composer</a> via: <a href="http://www.biointerchange.org/gfvo">http://www.biointerchange.org/gfvo</a></p>
+          <p>The Genomic Feature and Variation Ontology (GFVO) enables the generic representation of genomic feature and variation data. It particularly addresses the representation of data in <a href="http://www.sequenceontology.org/resources/gff3.html">GFF3</a> (including FASTA), <a href="http://www.ensembl.org/info/website/upload/gff.html">GTF</a>, <a href="http://www.sequenceontology.org/resources/gvf.html">GVF</a>, and <a href="http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41">VCF</a> formats.</p>
+          <p>The ontology is available under the <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a> license, and therefore, <i>de-facto</i> within the public domain.</p>
           <p>GFVO's development version can be found on GitHub: <a href="https://github.com/BioInterchange/Ontologies">https://github.com/BioInterchange/Ontologies</a></p>
+          <p><strong>Citation:</strong> <a href="mailto:kim@codamono.com?subject=GFVO">Joachim Baran</a> (corresponding author), Bibi Sehnaaz Begum Durgahee, Karen Eilbeck, Erick Antezana, Robert Hoehndorf, Michel Dumontier, &ldquo;GFVO: the Genomic Feature and Variation Ontology&rdquo; PeerJ.</p>
+          <p>Feedback on the ontology and manuscript drafts have been provided by (in alphabetical order) <a href="https://www.linkedin.com/profile/view?id=135254185">Paul Avillach</a>, <a href="http://www.linkedin.com/in/raoulbonnal">Raoul Bonnal</a>, <a href="https://www.linkedin.com/in/takatomofujisawa">Takatomo Fujisawa</a>, <a href="http://www.linkedin.com/in/toshiakikatayama">Toshiaki Katayama</a>, <a href="http://berkeleybop.org/person/chris-mungall">Chris Mungall</a>, and <a href="http://www.linkedin.com/in/francescostrozzi">Francesco Strozzi</a>.</p>
+          <p>The organizers of BioHackathon and their supporting bodies &mdash; the <a href="http://lifesciencedb.jp/?lng=en">Integrated Database Project</a> (Ministry of Education, Culture, Sports, Science and Technology of Japan), the <a href="http://biosciencedbc.jp/en/">National Bioscience Database Center</a> (NBDC), and the <a href="http://dbcls.rois.ac.jp/en/">Database Center for Life Science</a> (DBCLS) &mdash; enabled the conception of the ontology.</p>
           <h3>Table of Contents</h3>
           <ol>
             <li><a href="#bioportal">Overview</a></li>
@@ -76,8 +66,6 @@
             <li><a href="#ontologyReference">Ontology Reference</a></li>
           </ol>
           <div class="alert"><p><b>Note: </b> <span style="margin-right: 4px;" class="badge alert-danger">GFF3</span><span style="margin-right: 4px;" class="badge alert-info">GTF</span><span style="margin-right: 4px;" class="badge alert-success">GVF</span>and <span style="margin-right: 4px;" class="badge alert-warning">VCF</span> badges indicate a particular class or property definition's origin. The application of the ontology is not restricted to those file formats though.</p></div>
-          <p>GFVO is being developed as the joint work of <a href="http://joachimbaran.wordpress.com">Joachim Baran</a> (<i>corresponding author</i>, <i>joachim.baran</i><b>&#64;</b><i>gmail.com</i>), <a href="http://ntnu-no.academia.edu/ErickAntezana">Erick Antezana</a>, <a href="http://utah.academia.edu/BDurgahee">Begum Durgahee</a>, <a href="http://medicine.utah.edu/faculty/mddetail.php?facultyID=u0514925">Karen Eilbeck</a>, <a href="http://leechuck.de">Robert Hoehndorf</a>, and <a href="http://dumontierlab.com">Michel Dumontier</a>.</p>
-          <p>Feedback on the ontology has been provided by <a href="http://www.linkedin.com/in/raoulbonnal">Raoul Bonnal</a>, <a href="https://www.linkedin.com/in/takatomofujisawa">Takatomo Fujisawa</a>, <a href="http://www.linkedin.com/in/toshiakikatayama">Toshiaki Katayama</a>, <a href="http://berkeleybop.org/person/chris-mungall">Chris Mungall</a>, and <a href="http://www.linkedin.com/in/francescostrozzi">Francesco Strozzi</a>.</p>
           <h3 id="bioportal">Overview</h3>
           <p>An overview of GFVO is available through its <a href="http://bioportal.bioontology.org/ontologies/GFVO/?p=classes&amp;conceptid=root">BioPortal web-page</a>.
           <div class="alert alert-info" style="text-align: center;"><a class="icon-warning-sign"></a><i>&nbsp;Due to technical limitations of BioPortal, GFVO in BioPortal does not import other ontologies nor does it contain SIO class- or property-equivalences.</i><br><br><i>It is necessary to use <a href="http://protege.stanford.edu/">Protege</a> or <a href="http://www.topquadrant.com/tools/ide-topbraid-composer-maestro-edition/">TopBraid Composer</a> for viewing the ontology properly (e.g., to see GFF3/GTF/GVF/VCF specification annotations, Wikipedia linkouts, class-/property-equivalences, etc.).</i><br><br><i>The BioPortal GFVO version is available at: <a href="http://www.biointerchange.org/gfvo_bioportal">http://www.biointerchange.org/gfvo_bioportal</a></i></div>
@@ -536,11 +524,8 @@
 # Genotype of the second individual.
 :ExampleSet3Genotype2 a :Genotype ;
                       :hasParticipant :ExampleSet3SequencedIndividual2 ;
-                      :hasQuality :Homozygous ;
-                      :hasAttribute
-                        [
-                          a :GameticPhase .
-                        ] ;
+                      :hasQuality :Homozygous ,
+                                  :GameticPhase ;
                       :hasFirstPart :ExampleSet3VariantT_TT ;
                       :hasLastPart :ExampleSet3VariantT_TT .
 
@@ -642,7 +627,7 @@
              :hasIdentifier
                [
                  a :Version ;
-                 :hasValue &quot;fileformat 4.2&quot; .
+                 :hasValue &quot;VCFv4.2&quot; .
                ] ;
              :hasMember :ExampleSet5Feature1 ,
                         :ExampleSet5Feature2 .
