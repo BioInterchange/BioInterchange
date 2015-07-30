@@ -1,7 +1,13 @@
 BioInterchange
 ==============
 
-[![Build Status](https://secure.travis-ci.org/BioInterchange/BioInterchange.png?branch=master)](https://travis-ci.org/BioInterchange/BioInterchange)
+---
+
+**BioInterchange has been superseded by [BioInterchange 2](https://www.codamono.com/biointerchange/)!**
+
+---
+
+#### Legacy Documentation
 
 BioInterchange is a tool for generating interchangable RDF data from non-RDF data sources.
 
